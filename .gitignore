@@ -1,0 +1,14 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Obsidian (if used to browse this vault)
+.obsidian/
+
+# Local scratch notes not meant to be committed
+*.local.md
