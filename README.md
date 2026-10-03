@@ -24,13 +24,14 @@ No es un repo de documentación de producto ni sigue el framework DB90 — es un
 | [`glossary.md`](glossary.md) | Glosario de términos de accesibilidad digital |
 | [`resources/`](resources/links.md) | Links y recursos externos de referencia |
 | [`program-weaaare/`](program-weaaare/README.md) | Notas y materiales del programa "Diseño Accesible" de weAAAre |
+| [`curso-modelos-teoricos-discapacidad/`](curso-modelos-teoricos-discapacidad/README.md) | Curso complementario de weAAAre (fuera del programa intensivo) sobre modelos teóricos de la discapacidad |
 | [`shadowing-sessions/`](shadowing-sessions/README.md) | Notas de sesiones de shadowing (auditorías, testing con usuarios, etc.) |
 | [`ai-research/`](ai-research/README.md) | Investigación propia sobre accesibilidad usando herramientas de IA |
 | [`dualboot-findings/`](dualboot-findings/README.md) | Consolidación de findings y la propuesta de proceso/checklist para Dualboot |
 
 ## Convención de carpetas
 
-Las carpetas de contenido (`program-weaaare/`, `shadowing-sessions/`, `ai-research/`, `dualboot-findings/`) comparten la misma estructura interna:
+Las carpetas de contenido (`program-weaaare/`, `curso-modelos-teoricos-discapacidad/`, `shadowing-sessions/`, `ai-research/`, `dualboot-findings/`) comparten la misma estructura interna:
 
 | Subfolder | Uso |
 |---|---|
