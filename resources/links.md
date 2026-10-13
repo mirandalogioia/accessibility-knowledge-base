@@ -11,6 +11,7 @@ Links y recursos externos de referencia sobre accesibilidad digital, recopilados
 | Title | URL | Category | Notes |
 |---|---|---|---|
 | Web Content Accessibility Guidelines (WCAG) | https://www.w3.org/WAI/standards-guidelines/wcag/ | Standard | Estándar oficial del W3C, base de todo lo demás |
+| WCAG 2.2 Understanding Docs | https://www.w3.org/WAI/WCAG22/Understanding/ | Standard | Ver resumen traducido completo (87 criterios) en [`wcag22-understanding/`](wcag22-understanding/README.md) |
 | WebAIM | https://webaim.org/ | Reference | Guías prácticas, checklists y herramientas de contraste |
 | The A11Y Project | https://www.a11yproject.com/ | Reference | Checklist y artículos orientados a developers y diseñadores |
 | Deque University | https://dequeuniversity.com/ | Learning | Cursos y recursos sobre accesibilidad y testing |
