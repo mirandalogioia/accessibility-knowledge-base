@@ -12,6 +12,8 @@ Links y recursos externos de referencia sobre accesibilidad digital, recopilados
 |---|---|---|---|
 | Web Content Accessibility Guidelines (WCAG) | https://www.w3.org/WAI/standards-guidelines/wcag/ | Standard | Estándar oficial del W3C, base de todo lo demás |
 | WCAG 2.2 Understanding Docs | https://www.w3.org/WAI/WCAG22/Understanding/ | Standard | Ver resumen traducido completo (87 criterios) en [`wcag22-understanding/`](wcag22-understanding/README.md) |
+| WCAG 2.2 Techniques | https://www.w3.org/WAI/WCAG22/Techniques/ | Standard | Ver resumen traducido (137 técnicas HTML/CSS/ARIA/JS con código) en [`wcag22-techniques/`](wcag22-techniques/README.md) |
+| 10 Usability Heuristics (NN/g) | https://www.nngroup.com/articles/ten-usability-heuristics/ | Standard | Referenciado en el módulo de weAAAre. Ver resumen traducido en [`nielsen-heuristics.md`](nielsen-heuristics.md) |
 | WebAIM | https://webaim.org/ | Reference | Guías prácticas, checklists y herramientas de contraste |
 | The A11Y Project | https://www.a11yproject.com/ | Reference | Checklist y artículos orientados a developers y diseñadores |
 | Deque University | https://dequeuniversity.com/ | Learning | Cursos y recursos sobre accesibilidad y testing |
