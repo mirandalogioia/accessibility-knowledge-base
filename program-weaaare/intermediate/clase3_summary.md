@@ -116,13 +116,12 @@ Tutoría de revisión: se repasaron los entregables de los módulos 1 y 2, se aj
 
 ## Próximos pasos
 
-- Speaker 1: compartir enlaces de ATAG, UAAG y WCAG-EM (posible recurso del curso); grabar y subir los 2 contenidos pendientes del módulo 3.
-- Speaker 2: ajustar el flujo de OC (tercera pantalla → método de pago).
+- Profesora: compartir enlaces de ATAG, UAAG y WCAG-EM (posible recurso del curso); grabar y subir los 2 contenidos pendientes del módulo 3.
+- Alumna del flujo OC: ajustar el flujo (tercera pantalla → método de pago).
 - Clara: acotar el flujo de cita médica (consulta → confirmación).
 - Carlos: liberar el módulo 3.
 - Alumnas: completar la matriz, definir pantallas a diseñar y bocetar a mano para la próxima semana.
 
-## Pendientes / dudas para mí
+## Notas de transcripción
 
-- Confirmar nombres reales de los speakers (el transcript solo los etiqueta).
-- Varias siglas del audio están transcritas con errores (WCAG aparece como "Wicar", ATAG como "ATAC", UAAG como "UAC", VPAT como "BIPAC"); este summary usa las siglas correctas.
+- Siglas mal transcritas en el audio y corregidas con el Summary del raw y el contexto: WCAG ("Wicar"), ATAG ("ATAC"), UAAG ("UAC"), VPAT ("BIPAC").
