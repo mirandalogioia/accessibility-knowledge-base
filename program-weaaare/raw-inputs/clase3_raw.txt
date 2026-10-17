@@ -1,0 +1,760 @@
+# Clase 3 Accesibilidad
+
+## Summary
+### Flow Summary
+Tutoría del curso de accesibilidad: revisión de los flujos de proyecto de las alumnas (OC, agencia de viajes, salud de Galicia), ajuste de alcance, explicación de navegación por teclado y encabezados, y un Kahoot sobre WCAG.
+
+### Plantillas y entregables del módulo 1 y 2
+- El brief del módulo 1 define producto, necesidad, flujo y contexto; incluir nombre de alumna y proyecto
+- En el módulo 2 se arma una matriz de requisitos: barreras, afectados, criterios WCAG, requisitos y decisiones de diseño
+    - Copiar la matriz del documento del módulo 2 al Figma propio
+- El proyecto documenta en detalle dos componentes simples y uno complejo, más colores y tipografía
+- Ideal no diseñar más de cuatro pantallas; hacer microflujos y bocetar a mano primero
+
+### Flujo de pago en OC (Uruguay)
+- Sitio de pago del agua con textos como imágenes, captcha sin alternativa auditiva y botones sin jerarquía
+- Botones no activos se ven inhabilitados aunque son cliqueables; comunican mal el estado
+- Speaker 1 sugirió pedir DNI en vez de mostrar imagen para hallar el número de cuenta, como en Enel
+- Flujo acotado desde la tercera pantalla hasta la selección de método de pago; agregar menú y footer
+    - Varias vías para encontrar contenido: menú, buscador, mapa del sitio, accesos directos
+    - Indicar ubicación: menú marcado, título de página, breadcrumb
+
+### Agencia de viajes y ficha de viaje
+- Flujo: buscar la experiencia más barata a Austria para tres personas; la reserva puede ser otro flujo
+- Calendario, tabs, acordeones y modales son componentes complejos recomendados para documentar
+    - Tabs se navegan con flechas dentro del grupo
+    - Modal: no se dispara sola, atrapa el foco, varias formas de cerrar, título H1
+- Se diseña para todas las personas, no solo lector de pantalla; el date picker se documenta para un solo dispositivo
+- Navegación por teclado: tab y shift tab, primero cookies, luego 'saltar al contenido', solo elementos interactivos
+
+### Sistema de salud de Galicia
+- Flujo de pedir cita muy largo: login con tarjetas no anunciadas como botones, modales innecesarios, calendario que no avisa
+- Recomendación: empezar desde 'consulta' hasta la pantalla de confirmar cita y mostrar primero las próximas horas disponibles
+- No trasladar al mundo digital los errores del mundo físico; accesible no equivale a buena experiencia
+
+### Estándares, encabezados y Kahoot
+- Apps de escritorio tipo Canva aplican WCAG y ATAG; también existen UAAG (navegadores) y COGA
+- Una página tiene un solo H1; H2 para secciones, H3 para subsecciones, de forma secuencial
+- Kahoot: 4 principios, 13 pautas, niveles A/AA/AAA; herramientas automáticas cubren cerca del 30%
+    - Se mencionaron WCAG-EM para muestreo y VPAT/ACR para declarar conformidad
+- El módulo 3 se libera mañana por enfermedad de Carlos; dos contenidos llegan el sábado
+
+### Próximos pasos
+- (Speaker 1) Compartir los enlaces de ATAG, UAAG y WCAG-EM, posiblemente como recurso del curso
+- (Speaker 1) Grabar y subir el sábado los dos contenidos pendientes del módulo 3
+- (Speaker 2) Ajustar el flujo de OC desde la tercera pantalla hasta el método de pago
+- (Speaker 4) Acotar el flujo de cita médica desde la consulta hasta la confirmación de la cita
+- (Carlos) Liberar el módulo 3 en la plataforma
+- (Estudiantes) Completar la matriz, definir las pantallas a diseñar y bocetar a mano para la próxima semana
+
+## Transcript
+[00:10] Speaker 1: Mira. Esto va a ir así, ¿cierto? Módulo 1.
+[00:16] Speaker 1:  Ven que ahí pegaron cosas. Lo dejé ahí, pero después lo vamos a borrar.
+[00:20] Speaker 1:  Entonces, la idea es que—
+[00:21] Speaker 2:  Yo, yo me declaro culpable.
+[00:23] Speaker 1:  No, pero da lo mismo. Sí, da lo mismo, porque no borraste nada, no hiciste nada del otro mundo. Solo vas a tener que copiarlo y crearte un documento nuevo, ¿vale?
+[00:29] Speaker 2:  Es que ya lo dejé aparte, pero no sabía que lo había pegado, porque me traje como ese flujo de plantilla, como para poner todo el flujito organizado.
+[00:35] Speaker 1:  Ah, oye, yo lo encontré genial.
+[00:35] Speaker 2:  Pero—
+[00:36] Speaker 1:  Lo dejé ahí mismo porque me pareció divertido y a alguien le podría servir.
+[00:38] Speaker 2:  Dale. Pero borra si querés lo de arriba, nomás que ahora no puedo editar, pero ese es lo que elegí, el flujo que elegí.
+[00:43] Speaker 1:  Ah. Revisemos entonces esto primero.
+[00:45] Speaker 2:  Dale. Si querés te comparto igual, que lo tengo, que lo tengo pasado a la plantilla.
+[00:49] Speaker 1:  Ah, vale. Entonces déjame dejar de compartir. No, no, no.
+[00:51] Speaker 1:  Entonces déjame, ya que estoy aquí—
+[00:52] Speaker 2:  Dale, dale.
+[00:53] Speaker 1:  Déjame—
+[00:53] Speaker 2:  Ya lo comparto.
+[00:54] Speaker 1:  Eso, ya. Genial. Entonces, lo que yo les había dicho del template, del 1, del módulo 1, que era como hacer un brief.
+[00:59] Speaker 1:  Yo igual fui media, media lesa, y ahora me doy cuenta, porque les puse como nombre del alumno, nombre del proyecto, y qué, si igual me van a pasar una única URL, y ahí vamos a tener el nombre, pero no saben la cantidad de veces que he recibido proyectos sin nombre. Entonces es como que no está de más, ¿vale?
+[01:12] Speaker 1:  Y la idea es que ustedes como que en el fondo aquí es definir el producto, definir la necesidad, muy sencillo, como el flujo, contexto y todo. Y lo que les estamos diciendo en el módulo 2 es que lleguen a armar algo así, como una matriz de requisitos.
+[01:23] Speaker 1:  Como, por ejemplo, si es que van a tener formularios, quizás ahora todavía no van a tener tan claros los requisitos como en el siguiente módulo 3. Pero el plan es que no se les olvide, porque, por ejemplo, ¿qué dice el formulario?
+[01:32] Speaker 1:  El formulario dice: cada campo del formulario, obviamente, tiene que tener una etiqueta, y tienen que existir estados. Por ejemplo, es como: "Oye, no sé, el formato no cumple", ¿cierto?
+[01:42] Speaker 1:  "Esto está inválido". Bueno, ¿qué va a pasar?
+[01:44] Speaker 1:  Tiene que tener un mensaje que explique cómo recuperarse del error. Ese tipo de cosas es para que ustedes lo vayan como mapeando, porque van a entender que después existen componentes que se comportan siempre igual.
+[01:54] Speaker 1: ¿Vale? Entonces yo puse aquí como: mensaje de error, botón continuar, no sé, por las típicas cosas. Aquí podría ser como: contraste insuficiente, tamaño pequeño.
+[02:00] Speaker 1:  Esto, de verdad, es nada más que para que ustedes vayan como, eh, haciéndose como mapas conceptuales, por decirlo de alguna manera, de lo que vayan aprendiendo. El módulo 3 en adelante ya es full el proyecto en sí mismo.
+[02:10] Speaker 1:  Acá todavía es como definición y entender.
+[02:12] Speaker 1: ¿Vale? Entonces yo les dejé lo mismo, como el objetivo, la actividad, y aquí la actividad es identificar como las posibles barreras, a quién podría afectar, los criterios, las WIKAs, que yo sé que todavía no se las saben, pero parece que va a quedar seguramente pendiente, los requisitos para resolverlas, y qué decisiones de diseño se podrían tomar.
+[02:29] Speaker 1: ¿Vale? Entonces esto después ustedes lo van a tener incorporado como, eh, por defecto en el fondo.
+[02:34] Speaker 1: ¿Qué quiero decir con eso? Voy a dejar de presentar. Que no van a tener así como: "Ah, ya".
+[02:39] Speaker 1:  O sea, como: "Tengo que diseñar botón".
+[02:40] Speaker 1: ¿Cuál era el tamaño? No. Se van a acordar automáticamente que los elementos interactivos tienen un tamaño mínimo de 24 por 24, el contraste, van a entender de qué va, etcétera.
+[02:47] Speaker 1:  Todas esas cosas como ya más específicas son parte del módulo 3. En el módulo 2, de momento, todavía era como entender cómo se comporta el estándar.
+[02:53] Speaker 1:  Entonces, si es que no lo han comprendido todavía, o si es que no han hecho el módulo 2, con el juego que te dejé preparado, ya vamos a ir incorporando y resolviendo.
+[03:00] Speaker 1: ¿Vale? Entonces el plan siempre es como aprender como jugando dentro de estas tutorías, y también resolver dudas, revisar cosas, revisar y todo lo demás. Entonces, Marta, le vamos a dar la palabra primero a la Mari, a la Mapi que pidió mostrar, y después tú, ¿ya?
+[03:13] Speaker 1:  Pero no bajen la manito, para que no se nos olvide. Así que en el orden.
+[03:16] Speaker 2:  Dale. Comparto acá.
+[03:23] Speaker 2:  Esta. Ahí va mi figma.
+[03:26] Speaker 1:  Viene, sí.
+[03:27] Speaker 2:  Perfecto. Bueno, acá tienen la plantilla que dejé, lo pueden usar cualquiera.
+[03:30] Speaker 1:  Esa es buenísima. Yo me la voy a robar.
+[03:32] Speaker 2:  Sí, porque tenemos en mi trabajo, tenemos como frameworks y plantillas, entonces también la traje para adaptar las capturas. Y la que elegí es esta página, que se llama OC, que es donde se paga el agua, acá en Uruguay es la página. Y lo que tiene es que, básicamente, te enfrentas a esto cuando llegás.
+[03:47] Speaker 2:  Es abierta, en realidad. Y para llegar a dónde pagar la factura, tenés que hacer clic en esta segunda, y llegar a pagos y acuerdos financieros webs, que—
+[03:55] Speaker 1:  Espérate, te puedo hacer una pregunta antes de que—
+[03:57] Speaker 2:  Sí.
+[03:57] Speaker 1:  Esos como botones, inicio de trámite, reclamo operativo, ¿efectivamente se ven así como inactivos, como apagaditos? ¿O tú los—
+[04:03] Speaker 2:  Cuando haces clic en uno.
+[04:05] Speaker 1:  Ya.
+[04:06] Speaker 2:  Ah, voy a poner la imagen inicial, que se ve todo completo después, que no la puse.
+[04:09] Speaker 1:  Claro, no, no, no. Tranqui, lo que pasa es que hay un criterio de accesibilidad que habla del contraste. Y lo que dice es que los elementos deben tener un contraste de 4.5:1 para texto de tamaño normal.
+[04:19] Speaker 1:  Igual en el módulo 3 explicamos qué significa eso, el texto de tamaño normal. Y 3.0:1 para elementos grandes, ¿ya?
+[04:25] Speaker 1:  Para textos grandes. Y la excepción son los elementos inhabilitados.
+[04:28] Speaker 1:  O sea, que yo no los puedo cliquear porque son parte de un formulario. Y, por ejemplo, no sé, tengo que tener todos los campos que son obligatorios para que se me desbloquee el botón y se vuelva activo.
+[04:38] Speaker 1:  Entonces eso, que estén apagados, estarían cumpliendo el criterio de la Wispr.
+[04:43] Speaker 2:  Claro.
+[04:43] Speaker 1:  Porque está bien que yo tengo que avisar de alguna manera que estoy en este, que ese es el que tengo activo, pero la forma no es inacti- que se vean inactivos los otros. Porque también son cliqueables. Entonces, claro, comunican raro.
+[04:52] Speaker 2:  No, no, está rarísimo. Aparte, todo esto son imágenes que no tienen, no están los códigos entre, y no están bien puestos, o sea, sería inaccesible. Esto que está acá, que ven como título, también son imágenes.
+[05:01] Speaker 2:  Pusieron muchos textos que son tipo una imagen incrustada. O sea, esto también es imagen.
+[05:05] Speaker 2:  Esto sí es texto, pero tampoco se entiende que es muy cliqueable cuando te enfrentás a eso. Y también para hacer una acción del flujo que yo dije, ok, ir a pagar una factura todos los meses, que es un flujo común que cualquier usuario pueda, tiene que hacer en su casa.
+[05:16] Speaker 2:  Para llegar, tiene que ir hasta acá, que no está para nada accesible. Aparte, tenés que hacer clic, y para navegar tampoco, por código tampoco se podría, y visualmente no se entiende mucho.
+[05:25] Speaker 2:  Después tiene esta siguiente, que justamente lo que hablábamos el otro día, la barrera de los captcha, que tiene que tener lo de la audición y eso. Lo del número de cuenta, este tampoco tenía.
+[05:35] Speaker 1:  Uh, al que me tocó una vez trabajar con Enel. Enel es de España, según yo. Y creo que es Luz.
+[05:41] Speaker 1:  Sí, es Luz. Antes era Chilectra en Chile.
+[05:43] Speaker 1:  Es Luz, Enel. Y tenían esto mismo, como: "¿Querés buscar tu número de cliente?
+[05:47] Speaker 1:  Está aquí". Y te mostraban la imagen.
+[05:48] Speaker 2:  Claro.
+[05:48] Speaker 1:  Y si yo no veo la imagen, no voy a obtener nunca mi número de cliente.
+[05:51] Speaker 2:  Nunca lo voy a saber.
+[05:52] Speaker 1:  Claro. Entonces ahí quizás la alternativa es meter DNI, por ejemplo. Porque la gente sí se sabe su DNI.
+[05:58] Speaker 2:  Claro.
+[05:59] Speaker 1:  Tiene que haber una forma más fácil de—
+[06:01] Speaker 2:  De poder conectarlo.
+[06:02] Speaker 1:  Sí, sí.
+[06:03] Speaker 2:  Ah, me gustó eso.
+[06:04] Speaker 1:  Sí. Porque justo me tocó revisar el sitio de Enel, desde acá de Chile, y la, la es muy gracioso, porque me contrataron en España, pero la empresa madre parece que estaba en Italia. Entonces tuve que explicarle a los italianos lo que habíamos hecho, y después generaron un, como una especie de norma institucional para todos los países, pero nació desde Chile.
+[06:22] Speaker 1:  Me pareció súper, súper cool. Fue uno de mis primeros proyectos.
+[06:25] Speaker 2:  No.
+[06:25] Speaker 1:  Años. Sí, ahí el captcha es un espanto.
+[06:28] Speaker 2:  Sí, y aparte esto también, tipo entré el código y nada, estaba como nombrado bien. Son todos imágenes, tipo esto para recargar también. Después acá, si tenés datos, te muestra esta tabla.
+[06:39] Speaker 2:  Tiene oportunidades, creo, también muchas. O si no, te salta este error.
+[06:43] Speaker 2:  Y—
+[06:43] Speaker 1:  Y qué raro los botones, que no hay diferencia entre la acción principal, secundaria. O sea, todos pesan lo mismo. Visualmente, está, está, es pegado a todo el mundo, digamos.
+[06:50] Speaker 2:  Es espantoso en general. Y después, lo que pasa es que al momento de pagar también te enfrentás a que son todo imágenes y que no sabés ni dónde cliquear. Veas o no veas, es tipo: tenés que hacer clic en el banco de método de pago que querés.
+[07:02] Speaker 2:  O sea, visiblemente no entendés mucho qué tenés que hacer acá tampoco. O sea—
+[07:05] Speaker 1:  No.
+[07:06] Speaker 2:  Y, nada, como imagen tampoco, me fijé en el código, y no estaba bien desarrollado tampoco. Y después, nada, que al momento de pagar te saca el banco y te siempre te llevaba a esto. Y llegué hasta el flujo, hasta acá, porque yo no pago OC, y saqué una imagen de internet para—
+[07:23] Speaker 1:  No, y de ahí para adelante es otro flujo, porque te lleva a la pasarela del otro lado y no te podés hacer cargo, etcétera. Igual me parece que un flujo medio largo. O sea, me preocupa que—
+[07:29] Speaker 2:  ¿Te parece medio largo?
+[07:31] Speaker 1:  Mmm. Todo depende del nivel de detalle y de qué quieras meterle. Pero quizás lo podemos simplificar un poquito.
+[07:37] Speaker 1:  Por ejemplo, como no, quizás es no partir desde la selección de qué querés pagar, sino que ya desde que estás dentro. Como ya desde mira, ahí justo tienes una barrita negra que agrupa.
+[07:46] Speaker 2:  Desde ahí en adelante. Y no me queda muy chico.
+[07:49] Speaker 1:  No, mira, ponte—
+[07:50] Speaker 2:  Desde acá, decís vos.
+[07:51] Speaker 1:  No, no, no, más atrás. Las primeras dos no. Desde la tercera.
+[07:54] Speaker 2:  Desde esta.
+[07:55] Speaker 1:  Desde esa.
+[07:57] Speaker 2:  Bien. De acá hasta el método de pago. Esto sería.
+[08:00] Speaker 1:  Sí.
+[08:01] Speaker 2:  Esto para.
+[08:01] Speaker 1:  Sí, creo. Claro, porque el plan es que no tengan que diseñar tantas pantallas tampoco. O sea, independiente, porque aquí tienes que tener componentes como simple y componentes complejos.
+[08:09] Speaker 1:  Tienes una tabla, que no creo que te la puedas salvar. Hay botones, hay, a ver, ¿quién—
+[08:15] Speaker 2:  Claro, el captcha.
+[08:16] Speaker 1:  Sí, ahí están los captcha, claro. Pero el captcha en sí no es un componente, es colocarlo nomás.
+[08:20] Speaker 1: ¿Qué sería un componente? El botón, ¿cierto? Tienes formularios, a ver.
+[08:26] Speaker 1:  Pucha, igual en realidad sería bonito ver la anterior. Como desde el inicio.
+[08:29] Speaker 1:  Esa, como resolví eso.
+[08:31] Speaker 2:  Yo me tengo que ir al lago. Lago desde quizás.
+[08:34] Speaker 1:  Sí, quizás.
+[08:35] Speaker 2:  Porque me parece que termina no siendo tanto, teniendo en cuenta que el captcha lo agregás. Sí ver cómo resolver esto que me decías de si pongo o dónde está el número de cuenta, o por DNI.
+[08:42] Speaker 1:  Sí. Sí, porque además en el fondo nosotros lo podemos hacer diseñar como, eh, me refiero, con todos los componentes y la documentación. Dos componentes simples y un componente complejo.
+[08:52] Speaker 1:  Que un componente simple, como un componente mínimo, como un enlace, un botoncito, un checkbox, un radio button, con su etiqueta. Que sería un componente complejo: una tabla, una card, un acordeón, un tab de pestañas.
+[09:06] Speaker 1:  Como ese tipo de cosas que por lo general tienen como más de, o sea, se arman con varios componentes chiquititos. Por ejemplo, el formulario.
+[09:11] Speaker 1:  Ya en sí ya es más complejo, porque tiene radio button, tiene qué sé yo, dropdown, tiene checkbox. Entonces yo creo que con esto cumple.
+[09:19] Speaker 1:  Me preocupa que es medio largo, pero si te tienes fe.
+[09:21] Speaker 2:  Me tengo fe, me tengo fe.
+[09:23] Speaker 1:  Por último, y claro, y ya cuando llegas a la selección del banco, quizás esa última parte, esa última, esa última ya no, porque es un flujo distinto, pues. La checklist te lleva a la pasarela de pago. Hasta esa.
+[09:31] Speaker 2:  Hago esta parte. ¿Para qué traigo acá?
+[09:33] Speaker 1:  Eso.
+[09:34] Speaker 2:  Hago esto. Ahí, para que. Voy a poner.
+[09:40] Speaker 1:  Eso.
+[09:41] Speaker 2:  Esta parte.
+[09:41] Speaker 1:  Eso.
+[09:42] Speaker 2:  Perfecto.
+[09:43] Speaker 1:  Esa parte.
+[09:44] Speaker 2:  Genial.
+[09:45] Speaker 1:  De ahí. Y yo creo que con eso tienes la flujo, y es complicado, de verdad, que la gente cree que esto es como no, que sea, que tenga pocos componentes no significa que sea sencillo. Es re complicado lo que está.
+[09:55] Speaker 1:  Además, encima tiene este es el caso de que les comentaba yo antes. Como servicios que la accesibilidad en realidad no les va a traer nuevos usuarios, porque es que a uno le toca el agua que le toca.
+[10:03] Speaker 1:  Tú no puedes escoger, en verdad, "ay, quiero que me traiga este otro servicio".
+[10:05] Speaker 2:  Aparte es el estado acá. Todo el mundo entra acá.
+[10:07] Speaker 1:  Claro. O sea, es que no es la alternativa. No hay otra.
+[10:09] Speaker 2:  Tenemos los servicios privados acá. Así que es tipo, tiene que sí o sí ser accesible.
+[10:13] Speaker 1:  No, está buenísimo. Y está horrible, entonces como que.
+[10:17] Speaker 2:  Cualquier mejora va a servir, está peor que. O sea, para el que ve y para el que no ve, es un horror.
+[10:22] Speaker 1:  No, está, está súper feo. Y no tiene menú ese sitio.
+[10:25] Speaker 2:  ¿No tiene qué?
+[10:25] Speaker 1:  ¿Menú?
+[10:26] Speaker 2:  No, es esto.
+[10:28] Speaker 1:  Qué raro.
+[10:30] Speaker 2:  Es, es como, es como un agregado. O sea, porque OC también tiene otra página que es solo informativa, y cuando hacés clic en "quiero pagar" te lleva a esta, que es de acciones, y es la que tiene este es el menú. Esta parte que vemos acá.
+[10:42] Speaker 1:  Ya. Pero yo acá sí te recomendaría como añadir un menú de verdad, porque al final, como, fíjense que las personas, todos nosotros, nosotras también, ¿verdad? Como que estamos acostumbrados a navegar distintos sitios todo el tiempo.
+[10:51] Speaker 1: ¿Qué sabemos de los sitios? Todos los sitios tienen un menú arriba, tienen un buscador, en el footer tienen las redes sociales, tienen la información de la empresa, y qué sé yo. Como sabemos que, porque son patrones de diseño.
+[11:01] Speaker 1:  Este sitio no responde a ningún patrón de diseño, entonces como que el usuario tiene que, como cuando ingresa por primera vez, tiene que entender cómo funciona, en vez de asociar con lo que ya conoce.
+[11:10] Speaker 2:  Sí, sí.
+[11:11] Speaker 1:  Entonces no tiene mucho sentido. Claro, y ahora que lo veo, seguramente es el mismo sitio desde que se creó el servicio.
+[11:16] Speaker 2:  Sí.
+[11:16] Speaker 1:  Desde que se creó la compañía. Sí.
+[11:18] Speaker 2:  Por eso te digo que en realidad este sitio debe ser hace años, años luz.
+[11:22] Speaker 1:  Ponle menú y ponle footer a esa cosa.
+[11:24] Speaker 2:  Sí, sí, sí, sí. No, aparte entrás a un flujo, y para volver tenés que ir para atrás, para atrás, para atrás. O sea.
+[11:28] Speaker 1:  Hay un criterio que dice que tiene que existir más de una forma de encontrar el contenido. Entonces, bueno, no es exactamente lo que dice, pero es lo que vamos a interpretar. Entonces.
+[11:38] Speaker 2:  Lo interpretamos como queremos nosotros.
+[11:39] Speaker 1:  No, no, no, no, no. Es que no me acuerdo ahora. Dice como múltiples, múltiples formas de entrar.
+[11:43] Speaker 1:  Bueno, no me acuerdo ahora exactamente cómo se llama y ni cuál es, pero lo que dice es como que uno puede poder, tiene que poder ingresar a través de un múltiples vías. Gracias, Mar.
+[11:51] Speaker 1:  Gracias. Como tiene que tener un menú con el contenido, puede tener acceso, puede tener un acceso directo desde el home, y te da como alternativa.
+[11:59] Speaker 1:  Entonces dice como: "puede tener un buscador, puede tener un mapa del sitio". Ya es que yo quiero todo.
+[12:02] Speaker 1:  O sea, como, porque, porque al final es como, ¿por qué el este o oeste? Sí, a través del mapa del sitio alguien va a llegar, pero el mapa del sitio tampoco es tan, tan amistoso a veces, cuando el sitio es muy grande.
+[12:11] Speaker 1:  O sea, ¿por qué los sitios deberían tener siempre como un mapa del sitio? Los indexa mejor, ayuda además a la IA.
+[12:16] Speaker 1:  Ese es un súper buen argumento para la accesibilidad. Las personas ya no están buscando la información en los sitios web, preguntan directo a la IA.
+[12:22] Speaker 1:  La IA, para indexar la información, lee el árbol de accesibilidad.
+[12:26] Speaker 1: ¿Vale? Entonces, es como que si uno quiere estar con la IA, hay que formatear para la IA también. Bueno, y entonces yo les decía: buscador, menú, el mapa de sitio, accesos directos.
+[12:35] Speaker 1:  Ahí hay cuatro maneras distintas. Y luego hay otro criterio que dice que yo siempre tengo que saber dónde estoy.
+[12:39] Speaker 1:  Entonces en el menú debería estar marcado dónde estoy, debería tener un título la página, y el breadcrumb para las páginas anteriores también me ayuda, porque de repente, claro, si estoy en una página anterior, en el menú voy a haber marcado el padre o la madre, porque digamos que matriarcado. Voy a haber a la madre, pero no sé cuál soy yo.
+[12:54] Speaker 1:  Entonces el breadcrumb ayuda también a eso, para entender las relaciones. Ahora sí, Mar, te toca.
+[13:00] Speaker 2:  Gracias.
+[13:01] Speaker 1:  A ti por compartir. Es el sitio más feo que he visto esta semana, y eso que he visto hartas cosas esta semana.
+[13:06] Speaker 2:  Me gusta, se tiene la vara.
+[13:08] Speaker 1:  Bueno, como que tiene algo más feo que eso.
+[13:10] Speaker 2:  Sí, rabiol.
+[13:13] Speaker 1:  Vale.
+[13:13] Speaker 2:  Vale.
+[13:14] Speaker 1:  Otra cosa. Yo tengo, espera, comparto, ¿vale? Espérate, a ver si me deja este.
+[13:22] Speaker 2:  Basta.
+[13:24] Speaker 1:  Este es el mío, ¿vale? Terrible, eh.
+[13:27] Speaker 2:  ¿Esto es para tu fondo de pantalla?
+[13:28] Speaker 1:  No. Es una web. Es una web, una web.
+[13:31] Speaker 1:  Claro, es que yo tengo algunas dudas, igual son muy básicas, eh, por empezar, eh, pero bueno, enseño un poquito el sitio, pero no me joran mucho, eh. Footer tiene.
+[13:38] Speaker 1:  O sea que, bueno. Para mí el flujo, el que yo he puesto, que estaba por aquí.
+[13:44] Speaker 2:  Ay, no, es que me muero de risa.
+[13:46] Speaker 1:  ¿El flujo?
+[13:47] Speaker 2:  No, no, no, hombre, hombre. Qué cosa más fea. Bueno, eso no pasa a accesibilidad, en fin.
+[13:51] Speaker 2:  Bueno, estas cosas. Pero.
+[13:52] Speaker 1:  Ah, espérate, sí tiene menú arriba.
+[13:53] Speaker 2:  Tiene, tiene menú arriba, sí, sí, no, no.
+[13:55] Speaker 1:  Está negro sobre burdeos, digamos, por eso no se ve, pero hay un menú arriba. Guau. Okay.
+[13:59] Speaker 2:  Sí, sí. Para mí el flujo es que, o sea, por empezar a hacer yo cosas, pues ya he rellenado la propuesta esta y tal, porque yo lo que he hecho ha sido copiármelo en mi propio Figma, eso es correcto, ¿no?
+[14:09] Speaker 1:  Correcto, sí. La más vice es.
+[14:12] Speaker 2:  No, no, que yo he hecho mucha ya de copiar en otros cursos, he hecho mucha de, entonces ya he aprendido. Pero si no lo hubiera hecho igual, de copiarlo en, ahí me dejas lo que me diera la gana.
+[14:19] Speaker 1:  No, no, sí, copiar uno nuevo, igual van a tener que salir a copiar la matriz que está en el módulo 2 del documento y lo pegan después en el suyo. Es más vice que lo uso para darles una herramienta.
+[14:28] Speaker 2:  Ah, perfecto, perfecto. Yo por saber, o sea, yo para mí el flujo es que el paisano o la paisana entra, reserva un viaje a, quiere irse a Austria para dos, tres personas en noviembre. No me acuerdo si es en noviembre o diciembre.
+[14:41] Speaker 1:  Espérame, espérame. ¿Esto es una agencia de turismo?
+[14:43] Speaker 2:  Es una agencia, sí, perdón, es una agencia de turismo. De la pobre agencia.
+[14:46] Speaker 1:  Te hago una pregunta. ¿Las experiencias son de terror y por eso está así?
+[14:49] Speaker 2:  No, porque es Halloween ahora, hombre.
+[14:50] Speaker 1:  Ah, guau.
+[14:51] Speaker 2:  Por eso está como en Disneylandia, ¿no? Tú te metes en la web de Disneylandia.
+[14:54] Speaker 1:  Es que yo me acuerdo de una primera.
+[14:56] Speaker 2:  Y está de Halloween.
+[14:56] Speaker 1:  La primera vez que hice un sitio, les voy a contar una anécdota. La primera vez que hice un sitio era como para un mago, no sé, alguna cosa así, y el menú no estaba. Tenía que encontrarlo.
+[15:04] Speaker 1: ¿Por qué iba siguiendo las pistas?
+[15:05] Speaker 2:  Claro, porque tenía que hacer magia para encontrar. Y bueno, pues este es mi flujo. Yo he puesto el flujo que quiero, que lo he intentado acotar lo más posible, es coger la mejor experiencia, o sea, la experiencia más barata, para tres personas en Viena, bueno, en Austria, para noviembre.
+[15:19] Speaker 2:  No sé cuándo es, diciembre, no me acuerdo. Entonces, claro, ese flujo, en principio entiendo que sería, o sea, y reservarlo, entiendo que sería correcto.
+[15:27] Speaker 1:  Sí, sí. Pero no sé si encontrar y reservar, ah, bueno, no es tanto. Porque en el fondo, como bueno, por lo que vi, igual tú lo puedes rediseñar completo, no tiene por qué mantener la estructura de esta cosa tan impresionante, que no tiene ni título.
+[15:39] Speaker 1:  Es como que.
+[15:40] Speaker 2:  Claro, es que eso tampoco sé si meterle mano a esta página. Pero como en esta página tampoco hay, tampoco, o sea, si meterle mano a la home y ya está, para que sea accesible, pero tampoco veo tanta, o sea, veo este cosito aquí, pero luego tampoco tiene.
+[15:51] Speaker 1:  No, sí puede ser desde que buscas. Guau.
+[15:53] Speaker 1: ¿Y en qué estará hecho? Que más encima tiene ese. Es como que estuviera hecho en Flat, no sé.
+[15:57] Speaker 2:  Sí, es como muy raro, no sé. Entonces, vale, ahora mi movida es, yo sé de accesibilidad un poco, pero yo ahora cómo empiezo? Con lo que aprenda en los módulos, empiezo a decir, pues esto no, pues tiene que ir así, se tiene que mejorar, y rediseño todos los componentes de este flujo, ¿no?
+[16:10] Speaker 2:  Ese es el proyecto.
+[16:10] Speaker 1:  Sí, o sea, vas a tener que rediseñar las pantallas que sean parte del flujo.
+[16:14] Speaker 2:  Sí.
+[16:15] Speaker 1:  Y con un doble clic a estos componentes que decíamos que iba a ser dos componentes simples, un componente complejo, además de escoger la grilla de colores, porque bueno, o sea, vas a necesitar escoger colores, y tipografía.
+[16:26] Speaker 2:  Vale.
+[16:26] Speaker 1:  Entonces, por ejemplo, te vas a tener que hacer preguntas. Puedes, ah, hay un criterio que ya habíamos hablado del tema del contraste, pero fíjense que el contraste no aplica a los logotipos. Entonces tú podrías decir: "el logotipo es una porquería", pero eso no significa que tengas que rediseñar el logotipo, porque el logotipo es una excepción.
+[16:45] Speaker 2:  No.
+[16:45] Speaker 1:  ¿Vale? Entonces sí, tendrías que, por ejemplo, si tú dices: "mi flujo parte en una página de reserva", no sé, en una página, en el buscador, donde encuentro las cosas. Hasta que encuentro el más barato, y quizás, quizás efectivamente encuentro y descubro la información.
+[17:03] Speaker 1:  La reserva podría ser incluso otro flujo, ¿ya?
+[17:06] Speaker 2:  Exacto.
+[17:06] Speaker 1:  ¿Vale? Entonces sí van a tener que diseñar el Figma después con esas pantallas, con la UI de las pantallas que pertenecen al flujo.
+[17:13] Speaker 2:  Vale.
+[17:13] Speaker 1:  Y estos componentes, como va a ser como un mini sistema de diseño, como un muestrario de sistema de diseño, ¿ya?
+[17:18] Speaker 2:  Los componentes que hay.
+[17:19] Speaker 1:  Solo. Claro, con los componentes que tú vayas a usar. Porque, por ejemplo, ahora tienes un buscador, o sea, no un buscador, perdón, tienes como componentes de formulario, input, no sé si habrá dropdown, pero hay agenda, porque tienes que escoger fecha.
+[17:30] Speaker 2:  Sí.
+[17:31] Speaker 1:  Pero, por ejemplo, el calendario es un componente complejo.
+[17:34] Speaker 2:  El calendario está aquí, espera.
+[17:35] Speaker 1:  Claro. O sea, solamente ese calendario ya es un componente complejo. Mientras que el buscador es un componente simple.
+[17:41] Speaker 1:  Y el botón buscar es un componente simple, pero además tiene las tabs, que es un componente complejo. Entonces como que hay un montonazo para escoger.
+[17:47] Speaker 2:  Vale.
+[17:49] Speaker 1:  En general, todo lo que tenga que ver como con calendario, yo lo recomiendo ampliamente, como que jugar con esos componentes para que vivan la experiencia de documentarlo, porque además es súper interesante. Los tabs también.
+[17:58] Speaker 2:  Los tabs son complejos.
+[17:59] Speaker 1:  Son complejos. Son súper complejos.
+[18:01] Speaker 2:  Ah, vale.
+[18:01] Speaker 1:  Porque vamos a aprender a documentar, cómo debería leerlo. Fíjense que los tabs, ya te doy la palabra, los tabs, cada uno de esos temas, hoteles, coches, cruceros, qué sé yo, son botones.
+[18:11] Speaker 2:  Sí, es feo.
+[18:12] Speaker 1:  Entonces, ¿cómo lo va? ¿Cómo? Y cómo se navegan?
+[18:15] Speaker 1:  Porque son parte del mismo grupo, entonces cuando yo navego a través del teclado, yo debería acceder al primero, y para desplazarme hacia los siguientes tabs debería usar las flechas, arriba, abajo, derecha, izquierda. Y eso hay que documentarlo.
+[18:26] Speaker 2:  Claro.
+[18:26] Speaker 1:  Entonces, por eso es que es complejo, porque tiene un comportamiento que es como inesperado del teclado, a diferencia de cuando yo estoy hablando.
+[18:33] Speaker 2:  Programa en la cola.
+[18:34] Speaker 1:  Por ejemplo, si esto estuviese bien programado. No sé, Marta, si podrías hacerte la navegación por teclado, ¿sabes cómo se hace?
+[18:39] Speaker 2:  Sí. Era por aquí, debería estar aquí. No, pues es que no va.
+[18:44] Speaker 1:  Yo por lo general me pongo como arriba de la URL, donde se marca la URL.
+[18:48] Speaker 2:  Sí.
+[18:48] Speaker 1:  Y empiezo, ¿estás ahí?
+[18:50] Speaker 2:  Con la tab, ¿no?
+[18:51] Speaker 1:  Con la tecla tab, sí. Con la tecla tab avanzas, y con shift tab retrocedes.
+[18:55] Speaker 1: ¿Qué debería pasar acá? No, es que yo creo que no funciona nada.
+[18:58] Speaker 2:  Claro, es que esto yo lo he mirado y digo, porque luego tengo otra pregunta, digo, ¿cuál? El usuario lo escojo yo, porque yo he puesto con lector de pantalla, pero a lo mejor no.
+[19:04] Speaker 1:  Pero igual vamos a diseñar para todos.
+[19:06] Speaker 2:  Vale.
+[19:07] Speaker 1:  Para todos. Así que sí vamos a documentar lector de pantalla, pero lo vamos a hacer para todo el mundo. Entonces, mientras, aprovechando que tenemos este ejemplo tan horrible, yo les voy a contar cómo funciona la navegación por teclado.
+[19:15] Speaker 1:  Igual lo van a ver en el módulo 3. Por lo general, desde la URL, yo voy con el tab y va a ingresar al contenido de la página.
+[19:23] Speaker 1:  El primer tab que debería aparecer, la tecla tab lo que hace es que navega a través de elementos que son interactivos, o sea, elementos que yo con el mouse podría hacer algo, ¿ya? Eso quiere decir que el tab no me va a agarrar un título, no me va a agarrar un párrafo ni una imagen.
+[19:36] Speaker 1:  Cuando pasa eso es porque lo programaron pensando en el lector de pantalla sin entender de qué va la accesibilidad. Entonces, el lector de pantalla funciona de múltiples formas, pero la navegación por teclado es así.
+[19:45] Speaker 1:  Yo voy con el tab, una vez que ingreso al sitio, lo primero que encuentro es un enlace que normalmente no está a la vista, que es el saltar al contenido central. No sé si lo han visto, que lo que hace es saltar al contenido central, es saltarse todo el menú principal.
+[19:57] Speaker 1:  Si quieren, les comparto pantalla un segundo, y se lo muestro.
+[20:03] Speaker 1:  Yo les voy a compartir. Les voy a compartir con el sitio de la W3C, porque es el más accesible de todos.
+[20:09] Speaker 1:  Fíjense que yo de aquí me salté uno, ahí. Ahí estoy en el dejar de, ah, ahí está.
+[20:16] Speaker 1:  Skip to content. Si yo quiero saltarme el contenido que es reiterativo, que en este caso es el menú, yo tengo que saltarme al contenido.
+[20:23] Speaker 1:  Para hacer que salte efectivamente al contenido, tengo que hacer clic en la barra espaciadora o en Enter, ¿ya? Entonces le voy a dar al Enter, y me salté todo, y sigo con el tab, y va avanzando entre el elemento interactivo y el elemento interactivo.
+[20:33] Speaker 1:  Ahora voy a retroceder. Vamos a hacerlo de nuevo, sin hacer el skip to main content.
+[20:38] Speaker 1:  Entonces.
+[20:38] Speaker 2:  O sea, te pones en la URL, es que a mí no me sale, te pones en la URL, empiezas a darle tab, ¿no?
+[20:43] Speaker 1:  Sí.
+[20:43] Speaker 2:  Y se supone que te tiene que preguntar, ¿no? El skip to content.
+[20:45] Speaker 1:  Sí. Pero también puedes hacer clic en la misma página, como que le haces clic arriba en la esquinita.
+[20:49] Speaker 2:  Ah, vale.
+[20:50] Speaker 1:  Esto es, y ahí, mira. Entonces, no voy a soltar el skip to main content, o sea, skip to content, a veces dice skip to main content, qué sé yo. Ese es japonés, este es coreano, yo creo, estoy casi segura.
+[21:00] Speaker 1:  Y fíjense que el logo, como es interactivo, recibe el enfoque, pero estos grupos, yo sé que es un grupo porque tiene un chevron, ¿cierto? Una flecha que se indica hacia abajo.
+[21:07] Speaker 1:  Si yo voy con el tab, avanza hacia el siguiente grupo. Si yo quiero abrir este grupo de información, tengo que otra vez hacer clic en la barra espaciadora o el Enter.
+[21:14] Speaker 1:  Y ahí puedo navegar a través de este contenido, y después sigo avanzando. Como no lo cerré, se quedó abierto, ¿ya?
+[21:20] Speaker 1:  Entonces, las pestañas pasa más o menos lo mismo. Como que yo me voy, llego con el Enter, como son parte de un grupo, para moverme hacia el lado, tengo que entrar con las flechas, porque si le doy clic al tab, ahí me meto como hacia adentro.
+[21:32] Speaker 1:  Entonces, esos comportamientos que van cambiando de manera distinta es lo que vamos a ir viendo ya desde el módulo 3 con fuerza, digamos. Se pone como más duro.
+[21:39] Speaker 1:  De momento es entender cómo se comportan los criterios y ir como asociando al mundo del diseño, ¿vale? Entonces, dentro del proyecto ustedes van a tener que documentar toda la experiencia de la interfaz, que tiene que ver con la navegación por teclado, van a tener que documentar, obviamente, los encabezados, pero también vamos a aprender a documentar áreas.
+[21:54] Speaker 1:  Porque, por ejemplo, aun cuando si ustedes no diseñan como un componente complejo el menú, el menú, esto de que está expandido, que está contraído, para que eso funcione, es con áreas. Entonces vamos a aprender a documentar ese HTML desde lo básico, para que el desarrollo no se olvide.
+[22:08] Speaker 1:  Porque yo, una cosa, navegar por teclado, y el lector de pantalla también utiliza el teclado, y el lector de pantalla dice, cuando estos menús que eran que estaban contraídos, dice: "Es un botón, está contraído". Yo le hago clic, y ahí me dice: "Se expandió".
+[22:21] Speaker 1:  Y también me dice cuántos elementos de la lista hay en el menú, y un montón de cosas. Entonces, eso quiere decir que hay que diseñar y explicar que ese menú es una lista, y el lector va a leer cuántos elementos de la lista tiene, si está expandido, si está contraído, si es botón, si es enlace, etcétera, etcétera.
+[22:34] Speaker 1:  Todo eso es parte.
+[22:35] Speaker 2:  No, no, perdón, perdón.
+[22:36] Speaker 1:  Sí, no, no, tranqui. Lo que te iba a decir es como que eso es como a nivel de interfaz, y luego está la documentación que es a nivel de componente, que ya es como porque son dos mundos, porque en el fondo, desde el diseño, no voy a decir que son las únicas cosas, pero principalmente, o hacemos sistema de diseño o consumimos el sistema de diseño. Y existe documentación de accesibilidad en los dos mundos.
+[22:54] Speaker 1:  Entonces vamos a aprender a documentar tanto la interfaz como lo que está por detrás de la interfaz, que en el fondo es lo que son el sistema de diseño a través de estos componentes, ¿vale? Súper.
+[23:03] Speaker 1:  Paula. Ah, no sé si te quedó alguna otra duda, Marta, ¿no?
+[23:06] Speaker 2:  No, no, ya está, era por saber el entregable, y sobre todo tener, ahora lo miro en la matriz, pero la matriz ya estaba disponible ya, porque yo no la he puesto.
+[23:11] Speaker 1:  Está disponible, no, es que yo las voy pegando como un grupo antes, para que las tenga la ansiedad.
+[23:15] Speaker 2:  Ah, vale. Vale, vale, perfecto. Entonces yo lo voy, lo voy, o sea, voy viendo la matriz esa, la voy rellenando, y el siguiente paso, digamos, para la semana que viene sería rellenar esa matriz.
+[23:21] Speaker 1:  Claro, deberían tener la matriz más o menos lista, ya saber qué pantallas van a diseñar, y podrían tener como avanzar con esbozos, pero yo les diría que siempre hagan a mano primero. No se tiren de una al computador. Porque al final, como que hay que saber qué es lo que van a hacer y qué sé yo.
+[23:37] Speaker 1:  Y acuérdense que tenemos que asumir que hay muchas cosas que son ciertas. Porque acá no vamos a hacer investigación con personas usuarias, si bien podemos después hacer testeos de usabilidad y testeos de accesibilidad, vamos a aprender un poco, pero no es el foco, ¿ya?
+[23:48] Speaker 1:  Entonces ustedes asuman que lo que hicieron funciona, que es lo que las personas necesitan. Okay, ¿ya?
+[23:53] Speaker 1:  Ahora sí, Paula.
+[23:54] Paula:  Hola, ¿qué tal?
+[23:56] Speaker 1:  Bueno, primero quería.
+[23:57] Paula:  ¿Cómo se dice?
+[23:59] Speaker 1:  Dumanián.
+[24:00] Paula:  Dumanián.
+[24:01] Speaker 1:  No, ya lo olvidé, perdóname, Paula, va a ser Paula a secas.
+[24:03] Paula:  No te preocupes. Bueno, no, primero quería decirte que también alucino con los videos, con los ejercicios, es una calidad impresionante. Me quedé todo este fin de semana avanzando porque no había podido hacer nada, y la verdad es que impresionante.
+[24:14] Paula:  Bueno, felicidades.
+[24:15] Speaker 1:  Nuestro plan es como ser un referente tecnológico a nivel de e-learning, porque Udesit, o sea, bueno, en general, todas estas plataformas que todos conocemos, incluido LinkedIn y qué sé yo, no tienen ni un brillo, ¿no? No dan ganas de estudiar así. Entonces como que se nos ocurrió que había que meterle más dúas, más diseño universal para el aprendizaje, para que la gente quiera aprender y que se sienta más feliz.
+[24:37] Paula:  La verdad que sí, es una pasada, así que gracias, porque es genial. Y bueno, no, yo no quería robar mucho tiempo, solo decir que tampoco tengo nada para compartir, pero quería hacer una ficha de un viaje, ¿no? De un viaje, pues lo que sería esos circuitos o así, pero simplificarla para poder aprender más sobre cosas concretas.
+[24:51] Paula:  Entonces te quería preguntar, porque la idea sería que esta ficha de viaje tiene un precio, desde orientativo, digamos, y hay una galería de fotos, y hay un itinerario, por ejemplo, en acordeón, digamos, que eso sería como la página. Y luego, cuando le das a configurar el viaje, se te abre un modal con un formulario que puede tener un input con un suggest, por ejemplo, un calendario, y elegir las noches con un stepper o steam button, no sé cómo lo decís.
+[25:12] Paula:  Y bueno, como son muchos componentes, te quería preguntar si como alcance es mucho todo esto o es poco.
+[25:16] Speaker 1:  Ay, ya. No, está súper bien, Paula. Lo que pasa es que acuérdate que vamos a diseñar muchos, o sea, la interfaz va a tener todos los componentes que tenga que tenerte, pero a nivel de documentación, como del detalle y los distintos estados, nos vamos a enfocar en tres componentes: dos simples y uno complejo.
+[25:30] Speaker 1:  Pero en el fondo, si en tu plataforma hay input, hay calendario, hay dropdown, hay menú, hay un montón, claro, está lleno de componentes, solamente que no los vamos a llegar a documentar, a decir cómo se comportan los estos, ¿vale? Porque es como tú sabes, porque normalmente es como tenemos el menú, entonces tenemos que decir cada uno de los estados de los elementos del menú, si se abren, no se abren, los radio buttons, todo tiene mil cosas, pero vamos a tomar como uno complejo.
+[25:53] Speaker 1:  Entonces, si tienes un calendario, si tienes tab, o qué sé yo, esos son complejos. Los acordeones también son complejos, no son muy distintos de un tab, funcionan más o menos igual, pero también son botones que despliegan cosas.
+[26:02] Speaker 1:  Y fíjense que los tabs y los acordeones son particularmente complejos porque en HTML no existen como tal, a diferencia de las tablas. Las tablas existe un componente que se llama table, que tiene encabezado de tabla, que tiene las filas, que tiene las celdas.
+[26:14] Speaker 1:  Esto otro no tiene. Entonces hay que meterle mucha información, porque finalmente son como, voy a decir, como componentes customizados, porque el usuario sí necesita saber qué es un que tiene ventanita, que tiene pestañita, y qué sé yo.
+[26:26] Speaker 1:  Si tú utilizas una modal, la modal también es un componente, está en el entre medio, está entre el simple y el complejo.
+[26:33] Speaker 1: ¿Por qué? Porque la modal tiene algunas cosas. Por ejemplo, las modales, ah, algo que voy a retroceder a algo que antes de que se me olvide.
+[26:39] Speaker 1:  Yo les había dicho que cuando vamos navegando por teclado, lo primero que aparece es el saltar al contenido central. Eso es cierto siempre que no exista estas barritas que dice "aceptar las cookies", porque cualquier persona que sí ve, para poder navegar y que se le oculte eso y ver el contenido, tiene que aceptar o rechazar las cookies, primero.
+[26:56] Speaker 1:  Entonces, como que si yo estoy navegando y hay esta ventanita de cookies, si estoy navegando con el teclado, tengo que ir a la ventanita de cookies primero, y después me aparece saltar al contenido, y recién voy navegando por todas las cosas, ¿vale? Entonces, ah, y ahí lo que te decía de la ventana modal, antes que se me olvide, que tiene varias reglas.
+[27:10] Speaker 1:  Primero, no se gatillan solas. O sea, cada vez que nosotros entramos a una página web, estábamos comprando, voy a decir, aros piercing, ustedes saben que yo soy la dueña de los piercings, tengo por todos lados.
+[27:19] Speaker 1:  Y te aparece esa ruleta que tú no le pediste para darte el descuento cuando estabas haciendo otra cosa, eso es súper invasivo. Entonces hay un criterio de accesibilidad que impide un poco eso.
+[27:26] Speaker 1:  Pero además, las modales atrapan el foco en la modal, o sea, yo no debería poder navegar por teclado por fuera de la modal, y encima las modales tienen que tener más de un elemento para poder cerrar. Entonces tiene, no sé, por lo general, la aceptar, te la cierra, tiene la X que te la cierra, haces clic fuera del área del modal y te la cierra, y tiene que tener un título, que es un H1.
+[27:41] Speaker 1:  Porque es cierto que las páginas tienen que existir un H1 por página, pero es que las modales son un contexto nuevo, es otro contexto. Entonces, si están bien construidas, debería ser H1.
+[27:50] Speaker 1:  Entonces esas cosas las vamos a ir aprendiendo. Entonces hay mucho que documentar, así que las modales también son buenos elementos para documentación.
+[27:55] Paula:  Y una preguntita más. En caso del date picker, por ejemplo, que en mobile se ve de otra forma, eso, o sea, lo vamos a documentar solo para.
+[28:01] Speaker 1:  Ah, no, no, no. Un dispositivo.
+[28:03] Paula:  Vale.
+[28:04] Speaker 1:  Sí, no se vuelvan locos. Sabemos que cambian, sabemos, pero es que el plan es que aprendan a documentar, que aprendan en el fondo como a traspasar la información. Pero esto no es un magister, chiquillas, así es que no se vuelvan locas con eso.
+[28:14] Speaker 1:  Si quieren hacerlo y alcanzan en los tiempos, por supuesto que nosotros vamos a revisar absolutamente todo. Pero si no alcanzan, no se vuelvan locas, ¿vale?
+[28:22] Paula:  Vale.
+[28:22] Speaker 1:  Súper. Había un comentario que lo voy a dejar para tercer lugar, porque aquí a ver, esperen, me quedé sin idea. Ya.
+[28:29] Speaker 1:  Lista de plugins tipo Nether. Sí, los plugins, va.
+[28:32] Speaker 1:  Tranquilidad, que van a ir apareciendo. Yo mi proyecto no lo enseño en público, no pasa nada, Marta, ya te vamos a dar la palabra.
+[28:38] Speaker 1:  Ya. Y lo de la Marta está en número dos, así que le vamos a dar la palabra a Clara, y lo de Gaby lo dejamos en número tres, ¿vale?
+[28:45] Speaker 1:  Ya, Clara. Pregunta.
+[28:47] Speaker 4:  Holi.
+[28:47] Speaker 1:  Hola.
+[28:48] Speaker 4:  Bueno, yo un poco como Marta, me da así un poco de vergüenzilla, pero vamos a soltarnos. Nada, yo esta semana vi el módulo completo, pero no estoy diagnosticada de TDA, pero casi casi, y mi intención fue un poco esta semana así, así que lo tendré que volver a ver. Nada, te voy a enseñar, si puedes, los pantallazos que hice con el flujo, porque viendo lo que están, bueno, los proyectos de mis compañeras, veo que mi flujo es como súper largo.
+[29:09] Speaker 4:  Entonces creo que tengo que acotar muchísimo. Voy a compartirte.
+[29:13] Speaker 1:  Eso, te iba a preguntar, si no te da vergüenza, compártelo más. Y si te da vergüenza, me llamas otro día y lo hacemos por fuera, no pasa nada.
+[29:20] Speaker 4:  Nada. Vale, no sé si podéis ver.
+[29:22] Speaker 1:  Sí.
+[29:23] Speaker 4:  Vale. Este es el sistema de salud de Galicia, en el que, o sea, tiene muchísimas cosas para pedir. O sea, mi intención es hacer el flujo de una persona entra y pide cita.
+[29:31] Speaker 4: ¿Qué pasa? Que tiene muchísimas cosas. Para empezar, esto es un modal.
+[29:34] Speaker 4:  Bueno, y anteriormente a esto tú entras a la web y aparecería otra cosa diferente, y aparece eso, este modal. Dentro de este modal, estas dos tarjetas son dos tarjetas diferentes que tú puedes tener, y puedes, o sea, son botones que no se anuncian.
+[29:43] Speaker 4:  Una, que no tienen aspecto de botón, no se anuncian en ningún momento, y distinguirles para una persona, pues, con un tipo de discapacidad visual y demás, es súper complicado. Esto sería como ya un componente que me parece no para diseñar.
+[29:55] Speaker 4:  Bueno, además de esto, bueno, hay como tres opciones de identificarse, pero ¿qué pasa? Que si tú eres la primera vez que te identificas, tienes que registrar.
+[30:00] Speaker 4:  Entonces vas a tener que registrarte con tu tarjeta.
+[30:03] Speaker 1:  Ah, entonces quizás.
+[30:05] Speaker 4:  Que tampoco está claro aquí.
+[30:06] Speaker 1:  Quizás podrías diseñar el flujo del login y el crear usuario. Como, o sea, porque no tiene por qué ser exactamente a la pata en base a esto, sino que simplemente es como una, como de base, ¿cachái? Entonces, porque claro, si es que yo me estoy creando mi cuenta por primera vez y no puedo usar las otras tres cosas, quizás es tan simple como decir: "Crear cuenta, registrarse".
+[30:29] Speaker 1:  Y bueno, ya, vale, ahí hay un, tienes un.
+[30:32] Speaker 4:  Es que lo que pasa es que además el sistema de salud te pide luego el tema este de la ESAUD, que ahora mismo no sé cómo va, pero es que es un tetris, porque tienes que ir o al centro de salud o meterte en otra página externa, o sea, es bastante tedioso. Ahora ya no me acuerdo, porque yo estoy registrada desde hace tiempo, o sea, tendría que investigarlo. Esto sería como un flujo por un lado.
+[30:46] Speaker 4:  Yo no había pensado hacer esto, sí que lo identifiqué como, pues, bueno, hay que revisarlo, pero bueno.
+[30:53] Speaker 1:  Pero es que te lo puedes saltar. Les dejo un comentario. En Chile existe algo que se llama clave única.
+[30:58] Speaker 1:  Tú te registras una vez, como usas tu DNI, y de ahí para adelante la clave única te sirve para todo, para todo.
+[31:05] Speaker 4:  Luego tú, una vez que te registras y tienes la chave esta 365, tú ya entras con tu DNI y tu clave. Pero los pasos previos es, vamos, los juegos del hambre, o sea, los juegos del hambre. Y esto caduca, que además lo pone por aquí, cada cuatro años, a veces, bueno, es solicitar, si te olvidas de la contraseña, es también los juegos del hambre, o sea, tela.
+[31:20] Speaker 4:  Ya no me paré ahí, pero sí que también se podría diseñar como ese flujo por otro lado.
+[31:24] Speaker 1:  No, y está muy raro, además, que me muestre las dos cosas en simultáneo, como el acceso con, viste que tengo acceso chave.
+[31:29] Speaker 4:  Sí, tú seleccionas aquí. De todas formas, yo lo que hice fue seleccionar identificarme con ESAUD, porque yo ya tengo mi tarjeta registrada, es decir, esto sería como la primera vez que te registras. Pero identificas también la ESAUD esta, es un rollo.
+[31:38] Speaker 4:  Yo, como tengo ya mi ESAUD, entro, porque es mi perfil, y me aparecería esta pantalla, que es otro modal. Meto mi clave y mi contraseña, o si no, acceso con certificado digital, que es como aquí también te aparece.
+[31:47] Speaker 1:  Claro, pero a lo que voy es que yo, como que cuando puedo acceder de más de una forma, como que me van guiando como los pasos, porque de hecho hay un criterio que habla un poco al respecto también, del simplificar lo que uno tiene visualmente, porque a mí me dan ganas de llenarlo todo, como que no sé si yo, si las personas entenderían que es uno u otro. Entonces quizás es como que es mejor meter un paso más a los usuarios, pero que sea inequívoco. Porque fíjense
+[32:10] Speaker 1:  que normalmente como diseñadores siempre nos dicen que las personas deberían lograr las cosas en tres clics y encontrar rápido. Vale, pero es que aquí se ahorraron un clic, pero dejaron a las personas con un problema, porque no sé si es tan fácil de entender. O sea, quizás es como hacer selección o.
+[32:24] Speaker 4:  Sí.
+[32:24] Speaker 1:  Sí. Claro, es más fácil como que quizás de antes, como transformar estos botones en botones de verdad, que sea como de selección única, y luego pasa lo que seleccioné y me muestran, pero como que hayan dos accesos distintos en simultáneo, es un poco perturbador. Pero bueno, dale.
+[32:37] Speaker 1:  Ya, ¿y qué más hay?
+[32:38] Speaker 4:  Vale, ¿qué más hay? Bueno, luego entras aquí, sería la pantalla que te aparece inicialmente, sin hacer nada. No funciona foco, no funciona lector de pantalla.
+[32:46] Speaker 4:  Uy, espera, un segundo, porque se me acaba de desisla. Vale, es que la tengo en otra pantalla y se me acaba de quedar sin batería.
+[32:52] Speaker 4:  Ahí está, perdón. Vale, no funciona foco.
+[32:56] Speaker 4:  En principio, yo lo que quiero es el flujo de solicitar cita. Ya me perdería aquí, porque tampoco se menciona por teclado.
+[32:59] Speaker 4:  Ah, y otra, que aquí en esa captura sí que aparece un footer, y lo primero que se menciona por lector de pantalla, por NBA, es los enlaces que aparecen en el footer. O sea, tienes que navegar primero por el footer y luego va aquí.
+[33:10] Speaker 1:  Y tengo una pregunta, pero para la vida, porque para mí el flujo más normal sería, yo desde el home o qué sé yo, hice clic en agendar cita, y después de que hice clic en solicitar cita, me piden identificarme, y después de que me identifico, selecciono el área médica, el recinto y qué sé yo. Como que tiene un flujo medio raro, porque ¿para qué me voy a loguear si es que no hay cita disponible en el día que yo quiero y que tengo disponible?
+[33:32] Speaker 4:  No, pues esa es otra, porque, bueno, tú seleccionas luego lo que quieres, vas a consulta, te aparece el calendario, pero es que seleccionas en el calendario, por ejemplo, el día 15, y de repente se deshabilitan los días porque no están disponibles. O sea, seleccionas el día 15, y lo hice también con NBA, de repente se deshabilitan, no te avisa de nada, y tú ya, pues, ponte a navegar otra vez, y de hecho dice: "Tabla, fila, 15". Tabla, fila, 16.
+[33:57] Speaker 1:  Claro, porque no están vinculados los campos. Ya. Pero claro, pero yo como que para mí en realidad el flujo más lógico sería que encuentro mi cita y cuando me voy a la quiero reservar, ahí recién me logueo, ¿por qué no hiciste loguearme antes?
+[34:08] Speaker 1:  O sea, no tú, el sistema.
+[34:09] Speaker 4:  Tú tienes un funcional asociado, que es eso otro también, tú tienes un funcional asociado, que como que aparece aquí. O sea, dentro de tu ficha tú tienes que loguearte para que estás dentro del sistema de salud aquí, y luego es como, bueno, estás dentro del sistema de salud, te perteneces a este centro médico, con este profesional o con esta profesional, y seleccionas tu cita. Vale, seleccionas tu cita, pero es que luego te encuentras con, no está ese profesional ese día, pero es que tampoco te avisan.
+[34:29] Speaker 4:  Y aquí no se, o sea, sí, tú lo estás viendo, aparte me parece que es como el color es un poco inadecuado, pero es como, uy, error, error. Y luego tampoco se, o sea, por lector de pantalla, bueno, esto que ya no funciona en ningún lado, por lector de pantalla tampoco.
+[34:42] Speaker 1:  Y voy a hacer un comentario muy tonto. Cuando uno escoge profesionales del área de la salud en particular, la foto no se vuelve muy importante? Porque, por ejemplo, a mí me gusta mucho atenderme con gente que sea muy viejita.
+[34:55] Speaker 1:  Ojalá con el doctor Chapatín, así de viejita, porque siento que sabe más que una persona que es demasiado joven. Pero si voy al ginecólogo, quizás no me importa que me atienda un hombre, pero que tenga cara de general.
+[35:09] Speaker 1:  No, no sé, como.
+[35:12] Speaker 4:  Sí, aquí tampoco tiene mucho sentido, porque realmente, o sea, tú seleccionas aquí, vale, yo porque ahora mismo me conozco a las médicas, porque es mi centro de salud de toda la vida, vale, esta no, porque ahora es como nuevo, pero estas personas sí. Entonces aquí puedo decir, ah, pues esta persona sí, no. Porque yo también, o sea, el centro de salud al que pertenezco yo es un pueblo chiquito, y conozco a los profesionales que hay, pero hay mucha gente que no.
+[35:26] Speaker 4:  O sea, no tiene mucho sentido que aparezca el nombre, porque te va a tocar el que te toque. Y luego ya vas allí y a lo mejor ni siquiera está ese profesional.
+[35:31] Speaker 4:  Es decir.
+[35:31] Speaker 1:  Claro, pero por ejemplo, como, o sea, yo diseñé un tema de telemedicina, teleconsulta en realidad, y lo primero que veías después de que seleccionabas el área médica eran las próximas horas disponibles. Lo primero, cuál era el profesional, con su hora y qué sé yo. Entonces ni siquiera tenía que salir a buscar, sino que veía que había una para diez minutos y estaba ahí mismo, esa me tomo con este.
+[35:51] Speaker 1:  Y después podías explorar otros slots, buscar por profesional o qué sé yo. O sea, como que tenías como toda esa, pero como que en ningún momento, o sea, se ve muy largo, Mar.
+[36:01] Speaker 1:  No, no es Mar, te refieres Clara.
+[36:03] Speaker 4:  No, Clara.
+[36:03] Speaker 1:  Sí. Se ve muy largo, pero en la práctica es porque el flujo está mal diseñado. O sea, yo creo que lo puedes simplificar un montón, pero tienes como tres flujos distintos, porque uno es el ingresar, hay un flujo ahí.
+[36:14] Speaker 1:  Otro flujo es el buscar una hora, que en el fondo que es desde que entras a un poquito más atrás, desde que dices el servicio, desde ahí, claro.
+[36:24] Speaker 4:  Bueno, sí que aparece aquí, servicio y consulta.
+[36:27] Speaker 1:  Claro, porque ya, sí, está bien, de alguna parte llegué, pero en los carritos cuando uno va al carro de compra también sabes que de alguna parte llegaste y caíste en el carro de compra. De hecho, la mayoría de los equipos de diseño se dividen por flujo, por viaje. Así es que yo lo haría como desde aquí.
+[36:41] Speaker 4:  Vale.
+[36:41] Speaker 1:  No porque para atrás no sea interesante, es que si no no vas a terminar nunca.
+[36:44] Speaker 4:  Ya, es que ahora cuando lo estabais hablando digo yo, uf, creo que me vine arribita yo.
+[36:48] Speaker 1:  Sí, y claro, y ahí tienes un montón de trabajo por hacer, porque además, claro, pusiste la consulta. Ah, lo que no sé es cómo llegaste de la consulta al centro médico, al.
+[36:59] Speaker 4:  Es que esto no tiene sentido tampoco, porque realmente es como se va con autocompletar, porque tú esto seleccionas consulta, seleccionas consulta y te lleva al calendario. Y claro, ahí ya se autocompleta.
+[37:10] Speaker 1:  Pero es solo, y aquí la pregunta, ¿solo hay una especialidad médica? Porque, ¿cómo me muestra un calendario sin mostrarme primero si quiero ir al urgenciólogo, una consulta médica general, quiero ir al dentista, quiero ir al nutriólogo, qué?
+[37:20] Speaker 1: ¿Cómo?
+[37:21] Speaker 4:  Espérate, que no sé si me salté yo una cosa, pero creo que no. O sea, te permite hacer, espérate, que me lo veo aquí, si no.
+[37:29] Speaker 1:  Claro, porque como que por lo general uno pone como consulta, tiene un buscador que te permite buscar por especialidad médica o por médico, o por el especialista, y recién ahí ves la agenda. Como que.
+[37:38] Speaker 4:  Es que.
+[37:39] Speaker 1:  Vale. Yo creo que te faltó una captura.
+[37:45] Speaker 4:  A ver, os comparto.
+[37:46] Speaker 1:  Fíjate que arriba dice servicio de medicina de familia.
+[37:48] Speaker 4:  Sí, me faltó esta.
+[37:50] Speaker 1:  Sí. Yo creo que ahí hay algo que te falla, pero hace.
+[37:54] Speaker 4:  Esta.
+[37:56] Speaker 1:  Esta.
+[37:58] Speaker 4:  Claro. Sería el servicio.
+[37:59] Speaker 1:  Sí.
+[38:00] Speaker 4:  Pero yo diría allí ya debería estar. El servicio para la prestación ya va asociado, pero el centro se autocompleta en función de lo que tú escojas.
+[38:06] Speaker 1:  Pero el centro, pero no la especialidad, pues, médica. Es que a eso voy, como que me muestra una agenda, pero ni siquiera me preguntaste si me duele la guata, o sea, si me duele el estómago o necesito psicólogo, como.
+[38:16] Speaker 4:  Claro, esta es la previa, la que me faltaría a mí.
+[38:18] Speaker 1:  Claro, hay una, hay una, hay algo que falta ahí en ese flujo.
+[38:23] Speaker 4:  Yo tenía esta y me falta esta captura.
+[38:26] Speaker 1:  Claro, falta, falta, te falta algo, no sé qué, pero algo donde yo pueda escoger, así como quiero ir a traumatólogo, quiero ir a.
+[38:32] Speaker 4:  Ah, es que eso aquí no lo puedes elegir. O sea, es decir, tú en el servicio sanitario aquí es esto lo que hay. Tú si quieres ir al traumatólogo, vas a medicina de familia, tú vas a tu médico de cabecera, se llama médico de familia, y ahí te derivan a profesional.
+[38:43] Speaker 1:  O sea, tú solamente puedes escoger un médico general en este flujo.
+[38:47] Speaker 4:  Efectivamente. Bueno, puedes elegir la matrona odontólogo y, bueno, trabajo social y demás, que, bueno, es que con pinzas estas cositas. Pero sí, tú solo puedes, yo si quiero ir al ginecólogo, si quiero ir al traumatólogo, me tiene que derivar el médico de.
+[38:59] Speaker 1:  Ah, por eso. Ya, ahora entiendo. Okay, vale.
+[39:04] Speaker 1:  Es como un servicio público. Porque nosotros en Chile tenemos algo que se llama SESFAM, que también puedes pedir hora, y es mucho más radical, porque tú te asignan la hora.
+[39:16] Speaker 1:  Te dicen: "Esta es tu hora". Y problema tuyo si puedes ir ese día o no.
+[39:20] Speaker 1:  Es una cosa de locos.
+[39:21] Speaker 4:  Aquí es un poco así. En España realmente la sanidad es pública. Tú puedes ir a tu médico de cabecera privado, pero en general, si necesitas ir por un problema de salud, tú vas a, o sea, la sanidad es pública.
+[39:31] Speaker 4:  Claro, mejor escoger en el centro.
+[39:33] Speaker 1:  Sí, pero no sería, o sea, ya. Esto es importante. Lo que no puede pasar, Clara y todas también, es que los errores que pasan en el mundo físico, trasladarlos al mundo digital.
+[39:43] Speaker 1:  O sea, si podemos mejorar la experiencia, porque una cosa es que lo hagamos accesible y otra cosa es que la experiencia sea buena, ¿cierto? Como que, entonces, si es que la persona realmente puede escoger el día, si es que quizás no puedes escoger el médico, quizás no puedes escoger la especialidad del médico, pero si puedes escoger el día y la hora y qué sé yo, bueno, como hagámoslo bien.
+[40:01] Speaker 1:  Porque, por ejemplo, ya pusiste consulta, y quizás automáticamente debería mostrarme cuáles son las próximas consultas disponibles antes de mostrarme el calendario. Como muéstrame, cachái que es lo más próximo, no sé, para que sea más.
+[40:11] Speaker 4:  Simplemente yo pensando, si yo voy a pedir cita médica, normalmente es: "Me encuentro mal, voy a pedir cita médica, quiero ir lo antes posible".
+[40:16] Speaker 1:  Lo antes posible. Claro, por eso, muéstrame al tiro cuáles son las próximas horas disponibles. Sobre todo si es que esto, cachái, como que pincho 15 y después resulta que estaba inactivo, quizás.
+[40:25] Speaker 4:  Porque no hay citas, entonces te lleva al 23.
+[40:27] Speaker 1:  Claro, claro. Bueno, eso se corrige en un diseño que no tenga ese error, digamos, como que. Pero ya, y tengo el logré el 23, y después del 23 me muestra los profesionales que están con los horarios, creo que era eso, ¿no?
+[40:39] Speaker 1:  Ándate a la siguiente, la siguiente.
+[40:40] Speaker 4:  Marcas, marcas, tienes que aceptar, y luego los profesionales, sí.
+[40:42] Speaker 1:  Sí, ya. Y después de eso es un aceptado, listo.
+[40:46] Speaker 4:  Seleccionas y te aparece este modal, que tampoco sé, o sea, si yo accedo con un lector de pantalla o con, bueno, con teclado podrías medianamente, pero con lector de pantalla no sabes dónde estás.
+[40:56] Speaker 1:  Claro, claro. Pero eso lo vamos a resolver, porque vamos a asumir que ninguno funciona. Ya, yo haría desde que estás seleccionando, o sea, hasta esa pantalla, hasta que acepta la cita, ¿vale?
+[41:05] Speaker 4:  Vale. O sea, aquí la tendría que aún aceptar, y después aceptar, confirmar y aceptar.
+[41:12] Speaker 1:  Ya, es que eso.
+[41:13] Speaker 4:  Y ya ahí ya paré, porque es como larguísimo.
+[41:14] Speaker 1:  Pero esas modales no tienen sentido que existan esas modales ahí, porque además no están tapando nada, cachái? Como de contenido. O sea, por eso, como que no es necesario el vicio que ya tenga, llevarlo a el mismo vicio más bonito.
+[41:27] Speaker 1:  Quizás es parte de un flujo nomás. Yo haría hasta, literalmente, hasta la pantalla que me pide confirmar la cita.
+[41:32] Speaker 4:  Vale. O sea, lo voy a hacer como mi compi. Desde aquí, desde la consulta.
+[41:37] Speaker 1:  Claro, porque la práctica es el flujo, es como encontrar la cita, cachái?
+[41:43] Speaker 4:  Perfecto.
+[41:45] Speaker 1:  Por supuesto que si quieres llevarlo más allá también puedes, pero mira la cantidad de información que hay.
+[41:49] Speaker 4:  No, yo creo que por eso pedí palabra, porque me parecía ya larguísimo, o sea, me parecía demasiado.
+[41:53] Speaker 1:  Sí. El plan es que no tengan que, o sea, el ideal es que no diseñen más de cuatro pantallas. Para que más o menos piensen, porque si no, anda es un flujo muy, muy largo.
+[42:01] Speaker 1:  Hagamos microflujos. Si sabemos que después anda de que hacerte la cita tiene que salir en una cuestión de confirmación y qué sé yo.
+[42:06] Speaker 1:  Si te queda tiempo, Clara, claro, lo puedes hacer, te lo vamos a revisar. Pero enfócate en algo que sea muy manejable.
+[42:11] Speaker 4:  Vale, perfecto. Muchas gracias.
+[42:14] Speaker 1:  A ti. Marta, ahora sí.
+[42:19] Speaker 4:  Ay, perdón, que estaba mute. No, yo tenía una pregunta que era lo de, es que yo hay cosas que confundo con que tiene que ser, porque un diseñador tiene que diseñar accesible siempre. Pero hay veces que no se cumplen las, o sea, que se tienen que cumplir las normas, pero hay veces que llegas a un mínimo y dices: "Bueno, okay, pues estoy okay".
+[42:33] Speaker 4:  Y es, por ejemplo, lo del tema de los títulos de página y los patraes y todo eso, eso es imperdonable, ¿no? Porque yo he visto webs sin título de página aún hoy, pero me parece, o sea, me parece imperdonable, porque lo sé, aparte que me parece horroroso, pero eso aplica también para las apps de escritorio?
+[42:46] Speaker 1:  Las apps de escritorio, ¿cómo?
+[42:47] Speaker 4:  Es que yo por ejemplo trabajo en una app que es de escritorio, tipo Photoshop, tipo Canva.
+[42:50] Speaker 1:  Ah, ya. Lo que pasa es que esos son otros estándares.
+[42:53] Speaker 4:  Vale.
+[42:54] Speaker 1:  Esos son estándares de creación de contenido, de autoría. Es un estándar distinto, y ahí yo no soy experta en ese estándar, entonces no te quiero mentir. Porque.
+[43:02] Speaker 4:  Vale.
+[43:02] Speaker 1:  Uno, ¿para qué? ¿Para qué? No es necesario.
+[43:06] Speaker 1:  Pero es una súper buena pregunta, porque, por ejemplo, ¿qué pasa con plataformas como Netflix?
+[43:12] Speaker 4:  Sí, claro, ese tipo de cosas. Yo trabajo en una parecida a Canva, y yo sigo los mismos estándares que los de la web.
+[43:17] Speaker 1:  Sí, claro.
+[43:18] Speaker 4:  Pero muchas veces es como por igual me lo estoy inventando, ¿sabes?
+[43:19] Speaker 1:  Existen distintos estándares. Estoy casi segura de que los mencionamos en el módulo dos o tres. Pero además de la Wicar, está ATAC, está UAC y está COGA.
+[43:32] Speaker 1:  Entonces, déjenme mostrarles, yo se los voy a compartir después los enlaces, para que los entendamos. Pero justo, de hecho, en este de las preguntas que en el Kahoot que hice, vienen de esas.
+[43:43] Speaker 1: ¿Por qué? A ver, denme un segundito. A ver cómo lo hice.
+[43:49] Speaker 1:  Tucu tucu, tucu tucu, un segundito. Para encontrar, ya.
+[43:53] Speaker 1:  ATAC es la, en inglés es Authoring Tools Accessibility Guidelines, ¿ya? Son las pautas que establecen cómo hacer accesibles las herramientas de autoría, y cómo ayudar a crear contenido digital accesible.
+[44:04] Speaker 1:  Entonces, ATAC tiene como dos partes, porque una es que la plataforma sea accesible, y otra es que la persona pueda ingresar contenido también de forma accesible. Entonces, a veces la gente tiene que conformar más de un estándar, ¿vale?
+[44:15] Speaker 1:  Pero yo creo que en tu caso, esto que me estás comentando, es Wicar y ATAC. Después yo les voy a mandar los enlaces para que los tengan, o quizás los podríamos compartir como recurso dentro del mismo curso.
+[44:26] Speaker 1:  Porque como está todo el tiempo en vivo, o sea, como que increciendo, acuérdense que si nosotros le metemos contenido nuevo a esto, les va a despachar un correo electrónico avisándoles como: "Hoy se actualizó este contenido". Si es que es un módulo que ya se desbloqueó antes.
+[44:37] Speaker 1:  Entonces, podríamos meterles esa información.
+[44:40] Speaker 1: ¿Quieren hacer el Kahoot o quieren revisar más casos?
+[44:48] Speaker 1:  Bueno, es que un poquito más de media hora, por eso les digo.
+[44:51] Speaker 4:  Por mí el Kahoot.
+[44:53] Speaker 1:  Ya, espérame. Entonces, antes vi que había una pregunta. Ya.
+[44:56] Speaker 1:  Ah, ya. Lista de playa y qué sé yo, todo eso es como que en el módulo tres, que es el que se va a liberar.
+[45:02] Speaker 1:  Ah, esto es importante. Mañana en el módulo tres se va a liberar prácticamente, o sea, se debería haber liberado hoy día, se debería liberar hoy día por la tarde-noche, pero Carlos está enfermo.
+[45:10] Speaker 1:  Y está enfermo hace varios días. Entonces, lo va a liberar mañana, ¿vale?
+[45:14] Speaker 1:  Pero van a quedar dos contenidos que se van a liberar el día sábado. Porque yo cuando grabé esto hace dos meses, me faltaron esos dos contenidos porque tuve que salir a una reunión, y iba a grabar el sábado pasado, pero estamos en modo aluvión en Chile.
+[45:28] Speaker 1:  Entonces, lo trasladé para el sábado. Voy a grabar esos dos contenidos y se va a subir inmediatamente, para que sepan que el módulo se va a liberar como por pedacitos.
+[45:34] Speaker 1:  Lo lamentamos un montón. Si es que tenemos que alargar una semana el curso, pues lo alargaremos una semana, pero el plan es terminar igual en la misma fecha, ¿vale?
+[45:40] Speaker 1:  Ahí, este módulo tres, porque ahora es explicar cómo funciona la Wicar, el módulo tres es meterse ya en algunos principios. Y ahí vamos a hablar del foco, vamos a hablar de la navegación por teclado y algunas otras cosillas.
+[45:51] Speaker 1:  Y cuando corresponda, yo voy a estar compartiendo pantalla, que es justamente lo que me falta grabar, que son los de compartir pantalla para mostrar cómo funciona, para mostrar las herramientas. Ahí vamos a mostrar algunas herramientas para medir contraste, tanto como si yo estuviese auditando como si estuviese diseñando.
+[46:04] Speaker 1:  Porque en Figma hay herramientas que nos permiten mejorar el contraste, pero es distinto cuando yo estoy auditando un sitio web y quiero ver cuál es el color. Tengo que agarrarlo con contagota, o tengo que aprender a leer el código, entonces vamos a mostrar eso.
+[46:15] Speaker 1:  Todo eso de plugins y todo lo demás, cuenten con ello. Después, Marta dice que el proyecto no lo muestra porque le da vergüenza, nosotros decimos plancha.
+[46:21] Speaker 1:  Ah, ya, y el comentario de: "Una página sin título es un pecado". Fíjense que lo que dice el estándar dice: "Una página puede no tener título, pero si es que tiene títulos, el primero es H1".
+[46:31] Speaker 1:  Entonces, y solamente existe un encabezado H1. Lo vamos a ver después, pero los encabezados son secuenciales.
+[46:36] Speaker 1:  Entonces, como, y ahí me voy a ir al Kahoot. Lo voy a mostrar con este.
+[46:42] Speaker 1:  Okay, déjenme ver si es que voy a prender este, que no es el más bonito, pero ustedes no se preocupen. Ya, miren.
+[46:51] Speaker 1:  Fíjense que se llega a ver? Sí.
+[46:56] Speaker 1:  Puedo apagar algunas cosas. Ah, no, las prendí todas.
+[46:58] Speaker 1:  Ya, listo, no importa. Este es Wave, que es una extensión, es un desastre porque no se entiende mucho cómo va, pero a mí me acomoda un montonazo porque la entiendo perfecto.
+[47:08] Speaker 1:  Y lo que dice aquí es que ahí hay una sección, y está, aquí me marca una sección, aquí me marca otra, esta es Navigation, esta también es Navigation, y ambos Navigation están dentro de headers. Después tengo otra sección, que es esta que se llama Main, que es el contenido central.
+[47:24] Speaker 1:  Tengo esta otra sección que es Aside, porque Aside normalmente la gente cree que es para la barra lateral, pero es para el contenido complementario, que puede ser una barra lateral, y este es Footer. Y dentro de cada uno de esos aquí, esta me dice que esto es una lista, acá también hay una lista.
+[47:37] Speaker 1: ¿Qué significa que sea una lista? Que a mí me va a decir, porque además esa lista está dentro de Navegación. Entonces, yo voy a escuchar que estoy dentro de un menú de Navegación que tiene una lista con dos componentes.
+[47:45] Speaker 1:  Y me va a decir: "Japonés-coreano". Y en este caso me va a decir: "Navegación, lista, no sé, uno, dos, tres, cuatro, cinco, seis, seis elementos".
+[47:51] Speaker 1: ¿Vale? Pero ustedes me preguntaban por los encabezados. El encabezado de cada página va a tener un encabezado H1.
+[47:57] Speaker 1:  El encabezado H1 tiene el título de la página completa. Entonces, si esto fuese un carrusel con una promoción, por ejemplo, en el caso de un e-commerce, el H1 no puede ser parte de ese banner, porque es un promoción.
+[48:07] Speaker 1:  Debería ser: "Bienvenido a Mercado Libre", "Bienvenido a Zara", lo que sea. Y ojalá que no sea un bienvenido porque ese exista, ¿verdad?
+[48:12] Speaker 1:  El inglés no tiene ese problema, pero nosotros en español sí se nos da. Entonces, las páginas siempre tienen un H1, que es el primer encabezado.
+[48:18] Speaker 1:  Después, cada vez que aparece una sección, esa sección tiene un encabezado que es de nivel H2. Entonces, en el caso del W3C es súper fácil, porque más encima me marca las secciones con cambios de color.
+[48:26] Speaker 1:  Entonces, yo tengo una sección aquí, no hay ningún otro subtítulo, así es que la siguiente sección tiene un H2. Y este, aunque no tenga el color de fondo, es equivalente a este, a nivel como de estructura, ¿cierto?
+[48:37] Speaker 1:  Como fíjense que son H2, que pueden ser más chiquititos que este, quizás en tamaño, pero no pasa nada, siguen siendo hermanos. Acuérdense que siempre hay un hermano feo y nosotras que somos las bellezas, pero seguimos siendo hermanos.
+[48:46] Speaker 1:  Entonces, eso es como importante. Fíjense aquí, H2, H2, acá también tiene un H2, y este, que es hijo de este, depende, ¿cierto?
+[48:54] Speaker 1:  Está en una relación de codependencia, porque incluso está dentro de una sección, entonces es H3. Entonces, el H1 es para el título de la página, el H2 es para el título de las secciones de mi página, y el H3 es para las subsecciones, y así hasta el H6.
+[49:06] Speaker 1:  Entonces, es tres, es tres, tres, y hasta ahí llega.
+[49:10] Speaker 4:  Qué.
+[49:10] Speaker 1:  Rara vez las páginas tienen hasta H6, muy rara vez. Y ahora los voy a traer a nuestro fin de juego, compartir esta pestaña. Kahoot.
+[49:22] Speaker 1:  Tienen que entrar a kahoot.it, o pueden escanearlo, si es que lo van a usar desde el celu. Y el pin es el 993529, ya llegó Carol.
+[49:35] Speaker 1:  A ver cuánta gente tiene que llegar. Son como diez, ocho ya.
+[49:39] Speaker 1:  Empecemos.
+[49:47] Speaker 1:  Tucu tucu.
+[49:49] Speaker 1: ¿Cuál es la jerarquía correcta de Wicar? Esa es la pregunta, ¿ya? Criterios, principios, pautas, principios, pautas, criterio de éxito, pautas, niveles, principios, principios, técnicas, niveles.
+[50:04] Speaker 1:  Ya. Okay.
+[50:06] Speaker 1:  Bien. Todos entendemos entonces que están los principios, que son cuatro, ¿cierto?
+[50:09] Speaker 1:  Se lo saben. Hay una sigla para aprendérselos que es POWR.
+[50:13] Speaker 1:  Se supone que los de la W3C pensaron que con eso nosotros lo íbamos a relacionar con poder, pero yo lo relaciono con pobreza, con múltiple perceptible o de operable, la U de understated, es la única que no coincide con el español, entonces sería entendible, y la R de robusto. Entonces, tenemos los cuatro principios.
+[50:29] Speaker 1:  Los principios a su vez tienen pautas, que son 13, y esas pautas se distribuyen en los distintos principios, y cada uno de las pautas, que es como el objetivo rector, digamos, estructura en criterios. Y esos criterios tienen los niveles: A, AA, AAA, ¿okay?
+[50:43] Speaker 1:  Y tienen toda esta parte como de qué es lo que verificar y un montón de info.
+[50:49] Speaker 1:  Súper. Aquí a Carlos le encanta la cháchara con esto, pero digamos que Carol lo hizo más rápido.
+[50:54] Speaker 1:  Verdadero o falso. Wicar organiza sus pautas bajo cuatro principios.
+[50:57] Speaker 1:  Sí.
+[51:02] Speaker 1:  Tucu tucu, verdadero. No hay nada que decir, ya lo habíamos comentado, sí.
+[51:05] Speaker 1:  Muy bien. Y Carol, ah, esperen, Sara y Paula se fueron.
+[51:09] Speaker 1:  Vamos. Otra más.
+[51:11] Speaker 1: ¿Qué describe mejor una pauta de Wicar? Herramienta para auditar sitios, tema general de accesibilidad, técnica obligatoria de programación, o nivel de certificación.
+[51:25] Speaker 1:  Ah, yo les puse temporizador porque hice 30 preguntas, y si no, no íbamos a llegar al tiempo. Pero sí, un tema general, es como el objetivo, ¿vale?
+[51:33] Speaker 1:  Sirve para agrupar. Entonces, los principios dijimos que eran con las letras PUR, la P el número uno, la O de, o sea, perceptible número uno, operable número dos, entendible número tres, robusto cuatro.
+[51:44] Speaker 1:  Después tenemos las pautas, que van a tener números, por ejemplo, 1.1, o 2.1, 2.2, etcétera. Y eso lo que hace es que agrupa por tema.
+[51:51] Speaker 1:  Y después el que tiene tres numeritos es el que podemos verificar. Súper bien.
+[51:55] Speaker 1:  Voy a omitir el temporizador después porque va demasiado rápido.
+[52:00] Speaker 1:  Vamos, Carol, vamos, Sara, vamos, vamos, vamos, todas. Voy a ir aquí.
+[52:04] Speaker 1:  Siguiente pregunta.
+[52:04] Speaker 1: ¿Qué significa Wicar? Oh, no. Perdón.
+[52:10] Speaker 1:  Qué mal. Yo quería que dejara de contar el tiempo, pero llegó y me mandó la respuesta.
+[52:14] Speaker 1:  Me los fregué a todos.
+[52:18] Speaker 1:  Yo la embarré, lo siento, lo siento. Pensé que lo estaba haciendo de hora, la hice pésimo.
+[52:21] Speaker 1:  Ya, pero Wicar son las pautas para la accesibilidad del contenido web. Entonces, cada uno de estos, habíamos dicho que hay más estándares, obviamente todos significan algo.
+[52:29] Speaker 1:  Y fíjense, después que ATAC, UAC, qué sé yo, todos terminan con AG. Entonces, cuando den la certificación de CIPAC, que es la de competencias básicas de accesibilidad, ustedes si termina con AG, saben que es un estándar de accesibilidad.
+[52:43] Speaker 1:  Fácil. Accessibility Guidelines, como que una cosa así.
+[52:47] Speaker 1:  Aquí yo asumo mi responsabilidad. Mil disculpas, no se va a volver a repetir.
+[52:51] Speaker 1:  Ahora sí.
+[52:52] Speaker 1: ¿Qué versión vamos a estudiar en este curso?
+[52:59] Speaker 1:  Y acuérdense que esto es como las muñequitas rusas. La Wicar 2.2 contiene la 2.1, que contiene la 2.0.
+[53:05] Speaker 1:  Cada vez que cambia de número, quiere decir que se agregaron criterios o se agregó una pauta, pero conserva la estructura. Por eso es que cuando ustedes vean después el estándar, van a ver que van en orden ascendente, así como 1.1, bueno, 1.1.1, no existe 1.1.2.
+[53:18] Speaker 1:  Después va como 1.2.1, 1.2.2, y qué sé yo, y el numerito van correlativos, así como las A, las AA, las AA, después las AAA. Pero entre medio se nos meten después de las AAA algunas que pueden ser A o que pueden ser AA.
+[53:28] Speaker 1:  Es porque se añadieron después. Entonces, para no cambiar los números de lo que ya existía, se añaden a la cola.
+[53:32] Speaker 1:  Eso es lo que pasa. Ya?
+[53:34] Speaker 1:  Por eso es que vamos a decir que siempre contienen al otro. Y la 1.0 se organizaba completamente distinta, no teníamos los principios, no teníamos nada, y en este momento se está haciendo el borrador de la 3.0, porque se va a estructurar distinto.
+[53:46] Speaker 1:  Veamos cómo vamos en la tabla. Bien, Carol.
+[53:49] Speaker 1:  Vamos todas, vamos, vamos.
+[53:51] Speaker 1: ¿Para qué sirven los criterios de conformidad? Para definir condiciones evaluables de accesibilidad, para elegir los colores de la marca, para medir el rendimiento, para sustituir las pruebas con usuarios.
+[54:03] Speaker 1:  Es fácil.
+[54:07] Speaker 1:  Muy bien. Define las condiciones evaluables.
+[54:09] Speaker 1:  Ahí, en el fondo, si ustedes después cuando se metan a los criterios, se van a dar cuenta que nos dice cómo se resuelve. Dice lo que hay que conseguir, qué es lo que tienes que hacer, no el cómo.
+[54:17] Speaker 1:  Así es que hay múltiples formas todavía de resolver. Vamos.
+[54:21] Speaker 1:  Sí, a las 4:00 me tengo que ir, así que vamos a llegar hasta donde podamos llegar. Verdadero o falso.
+[54:26] Speaker 1:  Las técnicas de Wicar son la única forma válida de cumplir un criterio.
+[54:34] Speaker 1:  Es falso. Porque tenemos, podemos evaluar con usuarios con discapacidad, podemos hacer evaluaciones con expertos, podemos simplemente tenerlo incorporado de antes y saberlo de memoria.
+[54:45] Speaker 1:  O sea, hay mil formas, y lo que dice el W3C es que son complementarias, que hagamos pruebas con herramientas automáticas, aunque su alcance es más chiquitito, solamente cubre como un 30%, que hagamos investigación con personas con discapacidad. De hecho, están muy cercanos al modelo social, así es que como que siempre el modelo social tenía el lema: "Nada sobre nosotros sin nosotros".
+[55:03] Speaker 1:  Así es que es como que hay que aprender Wicar, hay que aprender a incorporar a las personas con discapacidad, y tenemos, podemos hacer testeos propios, podemos externalizarlos, mil formas, ¿vale? Okay.
+[55:14] Speaker 1:  Y vamos. Sara, no sé por qué Aclara la muestra como: "Ah, un fallo, está en racha".
+[55:19] Speaker 1:  Ahí está. Bueno, una más.
+[55:22] Speaker 1: ¿Qué representan los niveles A, AA y AAA? Tipos de discapacidad, niveles de conformidad, etapas del desarrollo, versiones de Wicar.
+[55:32] Speaker 1:  Muy bien. Todos los estándares de accesibilidad tienen nivel A, AA, AAA, donde A es el simple, AA es lo aceptable, y AAA tiene como, se considera como más difícil de lograr, pero en realidad muchos de esos no son más difíciles.
+[55:46] Speaker 1:  Por ejemplo, el tamaño del objeto clickeable o interactivo, en AAA es de 44 por 44.
+[55:53] Speaker 1: ¿Es más difícil hacer algo de 44 por 44 que de 24 por 24? La respuesta debería ser no, desde el diseño. Pero explícalo a un stakeholder que tiene que ser de 44 por 44, y hablemos después de qué es lo que es difícil y qué no es difícil.
+[56:06] Speaker 1:  Convencer también puede ser muy difícil. Y hay otras cosas que son muy específicas, como por ejemplo, lengua de señas en videos, en conferencias, en vivo, qué sé yo, webinar en vivo.
+[56:15] Speaker 1:  Chuta. Es complicado, se va complejizando el asunto.
+[56:18] Speaker 1:  Entonces, por eso AAA. Veamos.
+[56:21] Speaker 1:  Seguimos, seguimos. Cinco participantes han alcanzado una racha de respuestas de cuatro.
+[56:24] Speaker 1:  Esa. Con la nueve.
+[56:28] Speaker 1:  Selección múltiple.
+[56:29] Speaker 1: ¿Qué afirmaciones sobre Wicar son correctas? Incluye cuatro principios, incluye 13 pautas, exige una tecnología específica en todos los casos, tiene criterios A, AA y AAA. Marquen todas las que sean correctas.
+[56:44] Speaker 1:  Tan, tan, tan, tan. Sí.
+[56:47] Speaker 1:  Eran los cuatro principios que ya los vimos, que se dividen en las 13 pautas, las pautas tienen criterios de aceptación, y esos criterios de aceptación tienen niveles A, AA, AAA. Pero no exige la tecnología específica.
+[56:57] Speaker 1:  Vamos. En eso nadie se equivocó porque nadie escogió eso.
+[57:01] Speaker 1:  Cinco en racha. Let's go.
+[57:04] Speaker 1: ¿Cuál es la mejor forma de usar Wicar al diseñar? Revisarla al finalizar, dejarla exclusivamente a desarrollo, considerarla desde las primeras decisiones, sustituir por pruebas con personas usuarias. Y aquí nadie se equivocó.
+[57:13] Speaker 1:  Muy bien. Vamos.
+[57:16] Speaker 1:  Carol está en racha. Clara sigue arriba.
+[57:18] Speaker 1:  Verdadero o falso.
+[57:19] Speaker 1: ¿Un diseño accesible es 100% usable?
+[57:26] Speaker 1:  Correcto, es falso. Algo puede ser accesible y aun así no ser usable.
+[57:30] Speaker 1:  Por eso vamos a considerar que los test de usabilidad siguen siendo importantes. Porque hay gente que dice que no necesitas hacer testeos de usuarios, testeos con usuarios, si tienes testeos de accesibilidad, por ejemplo.
+[57:40] Speaker 1:  No es verdad. Sigue siendo relevante.
+[57:44] Speaker 1:  Sí, es mucho más factible si aumenta la usabilidad cuando mejoramos la accesibilidad, pero no es como que sean, no son sinónimos, ni uno está dentro del otro, ¿vale? Perfecto.
+[57:53] Speaker 1:  Vamos.
+[57:54] Speaker 1: ¿Qué debería documentar una persona que diseña? Decisiones, estados, comportamientos relevantes, las pantallas aprobadas, las decisiones que modifican el código, o solamente los colores finales. Las decisiones.
+[58:05] Speaker 1:  Muy bien.
+[58:08] Speaker 1:  Perfecto. Tres en racha.
+[58:10] Speaker 1:  Clara arriba. Vamos con la 13.
+[58:13] Speaker 1: ¿Qué información ayuda a entregar un diseño accesible a desarrollo? Solo diseño de interfaz, especificaciones de interacción, comportamiento esperado con teclado, estado de los componentes. Creo que esta debería ser múltiple.
+[58:30] Speaker 1:  Ahí sí. Sí.
+[58:31] Speaker 1:  No sé por qué no lo puse, así como que escoge todas, pero bueno. Deberíamos documentar todo lo que tiene que ver con interacción.
+[58:36] Speaker 1:  Sabemos que no es solamente a través del mouse, teclado, lector de pantalla. Las tecnologías, el resto de las tecnologías asistidas confían en el teclado, así que con eso tenemos suficiente.
+[58:43] Speaker 1:  Comportamiento esperado con el teclado, estado de los componentes. Activo, inactivo, hold, etcétera.
+[58:48] Speaker 1:  Yuhu, ya llegó un pequeño movimiento.
+[58:52] Speaker 1: ¿Qué diferencia un requisito de una buena práctica? No existe diferencia. La buena práctica es obligatoria, el requisito es exigible en el alcance definido, el requisito solo aplica al código.
+[59:02] Speaker 1:  Esto es como con agilidad.
+[59:08] Speaker 1:  Muy bien.
+[59:11] Speaker 1:  Yuli le está dando vuelta al resultado, dice. Verdadero o falso.
+[59:15] Speaker 1: ¿Cumplir Wicar garantiza que toda la interfaz podrá? No.
+[59:17] Speaker 1: ¿Que toda persona puede usar cualquier interfaz?
+[59:22] Speaker 1:  Se me va la batería, mis chachas.
+[59:26] Speaker 1:  Correcto.
+[59:31] Speaker 1:  Ahí.
+[59:34] Speaker 1: ¿Qué conviene hacer si una decisión de diseño tiene implicaciones de accesibilidad? Documentarla, comunicarla al equipo, dejarla implícita, no explícita, esperar que aparezca un error, resolverla durante las auditorías.
+[59:46] Speaker 1:  Muy bien.
+[59:49] Speaker 1:  Va. Aquí.
+[59:55] Speaker 1:  Vamos, vamos. Nos voy a mover magistralmente.
+[59:58] Speaker 1:  Selección múltiple.
+[59:59] Speaker 1: ¿Qué actividades completan una revisión de conformidad con Wicar? Pruebas con tecnología de apoyo, participación de personas con discapacidad, ejecutar pruebas automatizadas. Ah, puse dos veces participación de personas con discapacidad, así que claramente eso sí es.
+[60:14] Speaker 1:  Me equivoqué.
+[60:18] Speaker 1:  Muy bien. Ay, qué chistoso.
+[60:22] Speaker 1:  Ahora sí, vamos.
+[60:25] Speaker 1: ¿Cómo van nuestros resultados? Perfecto.
+[60:29] Speaker 1: ¿Qué organismo desarrolla Wicar? ¿Quién fue? La ISO, la IA, que es la Institución de Asociados de Profesionales de Accesibilidad.
+[60:36] Speaker 1:  Muy bien.
+[60:41] Speaker 1:  Son preguntas que parecen como medias tontas, pero hay gente que no tiene por qué, o sea, como que si no hicieran el módulo no tendrían por qué saber. No asumimos que todos sepan, ¿vale?
+[60:50] Speaker 1: ¿Wide Area reemplaza la necesidad de cumplir Wicar?
+[60:55] Speaker 1:  Es falso. Muy bien.
+[60:56] Speaker 1:  Es otro estándar, por si acaso. También existe un estándar de área.
+[61:01] Speaker 1:  Vamos. Pregunta 20.
+[61:04] Speaker 1: ¿Qué aborda ATAC principalmente? Y les dije que si terminaba en AG, Accessibility Guidelines.
+[61:13] Speaker 1:  Y A es de autoría.
+[61:20] Speaker 1:  Igual acá debería decir lo que es. En la siguiente.
+[61:22] Speaker 1:  Espérenme. Ahí está.
+[61:25] Speaker 1:  Authoring Tool, Accessibility Guidelines. Son las herramientas de autoría, ¿vale?
+[61:29] Speaker 1:  Entonces, como qué? Como WordPress.
+[61:32] Speaker 1:  Como quizás Photoshop.
+[61:37] Speaker 1:  Selección múltiple.
+[61:39] Speaker 1: ¿Qué referencias se relacionan directamente con la accesibilidad digital? Wicar, ATAC, UAC, ISO 9001.
+[61:51] Speaker 1:  Y aquí está.
+[61:55] Speaker 1:  Muy bien. UAC no se las dejé, pero es de los agentes de usuario, como los navegadores.
+[62:03] Speaker 1:  Les voy a dejar el link de UAC y el link de ATAC.
+[62:12] Speaker 1:  Deme un segundo porque hoy estoy sola. Bien.
+[62:19] Speaker 1:  Vamos con la siguiente. Yuhu.
+[62:22] Speaker 1:  Pero ven que retuvieron que la AG, Accessibility Guidelines. Súper bien.
+[62:24] Speaker 1:  Podría haberles hecho trampa y podría haberles inventado una sigla, pero no era el plan. Verdadero o falso.
+[62:29] Speaker 1:  HTML y Wicar son lo mismo.
+[62:33] Speaker 1:  Falso. Sí, quiero que sepan una cosa.
+[62:35] Speaker 1:  Dentro del W3C existe un grupo que se llama Web Accessibility Initiative, que son los que ven las iniciativas de accesibilidad. Y ellos, son los creadores del HTML, son los que crearon el CSS, y son los que crearon también JavaScript.
+[62:46] Speaker 1:  Y además de los que crearon los distintos estándares. Entonces, como el lenguaje es uno solo y todas las tecnologías responden, saben interpretar ese lenguaje, en realidad HTML y Wicar están súper vinculados.
+[62:54] Speaker 1:  Porque no hay problemas de accesibilidad cuando el HTML es semántico. O sea, es como que el plan es siempre usar HTML, pero obviamente no son lo mismo.
+[63:01] Speaker 1:  Y el HTML semántico queda cortito, lo que les comentaba antes. No existe un código para diseñar tabs o para diseñar acordeones.
+[63:07] Speaker 1:  O sea, sí, obvio, existe, porque por algo lo vemos, pero no es como la tabla que uno escribe Table, o no es como un encabezado que uno escribe H1, H2, H3, H4. Entonces, cuando el HTML queda corto, aparece área.
+[63:18] Speaker 1:  Ya? Eso es como la Y ARIA también tiene un estándar, y también lo ve el mismo grupo del W3C.
+[63:27] Speaker 1:  Ahí, ¿quién va? Miren, marea alcanzando a Carol.
+[63:31] Speaker 1:  Un equipo quiere declarar conformidad con Wicar.
+[63:33] Speaker 1: ¿Qué necesita evaluar? Página de inicio, sistema de diseño, uy, me falta la S. El resultado, un escáner automático, los requisitos aplicables al alcance declarado.
+[63:41] Speaker 1:  Obviamente estas son fáciles, sí. Muy bien.
+[63:43] Speaker 1:  Esto quiere decir que cuando nosotros vamos a auditar algo, bueno, nosotros no necesariamente vamos a auditar, pero primero se define el alcance, por lo general es como se define el estándar, se define el nivel. Por ejemplo, Wicar 2.2, nivel AA.
+[63:52] Speaker 1:  Vale.
+[63:53] Speaker 1: ¿Cuál es la muestra? La muestra podría ser efectivamente solo la página de inicio, y darle conformidad solo a la página de inicio, pero no es suficiente, ¿vale? Para declarar la conformidad.
+[64:01] Speaker 1:  Entonces, existe algo que se llama WCAG-EM, Wicar EM, Evaluation Method, que te enseña cómo generar la muestra de las páginas para los distintos flujos y qué sé yo. Y desde ahí es como que es como un método científico, que tomas una muestra, auditas esa muestra, después en base a eso se extrapola los resultados y se asume que funciona más o menos igual para el resto.
+[64:23] Speaker 1:  Y eso acaba de ser actualizado. Después les paso el link de eso también.
+[64:27] Speaker 1:  Vamos. No sé si vamos a alcanzar a terminar porque tengo reunión en tres minutos.
+[64:31] Speaker 1:  Verdadero o falso.
+[64:32] Speaker 1: ¿Una herramienta automática puede detectar todos los problemas de accesibilidad?
+[64:38] Speaker 1:  Falso.
+[64:39] Speaker 1: ¿Quién sabe más o menos cuánto? El porcentaje.
+[64:46] Speaker 2:  Era un 30.
+[64:48] Speaker 1:  Más o menos.
+[64:49] Speaker 2:  Se me ha cortado justo ahí.
+[64:50] Speaker 1:  Más o menos. Yo estoy desarrollando una herramienta automática hace muchísimo tiempo, con fondos del Estado, y nosotros recién estamos alcanzando el 28%. Si me aprueban un fondo adicional, vamos a alcanzar un 40%.
+[65:03] Speaker 1:  Pero sobre el porcentaje es importante, porque sobre qué? Sobre el número de criterios.
+[65:07] Speaker 1:  Pero cada criterio puede tener una serie de pruebas definidas. Entonces, es súper como que la mayoría dice sobre cuántos criterios, pero considera todas las pruebas, ahí ya es distinto.
+[65:17] Speaker 1:  O sea, no es tan fácil siquiera medirlo.
+[65:20] Speaker 1: ¿Vale? Por ejemplo, como yo puedo medir el contraste, pero la herramienta es capaz de identificar si es que ese contraste es en texto normal o texto grande o qué sé yo, eso ya es otra cosa.
+[65:29] Speaker 1: ¿Vale? Vamos a tener que dejarlo. Ah, no, todavía nos quedan dos minutos, así que podemos darle un poquitito más, pero no vamos a alcanzar a llegar hasta el final.
+[65:37] Speaker 1:  Vamos. Ah, sí, si le damos rápido.
+[65:39] Speaker 1:  Selección múltiple.
+[65:40] Speaker 1: ¿Qué puede incluir una buena especificación de un componente? Propósito y comportamiento, requisito de interacción, interacción de teclado, estados y cambios de estado. Esta se me repitió.
+[65:47] Speaker 1:  Acabo de darme cuenta que la hice dos veces. Pero bueno, es su oportunidad de tenerla al 100% buena.
+[65:57] Speaker 1:  Okay, era todo. Todas serias.
+[66:01] Speaker 1:  Subió Paula.
+[66:04] Speaker 1: ¿Qué documento sirve para informar la conformidad de un producto con criterios de accesibilidad? Esto no es parte del contenido, pero ya se los quise enseñar.
+[66:11] Speaker 1:  Ya. Un BIPAC, un mapa del sitio, un manual de marca, o un inventario de componentes.
+[66:17] Speaker 1:  Es una pregunta muy tramposa. No se estresen si es que no saben por qué no estaba la información, pero miren, sí lo tenían.
+[66:22] Speaker 1:  El BIPAC es una plantilla voluntaria para declarar la accesibilidad. Ahora no me acuerdo exacto qué significa la A.
+[66:30] Speaker 1:  Template. BIPAC, Voluntary Accessibility.
+[66:33] Speaker 1:  La P me falta. Pero la T es del template.
+[66:35] Speaker 1:  Cuando el template se llena, se transforma en una CR.
+[66:37] Speaker 1: ¿Qué es una CR? Accessibility Conformance Report. De ahí viene.
+[66:41] Speaker 1:  O sea, es el reporte de conformidad de la accesibilidad. Y ese reporte lo que hace es decir: criterio 1.1.1, cumple, no cumple, cumple a media, y qué sé yo.
+[66:48] Speaker 1:  Y después se hace una pequeña descripción del resultado general. Pero en términos generales, no pretende individualizar los errores.
+[66:53] Speaker 1:  Y se escribe, además, en sencillito. Entonces, no habla, por ejemplo, del contraste y el nivel.
+[66:58] Speaker 1:  Lo menos técnico posible, pese a que es un formato bastante técnico. Y son, están como que esos templates están disponibles en la página web, van por niveles, hay unos específicos para algunos mercados.
+[67:10] Speaker 1:  Así que está súper, súper bueno. En algún momento se meten en temas de auditoría, los van a necesitar.
+[67:15] Speaker 1:  Jamili subió, Carol sigue en racha. Verdadero o falso.
+[67:18] Speaker 1:  Si una solución cumple una técnica publicada por W3C, ¿cumple automáticamente Wicar? Verdadero o falso.
+[67:24] Speaker 1:  Acuérdense que los criterios tienen técnica. Y falso.
+[67:29] Speaker 1:  Correcto.
+[67:32] Speaker 1:  Muy bien. 29.
+[67:35] Speaker 1: ¿Qué aporta documentar decisiones de accesibilidad? Ah, chuta, me faltó la F. Facilita la implementación, revisión y mantenimiento, evita la necesidad de hacer pruebas de usuario, sustituye los criterios de éxito, garantiza la conformidad por sí sola.
+[67:48] Speaker 1:  Bien. Correcto.
+[67:53] Speaker 1:  Vamos, vamos. Racha.
+[67:54] Speaker 1:  La última.
+[67:55] Speaker 2:  Tres.
+[67:56] Speaker 1:  Selección múltiple. ¿Qué afirmación resume mejor una estrategia de accesibilidad? Considera la accesibilidad desde el inicio, documenta las decisiones relevantes, combina evaluación técnica y pruebas con personas usuarias, considerarla antes del lanzamiento.
+[68:07] Speaker 2:  Uno, dos, tres, cuatro, cinco, seis.
+[68:09] Speaker 1:  Selección múltiple, acuérdense.
+[68:14] Speaker 1:  Eran todas. Yo siempre tiendo a poner que todas sean.
+[68:17] Speaker 1:  Casi siempre. Todas mis respuestas siempre son la A, la B, como que se me olvida la C, la D.
+[68:23] Speaker 1:  Bueno, tenemos a Jamil, número tres. Vamos, Carol.
+[68:27] Speaker 1:  Muy bien. Y el número uno.
+[68:29] Speaker 1: ¿Quién nos quedó? Eso, marea. Muy bien.
+[68:33] Speaker 1:  Finalistas, Paula y Clara. Muy, muy bien.
+[68:36] Speaker 1:  Oye, entonces les pido que no se olviden, voy a dejar de compartir. No se olviden que se va a liberar el módulo mañana.
+[68:41] Speaker 1:  Igualmente, acuérdense que nosotros después te mandamos un correo electrónico y que van a quedar algunas lecciones que se van a liberar el sábado.
+[68:46] Speaker 1: ¿Ya? Para que no estén ahí pendientes. Y les vamos a mandar el correíto como siempre.
+[68:52] Speaker 1:  Así que nos vemos la próxima semana. Muchas gracias, chicas.
+[68:55] Speaker 2:  Gracias.
+[68:55] Speaker 1:  Gracias. Chao.
+[68:56] Speaker 2:  Chao.
