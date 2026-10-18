@@ -1,7 +1,7 @@
 ---
 title: "Clase 3 — Tutoría: flujos de proyecto, teclado, encabezados y Kahoot WCAG"
 status: in_progress
-source: ../raw-inputs/clase3_raw.txt
+source: ../raw-inputs/clase-03-raw.txt
 last_updated: 2026-10-17
 ---
 
