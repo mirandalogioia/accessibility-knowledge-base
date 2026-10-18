@@ -1,0 +1,459 @@
+# Módulo 3 — Diseño visual accesible
+## Contenido escrito de las lecciones (plataforma), transcrito de capturas de pantalla
+
+Nota: transcripción de capturas de pantalla de la plataforma, entregadas por tandas. Cubre las lecciones 3.1 a 3.10 (módulo completo). Los ejercicios interactivos aparecen solo cuando las capturas los muestran; las capturas cortadas corresponden a ejercicios sin contenido explicativo adicional. La numeración y los títulos de lección se confirmaron con el audio de las lecciones (`modulo-03-raw.txt`), donde la profesora anuncia cada lección; los títulos son los temas anunciados en el audio, no necesariamente el título literal de la plataforma. Las descripciones entre [corchetes] son de imágenes, ejemplos visuales y elementos interactivos, no texto de la plataforma.
+
+---
+
+## 3.1 — Contraste de color y WCAG
+
+Si el texto de «Guardar cambios» apenas se distingue del relleno del botón, puedes reconocer que hay un control y seguir sin leer qué hace. El contraste permite comprobar esa diferencia entre dos colores, en lugar de decidirla solo por cómo se ve en tu pantalla.
+
+La relación se expresa con un número como **4,5:1**. Cuanto mayor es, más se diferencian las luminosidades de los dos colores. Un color no tiene un contraste suficiente por sí solo: depende del color que tenga al lado.
+
+### El texto se mide contra su fondo
+
+En «Guardar cambios», las letras blancas se comparan con el relleno del botón. La siguiente imagen mantiene el texto a 16 píxeles y solo cambia ese relleno.
+
+[Imagen: dos botones redondeados con el texto blanco «Guardar cambios», sobre un panel blanco. El primero tiene el relleno gris claro (#999999); el segundo, gris oscuro (#595959).]
+
+El criterio 1.4.3 Contraste (mínimo) [enlace externo], de nivel AA, exige **al menos 4,5:1 para el texto normal**. Las letras blancas sobre #999999 dan aproximadamente 2,85:1 y no alcanzan ese mínimo. Sobre #595959 dan aproximadamente 7:1 y sí lo alcanzan.
+
+La comparación se hace entre las letras y el relleno, porque ese es el fondo que tienen detrás. Medir el relleno contra la página responde a otra pregunta: si se distingue la forma del control. Esa medida no permite decidir si se lee «Guardar cambios».
+
+El texto grande admite un mínimo de 3:1. Su clasificación depende del tamaño y el peso de la fuente, no de que el estilo se llame «Título» ni de la importancia de la información.
+
+### El borde del campo comunica otra cosa
+
+En el campo «Nombre del equipo», la etiqueta dice qué dato introducir. El borde permite localizar el espacio en el que puedes escribir. Las letras y el borde necesitan comprobaciones distintas.
+
+[Imagen: dos campos de texto idénticos, cada uno con la etiqueta «Nombre del equipo» y el valor «Equipo de diseño», sobre un panel blanco. El primero tiene un borde gris claro (#B8B8B8); el segundo, un borde gris más oscuro (#767676).]
+
+El criterio 1.4.11 Contraste no textual [enlace externo], también AA, exige 3:1 para la información visual necesaria para identificar los controles y sus estados. Si el borde es lo que permite reconocer el campo, mide ese borde contra el fondo que lo rodea.
+
+En la imagen, el borde #B8B8B8 sobre blanco no llega a 3:1. Un borde #767676 sobre ese mismo fondo sí lo alcanza. Oscurecer la etiqueta no corrige el borde: la etiqueta ya se podía leer y el espacio para escribir seguiría costando encontrar.
+
+No todos los adornos necesitan 3:1. Un separador decorativo no cumple la misma función que el borde necesario para identificar un campo. Tampoco hace falta añadir un rectángulo a cualquier botón si su texto y su contexto ya permiten reconocerlo.
+
+### Con qué comprobarlo
+
+WebAIM Contrast Checker [enlace externo] calcula la relación al introducir dos colores. Stark [enlace externo] permite revisar parejas dentro de Figma y explorar alternativas parecidas. Colour Contrast Analyser [enlace externo] es una aplicación de escritorio con cuentagotas para tomar los colores de la pantalla.
+
+Con un cuentagotas, toma el interior del trazo de la letra. El suavizado de sus bordes mezcla el color con el fondo y puede alterar la muestra. Si tienes los valores del diseño o de los estilos de la web, puedes introducirlos directamente en el comprobador.
+
+Si el texto va sobre una fotografía o un degradado, el fondo puede cambiar bajo cada palabra. Medir una zona oscura de la foto no demuestra que se lea entero. Revisa también las zonas donde haya menos diferencia entre las letras y lo que tienen detrás.
+
+### Práctica: comprobar el contraste de CityLights
+
+Abre la portada inaccesible de CityLights, de la demostración BAD del W3C [enlace externo]. Encuentra problemas de contraste en sus textos y compruébalos con Colour Contrast Analyser [enlace externo] o WebAIM Contrast Checker [enlace externo]. Después, abre la solución para comparar tus resultados con un caso de la página.
+
+---
+
+## 3.2 — Texto normal y texto grande
+
+Lees la carta de una cafetería y encuentras el nombre de la tostada con facilidad, pero los ingredientes cuestan más. Los dos textos usan el mismo gris. La diferencia está en cómo se presentan las letras: el nombre tiene más tamaño y los ingredientes, menos espacio para dibujar cada carácter.
+
+El criterio 1.4.3 Contraste (mínimo) [enlace externo] distingue entre texto normal y grande. Estas categorías sirven para decidir cuánto contraste necesita un texto. No dependen de que sea un título, un precio o un aviso.
+
+### Cuándo cuenta como texto grande
+
+WCAG expresa el tamaño en puntos. Para el texto web, 18 puntos equivalen a 24 píxeles CSS; 14 puntos equivalen aproximadamente a 18,67 píxeles CSS. El peso de la fuente también cuenta: una negrita puede entrar en la categoría grande con menos tamaño.
+
+| Cómo se muestra el texto | Categoría de contraste | Mínimo en AA |
+|---|---|---|
+| 24 px o más, con cualquier peso | Grande | 3:1 |
+| 18,67 px o más, en negrita | Grande | 3:1 |
+| Por debajo de esos límites | Normal | 4,5:1 |
+
+Un título de 23 px en peso regular sigue siendo texto normal, aunque sea lo primero que ves en la carta. Un aviso de 20 px en negrita entra en la categoría grande. La negrita no permite aplicar 3:1 a cualquier tamaño: a 18 px todavía queda por debajo de su límite.
+
+### Un mismo gris puede servir para un texto y fallar en otro
+
+La carta ficticia de La Esquina combina cuatro estilos. Los tamaños indicados son los píxeles CSS de la página, no una estimación a partir de la captura. Las notas te permiten relacionar lo que ves con el dato que necesita la comprobación.
+
+**Los cuatro estilos de la carta**
+
+[Imagen: maqueta de móvil (9:41, barra «La Esquina») con la cabecera «LA ESQUINA · CAFÉ Y PAN», el texto «Carta de desayunos · Todos los días, de 8 a 12 h» y cuatro textos señalados con marcadores numerados. A la derecha, una lista con cuatro notas, cada una con un botón «Ver en la página» (con icono de ojo) que resalta el texto correspondiente en la maqueta. En la captura está seleccionada la nota 2, y en la maqueta se ve resaltado su texto sobre fondo crema.]
+
+1. **Nombre de la sección** — 24 px en peso regular. Gris #888888 sobre blanco: 3,54:1. [En la maqueta: «Tostadas de la casa».]
+2. **Nombre y precio de la tostada** — 20 px en negrita. Gris #AAAAAA sobre blanco: 2,32:1. [En la maqueta: «Tomate y aceite · 4,50 €», en un gris muy claro sobre fondo crema.]
+3. **Ingredientes** — 16 px en peso regular. Gris #888888 sobre blanco: 3,54:1. [En la maqueta: «Pan de trigo, tomate rallado y aceite de oliva.»]
+4. **Aviso de alérgenos** — 18 px en negrita. Gris #595959 sobre blanco: aproximadamente 7:1. [En la maqueta: «Contiene gluten.»]
+
+[Resto de la maqueta, visible en la captura: «Pan de masa madre, preparado al momento.»; «Pregunta por las opciones sin gluten antes de pedir.»; botón oscuro «Consultar toda la carta».]
+
+El gris #888888 da la misma medida en el nombre de la sección y en los ingredientes porque las parejas de colores son idénticas. Eso no implica que ambos textos alcancen su mínimo: antes de interpretar la medida necesitas clasificar el estilo de cada uno.
+
+### Ejercicio · Unir parejas — «Comprueba los estilos de La Esquina»
+
+Enunciado: Relaciona cada texto de la carta con su mínimo de nivel AA y con el resultado de la medida. Usa el tamaño, el peso y el contraste de las notas. Sobra una propuesta.
+
+[Captura del ejercicio en estado «Completado · 4 intentos». Dos columnas conectadas por líneas.]
+
+Columna «Texto de la carta» y columna «Mínimo y resultado» (la propuesta sobrante no se conecta):
+
+- Tostadas de la casa: 24 px regular; 3,54:1. → Necesita 3:1 y lo alcanza.
+- Ingredientes: 16 px regular; 3,54:1. → Necesita 4,5:1 y no lo alcanza.
+- Tomate y aceite: 20 px negrita; 2,32:1. → Necesita 3:1 y no lo alcanza.
+- Contiene gluten: 18 px negrita; 7:1. → Necesita 4,5:1 y lo alcanza.
+- Propuesta sobrante: «Necesita 7:1 y no lo alcanza.»
+
+Retroalimentación mostrada tras completarlo (las cuatro respuestas figuran como «correcto»):
+
+1. **Tostadas de la casa: 24 px regular; 3,54:1.: correcto.** Con 24 px es texto grande aunque no esté en negrita. Sus 3,54:1 superan el mínimo de 3:1 de 1.4.3 Contraste (mínimo), AA. El título puede conservar este gris; los demás textos de la carta necesitan su propia comprobación.
+
+2. **Ingredientes: 16 px regular; 3,54:1.: correcto.** A 16 px en peso regular es texto normal y necesita 4,5:1 según 1.4.3 Contraste (mínimo), AA. El mismo gris que sirve para la sección falla en los ingredientes. Quien necesita saber qué lleva la tostada puede perder esa información.
+
+3. **Tomate y aceite: 20 px negrita; 2,32:1.: correcto.** 20 px en negrita supera el límite de aproximadamente 18,67 px para texto grande. Aunque puede aplicar 3:1, sus 2,32:1 no lo alcanzan. 1.4.3 Contraste (mínimo), AA, sigue exigiendo mejorar la pareja para que se lea el nombre y el precio.
+
+4. **Contiene gluten: 18 px negrita; 7:1.: correcto.** 18 px queda por debajo de los aproximadamente 18,67 px que necesita una negrita para contar como texto grande. El aviso aplica 4,5:1 y sus 7:1 lo superan. Según 1.4.3 Contraste (mínimo), AA, la negrita no reduce el requisito a cualquier tamaño.
+
+### Cambiar el color sin deshacer la carta
+
+Para corregir los ingredientes puedes usar un gris más oscuro y conservar sus 16 px. Si intentas resolverlo aumentando todos los textos hasta que cuenten como grandes, la carta ocupará mucho más y se puede perder la diferencia entre el nombre del plato y su descripción. La corrección debe permitir leer los ingredientes y mantener una organización comprensible.
+
+Los 24 px y 18,67 px no son un tamaño mínimo recomendado para todos los textos. Una nota de 12 px puede alcanzar 4,5:1 y seguir siendo difícil de leer en un móvil. El contraste resuelve la diferencia entre letras y fondo; la elección del tamaño también necesita considerar la lectura real.
+
+Evalúa el tamaño con el que se entrega el texto. Una persona que amplía la página no convierte en válida una pareja que antes no alcanzaba su mínimo. Y si trabajas con capturas, recuerda que una pantalla de alta densidad dibuja un píxel CSS con varios píxeles físicos: el ancho de una letra en la imagen no te da directamente el tamaño del estilo.
+
+---
+
+## 3.3 — El color como único medio para comunicar información
+
+Intentas crear una cuenta y el formulario marca tu correo en rojo. Puedes ver el campo, pero el color por sí solo no explica qué pasa ni cómo continuar. Si no distingues ese rojo, incluso puedes pensar que el dato se ha aceptado.
+
+El criterio 1.4.1 Uso del color [enlace externo], de nivel A, pide que una información no dependa únicamente del color. Las palabras, los símbolos y las formas pueden conservar su significado cuando dos tonos se confunden.
+
+### Un error que se puede reconocer
+
+Las dos versiones muestran el mismo correo incompleto. En una, el campo solo cambia a rojo. La otra mantiene ese color y añade un símbolo de error y un mensaje que permite corregirlo.
+
+Compara las dos versiones del campo «Correo electrónico». El dato escrito es el mismo: ana@.
+
+[Las imágenes de las dos versiones del campo no aparecen en las capturas.]
+
+El mensaje comunica qué falta y cómo escribirlo. El borde puede seguir siendo rojo para ayudar a encontrar el error, pero ya no necesitas interpretar ese tono para entenderlo. Un símbolo aislado tampoco explicaría cómo corregir el correo: por eso acompaña al mensaje.
+
+La misma decisión aparece en los estados de un pedido. «En preparación» y «Entregado» se pueden acompañar de colores; si se muestran únicamente dos puntos, la persona tiene que conocer y distinguir su código. El texto conserva el estado y el color lo refuerza.
+
+### Leer un gráfico sin depender de su leyenda de colores
+
+En un gráfico necesitas conocer el valor y a qué categoría pertenece. Que las barras se distingan del fondo no garantiza que puedas relacionarlas con una leyenda basada en colores. Cada barra puede verse perfectamente y seguir sin decir qué representa.
+
+Una etiqueta directa junto a cada barra permite consultar esa relación sin ir de un color a otro. También pueden utilizarse patrones o formas, siempre que quede claro qué significa cada uno. Cuando el gráfico contiene muchos datos, una tabla puede ofrecer otra forma de consultarlos.
+
+### Qué aporta una simulación del color
+
+Vision Simulator de Stark [enlace externo] ofrece simulaciones de distintas deficiencias en la percepción del color. La escala de grises también ayuda a encontrar diferencias que se pierden cuando no puedes apoyarte en el tono.
+
+Estas herramientas permiten detectar dependencias del color; no reproducen exactamente la visión de cada persona. La comprobación sigue siendo si las otras señales permiten entender la información: qué correo corregir, en qué estado está un pedido o qué categoría representa una barra.
+
+---
+
+## 3.4 — Estados visuales de los elementos interactivos
+
+Nora está configurando los recordatorios de sus citas. Ya ha marcado «Por correo electrónico» y avanza con Tab para consultar «Por SMS». Moverse hasta esa segunda opción no debería cambiar la primera ni activar una nueva preferencia.
+
+El **foco de teclado** indica qué control recibe las pulsaciones. La **selección** conserva una decisión. Una casilla puede estar marcada y no tener el foco; también puede tener el foco y seguir vacía.
+
+### Distinguir lo elegido de lo que vas a activar
+
+En esta pantalla, la marca de la casilla conserva el aviso por correo. El contorno violeta señala la casilla que tiene ahora el foco.
+
+[Imagen: pantalla «Recordatorios de tus citas» con dos casillas. «Por correo electrónico»: casilla rellena de azul oscuro con tic blanco (marcada, sin foco). «Por SMS»: casilla vacía con borde gris y un contorno exterior violeta (tiene el foco, sin marcar). Debajo, botón oscuro «Guardar cambios».]
+
+El tic y el contorno comunican cosas distintas. El tic permanece al seguir recorriendo el formulario; el foco se desplaza. Si ambos se dibujan igual, puede parecer que una opción se activa al pasar por ella.
+
+En una casilla, **Espacio cambia su selección**. Tab mueve el foco al siguiente control y Mayús + Tab al anterior. Recorrer las preferencias permite leerlas sin cambiarlas. En un botón, Intro o Espacio permiten activarlo.
+
+2.4.7 Foco visible [enlace externo], de nivel AA, exige poder reconocer el foco al manejar la interfaz con teclado. Un destello que desaparece deja de orientar a quien vuelve a mirar la pantalla después de una pausa.
+
+El contorno también necesita distinguirse en los fondos donde se utiliza. Uno negro puede funcionar sobre blanco y perderse en una cabecera oscura. 1.4.11 Contraste no textual [enlace externo] trata el contraste de las señales necesarias para reconocer controles y estados.
+
+### Hover, pulsación y selección
+
+El estado **hover** responde a la posición del puntero. El foco responde al recorrido de teclado. Si un botón solo cambia al pasar el ratón, esa respuesta no ayuda a encontrarlo con Tab.
+
+El estado **pulsado** responde al gesto de mantener un control presionado. Al soltar, termina ese gesto. Una preferencia marcada, en cambio, permanece hasta que se cambia. El diseño debe permitir distinguir la respuesta breve de una pulsación y una decisión que se conserva.
+
+En un grupo de pestañas también pueden separarse foco y selección. Una pestaña identifica el panel abierto; otra puede recibir el foco antes de activarse con Intro o Espacio. El patrón de pestañas de W3C WAI [enlace externo] explica las variantes de activación.
+
+### Conservar el error al volver al campo
+
+Si un campo muestra «Revisa el correo: falta el signo @», volver a él no corrige el dato. El foco debe orientar sin borrar la información del error. Conservar el mensaje y añadir un contorno exterior permite reconocer ambas cosas a la vez.
+
+Un botón no disponible comunica otra condición. «Guardar cambios» puede permanecer inhabilitado si no hay cambios que guardar. La persona necesita entender ese motivo; el aspecto atenuado por sí solo no lo explica.
+
+---
+
+## 3.5 — Indicadores visuales de interacción (foco)
+
+Estás terminando de reservar una cita médica y navegas con Tab. El navegador lleva el foco a «Confirmar cita», pero un aviso de cookies ocupa la misma zona. El botón puede seguir recibiendo las teclas aunque no veas qué acción vas a activar.
+
+### Mantener visible la acción que tiene el foco
+
+Las dos pantallas muestran los mismos datos y el mismo aviso. En ambas, «Confirmar cita» tiene el foco. Compara dónde queda el botón respecto al aviso.
+
+**El aviso no debe tapar la acción enfocada**
+
+[Imagen: dos maquetas de móvil («Salud Norte», cabecera oscura con flecha atrás; «Último paso · Reserva de cita»; título «Confirma tu cita»; «Revisa los datos antes de reservar.»; tarjeta con «Dra. Marta Gil», «Medicina de familia · Consulta presencial», Día: Martes 20 de octubre, Hora: 12:00–12:15, Centro: Centro del Parque).]
+
+- **HAZ — Reservar espacio para el aviso** [panel verde con icono de verificación]: el botón «Confirmar cita» se ve completo, con contorno azul de foco, y debajo «Recibirás la confirmación por correo.». Debajo queda el aviso «Preferencias de cookies» («Usamos cookies opcionales para conocer el uso de esta web. Puedes aceptarlas o rechazarlas.») con los botones «Rechazar» y «Aceptar».
+- **EVITA — Superponer el aviso al botón** [panel rojo con icono de aspa]: el mismo aviso de cookies ocupa la zona del botón; «Confirmar cita» no se ve en la pantalla.
+
+El teclado puede seguir llegando a un botón que un aviso ha cubierto. Para quien solo ve una parte ampliada de la pantalla, la falta de referencia hace difícil saber qué va a activar. Conservar visible el botón completo permite leer la acción antes de pulsar.
+
+| Qué parte del control queda visible | Qué exige el criterio |
+|---|---|
+| Ninguna: el aviso cubre el botón entero | No satisface 2.4.11 Foco no oculto (mínimo) [enlace externo], AA |
+| Solo una parte del botón | Puede satisfacer esa condición mínima, pero no 2.4.12 Foco no oculto (mejorado) [enlace externo], AAA |
+| Todo el botón | La ocultación deja de ser el problema; todavía hay que distinguir su indicador de foco |
+
+Reservar espacio para el aviso y ajustar el desplazamiento evita que la acción quede bajo él. La solución debe funcionar tanto al avanzar como al volver con Mayús + Tab. Acortar «Confirmar cita» no resuelve que otro elemento esté ocupando su sitio.
+
+### Área y contraste del indicador
+
+Una línea puede contrastar mucho y ser demasiado pequeña para localizarla con facilidad. El criterio 2.4.13 Apariencia del foco [enlace externo], AAA, considera el área de la señal y el cambio de contraste al aparecer.
+
+Para un botón rectangular de 100 × 40 píxeles CSS, el área de referencia equivale a un perímetro de 2 píxeles de grosor: 560 píxeles cuadrados. Una línea de 100 × 2 píxeles situada solo en un lado ocupa 200. Aunque sea negra sobre blanco, queda por debajo de esa área. Un grosor mayor u otra forma pueden aportar la superficie necesaria.
+
+El cambio de contraste se compara entre **los mismos píxeles antes y después de recibir el foco**. El área que se tome para satisfacer el criterio debe alcanzar al menos 3:1 en ese cambio. Esta condición de AAA es distinta del contraste con los colores adyacentes que exige 1.4.11 Contraste no textual [enlace externo], AA, para identificar el estado diseñado por el equipo.
+
+El contorno que se distingue sobre una página blanca puede perderse al rodear un botón oscuro. Por eso el indicador se diseña para los fondos y estados donde tendrá que orientar a la persona.
+
+---
+
+## 3.6 — Tipografía y legibilidad
+
+La tipografía influye en reconocer una letra. La composición permite seguir una frase, pasar a la siguiente línea y encontrar un dato al volver a la página. Para decidir qué corregir necesitas observar qué está dificultando esa lectura.
+
+### Una referencia que tienes que copiar
+
+Una referencia no siempre se puede deducir por el contexto. En una palabra conocida puedes anticipar una letra; en un código de recogida necesitas reconocer cada carácter.
+
+Quieres consultar tu inscripción y necesitas copiar su localizador. En esta confirmación, la I mayúscula y la l minúscula del código tienen prácticamente la misma forma.
+
+La muestra «I l 1 0 O» ayuda a comparar fuentes. Después hay que comprobar el tamaño, el peso y los contenidos reales. Elegir una familia con serifa o sin ella no garantiza por sí solo que se lea bien una interfaz.
+
+### Seguir un párrafo de una línea a otra
+
+Justificar el texto alinea ambos extremos, pero puede abrir huecos muy grandes entre palabras en columnas estrechas. Alinear al inicio mantiene regular la separación y el comienzo de las líneas.
+
+Esta tarjeta contiene las instrucciones de un taller. El texto está justificado en una columna estrecha.
+
+[Imagen: tarjeta «Materiales del taller» con el texto justificado en columna estrecha, con huecos visibles entre palabras: «La biblioteca facilita el papel, el cartón y el hilo. Trae unas tijeras si tienes. No hace falta experiencia previa. Al terminar podrás llevarte el cuaderno que hayas hecho.» La captura corta la tarjeta por abajo.]
+
+Una columna demasiado ancha añade otro esfuerzo al buscar el comienzo de la línea siguiente. 1.4.8 Presentación visual [enlace externo], de nivel AAA, incluye una forma de obtener texto sin justificar y líneas de hasta 80 caracteres en escritura como el español. No obliga a llenar cada línea hasta ese límite.
+
+### Admitir el espaciado que necesita la persona
+
+Algunas personas aumentan la separación entre líneas, letras o palabras con herramientas del navegador. La tarjeta necesita admitir ese cambio sin cortar las instrucciones ni perder sus acciones.
+
+1.4.12 Espaciado del texto [enlace externo], AA, comprueba estos ajustes aplicados juntos, sin cambiar otras propiedades:
+
+| Propiedad | Valor de prueba | Con una fuente de 16 px |
+|---|---|---|
+| Altura de línea | 1,5 veces el tamaño de fuente | 24 px |
+| Espacio después del párrafo | 2 veces el tamaño de fuente | 32 px |
+| Espacio entre letras | 0,12 veces el tamaño de fuente | 1,92 px |
+| Espacio entre palabras | 0,16 veces el tamaño de fuente | 2,56 px |
+
+Son valores para comprobar que el contenido admite los ajustes. No obligan a publicar la página con ellos ni a añadir un panel de preferencias. La técnica C36 del W3C [enlace externo] explica cómo hacer la comprobación.
+
+### Mantener juntos los datos que se consultan
+
+El espacio también transmite organización. En la ficha, fecha y horario forman un grupo; los materiales, otro. Separar el horario de su fecha puede relacionarlo con el taller equivocado aunque cada letra se lea perfectamente. Por eso la lectura se comprueba con la ficha completa y no solo con una lista de tamaños tipográficos.
+
+---
+
+## 3.7 — Jerarquía visual y jerarquía semántica
+
+La página «Hazte el carné de la biblioteca» explica quién puede solicitarlo y cómo hacerlo. Una persona quiere saber si su hija de 12 años puede tenerlo; otra necesita encontrar la solicitud en línea. Los títulos de los apartados les permiten ir a la información que necesitan sin leer la página completa.
+
+### La organización que cuentan los encabezados
+
+Un **encabezado** identifica una sección del contenido. Su nivel expresa cómo se relaciona con las demás: h1, h2 y h3 son los nombres de los tres primeros niveles en HTML. Un lector de pantalla permite consultar una lista de esos encabezados o saltar de uno a otro. Esa lista funciona como un índice.
+
+En este ejemplo de Biblioteca Norte, los requisitos para menores pertenecen a «Quién puede pedirlo». Las dos vías de solicitud pertenecen a «Cómo se pide».
+
+El índice debe conservar esas agrupaciones. Si «Si tienes menos de 14 años» se marca como h2, queda al mismo nivel que «Quién puede pedirlo» en vez de dentro de él. Quien consulta los encabezados recibe otra organización que quien ve el apartado integrado en los requisitos.
+
+La guía de encabezados del W3C WAI [enlace externo] explica cómo usar sus niveles para comunicar estas relaciones.
+
+### Un texto destacado no siempre abre una sección
+
+«Gratis y válido en las 12 bibliotecas de la red» es información útil de la solicitud. Puedes destacarla para encontrarla rápidamente. En el ejemplo no abre una sección ni agrupa los párrafos siguientes, así que puede seguir siendo un párrafo con énfasis visual.
+
+Convertir cada frase destacada en encabezado alarga el índice con entradas que no representan apartados. Para quien salta de encabezado en encabezado, llegar al contenido que busca requiere recorrer esos anuncios antes de los requisitos o las instrucciones.
+
+### El nivel y el tamaño son decisiones diferentes
+
+El título de una portada puede ocupar 48 px y el de una página interior 24 px. Ambos pueden ser h1 porque dan título a su página. El tamaño responde a la composición; el nivel responde al lugar del contenido en el esquema.
+
+También pueden existir dos secciones h2 con estilos diferentes. En la solicitud, «Quién puede pedirlo» puede destacar más que «Cómo se pide» sin que una sección se convierta en parte de la otra. El aspecto debe seguir permitiendo reconocer ambas como apartados y entender qué contenido agrupan.
+
+Esta diferencia afecta al sistema de diseño. Si el estilo «H1» siempre significa 48 px, quien necesita un título menor puede elegir «H3» para conseguir 24 px y cambiar sin querer la estructura. Nombrar los estilos «Título L» y «Título S» permite escoger su aspecto sin decidir todavía el nivel de encabezado.
+
+La anotación **«h1 · Título S»** comunica ambas decisiones. En desarrollo se aplica el nivel h1 y el estilo pequeño. Reducir el título de una página interior deja de obligar a reconstruir su índice.
+
+### Relaciona el contenido con su función
+
+Esta es la página «Reserva una sala de estudio». Fíjate en qué apartados contiene «Condiciones de uso» y qué frase solo destaca una ventaja del servicio.
+
+[Imagen: maqueta de móvil de Biblioteca Norte (cabecera oscura con «Biblioteca Norte» y «Menú ☰»). Contenido, de arriba abajo:
+- «Servicios · Salas de estudio» (texto pequeño gris)
+- «Reserva una sala de estudio» (negrita, tamaño pequeño)
+- «Un lugar tranquilo para preparar tus clases.»
+- «Todas las salas tienen wifi.» (negrita) [línea separadora]
+- «Horarios» (título grande) — «De lunes a viernes, de 9:00 a 20:00.» / «Reserva por turnos de dos horas.»
+- «Condiciones de uso» (título grande) — «Necesitas el carné de la biblioteca.»
+- «Reservas individuales» (título menor) — «Una persona por mesa. Trae tu material de estudio.»
+- «Reservas en grupo» (título menor) — «Salas para grupos de dos a seis personas. Una persona hace la reserva.»
+- Botón verde oscuro «Consultar disponibilidad».]
+
+### Ejercicio · Unir parejas — «Organiza otra página de Biblioteca Norte»
+
+Enunciado: Une cada texto de la página con su anotación. El título usa el estilo Título S, de 24 px. Sobra una opción.
+
+[Captura del ejercicio en estado «Completado · 3 intentos». Columnas «Contenido de la página» y «Anotación para desarrollo».]
+
+- Reserva una sala de estudio → h1 · Título S
+- Horarios → h2 · Sección de la página
+- Reservas en grupo → h3 · Apartado de Condiciones de uso
+- Todas las salas tienen wifi → Párrafo con énfasis
+- Opción sobrante: «h3 · Cualquier texto que mida 24 px»
+
+Retroalimentación mostrada: «Resultado — 100 % — Todo bien: 4 de 4 parejas correctas».
+
+1. **Reserva una sala de estudio: correcto.** Su función es identificar toda la página. El tamaño de 24 px no lo convierte en un h3: el nivel representa la organización del contenido, no el tamaño de fuente.
+
+2. **Horarios: correcto.** Ambos apartados responden directamente al tema de la página y son hermanos. La estructura debe conservar esa relación, aunque sus estilos visuales sean distintos, como recoge 1.3.1 Información y relaciones, A. [Nota de transcripción: «ambos apartados» se refiere a Horarios y Condiciones de uso.]
+
+3. **Reservas en grupo: correcto.** Las dos modalidades pertenecen a «Condiciones de uso», que es h2. Anotarlas como h3 comunica esa dependencia a quien recorre los encabezados con un lector de pantalla.
+
+4. **Todas las salas tienen wifi: correcto.** Destacar una información no la convierte en una sección. Si se marca como encabezado solo por la negrita, el índice añade una división que el contenido no tiene.
+
+---
+
+## 3.8 — Zoom y reflow
+
+Al ampliar una página necesitas seguir leyendo sus textos y llegar a sus enlaces. El contenido puede ocupar más altura, pero no debería obligarte a mover cada frase hacia los lados para encontrar su final.
+
+### Ampliar y reorganizar el contenido
+
+El **zoom del navegador** aumenta la presentación de la página, incluidos textos y controles. Puedes cambiar su porcentaje en el menú del navegador. En Mac también funcionan Comando y «+» o «−»; en Windows, Control y «+» o «−». Comando o Control y «0» restauran el 100 %.
+
+Al ampliar, queda menos espacio para mostrar el contenido. El **reajuste**, también llamado *reflow*, es su reorganización para que la información y las acciones sigan disponibles. Dos columnas pueden convertirse en una y un menú extenso puede recogerse en un botón que lo despliega.
+
+Los contenedores también necesitan crecer cuando el texto ocupa más líneas. Una altura fija puede cortar las últimas palabras aunque el párrafo se ajuste al ancho de la página.
+
+### Qué se comprueba al 200 % y al 400 %
+
+1.4.4 Cambio de tamaño del texto [enlace externo], AA, pide que el texto pueda ampliarse hasta el 200 % sin perder contenido ni funcionalidad, con las excepciones del criterio. El zoom de página es una forma habitual de ofrecerlo. Algunas personas usan una opción que aumenta solo el texto; las letras crecen mientras otros elementos mantienen su tamaño, lo que también puede descubrir recortes.
+
+1.4.10 Reajuste [enlace externo], AA, comprueba que una página de lectura vertical siga funcionando con un ancho equivalente a 320 píxeles CSS, sin perder información ni funciones y sin exigir desplazamiento en dos direcciones. Una zona de contenido de 1280 píxeles CSS al 100 % ofrece ese ancho al 400 %.
+
+El porcentaje y el ancho de partida están relacionados: al ampliar una ventana mayor queda más espacio. En la práctica podrás reconocer una barrera de lectura con zoom; para medir exactamente el requisito de 320 píxeles CSS hay que controlar también ese ancho inicial.
+
+Usa el zoom de página del menú del navegador. La lupa del sistema o el gesto de pellizcar pueden ampliar una zona sin provocar el mismo reajuste.
+
+### Practica con una página que contiene barreras
+
+Abre la portada inaccesible de CityLights, la demostración BAD del W3C [enlace externo]. Es una web de demostración con errores intencionados, en inglés. No necesitas traducirla ni enviar ningún formulario: vas a comprobar si puedes leer un párrafo de principio a fin al ampliar.
+
+Amplía la portada al 200 % y al 400 %. Comprueba si puedes leer su contenido y llegar a sus enlaces sin desplazarte hacia los lados. Después consulta la explicación y devuelve el zoom al 100 %.
+
+[Desplegable «Qué ocurre en la portada de CityLights», abierto en la captura:]
+
+En la portada de CityLights, el párrafo de bienvenida conserva una columna más ancha que la zona disponible al ampliar. Parte de cada línea queda fuera. Mover la página lateralmente permite encontrar las palabras, pero obliga a volver para leer el principio de la línea siguiente. El texto sigue existiendo y la lectura requiere desplazamiento en dos direcciones.
+
+La causa es la composición que conserva anchos fijos. Una solución sería permitir que el texto se ajuste al ancho restante y apilar las columnas de noticias. La navegación puede reorganizarse, pero los enlaces y las noticias deben seguir disponibles.
+
+Que ahora veas menos contenido a la vez es esperable al ampliar. La barrera aparece cuando una frase no cabe y tienes que desplazarla hacia los lados para leerla. Ese párrafo corriente no necesita conservar dos dimensiones como podría necesitarlas un mapa o una tabla de datos.
+
+### Cuando un contenido necesita dos dimensiones
+
+Un mapa necesita conservar la relación espacial entre sus lugares. Una tabla de datos puede necesitar mantener la relación de filas y columnas. La excepción de reajuste corresponde a esa zona; no justifica que los párrafos que la acompañan se salgan del ancho.
+
+Un carrusel también puede conservar su desplazamiento propio cuando cada tarjeta se lee dentro del ancho disponible. El patrón de navegación no justifica cortar las frases de una tarjeta.
+
+---
+
+## 3.9 — Diseño responsivo y accesibilidad
+
+Reservas un lote de libros para recogerlo en la biblioteca. En la pantalla del ordenador encuentras los títulos, la sede y el último día de recogida. En el móvil sigue apareciendo «Confirmar reserva», pero la fecha límite ha desaparecido. La acción funciona; lo que falta es la información para decidir si podrás recogerlo a tiempo.
+
+El **diseño responsive**, o adaptable, reorganiza una página según el espacio disponible. Ese espacio cambia al usar otro dispositivo, al estrechar la ventana o al ampliar con el navegador. La adaptación tiene que conservar tanto la tarea como los datos necesarios para completarla.
+
+### Elegir cuándo cambia la distribución
+
+Un **punto de quiebre** es el ancho a partir del cual cambia la maquetación. Por ejemplo, los dos grupos de la reserva pueden pasar a una columna cuando sus textos dejan de caber con comodidad.
+
+Elegirlo solo por etiquetas como «móvil» o «tableta» deja muchos tamaños sin resolver. Una persona puede tener un portátil grande y usar media pantalla para la biblioteca y la otra mitad para consultar su calendario. El contenido debe funcionar también en esa ventana.
+
+Los nombres largos ponen a prueba la distribución. Una tarjeta que admite «Sede del Parque» puede necesitar más altura para «Biblioteca de San Sebastián de los Reyes». Encoger la letra o esconder parte del nombre mantiene la caja, pero dificulta reconocer el lugar. Permitir que el texto ocupe varias líneas conserva el dato.
+
+### Mantener las relaciones entre los datos
+
+Al apilar una página, el orden importa. «18 de octubre» necesita seguir junto a «Recogida desde»; «25 de octubre», junto a «Último día». Si se colocan primero todas las etiquetas y luego todas las fechas, la persona tiene que recordar las correspondencias.
+
+La navegación también puede cambiar de forma. Un grupo de enlaces de la cabecera puede recogerse en un botón «Menú», pero sus destinos deben seguir disponibles. En la interfaz real hay que comprobar que se pueda abrir, recorrer y cerrar con teclado, y que el foco permita reconocer la opción que se está manejando. Una ilustración estática no permite evaluar ese comportamiento.
+
+### Ampliación y contenido disponible
+
+Una página adaptable puede ayudar a quien necesita leer con zoom en un monitor grande. El navegador amplía textos y controles, y la zona que cabe de una vez se reduce. La distribución debe responder a ese espacio sin borrar datos para hacerlos caber.
+
+El criterio 1.4.10 Reajuste [enlace externo], de nivel AA, pide conservar contenido y funcionalidad en un ancho equivalente a 320 píxeles CSS para una página de lectura vertical, sin exigir desplazamiento en dos direcciones. Algunas zonas que necesitan dos dimensiones, como un mapa, tienen excepciones; los párrafos y acciones que las acompañan siguen necesitando adaptarse.
+
+El criterio 1.4.4 Cambio de tamaño del texto [enlace externo], también AA, trata la ampliación del texto hasta el 200 % sin pérdidas de contenido ni funcionalidad. Estrechar una ventana ayuda a detectar problemas de maquetación, pero no sustituye todas las comprobaciones de aumento del texto.
+
+---
+
+## 3.10 — Imágenes, iconografía e información no textual
+
+Un plano puede indicar por dónde entrar a un edificio, dónde está el ascensor y cómo llegar a una sala. Quien no puede consultar esa imagen también necesita esas instrucciones. Decir «plano de la biblioteca» identifica el documento, pero no permite seguir el recorrido.
+
+Las imágenes y los iconos pueden **informar, orientar o permitir una acción**. Para preparar su alternativa, primero hay que reconocer cuál de esas funciones cumplen. La forma de un dibujo, por sí sola, no determina qué debe contarse.
+
+La explicación escrita puede ayudar a quien no ve el plano, a quien lo consulta en una pantalla pequeña o a quien no interpreta sus flechas. La alternativa conserva el recorrido, no solo una lista de habitaciones.
+
+Cuando el dibujo enseña un procedimiento, ocurre algo parecido. Una ilustración para ajustar un casco necesita conservar qué correa se mueve, en qué dirección y cómo se comprueba el ajuste. Quien redacta debe conocer esas instrucciones; no puede deducir con seguridad todos los pasos a partir de una imagen pequeña ni inventarlos.
+
+### Reconocer la función antes de describir
+
+La misma imagen de un libro puede desempeñar papeles distintos. En una portada, junto a un mensaje de bienvenida completo, puede limitarse a decorar. En la ficha de una edición puede mostrar la cubierta que permite distinguirla. Como único contenido de un enlace, debe comunicar adónde lleva al pulsarlo.
+
+El tutorial de imágenes de WAI [enlace externo] organiza las alternativas según ese propósito. Estas decisiones afectan a lo que la persona podrá entender o hacer:
+
+| En este contexto… | Hace falta comunicar… | Identificar solo el dibujo deja fuera… |
+|---|---|---|
+| Un plano de acceso | El recorrido y las referencias necesarias | Por dónde entrar y cómo llegar |
+| Un icono que elimina una reserva | La acción y la reserva afectada | Qué ocurrirá al pulsarlo |
+| Un gráfico de préstamos | Los datos y las relaciones relevantes | Qué resultado muestran los datos |
+| Un cartel de actividades | El mensaje y los detalles para participar | Cuándo, dónde y cómo apuntarse |
+
+No todos los casos caben en una alternativa breve. Un gráfico puede necesitar una explicación y una tabla de datos en la propia página. Un icono usado como botón necesita un nombre corto que permita reconocer su acción.
+
+### Un icono que permite actuar
+
+El **nombre accesible** es el nombre con el que una tecnología de apoyo identifica un control. En una lista de reservas, «Eliminar reserva de Viajes por el mundo» permite saber qué hace la papelera de esa fila. «Papelera» describe su forma, pero no identifica la reserva afectada.
+
+Mostrar texto junto al icono también ayuda a quien lo ve y desconoce el símbolo. El tutorial de imágenes funcionales de WAI [enlace externo] explica por qué la alternativa de una imagen que permite actuar comunica su función o destino.
+
+El contexto puede cambiar el nombre necesario. Una papelera que abre la carpeta de elementos eliminados no debería anunciarse como «Eliminar reserva»: estaría prometiendo una acción distinta. Antes de nombrar un control hay que conocer su comportamiento real.
+
+### Ejercicio (feedback visible; enunciado no incluido en las capturas)
+
+Retroalimentación mostrada: «Resultado — 100 % — Todo bien: 4 de 4 parejas correctas».
+
+1. **Cartel de Encuadernación japonesa: correcto.** Quien no consulta el cartel necesita los datos que permiten participar. «Cartel de actividades» solo identifica el tipo de imagen; no conserva el mensaje ni la acción necesaria.
+
+2. **Gráfico Préstamos: correcto.** La alternativa necesita conservar datos y relaciones. Una explicación de la tendencia puede acompañarse de una tabla para consultar cifras; identificarlo como gráfico no permite conocer cuántos préstamos hubo.
+
+3. **Papelera en la reserva de Bosques: correcto.** La función del control es cancelar esa reserva. El nombre permite anticipar la acción y distinguirla de las demás filas, como explica WAI para las imágenes funcionales.
+
+4. **Hojas en la cabecera Actividades de otoño: correcto.** Las hojas no añaden información en ese contexto. Describir cada forma haría más largo el recorrido sin ayudar a consultar la sección; una decoración puede ignorarse.
+
+---
+
+[Fin del contenido escrito del Módulo 3 (3.1–3.10).]

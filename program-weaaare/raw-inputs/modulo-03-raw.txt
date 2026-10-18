@@ -1,0 +1,214 @@
+# Módulo 3 - Programa Intensivo Diseño Accesible WeAAAre
+
+## Summary
+### Flow Summary
+Lección en solitario del módulo 3 "Diseño Visual Accesible": contraste WCAG, color, estados de foco, tipografía, zoom/reflow, diseño responsivo e imágenes. Sin acuerdos ni tareas.
+
+### Contraste de color (lecciones 3.1 y 3.2)
+- Criterio 1.4.3 (AA): texto normal requiere 4.5:1; texto grande 3:1; elementos de interfaz (botones, bordes de input) 3:1
+    - Ejemplo: gris de 2.85:1 no cumple; 7:1 es opción más robusta
+- Texto grande: 18 puntos (24 píxeles) o negrita de 14 puntos (18.67 píxeles)
+- Herramientas: WebAIM (sonaba "web AIM"), Stark (plugin de Figma, sugiere alternativas) y Color Contrast Analyzer (cuentagotas, sin recomendaciones)
+
+### Color como único medio y estados interactivos (3.3 y 3.4)
+- No comunicar estado solo con color: verde y rojo se confunden con daltonismo; añadir texto e íconos (ticket, cruz)
+- Gráficos son la principal fuente de errores: usar etiquetas, texturas o separar áreas
+- Navegación por teclado: Tab avanza, Shift+Tab retrocede, Enter o espacio activan; flechas entre pestañas
+- Estados clave: disponible, inhabilitado, foco, hover y presionado; el foco suele olvidarse y debe verse en cualquier fondo
+    - Sugerencia: borde de dos colores (blanco y negro)
+    - No existen enlaces inhabilitados, solo botones y campos
+
+### Indicadores de foco (3.5)
+- 2.4.11 (AA): foco parcialmente tapado aprueba; 2.4.12 (AAA) exige foco totalmente visible
+- 2.4.13: el área del indicador importa; un subrayado puede servir para AA pero no para AAA
+- Contraste del foco mínimo 3:1; el foco también orienta a quienes navegan por voz
+
+### Tipografía y jerarquía (3.6 y 3.7)
+- Prueba de legibilidad: distinguir I mayúscula, l minúscula, 1, 0 y O; usar máximo dos familias
+- Alinear a la izquierda, no justificar; 1.4.12 exige tolerar interlínea 1,5, párrafo 2, letras 0,12 y palabras 0,16
+- Jerarquía visual debe reflejarse semánticamente (H1, H2, H3); diseñar estilos de encabezado, no tamaños fijos por H
+
+### Zoom, reflow, responsivo e imágenes (3.8 a 3.10)
+- Probar zoom al 200% y 400%: textos completos, controles disponibles, teclado funcional; evitar alturas fijas
+- 1.4.10 Reflow: 320 píxeles de ancho sin scroll en dos dimensiones, salvo mapas o tablas
+- Responsivo: definir puntos de quiebre sin perder contenido relevante; solo se omiten imágenes decorativas
+- El texto alternativo depende de la función: en botones, la acción; en gráficos, los datos; en afiches, el mensaje
+
+## Transcript
+[00:08] Speaker 1: Hemos llegado a nuestro módulo 3, "Diseño Visual Accesible". Nuestra primera lección es, claramente mi favorita, "Contraste de Color y WCAG". Avancemos con la lección 3.1.
+[00:16] Speaker 1:  La elección del color no es algo trivial, y afortunadamente tenemos a la WCAG para defender ciertas decisiones de diseño. Veamos el siguiente ejemplo: tenemos una tarjeta que es exactamente igual en la mano izquierda y en la mano derecha, con ciertos datos de información: "Reserva del tren Madrid-Valencia", el día con la fecha, ¿cierto?, y la hora, y después "andén 6".
+[00:34] Speaker 1: ¿Cuál es la diferencia entre ambas tarjetas? A mano izquierda, el gris es claro sobre un fondo blanco, mientras que a mano derecha tenemos una mayor diferencia de contraste con el fondo. Lo que nos dice la WCAG es que vamos a tener una medida de contraste que es la óptima, y va a depender del tamaño del texto.
+[00:51] Speaker 1:  Dice exactamente: "En el criterio 1.4.3, que es nivel AA, establece que el texto debe tener un contraste de 4.5:1, con algunas excepciones". Vamos a asumir que este es un texto de tamaño normal, que es justamente la exigencia del 4.5:1.
+[01:07] Speaker 1:  Acá el texto es de 16 píxeles. Fíjense que en el primer ejemplo tenemos un contraste de 2.85:1, un gris demasiado claro que no va a alcanzar el nivel de contraste requerido.
+[01:18] Speaker 1:  En el caso del ejemplo de al medio, tenemos un gris que es un poco más fuerte que el anterior y supera, o al menos está bastante justo, respecto del contraste: 4.5:1.
+[01:29] Speaker 1: ¿Cumple? ¿Es el mejor? Lo podemos discutir, pero cumple.
+[01:32] Speaker 1:  Y en el caso de la derecha, tenemos un contraste mayor que pasa a 7:1 en el texto de "andén 6". Luego, la decisión que se debe tomar en diseño es si vamos a tomar el contraste de 4.5:1 o, en realidad, queremos apostar por un poquitito más con el 7:1.
+[01:46] Speaker 1:  Veamos más ejemplos. Ya dijimos que el contraste es importante en texto, pero volvamos a la búsqueda del tren.
+[01:52] Speaker 1: ¿Qué es lo que tenemos acá? Tenemos texto, y ya sabemos que el contraste va a tener cierto nivel. Tenemos también el color del botón, que debería diferenciarse como botón para que la persona sepa que ahí hay un elemento de interacción.
+[02:04] Speaker 1:  Pero también tenemos el borde del campo destino. Todos estos van a aprobar cierto contraste.
+[02:09] Speaker 1:  Los elementos de la interfaz, que sería el botón contra el fondo blanco, el botón negro contra el fondo blanco, y el borde del input del campo "Valencia", esos también deben aprobar contraste, pero en este caso es solo de 3:1. Tenemos varias herramientas para hacer las comprobaciones de contraste.
+[02:25] Speaker 1:  La web AIM, yo diría que es un clásico a estas alturas. Puedes ingresar a su página web y ahí lo que se hace es que se ingresa el color de frente y el color de fondo, y automáticamente te muestra el contraste.
+[02:37] Speaker 1:  Te va a decir cuál es el valor del contraste y te va a decir si aprueba o no para los distintos casos. Fíjense que aquí ya tenemos un adelanto: existe el texto normal y existe el texto grande.
+[02:46] Speaker 1:  Quiere decir que ambos tienen niveles distintos para conformar. Otra herramienta útil es Stark, un plugin de figma que, en su versión gratuita, te va a permitir no solo revisar el contraste, sino que hacer otro tipo de cosas más vinculadas a la accesibilidad.
+[02:59] Speaker 1:  Acá el criterio es exactamente el mismo: vas a colocar el color de frente, el color de fondo, te va a decir el número de contraste, te va a decir si aprueba o no para las distintas condiciones, pero además te va a generar algunas alternativas que podrían tener que ver con los colores que hayas ingresado en la plataforma. Entonces tú puedes seleccionar rápidamente un color que se parezca y que te funcione.
+[03:20] Speaker 1:  No necesariamente ese va a estar dentro de tu manual de marca, no es "llegar y usar", pero te va a orientar respecto de hacia dónde podría ir la paleta de colores. Tenemos otra herramienta, que es Color Contrast Analyzer, que se descarga y lo puedes usar en tu computador.
+[03:34] Speaker 1:  La gracia que tiene es que funciona con cuentagotas, y es bastante parecido a lo anterior, pero ya lo vas a poder utilizar básicamente en cualquier cosa que te esté mostrando en la pantalla. Vas a tener dos cuentagotas, vas a hacer el mismo sistema: color de frente, color de fondo, y te va a mostrar el resultado.
+[03:49] Speaker 1:  Y te va a decir además si aprueba o no aprueba, pero a diferencia de Stark, no te va a generar ninguna recomendación.
+[03:58] Speaker 1:  En este caso vamos a ver a qué se refiere la WCAG cuando habla de texto normal y a qué se refiere cuando habla de texto grande en nuestra lección 3.2. Lo primero que tienes que saber es que el criterio involucrado es el 1.4.3 y tiene su nivel AA.
+[04:11] Speaker 1:  En el criterio se define una fuente normal y una fuente grande, pero lo hace a través de puntos. Nosotros, como diseñadores y diseñadoras, debemos transformar los puntos a píxeles.
+[04:19] Speaker 1:  Entonces, para entender qué es el texto normal y qué es el texto grande, también tienes que saber que la WCAG no se refiere a un tamaño mínimo o a un tamaño máximo de tipografía. Te deja toda la libertad, pero establece un límite: de aquí para allá es texto grande, y si es hacia el otro lado, bueno, es un texto normal.
+[04:35] Speaker 1:  Entonces lo más fácil para entender es partiendo por el texto grande. Lo que dice es que una fuente de 18 puntos o más lo va a considerar un texto grande. 18 puntos equivale a 24 píxeles.
+[04:45] Speaker 1:  Sin importar el nivel de tratamiento de la tipografía, si es negrita, si es light, si es extra bold, da lo mismo mientras sea de 24 píxeles hacia arriba. Pero también va a considerar que la negrita hace que la fuente sea más vistosa, y va a decir exactamente que negrita y 14 puntos también es grande, también es una fuente grande.
+[05:03] Speaker 1: ¿Qué son? ¿A qué equivalen esos 14 puntos? Son 18.67 píxeles.
+[05:08] Speaker 1:  Un componente, entonces, podría tener un título grande y un texto de tamaño normal, y va a tener dos requisitos asociados de contraste. En este caso, la ruta está en 24 píxeles y está en negrita, por tanto lo vamos a considerar un texto grande y su contraste es de 3:1.
+[05:23] Speaker 1:  Mientras que el horario y el otro tipo de información es una fuente considerada normal, que requiere un contraste de 4.5:1 porque tiene menor visibilidad, por tanto requiere de mayor contraste.
+[05:37] Speaker 1:  En la siguiente lección vamos a profundizar respecto del color como único medio para comunicar información. Yo sé que les va a parecer que esto ya lo hemos hablado majaderamente, pero les prometo que si entendemos cómo funciona la tipografía, cómo funciona el color, cómo funcionan los estados, de aquí para adelante todo les va a hacer muchísimo sentido.
+[05:53] Speaker 1:  Vamos a volver a nuestro ejemplo. Tenemos las reservas que están informando el estado a través del color: color verde y color rojo.
+[06:02] Speaker 1:  Cuando nosotros tenemos color, es súper interesante hacer el ejercicio de qué pasa si es que ese color, esa información que se transmite al color a través del color, desaparece. Una de las formas es utilizando, por ejemplo, el plugin de Stark, que te permite modificar los colores de la pantalla para mostrártelos como los vería una persona con distintos tipos de daltonismo.
+[06:20] Speaker 1:  En este caso tienes que saber que justo la combinación de verde con rojo son los que generan la mayor cantidad de complicaciones porque tienden a verse más o menos similares. Una vez que hagas el ejercicio de comprobar cómo se ven tus diseños con la ausencia de color, vas a ser capaz de determinar que en realidad estamos transmitiendo información, en este caso, solo a través del color.
+[06:38] Speaker 1:  Entonces, lo que nos dice el criterio es que podemos añadirle un texto o un ícono para reforzar la idea.
+[06:44] Speaker 1: ¿Qué es lo que hicimos? Conservamos el color y añadimos el texto confirmado, pero ¿por qué no además añadirle el ticket para que sea muchísimo más rápido de identificar para personas que, por ejemplo, tengan algún tipo de discapacidad cognitiva? En el caso de la cancelación, además del texto, le hemos añadido una cruz.
+[07:00] Speaker 1: ¿Dónde se presentan la mayor cantidad de errores cuando hablamos de color? Yo diría que principalmente en los gráficos. Gráficos de barra, gráficos de torta, porque cuando queremos representar una información que claramente es importante, no puede hacerse únicamente a través del color.
+[07:14] Speaker 1:  En este caso necesitamos añadir etiquetas, porque el verde y las rojas para determinar cuáles son las citas o las reservas confirmadas versus las canceladas no va a ser suficiente. No tengo por qué saber cuál es el orden de estas barras.
+[07:26] Speaker 1:  Y en particular, si además esto fuese, por ejemplo, un gráfico de torta, esos dos colores podrían verse exactamente iguales y no se va a distinguir ni siquiera el porcentaje, va a parecer un 100%. Entonces, en este caso lo que estamos haciendo es añadir una etiqueta.
+[07:41] Speaker 1:  Si fuese un gráfico de torta, podríamos añadir además texturas, o bien separar las distintas áreas para que sea muy evidente cuál es el pedazo de porción de la información que se está representando. Estamos entrando ya a nuestra área chica y cada vez vamos descubriendo más cosas.
+[07:58] Speaker 1:  En la lección 3.4 vamos a hablar respecto de los estados visuales de los elementos interactivos. Te recuerdo que es un elemento interactivo.
+[08:04] Speaker 1:  Son los elementos de formulario, además de los botones y los enlaces.
+[08:07] Speaker 1: ¿Cuáles son los elementos de formulario? Bueno, cualquiera que el usuario tenga que generar algún tipo de dato. En este caso vamos a hablar sobre las casillas de verificación o checkbox.
+[08:16] Speaker 1:  Fíjate que tenemos dos alternativas, o lo que estamos viendo en pantalla. Por un lado tenemos una casilla que ha sido activada, y en el otro lado tenemos esa misma casilla que ha sido activada y que al mismo tiempo recibe estado de foco.
+[08:28] Speaker 1: ¿Cómo se visualiza el estado de foco? El estado de foco es una señal visual que aparece cada vez que una persona usuaria navega a través del teclado, y corresponde a este borde que está alrededor de la casilla de verificación. Entonces, lo que está pasando en realidad es que detrás de nuestro sistema de diseño vamos a tener los distintos estados, más la información que habla respecto de la actividad.
+[08:49] Speaker 1:  En este caso está chequeado y además tiene su estado de foco. Más adelante vamos a hacer unos ejercicios en vivo para demostrarte cómo se navega a través del teclado.
+[08:57] Speaker 1:  Por ahora lo haremos de manera teórica. Fíjate que para avanzar en la página vas a usar la tecla Tab e irás recorriendo los elementos interactivos de la página: elementos de formulario, botones, enlaces.
+[09:07] Speaker 1:  Para retroceder harás clic en la tecla Shift más Tab. Y para activar un elemento vas a tener que usar la tecla Enter o la barra espaciadora.
+[09:16] Speaker 1:  Por tanto, este elemento, si es que tú llegaras al checkbox, no se va a activar solo porque hagas clic en la tecla Tab. Desde el sistema de diseño, entonces, habíamos dicho que van a existir algunas combinaciones y que además diseñar cada uno de los estados no garantiza que la combinación esté efectivamente bien implementada.
+[09:34] Speaker 1:  Yo recomendaría siempre diseñar, por ejemplo, el error sin foco más el error con foco cuando estemos diseñando un input. Cuando hablamos de tabs o pestañas, te va a pasar más o menos lo mismo.
+[09:44] Speaker 1:  Te vas a dar cuenta que en un sistema que esté bien organizado y que esté correctamente codeado, cuando quieras avanzar entre las distintas pestañas no vas a poder hacerlo con la tecla Tab. La tecla Tab va a llegar al primer grupo.
+[09:56] Speaker 1:  Luego, para desplazarte de pestaña a pestaña, tendrás que usar las flechas de tu teclado. Eso si es que está correctamente diseñado.
+[10:03] Speaker 1:  Vamos a diseñar los distintos estados de los elementos interactivos y vamos a tener en consideración lo siguiente: por lo general, como diseñadores y diseñadoras, olvidamos ciertas cosas. Lo primero que olvidamos es diseñar el estado de foco.
+[10:14] Speaker 1:  El estado de foco va a existir en cualquier elemento que sea interactivo.
+[10:17] Speaker 1: ¿Por qué digo esto? Porque me he encontrado con encabezados que no cumplen ninguna función interactiva que también tienen estado de foco. Eso es un error tremendo de diseño y lo iremos descubriendo más adelante.
+[10:27] Speaker 1:  Por ahora quédate con esto. Vamos a tener distintos estados.
+[10:30] Speaker 1:  Uno de ellos es disponible. Que esté disponible significa que la persona va a poder hacer clic en el elemento.
+[10:36] Speaker 1:  Por tanto, que esté no disponible o inhabilitado significa que la persona no lo puede usar. No existen los enlaces inhabilitados, solamente existen los botones inhabilitados y los elementos de formulario inhabilitados.
+[10:48] Speaker 1:  Por lo general, se inhabilitan porque se espera que pase una condición previamente. Por ejemplo, que se complete todo un formulario y ahí recién se va a activar el botón, que se completen todos los campos.
+[10:57] Speaker 1:  El estado de foco, en cambio, tiene algo que es sumamente interesante, y es que debe funcionar y debe ser visible independiente del color de fondo en que se presente el elemento interactivo. Una forma para lograrlo es diseñar un borde, quizás, de dos colores.
+[11:11] Speaker 1:  Podríamos diseñar el borde blanco más el borde negro, de manera que aseguramos, por ejemplo, que si este botón se encuentra sobre un fondo negro, ese borde blanco va a estar visible. Y si estuviésemos sobre un fondo blanco, el borde negro va a hacer que se vea.
+[11:25] Speaker 1:  Pero no importa cómo lo resuelvas, lo importante es que te asegures que ese elemento de foco sea visible en todos los distintos fondos que aparezca ese elemento. Existen otros dos estados que también me parece que son sumamente interesantes, que son el hover y el preset.
+[11:40] Speaker 1:  El hover es cuando te posicionas sobre el elemento y aparece únicamente navegando a través del mouse o ratón. Va a aparecer un puntero encima.
+[11:49] Speaker 1:  El preset, en cambio, es aquello que pasa cuando el elemento está siendo presionado.
+[11:56] Speaker 1:  En la lección anterior hablamos respecto de los estados de algunos elementos interactivos. En la lección 3.5 nos vamos a detener en los indicadores visuales de interacción.
+[12:05] Speaker 1:  Volvamos a nuestro ejemplo del viaje Madrid-Valencia. Tenemos un montón de información en esta pequeña tarjeta.
+[12:12] Speaker 1:  En primer lugar, vamos a encontrar el trayecto Madrid-Valencia, sumado a la fecha, la hora de partida y la hora de llegada. También tenemos otro tipo de información, como el tren, ¿verdad?
+[12:21] Speaker 1:  Te vas en el coche 4 y tu asiento es el 12A. Y existe una información visual respecto de "aquí hay un enlace".
+[12:27] Speaker 1:  Fíjense que tenemos el "cambiar asiento". Y también tenemos un botón que es el "descargar billete", que está marcado con el número 3.
+[12:35] Speaker 1:  Desde el diseño vas a descubrir que los botones y los enlaces tienen comportamiento distinto. Pueden verse más o menos iguales, pero en realidad su función puede ser otra.
+[12:43] Speaker 1:  Existe un curso de WIAR que habla específicamente de eso, y te invito a que vayas a revisarlo. Cuando navegamos a través del teclado, tenemos las teclas Tab que nos van a permitir avanzar, llegar a la primera pestaña, y luego, les había comentado en la lección anterior, que para desplazarnos entre las distintas pestañas vamos a usar las flechas.
+[12:59] Speaker 1:  En el primer ejemplo, la Tab no tiene estado de foco. Mientras que en el segundo ejemplo, la persona usuaria sabe exactamente que está en billetes.
+[13:07] Speaker 1:  Para que se despliegue esa pestaña, va a tener que dar Enter o hacer clic en la barra espaciadora, y ahí va a cambiar el contenido que es de contexto. Tenemos otro criterio que es interesante, que es el 2.4.11, que habla respecto del foco no oscurecido.
+[13:19] Speaker 1:  Fíjense que en el nivel AA tiene una exigencia que, obviamente, es menor que en el caso del triple A, que en el caso del triple A dice que debe verse absolutamente. En el primer ejemplo estamos frente a una experiencia que es pésima para todo el mundo, más allá de cuál sea el criterio al que queremos conformar.
+[13:34] Speaker 1:  Se supone que tenemos el botón "descargar billete" que ha recibido el foco, pero está por debajo de un componente fijo que es el que ofrece la ayuda durante el viaje. En ese caso no estaría aprobando ni A ni doble, o sea, perdón, ni doble A ni triple A.
+[13:46] Speaker 1:  En el segundo ejemplo, donde está tapado en parte, lo que dice el 2.4.11 es que bastaría que se vea una partecita para que estemos considerando que está aprobado. Mientras que en el 2.4.12, que es triple A, esto no estaría pasando porque se requiere que el componente se vea de manera completa.
+[14:02] Speaker 1:  En el tercer caso, el botón es completamente visible y estaríamos aprobando en ambas.
+[14:06] Speaker 1: ¿Cuál es la mejor experiencia para todo el mundo? Independiente de cuál sea el criterio al que queremos alcanzar o el nivel de conformidad que queremos lograr, es el que está totalmente visible. Se trata de cumplir la WCAG, pero también se trata de diseñar con criterio.
+[14:18] Speaker 1:  Porque ese billete, ese "descargar billete", algunas personas son capaces de identificar el texto que estaría faltando, pero eso realmente no lo podemos hacer todas las personas. Tenemos un criterio que es el 2.4.13, que habla respecto de la apariencia del foco.
+[14:32] Speaker 1:  Y acá lo que nos dice es que el área realmente importa. Veamos este botón que se supone que es de 100 por 40 píxeles.
+[14:39] Speaker 1:  Tiene un indicador negro para marcar o delimitar el estado de foco o el área activa. En este caso, el área dice que es de 560 píxeles versus 200 píxeles.
+[14:50] Speaker 1:  Tenemos en el primer ejemplo un contorno completo, mientras que en el segundo ejemplo muestra solo una línea por debajo. En el segundo ejemplo no es suficiente para triple A.
+[14:58] Speaker 1:  Sin embargo, para doble A esto podría funcionar. Volvamos al estado de foco.
+[15:02] Speaker 1:  Sabemos que tiene que tener una línea. También sabemos que debe estar presente.
+[15:05] Speaker 1:  Pero este estado de foco, además, debe tener un contraste necesario. En el primer ejemplo tenemos la descarga de billete sin foco.
+[15:12] Speaker 1:  No existe, no fue diseñado. En esta posición está completamente en blanco.
+[15:16] Speaker 1:  Mientras que en el ejemplo de la derecha sí tiene un foco y hay un borde que está negro y que delimita un área. Está en la misma posición, simplemente tiene este filerito negro con un contraste de 21:1.
+[15:26] Speaker 1:  Lo que dice el criterio es que debe tener un contraste de 3:1, por tanto, está más que cumpliendo con el criterio de conformidad. Muchas veces te vas a encontrar con problemas con tus stakeholders porque no entienden para qué funciona el estado de foco y creen que arruina la experiencia visual de las personas.
+[15:41] Speaker 1:  Pero el estado de foco fue diseñado justamente para aquellas personas que navegan a través del teclado. Quiero comentarte algo además.
+[15:46] Speaker 1:  El estado de foco no solamente aparece cuando la persona está navegando a través del teclado. Te había dicho al principio que las tecnologías asistivas confían en la navegación por teclado.
+[15:56] Speaker 1:  Por tanto, cuando navegamos a través de la voz, el estado de foco también va a ayudar y va a orientar a la persona respecto de dónde está.
+[16:09] Speaker 1:  Esta lección te va a hacer total sentido si es que vienes del mundo del diseño, porque nos resulta muchísimo más natural. Hablemos de tipografía y legibilidad en nuestra lección 3.6.
+[16:18] Speaker 1:  Cada vez que nos enfrentamos al diseño de una pantalla o de lo que sea, tenemos que escoger una tipografía. En general, vamos a decir que nuestras primeras decisiones de diseño tienen que ver con el uso del color y con el uso de la tipografía.
+[16:30] Speaker 1:  Y cuando hablamos de tipografía, se trata de escoger una familia tipográfica. Es bastante obvio decirte que existen algunas familias tipográficas que dificultan completamente la lectura, como aquellas que son demasiado decorativas, ¿verdad?
+[16:42] Speaker 1:  Muy ornamentales. Pero, ¿cómo puedes asegurarte de que lo que estás escogiendo va a funcionar para todo el mundo?
+[16:49] Speaker 1:  Existe una técnica que es demasiado simple. Escribe una I mayúscula, una L minúscula, el número 1, el número 0 y la letra O en mayúscula.
+[16:59] Speaker 1:  Si todavía puedes distinguir todos esos caracteres, entonces tu tipografía va a funcionar muy bien. Acabamos de entender que la legibilidad se asocia muchísimo a la familia tipográfica que hemos escogido, y también diría que es muy importante que no escojas una gran cantidad de familias tipográficas.
+[17:16] Speaker 1:  Por lo general, los diseñadores solemos ser muy minimalistas y no utilizamos más de dos tipografías. Pero cuando hablamos de jerarquización de la información, ahí ya hablamos del uso de distintos pesos visuales.
+[17:27] Speaker 1:  Entonces, volvamos a nuestro ejemplo del billete para nuestro viaje Madrid-Valencia. Tenemos una tarjeta donde no existe mayor diferenciación en el uso de las tipografías.
+[17:37] Speaker 1:  Solamente existe espacio que nos ayuda a agrupar y desagrupar contenido que debe ser leído en conjunto, pero nada más. En el segundo ejemplo tenemos el cambio en tamaño tipográfico.
+[17:48] Speaker 1:  Pero en el tercer ejemplo, además del tamaño, hemos utilizado el peso visual para destacar aquello que debe ser destacado. En el mundo de las publicaciones, muchas veces nuestros clientes van a querer tener un texto justificado.
+[17:59] Speaker 1: ¿Por qué? Seguramente porque la columna en realidad tiene un mayor control. Ese tamaño de impresión es el tamaño que va a tener la columna.
+[18:07] Speaker 1:  Pero en el mundo digital no sabemos cuántos caracteres va a ocupar realmente la columna de texto.
+[18:12] Speaker 1: ¿Por qué? Porque nuestro contenido se va a adaptar. Tiene que ser responsivo y se va a ver tanto en pantallas móviles como en unos televisores gigantes.
+[18:19] Speaker 1:  Todos hemos visto o tenemos algún amigo que utiliza el televisor como segunda pantalla y los vemos navegar en un sitio. Imaginénse una columna que puede ser tremenda.
+[18:27] Speaker 1:  Es imposible leerla completa y saber exactamente dónde debe continuar. En cambio, cuando alineamos a la izquierda, ese texto es mucho más fácil de escanear y de leer.
+[18:35] Speaker 1:  Además, debemos asegurar que los párrafos tengan un espacio que delimite dónde termina un párrafo y dónde comienza otro. Existe un criterio que es el 1.4.12, que lo que dice es que el contenido admite cambios de espaciado sin perder textos ni controles.
+[18:49] Speaker 1:  Eso quiere decir que la persona va a poder modificar el CSS de todos los sitios web. Esto se hace a nivel de configuración del navegador.
+[18:56] Speaker 1:  Y la persona podría querer, por ejemplo, modificar el tamaño de los textos, pero también podría querer modificar el espaciado de la interlínea y el espaciado entre caracteres. Lo importante es asegurar que el contenido va a seguir estando a la vista, sin importar la preferencia de la configuración o cómo quiere el usuario que realmente se represente en su pantalla.
+[19:15] Speaker 1:  Lo que dice el criterio es que debe permitir que pasen ciertas cosas. En general, la WCAG, cada vez que la persona configura algo, nosotros lo único que tenemos que hacer es no entorpecer.
+[19:25] Speaker 1: ¿Qué es lo que debe funcionar? La persona debe poder ajustar su interlínea a 1,5. También debe poder añadir un espacio después de cada párrafo de 2 y un espaciado entre letras de 0,12.
+[19:36] Speaker 1:  Mientras que un espaciado de palabras debería ser de 0,16. Esto no significa que nosotros debamos configurarlo así.
+[19:43] Speaker 1:  Simplemente se trata de que permitamos que esto pase y que la información se mantenga aún en pantalla.
+[19:51] Speaker 1:  En la siguiente lección vamos a hablar respecto de la jerarquía visual vinculada a la jerarquía semántica. Imaginemos que tenemos una ficha de un producto.
+[19:59] Speaker 1:  En este caso es un cuaderno que tiene ciertas características. Si el texto no presenta ningún tipo de diferencia para jerarquizar, la información parece exactamente igual.
+[20:08] Speaker 1:  Pero cuando utilizamos, por ejemplo, la interlínea, los distintos espaciados entre párrafos, las jerarquías visuales, como puede ser el uso de bold, pero también la indentación del texto, esto quiere decir que pacta un poquito más adentro, entonces empezamos a distinguir claramente cómo se agrupa la información. Esta información debe ser visualmente identificable, pero también desde la programación.
+[20:28] Speaker 1:  Visualmente vamos a tener ciertos niveles, y esos niveles deberían transmitirse también semánticamente para aquellos usuarios que utilizan tecnología de apoyo. Por ejemplo, en este caso, suponiendo que esta es toda la información que está en la página y nuestro título principal es "Producto", "Producto" va a ser un encabezado de nivel 1, que a nivel de programación se escribe H1.
+[20:47] Speaker 1:  Mientras que "Características" y "Especificaciones" son contenidos que responden a la misma jerarquía de la organización y van a ser H2. Y en el caso de "Materiales" y "Dimensiones", que son hijos de "Características", van a ser un H3.
+[21:00] Speaker 1: ¿Cómo funciona esto? H1 es el título de la página. H2 es el título de la sección de la página, mientras que H3 es el título de las subsecciones de la página.
+[21:10] Speaker 1:  Estas jerarquías lo que hacen es establecer una relación de dependencia y van a mostrar cómo se organiza la información. No necesariamente a nivel semántico tiene que ser tan representativo de lo que está pasando visualmente.
+[21:21] Speaker 1:  Pensemos en las familias. Esto es un ejemplo muy, muy claro.
+[21:25] Speaker 1:  Todos tenemos hermanos y no necesariamente significa que tenemos hermanos mellizos o hermanos gemelos. Son nuestros hermanos.
+[21:30] Speaker 1:  Jerárquicamente ocupamos el mismo espacio en la familia y seguramente el mismo amor frente a nuestros padres. En el caso de los encabezados no tiene por qué ser distinto.
+[21:39] Speaker 1:  Podría pasar que un encabezado en una página se vea muchísimo más grande que otro. Sin embargo, en términos de la información que transmite y cómo se agrupa la información, puede ser hermano de un contenido que se ve visualmente más pequeño.
+[21:51] Speaker 1:  Muchas veces en los sistemas de diseño, los H, que van desde el 1 hasta el 6, siendo el 6 el de menor jerarquía, están vinculados a un tamaño específico. Y eso puede funcionar cuando las diagramaciones o cuando los diseños son bastante parecidos en cuanto a la página principal y las páginas interiores.
+[22:07] Speaker 1:  Pero cuando el título cambia, cuando en la interior, por ejemplo, existe un título que ocupa un menor tamaño, ese sistema de diseño está destinado a romperse. Si eso pasa, entonces lo que debemos hacer es diseñar para la flexibilidad.
+[22:19] Speaker 1:  Para mí, lo mejor es no diseñar los H, sino que más bien diseñar los distintos estilos que puede tener cada uno de los H.
+[22:29] Speaker 1:  Hemos llegado a nuestra lección 3.8, donde vamos a hablar de Zoom y Reflow. Fíjate que no es tan sencillo, así es que vamos a intentar de hacerlo lo más simple posible para ti.
+[22:38] Speaker 1:  Las personas que requieren hacer Zoom puede ser que necesiten hacerlo para todas las interfaces, como por ejemplo una persona que tenga baja visión. Pero también existen otro grupo de usuarios que utilizan Zoom, que son los que tienen algún tipo de discapacidad cognitiva y que no pueden entender cuál es el orden del contenido.
+[22:54] Speaker 1:  El Zoom los ayuda porque va a organizar el contenido como si fuese un celular gigante y termina agrupando la información como una columna debajo de la otra columna y no necesariamente hacia el lado.
+[23:04] Speaker 1: ¿Cómo se hace Zoom? Para hacer Zoom vamos a verlo más adelante, pero el mismo navegador te va a permitir hacer Zoom. En el caso de Mac, yo con comando + voy y voy ampliando poquito a poquito.
+[23:15] Speaker 1:  Con comando - voy disminuyendo el tamaño y con comando 0 vuelve al tamaño original.
+[23:21] Speaker 1: ¿Qué es lo que tenemos que asegurar? El Zoom debería asegurarse en un 200% y un 400%. Eso quiere decir que el contenido debe estar ahí disponible.
+[23:30] Speaker 1:  En el ejemplo te estamos mostrando el sitio de la W3C. Fíjate que al momento de ampliar el menú ha cambiado y se comporta como el menú del móvil.
+[23:39] Speaker 1:  Cuando hacemos Zoom, el contenido sí o sí va a tener que reorganizarse. Habíamos dicho que debemos asegurar que funcione en un 200 y un 400%.
+[23:49] Speaker 1:  En este caso tenemos una tarjeta que tiene una disposición horizontal, pero que al momento de hacer Zoom asume una posición vertical. Desde el mundo del desarrollo, lo que se debe evitar es que las alturas se fijen con números exactos.
+[24:00] Speaker 1: ¿Por qué? Porque al momento de hacer Zoom, ese contenedor va a hacer que cierto contenido quede fuera del contenedor y, por tanto, no esté disponible. En cambio, cuando el contenedor no tiene un tamaño delimitado y más bien se ajusta en base al contenido, no importa si el contenido crece o vuelve a su tamaño original o incluso si disminuye, esto se va a organizar y se va a ver absolutamente toda la información.
+[24:21] Speaker 1:  Va a estar disponible para las personas usuarias. Puedes hacer la prueba tú mismo para comprobar qué pasa cuando se aumenta el Zoom.
+[24:27] Speaker 1: ¿Qué es lo que vas a hacer? Recorre la página ampliada primero en un 200%. Verifica que los textos estén completos y que los controles sigan disponibles.
+[24:33] Speaker 1:  Verifica también que no se haya perdido nada de la información, que todo haya sido reorganizado. Es muy importante que no se pierda información al reorganizar.
+[24:41] Speaker 1:  Valida también que todas las acciones están siendo alcanzables a través del teclado y que tienen el comportamiento esperado. Finalmente, valida que la lectura de izquierda a derecha siga cada una de las líneas.
+[24:51] Speaker 1:  Luego haz lo mismo en un 400%. Si funciona en ambos, estamos bien.
+[24:56] Speaker 1:  Entonces, el Zoom lo que hace es aumentar y el Reflow es asegurar que el contenido todavía esté disponible. La WCAG asegura que el contenido se reorganice incluso para pantallas pequeñas.
+[25:06] Speaker 1:  Existe un criterio que asegura que el ancho reducido también sea un requisito. Estamos hablando del criterio 1.4.10, que es el criterio llamado Reflow.
+[25:14] Speaker 1:  Y lo que considera son 320 píxeles de ancho.
+[25:17] Speaker 1: ¿Qué es lo que dice este criterio? Dice que para el contenido que se desplace verticalmente, la información no debe perderse, pero tampoco las funcionalidades, y no debe exigir un desplazamiento en dos dimensiones. O sea, el contenido debe reorganizarse en el espacio delimitado.
+[25:31] Speaker 1:  No debe quedar contenido en el espacio horizontal. Eso es distinto de ciertos patrones de navegación, como pueden ser, por ejemplo, los cards de carrusel que estamos acostumbradísimos en las aplicaciones mobile.
+[25:42] Speaker 1:  Es completamente distinto. Acá lo que te estamos diciendo es que el contenido quede en la pantalla de acuerdo a los patrones que conoce la persona usuaria.
+[25:49] Speaker 1:  Existen otras excepciones, como contenido que requiere de la bidimensionalidad, como puede ser un mapa o una tabla. Cuando las personas amplían una zona, su disposición, la disposición de los distintos elementos, permanece.
+[26:00] Speaker 1:  Es el mismo componente, la misma información organizada, simplemente en un tamaño más grande. En la siguiente lección, la 3.9, vamos a hablar de cómo se relaciona el diseño responsivo y la accesibilidad.
+[26:12] Speaker 1:  El diseño responsivo significa que el contenido se va a adaptar a distintas pantallas. Pero también tenemos que pensar que el navegador una persona podría achicar o hacer crecer la ventana.
+[26:20] Speaker 1:  El contenido tiene que seguir estando disponible y tiene que moverse y fluir de acuerdo al nuevo tamaño de la pantalla. A eso nos referimos con responsabilidad.
+[26:28] Speaker 1:  No basta con que el contenido tenga una versión mobile. No se trata de eso.
+[26:31] Speaker 1:  Se trata de definir exactamente los puntos de quiebre para que el contenido todavía fluya y se reorganice de la manera correcta. No importa si la ventana es ancha o si la ventana es estrecha, sin que se pierda información o contenido que sea relevante.
+[26:44] Speaker 1:  Cuando diseñamos pensando en la responsabilidad, lo que va a pasar es que el contenido se adapta. No se pierde información, excepto que sea una decisión de diseño.
+[26:52] Speaker 1: ¿Cuál sería una decisión de diseño? Que una imagen que era decorativa, que aparecía antes en una versión de desktop, por ejemplo, de 1280 píxeles, podría pasar que el diseñador diga: "Esta imagen es decorativa, no aporta información y no la necesitamos para el tamaño de", voy a decir cualquier número, 320 píxeles. Lo que sí va a pasar es que el contenido que es relevante se tiene que mantener sin pérdida de la información.
+[27:14] Speaker 1:  Y en la responsabilidad lo que tiende a pasar es que el menú se convierte en un menú hamburguesa. En este caso tenemos el ejemplo de un menú, una barra de navegación desplegada.
+[27:23] Speaker 1:  Y en el caso de la vista reducida, este menú se ha transformado en un menú hamburguesa que en el ejemplo se muestra desplegado. Desde el diseño tenemos que asegurar entonces que las personas puedan navegar amplificando el contenido, pero también a través del teclado.
+[27:36] Speaker 1:  Imaginemos que existe una tarea. La tarea es encontrar y descargar el billete.
+[27:41] Speaker 1:  La persona le vamos a pedir que, utilizando Zoom, logre localizar el billete y que pueda leer los datos. Y luego necesitamos saber si esa misma tarea es accesible a través del teclado.
+[27:50] Speaker 1: ¿La persona está encontrando, está pudiendo realizar la tarea en cualquiera de los dos formatos?
+[27:58] Speaker 1:  En la siguiente lección, la 3.10, vamos a hablar de imágenes, iconografía y también información no textual. Fíjense que las imágenes también transmiten información.
+[28:06] Speaker 1:  Es muy común que todos nosotros hayamos escuchado alguna vez que una imagen vale más que mil palabras. En este caso tenemos una imagen que es en sí mismo un instructivo para armar un mueble.
+[28:15] Speaker 1:  La imagen nos da en cinco pasos las instrucciones para montar el mueble. Aquí importan las piezas, la posición y el orden del montaje.
+[28:21] Speaker 1:  Pero, ¿qué pasa con una persona que no puede acceder al contenido en la imagen y que es capaz perfectamente de armar un mueble? Quizás desde tus propios prejuicios podrías pensar que una persona ciega no arma muebles.
+[28:31] Speaker 1:  Entonces te lo llevo a algo muchísimo más concreto. Instrucciones para una corbata, o instrucciones para hacer un origami, o incluso instrucciones para pintar a través de color.
+[28:41] Speaker 1:  La persona ciega realmente no puede hacer eso. Lo cierto es que sí se puede.
+[28:45] Speaker 1:  Entonces, la información que tenemos en la imagen también debemos ser capaces de transmitirlo de una manera distinta. Veamos otro ejemplo.
+[28:51] Speaker 1:  Pensemos en una fotografía que se presenta en distintos contextos. Es la misma imagen que cumple distintas funciones.
+[28:56] Speaker 1: ¿Qué tenemos en la imagen? Verduras, principalmente brócoli. Hay un zapallo.
+[29:01] Speaker 1:  Veo un aguacate. Nosotros le decimos palta en Chile.
+[29:03] Speaker 1:  Y tenemos también huevos, limones, zanahorias, etcétera. Esta imagen podría ser parte del fondo de bienvenida.
+[29:10] Speaker 1:  Si solo se acompaña con un texto, entonces podría ser decorativa. Esa misma imagen podría ser parte de una ficha de producto.
+[29:16] Speaker 1: ¿Qué pasa si ese producto está a la venta? Entonces es importante que la imagen se cuente esta sensación de la frescura de lo que hay detrás. Una misma imagen va a tener distintas funciones y vamos a necesitar un relato completamente distinto.
+[29:28] Speaker 1:  Pensemos ahora en un elemento que es un botón que realiza una acción. La acción es eliminar un documento, cualquiera sea.
+[29:35] Speaker 1:  Desde el diseño, muchas veces utilizamos botones que tienen un ícono y que estamos asumiendo que la persona interpreta correctamente qué es lo que hace ese ícono. En este caso tenemos dos formas distintas para resolver el mismo problema.
+[29:47] Speaker 1:  Eliminar un documento a través de un botón con una papelera y un botón que tiene el texto específico de eliminar un archivo. Si la función del botón es eliminar un archivo, entonces a ese botón yo necesito entregarle un nombre accesible pensando en aquellas personas que no están viendo el papelero, pero que necesitan entender cuál es la función que cumple esa papelera.
+[30:06] Speaker 1:  Tenemos que tener en cuenta cuál es la función de la imagen o del ícono para poder determinar qué es lo que debemos contar de esa imagen o ícono. Por ejemplo, si es parte de un botón, en realidad lo que debemos transmitir es la acción.
+[30:17] Speaker 1:  Y en este caso sería eliminar archivo. Pero si la imagen es un gráfico, necesitamos contar respecto de cuáles son los datos relevantes y las relaciones que se están mostrando.
+[30:25] Speaker 1:  En cambio, si es un cartel o un afiche, necesitamos decir cuál es el mensaje que contiene y qué es lo que propone hacer.
