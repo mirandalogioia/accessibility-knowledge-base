@@ -23,14 +23,21 @@ No es un repo de documentación de producto ni sigue el framework DB90 — es un
 |---|---|
 | [`glossary.md`](glossary.md) | Glosario de términos de accesibilidad digital |
 | [`resources/`](resources/links.md) | Links y recursos externos de referencia |
+| [`resources/wcag22-understanding/`](resources/wcag22-understanding/README.md) | Resumen traducido de los 87 criterios de éxito de WCAG 2.2 (docs "Understanding" del W3C) |
+| [`resources/wcag22-techniques/`](resources/wcag22-techniques/README.md) | Resumen traducido de 137 técnicas WCAG 2.2 (HTML, CSS, ARIA, Client-Side Script) con ejemplos de código |
+| [`resources/nielsen-heuristics.md`](resources/nielsen-heuristics.md) | Las 10 heurísticas de usabilidad de Nielsen (NN/g), referenciadas en el programa weAAAre |
+| [`resources/wai-tutorial-form-notifications.md`](resources/wai-tutorial-form-notifications.md) | Tutorial W3C WAI sobre notificaciones de error/éxito en formularios, referenciado en el Módulo 2 de weAAAre |
 | [`program-weaaare/`](program-weaaare/README.md) | Notas y materiales del programa "Diseño Accesible" de weAAAre |
+| [`curso-modelos-teoricos-discapacidad/`](curso-modelos-teoricos-discapacidad/README.md) | Curso complementario de weAAAre (fuera del programa intensivo) sobre modelos teóricos de la discapacidad |
+| [`curso-discapacidad-etiquetas-barreras-estadisticas/`](curso-discapacidad-etiquetas-barreras-estadisticas/README.md) | Curso complementario de weAAAre sobre categorías de discapacidad, lenguaje/etiqueta, barreras y estadísticas globales |
 | [`shadowing-sessions/`](shadowing-sessions/README.md) | Notas de sesiones de shadowing (auditorías, testing con usuarios, etc.) |
 | [`ai-research/`](ai-research/README.md) | Investigación propia sobre accesibilidad usando herramientas de IA |
+| [`articulos-externos/`](articulos-externos/README.md) | Artículos sueltos sobre accesibilidad encontrados por fuera del programa |
 | [`dualboot-findings/`](dualboot-findings/README.md) | Consolidación de findings y la propuesta de proceso/checklist para Dualboot |
 
 ## Convención de carpetas
 
-Las carpetas de contenido (`program-weaaare/`, `shadowing-sessions/`, `ai-research/`, `dualboot-findings/`) comparten la misma estructura interna:
+Las carpetas de contenido (`program-weaaare/`, `curso-modelos-teoricos-discapacidad/`, `curso-discapacidad-etiquetas-barreras-estadisticas/`, `shadowing-sessions/`, `ai-research/`, `articulos-externos/`, `dualboot-findings/`) comparten la misma estructura interna:
 
 | Subfolder | Uso |
 |---|---|

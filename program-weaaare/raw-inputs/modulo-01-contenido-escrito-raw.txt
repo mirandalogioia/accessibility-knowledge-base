@@ -1,0 +1,459 @@
+# Módulo 1 - Programa Intensivo Diseño Accesible WeAAAre
+## Contenido escrito de las lecciones (plataforma), sin ejercicios/tests
+
+Nota: se excluyen deliberadamente los bloques de ejercicio/test interactivo ("Verdadero o falso", quizzes, etc.) de cada lección, conservando solo el contenido explicativo.
+
+---
+
+## 1.2 — Qué significa diseñar de manera accesible
+
+Una ficha para reservar una ruta de senderismo: una foto, un título, un video corto, un campo para el correo y un botón. Parece que ahí no hay nada que decidir sobre accesibilidad. Pero cada pieza lleva una decisión dentro, y si no la tomas tú, se toma igual.
+
+### Tres preguntas para cualquier pantalla
+
+La accesibilidad es que un producto lo puedan usar personas con distintas capacidades, de distintas formas y en distintos contextos. Cada parte de esa frase es una pregunta que puedes hacerle a tu diseño:
+
+- **Capacidades.** ¿Qué das por hecho? Ver, oír, mover las manos con precisión, entender a la primera, recordar.
+- **Formas de uso.** ¿Por dónde llega la información y por dónde responde la persona? Ratón, teclado, dedo, voz, lector de pantalla, ampliador.
+- **Contextos.** ¿Dónde se va a usar? Al sol, en un tren sin auriculares, con una mano ocupada, con prisa.
+
+Las tres no pesan igual. Para quien vive con una discapacidad, una barrera no es una molestia de un rato: es la diferencia entre hacer el trámite o depender de otra persona. Los contextos ayudan a que el equipo reconozca el problema, pero no sustituyen a las personas con discapacidad.
+
+### Cada pieza esconde una decisión
+
+Esta es la ficha de la ruta del video (ejemplo: ficha "Ruta del mirador" — Senderos del Valle). Parece que no hay nada que decidir, pero cada pieza lleva al menos una decisión de accesibilidad:
+
+1. **La foto** — ¿Informa o decora? Si informa, hay que decidir qué cuenta a quien no la ve: «Río entre montañas y árboles».
+2. **El título** — Tiene que ser un título de verdad, no solo letra grande, para que quien usa un lector de pantalla pueda saltar a él.
+3. **Los colores** — La etiqueta de plazas y los textos tienen que leerse bien sobre el fondo, también a pleno sol.
+4. **El video** — Subtítulos para quien no oye y una forma de enterarse de lo que solo se ve para quien no ve.
+5. **El campo del correo** — Una etiqueta visible que diga qué dato va, antes de empezar a escribir.
+6. **El botón** — Que se alcance y se active sin ratón, y que su nombre diga lo que hace.
+
+Casi ninguna de estas decisiones la puede tomar sola una persona de desarrollo al final. Si el diseño no dice si la foto informa o decora, quien la programa tiene que adivinarlo, y un lector de pantalla acabará leyendo «IMG_4032.jpg». Una decisión que no se toma en diseño se toma igual, pero por omisión.
+
+### Empezar de cero o arreglar lo que hay
+
+En un proyecto nuevo, la accesibilidad entra antes de dibujar: en los requisitos («se puede reservar sin ratón»), en con quién investigas y en los bocetos. Ahí casi todo es barato: cambiar un flujo en un boceto cuesta una tarde.
+
+En un producto que ya existe, no se empieza por diseñar, sino por saber qué pasa. Eso es remediar con evidencia, y cada fuente te enseña una parte. Una auditoría te dice qué incumple y dónde, pero no cuánto le cuesta a una persona. Las pruebas con personas con discapacidad te dicen dónde se atascan, pero solo en lo que probaste. Y las quejas a soporte recogen lo que molesta lo bastante como para escribir, pero no a quien abandona sin poder avisar.
+
+Una cosa más: si la barrera nace en un componente, se arregla en el componente, no pantalla a pantalla.
+
+### «Terminado» también quiere decir accesible
+
+Una pieza no está terminada si un grupo de personas no puede usarla, igual que no lo estaría sin su mensaje de error. Pero «que sea accesible» no sirve como condición: nadie sabe cómo comprobarlo, así que nadie lo comprueba.
+
+Lo que funciona son frases que alguien puede verificar antes de dar la pieza por buena. Para un formulario de contacto:
+
+- Cada campo tiene una etiqueta visible que dice qué dato va.
+- Se rellena y se envía solo con el teclado.
+- Si falta un dato, el mensaje dice cuál y cómo corregirlo.
+- Al enviar, la confirmación llega también a quien usa lector de pantalla.
+
+Fíjate en lo que tienen en común: hablan de lo que consigue la persona, no de código; se comprueban haciendo algo, como usar el teclado o escuchar la página; y se entienden sin conocer ninguna norma.
+
+### Para llevarte
+- La accesibilidad se pregunta por tres cosas: qué capacidades da por hecho tu diseño, por qué vías se usa y en qué contextos.
+- Cada pieza de una interfaz lleva decisiones de accesibilidad; las que no tomas tú se toman por omisión.
+- «Accesible» no es una condición de terminado; una frase que se puede comprobar, sí.
+
+---
+
+## 1.3 — Diversidad de personas y necesidades
+
+«Discapacidad visual» cabe en una casilla de un formulario, pero dice muy poco. No dice si esa persona escucha la pantalla con un lector, si la amplía cuatro veces o si perdió la vista hace tres meses y todavía no usa nada. Diseñar para una etiqueta es diseñar para nadie en concreto. Diseña para lo que la persona necesita hacer, con qué y en qué momento.
+
+### Lo que una etiqueta no dice
+
+Piensa en tres personas con discapacidad visual que usan la misma web. Samuel es ciego desde hace veinte años: escucha la página con un lector de pantalla y se mueve por ella con atajos. Inés tiene baja visión: ve la pantalla, pero ampliada, y necesita que lo que busca esté cerca. Rosa perdió la vista hace poco y está aprendiendo a usar el lector: en la misma pantalla se atasca mucho antes que Samuel.
+
+De ahí salen tres ideas:
+
+- **La etiqueta no dice qué herramienta usa nadie.** Si «visual» es para ti «lector de pantalla», te olvidas de Inés.
+- **La experiencia cambia la barrera.** Lo que para Samuel es un trámite de un minuto puede ser un muro para Rosa.
+- **Las necesidades se suman y cambian.** Con la edad es lo normal: ver, oír y mover las manos algo peor, todo a la vez. Y hay discapacidades que no se ven, como las cognitivas.
+
+Los datos lo confirman. En España, la encuesta EDAD 2020 del INE cuenta 4,38 millones de personas con discapacidad en hogares; tres de cada cuatro tienen 55 años o más. Y la limitación más frecuente no es la visual, sino la de movilidad: 54 de cada mil personas de seis años o más, frente a 23,6. Un buen dato para quien cree que la accesibilidad es «para personas ciegas».
+
+### Una necesidad, tres orígenes
+
+Entender un video sin sonido lo necesita una persona sorda, alguien con otitis durante unos días y quien va en el autobús sin auriculares. Es la misma necesidad con tres orígenes: **permanente**, **temporal** y **situacional**. El modelo viene del diseño inclusivo de Microsoft y sirve para ver hasta dónde llega una solución: los subtítulos resuelven los tres casos.
+
+Úsalo con dos cuidados. Lo situacional ayuda a que el equipo entienda el problema, pero no es vivir con él: quien va en el autobús recupera el sonido al bajarse; quien es sorda, no. Y temporal no significa leve: con una semana de brazo escayolado aún no tienes los trucos de quien vive así desde hace años.
+
+### Una persona no es su colectivo
+
+Si preguntas a una sola persona, lo que cuenta parece la verdad de todas. Que Samuel complete un pago en dos minutos dice que a Samuel le funciona. No dice nada de Inés ni de Rosa.
+
+**Para que tu investigación no te engañe:**
+
+- **Agrupa por lo que hay que poder hacer:** ver, oír, pulsar con precisión, entender, recordar. No solo por diagnóstico o por herramienta.
+- **Más de una persona por grupo, con distinta experiencia.** Con una sola no sabes si ves un patrón o una historia personal.
+- **No las busques a todas en el mismo sitio.** Si vienen de la misma asociación, seguramente comparten herramienta y costumbres.
+- **Separa lo que se repite de lo que le pasa a algunas,** y di qué no has probado.
+
+### Para llevarte
+- Una etiqueta no dice qué necesita una persona ni qué herramienta usa: pregunta qué tiene que poder hacer.
+- Una buena decisión sirve a quien lo vive siempre, a quien lo vive unas semanas y a quien lo vive un rato.
+- Una persona no representa a su colectivo: busca varias por grupo y di qué no has probado.
+
+---
+
+## 1.4 — Diversidad de formas de interacción con productos digitales
+
+Una misma tarea se puede hacer de muchas formas: con ratón, con teclado, con el dedo, con la voz, escuchando un lector de pantalla o con un pulsador. Tu diseño no decide quién lo usa, pero puede dejar a alguien fuera sin que nadie lo note.
+
+### Recibir y actuar
+
+Cualquier tarea digital se reduce a dos cosas: **recibir** información (verla, oírla, leerla en braille) y **actuar** (hacer clic, pulsar una tecla, tocar, hablar). Cada paso de un diseño da por hecho una forma de hacerlas. El problema aparece cuando solo hay una.
+
+Piensa en elegir una sesión en la web de un cine:
+
+- Quien usa ratón apunta y hace clic.
+- Quien usa teclado salta de un elemento a otro con Tab y lo activa con Intro o Espacio.
+- Quien usa lector de pantalla escucha cada opción antes de elegir.
+- Quien va de pie en el autobús toca con el pulgar, con una sola mano.
+
+Todos quieren lo mismo: su entrada para el viernes. El diseño tiene que dejar que la consigan por cualquiera de esos caminos.
+
+Cuando navegas con teclado, el **foco** es el elemento que está activo en ese momento: lo que pulses ocurre ahí. Normalmente se ve como un borde o un resaltado alrededor.
+
+### Dos caminos, el mismo resultado
+
+Tener un camino alternativo no basta si es peor. Dos caminos son equivalentes cuando:
+
+- **Llegan al mismo resultado.** Si con el ratón eliges butaca y con el teclado solo aceptas la que te toca, no es lo mismo.
+- **Muestran lo mismo.** Lo que has elegido se ve igual lo hayas hecho con el ratón, con el dedo o con el teclado.
+- **Cuestan algo parecido.** Treinta pulsaciones frente a un clic no es una alternativa razonable.
+
+Lo último pasa mucho con las fechas. Un calendario que se maneja con teclado es accesible, pero para una fecha de nacimiento es un castigo: si avanza mes a mes, llegar a 1985 son cientos de pulsaciones. Lo sencillo es dejar escribir la fecha y mostrar el formato fuera del campo.
+
+### Cuando la única vía falla
+
+El caso más delicado es entrar en tu propia cuenta. Si recuperar la contraseña solo se puede hacer con reconocimiento facial, se quedan fuera quienes la cámara no reconoce, quienes no pueden ponerse frente a ella o quienes no ven dónde encuadrar la cara. Mandarles a una oficina no es una alternativa: es otra tarea, en otro sitio y en otro momento.
+
+Para saber si una vía es una alternativa de verdad, hazte tres preguntas:
+
+1. ¿La persona puede completarla **sola**?
+2. ¿Desde el **mismo dispositivo** y en ese **momento**?
+3. ¿Es **igual de segura** que la principal?
+
+Un enlace a tu correo, unos códigos de recuperación guardados o una llave de acceso (la que desbloqueas con la huella, la cara o el PIN del móvil) cumplen las tres. Las preguntas de seguridad, como «¿cómo se llamaba tu primer colegio?», parecen una buena idea, pero hoy se desaconsejan: la respuesta se puede averiguar y hay que recordarla tal cual la escribiste.
+
+WCAG lo recoge en el criterio **3.3.8 Autenticación accesible (mínima), nivel AA**: iniciar sesión o recuperar la cuenta no puede depender de memorizar, copiar a mano o resolver un acertijo, salvo que haya otra vía o una ayuda, como poder pegar el código o que el gestor de contraseñas lo rellene.
+
+### Para llevarte
+- Cada paso de un diseño da por hecho una forma de recibir y de actuar. Si solo hay una, alguien se queda fuera.
+- Una alternativa cuenta si llega al mismo resultado, muestra lo mismo y cuesta algo parecido.
+- Recorrer tu diseño con Tab es la prueba más barata que existe: en dos minutos ves lo que no se alcanza.
+
+---
+
+## 1.5 — Tecnologías de apoyo
+
+Samuel se apunta a talleres con un lector de pantalla. Inés amplía la pantalla cuatro veces. Óscar, que tiene temblor en las manos, maneja el ordenador con la voz. Los tres usan la misma página, pero cada uno recibe de ella algo distinto. Tu diseño no elige qué herramienta usan; sí decide si les funciona.
+
+### Cada herramienta recibe algo distinto
+
+Una tecnología de apoyo es un programa o un aparato que da otra forma de percibir una interfaz o de manejarla. Estas son las que más vas a encontrarte:
+
+- **Lector de pantalla.** Convierte la interfaz en voz o en braille, en una línea de puntos que suben y bajan. Solo tiene lo que está escrito en el código: el nombre de cada control, qué es y los títulos de la página.
+- **Ampliador.** Agranda una parte de la pantalla y la persona la mueve como una lupa. A cuatro aumentos ve una dieciseisava parte de lo que ves tú. Lo que aparece lejos de donde mira, no lo ve.
+- **Control por voz.** La persona dice lo que ve: «Pulsa Apuntarme».
+- **Pulsador con barrido.** El sistema resalta las opciones una a una y la persona pulsa cuando llega la que quiere. Cada elemento de más es una espera.
+- **Teclados adaptados, punteros que se mueven con la cabeza, seguimiento de la mirada.** Muchos acaban enviando pulsaciones de teclado o clics. Por eso que todo funcione con teclado es la base de casi todo lo demás.
+
+Ninguna adivina. Un lector no deduce que una tarjeta gris significa «agotado»; un ampliador no acerca el aviso que salió en la otra esquina. Cada herramienta trabaja con lo que el diseño le da, por bien que la domine quien la usa.
+
+### No basta con que parezca un botón
+
+Quien mira reconoce un botón por su forma y su color. Un lector de pantalla lo reconoce por lo que el código dice de él, y son tres datos:
+
+- **Nombre:** cómo se llama («Apuntarme»).
+- **Función:** qué es (botón, enlace, casilla, pestaña).
+- **Estado:** en qué situación está (pulsado, seleccionado, desplegado, desactivado).
+
+Si alguien construye el botón como un bloque que solo reacciona al clic, se ve igual, pero el lector no dice «botón», el teclado no llega a él y el control por voz no lo encuentra. Con los controles normales del navegador, los tres datos vienen de serie; el riesgo está en los que se hacen a medida. **WCAG lo pide en el criterio 4.1.2 Nombre, función, valor, nivel A.**
+
+Para que no se pierda por el camino, déjalo escrito junto a cada componente del diseño, sin necesidad de saber código: «Botón · Apuntarme · desactivado si no quedan plazas».
+
+### Decir lo que se ve
+
+Óscar dice «Pulsa Apuntarme» y su programa de voz busca un control cuyo nombre contenga esa palabra. Si el botón muestra «Apuntarme» pero se llama «Inscribirse en el taller», la orden no encuentra nada, aunque el nombre sea correcto y descriptivo.
+
+**El criterio 2.5.3 Etiqueta en el nombre, nivel A,** lo exige: el nombre de un control contiene su texto visible, mejor al principio. Los iconos sin texto quedan fuera del criterio, pero no del problema: Óscar tiene que adivinar cómo se llama la lupa.
+
+### Respeta lo que la persona ya ha ajustado
+
+Antes de abrir tu producto, mucha gente ya ha configurado su móvil o su ordenador: letra más grande, más contraste o colores forzados, modo oscuro, menos animaciones, subtítulos siempre activados. Son ajustes del sistema y del navegador, se hacen una vez y la persona espera que todas las apps los respeten, también la tuya.
+
+Las preferencias que ofrece tu producto, como un selector de tema, suman, pero no sustituyen a esas. Si alguien pidió menos movimiento, que tus tarjetas no reboten; si subió la letra, que tu app no la deje pequeña.
+
+### Para llevarte
+- Cada tecnología de apoyo recibe algo distinto de tu diseño, y ninguna adivina lo que falta.
+- Un control transmite nombre, función y estado: déjalos escritos junto al componente.
+- El nombre de un control empieza por el texto que se ve, porque es lo que dice quien usa la voz.
+
+---
+
+## 1.6 — Barreras por diseño
+
+Julia es sorda. Está pidiendo el certificado de empadronamiento en la sede electrónica de su ayuntamiento y, en el último paso, la página solo le ofrece una forma de verificar su identidad: una llamada en la que una voz le dicta un código. «Julia no puede pedir el certificado» y «el código solo llega por una llamada» cuentan lo mismo. Pero solo la segunda frase te deja algo que cambiar.
+
+### La barrera está en el producto
+
+Una barrera de accesibilidad es una característica del producto que le dificulta o le impide a alguien hacer una tarea. Fíjate en dónde la pone esa definición: en el producto, no en la persona.
+
+No es una forma amable de hablar. La Convención de la ONU sobre los derechos de las personas con discapacidad, en vigor en España desde 2008, entiende la discapacidad como el resultado de la interacción entre las personas con alguna deficiencia y las barreras de su entorno. Es lo que se conoce como **modelo social**. De esos dos lados, solo uno está en tus manos: no puedes diseñar a Julia para que oiga, pero sí una verificación que no dependa de oír.
+
+### Cuatro formas de quedarse fuera
+
+Para revisar una pantalla sin dejarte nada, ayuda preguntarse qué es lo primero que falla:
+
+- **Percepción**: la información no llega. Un código que solo se oye.
+- **Comprensión**: llega, pero no se entiende. Un aviso escrito en el lenguaje de la norma.
+- **Interacción**: se entiende, pero no se puede hacer. Una firma que solo se dibuja con el dedo o el ratón.
+- **Estructura**: lo que se ve ordenado no llega ordenado a quien usa un lector de pantalla. Títulos que solo lo parecen.
+
+Se parecen a los cuatro principios de WCAG, pero no son lo mismo.
+
+Apunta también el efecto. Una barrera **dificulta** cuando la tarea se termina, pero con más tiempo, más errores o más esfuerzo. **Impide** cuando la tarea se detiene, o cuando solo se termina si otra persona la hace por ti. No pesan lo mismo cuando toca decidir qué arreglar primero.
+
+### Escribe la barrera, no la persona
+
+Cuando algo sale mal en una prueba, la primera frase suele hablar de personas: «los mayores no terminan el pedido». Puede ser verdad, pero no dice qué hay que cambiar. Una barrera bien escrita nombra cuatro cosas:
+
+1. El **elemento** del producto.
+2. El **único modo** en que funciona.
+3. Lo que **da por hecho** que la persona puede hacer.
+4. El **efecto**: si dificulta o impide, y qué tarea.
+
+Por ejemplo: «El aviso de cambio de cita de Salud Norte llega solo como mensaje de voz. Da por hecho que se oye e impide enterarse del cambio a quien no oye o no puede atender la llamada».
+
+La pieza más valiosa es la segunda. «Solo como mensaje de voz» te dice dónde actuar: añadir otra vía. Sin ella, la frase describe un síntoma.
+
+Muchas barreras se ven antes de dibujar nada, al leer lo que pide el proyecto. Hay palabras que merecen una pregunta:
+
+**Palabras que avisan**
+- «Solo», «únicamente». ¿Qué otra vía hay?
+- «Al pasar el ratón», «arrastra», «mantén pulsado». ¿Cómo lo hace quien usa el teclado o la voz?
+- «En rojo», «el de la derecha». ¿Lo dice también un texto?
+- «Escucha», «te llamamos». ¿Llega también por escrito?
+
+Detrás de todas está la misma pregunta: ¿hay otra forma razonable de hacer la tarea, y la ofrece el diseño? Razonable quiere decir en el mismo producto, sin pedir ayuda y con un esfuerzo parecido.
+
+Donde más se nota es en las incidencias que el equipo abre después de una prueba. «Los mayores no terminan el pedido» suele cerrarse con un «no es un error de la app». Una frase con las cuatro piezas, en cambio, se convierte en un cambio que alguien del equipo puede hacer.
+
+### Para llevarte
+- Una barrera es una característica del producto. Si tu frase habla de la persona, todavía no la has encontrado.
+- Escríbela con cuatro piezas: elemento, único modo, qué da por hecho y efecto.
+- «Solo» es la palabra que más barreras delata. Cada vez que la leas, busca la otra vía.
+
+---
+
+## 1.7 — Accesibilidad, usabilidad y experiencia de usuario
+
+Lucía, product manager de Banco Norte, llega contenta a la reunión: cinco de cinco personas han completado la nueva transferencia en menos de un minuto. Es una buena noticia de usabilidad. Sobre accesibilidad no dice nada, porque las cinco usaban ratón.
+
+### Dos preguntas distintas
+
+La **usabilidad** pregunta en qué medida las personas para las que diseñaste consiguen su objetivo: si lo consiguen, con cuánto esfuerzo y con qué satisfacción. La norma ISO 9241-11 la define así, y su definición esconde un detalle importante: siempre se mide con unas personas concretas. Si entre ellas no hay nadie que use el teclado, un lector de pantalla o un ampliador, la prueba no dice nada de quien los usa. Por eso «usabilidad para personas con discapacidad» no tiene sentido: la usabilidad es para todas las personas que incluyas al medirla.
+
+La **accesibilidad** pregunta otra cosa: si puede hacerlo cualquiera, con discapacidad o sin ella, reciba la información como la reciba y actúe como actúe.
+
+La **experiencia de usuario** es el recorrido entero, antes, durante y después: el correo que confirma la transferencia, la llamada a soporte cuando algo falla, la confianza con la que vuelves la próxima vez.
+
+### Usable no quiere decir accesible
+
+Como son preguntas distintas, pueden tener respuestas distintas:
+
+- **Usable e inaccesible**: la transferencia de Lucía. Con ratón sale en un minuto; con teclado, no sale.
+- **Accesible y poco usable**: la solicitud de ayudas de la sede de tu ayuntamiento. Todo se alcanza y se lee con cualquier tecnología, pero son doce pantallas y pide datos que el ayuntamiento ya tiene.
+- **Ninguna de las dos**: un formulario en PDF escaneado que hay que imprimir, rellenar a mano y llevar a la oficina.
+
+Lo que buscas, claro, es la cuarta: las dos a la vez.
+
+En los formularios, esta distinción empieza por nombrar bien sus textos. La **etiqueta** nombra el campo: «IBAN». La **instrucción** dice cómo rellenarlo: «Empieza por ES y tiene 24 caracteres». El **mensaje de error** dice qué ha fallado y cómo corregirlo. Una instrucción vaga, como «Use un formato válido», falla en las dos cosas a la vez: confunde a todo el mundo y a algunas personas les impide terminar.
+
+### Cada prueba ve una parte
+
+Ningún método lo ve todo:
+
+- Una **prueba de usabilidad** encuentra lo lento y lo confuso. Si nadie usa tecnologías de apoyo, no encuentra casi ninguna barrera.
+- Una **revisión con criterios**, como las de WCAG, encuentra las barreras conocidas de forma ordenada. No te dice si la tarea resulta lenta o confusa.
+- Una **prueba con personas que usan tecnologías de apoyo** te dice si la tarea se completa de verdad y con cuánto esfuerzo.
+
+La forma más sencilla de juntarlas no es montar un estudio aparte: es invitar a personas con discapacidad a las pruebas de usabilidad que ya haces.
+
+### Para llevarte
+- Usabilidad y accesibilidad son preguntas distintas: en qué medida se consigue, y quién puede conseguirlo.
+- Una prueba de usabilidad solo ve a quien participa. Si nadie usa tecnologías de apoyo, sus barreras no aparecen.
+- Para convencer, nombra a una persona, una tarea y un coste, y trae una alternativa.
+
+---
+
+## 1.8 — Sesgos y supuestos en el proceso de diseño
+
+En una reunión de Salud Norte, alguien mira el panel de la app de citas y dice: «Las personas mayores no se aclaran con la app y no tenemos usuarios con discapacidad». Suena razonable y nadie lo discute. Pero en esa frase hay dos supuestos que nadie ha comprobado. Tu trabajo es oírlos a tiempo y convertirlos en preguntas que se puedan comprobar.
+
+### Cinco sesgos que suenan en las reuniones
+
+Ponerles nombre ayuda a reconocerlos justo cuando se convierten en decisiones:
+
+- **Falso consenso**: creer que los demás usan el producto como tú. «Nadie rellena esto con el teclado». ¿Cómo lo sé, además de por mí?
+- **Confirmación**: buscar solo los datos que te dan la razón. «Las métricas confirman que el flujo funciona». ¿Qué dato me haría cambiar de opinión?
+- **Supervivencia**: mirar solo a quien llegó al final. «Quien termina el alta está contento». ¿Quién no aparece aquí, y por qué?
+- **Estereotipo**: atribuir un rasgo a todo un grupo. «La gente mayor no compra por internet». ¿Es cosa de las personas o de mi interfaz?
+- **Generalizar desde un caso**: tomar a una persona por todas. «Se lo enseñé a un amigo ciego y le pareció bien». ¿Cuántas personas, y con qué tecnologías?
+
+Conocerlos no te libra de ellos. Lo que funciona es hacerse la pregunta antes de decidir.
+
+### De supuesto a pregunta
+
+Un supuesto empieza a ser útil cuando se escribe de forma que pueda fallar. Bastan tres líneas:
+
+- **Creemos que...** lo que suponemos, como algo que hacen las personas.
+- **Lo comprobaremos con...** cómo, con quién y cuándo.
+- **Cambiaremos... si...** la decisión que tomarás según el resultado, escrita antes de mirar.
+
+Por ejemplo, con el icono del carrito de una tienda: «Creemos que la gente encuentra la cesta por el icono, sin texto. Lo comprobaremos viendo a seis personas hacer un pedido esta semana, entre ellas alguien que usa el control por voz. Añadiremos la palabra "Cesta" si alguna no la encuentra o no sabe cómo pedirla por voz».
+
+Se mira lo que hacen las personas, no lo que opinan: «¿te resultaría fácil?» mide cortesía. Y entre ellas hay alguien que no se parece al equipo; si no, el supuesto sale confirmado antes de empezar.
+
+### Lo que la analítica no puede decirte
+
+Un panel que dice «0 personas usuarias con discapacidad» no significa lo que parece, por tres razones:
+
+- **No se debe saber.** La discapacidad es un dato de salud, y la ley de protección de datos lo protege de forma especial.
+- **No se puede ver.** Los principios con los que se diseña la web piden que una página no pueda detectar si usas un lector de pantalla u otra tecnología de apoyo. Es a propósito: ese dato serviría para discriminar.
+- **Quien tropieza se va antes.** Si un paso tiene una barrera, la persona abandona ahí y nunca llega a contar como usuaria. El cero lo fabrica, en parte, la propia barrera.
+
+Lo que sí puedes mirar, sin saber quién tiene una discapacidad: en qué paso se abandona, qué dicen las consultas a soporte con «no puedo» o «no me deja», y qué pasa cuando personas que usan tecnologías de apoyo intentan la tarea.
+
+### Un freno a propósito o una barrera sin querer
+
+No todo obstáculo es un error. A veces un producto pone un freno a propósito: un banco no deja que una persona menor de edad abra una cuenta corriente, y una red social se lo pone más difícil a quien no tiene la edad mínima. A esto se le llama **fricción**: un paso que hace la tarea más difícil de forma deliberada, con un motivo y pensando en a quién tiene que frenar.
+
+Una barrera de accesibilidad es otra cosa. Nadie la decidió: apareció porque nadie pensó en quien iba a tropezar con ella.
+
+Tres preguntas las separan: ¿alguien lo decidió?, ¿para qué sirve?, ¿frena a quien tiene que frenar, y solo a esa persona? La tercera es la que más se olvida. Comprobar que eres una persona y no un programa tiene sentido; hacerlo solo con un rompecabezas de imágenes frena también a quien no puede verlas.
+
+### Para llevarte
+- Un supuesto escrito como «Creemos que... / Lo comprobaremos con... / Cambiaremos... si...» deja de ser una opinión.
+- Un cero en la analítica habla de cómo se ha medido, no de las personas.
+- Un freno puesto a propósito también tiene que poder superarlo cualquiera, use la tecnología que use.
+
+---
+
+## 1.9 — Diseño universal y diseño inclusivo
+
+Imagina un cine con escalera en la entrada principal y una rampa por la puerta de atrás, junto a los cubos de basura. Todo el mundo puede entrar, pero no por el mismo sitio. El diseño universal pide una sola entrada que sirva a todo el mundo. En una web o una app pasa lo mismo.
+
+### Una sola entrada para todo el mundo
+
+El **diseño universal** busca que un producto lo pueda usar todo el mundo, en la mayor medida posible, sin adaptaciones ni versiones especiales. Eso no quiere decir que nadie vaya a usar un lector de pantalla o un teclado adaptado: quiere decir que el producto funciona bien con ellos y que nadie necesita una puerta aparte.
+
+Por eso la «Versión accesible» que se enlaza desde la cabecera suele ser mala idea. Se actualiza tarde, porque el equipo no la usa. Tiene menos funciones: la cartelera está, pero no se puede elegir butaca. Y separa a las personas en dos grupos. Si te planteas una versión aparte, pregúntate antes qué impide que la principal funcione para todo el mundo.
+
+El **diseño inclusivo** no describe un resultado, sino una forma de trabajar: empieza por quien queda fuera, trabaja con esas personas y acepta que a veces la respuesta no es una solución única, sino varias. Unos subtítulos ayudan a Julia, que es sorda, y a otra persona le distraen: la salida inclusiva es que cada cual los active o no, con el botón a la vista. Los dos enfoques no compiten. El universal dice adónde quieres llegar; el inclusivo, cómo llegas.
+
+### Siete preguntas para revisar una pantalla
+
+Los siete principios del diseño universal se pensaron para edificios y objetos, pero funcionan muy bien como preguntas para revisar cualquier pantalla:
+
+1. **Uso equitativo.** ¿Todo el mundo usa el mismo producto, con las mismas funciones?
+2. **Flexibilidad.** ¿Hay más de una forma de hacer cada cosa?
+3. **Uso simple e intuitivo.** ¿Se entiende a la primera y responde a cada acción?
+4. **Información perceptible.** ¿Lo importante llega por más de un canal, no solo por el color?
+5. **Tolerancia al error.** Si me equivoco, ¿tiene arreglo?
+6. **Bajo esfuerzo físico.** ¿Me ahorra pasos y gestos repetidos?
+7. **Tamaño y espacio.** ¿Puedo pulsar cada cosa sin puntería fina?
+
+No tienen medidas ni umbrales, así que no se «cumplen» como una norma. Sirven para decidir antes de dibujar y para revisar después.
+
+### Cuánto cuesta equivocarse
+
+El quinto principio es el que más decisiones concretas genera, porque no hay una sola forma de tolerar el error. Hay cuatro, y cada una encaja con un tipo de equivocación:
+
+- **Prevenir**, cuando el error se puede prever: mostrar el formato de una fecha o comprobar un número de cuenta antes de seguir.
+- **Deshacer**, cuando equivocarse es frecuente, barato y tiene vuelta atrás: quitar algo de la cesta o borrar una foto.
+- **Confirmar con un resumen**, cuando es caro o no tiene vuelta atrás: una transferencia o cancelar una cita que pasa a otra persona.
+- **Guardar lo que llevas hecho**, cuando la tarea es larga: una solicitud de doce pasos.
+
+Confirmar parece lo más seguro, pero no es gratis. Si todo pide confirmación, la gente aprende a pulsar «Sí» sin leer, y la confirmación deja de proteger justo donde importa. Resérvala para lo caro y haz que diga algo concreto: «Vas a enviar 1.500,00 € a Marta López», no «¿Está seguro?». Y dale tiempo al «Deshacer»: si desaparece en tres segundos, no sirve a quien tarda más en llegar a él.
+
+### Para llevarte
+- Una sola solución para todo el mundo es la meta; una «versión accesible» aparte, casi nunca la salida.
+- Los siete principios son preguntas: úsalos para decidir antes de dibujar y para revisar después.
+- Elige cómo tolerar el error según lo que cuesta: deshacer lo barato, confirmar lo caro, guardar lo largo.
+
+---
+
+## 1.10 — Pensamiento accesible: cómo detectar una barrera antes de diseñar la solución
+
+Muchas barreras no se dibujan: se escriben. Nacen en una frase de un documento de requisitos que da por hecho cómo es la persona, y cuando llegan a la pantalla ya tienen diseño, código y fecha de entrega. Pensar antes de diseñar es leer esas frases con otros ojos antes de que nadie las dibuje.
+
+### Una barrera puede estar escrita en el requisito
+
+Un requisito que dice «la persona identifica visualmente el estado de su solicitud» ya ha decidido que la persona ve. Si la pantalla lo cumple al pie de la letra, con un icono de colores, el diseño es correcto respecto al requisito y deja fuera a quien no ve el icono. El error no está en la pantalla: está una fase antes.
+
+Por eso conviene releer cualquier requisito que hable de **ver, mirar, oír, arrastrar o deslizar**, que nombre un **canal** (por llamada, con la cámara, desde la app) o que dé por hecha la **memoria o la prisa** (recordar un código, en menos de un minuto). No siempre es un error: en una herramienta para retocar el color de una foto, ver el color es la tarea. Pero casi siempre la frase describe una forma de hacer algo que se podría hacer de más formas.
+
+A veces «ver» es solo una forma de hablar. «Como paciente, quiero ver mis citas» quiere decir consultarlas, y nadie en la reunión pensaba en la vista. El problema llega meses después, cuando alguien lee la frase al pie de la letra.
+
+### Conservar el qué, abrir el cómo
+
+Reescribir un requisito así tiene un patrón sencillo. Donde pone «la persona tiene que **ver, oír o arrastrar** algo», pregúntate qué necesita conseguir de verdad y escribe «la persona puede **saber, elegir, cambiar o confirmar** algo». El dato, la acción y cualquier plazo del negocio se quedan; la forma de conseguirlo queda abierta para el diseño.
+
+Un requisito bien reescrito no nombra un sentido ni un movimiento, salvo que sean la tarea misma. Tampoco elige ya el componente o el canal: «con un aviso por correo» es diseño y cierra otras opciones antes de tiempo. Y se puede comprobar: «puede saber en qué estado está su solicitud» se prueba sin color, con lector de pantalla o con la pantalla ampliada.
+
+Abrir el cómo no significa construir una vía aparte para cada persona. Significa elegir una solución principal que no dependa de una sola capacidad. Después, cada pantalla que responde a la tarea se revisa con tres preguntas: ¿se **percibe** sin depender de un solo sentido?, ¿se **comprende** qué está elegido y qué pasa después?, ¿se puede **hacer** sin precisión ni prisa?
+
+### Arquetipos con rasgos que cambian decisiones
+
+Un arquetipo sirve si sus rasgos cambian decisiones de diseño. Los de accesibilidad útiles no son diagnósticos, sino cómo usa la persona la tecnología. De Inés, 68 años, que pide las citas de su madre, sirve saber que amplía la pantalla a ×4 en el ordenador, que domina el ampliador pero pierde lo que aparece fuera de la zona ampliada y que abandona si tiene que empezar de cero. Cada una de esas frases se convierte en una decisión.
+
+Hay dos errores que se evitan con la misma idea. Uno es crear «el arquetipo con discapacidad»: un personaje aparte que concentra toda la accesibilidad mientras los demás siguen igual. El otro es atar un requisito a un arquetipo: «para Rosa, que usa lector de pantalla, añadimos una descripción». La idea que los evita: **todos los arquetipos dicen cómo usan la tecnología, y ningún requisito depende de cuál de ellos sea la persona**. La accesibilidad se le pide al producto, no a un personaje.
+
+### Para llevarte
+- Si un requisito dice «ver», «oír» o «arrastrar», pregúntate qué necesita conseguir la persona.
+- Conserva el qué y abre el cómo: el diseño elige después una forma que no dependa de una sola capacidad.
+- Todos los arquetipos dicen cómo usan la tecnología; ningún requisito depende de uno solo.
+
+---
+
+## 1.11 — Cambio de mindset en diseño
+
+Al final de muchos proyectos aparece una lista titulada «Accesibilidad: pendiente». Casi nunca se vacía: cada punto compite con trabajo nuevo y cada arreglo toca algo que ya está construido. El cambio de mirada que cierra este módulo es sencillo de decir y exigente de practicar: decidir antes.
+
+### Decidir tarde sale caro
+
+El tablero «Mis tareas del curso» de Tutorías se diseñó para ordenar las tarjetas arrastrándolas de una columna a otra. Añadir después un botón «Mover a...» ya no es añadir un botón: hay que tocar el componente, la ayuda y las pruebas, que contaban con que no existiera. Y como cada arreglo pequeño parece menos urgente que una función nueva, acaba en la «fase 2», donde el trabajo espera sin fecha.
+
+Anticipar no exige saberlo todo. Basta con cuatro preguntas antes de construir cada interacción importante: ¿cuál es la tarea? (ordenar mis tareas, no «arrastrar tarjetas»), ¿cuál es la vía principal?, ¿qué otra vía no depende de la misma capacidad?, ¿y cómo lo comprobarás en el prototipo? Cuatro líneas en la especificación cuestan menos que la discusión de la fase 2.
+
+### El teclado es el mínimo, no toda la respuesta
+
+WCAG lo concreta en el criterio **2.1.1 Teclado, nivel A**: todo lo que se puede hacer con el ratón tiene que poder hacerse también con el teclado, salvo lo que depende del trazo, como dibujar a mano alzada. El control por voz, los teclados en pantalla, los pulsadores o los sistemas de soplo funcionan enviando pulsaciones de teclado, así que si algo funciona con teclado, todas esas tecnologías tienen un camino. El criterio no prohíbe el ratón: pide que no sea el único camino.
+
+Pero el teclado no lo cubre todo. En el móvil, el lector de pantalla se maneja con gestos, y un gesto propio de la app puede chocar con los suyos. Quien usa control por voz dice lo que ve, «pulsa Tramitar pedido», y si el botón se llama por dentro de otra forma, la orden no encuentra nada. Y quien maneja el puntero con la mirada no pulsa teclas: necesita cosas que se puedan pulsar, grandes y sin arrastre.
+
+### Arrastrar: la alternativa tiene que poder pulsarse
+
+Para el arrastre, WCAG 2.2 añadió un criterio propio: **2.5.7 Movimientos de arrastre, nivel AA**. Todo lo que se hace arrastrando tiene que poder hacerse también con toques o clics sueltos: pulsar la tarjeta y luego la columna, o pulsar «Subir». Solo se libra lo que no tiene sentido sin arrastrar.
+
+Aquí está la confusión más habitual: **una alternativa solo de teclado cumple 2.1.1, pero no 2.5.7**. Quien tiene temblor, quien usa un pulsador o quien maneja el puntero con la mirada necesita pulsar, no teclear. Y la alternativa tiene que hacer lo mismo: un buscador por código postal encuentra una tienda, pero no sustituye a moverse por el mapa.
+
+### Lo que sabes, lo que asumes y lo que crees
+
+Antes de defender una decisión, sepárala en tres. Del tablero, el equipo **sabe** que las cinco personas de la prueba movieron las tarjetas sin problema, pero no si alguna tenía poca precisión en las manos. **Asume** que cualquiera puede arrastrar. **Cree** que arrastrar es más intuitivo que un menú, y eso no justifica que el menú falte. Lo que sabes, lo citas; lo que asumes, lo compruebas; lo que crees, lo pruebas con personas.
+
+Decidir tarde también tiene riesgos: reseñas, reclamaciones y la ley. En España, el sector público y muchos servicios privados, como la banca o el comercio en línea, están obligados a ser accesibles. Aun así, lo que cambia decisiones es una persona, una tarea y una alternativa con su coste.
+
+La mejor forma de no tener esa conversación es decidir antes: cada vez que una interacción importante vaya a construirse, deja escrito primero cuál es la tarea, cuál es la vía principal, cuál la otra vía y cómo lo comprobaréis.
+
+### Para llevarte
+- Decide la accesibilidad antes de construir: después cuesta más o no se hace.
+- Que funcione con teclado es el mínimo; el móvil, la voz y la mirada piden más.
+- Todo lo que se arrastra necesita una alternativa que se pueda pulsar, no solo teclear.

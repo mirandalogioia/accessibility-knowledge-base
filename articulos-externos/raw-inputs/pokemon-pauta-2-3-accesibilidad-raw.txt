@@ -1,0 +1,80 @@
+Fuente: Medium — Pipi Marquez
+Título: Cómo pokemón ayudó a crear una pauta de accesibilidad
+Subtítulo: Spoiler: No lo hizo siendo un buen programa. Hoy 13 de febrero día internacional de la epilepsia te cuento como se creo la pauta 2.3 de la WCAG 2.0
+Autora: Pipi Marquez — UX UI especializada en accesibilidad. CPWA.
+Instagram: @pipimarquez.ux
+LinkedIn: https://www.linkedin.com/in/marquezsilvia/
+Fecha: 13 feb 2023 · 5 min read
+Tags: Epilepsia, Pokemon, Accesibilidad, Accesibilidad Web, WCAG
+
+[NOTA: transcripción extraída de capturas de pantalla del artículo, completo de principio a fin.]
+
+---
+
+Todo empezó en el episodio 38 de Pokémon emitida en Japón "Soldado eléctrico Porygon", en este episódio, Ash y Pikachu se enfrentan a Porygon, utilizando un atactrueno, esto provocó una explosión que fue representada por una secuencia de cambios de colores que intercalo luces de color azul a rojo en 54 planos durante 5 segundos y terminó produciendo más de 700 personas hospitalizadas, en su mayoría niños.
+
+Varias de las personas tenían epilepsia fotosensitiva, un tipo de epilepsia en el cual las crisis epilépticas son provocadas por estímulos visuales. Pero es importante entender que estos estímulos nos pueden causar una crisis si por ejemplo estamos estresados, cansados o deshidratados no solamente por tener este tipo de epilepsia.
+
+[Imagen: escena del episodio de Pokémon con la explosión roja/naranja]
+
+Sobre la epilepsia
+
+La epilepsia es un trastorno en el que se interrumpe la actividad de las células nerviosas en el cerebro, lo que provoca una crisis epilépticas.
+
+Durante una crisis, una persona puede experimentar desmayo o fatiga, contracciones musculares rítmicas o espasmos musculares. Algunas personas con epilepsia simplemente permanecen con la mirada fija por algunos segundos durante una crisis, mientras que otras mueven repetidamente los brazos o las piernas.
+
+Hablando con algunas personas con epilesia cuentan al respecto:
+
+Julia: Hola, yo no tengo epilepsia fotosensible, si refractaria parcial. Pero recuerdo que una película 3D me disparó crisis sostenidas en el tiempo, que me tuve que ir.
+
+Por otro lado la epilepsia fotosensitiva es una forma menos común de epilepsia, que padecen 3 de cada 100 personas que tienen epilepsia.
+
+Lu: "Hola Yo crisis no, pero si me daban como espasmo (o mioclonia más técnico) un jueguito del celu.. Lo deje de jugar obvio. Era el candy crush"
+
+Es importante entender que las personas que la tienen muchas veces no lo saben y lo descubren al estar expuestos a estas secuencias de luces intermitentes.
+
+Sol: Hola 👋!! Mi hijo le dio una crisis jugando al Fortnite en la play station hace 2 años. Le dio tónico clónico muy fuerte fue la única vez q le paso jugando a la play y terminamos en la guardia por control. Le paso de noche. Cuando le hice estudio no le dio q reacciona a la luz o ruidos pero no se porque le sucedió en ese momento.
+
+¿Quiénes pueden tener Crisis Epilépticas?
+
+Cualquier persona, tenga o no diagnosticada epilepsia. Como me dijo Ivana Garcia creadora de Espacio Epilepsia:
+
+"La epilepsia es uno de los trastornos neurológicos más comunes, de hecho, 1 de cada 100 personas es diagnosticado con epilepsia en su vida. Es decir, que cada vez que entras a un cine, hay al menos una persona con epilepsia."
+
+Les dejo esta charla ¿Un diseño puede causar una crisis epiléptica? y las gracias por consultar con su comunidad para poder escribir este posteo.
+
+[Video embed: "¿Un diseño puede producir una crisis epiléptica? con Ivana Garcia" — Charla, Ivana García, Espacio Epilepsia]
+
+¿Pero entonces ayudó pokemon?
+
+En resumen no ayudo a las buenas, si no que todo lo sucedido impulsó normativas para la televisión, que fueron consideradas por la W3C años posteriores para crear su propia pauta y así evitar que las personas sean dañadas por el contenido.
+
+La Pauta 2.3 Convulsiones y reacciones físicas
+
+Luego de lo sucedido con Pokémon y entendiendo las repercusiones que esto puede causar en las personas, la W3C crea la pauta 2.3 convulsiones y reacciones físicas en la versión 2.0 de sus pautas de contenido para la accesibilidad web, que dice:
+
+Pauta 2.3: No diseñar contenido de un modo que se sepa podría provocar ataques, espasmos o convulsiones.
+
+Hoy 13 de febrero en el marco del día internacional de la epilepsia queremos aclarar que el término "Ataque" no es el término que la comunidad con epilepsia utiliza para describir una crisis epiléptica. Esta tradución ya tiene un par de años, por eso es que aparece de esta manera. Entendemos que los contenidos tienen que ser actualizados a nuestro idioma constantemente y construido por las personas a las que involucra. Si algo se tienen que llevar de hoy es que lo correcto es decir crisis no ataque.
+
+En la pauta se agrega una explicación y acá es cuando se habla de Pokémon pero sin dar nombres:
+
+"En 1997, una caricatura en la televisión de Japón envió a casi 700 niños al hospital, incluyendo alrededor de 500 de ellos con este tipo de ataques[EPFND]. Las advertencias no son efectivas pues muchas veces son ignoradas, especialmente por niños que quizás no puedan leerlas"
+
+[Imagen/infografía de la autora, resumen visual de 3 paneles:
+Panel 1 — "En la pauta 2.3 de convulsiones y reacciones físicas: No diseñe contenido de una manera que se sepa que causa convulsiones o reacciones físicas."
+Panel 2 — "Se menciona que: 'En 1997, una caricatura en la televisión de Japón envió a más de 700 niños al hospital, incluidos unos 500 que tenían convulsiones.' Ese comentario hace referencia al capítulo número 38 de Pokémon Soldado Porygon"
+Panel 3 — "En este capítulo se ve como pikachu hace un atactrueno representado por una alternancia de luces rojas y azules proyectado en 54 planos en apenas 5 segundos."]
+
+El objetivo de esta pauta es asegurar que el contenido que esta en la web, evite el tipo de destellos que puede generar una crisis epiléptica, incluso si el contenido fuera observado por uno o dos segundo. No sirven las advertencias en este punto, por que muchas personas como por ejemplo niños no serán capaces de entenderlas.
+
+A nivel técnico esta pauta tiene 2 criterios asociados, uno de nivel A y otro de nivel AAA.
+
+- 2.3.1 Umbral de tres destellos o menos de nivel A
+- 2.3.2 Tres destellos de nivel AAA
+
+En un próximo post exploraremos en profundidad el criterio 2.3.1 y como diseñar para no causar crisis epilépticas.
+
+Para terminar
+
+Sguimos construyendo entornos y contenidos que no estan diseñados para que todos puedan disfrutarlos, como activistas de la accesibilidad impulsamos el conocimiento sobre la materia y construimos con otros para brindar más conocimiento para todos. De nuevo Gracias Ivana Garcia, por las correcciones, siempre que hablamos aprendo términos nuevos sobre la epilepsia.

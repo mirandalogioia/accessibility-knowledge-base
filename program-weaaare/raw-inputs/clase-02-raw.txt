@@ -1,0 +1,916 @@
+# Clase 2 Accesibilidad
+
+## Summary
+### Flow Summary
+Clase del curso de accesibilidad: dudas del módulo 1 (testeo con personas con discapacidad, widgets, estándares), instrucciones del brief en Figma y revisión de los flujos de proyecto de cada alumno para acotarlos.
+
+### Testeo con personas con discapacidad
+- Usabilidad y accesibilidad son tests distintos: en accesibilidad importa lograr la tarea de forma autónoma, no el tiempo
+    - Consuelo Correa Barros adapta la pauta según la persona; recomienda el formulario AUS (empresa Fablet, nombre dudoso)
+- Testear con una sola persona genera sesgos; se busca diversidad de discapacidades y de tecnologías de apoyo
+    - Mínimo orientativo de unas seis personas (daltonismo, baja visión, ciega, sorda, autismo); a veces hasta 15
+- Los prototipos de Figma no sirven para personas ciegas; el curso enseñará a crear prototipos usables con lector de pantalla (shift left)
+
+### Widgets de accesibilidad (overlays)
+- Consuelo Correa Barros y Speaker 3 rechazan los widgets: no son accesibles, no cumplen el estándar y desentienden del problema
+    - El usuario ya tiene su propio lector de pantalla configurado; la legislación europea no obliga a usar widget
+- Sí son útiles botones simples de agrandar texto para personas mayores y diseñar con mínimo 16 píxeles
+- Escribir texto en mayúsculas en el código hace que el lector lo lea como acrónimo ("about US"); usar estilos, aunque afecta a disléxicos
+
+### Estándares de accesibilidad
+- WCAG aplica a web y apps; hay estándares aparte para software, herramientas de autor y navegadores, y COGA para discapacidad cognitiva
+    - Mobile Accessibility Task Force adapta WCAG a móvil; se verá en el módulo 2
+- Conformidad con 2.2 implica 2.1 y 2.0; la 3.0 en borrador cambiará la estructura
+
+### Brief del proyecto y flujos de alumnos
+- Cada alumno copia la ficha del brief a su propio Figma; la entrega final será la URL de ese Figma
+    - Flujo acotado de 2 a 4 pantallas con un componente simple y uno complejo; la idea no se evalúa, solo la accesibilidad
+- Ideas presentadas: pasajes Trenes Argentinos con CUD, tutoriales para mayores, app de energía, agenda Clínica Meds, butacas de teatro, marketplace de mascotas
+- Bárbara Araya Vidal muestra los pasos todos juntos porque en sus tests los mayores querían comparar pasos y sentirse seguros
+
+### Carga del módulo 1
+- Estimado en 2 a 3 horas más 2 de clase; solo la mitad lo terminó y desde el módulo 4 aumenta la carga
+- Se pide feedback sobre la plataforma; se están preparando materiales descargables en PDF
+
+### Próximos pasos
+- (Consuelo Correa Barros) Buscar el video de Apple sobre accesibilidad en software y compartirlo por Discord
+- (Carlos Garrido Marín) Publicar la grabación con los enlaces compartidos y el modo lectura del navegador
+- (Estibaliz Martin Borja) Cerrar la encuesta el fin de semana, elegir el flujo y compartirla para validar su viabilidad
+- (Alumnos) Copiar la ficha del brief a un Figma propio y avanzar el brief del proyecto
+
+### Decisiones tomadas
+- Proyecto de trenes: diseñar el flujo hasta antes de la compra, con confirmación clara de fecha y asiento
+- Proyecto Clínica Meds: solo la agenda, asumiendo usuaria logueada y profesional y centro ya seleccionados
+- Proyecto de teatro: desde la ficha de la obra hasta la selección de butaca, antes del pago
+- Proyecto marketplace de mascotas: categoría, página de producto y desplegable del carrito
+
+## Transcript
+[00:00] Consuelo Correa Barros: Necesito preguntar algo: ¿cómo se pronuncia el apellido Miranda? Lo oí hoy, ya, ya, oyó oye. No tiene, no tiene consonante; tiene un 4 vocales juntas.
+[00:11] Miranda Logioia:  Jajaja, parece más raro. O sea, es italiano, se pronuncia "lo gioia", pero yo digo "logioia" porque es lo más, es lo más fácil. Pero igual es difícil, lo sé.
+[00:24] Miranda Logioia:  Cuando se lee es muy... es raro las 4 vocales.
+[00:28] Consuelo Correa Barros:  Está dificilísimo.
+[00:29] María Pía Jackson:  Sí, total.
+[00:32] Consuelo Correa Barros:  Sí. No, no me había dado cuenta. Y a mí, en general, como que el tema de los apellidos es tema para mí, como pronunciarlos correctamente y todo lo demás.
+[00:42] Consuelo Correa Barros:  Por un tema como de respeto, pero en serio, el apellido de Paula y el apellido de Miranda están súper difíciles. Yo me ameo.
+[00:50] Consuelo Correa Barros:  No, mira, en cambio Yuli Muñoz, perfecto, facilísimo. Ahí yo pido, pido disculpas por no saber pronunciar los apellidos, o si me equivoco, pido las disculpas de antemano.
+[01:05] Consuelo Correa Barros:  Están muy difíciles. Jackson, en cambio, está fácil.
+[01:08] Consuelo Correa Barros:  A mí María Pía sí se puede reír porque "Jackson". Todos sabemos cómo se dice.
+[01:18] Speaker 4:  Bueno, yo creo que podemos ir dándole, ¿no? Con su.
+[01:20] Consuelo Correa Barros:  Sí.
+[01:21] Carlos Garrido Marín:  Ya está grabando, ya tenemos que hacer personitas por aquí. Yo creo que podemos ir empezando.
+[01:26] Consuelo Correa Barros:  Perfecto. Yo creo que antes de arrancar, preguntemos primero si hay alguna duda del módulo 1.
+[01:33] Carlos Garrido Marín:  Sí. Si habéis tenido alguna duda, si habéis tenido algún problema también. Bueno, los problemas también los podéis comentarnos por soporte o lo que sea, si tenéis algún problema en particular.
+[01:42] Carlos Garrido Marín:  Pero bueno, no te estoy diciendo también qué os ha parecido, si os ha gustado o no os ha gustado, lo que he comentado un poco por el Discord, que si os ha gustado ese tipo de ejercicio o os gusta otro tipo de enfoque. Ya he recogido un poco el feedback por ir diciendo de lo de generar un PDF para aquellos que os gusta imprimiros las cosas, subrayáis esas cosas.
+[01:59] Carlos Garrido Marín:  Estamos trabajando en ello, pero cuando nos daremos también algún tipo de diapositivas que podáis descargar e imprimir o lo que sea, para que a mayores pues lo podáis tener en físico, ¿vale?
+[02:07] Consuelo Correa Barros:  Exacto.
+[02:07] Speaker 4:  Pero bueno, dudas, preguntas.
+[02:09] Consuelo Correa Barros:  Bárbara, levanta la manito.
+[02:13] Bárbara Araya Vidal:  Sí, hola, ¿cómo están? Eh, básicamente es una duda como anexa, porque estuve leyendo otro de los recursos adicionales que dejaron. Y si bien se recomienda también, eh, testear con personas con accesibilidad dentro del test de usabilidad, no aparte, también hay una cosa de la teoría y en la práctica. 
+[02:35] Bárbara Araya Vidal: ¿Cómo lo han visto ustedes? ¿Cómo se hace normal? 
+[02:38] Bárbara Araya Vidal: ¿Cuántas personas? Porque la idea es no caer en una sola persona y generalizar, pero también no se testea tanto. Entonces, ¿cuál es el número en la teoría y en la práctica?
+[02:49] Consuelo Correa Barros:  Yo te voy a responder a esa pregunta, Bárbara. Oye, yo ya había comentado que con Bárbara somos amigas provisionales, así es que, eh, no. Dejé, o sea, no sé si quedó vinculado como recurso, pero hay un curso de We Are que se llama "Entrevistas Inclusivas", que yo les recomiendo que si tienen una horita, eh, pónganlo en play y ustedes lo usan como si fuera un podcast, ¿vale?
+[03:12] Consuelo Correa Barros:  Eh, pero lo que dice la teoría y lo que dice la práctica, es lo que dice Bárbara, es súper distinto, ¿verdad? Andas como, eh, no existe esto como de "el test de usabilidad para personas con discapacidad".
+[03:25] Consuelo Correa Barros:  Eso no, no, no existe. Lo que existe son los test de usabilidad y, por otro lado, existen los test de accesibilidad.
+[03:34] Consuelo Correa Barros:  Entonces, son dos temas distintos, porque en usabilidad lo que medimos es saber la eficacia, o sea, es como la persona pudo hacer la tarea sí o no, ¿cierto? 
+[03:42] Consuelo Correa Barros: ¿Cuántos pasos le tomó y qué sé yo? Y normalmente, en un, en un estudio cualquiera, digamos, nosotros estaríamos midiendo, por ejemplo, el tiempo que les tomó y consideraríamos el factor tiempo como una medida de éxito. Pero cuando tú testeas con personas con discapacidad, el tiempo se vuelve como relativo.
+[04:02] Consuelo Correa Barros:  Lo importante es que logre cumplir el objetivo de manera autónoma, ¿ya? Entonces, como respondiendo exacto a la pregunta, lo que se busca es una diversidad.
+[04:13] Consuelo Correa Barros:  Ahí hay, hay, voy a decir que discrepancias entre distintos especialistas, porque hay muchos que te van a decir: "Uno es mejor que ninguno". Pero pasa que ese uno puede traernos muchos más sesgos de los que teníamos anteriormente.
+[04:30] Consuelo Correa Barros:  Y te doy un ejemplo: alguna vez entrevisté a una chica sorda que es muy famosa en tecnología en Chile.
+[04:39] María Pía Jackson:  María José.
+[04:40] Consuelo Correa Barros:  Sí, justo. Bueno, María José Pashuan. Y ella, por no saber y por empatía hacia las otras personas con discapacidad, le pareció súper bueno que el sitio que estuviéramos, que estábamos testeando, tuviese, eh, un widget de accesibilidad.
+[04:57] Consuelo Correa Barros:  El widget de accesibilidad es este botoncito que uno lo pincha y puedes agrandar letras, puedes subrayar, puedes cambiar la tipografía para las personas con dislexia, puedes hacer algunas cosas, incluyendo el lector de pantalla. Y ella, ella en el fondo como no tiene por qué saber lo que necesitan los distintos colectivos de personas con discapacidad, ¿cierto?
+[05:17] Consuelo Correa Barros:  O cualquier otro. Entonces, cuando entrevistamos a una sola persona, tiende a pasar que lo que nos cuente lo asumimos como la realidad de las personas con discapacidad, pero en realidad se representa a sí misma.
+[05:29] Consuelo Correa Barros:  Entonces, para responderte ahora la pregunta, fíjate que en personas con discapacidad visual tenemos diversidad, ¿cierto? Entonces, vamos a considerar por lo menos personas que tengan daltonismo, personas que tengan baja visión.
+[05:44] Consuelo Correa Barros:  Sí, el overlay, exacto. Gracias, Gaby.
+[05:47] Consuelo Correa Barros:  Eh, y personas ciegas. Quiere decir que ahí ya tenemos tres personas.
+[05:52] Consuelo Correa Barros:  Luego tenemos las personas sordas, que la gente tiende a dejarlas fuera, personas con hipoacusia o personas sordas. 
+[06:00] Consuelo Correa Barros: ¿Por qué las dejan afuera? Porque dicen como: "Ah, yo no uso video o mis videos tienen subtítulos". Pero ojalá ese fuese el problema de las personas sordas, o solo eso.
+[06:10] Consuelo Correa Barros:  El tema es que una persona sorda que nació sorda y además lee texto, lo vamos a considerar una persona bilingüe. Fíjense que ellos se comunican distinto a través de la lengua de señas, ¿cierto?
+[06:23] Consuelo Correa Barros:  Entonces, conceptos completos se pueden englobar en un único gesto. Por ejemplo, como que esto creo que es, no sé si en Chile, pero persona crespa y voy a decir rubia y hondu, o como no sé.
+[06:36] Consuelo Correa Barros:  Entonces, son muchos conceptos. No todas las personas leen, no todas escriben.
+[06:41] Consuelo Correa Barros:  Y cuando leen y escriben, muchos además lo hacen como si fuera un fax de los años 80, como que se saltan los hilativos. No sé si alguna vez han chateado con una persona sorda, es muy difícil de entender lo que te están diciendo.
+[06:55] María Pía Jackson:  Disculpa, es, es tomar un curso de lengua de señas y la gramática es distinta, es al revés.
+[07:01] Consuelo Correa Barros:  Es todo, todo te cambia. Entonces, ¿qué es lo que buscamos saber cuando entrevistamos a una persona sorda? Si el contenido se comprende. 
+[07:10] Consuelo Correa Barros: ¿Qué les va a ayudar a ellos? Por ejemplo, que el uso de, de bullet, el uso de íconos que acompañen para explicar ciertos, eh, ciertos componentes. Entonces, mucho de lo que necesita la persona sorda también lo necesitan personas con discapacidad cognitiva, ¿ya?
+[07:25] Consuelo Correa Barros:  Entonces, eh, ya tenemos una persona sorda. Ahí el ideal sería que fuese como lo que buscamos es entender si el contenido es comprensible.
+[07:37] Consuelo Correa Barros:  El ideal es que la persona sorda sea una persona sorda de nacimiento o que en realidad que haya dejado de escuchar siendo muy pequeña, ¿ya? Eh, dijimos los tres tipos de discapacidad visual.
+[07:48] Consuelo Correa Barros:  Ya te doy la palabra, eh, María Pía. Y, eh, y luego una persona quizás con, con autismo podría ser bastante representativo.
+[08:01] Consuelo Correa Barros:  Y ahí ya tenemos como seis personas. Entonces, ¿qué es lo que hago? 
+[08:05] Consuelo Correa Barros: ¿Qué es lo que hago yo? Como que lo tengo un enfoque doble, como y va a depender siempre de la contraparte, ¿vale? No necesariamente yo tomo la decisión.
+[08:14] Consuelo Correa Barros:  A veces digo: "Voy a buscar personas que representen a distintos grupos de discapacidad", y otras veces digo: "Voy a buscar personas que utilicen distintas tecnologías de apoyo". Entonces, el enfoque es un poco distinto, pero al final llegas al mismo resultado.
+[08:30] Consuelo Correa Barros:  Si lo miro desde la tecnología de apoyo, ah, ¿por qué? Porque, por ejemplo, una persona ciega, si todos usan talkbacks, quizás no me sirve, necesito variedad.
+[08:39] Consuelo Correa Barros:  Entonces, si lo busco desde tecnología de apoyo, digo: "Alguien que use voiceover en un computador", por ejemplo, o el NVDA en computador, alguien que use un lector de pantalla en celular. Después voy a hacer una acotación, pero tiene que ver con los dispositivos.
+[08:57] Consuelo Correa Barros:  Alguien que use teclado, alguien que use magnificador. Entonces, a veces he llegado a hacer unas combinaciones como de hasta 15, pero como todas las investigaciones dependen de presupuesto y tiempo, ahí hay que tomar como decisiones.
+[09:14] Consuelo Correa Barros:  Entonces, nunca van a serlo así como no es que exista una receta, eh, pero sí tenemos que buscar abordar diversidad de personas con discapacidad y diversidad de formas de interactuar. Porque pasa otra cosa, cuando nosotros hacemos test de usabilidad, nosotros decimos como: "Le vamos, vamos a hacer test de usabilidad en personas que usen, eh, Android o que usen i, eh, iOS", o etcétera.
+[09:39] Consuelo Correa Barros:  Pero acá, cuando hacemos pruebas con personas con discapacidad, el dispositivo no es lo relevante, porque seguramente la persona navega siempre desde el mismo dispositivo porque es lo que conoce y es lo que entiende. Entonces, nosotros tenemos que ser capaces de testear con ellos como, eh, que y que les funcione en su dispositivo.
+[09:59] Consuelo Correa Barros:  Ahí es el, el, el a propósito de ese de entrevistas, viene como hacer reclutamiento, viene como toda la información. Y existe un, un formulario que se llama AUS, creo que es, Accessibility Usability Test, que es de una empresa que se llama Fablet.
+[10:19] Consuelo Correa Barros:  Entonces, tú le puedes hacer unas preguntas después de testear y te va a arrojar un resultado. Y eso lo puedes ir midiendo en el tiempo, como para entender la, la evolución.
+[10:29] Consuelo Correa Barros:  Porque el tipo de pregunta, insisto, que es distinto. Como que, eh, cuando hablamos de usabilidad, lo que no sé, pues nos interesa la eficacia, la eficiencia, todo el como la satisfacción del usuario, ¿cierto?
+[10:41] Consuelo Correa Barros:  No es que no sea relevante en temas de accesibilidad, pero lo más relevante es que la persona pueda resolver siendo autónoma. Gracias por el link, Carlos.
+[10:50] Bárbara Araya Vidal:  Entonces, ¿recomiendas tener uno de accesibilidad y usabilidad? No meterlos a todos como en el mismo porque el enfoque es distinto.
+[10:59] Consuelo Correa Barros:  Lo que pasa es que como igual tenéis que adaptar el, el, el test. Yo de hecho, por ejemplo, cuando hacemos entrevistas, yo normalmente no tengo una pauta que sea única, porque, eh, la, la misma pauta tengo que adaptarla. Por ejemplo, si la persona tiene déficit atencional, ah, eso también es algo que es súper interesante de testear.
+[11:22] Consuelo Correa Barros:  Porque qué cosas yo igual les puedo decir qué cosas aparecen con el déficit atencional. Los textos justificados se van a dar cuenta que las personas con déficit atencional no son capaces de leer la línea si está muy larga, y que pasan un montón de cosas.
+[11:35] Consuelo Correa Barros:  Que nosotros después, como parte de nuestros criterios, podemos asumirlos como buenas prácticas. Eh, pero igual está bueno tenerlos, porque a veces necesitamos la evidencia para salir a demostrarle al stakeholder que hay ciertas decisiones de diseño que no son buenas.
+[11:51] Consuelo Correa Barros:  Entonces, eh, claro, como la pauta cambia un poco, puede que el que el objetivo general sea el mismo y que lo que busque saber sea más o menos lo mismo. Pero yo recomiendo siempre hacer adaptaciones para las personas con discapacidad, porque, eh, por ejemplo, incluso a veces tú podrías testear algo como sensorialmente, o sea, como hacer un prototipo narrado.
+[12:16] Consuelo Correa Barros:  Por ejemplo, cuando si yo tengo un boceto en papel, que es muy típico como de, de estos testeos ultra rápidos, un boceto en papel, que uno dice como: "Pincha acá y te muestro la otra página". Eso mismo se puede hacer con narración de voz y se pueden hacer un montón de cosas.
+[12:32] Consuelo Correa Barros:  Entonces, también anda creo que a veces los, los testeos con personas con discapacidad llegan muy tarde, porque se implementan cuando está el resultado final. Pero se pueden montar algunas cositas con, con IA rápidamente, que sí toman el sistema de diseño y que sí lo reflejan súper bien.
+[12:49] Consuelo Correa Barros:  Ahí yo creo que Carlos les podría, eh, mostrar esa, esa partecita como para no dejar, porque al final igual termina pasando que dejamos a las personas con discapacidad siempre para el final.
+[13:01] María Pía Jackson:  Gracias.
+[13:01] Speaker 4:  Sí, eso.
+[13:02] Consuelo Correa Barros:  Sí.
+[13:03] Speaker 4:  Eso lo, lo veremos. Lo tenía pensado de que podamos, eh, justamente, eh, pues hacer algún tipo de prototipo y demás, para que sepáis también, oye, cómo podéis llegar a un prototipo desde figma. Eso también lo aprenderemos.
+[13:15] Speaker 4:  Desde figma a llevar a un prototipo que puedan utilizar, por ejemplo, una persona con lector de pantalla. Porque los prototipos de figma, por ejemplo, una persona que es ciega y demás, no puede utilizar el prototipo de figma.
+[13:24] Speaker 4:  Es decir, no puedes hacer pruebas, no puedes saber, eh, realmente si es útil, si no es útil para la persona, no puedes. Eh, entonces, bueno, eso lo veremos cómo hacerlo, ¿vale?
+[13:33] Consuelo Correa Barros:  Sí. Con un prototipo de figma, actualmente lo único que uno puede testear es personas que tengan como baja visión y, eh, algún tipo como de déficit cognitivo, hiperactividad, autismo, etcétera. Pero deja afuera un montón de, de otras personas.
+[13:49] Consuelo Correa Barros:  Entonces, la gracia es probar algo que efectivamente funcione y no tenemos por qué llegar tan lejos, o sea, tan tarde, me refiero. Porque si no, termina pasando todo esto, que nosotros siempre decimos como: "Oye, hay que traer la accesibilidad al principio".
+[14:02] Consuelo Correa Barros:  Pero en el testeo, como no tenemos algo que esté codeado de verdad, suele no, no hacerse. Entonces, el plan es que efectivamente movamos todo hacia la izquierda, así se llama como esto, como shift left.
+[14:16] Consuelo Correa Barros:  Como, como tenemos un, un proceso que va hacia la derecha, lo que sigue y lo que sigue. El shift left lo que dice es como: "Tráelo antes a las etapas tempranas".
+[14:27] María Pía Jackson:  Gracias.
+[14:28] Consuelo Correa Barros:  De nada. Dígame, María Pía, o díganos, cuéntenos.
+[14:32] María Pía Jackson:  Les cuento. Mapi, me pueden decir, porque en María Pía me siento mi madre retándome.
+[14:38] Consuelo Correa Barros:  Oye, a mí me pasa igual, porque María Consuelo, tú sabes.
+[14:43] María Pía Jackson:  Claro, es como: "¿Qué te qué hiciste?". O sea, eh, no, me genera una duda, no tiene tanto que ver con esto, pero con lo que me mencionaste, que la persona que, que no escuchaba, eh, le había gustado el tema de tener un widget, que dijiste. Y a nosotras nos pasó, que les conté que hicimos un proyecto de tesis, etcétera, como solución.
+[15:06] María Pía Jackson:  Les conté la clase pasada de, de accesibilidad. Y una de nuestras, o sea, nuestra solución, como no llegaba código, fue generar este widget también para representar visualmente hasta dónde llegaba como la solución.
+[15:20] María Pía Jackson:  Y justo dentro de las entrevistas, entrevistamos expertos de una fundación que se llama Dalat, que no sé si la ubican, pero y una de las cosas nos dijo que muerte a los widgets, que son como la peor solución, etcétera, que es como un parche que le ponen a los sitios web, porque cada persona tiene como su propia herramienta, su computadora adaptada y que todo tiene que funcionar. Y te iba a preguntar cuál es su pensamiento de acuerdo a eso, porque, o sea, yo me quedé con ese
+[15:51] María Pía Jackson:  mindset, pero capaz que hay casos en donde sí.
+[15:55] Consuelo Correa Barros:  No, no, no, no.
+[15:57] María Pía Jackson:  Sí, bueno.
+[15:57] Consuelo Correa Barros:  Ah. No existe ese caso. O sea, de hecho, estamos súper en línea con la fundación Dalat.
+[16:03] María Pía Jackson:  Muerte a los widgets, sí.
+[16:04] Consuelo Correa Barros:  Hay una todos los profesionales de accesibilidad, o muchos, han firmado una carta donde se declara abiertamente que no estamos a favor de eso. ¿Por qué? Mira, la gran mayoría de los widgets es verdad que resuelven un poquito para ciertos grupos, ¿vale?
+[16:21] Consuelo Correa Barros:  Por ejemplo, si yo quizás soy una persona mayor, necesito la fuentecita un poco más grande, ¿vale? Pero qué pasa con el, con el que eso puede ser un script simplemente.
+[16:33] Consuelo Correa Barros:  Ahí está la carta, la carta abierta. Pero cuando tú usas un widget de estos, como hay un montón de empresas que lo hacen, pero en este momento se me olvidó la más famosa.
+[16:44] Consuelo Correa Barros:  Bueno, fíjate que si tú quisieras prender todas las cosas al mismo tiempo, no te deja, como que tienes que escoger una cosa o la otra. Entonces, desconoce el hecho de que en realidad las personas con discapacidad pueden tener más de una necesidad.
+[16:58] Consuelo Correa Barros:  Si yo necesito, y ahí la pregunta es, si yo necesito que de alguna manera identificar los enlaces y el widget lo que hace es marcarme con una rayita los enlaces, entonces no será lógico que a nivel de diseño y a nivel de código los enlaces tengan esa marca visual, que es un subrayado y nada más, de antes. O sea, como y si necesito mejorar el contraste, entonces no será necesario que a nivel de diseño el contraste, porque y fíjate que el gran problema de esos widgets es
+[17:28] Consuelo Correa Barros:  que ni siquiera son accesibles. Por lo general, están al final. O sea, como que si yo quisiera navegar a través del teclado, lo tomo de último y me pasé por 120 enlaces antes, o simplemente ni siquiera lo toma.
+[17:40] Consuelo Correa Barros:  O sea, es que ni siquiera son accesibles, no tienen nombre accesible, anda no, no funciona. Entonces, una persona con discapacidad que realmente requiere del uso de tecnología de apoyo no necesita eso. 
+[17:52] Consuelo Correa Barros: ¿A quién le podría llegar a servir? A una persona mayor o alguien que está empezando a vivir con discapacidad. Pero es que en ese caso lo que tenemos que hacer es pensar el diseño de antes de buena manera, porque el gran problema es que quienes usan widget, por lo general, después se desentienden del problema, entonces no están trabajando constantemente en resolver.
+[18:14] Consuelo Correa Barros:  Hay algunos que funcionan mejor que otros, los desarrollos propios. Hay algunos que en serio que tienen mejores soluciones.
+[18:21] Consuelo Correa Barros:  Eh, pero por normas generales, como evitémoslo a toda costa y hagamos las cosas bien, porque además, fíjate que si uno quiere mejorar, por ejemplo, aumentar el tamaño, igual te aumenta en un cierto número de puntos, pero no da cumplimiento al, al estándar. El estándar lo que dice es que hay que subir a un 200% y a un 400% sin pérdida de la información.
+[18:44] Consuelo Correa Barros:  Y este a veces te sube un punto o nada, a veces el contraste te lo deja peor. Y en general, anda no, no, no resuelven.
+[18:52] Consuelo Correa Barros:  Al final termina siendo como, yo diría, como no sé si un lavado de imagen, más bien diría que un desentendimiento del problema, porque la accesibilidad no se resuelve con un código mágico que yo voy, pego y después no tengo que hacer nada. La accesibilidad, como se construye todos los días, eh, como te diría que ese no es el camino.
+[19:13] Consuelo Correa Barros:  Cosas que yo sí haría, que me parecen bien, como un botoncito que aumente y achique la letra, porque quizás una persona mayor no tiene por qué saber que con la tecla comando más se agranda, con la tecla comando cero se ajusta. Y las personas que lo necesitan todos los días y que han vivido con discapacidad y que navegan con el teclado y qué sé yo, claro, saben.
+[19:35] Consuelo Correa Barros:  Una persona que necesita un magnificador va a saber configurar, pero quizás una persona mayor no tanto. Entonces, ahí empiezan como otras reglas.
+[19:43] Consuelo Correa Barros:  Fíjate que o fíjense todos, en realidad. La WCAG no dice que exista un tamaño mínimo de tipografía, dice que tiene que permitir que la tipografía aumente de tamaño sin pérdida de información y qué sé yo.
+[19:55] Consuelo Correa Barros:  Ya, pero aquellas personas que no saben usar la configuración para aumentar el tamaño nos van a agradecer que diseñemos con un mínimo de 16 píxeles, 16 píxeles. Entonces, ahí como que viene otra capa, como que una es el estándar y otra es cómo hacemos una experiencia que sea buena.
+[20:17] Consuelo Correa Barros:  Entonces, como podemos tomar la WCAG como una base, pero no es lo único que hay que hacer. Y luego vamos a aprender todas como las mejores prácticas, como esto que les digo yo, como no diseñemos textos menores a 16 píxeles.
+[20:33] Consuelo Correa Barros:  No sé si estás de acuerdo conmigo, Carlos.
+[20:35] Speaker 4:  Sí, sí, completamente. Te iba a decir que a lo mejor como todavía estamos, eh, sí, vamos grabando todavía los, los módulos, todavía estamos en fase de grabación todavía. No se han grabado, eh, todos los módulos.
+[20:45] Speaker 4:  Quizá podemos, eh, hacer o meter alguna lección específicamente de, de, de por qué los widgets, porque creo que es un tema interesante. Eh, de por qué los widgets.
+[20:56] Consuelo Correa Barros:  Exactamente.
+[20:57] Speaker 4:  Sí, y compararlo exactamente, justamente con lo que hemos dicho con la frecuencia del sistema operativo, distinguir, porque hay muchas veces que se confunde la gente, porque, por ejemplo, dentro de la norma europea, ¿vale? Es decir, la norma técnica europea, que es lo que hay que cumplir a nivel de legislación, eh, la Directiva Europea de Accesibilidad, ¿vale? Para productos digitales.
+[21:15] Speaker 4:  Eh, hay un apartado que es el apartado 11, el 11.7 concretamente, que habla de preferencias del usuario, ¿no? Entonces, eh, pues ahí mucha gente mezcla, ¿no?
+[21:24] Speaker 4:  De: "Oye, vale, pero si yo, por ejemplo, tengo que dar soporte a ciertas características, ¿por qué no me vale un widget, no?". Entonces, por ese tipo de cosas que, que la gente a veces se confunde y demás, con que tiene que haber un widget porque me obliga la legislación.
+[21:34] Speaker 4:  Y no te obliga a eso la legislación, ¿no? Entonces, creo que podría ser interesante con su si metemos ahí alguna de comparar y exactamente, y haciendo una comparación de por qué no es necesario.
+[21:43] Speaker 4:  O sea, justamente por lo que tú dices, que al final.
+[21:45] Consuelo Correa Barros:  Sí.
+[21:45] Speaker 4:  Es una cuestión de que ya los propios sistemas operativos, las propias herramientas nativamente tienen que tenerlo soportado. Principalmente porque justamente viene muy bien, muy bien lo que has dicho antes, Consuelo, de que, por ejemplo, una persona ciega, ¿vale? Eh, tiene su configuración de, de lector de pantalla.
+[21:59] Speaker 4:  Entonces, si tú, por ejemplo, a una persona ciega le pones otro lector de pantalla que no sabe usar, esa persona ciega tiene sigue teniendo barrera, aunque tenga un lector de pantalla disponible. Entonces, ¿qué quiero decir con esto?
+[22:09] Speaker 4:  Que si tú en una página web, por ejemplo, dentro del widget, que esto lo he visto mucho, le pones un lector de pantalla, ese lector de pantalla no lo va a utilizar en la vida, porque él ya tiene su propio lector de pantalla configurado con su necesidad. 
+[22:19] Speaker 4: ¿Para qué voy a, voy a utilizar el que me viene en una página web que aparte no me sirve para el resto de páginas web? No sé si me explico.
+[22:25] Consuelo Correa Barros:  Y, y.
+[22:25] Speaker 4:  Entonces, ese es el principal y fundamental problema.
+[22:28] Consuelo Correa Barros:  O sea, una person imagínense una persona que utiliza un lector de pantalla. Eh, yo uso VoiceOver. Lo uso desde que prendí el computador y llegué al software, hasta que encontré la página y navegué por la página.
+[22:40] Consuelo Correa Barros:  No es que lo empecé a usar solamente cuando encontré el contenido. Entonces, eso no tiene ningún sentido para nadie que realmente tenga discapacidad.
+[22:49] Consuelo Correa Barros:  Pero voy a hacer un pero. He encontrado un beneficio, no del widget en particular, sino que de estas cosas que te, que te ayudan a leer de manera lineal.
+[22:59] Consuelo Correa Barros:  Porque una persona que tiene, que, que utiliza tecnología asistiva y usa un lector de pantalla, tiene comandos asociados para ir navegando el contenido. Entonces, va a encontrar la estructura del sitio, que eso lo vamos a ver en los módulos más adelante, va a encontrar los encabezados y va a poder navegar de distintas formas a través del lector de pantalla.
+[23:18] Consuelo Correa Barros:  Versus este otro que te lee de forma lineal, y va y te lee de arriba hacia de arriba hacia abajo, de izquierda a derecha. Pero, por ejemplo, en los sitios, hay un sitio en Chile que es de leyes, recopila todas las leyes nacionales y tiene este sistema.
+[23:33] Consuelo Correa Barros:  Y ese sistema no compite ni pelea con el otro lector de pantalla, porque hay muchos widgets que utilizan los comandos que usan la tecnología asistiva. Entonces, me des es como que me desconfigurara mi propia tecnología asistiva.
+[23:48] Consuelo Correa Barros:  Pero hay unos que te leen y que no compiten y que no le molestan en nada a la persona con discapacidad, porque no está ahí para ti, pero que le ayudan a otras personas a, a consumir el contenido como si fuese un podcast. Entonces, ahí viene la pregunta, es como: "Bueno, entonces, ¿el contenido no debería presentarse en distintos formatos?".
+[24:07] Consuelo Correa Barros:  Pero ya esa es otra pregunta. Porque, porque no, no, no significa, claro, por ejemplo, en temas de educación.
+[24:17] Consuelo Correa Barros:  Ustedes mismos que ahora decían como: "Quiero mi PDF". Nosotros cuando, cuando creamos WCAG, todo esto es Carlos el que está detrás de toda la programación.
+[24:26] Consuelo Correa Barros:  Carlos pone los videos, pone las transcripciones, tú puedes descargar la transcripción y puedes no sé qué. Pero una alternativa al video es la transcripción.
+[24:35] Consuelo Correa Barros:  Otra alternativa al video sería descargarme el PDF. Y finalmente, ¿cómo proporcionamos alternativas distintas para que la persona consuma la que más le sirve?
+[24:47] Consuelo Correa Barros:  Y eso se vincula mucho con el diseño universal para el aprendizaje, el DUA. Eso están por ahí hay un curso también de diseño universal, por si es que quisieran pegarle una, una miradita.
+[25:00] Consuelo Correa Barros:  Sí. Bueno, todas esas conversaciones filosóficas se han dado cuenta que en realidad que la accesibilidad, por eso Carlos siempre decimos, como la accesibilidad se trata de tomar decisiones.
+[25:09] Consuelo Correa Barros:  Son decisiones, no son, no, no es algo que ustedes se aprendan de memoria. No es que yo vaya, lea el estándar y lo entienda todo y diga: "Ah, esto se traduce en diseño a esta solución o esta única solución".
+[25:22] Consuelo Correa Barros:  Hay mil alternativas distintas para resolver. Y una cosa es lo técnico y otra cosa es: "Bueno, pero cómo lo llevamos a que sea una experiencia memorable?".
+[25:31] Consuelo Correa Barros:  Y eso ya es otra, otra conversación.
+[25:38] Speaker 4:  ¿Tienen alguna dudita más?
+[25:41] Consuelo Correa Barros:  No.
+[25:43] Speaker 4:  Vale.
+[25:44] Consuelo Correa Barros:  Me voy al nos vamos al figma?
+[25:48] Speaker 4:  Venga. Pues nada, a, a darle caña a la clase.
+[25:52] Consuelo Correa Barros:  Ya, espérenme, eh, déjenme copiarme el Carlos rellena.
+[25:58] Consuelo Correa Barros:  Tengo que copiarme el link.
+[26:00] Speaker 4:  No, no, no sé, no sé con qué rellenar. Pues que lo, pues eso, conclusión que los overlays son muy malos.
+[26:09] Speaker 4:  Así que.
+[26:09] Consuelo Correa Barros:  No.
+[26:10] Carlos Garrido Marín:  No, pero, pero sí que es verdad que lo de la confusión y demás, y, y las características que pueden llegar a dar. Eh, también hay sistemas y cosas. No sé si, eh, habéis hecho, eh, dentro de los ejercicios prácticos, creo que era el de Samuel o el de Sam, no me acuerdo ahora qué nombre le puse, el de, el del lector de pantalla.
+[26:29] Carlos Garrido Marín:  No sé si lo habéis hecho. Eh, y había una opción, eh, que, bueno, que esto es interesante.
+[26:35] Carlos Garrido Marín:  Había una opción de leer en voz alta, que no sé si la había habilitado o no. Decía: "Abajo a la derecha había como una opción de leer en voz alta".
+[26:42] Carlos Garrido Marín:  Pues eso, eh, por ejemplo, ¿vale? Eso también es depende de cómo lo utilices.
+[26:46] Carlos Garrido Marín:  Tú puedes utilizar, eh, por ejemplo, podría, podríamos crear una voz sintética, ¿vale? Decir, eh, y directamente, por ejemplo, un lector de pantalla, pisarle lo que le está diciendo.
+[26:55] Carlos Garrido Marín:  Pero lo que se puede hacer también con API de a nivel de programación y demás, es utilizar la propia voz sintética que da el lector de pantalla. Entonces, por ejemplo, si ese ejercicio lo haces con un lector de pantalla, ¿vale?
+[27:05] Carlos Garrido Marín:  Normalmente va a utilizar la voz sintética y no se va a pisar la voz sintética con la del lector de pantalla, ¿vale? Es decir, va a ser la misma voz sintética, la misma voz que tiene configurada el usuario, ¿vale?
+[27:14] Carlos Garrido Marín:  Entonces, eso, por ejemplo, WCAG no lo hace. Lo que hacen normalmente es pisar la voz sintética y poner una voz sintética diferente a la que tiene el usuario, ¿vale?
+[27:21] Carlos Garrido Marín:  Que eso también es un, lo que comentábamos, ¿no? Un poco de, de la preferencia y, y demás de, del tema del uso.
+[27:27] Carlos Garrido Marín:  Y ya está, ya he hecho el relleno, Consu.
+[27:30] Consuelo Correa Barros:  Está muy bien, pero es que ahora que hablaste del lector de pantalla me acordé de un, un datazo, que yo siempre trato de, de dejarlo así superemple. Cuando nosotros diseñamos y escribimos directamente el contenido en vo en, en mayúscula, directo, no es que le pongamos como el estilo para que cambie a mayúscula. Muchas veces lo que hace el lector de pantalla es interpretar como un ana-anacrónomo, ana-anacrónimo, no, como un, una abreviatura.
+[27:55] Consuelo Correa Barros:  Así que me estás. Entonces, por ejemplo, el "about us" en, en Holanda, en Estados Unidos, si yo escribo eso en mayúscula, la US significa United States.
+[28:05] Consuelo Correa Barros:  Entonces, lo que lee es "about United States". Entonces, vamos a aprender todas esas cosillas, porque no existe, en el estándar no dice: "No escribas directamente en el código en mayúscula, porque el lector de pantalla va a empezar a deletrear o va a buscar a qué se a qué corresponde ese anacrón-anacrónimo".
+[28:22] Consuelo Correa Barros:  Siempre se me olvida la palabra exacta, ¿cómo se decía?
+[28:26] Speaker 4:  Será acro-acrónimo, ¿no?
+[28:27] Consuelo Correa Barros:  Acrónimo. Eso, gracias, gracias. Acrónimo.
+[28:30] Consuelo Correa Barros:  A qué corresponde un acrónimo. Gracias, Carlos.
+[28:33] Consuelo Correa Barros:  Bueno, entonces me quedé tupidísima ahí. Gracias, Marta, también.
+[28:37] Consuelo Correa Barros:  Ya. Acrónimo.
+[28:39] Consuelo Correa Barros:  Entonces, lo que hay que hacer es que uno lo, lo escribe bien, como que, como corresponde, y después con los estilos lo podemos pasar a mayúscula. Eso va a resolver un problema para el lector de pantalla, pero va a generar otro problema para las personas disléxicas.
+[28:53] Consuelo Correa Barros:  Entonces, eh, porque las personas disléxicas tienden a tener más problemas cuando todos los textos están en mayúscula. Entonces, todas esas cosas son detalles que vamos a ir aprendiendo en, en, en el camino, ¿vale?
+[29:05] Consuelo Correa Barros:  De momento vamos a ir como de, de menos a más. Entonces, ahora sí.
+[29:10] Consuelo Correa Barros:  Fíjense que les pasé en el chat una URL, que es esto. El plan es que hoy día cada quien al menos empiece a desarrollar el brief de su proyecto.
+[29:22] Consuelo Correa Barros:  Entonces, yo les dejé aquí un ejemplo del brief, ya lo vamos a revisar. Y acá les dejé una ficha para que ustedes se la copien y se la peguen en un proyecto donde van a ir trabajando, porque toda la documentación del curso va a estar en un ficher, ¿vale?
+[29:39] Consuelo Correa Barros:  Entonces, ustedes pueden copiar, pegar o trabajarlo aquí mismo si ustedes quieren, pero el problema de trabajarlo acá es que alguien se los podría borrar. Entonces, yo recomendaría copiar, pegar, ¿vale?
+[29:48] Carlos Garrido Marín:  Sí. Ahí solo por, por hacer hincapié, lo suyo es eso, que hagáis una copia del figma, ¿vale? Es decir, que bueno, que os creéis un figma nuevo y demás, y vayáis copiando, y vayáis copiando esto, porque al final la entrega, pues será: "Oye, para revisar vuestros proyectos", nos pasaréis básicamente la URL del figma, que se hará a través, bueno, ya lo explicaremos en el Discord y demás, cómo nos la podéis entregar, ¿vale?
+[30:08] Carlos Garrido Marín:  No os preocupéis. Pero bueno, para ir trabajando, pues eso, crearos una copia en figma e ir trabajando, eh, sobre esa, ¿vale?
+[30:16] Consuelo Correa Barros:  Sí. Justo hay una pregunta de Juli.
+[30:20] Carlos Garrido Marín:  No, no, no, yo estoy igual que Paula, pedí acceso al, al documento.
+[30:25] Consuelo Correa Barros:  Sí, yo también. A ver.
+[30:31] Consuelo Correa Barros:  Denme un segundo. Pero y qué raro, porque sale que cualquiera puede verlo y copiarlo.
+[30:36] Consuelo Correa Barros:  O sea, de hecho, cualquiera puede editarlo.
+[30:41] Carlos Garrido Marín:  Ya.
+[30:41] Speaker 4:  Vale, probar ahora. Eh, justo acabo de, de dar acceso a todo el mundo.
+[30:46] Consuelo Correa Barros:  Ah, listo, por eso. Ya, muy bien hecho. Bien hecho, Carlos.
+[30:50] Consuelo Correa Barros:  Ya, excelente. Ahora veo las manitos.
+[30:53] Consuelo Correa Barros:  Muy bien. Entonces, ¿qué van a tener?
+[30:56] Consuelo Correa Barros:  Yo igual, obviamente, mi mente está en discurso como, como hablo, ¿vale? Entonces, quizás no lo hice en el mejor orden.
+[31:02] Consuelo Correa Barros:  Dejé las instrucciones en el centro, el ejemplo a la izquierda. Bueno, partan por el ejemplo.
+[31:09] Consuelo Correa Barros:  O sea, perdón, por la instrucción. Entonces, ¿qué es lo que vamos a hacer?
+[31:13] Consuelo Correa Barros:  Vamos a rellenar esta ficha, ¿ya? Eso es lo que ustedes deberían avanzar del módulo uno.
+[31:18] Consuelo Correa Barros:  Porque acuérdense que cada módulo va a estar vinculado con un proyecto individual. Entonces, lo que les dice Carlos: "Copiense esto, ármense un figma donde van a trabajar absolutamente todo el proyecto".
+[31:30] Consuelo Correa Barros:  Y acá viene como lo que tienen que ir rellenando. Obviamente, nosotros necesitamos saber de quién es el proyecto, así es que pusimos como nombre del alumno, nombre del proyecto, da lo mismo que el nombre cambie después, ¿vale?
+[31:40] Consuelo Correa Barros:  Entonces, van a tener que escribir de qué va su producto o servicio, cuál es la necesidad, cuál es ese flujo mínimo que van a desarrollar, dónde parte el flujo, dónde termina el flujo, el contexto de uso, las personas usuarias, la tarea principal, etcétera, etcétera. Entonces, como sabemos que esto no es tan autoexplicativo, dejamos hacia la izquierda las instrucciones.
+[32:02] Consuelo Correa Barros:  Entonces, ¿qué es lo que tienen que hacer? Se acuerdan que les habíamos dicho que tenían que definir un pequeño flujo que es sobre el que vamos a trabajar.
+[32:12] Consuelo Correa Barros:  Ese flujo puede ser de un producto que ya exista y ustedes quieran rediseñar, o algo completamente nuevo. No recomendamos que sea algo de la empresa, de sus trabajos, por los temas de confidencialidad y tal.
+[32:26] Consuelo Correa Barros:  Eh, seguramente no van a tener permisos. Entonces, para evitarse el problema, sugerimos que en realidad que lo hagan sobre temas que sean más bien ficticios o de intereses personales, ¿vale?
+[32:40] Consuelo Correa Barros:  Entonces, elijan un producto o un servicio concreto y determinen un flujo acotado. Pero entonces, ¿qué es un flujo acotado?
+[32:50] Consuelo Correa Barros:  Un flujo acotado sería: añadir un producto al carrito, hacer una búsqueda. Ya como algo como muy concreto, porque la accesibilidad sí es en una pantalla, vale, pero los problemas normalmente se dan en el flujo.
+[33:07] Consuelo Correa Barros:  Por ejemplo, estoy llenando un formulario de contacto y el formulario de contacto no entrega los mensajes de error o no avisa si se envió o no se envió. 
+[33:16] Consuelo Correa Barros: ¿Cómo? Eso sería el flujo. El flujo de un formulario de contacto es: entro al formulario de contacto, está vacío, lo lleno y espero la confirmación.
+[33:24] Consuelo Correa Barros:  Entre medio va a aparecer todo lo demás. Entonces, ese flujo puede tener dos pantallas o puede llegar a tener hasta cuatro pantallas, pero no más que eso, ¿ya?
+[33:35] Consuelo Correa Barros:  Como llévenlo a algo que sea concreto y que puedan manejar para que no se les salga de las manos el, el proyecto, ¿vale? Interrúmpanme cuando quieran si es que algo no se entiende.
+[33:46] Consuelo Correa Barros:  Entonces, tienen que describir la tarea. Yo no sé si ustedes trabajan en agilidad, pero en agilidad se trabaja como siempre, como desde el, desde la vista del usuario.
+[33:57] Consuelo Correa Barros:  Entonces, acá vamos a asumir muchas cosas, ¿vale? Como no hay tiempo, porque es un curso de enfocado como al diseño, pero no a investigación, no estamos construyendo arquetipos, no estamos construyendo journey, no estamos construyendo en realidad la parte que es esencial del diseño, y vamos a asumir que todo eso ya se hizo, ¿vale?
+[34:20] Consuelo Correa Barros:  Entonces, como los que normalmente serían supuestos, acá vamos a darlos por hecho, porque lo que buscamos es aprender a diseñar componentes. Entonces, sí les dejé algunas cosas.
+[34:35] Consuelo Correa Barros:  Existen como diferencias entre lo que sabemos y lo que suponemos. Entonces, por ejemplo, nosotros sabemos que las personas con, eh, con discapacidad necesitan de accesibilidad, lo sabemos.
+[34:49] Consuelo Correa Barros:  Supo y, y un supuesto podría ser como: "Suponemos que necesitan un widget de accesibilidad". Ya, eso sería, eso es un supuesto, ¿vale?
+[34:57] Consuelo Correa Barros:  Porque necesita ser un poquito más desafiado. Y acá lo que les pusimos como que no inventaran necesidades de accesibilidad, o sea, básense únicamente en lo que ustedes conocen y traten de mirarlo como desde una perspectiva más amplia, no solamente un grupo de discapacidad.
+[35:14] Consuelo Correa Barros:  Y aquí les fui dejando así como: "Oye, el producto o servicio", y con una explicación. Entonces, describe brevemente qué es, para qué sirve, si se trata de un proyecto nuevo, de una mejora a un producto existente.
+[35:24] Consuelo Correa Barros:  Entonces, dice: "Si revisaste productos o servicios similares, puedes mencionarlos como referentes". Necesidad. 
+[35:30] Consuelo Correa Barros: ¿Qué necesidad busca resolver? Y ahí viene también, de nuevo, como que: ¿qué es lo que busca la persona? No tiene que ser algo particularmente largo.
+[35:37] Consuelo Correa Barros:  Esto lo único que hace es acotar el producto o el proyecto a algo que realmente pueda manejar y que nosotros con Carlos rápidamente le podamos decir: "¿Sabes qué? Este proyecto está muy grande, acotémoslo a esto", o "Más bien está muy chico, eh, incluyamos esto otro".
+[35:55] Consuelo Correa Barros:  Nada más, ¿vale? Entonces, el plan es que revisen cuál va a ser el flujo.
+[35:59] Consuelo Correa Barros:  Y cuando dice esto de como inicio y final, es como: ¿dónde comienza el flujo y dónde termina el flujo? Porque no necesariamente va a partir en la página de inicio.
+[36:08] Consuelo Correa Barros:  Puede partir desde la página de un producto, por ejemplo, si es que fuese un producto que quieran añadir al carrito. Eh, contexto de uso, ahí está la explicación.
+[36:17] Consuelo Correa Barros:  Lo mismo con las personas usuarias, las tareas principales. Viene todo como con ejemplito y que si las acciones necesarias.
+[36:24] Consuelo Correa Barros:  Ahí veo a Miranda que se mueve muy bien. Entonces, por ejemplo, buscar, seleccionar, ingresar información, abrir, cerrar.
+[36:30] Consuelo Correa Barros:  Todo eso como es parte de esto. Por ejemplo, ¿qué podría ser un flujo?
+[36:35] Consuelo Correa Barros:  Entrar al, al home, usar el menú de navegación, eh, conocer un, un, algún elemento que es desplegable e ir a la página interior. Entonces, básicamente van a estar diseñando como el home con el menú sin desplegar, el menú desplegado y la página interior, cortito.
+[36:52] Consuelo Correa Barros:  No necesita ser mucho más que eso. La dificultad que le metan tiene que ver en el fondo con la dificultad de lo que ustedes quieran llegar a, a, a aprender.
+[37:02] Consuelo Correa Barros:  Acuérdense que, eh, por ejemplo, eh, un tab tiene mayor complejidad que solamente un botón. Entonces, igualmente, además de escoger el flujo, van a tener que tener dentro de esos diseños elementos que sean simples y elementos que sean complejos para que los puedan componentizar y, y documentar, ¿vale?
+[37:25] Consuelo Correa Barros:  Entonces, y están como las posibles barreras. Y yo aquí hacia la izquierda dejé un ejemplo muy simple, como que no esperamos encontrar más ni más ni menos que esto.
+[37:35] Consuelo Correa Barros:  Entonces, yo puse como: "Este es el proyecto con el que vamos a trabajar durante, durante el contenido del curso", que es el del mercado de artistas de Alemania. Ahí puse mi nombre con su correo.
+[37:47] Consuelo Correa Barros:  Y el proyecto se dice: "Una plataforma digital para descubrir y comprar obras de arte". El proyecto se diseñó desde cero.
+[37:54] Consuelo Correa Barros:  Como referentes iniciales tenía estos tres, ¿vale? Estos referentes permitieron conocer funcionalidades y patrones habituales de este tipo de plataformas.
+[38:02] Consuelo Correa Barros:  La accesibilidad fue definida como un requisito del proyecto. Esto, esto es 100% real.
+[38:05] Consuelo Correa Barros:  El cliente, como está en Alemania, tiene que cumplir con las normativas de ellos. 
+[38:09] Consuelo Correa Barros: ¿Y cuál era la necesidad? Crear un espacio digital que permite a las personas descubrir obras de arte y seleccionar aquellas que le interesan para comprarlas. El proyecto debe permitir realizar esta tarea de manera accesible, considerando desde el inicio diferentes capacidades, formas de interacción y contextos de uso.
+[38:23] Consuelo Correa Barros:  No dice que le permita a las personas con discapacidad comprar obras de arte. Le tiene que permitir a todo el mundo, con discapacidad, sin discapacidad.
+[38:31] Consuelo Correa Barros:  La accesibilidad es parte del, del proyecto, ¿vale? Y el flujo con el que vamos a trabajar es: encontrar una obra, revisar la información y añadir al carrito.
+[38:41] Consuelo Correa Barros:  Yo le puse un poquito más. Si ustedes me dicen encontrar la obra y revisar la información, igual es un flujo, ¿ya?
+[38:48] Consuelo Correa Barros:  Pero esperamos que sea un poquito más, más que eso. Entonces, ahí está el inicio, está el final, contexto de uso.
+[38:56] Consuelo Correa Barros:  La plataforma puede utilizarse desde un computador o un teléfono, en diferentes condiciones de iluminación, con diferentes tamaños de pantalla, mediante mouse, teclado, pantalla táctil y otras formas de interacción con tecnología de apoyo, ¿vale? Y, bueno, viene como la definición de personas usuarias.
+[39:12] Consuelo Correa Barros:  Aquí lo importante es la tarea principal. La persona necesita encontrar una obra que le interese, añadirla al carrito.
+[39:17] Consuelo Correa Barros:  Para hacerlo, debe poder explorar y buscar obras, identificar la obra, acceder a la información, comprender las características principales, decidir si le interesa, añadirla al carrito, identificar que la obra fue añadida al carrito, por ejemplo. Ese punto en particular es superimportante porque nosotros les vamos a enseñar a que cuando algo cambia visualmente un estado, por ejemplo, cada vez que ustedes añaden un producto a un carrito, el carrito automáticamente le queda un numerito: uno, dos, tres.
+[39:45] Consuelo Correa Barros:  Entonces, ustedes visualmente saben que la que, que el producto se añadió al carro. Pero, ¿qué pasa cuando yo uso un lector de pantalla?
+[39:54] Consuelo Correa Barros:  Ahí aparecen unas alertas en vivo que notifican esos cambios. Entonces, eh, por eso es que yo puse ahí a propósito como identificar que la obra fue, porque eso quiere decir que la tengo que ser capaz de identificar visualmente y a través de otras formas.
+[40:10] Consuelo Correa Barros:  Ahí entra el mundo de área, que también vamos a ver algunas cositas cortitas. Y después yo puse como la información necesaria.
+[40:18] Consuelo Correa Barros:  Esto es como todo lo que tengo que considerar para mi diseño. Tiene que estar la imagen de la obra, el título, el nombre del artista, el precio, la información básica de la obra.
+[40:26] Consuelo Correa Barros:  Esto es un brief como cualquier otro, solo que incorpora temas vinculados a accesibilidad. Las acciones necesarias y las posibles barreras.
+[40:33] Consuelo Correa Barros:  Entonces, aquí, por ejemplo, las imágenes de la obra no tienen un sexo alternativo adecuado. La información depende únicamente del color.
+[40:41] Consuelo Correa Barros:  El contraste dificulta leer textos o identificar controles. No es posible navegar, eh, a través del teclado.
+[40:47] Consuelo Correa Barros:  El foco no es visible. Estos son posibles barreras, posibles.
+[40:53] Consuelo Correa Barros:  Si no identifican ninguna, no pasa nada, lo vamos a ir llenando en el carrito. Entonces, el plan es que ahora, en este ratito, que es un poquito más de una hora, que vayamos rellenando.
+[41:05] Consuelo Correa Barros:  Pero más importante que rellenar es que vayamos hablando de los proyectos para ver como en qué va a estar cada uno, si es que ya definieron o no, y ayudar como a tomar decisiones, ¿vale?
+[41:19] Consuelo Correa Barros:  Entonces, no sé si alguien ya sabe sobre qué quiere trabajar.
+[41:24] Carlos Garrido Marín:  Sí. Habían comentado dos en el bueno, Marta había comentado por el chat, eh, reservar un viaje en una web tipo Booking, eh, que si serviría, por ejemplo.
+[41:34] Consuelo Correa Barros:  Mm-hmm. Claro que sí. Sí.
+[41:38] Consuelo Correa Barros:  Lo importante es que no tiene que ser un flujo pensado específicamente para personas con discapacidad.
+[41:43] María Pía Jackson:  Mm-hmm.
+[41:44] Consuelo Correa Barros:  Eh, que a veces me pasa, por ejemplo, que con los alumnos del diplomado a veces quieren crear experiencias específicas para personas con discapacidad. Eh, que puede ser, por ejemplo, eh, ¿te acuerdas del chico que creó Carlos la aplicación para los museos? Que para transmitir en voz la, la experiencia.
+[42:07] Consuelo Correa Barros:  Claro, es supercool, pero no tiene por qué ser eso. O sea, como puede ser básicamente cualquier cosa, ¿vale?
+[42:15] Consuelo Correa Barros:  Eh, a veces nosotros recomendamos como que sea un servicio que sea esencial para cualquier persona, por ejemplo, pagar una cuenta de teléfono. Porque al final, donde la accesibilidad donde más se implementa con, con, con el mayor de los cuidados es cuando en realidad la persona no tiene una alternativa.
+[42:34] Consuelo Correa Barros:  Tú tienes tu que pagar la luz, tienes que pagar el agua, tienes que pagar el teléfono. No hay ninguna posibilidad de, de vivir en este mundo sin agua, de vivir sin luz.
+[42:46] Consuelo Correa Barros:  Entonces, porque a veces los, los, los las empresas te dicen: "Ah, es que yo no tengo clientes con discapacidad". Ya, pero hay algunas organizaciones que ni siquiera te pueden o, o empresas que no te pueden decir eso porque es lo único que existe, es la única alternativa.
+[42:59] Consuelo Correa Barros:  Entonces, pero Booking puede ser. Y aquí que dice: "Yo estuve bajando un flujo que elegí por si hay tiempo para consultarle a ver si está okay".
+[43:10] Consuelo Correa Barros:  Sí, pues obvio que hay tiempo, Gaby. Este es, este es el tiempo.
+[43:14] Speaker 4:  ¿Qué tal? ¿Cómo andan? Eh, yo bajé la semana pasada cuando dieron esta consigna de lo que teníamos que elegir, automáticamente se me vino a la mente algo que suelo usar, porque mi mamá es una persona grande, ya tiene 71 años y es, eh, tiene el certificado único de discapacidad, que es el que se usa acá en Argentina.
+[43:35] Speaker 4:  Eh, y dentro de todos esos beneficios que te da ese certificado, uno es el tema del transporte. Ellos tienen, eh, transporte gratis, tanto de corta, mediana y larga distancia.
+[43:45] Speaker 4:  Hay una página que es la de trenes argentinos. Eh, nosotros tenemos trenes de larga distancia también.
+[43:52] Speaker 4:  Y cada vez que yo le tengo que sacar un pasaje a mi mamá, es una frustración tremenda. Y más allá de que me da a mí bronca, es esta, esta, eh, es la página que sí o sí tiene que usar gente que tiene una discapacidad y está llena de fricciones, no solamente, eh, estuve probando con, eh, el, eh, teclado, el voiceover y demás, y personas que necesitan solamente el teclado y el voiceover es directamente no pueden hacer la compra.
+[44:24] Speaker 4:  Eh, y es justamente el flujo. No sé si puedo compartir pantalla un segundo para que vean.
+[44:28] Consuelo Correa Barros:  Sí. Te voy a decir lo mismo.
+[44:31] Speaker 4:  Sí, sí, puedo compartir bien. Eh, ¿dónde tengo el figma? Acá.
+[44:38] Speaker 4:  Eh, no.
+[44:38] Consuelo Correa Barros:  Es traten de bus traten de buscar algo, independiente de que igualmente van a tener que diseñar la experiencia y documentar todo, traten de buscar algo donde el problema no sea únicamente color.
+[44:49] Speaker 4:  No, no. Es que esto hay muchas pantallas acá, pero por cosas que me surgieron en el camino. No es que sea largo el flujo, porque la realidad es que vos tenés que poner tenés que elegir, eh, el destino, obviamente, algunos datos básicos acá, y después es justamente el elegir la fecha, eh, después elegir el tema del asiento, completar unos datos, y ahí se termina la compra.
+[45:13] Speaker 4:  El tema es la.
+[45:14] Consuelo Correa Barros:  Perdón, Gaby. Sí. Gaby, devuélvete, devuélvete al, al calendario.
+[45:19] Consuelo Correa Barros:  A ese calendario.
+[45:20] Speaker 4:  Bueno, esto yo lo hice acá aparte porque tiene unas cosas tremendas este calendario. Este calendario no es accesible por teclado, no se percibe cuando está, eh, deshabilitado. Tenés una trampa de teclado también.
+[45:35] Speaker 4:  Eh, en uno de los recursos que vos, eh, compartiste, lo estuve viendo el fin de semana, y hay un ejemplo específico del calendario de cómo hacerlo mejor. Fui a probarlo específicamente por eso, porque lo había visto después.
+[45:47] Speaker 4:  Y no, no es muy raro esto. O sea, realmente funciona muy mal.
+[45:53] Speaker 4:  Eh, me pareció también un buen ejemplo para, para justamente poder hacerlo acá, más allá de, del flujo, de que tiene muchas fricciones.
+[46:01] Consuelo Correa Barros:  Es que.
+[46:01] Speaker 4:  Tiene.
+[46:02] Consuelo Correa Barros:  Sí. Te puedo hacer una recomendación, Gaby? No hay ninguna empresa de transporte que venda para el futuro, tan o sea, un futuro tan a largo plazo.
+[46:10] Consuelo Correa Barros:  Fíjate que si tú quieres comprar un vuelo para dos años más, el sistema no te deja. El sistema te deja comprar para el para lo que de aquí a un año más, ¿cómo vas a comprar en el 20? 
+[46:19] Consuelo Correa Barros: ¿Cómo llegaste al, al 2050, Gaby?
+[46:22] Speaker 4:  Bueno, es posible. Es posible llegar con tres clics, es posible llegar. Además de que, eh, lo podés hacer, que también me pareció algo demasiado confuso.
+[46:33] Speaker 4:  También, eh, podés elegir fechas que están totalmente deshabilitadas y que no tenés ningún, eh, ya no tenés cupo dentro del tren para, para poder elegir. Entonces, no tenés una recuperación.
+[46:46] Speaker 4:  Podés avanzar en el flujo hasta la mitad del flujo de la compra con un mínimo mensaje acá en que te dice que para continuar la compra tenés que ingresar y registrarte. Si ponés continuar, vas a registrarte y perdés toda la información, eh, que vos ya habías ingresado y que te costó ingresar encima.
+[47:07] Speaker 4:  Y no solo más allá de, de estas fricciones, también en avanzar tiene mensajes muy confusos. Eh, como por ejemplo, y este último ejemplo, si quieren, eh, acá hay un hay algo en donde vos podés entrar.
+[47:23] Speaker 4:  Eh, bueno, tengo otra persona también que detesta esta web. Eh, acá dice: "Información importante CUD", que es justamente el certificado único de discapacidad.
+[47:32] Speaker 4:  Este, eh, botón que parece un link, eh, te abre un modal y es totalmente inaccesible por teclado. Eh, no podés llegar por teclado a esto.
+[47:43] Speaker 4:  Vas al formulario. Ahora después les voy a compartir el link y tengan su propia aventura dentro de esta página.
+[47:49] Consuelo Correa Barros:  Espérate, que el captcha tampoco es accesible, porque mira, existe un criterio de accesibilidad que es el primero, el primero, el 1.1.1, textos alternativos. Y se refiere a los textos alternativos en las imágenes y te dice cuáles son las excepciones. Igual vamos a ver todas las excepciones por si acaso.
+[48:07] Consuelo Correa Barros:  Y viene la excepción del captcha. Fíjense que internamente, y esto es chisme, eh, en el W3C está este grupito que son los que hacen la, la los criterios, ¿cierto?
+[48:20] Consuelo Correa Barros:  El estándar. Y dentro de lo de, de ese grupito de la WISP se querían eliminar los captchas, pero ustedes saben que las empresas pueden pagar por tener un asiento en el W3C.
+[48:30] Consuelo Correa Barros:  Si no lo saben, ahora lo saben. Entonces, Google, que son los dueños de los captchas, presionaron y en vez de eliminarse los captchas, lo que se hizo fue decir: "Los captchas tienen que tener una alternativa".
+[48:43] Consuelo Correa Barros:  Entonces, si es visual, tengo que tener una, una alternativa, por ejemplo, auditiva. Y este, yo no sé si es un uno, una L, no sé qué es.
+[48:54] Consuelo Correa Barros:  Lo más probable es que la gente se va a equivocar.
+[48:57] Speaker 4:  Sí.
+[48:58] Consuelo Correa Barros:  Entonces, de ahí para adelante tenés problemas. Cachai desde el captcha para o sea, es que está fuertísimo esto.
+[49:04] Speaker 4:  No, y además que si ingresás mal el captcha también te borra todo lo que tenías en el formulario. O sea, si ya avanzaste en este formulario, o sea, te, te lo elimina. Ni hablar de los problemas de contraste, que eso es otro capítulo, ¿no?
+[49:18] Speaker 4:  Porque en todos los botones, todos los botones de cancelar no pasan contraste, parecen totalmente deshabilitados. Muchos botones parecen deshabilitados y no lo son.
+[49:27] Speaker 4:  Sí, totalmente. Y lo que por qué volvía a esto de que es información importante para una persona que tiene el certificado de discapacidad, esto abre esperen que lo porque hay dos flujos encima.
+[49:39] Speaker 4:  La persona que tiene el certificado único y el que no, te dice este mensaje que además de que cuesta un poco interpretarlo, capaz que, eh, eh, la experiencia es totalmente distinta. Acá lo que te dice, y es un dato, acá que voy a poner en paréntesis, acá en Argentina las personas pueden sacar un pasaje gratis, la persona con discapacidad, y también un acompañante.
+[50:05] Speaker 4:  El acompañante también lo tiene gratis, pero también, obviamente, hay que hacer el flujo para reservarle el asiento y demás. Acá lo que dice es: si tenés CUD y viajás con alguien que no lo tiene, tenés que adquirir tus pasajes en operaciones separadas.
+[50:18] Speaker 4:  O sea, ¿qué uno interpreta? 
+[50:20] Speaker 4: ¿Interpreta que es el acompañante? ¿Interpreta que no es el acompañante? Es como ya es medio confuso, pero supongámosle que interpreto que la persona sí es el acompañante, porque el acompañante no tiene un CUD.
+[50:33] Speaker 4:  Efectivamente, el acompañante sí se saca en el mismo flujo, pero eso lo descubrís mucho después en el, en el flujo.
+[50:40] Consuelo Correa Barros:  Después de que lo pagaste una vez, digamos.
+[50:42] Speaker 4:  De la claro. Imagínate si primero sacaste el del acompañante, lo pagaste, y después hiciste el de la persona que tiene CUD y te diste cuenta que en realidad lo podías sacar ahí, no lo tenías que pagar. Eh, muy raro.
+[50:57] Speaker 4:  Hay muchas cosas. Bueno, después, obviamente, el Wave salta por, por cosas muy raras.
+[51:03] Speaker 4:  La navegación por teclado, toda esta parte es interactiva y se la pasa. Nada, no es un flujo largo, pero sí me parece que tiene muchos problemas.
+[51:12] Speaker 4:  A mí, sinceramente, me encantaría hacer esto. Eh, pero bueno, quería saber, eh, si ustedes.
+[51:18] Consuelo Correa Barros:  Gaby, está buenísimo, pero acotémoslo un poquito, porque si no te voy a volver loca. O sea, mira, ¿qué te recomendaría yo? Al menos, al menos lo que tiene que ver con la documentación, porque si agarras toda esa cantidad de pantalla, entre marcar los headers, que marcarle el orden del teclado, que marcar no sé qué y bla, bla, bla, te vaya a pasar, no sé, harto rato.
+[51:39] Consuelo Correa Barros:  Entonces, está buenísimo. Y quizás si quisieras diseñar ese flujo completo, después podríamos decir como: "Ya, pero para la documentación específica de HANOFF limítalo a un poquito".
+[51:52] Consuelo Correa Barros:  Es por un tema de tiempo, porque si no, no vas a llegar.
+[51:55] Speaker 4:  Perfecto.
+[51:55] Consuelo Correa Barros:  Porque, o sea, piensa que tenemos diez semanas donde tenemos que ir aprendiendo lo que hay que armar. O sea, documentación y todo lo demás, pese a que nosotros la documentación del sistema de diseño la acotamos un montón. O sea, como un componente simple, un componente complejo, no sé qué.
+[52:13] Consuelo Correa Barros:  Pero aquí tenés un montón de pantallas.
+[52:15] Speaker 4:  Sí, sí. Quizás lo que podría, quizás lo que podría hacer para esto yo después puedo hacer el otro proyecto, es la parte en elegir una fecha, eh, que esto también está lleno de problemas. Es este formulario con este widget de, de fecha, y no sé si quizás el registro y no hacer el de la compra.
+[52:32] Consuelo Correa Barros:  Pero sabes qué, Gaby? Como que claro, quizás llegar justo antes de la compra, porque.
+[52:36] Speaker 4:  Okay.
+[52:37] Consuelo Correa Barros:  Yo hace poco, eh, bueno, Carlos sabe, a mí me encanta ir a la playa, y a veces como que voy al por el día a la playa. Eh, porque tengo la suerte que mi socia vive allá. Entonces, me ve, me pasa el departamento y dice: "Bueno".
+[52:51] Consuelo Correa Barros:  La otra vez compré, eh, ticket, pero ida y vuelta. Nunca lo había hecho.
+[52:56] Consuelo Correa Barros:  Siempre había comprado solo de ida. Entonces, no me había preocupado de si había registrado realmente la compra en la fecha y la hora que yo lo estaba pidiendo.
+[53:05] Consuelo Correa Barros:  Y además estaba comprando para mí y dos amigos más que trabajan conmigo. Eh, entonces, en el, en la parte del flujo, cuando llegues como al final, en alguna parte debería decir: "Estás seleccionando el asiento 12, ventana, para el día tanto, la hora tanto, y tu acompañante tanto", por ejemplo.
+[53:26] Consuelo Correa Barros:  Porque es que a veces uno llega a la compra y tenés que confiar en que los datos donde en que lo ingresaste bien. Pero si más encima, en este en particular, tú puedes ingresar para el 2050 y más adelante aún, tal vez me equivoqué y no me y, y no tengo chance de darme cuenta que me equivoqué con la fecha.
+[53:45] Consuelo Correa Barros:  Eh, entonces, sí, yo diseñaría como que en, eh, como en la parte del flujo esto como de estar re como decirle al usuario: "Oye, esta es la fecha que estás comprando".
+[53:58] Speaker 4:  Okay. Valor.
+[54:00] Consuelo Correa Barros:  Sí. Ya, aquí tenemos una oye, hay una pregunta buenísima aquí. Carlos me mira con no sé si me está mirando a mí con cara de confusión o, o está ahí haciendo otra cosa.
+[54:07] Carlos Garrido Marín:  No, no, no. Estoy, estoy leyendo. Estoy es que no tengo las gafas puestas, entonces no tengo la otra pantalla.
+[54:12] Carlos Garrido Marín:  Estoy ahí así, mm. Pero no, sí, te estoy enseñando a leerla.
+[54:16] Carlos Garrido Marín:  Y comenta que las normas de accesibilidad para las apps de escritorio son las mismas que para cualquier web. Hablo de apps tipo Photoshop o Visual Studio Code o algo así.
+[54:26] Consuelo Correa Barros:  No, no. Existen estándares que son distintos. Creo que en el curso, en el módulo dos, hablamos de eso, ¿no?
+[54:35] Consuelo Correa Barros:  Sí, no lo han visto todavía.
+[54:37] Carlos Garrido Marín:  De qué se habla? ¿Cuál, cuáles son la?
+[54:39] Consuelo Correa Barros:  Sí.
+[54:40] Carlos Garrido Marín:  Normalmente.
+[54:41] Consuelo Correa Barros:  Va a aparte. UA y ATAC. Está preguntando por eso.
+[54:44] Consuelo Correa Barros:  Sí.
+[54:45] Carlos Garrido Marín:  Sí. Eh, tenéis aparte del re bueno, a ver, concretamente eso no, pero no sé si habéis visto el apartado de recursos de, de, de bueno, hay un apartado de recursos, ¿vale? Donde hay un apartado de le de leyes y normativas.
+[54:57] Carlos Garrido Marín:  Lo voy a pasar por aquí, por si tenéis curiosidad más a tema normativo, legislativo y demás. Tenéis por aquí un todo un apartado.
+[55:04] Carlos Garrido Marín:  Y bueno, luego aparte lo que comentaba Consu, en el módulo dos, que es justo entre que se va a desbloquear hoy, eh, tenéis un montón de informa bueno, básicamente explica Consu, pues todo el tema de la WISP, las diferencias con, con normas técnicas, con leyes, con otros estándares, ¿vale? Eh, y luego a mayores, pues explica dentro de la WISP cómo se lista la cri-cri-criterio, cómo se divide, el tema de pautas y demás, ¿vale?
+[55:26] Carlos Garrido Marín:  Eh, pero no, no es lo mismo.
+[55:28] Consuelo Correa Barros:  Déjame igual déjame hacerle un adelanto aquí a creo que fue a Marta. Marta, déjame hacerte un, un, un spoiler. La WISP es el estándar para el contenido web, ¿vale?
+[55:40] Consuelo Correa Barros:  O sea, todo lo que nosotros consumamos, pero que también podríamos aportar. Eh, por ejemplo, eh, no sé, mandar un correo electrónico.
+[55:51] Consuelo Correa Barros:  No, no, no necesariamente es como que en una sola dirección. Yo también tengo que poder hacer cosas en la web.
+[55:57] Consuelo Correa Barros:  Y ese estándar aplica para web y aplica para app, pero se está creando uno específico de aplicaciones. 
+[56:04] Consuelo Correa Barros: ¿Por qué? Porque hay algunas cosas que cambian. Por ejemplo, en la web, cuando nosotros diseñamos una web y después se lleva a desarrollo, hay que marcar header, hay que marcar header es la cabecera, main es contenido central, footer lo que está al pie de la página, y así otras cosas.
+[56:22] Consuelo Correa Barros:  Pero cuando eso lo hacemos en las aplicaciones nativas, eso ya no tiene sentido, porque nativamente ya lo trae. Entonces, por ejemplo, en la web, nosotros vamos a marcar los encabezados H1, H2, H3, como los distintos niveles, pero en el mundo de la app es solo, eh, encabezado, solo una H, fin.
+[56:40] Consuelo Correa Barros:  Entonces, se está creando ahí un algo para específico de, de la app. Eso es una cosa.
+[56:47] Consuelo Correa Barros:  Luego tenemos otro estándar que es para el software, que creo que se llama ATAC. Ahora sí.
+[56:56] Consuelo Correa Barros:  Sí, porque el UAC es ya, sí. Eh, porque obviamente los software también tienen que ser accesibles.
+[57:02] Consuelo Correa Barros:  Y ahí aparecen cosas bonitas, como lo que hace Photoshop, que tú puedes cortar una imagen con un gesto de ojo. No sé si han visto alguna vez eso.
+[57:12] Consuelo Correa Barros:  Existe un video muy, muy bueno de, de Apple que muestra cómo personas con discapacidad interactuando con su con su software. Lo podríamos mostrar.
+[57:21] Consuelo Correa Barros:  Carlos, ¿te lo podríais buscar mientras tanto? Vale.
+[57:24] Consuelo Correa Barros:  Eh, es súper interesante. Entonces, el mundo del software tiene otro, otro, eh, estándar.
+[57:32] Consuelo Correa Barros:  Y luego están las herramientas de autor, por ejemplo, WordPress. Porque una cosa es la web lo que sale, y otra cosa es cómo yo subo el contenido para esa web.
+[57:44] Consuelo Correa Barros:  Entonces, ahí hay un estándar distinto. Y, eh, hay bueno, ahí está lo, lo de el task force es, es el grupo de mobile.
+[57:54] Consuelo Correa Barros:  Y creo que existe uno más que es, es para navegadores. Entonces, todo ese tema como de los estándares están mencionados en el módulo dos.
+[58:04] Consuelo Correa Barros:  Y hay algo que no es un estándar, pero que se está constituyendo para que lo sea algún día, que se llama COGA, que son como definiciones para las personas como con discapacidad intelectual. 
+[58:19] Consuelo Correa Barros: ¿Por qué? Fíjense que bueno, igual después ahí lo vamos a explicar mejor quizás en el curso, pero el, el estándar de la WISP fue evolucionando, ¿cierto? Primero teníamos el 1.0, que tenía una estructura muy parecida a las heurísticas de Nielsen.
+[58:34] Consuelo Correa Barros:  Si alguien no sabe lo que son las heurísticas de Nielsen, va, me interrumpe y, y respondemos, ¿vale? Pero Nielsen es como el padre del diseño web.
+[58:43] Consuelo Correa Barros:  Se parecía bastante. Luego aparecieron como los principios y se estructuró de una manera distinta.
+[58:49] Consuelo Correa Barros:  Entonces, cambia el número de uno a dos, porque la estructura es distinta. Pero tenemos el dos, el dos uno y el dos dos.
+[58:56] Consuelo Correa Barros:  Eso significa que la estructura es la misma y solamente se van añadiendo nuevos criterios. Y en el caso del último estándar, además se eliminó uno.
+[59:05] Consuelo Correa Barros:  Pero la estructura es la misma. Entonces, si yo doy conformidad a la 2.2, doy conformidad a la 2.1 y a la 2.0.
+[59:13] Consuelo Correa Barros:  Ahora que se está trabajando en el borrador de la 3.0, quiere decir que se va a reestructurar completamente distinto. La diferencia entre la 2.2 y la 2.1 es que se empezaron a incorporar cosillas para las personas con discapacidad cognitiva, pero no es suficiente.
+[59:29] Consuelo Correa Barros:  Entonces, cuando nosotros queremos diseñar asegurando que la, la accesibilidad cognitiva sea cubierta, entonces usamos COGA, que no es un estándar, pero son principios y son como ciertos indicadores. Ay, Carlos, me encanta que me va a ir pasando toda la, la URL.
+[59:50] Carlos Garrido Marín:  Es que aquí estoy buscando a tope, o sea, me va diciendo y yo me voy buscando y poniendo URL.
+[59:54] Consuelo Correa Barros:  Ahí está. No, es que me encanta porque además.
+[59:57] Carlos Garrido Marín:  Pondremos la grabación. Le pondremos la grabación también, así que no, no os preocupéis. Pero sí, hay mucho.
+[60:02] Carlos Garrido Marín:  Al final hay muchas directrices. Al final todo esto se abarca en muchas directrices que depende del la tipología de producto y de lo que estés haciendo, aplican unas cosas o aplican otras.
+[60:11] Carlos Garrido Marín:  Que eso es, eso es, eh, súper importante. Entonces, cada uno tiene que saber cuándo ha cuando vea una cosa o cuando va a, va a, va a otra.
+[60:19] Carlos Garrido Marín:  Pero normalmente, cuando tú diseñas y desarrollas productos digitales, por ejemplo, aplica la WISP o, por ejemplo, en el caso de esto es una aplicación móvil, me aplica, eh, el, el MAP. Bueno, que el MAP no es, eh, una directriz.
+[60:32] Carlos Garrido Marín:  Es decir, es un grupo de trabajo, es una task force, ¿vale? Que es diferente en W3C, que lo que hace es coger la WISP y adaptarlo a aplicaciones móviles. 
+[60:40] Carlos Garrido Marín: ¿Por qué? Porque no se aplica de la misma manera la WISP para eso, para webs que para una aplicación móvil. Hay criterios que se tienen que adaptar, ¿vale?
+[60:50] Carlos Garrido Marín:  Y eso es lo que hace el Mobile Accessibility Task Force. Eh, os recomiendo que le echéis un vistazo, sobre todo para que veáis la diferencia, ¿vale?
+[60:57] Carlos Garrido Marín:  Decir de: "Oye, por ejemplo, este criterio no aplica directamente". 
+[61:00] Carlos Garrido Marín: ¿Qué digo concretamente? Había un criterio en el 1.4.10, que es el de reflow directamente. Eh, creo que habí creo que era ese que no aplicaba directamente.
+[61:09] Carlos Garrido Marín:  Entonces, bueno, lo pone ahí cuáles se aplican y cuáles no, no, no aplican, ¿vale? Y esto es interesante porque mucha norma técnica, sobre todo la europea, ¿vale?
+[61:17] Carlos Garrido Marín:  Eh, que es la hablo de la europea porque es la más fuerte y, y bueno, progresamos mucho el año pasado cuando entró en vigor para empresa privada. Eh, y a mayores posiblemente sea de las más estrictas que hay a día de hoy, ¿vale?
+[61:31] Carlos Garrido Marín:  Eh, pues normalmente tiene muchas referencias dentro, dentro bueno, dentro de los recursos que he pasado, ¿vale? Eh, se explica lo que es una norma, eh, armonizada, ¿vale?
+[61:40] Carlos Garrido Marín:  Que básicamente cuando yo cojo un estándar técnico lo pongo dentro de una descripción. Pues ahí cuando se referencia, por ejemplo, a un criterio de la WISP, que normalmente las leyes o las normas técnicas hacen referencia o un estándar técnico, hacen referencia a: "Oye, pues criterio, eh, nueve perdón, nueve".
+[61:56] Carlos Garrido Marín:  Eh, bueno, eso es dentro de la norma técnica. Eh, 1.4.4, por ejemplo, ¿vale?
+[62:01] Carlos Garrido Marín:  Pues como hace referencia al criterio de la WISP y dentro del criterio de la WISP tiene esta task force, que es la adaptación dentro de la WISP, pues tenemos que irnos posiblemente no al criterio de la WISP cuando estamos en una aplicación móvil, sino a la task force, que normalmente ahí pone matices y, y cuestiones que son para la adaptación de aplicaciones móviles, ¿vale? Entonces, hay que saber muy bien cómo buscar los criterios y cómo, sobre todo, interpretar legislación, ¿vale?
+[62:22] Carlos Garrido Marín:  Que es una cosa que no es, no es tampoco muy sencilla porque no lo pone en parte, ¿vale? Eh, yo recomiendo bueno, voy a pasar también un par de recursos, lo he dicho, que los tengo dentro de WISP, por si os interesa esto y demás, porque seguro que muchos m o han dicho: "Oye, en vuestra empresa hay que aplicar esto o tenemos que, que ser afín a la normativa y demás".
+[62:39] Carlos Garrido Marín:  Y hay mucha gente que, que se pierde con todo esto, ¿no? Entonces, bueno, voy a pasar aquí lo que lo que he comentado.
+[62:43] Carlos Garrido Marín:  Bueno, voy a pasar primero lo de COGA, que lo tenía por ahí, y esto que es lo de la norma, eh, armonizada, ¿vale? Para que le echéis un vistazo, porque eso es una cosa muy interesante.
+[62:51] Carlos Garrido Marín:  Y a nivel jurídico, eh, también se suele aplicar esta terminología para otras cosas, ¿vale? Pero bueno, ya, ya así lo conocéis y lo y lo y bueno, y lo tenéis por ahí, ¿vale?
+[63:02] Carlos Garrido Marín:  Como recurso.
+[63:04] Consuelo Correa Barros:  Mm-hmm.
+[63:08] Consuelo Correa Barros:  Sí.
+[63:09] Carlos Garrido Marín:  Y todo, todo esto no sé qué no sé de qué venía. Me he perdido.
+[63:13] Consuelo Correa Barros:  Ah, porque estaba nos venías preguntando si era el mismo estándar. Yo estoy buscando el video de Apple para mostrarles cómo funcionan los, los software. Eh, mmm, mmm, mmm, mmm.
+[63:32] Consuelo Correa Barros:  Y será este. No, es que aparte que uno busca Apple Accessibility y te salen mil cosas.
+[63:37] Consuelo Correa Barros:  Mmm. 
+[63:40] Consuelo Correa Barros: ¿Será este?
+[63:56] Consuelo Correa Barros:  Me da risa que obvio que no lo encuentro. Encontré uno precioso.
+[64:00] Consuelo Correa Barros:  Mientras busco, les voy a compartir este.
+[64:07] Consuelo Correa Barros:  Déjenme ver. Será este, este.
+[64:15] Consuelo Correa Barros:  O sea, ustedes me dicen si, si escuchan el audio.
+[64:20] Carol Leon:  Dear student, congratulations.
+[64:26] Carol Leon:  You have been accepted into the undergrad.
+[64:38] Carol Leon:  Starting route to lecture hall. I'm not remarkable, I'm just finding my way.
+[64:44] Carol Leon:  Turn left. It's not walking the path, but baby I got the grades.
+[64:49] Carol Leon:  Don't wanna be admired, I'm not your inspiration. If you wanna be inspired, there's a library down the hall.
+[64:58] Carol Leon:  Have you noticed that narration sometimes smells a bit like pity? I can be strong, I get stuck wrong.
+[65:05] Carol Leon:  I don't always talk so pretty. I'm not remarkable, not heroic or brave.
+[65:11] Carol Leon:  I've got no superpowers. I can't even do the stupid equation.
+[65:16] Carol Leon:  I'm not remarkable, and neither are you. We all have toes, we all look funny in the news.
+[65:25] Carol Leon:  Sophia. Face, I've got a place, I've got a life, I've got a name.
+[65:29] Carol Leon:  And I need stuff, and you need stuff, and all our stuff is not the same. And some days I get so tired, she gets grumpy, it's bossy.
+[65:39] Carol Leon:  Yeah, well, I have a special need, I call it.
+[65:42] Sara Merino:  Coffee.
+[65:48] Sara Merino:  Do I have to be remarkable? I'm just having a try.
+[65:53] Sara Merino:  I'm not fragile or indestructible, and like everyone I sometimes cry. And I'm not like the rest, but then the rest of you are like the rest either.
+[66:05] Sara Merino:  I'm not a saint, I'm not a sinner, I'm not a loser, I'm not a winner. I'm not poor and I'm not blessed, I'm just your average human mess.
+[66:18] Sara Merino:  I'm not remarkable, and neither are you. I'm not remarkable, and neither are you.
+[66:27] Sara Merino:  We've all got toes. Hold on, I don't.
+[66:30] Sara Merino:  We all look gorgeous in. I've got a face, I've got a place, I've got a life, I've got a name.
+[66:37] Sara Merino:  And I need stuff, and you need stuff, and all our stuff is not the same. And we will strive, and we will fail, and we'll get hurt, but we'll prevail.
+[66:46] Sara Merino:  And it'll be joyous, and it'll suck, and I'll be lonely, and I'll be loved. And on the way we will discover we're not the same, but we're not the other.
+[66:55] Sara Merino:  There's a life out there that I refuse to miss. I'm only remarkable because everybody is.
+[67:07] Consuelo Correa Barros:  Entonces, el que está superinteligencia es que, eh, las personas con discapacidad no tienen necesidades especiales? Que lo que tienen son necesidades como las de cualquier otra persona y, eh, otro. Me colo.
+[67:21] Speaker 9:  With AirPods, it's so easy to enjoy music, stay connected.
+[67:26] Consuelo Correa Barros:  Dejo de compartir. Igual no es el que estaba buscando, así que voy a seguir buscando hasta encontrarlo. Por último, se los compartiré por Discord.
+[67:33] Consuelo Correa Barros:  Eh, pero lo que dice es como: las personas con discapacidad no tienen necesidades especiales, nosotros diseñamos para todo el mundo. Fin.
+[67:41] Consuelo Correa Barros:  Y no sé si se llegaron a dar cuenta de cómo toma las fotos, que de repente dice como "take a picture" y se y toma la foto de una persona que no tiene manos. Obviamente, la accesibilidad beneficia a todo el mundo, entonces eso es lo que muestran.
+[67:54] Consuelo Correa Barros:  Pero hay otro que, eh, muestra una madre sorda con su hijo. Y el comercial es inmersivo, entonces como ella no escucha, nosotros tampoco, y dejamos de escuchar.
+[68:06] Consuelo Correa Barros:  Como que parte con la guagua llorando y después se baja el volumen y ya no escucha, pero sabe que llora porque su dispositivo le está avisando. Entonces, lo estoy buscando.
+[68:15] Carlos Garrido Marín:  Mm-hmm. Sí, ahí por comentar un poco también, eh, que el año pasado, bueno, no sé si sabéis la que se lió con cuando sacó lo o sea, que le dieron lo del lo del Liquid Glass, es decir, de Apple y demás, con el tema de accesibilidad, salió muchísimo, decir diciendo: "Oye, Apple, que no piensen en la accesibilidad" y demás, ¿no? Que a mí me hizo mucha gracia porque dentro de las opciones de accesibilidad de Apple, posiblemente dentro de su dispositivo sean los más completos en cuanto
+[68:39] Carlos Garrido Marín:  a características que dan. Eh, es decir, dan una cantidad impresionante de ac de de de eso, de cuestiones de accesibilidad y demás, de preferencias, para que todo el mundo pueda utilizar sus productos. Entonces, me hizo gracia lo del Liquid Glass, oye, pues la gente salió me acuerdo en LinkedIn, que salieron a matar a Apple, gente que a lo mejor, pues bueno, no tiene con tanto conocimiento de accesibilidad ni sabe lo que da Apple a nivel de accesibilidad, cuando posiblemente de inclusión y de y favorezcan millones de
+[69:05] Carlos Garrido Marín:  personas que están utilizando ahora mismo sus productos. Entonces, colgarlos por decir: "Oye, no, es que el Liquid Glass no es accesible" cuando solamente me acuerdo que había salido o había sido anunciado, pues tampoco es una cosa justa. Hay que probar los productos y hay que tampoco puede ser.
+[69:18] Consuelo Correa Barros:  Y de hecho, dieron alternativa para tu teléfono.
+[69:22] Carlos Garrido Marín:  Sí.
+[69:22] Consuelo Correa Barros:  O sea, como que si tú necesitas una alternativa distinta, es como: "Usa otra".
+[69:28] Carlos Garrido Marín:  Mm-hmm.
+[69:28] Consuelo Correa Barros:  Sí.
+[69:28] Carlos Garrido Marín:  Sí, aparte, aparte de que de que de que bueno, que hubo por eso eso, hubo mucha crítica y hay veces que que es decir, yo siempre digo, incluso cuando nosotros diseñamos WISP, ¿no? Que, eh, que esto posiblemente, además, si habéis trabajado en di en en temas de accesibilidad para instaurarlo o lo que sea dentro de una empresa, a lo mejor lo habéis encontrado, lo de que: "Oye, eh, que si hacemos accesible, pues es aburrido, ¿no? O que hay que hacerlo es un diseño aburrido, no es divertido,
+[69:52] Carlos Garrido Marín:  es un diseño que que vamos a hacer vamos a ser una institución, ¿no?" Pues eso es un poco lo que hay que romper también un poco con la barrera. Es decir, se pueden cumplir los estándares, se pueden hacer las cosas, se puede hacer un producto que sea guay, que sea accesible, eh, como por ejemplo hace Apple, y sin necesidad de ser una web corporativa institucional, ¿vale?
+[70:08] Carlos Garrido Marín:  Que incluso las institucionales a veces son las peores a nivel de accesibilidad. Por eso digo que, que, que bueno, que también hay que salir un poco y eso, eso también lo iremos viendo de romper un poco ese ese estigma, esa barrera.
+[70:19] Carlos Garrido Marín:  Es decir, mmm, incluso dentro de WISP, WISP además se diseñó un poco con esa premisa. Es decir, por eso cuando veis WISP y demás, la identidad de marketing y todo cómo está construido, pues intentar romper un poco ese ese ese estigma dentro de dentro de lo que cabe.
+[70:34] Carlos Garrido Marín:  Eh, creo que acaba de pasar justamente Miranda, el que puede ser.
+[70:39] Consuelo Correa Barros:  A ver.
+[70:39] Carlos Garrido Marín:  Si no, si no, Consu, lo buscamos después y lo ponemos en el enlace de la reunión, no te preocupes.
+[70:45] Consuelo Correa Barros:  Lo voy a lo voy a buscar, porque yo sé que en alguna parte lo guardé, porque se lo mostraba a alumnos, pero tiene la gracia de que muestra cómo cómo usan su software. Entonces, hay una persona que no tiene o sea, me parece que que le no tiene los brazos y está usando fotos para diseñar y editan video y muestran un montón de cosas. Entonces, muestran como software y también sus sus propios dispositivos, qué tan accesibles son.
+[71:12] Consuelo Correa Barros:  Eh, es una locura. El ecosistema de Apple, en serio, es una locura.
+[71:17] Consuelo Correa Barros:  Voy a ver si. Es ese.
+[71:24] Carlos Garrido Marín:  Sí.
+[71:26] Consuelo Correa Barros:  Ahí va que lo lo pongan después. Es maravilloso. No sé si quieres compartirlo, Carlos, o o seguimos nomás.
+[71:34] Consuelo Correa Barros:  Pero tal son dos solo dos minutos.
+[71:35] Carlos Garrido Marín:  Si quieres, seguimos seguimos y luego lo ponemos en lo ponemos en la parte que viene y así le echas le echas ahí un ojillo. Eh, no sé si Consu tenía lo de la dinámica y demás que quería comentar.
+[71:45] Consuelo Correa Barros:  Ah, no, es que originalmente quería hacer esto como en un en un mural, pero como quedamos en hacerlo directo en figma. Entonces, eh, lo lo preparé así nomás. Pero lo que podemos ir conversando es, mientras tanto, en base a las cosas que ya conocemos, como qué tipo de barreras encuentran como apren.
+[72:11] Consuelo Correa Barros:  No sé si alguien más tiene algún flujo que quiera mostrar, como algo de idea de trabajo. Mmm, antes, ahí Bárbara levantó la manito.
+[72:24] Bárbara Araya Vidal:  Disculpa, estoy súper enferma. Eh, ya, mira, como yo les comenté en la primera clase, yo estoy haciendo un sitio web para ayudar en la digitalización a personas mayores. No solo a las personas que ya saben usar sus celulares, sino a personas que no saben nada, desde cómo agregar un contacto en WhatsApp.
+[72:42] Bárbara Araya Vidal:  Esto nace de una necesidad familiar y en la pandemia me di cuenta que no solo familiar, sino que se se se extrapola a otras personas. Entonces, de ese flujo les voy a compartir un poco la pantalla para hacerlo más rápido.
+[73:02] Bárbara Araya Vidal:  No me queda la pantalla completa.
+[73:08] Bárbara Araya Vidal:  Ya, ustedes me dicen cuando vean, por favor.
+[73:14] Carlos Garrido Marín:  Ahí.
+[73:15] Bárbara Araya Vidal:  Ya. Este es el home. El flu todavía no?
+[73:19] Consuelo Correa Barros:  Ahora sí. Ahí, ahí, ahí.
+[73:21] Bárbara Araya Vidal:  Este es el home. Y el flujo sería llegar a uno a los tutorial tutoriales. Llegamos a los tutoriales.
+[73:28] Bárbara Araya Vidal:  Y acá me falta agregar una pantalla intermedia, que es elegir si es Android o iPhone. Luego de elegirlo, vienen los tutoriales, en separados por plataforma, que son a través de encuestas y research que hice, entrevistas, las plataformas que más ocupan en Chile.
+[73:47] Bárbara Araya Vidal:  Esto está súper como la investigación en personas en Chile. Luego que eligen un un tutorial, entran y lo tienen paso por paso, y tienen la oportunidad de descargarlo en PDF o imprimirlo.
+[74:04] Bárbara Araya Vidal:  Y es las últimas decisiones, básicamente, porque no todas las personas saben entrar y aprender, sino que muchas veces hay alguien que le enseña. Entonces, también está el material para las personas que lo puedan imprimir y se lo pasen a esta persona mayor de 60.
+[74:19] Consuelo Correa Barros:  Viste que viste que viste que tenéis la alternativa ahí como por default. Alternativa, imprimir. Una pregunta, solo por por saber.
+[74:28] Consuelo Correa Barros:  Como por qué no tiene como un paso uno, paso dos, paso así como un next, next, next? Como hiciste alguna prueba que que que llegara a determinar que lo mejor es que sea todo de una?
+[74:44] Bárbara Araya Vidal:  En los pasos?
+[74:46] Consuelo Correa Barros:  Mm-hmm.
+[74:47] Bárbara Araya Vidal:  Lo que pasa es que no hay ningún paso que supere los cinco, como más o menos. Y cuando hice test, eh, como que no entiende y a pesar de tener este como breadcrumb arriba, como que quieren volver a la misma información al mismo tiempo. Como que si se les olvidó algo, me decían como: "Ya, pero cómo vuelvo atrás?
+[75:09] Bárbara Araya Vidal:  Cómo puedo comparar con el paso anterior?"
+[75:12] Consuelo Correa Barros:  Porque sabes por qué te preguntaba? Porque existe un criterio de de que me parece que la WSC siempre recomienda como un pasito a la vez. Como ojalá información súper concreta y después siguiente.
+[75:27] Consuelo Correa Barros:  Pero por otro lado, las personas que no están digitalizadas, que tú tú darías, no necesariamente entienden un WISP, cachái? Onda un stepper.
+[75:36] Consuelo Correa Barros:  Entonces, quería saber si era un hallazgo de de haber testeado de decir: "Sabes que esta weá no le perdón, esta solución no resuelve para " o o había sido como casualidad.
+[75:52] Bárbara Araya Vidal:  Me pasa que quieren comparar siempre como quieren estar a la segura, tener todo como al mismo tiempo, como que no se les pierda nada. Esa es más o menos uno de los hallazgos en general, es la sensación que muchas veces la limitante no es técnica, sino también la confianza de no de no de no echar a perder el celular mientras te trata de hacer un paso. Eh, es tener confianza mientras se hace algo.
+[76:18] Bárbara Araya Vidal:  Y como al tener todo en una, se sienten como más seguros.
+[76:23] Consuelo Correa Barros:  Y y por ejemplo, dentro de de los pasos no está así como del porque ya WhatsApp, y si no tengo WhatsApp, no debería esto esto esto es solo preguntas desde el mundo del diseñador. Eh, no debería partir desde la descarga de WhatsApp?
+[76:42] Bárbara Araya Vidal:  Acá está, paso uno. Abre. Ah.
+[76:45] Consuelo Correa Barros:  Ah, no. Porque al iniciar un contacto.
+[76:49] Bárbara Araya Vidal:  No, está mal acá. Esto debería estar primero, pero sí está este.
+[76:53] Consuelo Correa Barros:  Ya. Ajá.
+[76:55] Bárbara Araya Vidal:  Es el el orden, sí.
+[76:57] Consuelo Correa Barros:  Ya.
+[76:58] Bárbara Araya Vidal:  Está como descargarlo y como como hacerte un usuario, etcétera.
+[77:02] Consuelo Correa Barros:  Oye, se lo podría pasar a a SENADIS, SENADIS, Servicio Nacional de Discapacidad, gente.
+[77:10] Bárbara Araya Vidal:  Sí, feliz. O sea, mi objetivo cuando esto esté como un poquito más armado, porque lo terminé ahora en agosto, es poder escribirle a las municipalidades, porque Chile en cada comuna tiene una municipalidad y hay mucho taller de adulto mayor. Y entregárselo, si esto es una plataforma gratis para que lo usen.
+[77:30] Bárbara Araya Vidal:  Mientras más gente lo use, mejor.
+[77:33] Consuelo Correa Barros:  Y y querí quieres como acotar el proyecto a un flujo en particular o o.
+[77:38] Bárbara Araya Vidal:  Sí.
+[77:39] Consuelo Correa Barros:  Ya.
+[77:39] Bárbara Araya Vidal:  No, no, no. En particular y después ir mejorándolo.
+[77:43] Consuelo Correa Barros:  Ya.
+[77:44] Bárbara Araya Vidal:  Sí. Ese sería ver tutorial. Acá entre medio separar entre iPhone y Android.
+[77:49] Bárbara Araya Vidal:  En este momento solo hay Android, porque tengo acá como una información estadística que en Chile se ocupan más los Android, pero me ha pasado mucho que me ha contactado gente que igual está interesada en saber iPhone. Entonces, me voy a adelantar y y igual los voy a hacer para iPhone.
+[78:09] Consuelo Correa Barros:  Sí. Ahí, eh, ah, quería hacer un comentario. No es que que que no puedan desarrollar un flujo más grande, porque nosotros lo vamos a revisar sea grande o sea chico el proyecto, lo revisamos igual completo.
+[78:21] Consuelo Correa Barros:  El punto no es por nuestro lado, sino que por el lado de ustedes, que nosotros decimos como: "Oye, acuéstelo a un flujo, eh, específico y qué sé yo". Lo lo más importante es que sea un flujo que tenga componentes que requieran en el fondo de de de accesibilidad, como que sea relevante.
+[78:40] Consuelo Correa Barros:  Por ejemplo, el acordeón es algo que es relevante. Fíjate que es como me voy a adelantar, pero el acordeón no existe como parte como del HTML, pero sí existen los botones.
+[78:51] Consuelo Correa Barros:  Entonces, es un botón que se expande, que se contrae, y qué sé yo. Entonces, hay que aprender a documentar eso.
+[78:58] Consuelo Correa Barros:  Y ahí ya tienes tu componente más complejo, cachái? Que es uno.
+[79:03] Consuelo Correa Barros:  O sea, en ese flujo existe ese componente. Y los componentes simples también existen.
+[79:07] Consuelo Correa Barros:  Entonces, como que el habría que ver después como el el flujo en sí mismo y no sé dentro de dentro del del proyecto nunca solicitamos por si acaso el testeo con personas con discapacidad, pero igualmente les vamos a dejar recursos para que en el fondo como que avancen por sí mismos. Porque, eh, si si abordáramos eso también, ya no sería un curso intensivo de diez semanas y estaríamos hablando de un de un programa de meses, ¿vale?
+[79:38] Consuelo Correa Barros:  De varios meses. Eh, pero está interesante para el testeo.
+[79:43] Bárbara Araya Vidal:  Sí, bueno, después que termine este curso, la semana me voy a Chile con su así que lo voy a testear con personas ahí en vivo.
+[79:49] Consuelo Correa Barros:  Qué rico. Y nos vemos en tu casita, que me encanta la casa de.
+[79:52] Bárbara Araya Vidal:  Cuando quieras.
+[79:55] Consuelo Correa Barros:  Es que tiene una casita maravillosa.
+[80:00] Consuelo Correa Barros:  Súper. No sé si alguien más tiene como alguna idea de flujo.
+[80:05] Consuelo Correa Barros:  El el del el del tren me encantó porque es más súper más súper belleza.
+[80:11] Carlos Garrido Marín:  Sí, no, ese ese podría hacerlo todo el mundo, ¿sabes? Y todavía faltaría tiempo, ¿sabes? Así que.
+[80:17] Bárbara Araya Vidal:  Ay, sí.
+[80:18] Consuelo Correa Barros:  Pero está la eh, eh, vamos en orden. Estaba Esthi, ah, bueno. Estaba sí, la Esthi primero, Camille.
+[80:28] Carlos Garrido Marín:  Sí, Esthi, Esthi, Camille y Carol.
+[80:31] Consuelo Correa Barros:  Sí.
+[80:31] Estibaliz Martin Borja:  Yo termino rápido. Nada, eh, simplemente eso, que yo quería mandar la encuesta porque se me ha ocurrido una idea de, bueno, de proyecto o de plataforma, aplicación, no lo sé. Y, o sea, la voy a empezar de cero.
+[80:48] Estibaliz Martin Borja:  Entonces, eh, antes de empezar, o sea, la idea es un poco grande, entonces, eh, quería compartir la encuesta, no solo aquí, sino que también lo he compartido en otros ámbitos, para ver en mmm en qué empezar, con qué MVP empezar, porque es que si no se me va un poco de las manos para hacerlo en diez semanas.
+[81:07] Consuelo Correa Barros:  Sí, pero igual acótalo, o sea, aún si como dentro el MVP a veces tiene mucho más que un flujo, acótalo. A un flujito que involucre, no sé, a unas tres pantallas como máximo, para que no se te salga de control, independiente que después quieras desarrollar el proyecto completo.
+[81:23] Estibaliz Martin Borja:  Sí, yo creo que que sí que, o sea, por como he hecho la encuesta, que hay, a ver, hay muchas cosas, un poco para saber si tiene sentido también y demás. Eh, pero luego hay una parte de las preguntas donde pregunto cuál es la funcionalidad que más interesa. Y yo creo que la que gane, a no ser que sea súper compleja, porque hay una que es muy compleja que va ganando.
+[81:44] Estibaliz Martin Borja:  Eh, esa es la que la que ese flujo diseñaré. De todas formas, si cuando pase la encuesta la podéis echar un vistazo y me echáis un vis, eh, me decís si os parece viable o no.
+[81:57] Consuelo Correa Barros:  Obvio.
+[81:58] Speaker 4:  Esa funcionalidad.
+[81:59] Consuelo Correa Barros:  No nos quieres hacer un adelanto, un spoiler.
+[82:03] Speaker 4:  Sí, os puedo compartir pantalla y enseñar la encuesta, pero vamos, que es sí, vale. Voy. Eh, compartir.
+[82:13] Speaker 4:  Google Chrome solicita. Espera, perdonad.
+[82:16] Speaker 4:  Creo que sí. Ventana.
+[82:20] Speaker 4:  Compartir.
+[82:23] Consuelo Correa Barros:  Me encanta la como la cantidad de acentos que salen en estas reuniones, es genial. Ya.
+[82:30] Speaker 4:  Vale. Pues nada, es esta es la encuesta, aquí explico un poco. Bueno, si no, os la enseño así, que igual es más fácil, que no está por trozos.
+[82:40] Consuelo Correa Barros:  Dale.
+[82:41] Estibaliz Martin Borja:  Eh, tienen varias secciones. En principio se hacen cinco minutos largos.
+[82:47] Estibaliz Martin Borja:  Y nada, pues las preguntas básicas de la edad, el género, eh, si te identificas con alguna de estas condiciones, ¿vale? Porque quiero centrarlo mucho en sobre todo en accesibilidad cognitiva, que me interesa mucho esa parte.
+[83:05] Estibaliz Martin Borja:  Eh, luego si se tiene alguna discapacidad. Esto de cara si a futuro quisiera hacer testeo, pues, eh, saber si tengo alguien que que tenga alguna de las discapacidades.
+[83:20] Consuelo Correa Barros:  Me encanta porque es lo más es lo más fácil para capturar, eh, testeo.
+[83:24] Speaker 4:  Sí.
+[83:24] Consuelo Correa Barros:  De verdad que.
+[83:25] Estibaliz Martin Borja:  A ver, la la encuesta, por si alguien la quiere hacer después, es anónima. Lo que pasa es que al final hay un apartado de: "Si quieres seguir colaborando, me tienes que dar el email". Y si me das el email deja de ser anónima.
+[83:37] Estibaliz Martin Borja:  Pero bueno, lo aviso. Eh.
+[83:40] Consuelo Correa Barros:  Buenísimo.
+[83:43] Estibaliz Martin Borja:  Y nada, al final la aplicación va sobre, bueno, para conseguir una herramienta que te ayude a gestionar la energía, ya que las personas con neurodivergencias o enfermedades crónicas, dolor crónico, eh, suelen tener.
+[83:57] Consuelo Correa Barros:  Quería preguntar.
+[83:58] Speaker 4:  Sí.
+[83:58] Consuelo Correa Barros:  Quería preguntar si era una app para neurodivergentes, porque efectivamente es lo que dices tú, porque sobre todo como yo no me gusta generalizar porque, eh, obviamente existe una diversidad, pero, eh, la la gente con TDAH que necesita dopamina se va a encontrar con el problema de que, por ejemplo, como el cruce, que justo a Carlos le contaba el otro día, me decía: "¿Cómo estás con su?" Me decía: "Aquí con mi TDAH y mi menopausia". Porque lo que pasa es que naturalmente las mujeres, eh, somos capaces de
+[84:30] Consuelo Correa Barros:  con el estrógeno y qué sé yo, generamos la dopamina, pero cuando el estrógeno baja, eh, nada, te empiezan a aparecer como todos los problemáticos, como que tuviera más TDAH que nunca. Se me salió de se me salió de de control. Y efectivamente existen esos esos picos.
+[84:48] Consuelo Correa Barros:  Entonces, es como ahora que te leo la encuesta y yo pienso en yo sé que uno nunca es el usuario y nada, pero ojalá algún día alguien haga una aplicación para gente con TDAH y y menopausia, porque, bueno, es incontrolable.
+[85:02] Estibaliz Martin Borja:  Esta, a ver, es un poco general. En concreto, pues, eh, porque, bueno, me he puesto yo en en la situación, ¿vale? O sea, esto me estoy haciendo una aplicación para mí misma.
+[85:10] Estibaliz Martin Borja:  Entonces.
+[85:11] Consuelo Correa Barros:  Bueno.
+[85:13] Speaker 4:  Eh.
+[85:13] Consuelo Correa Barros:  Así hace mucho emprendimiento.
+[85:16] Estibaliz Martin Borja:  Sí. Eh, he estado buscando una aplicación que me ayude a controlar mi energía en función de las tareas que tengo. Y me parecen súper complejas, súper enrevesadas.
+[85:24] Estibaliz Martin Borja:  El Google Calendar se me queda corto, la agenda se me olvida. Entonces he dicho: "Bueno, pues voy a ver si consigo hacer algo que puedas llevar en el móvil, ¿no?
+[85:33] Estibaliz Martin Borja:  O en el ordenador". Pero, bueno.
+[85:36] Consuelo Correa Barros:  Y además, ¿qué pasa? Que, por ejemplo, que la gente neurodivergente suele tener un montón de agendas y tener como notas por todos lados y qué sé yo, pero después la agenda nunca la consulta. Como.
+[85:46] Speaker 4:  Sí.
+[85:47] Consuelo Correa Barros:  Sí. Sí, sí. Qué divertido.
+[85:50] Consuelo Correa Barros:  A ver, y baja un poquito más.
+[85:52] Estibaliz Martin Borja:  Sí. Eh, bueno, eso, con qué frecuencia, eh, eh, tienes, eh, picos de energía para arriba y para abajo. Luego, cómo gestionas tu energía, ese es ese apartado, pues cómo se gestiona.
+[86:04] Estibaliz Martin Borja:  Eh, si te ca hay tareas que te cansan, tareas que te recuperan energía, este tipo de preguntas. Luego, si estás muy cansado, qué tipo de tareas, eh, priorizas.
+[86:17] Estibaliz Martin Borja:  Y luego, dentro de este apartado, herramientas y planificación, pues eso, te te pregunta a ver qué si utilizas alguna herramienta. Y una posible nueva herramienta.
+[86:29] Estibaliz Martin Borja:  Y aquí es donde hago las preguntas de, pues, si te resulta útil un este tipo de herramientas, qué funcionaría funcionalidades, perdón. Eh, te resultarían más.
+[86:39] Consuelo Correa Barros:  Eso te iba a preguntar, qué funcionalidad va ganando?
+[86:43] Speaker 4:  Eh, voy.
+[86:51] Consuelo Correa Barros:  Qué funciones? Una, ay, ese. Ah, ese.
+[86:56] Speaker 4:  No, esta es es la anterior, perdona.
+[86:58] Consuelo Correa Barros:  Sí, es la anterior. Sí, sí, sí, sí.
+[87:00] Speaker 4:  Eh.
+[87:01] Consuelo Correa Barros:  Qué funciones? Esa.
+[87:04] Speaker 4:  Ay, espera, pero así no me lo enseña. Perdón.
+[87:07] Consuelo Correa Barros:  No, tranqui.
+[87:08] Speaker 4:  A ver. Eh, resumen.
+[87:16] Consuelo Correa Barros:  Ahí está.
+[87:17] Estibaliz Martin Borja:  Pues ahora mismo van ganando añadir tareas y estimar cuánto me cuestan, o sea, la la energía que te gasta no te suman. Y registrar actividades que me ayudan a recuperar energía, que eso es fácil. Y esta es la chunga, que es recibir sugerencias para reorganizar o pos o posponer tareas.
+[87:36] Estibaliz Martin Borja:  Pero claro, aquí necesitas una IA que esté entrenada. Entonces, esta directamente la descarto, porque me he venido arriba y no he pensado en las consecuencias de crear esto.
+[87:46] Estibaliz Martin Borja:  Pero bueno, de momento llevan estas dos y yo creo que es que podrían ser factibles las dos.
+[87:52] Consuelo Correa Barros:  Todavía está la cinco.
+[87:55] Speaker 4:  Sí. Consultar patrones de días anteriores. Esto sería, pero bueno.
+[88:00] Consuelo Correa Barros:  Yo algo que he visto mucho, porque obviamente sigo a todas las neurodivergentes que de que que se me vayan cruzando, eh, pero muchos dicen como qué es lo que haces para hacer cosas.
+[88:14] Consuelo Correa Barros:  O sea, como porque viste que pero esta ya perdón el resto, pero las personas neurodivergentes suelen procrastinar como campeones, ¿ya? O sea, como no digo que todos.
+[88:25] Speaker 4:  Cuesta arrancar.
+[88:27] Consuelo Correa Barros:  Pero en serio, sí, cuesta mucho arrancar, arrancar. Entonces, hay mucha gente que simplemente espera a que falte un minuto y ahí recién hacen. Y algunos, como tienen hiperfoco, pueden resolver en una hora lo que les hubiese tomado hacer, eh, no sé, 15 días.
+[88:43] Consuelo Correa Barros:  Pero, por ejemplo, mi técnica, que es la más hostil de todas, es levantarme a las 5:00 de la mañana, porque a las 7:00 tengo que tenerlo listo. Entonces, yo me levanto temprano el día que tengo que mandar la huevada.
+[88:53] Consuelo Correa Barros:  Y una y una locura, porque me pude mandar la procrastinación máxima. Entonces, Carlos sufre con con la, eh, el revés de de mi técnica, como que él espera que las cosas le lleguen con con un poco más de tiempo.
+[89:07] Consuelo Correa Barros:  Eh, pero bueno, nada, quizás por ahí podría yo encontrar un montón de información. Está está súper divertido, pero no sé si tienes el tiempo para levantar algo.
+[89:15] Consuelo Correa Barros:  Entonces, no, y aquí mi comentario es: no se preocupen de que la idea sea realmente buena o no. O sea, si quieren diseñar algo que sea como cómo escoger la pantufla que me quiero poner, que me quiero comprar en el supermercado, a nosotros nos da igual si el producto o servicio es realmente útil, tiene sentido o de que sea diseñado y creado, ¿ya?
+[89:35] Consuelo Correa Barros:  Lo que queremos es que eso que creen ustedes se le pueda aplicar a accesibilidad. O sea, es como es una excusa para aprender a documentar la accesibilidad.
+[89:44] Consuelo Correa Barros:  Entonces, no se preocupen tanto de que la idea sea perfecta, porque si se quedan pegados en hacer encuestas y levantar información y qué sé yo, para ver qué diseñan, se les pueden pasar las diez semanas.
+[89:55] Estibaliz Martin Borja:  Sí, no, mi idea es tenerlo esto hasta el fin de semana. Y y ya con lo que salga, eh, empezar ya a plantear, pues eso, una idea, un flujo, y ya está. O sea, si me da tiempo más, genial, pero.
+[90:10] Consuelo Correa Barros:  Sí, ustedes asuman que lo que decidieron hacer es la idea más maravillosa y y todos los stakeholders y todo el negocio está de acuerdo con ustedes, que eso es lo que hay que hacer y es la necesidad y es lo que los va a llevar a la al al a la cima y al al triunfo máximo. Eh, porque si se pegan en que sea perfecto y que realmente alguien lo quiera usar y qué sé yo, que serían los problemas normales de diseño, eh, no vamos a avanzar.
+[90:34] Consuelo Correa Barros:  Entonces, como el plan es llevarlo específicamente como a la accesibilidad. Este no es un curso para decirles como: "Ah, su producto, su servicio es, eh, la idea más innovadora y funciona y ver".
+[90:46] Consuelo Correa Barros:  No, no, el foco es documentación. 
+[90:50] Consuelo Correa Barros: ¿Vale? Súper. Ahí, Cami.
+[90:56] Consuelo Correa Barros:  Muchas, muchas gracias por compartir.
+[91:00] Camille Alcavil:  Hola, hola. Eh, bueno, en mi caso, yo hay un flujo que siempre he querido rediseñar desde que lo conocí, desde que me topé con él, eh, que es el el flujo de que tiene acá en Chile hay una clínica que se llama Clínica Meds, que es una clínica que está enfocada en la rehabilitación, eh, de deportistas, por así decir. O de en realidad tiene medicina de todo tipo, pero su enfoque es la medicina deportiva.
+[91:23] Camille Alcavil:  Eh, yo el 2024 me rompí el ligamento cruzado anterior, entonces, eh, tuve que prácticamente volver a aprender a caminar. Y aquí me topé con esta clínica, y yo todas las semanas tenía que ir agendando, eh, las sesiones de rehabilitación de kinesioterapia para, eh, hacer mis terapias.
+[91:42] Camille Alcavil:  Y en realidad nunca, nunca arreglaron el flujo. Yo tenía un día decía: "Ya que sea la otra semana, van a actualizar esto y va a estar mejor".
+[91:48] Camille Alcavil:  No. Era un desastre.
+[91:49] Camille Alcavil:  Eh, nunca explicaba los errores. Uno ingresaba, por ejemplo, su información, y después que uno ingresaba toda la información, te decía que había algo mal, como el clásico tema de que no hay retroalimentación.
+[92:00] Camille Alcavil:  Y cuando uno seleccionaba, por ejemplo, una hora para ir, porque, eh, esta era la única clínica que yo vi hasta el momento que permitía seleccionar como todas las sesiones de una sola vez. Porque en otras solamente te permitían elegir la primera y el resto de sesiones, eh, uno tenía que irlo haciendo con el centro médico, por teléfono, presencial, etcétera.
+[92:20] Camille Alcavil:  Pero esta clínica sí permitía hacer todas. Pero era un era un atado, porque uno seleccionaba la hora y nunca sabía, eh, dónde, en qué momento, si se había seleccionado o no, eh, si la había borrado por accidente o no.
+[92:34] Camille Alcavil:  Perdí muchas veces horas o te pensaba que tenía hora y no tenía hora. Era un enredo.
+[92:40] Camille Alcavil:  Entonces, eh, al menos respecto a esto, mi duda es si me enfoco quizás solamente en la parte de seleccionar la hora, y que es como el guardado de las horas, por así decir, porque son varias, son diez. Por ejemplo, acá en Chile la la la las órdenes de kinesioterapia son por diez sesiones, más o menos.
+[93:01] Camille Alcavil:  Eh, entonces son varias horas que uno tiene y puede guardar de forma simultánea, que son diez. Entonces, no sé si solo enfocarme en eso o si quizás es muy breve y empezar de toda la parte anterior, que quizás es mucha, que es ingresar los datos personales, lo de la previsión social, el FONASA, el SAP, el.
+[93:17] Consuelo Correa Barros:  No, no, no.
+[93:17] Carlos Garrido Marín:  El médico, el centro médico, etcétera, etcétera.
+[93:20] Consuelo Correa Barros:  Cami, desde la desde que estáis logueada hasta que generaste la agenda, como la cita. No, no, no. Todo lo demás es prácticamente rediseñarles el flujo, la la plataforma completa.
+[93:31] Consuelo Correa Barros:  Estáis locas. La agenda, la agenda, que es donde está el problema.
+[93:35] Consuelo Correa Barros:  Porque además, este, la Clínica Meds, bueno, hay hay poquitas clínicas aquí para el resto como en en Chile que tenga kinesiólogos deportivos, además. Como que hay dos grandes centros.
+[93:48] Consuelo Correa Barros:  Está la Clínica Meds y está la Santa María, donde está a cargo Enrique Not, by the way. Eh, bueno, y la Clínica Meds siempre está llena.
+[93:59] Consuelo Correa Barros:  Es como como un mall, la cuestión. Siempre está lleno de gente. 
+[94:03] Consuelo Correa Barros: ¿Por qué? Como está orientado a como a recuperación médica para deportistas, así nació, los gallos son realmente buenos, son muy buenos. Hazlo hazlo de desde ya estás logueada, ya como sabe quién eres, porque tiene este flujo medio raro que te quieres agendar y te pide el route primero para loguearte y de ahí va.
+[94:25] Consuelo Correa Barros:  Pero asume que ya seleccionaste el profesional y el centro médico.
+[94:31] Carlos Garrido Marín:  Ya.
+[94:31] Consuelo Correa Barros:  Y la especialidad. ¿Ya? Porque si no, vais a estar eternamente y y además una agenda es es cosa.
+[94:39] Consuelo Correa Barros:  Una agenda, comprar pasaje, ese tipo de cosas, eh, reservar un hotel, son flujos que ya son complicados. No te compliques la vida más de lo necesario.
+[94:49] Carlos Garrido Marín:  Ya, perfecto.
+[94:50] Consuelo Correa Barros:  Excepto excepto que en serio quieras y tengas el tiempo. O sea, por ejemplo, si quieres apuntar, no sé, voy a dar un ejemplo. Si justo alguien está en vacaciones o o periodo sin trabajo y quiere aprovechar el curso para aprender un montón de cosas y qué sé yo, y quiere meterle para hacer portafolio, pues metedle.
+[95:11] Consuelo Correa Barros:  Nosotros no vamos a ser sus toppers. Pero con el flujo de la en la agenda, a nosotros nos basta, ¿ya?
+[95:18] Carlos Garrido Marín:  Súper.
+[95:19] Consuelo Correa Barros:  Súper. Y ahí, muy bien. Carol.
+[95:24] Carol Leon:  A ver, eh, yo he pensado en a ver, igual tenemos que acotar, ¿no?
+[95:30] Consuelo Correa Barros:  Acotar.
+[95:30] Carol Leon:  Pero en comprar una entrada, eh, de teatro. Así que.
+[95:35] Consuelo Correa Barros:  Así que igual. Por un segundo pensé en el concierto de BTS y me iba a poner a llorar. No tengo mi entrada.
+[95:42] Consuelo Correa Barros:  Ya, teatro.
+[95:45] Carol Leon:  Eh, he visto que hay diferentes problemas, aunque no lo he analizado en profundidad, pero sobre todo es desde el mapa donde tienes que desde el plano donde tienes que elegir las butacas y todo esto. Entonces, había pensado desde la ficha de de la obra, seleccionar hora y tal, fecha y hora, seleccionar butaca. Igual hay que quedarse ahí porque luego está, bueno, si quieres meter un código, eh, la parte del carrito y el formulario de pago.
+[96:20] Consuelo Correa Barros:  Dame dame un segundo que estoy compartiendo el link otra vez, eh.
+[96:26] Speaker 4:  Ya lo compartí.
+[96:28] Consuelo Correa Barros:  Gracias, Cari. Oye, ¿puedes devolverte? Es que este problema es de esos como que le entregan alma a mi a mi cuerpo.
+[96:38] Consuelo Correa Barros:  No sé si les pasa que que como que algo los entusiasma cuando están están en el nivel de cagazo que como que les genera como dopamina. Ya, eso me me acaba de pasar.
+[96:50] Consuelo Correa Barros:  Como que tuve un subidón de dopamina. Eh, es lo más espantoso que he visto en mucho tiempo y eso que ya habíamos visto lo del ferrocarril, los trenes.
+[97:00] Speaker 4:  Sí, aquí hay hay cositas, eh, o sea.
+[97:03] Carol Leon:  Sí, y además es que no es accesible mediante el teclado las las butacas ni claro, es como.
+[97:11] Consuelo Correa Barros:  Es claro.
+[97:12] Carol Leon:  Entonces, sé que es un componente bastante complejo, pero no sé hasta dónde acotar ni si.
+[97:20] Consuelo Correa Barros:  Es que ahora hacerlo todo, pero acotemos. A ver, Carol, devuélvete un poquito.
+[97:23] Carol Leon:  ¿Dónde?
+[97:25] Consuelo Correa Barros:  Devuélvete un poquito. Porque lo que pasa es que hay un flujo comp o sea, el flujo completo es desde seleccionar el evento hasta, en el fondo.
+[97:34] Carol Leon:  Desde.
+[97:34] Consuelo Correa Barros:  Añadir al carrito.
+[97:36] Carol Leon:  Sí.
+[97:37] Consuelo Correa Barros:  Claro, selec porque tienes que seleccionar la fecha.
+[97:40] Carol Leon:  Sí, la fecha, la hora, que solo hay una, pero también elegir la la butaca.
+[97:49] Carol Leon:  Y, eh, bueno, luego ir al pago, al formulario.
+[97:53] Consuelo Correa Barros:  No, justo antes del pago, o sea, hasta la anterior, hasta ahí.
+[97:57] Carol Leon:  Vale.
+[97:58] Consuelo Correa Barros:  Como que ese ese tendría sentido como el flujo, porque el y es lo mismo que nosotros hacemos cuando testeamos cosas, que es el flujo completo. Porque, eh, testear medio flujo no nos sirve mucho. Los enlaces que se comparten se pueden poner sí, este y sí.
+[98:14] Consuelo Correa Barros:  Ahí, bueno, ahí Carlos después te te responde, pero no seguro.
+[98:19] Speaker 4:  Sí, sí, no, nosotros la la grabación nos preocupó y vamos a poner todo lo que compartimos y un detalle, un resumen de lo que hablamos, ¿vale? Es decir, de todo de todo. Y además las grabaciones, por si no lo habéis visto, se se ponen por capítulos.
+[98:31] Speaker 4:  Es decir, se ponen automáticamente por capítulos y podéis ir saltando a lo que os interesa, ¿vale?
+[98:38] Consuelo Correa Barros:  Nosotros encima con la IA que nos resume las las las clases y todo, tenemos una IA para todo, para todo. Eh, sí, de de aquí para adelante, hmm, yo creo que no, que para mí es como otro flujo.
+[98:52] Carol Leon:  Vale.
+[98:53] Consuelo Correa Barros:  Sí. Pero claro, como que veo que todos todos todos tus flujos tienen un problema, porque desde que vas al checkout, ese checkout también tiene miles de problemas ahí. No aparentemente no tiene etiquetas, los formularios.
+[99:11] Consuelo Correa Barros:  No sé, digo aparentemente, porque si es que esto fuese hecho con material design, yo me pincho en el input y lo que parecía un placeholder, en realidad un label, como que tiene un comportamiento bien especial.
+[99:22] Carol Leon:  Sí, justo.
+[99:23] Consuelo Correa Barros:  Pero aparentemente no está.
+[99:26] Carol Leon:  Justo.
+[99:26] Consuelo Correa Barros:  Y contraste y qué sé yo.
+[99:31] Consuelo Correa Barros:  Guau. 
+[99:31] Consuelo Correa Barros: ¿Y qué hay después?
+[99:34] Carol Leon:  Hmm, después no. Tiene esto también, que que no te no te deja prolongar el tiempo y te saca. Que también.
+[99:43] Consuelo Correa Barros:  Y es que pasa. Todo es muy ya. Ese ese es un criterio de accesibilidad como tal.
+[99:47] Carol Leon:  Por eso.
+[99:49] Consuelo Correa Barros:  Sí, sí. Hay un criterio que habla del tiempo y yo debería poder extender el tiempo y controlarlo un poquitito mejor, y viene con alguna excepción y qué sé yo. Súper interesante.
+[99:59] Carol Leon:  Sí.
+[100:00] Consuelo Correa Barros:  Eh, sí. Hmm. Fíjense que a propósito de ese tiempo, les voy a comentar algo.
+[100:07] Consuelo Correa Barros:  Yo estoy trabajando con un banco en Perú que tiene todo el tema del centro de contactos con atención con clientes. Tiene 25 millones de clientes este banco.
+[100:18] Consuelo Correa Barros:  Imagínense la cantidad de atenciones que tiene el centro de contactos sin de clientes tiene 25 millones. Ustedes comprenderán que yo Chile, país chiquito, a mí me dicen 25 millones y es más que la población de de Chile completo, entonces me asombro, ¿vale?
+[100:32] Consuelo Correa Barros:  Bueno, pero ellos tienen como atención a través de canales de WhatsApp y un montón de cosas, y la la el ticket se cierra después de 24 horas de inactividad. Y eso para mí es reconsiderado, porque es el primer centro de contacto donde ellos no tienen un indicador que hable del tiempo de gestión, o sea, como cuánto tiempo me tomó resolver el problema o la conversación, sino realmente si pudieron resolver a la persona.
+[101:05] Consuelo Correa Barros:  Porque entienden perfectamente que el WhatsApp, la persona se pudo ir a hacer otra cosa, que se fue a hacer un cafecito, que se le olvidó, 24 horas. Eso me parece razonable.
+[101:15] Consuelo Correa Barros:  No digo que te reserven el ticket por 24, porque te están reservando el espacio, lo están quitando del sistema mientras tú estás haciendo eso, pero al menos debería darme la posibilidad de prolongar el tiempo porque estoy buscando mi tarjeta, por ejemplo. Como no sé a cuánto cuánto tiempo se agotó.
+[101:32] Consuelo Correa Barros:  Los bancos también hacen eso, que te preguntan: "¿Sigues aquí?". Y esa y eso ya lo cambia todo.
+[101:37] Consuelo Correa Barros:  Es como un "¿Sigues aquí?". Y si tú le dices que sí, entonces te prolonga el tiempo.
+[101:42] Carol Leon:  Creo que eran seis minutos, creo que te daba.
+[101:45] Consuelo Correa Barros:  No, muy poquito, muy poquito. Sí. Bueno, no, pero acotémoslo hasta hasta antes.
+[101:52] Consuelo Correa Barros:  Pero sí, yo creo, Carlos, no sé si estás de acuerdo conmigo, pero hagamos la selección de butaca, porque esa parte está.
+[101:59] Speaker 4:  Sí. Sí, sí, sí. Yo creo que que es la más interesante y hay bastante bastante cosilla.
+[102:04] Speaker 4:  Sobre todo, bueno, sí, sí, creo que hay bastante cosilla.
+[102:09] Carol Leon:  Sí.
+[102:09] Speaker 4:  Sobre todo para tener en cuenta todo el tipo de alternativa y demás, eh, luego no solamente teclado, lector de pantalla, y en consideración a algunas cosillas, creo que puede ser interesante.
+[102:19] Consuelo Correa Barros:  Me encanta porque además como, eh, cuando vayas seleccionando las, por ejemplo, seleccionas el asiento y el tipo, no sé, si esto fuera un concierto, que es lo que conozco, sería cancha Pacífico, no sé qué, ¿verdad? Claro, con ticket, sin ticket. Cada una de esas selecciones se le tiene que anunciar al lector de pantalla que eso fue selec que fue que está seleccionado, que está activo, que caché anda.
+[102:44] Consuelo Correa Barros:  No es solo diseñar un botón, es como se activó. Está súper está súper entretenido, en verdad.
+[102:50] Consuelo Correa Barros:  Me encanta ese el como desafío. Y además te puede quedar algo muy bonito.
+[102:56] Consuelo Correa Barros:  Porque la accesibilidad tiene eso, que la gente como que tienden a pensar que diseñar accesible significa sacar videos, sacar imágenes, y se pueden diseñar cosas hermosas y accesibles. Y según yo, cuando se considera la accesibilidad, todo queda más bonito.
+[103:12] Consuelo Correa Barros:  Según yo. Porque al final el como si si queda bonito o si queda feo depende como de la habilidad del diseñador, no más.
+[103:20] Consuelo Correa Barros:  Pero no sé, no sé si les pasa que, por ejemplo, como está este criterio de que los botones no deberían ser de menos de 24 por 24 o los elementos interactivos en verdad. Y luego uno sabe que en mobile eso se extiende un poco a 44 por 44, porque se ve harto más cool y moderno el botón grande.
+[103:40] Consuelo Correa Barros:  Para mí. No sé.
+[103:43] Consuelo Correa Barros:  Bueno, Sara, veamos. Ay, ahí te pusieron excelente servicio.
+[103:51] Sara Merino:  Hola. ¿Qué tal? 
+[103:53] Sara Merino: ¿Cómo estáis?
+[103:55] Speaker 4:  Hola, Sara.
+[103:55] Sara Merino:  A mí se me se me ha ocurrido un poco la idea ahora, eh. No tenía yo muy claro el qué, así que quería más o menos un poco el tema en ro acerca de lo que rondase. Porque, eh, he adoptado un gatito hace poco, entonces se me ha abierto un mundo que no sabía todo lo que gira y todos los productos y todas las cosas digitales, todas las aplicaciones que me ha tocado descargar.
+[104:18] Sara Merino:  Al principio pensé de hacerlo de un seguro de gatos, o sea, no parto desde hacer nada desde cero, sino desde algo que desde algo que ya esté diseñado. En el principio pensé un seguro, eh, pero no me terminaba de porque tampoco puedo explorar mucho la aplicación ahora mismo con la que estoy, a ser tan cachorro como que no tengo todo para explorar.
+[104:39] Sara Merino:  Entonces, eh, pensé hacerlo de un marketplace, eh, de cosas para mascotas, en el que me estoy metiendo últimamente y ya me he puesto como a como a trastear ahora, y es que no tienen o sea, visualmente no está mal, pero creo que solo se nos han impor se han importado la capa visible. O sea, ni siquiera puedes navegar con el teclado.
+[105:00] Sara Merino:  O sea, lo tienen como muy limitado. Os comparto pantalla si queréis.
+[105:05] Consuelo Correa Barros:  Ay, estoy pensando en los filtros. Como los permit diseñar filtros.
+[105:09] Sara Merino:  Los filtros eternos. No sé si lo tenéis.
+[105:12] Consuelo Correa Barros:  Desafío más grande de la vida.
+[105:16] Consuelo Correa Barros:  Oh, qué es medio feíto. O no.
+[105:20] Sara Merino:  Sí, bueno, este es uno. A ver, sí que es verdad que no es, eh, una marca muy grande ni muy conocida y tal, es una marca chiquitita, por eso me interesa como mejorarla y tal. Entonces, bueno, si voy como aquí a gatos, entonces tampoco tengo dudas sobre qué cómo acotarlo, ¿no?
+[105:36] Sara Merino:  Sobre qué pantallas hacer. Eh, por ejemplo, pienso, había dicho, puedo partir directamente desde pienso para gatos, elegir un pienso y revisar el carrito, puede ser interesante.
+[105:47] Sara Merino:  Pero sí, aquí hay una ristra de de filtros eternos, que bueno, eh, yo lo hubiese colocado de otra forma o haciendo desplegables de algún entonces nada, imposible navegar con el tab. O sea, yo lo estoy dando ahora y no no no veo nada, no se me destaca nada ni nada.
+[106:08] Sara Merino:  Entonces, bueno, a nivel contrastes también como que hay textos muy pequeñitos. Eh, y yo qué sé, si entramos en un producto, por ejemplo, estos, que son los que compro yo.
+[106:20] Consuelo Correa Barros:  ¿Qué significa últimos UDS?
+[106:22] Sara Merino:  Últimos? Últimas unidades, entiendo que es.
+[106:25] Consuelo Correa Barros:  Ajá.
+[106:27] Sara Merino:  UDS a mí me sale ustedes también, pero pero entiendo que que es unidades que también lo ponen como con esta barra de progreso, que no sé, también es un poco extraño extraño de ver. Entonces, bueno, puede ser. Había pensado que el filtro que empezase desde aquí, desde la página con los diferentes filtros, que hay filtros, subfiltros, etcétera.
+[106:49] Consuelo Correa Barros:  Ah, espérame, que si si la si la barrita está más cortita, es que.
+[106:53] Sara Merino:  Es que hay pocas.
+[106:54] Consuelo Correa Barros:  Qué asiento.
+[106:55] Sara Merino:  Exacto.
+[106:56] Consuelo Correa Barros:  Ah, qué no, qué complicado.
+[106:58] Sara Merino:  Y aquí y aquí, por ejemplo, quedan 75 unidades, como que la barrita está más completa. Pero claro, si no se sabe de cuántas, 75 de cuántas? De 100, creo que eran.
+[107:06] Carlos Garrido Marín:  Pero aparte para el consumidor final, qué mal le da que haya 78 bolsas. Es decir, no te va a comprar 78 bolsas, ¿sabes?
+[107:15] Sara Merino:  Sí, total como como mucho un claim de últimas unidades que dan cinco, por ejemplo. Pero.
+[107:20] Consuelo Correa Barros:  Pero y además.
+[107:21] Carlos Garrido Marín:  Y además y aun así, ¿no? Es decir, no lo me refiero si fuera otro tipo de tienda, ¿no? De tipo tipología de producto, pero no sé.
+[107:28] Carlos Garrido Marín:  Es decir.
+[107:29] Consuelo Correa Barros:  Y eso es un un patrón oscuro, además, como un dark pattern. Eh.
+[107:36] Carlos Garrido Marín:  No, aparte de que si tú tienes si tú tienes que entiendo que lo hacen por un tema de urgencia, pero si tú tienes, eh, última unidad en el 90% de los productos, como pasa, pierde la urgencia y pierde el sentido. El tema me lo compro.
+[107:51] Sara Merino:  Sí, igual que igual que los igual que los descuentos, que todo tiene descuento. Como todo tiene descuento, nada está, porque todo tiene descuento. Eh, y luego aparte el precio minúsculo.
+[108:02] Sara Merino:  El precio minúsculo y y ya te digo, por por por, eh, teclado es imposible de navegar. Funciona todo con mouse over.
+[108:10] Sara Merino:  Eh, sí que hay un pequeño destaque del la tipo cuando pasas el ratón por encima. Eh, aquí puedes directamente añadirlo al carrito.
+[108:20] Sara Merino:  Pero bueno, si vamos como a un producto en particular, eh, me he dado cuenta que depende del producto, el esta como la la diferente información que se da el producto es diferente. O sea, va más acorde con la marca del producto que con la marca de de la web.
+[108:39] Sara Merino:  O sea, si yo ahora mismo entro en en otro, aquí en Natur Variety, por ejemplo, esto es diferente, esto es naranja porque la marca es naranja.
+[108:50] Consuelo Correa Barros:  Claro, que se.
+[108:51] Sara Merino:  Se basa en los iconos de la marca, entonces no tiene nada estandarizado.
+[108:54] Consuelo Correa Barros:  Que seguramente como si es un marketplace, la misma marca sube su su información, entonces eso muy probablemente son fotos que sube el mismo.
+[109:05] Sara Merino:  Sí, estos son.
+[109:06] Consuelo Correa Barros:  El vendedor.
+[109:07] Sara Merino:  Sí. Ya no sé cómo funciona. Eh, porque esto es una o sea, tienen tiendas físicas, tienen dos chiquititas en dos ciudades, y la nave la tienen en un polígono en Burgos.
+[109:19] Sara Merino:  Quiero decir que no es una ciudad muy grande. Eh, entonces, bueno, yo digo, puede ser que sí que suban ellos las cosas, solo que en vez de generar su propio material, van a la a la cuen van a la página de Naturs Variety, se meten en el mismo producto y copian y pegan, se descargan las imágenes.
+[109:36] Sara Merino:  Que puede ser. Esto ya es una forma de trabajar, ya no sé cómo será, pero yo qué sé, no puedes hacer zoom a la parte de atrás de esta foto, que es donde tienen como todos los datos, aparte de que están escritos aquí, eh.
+[109:46] Sara Merino:  Y luego ya, claro, las estas imágenes, yo no no o sea, no sé cómo se puede ver si tienen descripción alternativa estas imágenes.
+[109:57] Consuelo Correa Barros:  ¿Sabes qué? Algo que.
+[109:58] Sara Merino:  Supongo que desde código, pero no sé mirarlo.
+[110:01] Consuelo Correa Barros:  No, no, no. Nosotros os vamos a enseñar a mirarlo. No te preocupes por eso.
+[110:05] Sara Merino:  Vale.
+[110:06] Consuelo Correa Barros:  A mí se me había olvidado que Carlos me pidió cuando hicimos este curso, yo estoy justo estoy haciendo un desarrollo con con entrenamos a un modelo de IA para describir imágenes, y reconoce cuando la imagen es tiene texto.
+[110:21] Sara Merino:  Mm-hmm.
+[110:21] Consuelo Correa Barros:  Entonces, porque lo vamos a ver todo esto en los siguientes módulos, pero existen distintos tipos de imágenes. Están las imágenes que son descriptivas, las imágenes que son informativas, luego hay imágenes que son decorativas, y dentro de ese universo existe la imagen que es de texto. Entonces, pensemos en una imagen que es un banner.
+[110:41] Consuelo Correa Barros:  O sea, que el texto es parte de la imagen. Entonces, el texto alternativo de eso debería ser exacto el texto que aparece en la imagen para que la persona que no lo ve lo pueda interpretar, ¿vale?
+[110:53] Consuelo Correa Barros:  Pero en este caso. La imagen que la la la imagen, cuando te muestran las tablas nutritivas, es imagen informativa.
+[110:59] Consuelo Correa Barros:  Entonces, el mi algoritmo es capaz de meterse a la imagen y decirte exactamente qué es lo que dice y pasarte el texto alternativo. Pero por supuesto que es una cosa que es gigante.
+[111:11] Consuelo Correa Barros:  O sea, ustedes comprenderán que un texto alternativo debería tener 150 caracteres, ya métele un poquito más, pero esa cantidad de información tiene que estar en alguna parte. Entonces, eh, como que me dan ganas de que la de que el flujo que escojas sea la información del producto.
+[111:27] Consuelo Correa Barros:  O sea, como que encontrar un producto, informarme del producto, porque aquí hay mucho caos. Sí, sí.
+[111:33] Consuelo Correa Barros:  Aquí ya te digo, y cada cada pág
+[111:34] Sara Merino: ina es diferente. Esa tiene un vídeo, por ejemplo. Eh, aquí no salen en esto no salen salen el tamaño de las croquetas, pero en otro en otra en otra marca no.
+[111:44] Sara Merino:  Claro, este tamaño de croquetas es un PNG. O sea, es un es un JPG.
+[111:49] Sara Merino:  Entonces, bueno, claro, esto es de 10 milímetros, 5 milímetros, habría que ver cómo se pone.
+[111:54] Consuelo Correa Barros:  Pero mira, ahí es como una fotito uno a uno, con escala real.
+[111:59] Sara Merino:  Pues tiene pinta de ser, más o menos.
+[112:01] Speaker 4:  Curioso, curioso gato maestro.
+[112:04] Consuelo Correa Barros:  Sí, es cierto. Además, ¿cómo vas a saber tú si el gato quiere de de 10 milímetros o prefiere de 12? O sea, no sé, mi mi perro no es.
+[112:13] Speaker 4:  No, pero eso eso tiene tiene sentido, por ejemplo.
+[112:17] Sara Merino:  Sí, tiene sentido, eh.
+[112:18] Speaker 4:  Sí, sí, sí, tiene sentido, sobre todo para.
+[112:20] Sara Merino:  De hecho, el mío es cachorro y tienen y son más pequeñitas porque su boca es más pequeñita.
+[112:26] Consuelo Correa Barros:  Entonces te sale un tamaño.
+[112:28] Sara Merino:  Exacto. Porque porque sus dientes no son tan grandes y no no mastican tan bien. Pero bueno.
+[112:34] Consuelo Correa Barros:  No tengo no tengo gato y y mi perro llegó siendo adulto, entonces como que esas cosas no se me ocurren. Eh, curioso. Ahí, bueno, voy a aprovechar de pasar datos.
+[112:49] Consuelo Correa Barros:  Textos alineados al centro. Es que hay algunos criterios que son triple A, que habla, por ejemplo, como de la estructura que debería tener un texto.
+[112:59] Consuelo Correa Barros:  Pero igualmente mi recomendación siempre es alinear a la izquierda, y quizás si es que algo, un título, qué sé yo, puede que sea alineación al centro, pero dos líneas, tres líneas como máximo, pero alineado al centro más mayúsculas es una tortura para las personas con dislexia.
+[113:17] Sara Merino:  Sí, eso es a lo que te refieres. Cosas así, títulos así.
+[113:20] Consuelo Correa Barros:  Claro, y el texto que sigue, que está justificado, sé que está justificado porque tiene grandes ríos.
+[113:26] Sara Merino:  Sí, aquí unos ríos eternos.
+[113:29] Consuelo Correa Barros:  Esos ríos, si la pantalla es más grande y no está limitado el máximo, ese río puede ser gigante. O sea, como que me puede quedar una palabra por allá y la otra por allá. Entonces, eh, vamos como a aprender también ese tipo de cosas, como de, eh, no solamente vinculado a a los criterios de la Wicca, que hasta doble A, sino que también como bueno, pero qué cosas son buenas prácticas para para la vida, o sea, del del diseño, aunque no estén dentro del doble A, ¿vale?
+[114:00] Sara Merino:  Vale.
+[114:00] Consuelo Correa Barros:  Eh, sí.
+[114:02] Sara Merino:  Y ya por último, la el checkout, bueno, el checkout, el carrito, eh, bueno, es muy sencillo. Aquí tiene como código promocional, pero que si no pasas el mouse por encima no sabes, bueno, porque aparece así, eh, no sabes qué te despliega la caja para meter el texto. Eh, bueno, ya te digo, es que no es no es navegable para nada con el con el con el teclado, o sea, es imposible.
+[114:27] Sara Merino:  No, no me selecciona absolutamente absolutamente nada.
+[114:31] Consuelo Correa Barros:  Está muy feito.
+[114:32] Sara Merino:  Entonces, bueno, sí, es todo muy pequeñito, los textos son minúsculos. Aquí sí que abajo me ponen como un recordatorio de esto es lo que cuesta tu tu pedido, pero es que casi ni se ve. Yo yo antes me voy aquí, pero sigue siendo como muy pequeñito.
+[114:46] Sara Merino:  Pero sí, sí, bueno, también también darle una capa también de diseño a todo, aparte de accesibilidad, teniendo en cuenta buenas prácticas, etcétera. Entonces, era un poco la idea, de partir desde quizás ya, eh, la categoría de producto, que sería piensos, se me había ocurrido, o húmeda, eh, bueno, me da igual.
+[115:04] Sara Merino:  Elegir un producto, sería como página de producto, y después ya pasar a al resumen del carrito.
+[115:11] Consuelo Correa Barros:  Ah, no sé si entiendo el resumen del carrito. Tal vez tal vez hasta aquí no va. Ah, al menos que sea este chiquitito.
+[115:19] Sara Merino:  Hasta el desplegable este.
+[115:21] Consuelo Correa Barros:  Sí, hasta quizás hasta ese digo ese desplegable porque tiene, eh, oportunidades de mejora.
+[115:30] Consuelo Correa Barros:  Está medio feíto también. Ahí nosotros como otra vez no no vamos a evaluar temas de diseño, nosotros asumimos que todos ustedes ya saben diseñar.
+[115:41] Consuelo Correa Barros:  Lo que vamos a ver es tema como vinculado a la documentación, pero obvio que seguimos sabiendo de diseño, así que podemos opinar entre todos. Ahí hacemos como sesiones de design critique nomás.
+[115:53] Consuelo Correa Barros:  Eh, es es horrible. Me parece que vi unos tab ahí entre medio que no se entendían que eran tab.
+[116:00] Consuelo Correa Barros:  Aquí aquí el problema.
+[116:01] Sara Merino:  Pero eso o no lo sé.
+[116:04] Consuelo Correa Barros:  No, pues esos son como tildes. No no te cambia la no, los tab son las estas ventanas que te cambian la información del texto, como dependiendo de la selección. Más abajo, mira, ¿ves?
+[116:15] Consuelo Correa Barros:  Más abajo.
+[116:16] Sara Merino:  No, no, no escucho un catch. Ah, sí, ahí estás. Sí, sí.
+[116:21] Sara Merino:  Eh, aquí no no no se tiraron una hora pensando. Esto es un esto es una imagen directamente con el texto escrito.
+[116:28] Sara Merino:  O sea, sí, sí, aquí hay hay margen de mejora total. O sea, era un poco lo que se me había lo que se me había ocurrido, tirar por unas más más marketplace.
+[116:40] Consuelo Correa Barros:  En verdad, sí, en serio, si alguien dice como que va a llegar con una página de cómo matar a Mickey Mouse, hasta nosotros no lo vamos a juzgar. O sea, es como traigan el proyecto que quieran, porque no estamos para evaluar si el si el proyecto es relevante o no es relevante, si es de interés, si alguien lo va a consumir o no, nada, ni de cerca. O sea, vamos a asumir que es la última nosotros diríamos la última chupada del mate.
+[117:05] Consuelo Correa Barros:  Así como es es innovación pura, lo máximo en en en ideas, la idea innovadora, da igual. Eh, porque lo que vamos a ver en el fondo es como solamente accesibilidad, ¿vale?
+[117:17] Consuelo Correa Barros:  Tampoco es que vayamos a leer el contenido. Sí vamos a mirar una lectura una lectura por encima, porque igualmente el contenido es parte de la accesibilidad, hay que saber escribir.
+[117:28] Consuelo Correa Barros:  Eh, pero la guía le dicen cómo escribe esto en sencillito y nos va a ayudar, ya está.
+[117:35] Sara Merino:  Vale, genial entonces.
+[117:37] Consuelo Correa Barros:  Sí. Estoy pensando, Sara, en cuáles van a ser tus componentes complejos, porque entre que los componentes simples y los componentes complejos, todo es una cosa horrible. Eh.
+[117:51] Sara Merino:  Quizás quizás estos tabs. Eh.
+[117:57] Consuelo Correa Barros:  Y estoy pensando en el menú.
+[117:59] Sara Merino:  Sí, bueno, sí, es menú desplegable es menú desplegable.
+[118:04] Consuelo Correa Barros:  Y los filtros que tenía, esos filtros que habían.
+[118:08] Sara Merino:  Sí, está aquí el breadcrumb. Sí, bueno, estos filtros.
+[118:13] Consuelo Correa Barros:  Fíntete uno cualquiera. Esos filtros, sí.
+[118:17] Sara Merino:  Sí.
+[118:18] Consuelo Correa Barros:  Esos filtros podría ser algo más. Me encantan los filtros a mí, como como problema de diseño.
+[118:26] Speaker 4:  Suena a fantasía. También comentaron que una de las cosas que vemos, sobre todo en los módulos posteriores, que el módulo creo que en el cuatro y cinco, ¿vale? También es que dentro de vuestros flujos probaréis también un poco, ¿vale?
+[118:39] Speaker 4:  Lo pondréis a prueba, sobre todo porque aprenderéis a utilizar interacción y demás, ¿vale? Y cómo debería de interaccionar depende de la tipología de componentes.
+[118:47] Speaker 4:  Eh, entonces, bueno, también lo probaréis en vuestro propio flujo, ¿vale? Que eso implica el estado de pantalla y demás, y que sepáis sobre todo cómo se tiene que comportar, ¿vale?
+[118:54] Speaker 4:  Y a nivel de teclado, que no está me refiero a parece trivial y es darle al tab, pero hay a veces que no es tan trivial, depende de la tipología de componentes y ahí hay esos truquitos y esas cosas.
+[119:03] Consuelo Correa Barros:  Súper. Oye, ya estamos ya estamos sobre la hora, entonces les iba a decir una cosilla. Obviamente, si ustedes avanzan en su en su ficha o no avanzan en su ficha, es responsabilidad de ustedes.
+[119:15] Consuelo Correa Barros:  Nosotros vamos a ir módulo tras módulo diciéndoles: "Esta semana avancen en esto", para que después no se encuentren con que tienen que desarrollar todo el proyecto, ¿vale? Lo que nos interesa es que todo esto es parte de la documentación del proceso, entonces manéjenlo, ojalá, en un único Figma, porque después ustedes nos van a tener que entregar la URL para que nosotros hagamos la revisión, ¿vale?
+[119:39] Consuelo Correa Barros:  Eh.
+[119:40] Speaker 4:  Sí, sí, la la URL la entregaréis, dentro de la plataforma y demás, bueno, habrá una lección, ¿vale? Eh, donde básicamente se pondrá un poco eh el resumen eh y demás, y bueno, ahí podréis poner también el enlace de vuestro Figma y todo eso, ¿vale? Así que, bueno, eso no no os preocupéis.
+[119:56] Speaker 4:  Eh, también quiero comentar de de esto.
+[120:02] Speaker 4:  No me acuerdo.
+[120:03] Consuelo Correa Barros:  Ah, yo quería preguntarles cuánto tiempo les tomó hacer el módulo uno.
+[120:09] Speaker 4:  Ah, sí.
+[120:09] Consuelo Correa Barros:  ¿Cuánto tiempo más o menos les tomó hacer el módulo uno?
+[120:12] Sara Merino:  Yo he estado toda la semana.
+[120:15] Consuelo Correa Barros:  No, pero terminé ayer haciendo todos los días un poco. Vale, pero pero lo alcanzaste en la semana a hacer el módulo completo? Porque igual tenía harto contenido.
+[120:27] Consuelo Correa Barros:  Lo que queremos saber es si es que si le estamos sobrecargando mucho o no. Porque tiene.
+[120:33] Estibaliz Martin Borja:  Yo esta semana yo esta semana sí he podido, pero porque he tenido poca carga de trabajo, eh, y lo he estado haciendo en horas de trabajo. Eh, pero si hubiera tenido que trabajar las ocho horas y lo hubiera tenido que hacer después, no hubiera llegado.
+[120:50] Consuelo Correa Barros:  Ya.
+[120:50] Sara Merino:  Ahí he contestado.
+[120:52] Speaker 4:  Sí.
+[120:52] Consuelo Correa Barros:  Sí, sí, sí.
+[120:53] Carlos Garrido Marín:  Sobre todo porque quizás el módulo uno, dos y tres sean lo más los que menos contenido tengan. A partir del cuatro empieza bastante más intenso. Eh, claro, yo lo digo por lo comentado, por eso, sobre todo porque a lo mejor tenemos que reducir un poco la los números de ejercicios, bueno, no sé.
+[121:13] Carlos Garrido Marín:  Sobre todo lo importante es que no os vayáis quedando atrás, ¿vale? Que creo que eso es importante porque, sobre todo, las clases están en directo, las vamos las vamos a buscar a hacer relacionadas con el módulo que que que corresponde, ¿vale?
+[121:25] Carlos Garrido Marín:  Lo comentamos sobre todo por eso. Entonces, si veis no sé cuántos de aquí habéis terminado el módulo.
+[121:30] Carlos Garrido Marín:  Es decir, yo más o menos he visto la estadística y sí que es verdad que creo que solamente lo han terminado la mitad de las personas, pero bueno, no sé, pues eso. Unas dos horas, sí, más o menos estaba calculado a unas dos horas cada día.
+[121:45] Consuelo Correa Barros:  Cuatro horas, claro, nosotros calculamos que iban a ser como un par de horas.
+[121:48] Carlos Garrido Marín:  Claro, estaba calculado para que os llevaran toda la parte que vamos a tener que llevar, pues es unas dos, tres horas más o menos, todo lo que tenemos calculado, ¿vale? Más luego las dos horas que complementaría la clase en directo, pues la dedicación, pues es unas cinco horas, más luego lo que queráis dedicar al proyecto, que ahora mismo es poquito, pero luego se irá incrementando y irá a mayores, ¿vale?
+[122:07] Consuelo Correa Barros:  Sí, sí, perdón.
+[122:09] Speaker 4:  Vale, muchas gracias.
+[122:10] Carol Leon:  Perdón, porque todo ese tiempo era también para elegir el el flujo del proyecto, así que sí, igual unas tres horas, una cosa así. Ajá, perfecto.
+[122:19] Speaker 4:  Vale.
+[122:20] Consuelo Correa Barros:  Sí. Oh, Esty, sí, es que Esty dice que le llevo más, pero porque es disléxica. Ya, pucha.
+[122:25] Consuelo Correa Barros:  La historia la historia de la vida de de las personas con dislexia, qué terrible. Eh, bueno, si se van encontrando como algún problema en la plataforma, tienen la la gran suerte de que como la plataforma está construida a la medida y y la hacemos nosotros mismos, bueno, y nosotros mismos Carlos, digamos, eh, si es que van encontrando algo que se pueda mejorar, dennos feedback, porque nosotros lo podemos implementar en la medida de lo posible.
+[122:54] Consuelo Correa Barros:  A veces a veces eh el feedback es muy sencillo de resolver y vamos y y le ponemos la mejora, ¿vale? Eh, y acuérdense de de ir haciendo, si es que les va sobrando tiempo, los cursitos que ya están en la plataforma.
+[123:09] Consuelo Correa Barros:  Están de entrevistas inclusivas, hay unos de diseño universal que igualmente les va a complementar. Porque durante estas diez semanas, que si no eran parte de la comunidad de Wizpr, durante estas diez semanas tienen acceso a todos los cursos de la plataforma, y hay cursos en vivo que están muy muy buenos.
+[123:27] Consuelo Correa Barros:  El de colores es muy bueno. Sí, una horita, dice la Bárbara, sí, una horita está calculado.
+[123:33] Consuelo Correa Barros:  Esty, teníais la mano levantada.
+[123:35] Sara Merino:  Sí, pero se me acaba de olvidar la pregunta, espera.
+[123:38] Consuelo Correa Barros:  A mí me pasa eso también a veces.
+[123:41] Speaker 4:  Ya, ya.
+[123:43] Consuelo Correa Barros:  Sí.
+[123:44] Speaker 4:  Ya no sé.
+[123:45] Estibaliz Martin Borja:  Sí, ya, ya me he acordado, perdón. Eh, no, era ver si conocéis alguna herramienta que lea el texto, pero que solo lea el texto, que no me lea todo, o sea, no quiero un voiceover o un sino que me lea el texto. Es que me descargué un plugin, pero se me raya, y y eso me ayudaría a ir más rápido, la verdad.
+[124:07] Consuelo Correa Barros:  Ay, Carlos, Carlos les va a enseñar a armar algo así.
+[124:11] Carlos Garrido Marín:  Sí. Eh, yo igualmente eh te diría, Esty, de el navegador tiene un si no lo pongo en cuando ponga la grabación, ¿vale? Que la entrego la pondré dentro de una hora.
+[124:23] Carlos Garrido Marín:  Eh, el navegador tiene una un mecanismo para el modo lectura, para leer y tal, que no sé si lo conocen directamente. Los navegadores como Google Chrome, creo, Firefox y Safari lo tienen nativo, que es como modo lectura y demás, y te lee y funciona bastante bastante guay.
+[124:38] Carlos Garrido Marín:  Eh, que no sé si eso lo has probado y demás. Eh, creo que se llama como modo lectura.
+[124:42] Sara Merino:  Te lo lee o que te quita todo lo demás.
+[124:44] Speaker 4:  No, no, te quita te lo lee. Tiene una tiene una de estas incorporada que te lee también.
+[124:49] Sara Merino:  Ah, pues luego mañana lo pruebo, ¿vale?
+[124:52] Carlos Garrido Marín:  Sí, te lo lo lo pongo si queréis en un en un enlace, te lo pongo en la grabación, ¿vale? También para que lo tengáis y ahí ya lo podáis hacer, ¿vale?
+[124:58] Sara Merino:  Gracias.
+[125:00] Speaker 4:  Nada. Nada, pues Consu, si quieres lo dejamos por aquí, ¿no?
+[125:06] Consuelo Correa Barros:  Sí, está. Sí, yo estaba justo diciendo porque mira, hicieron el curso de color, y aquí dicen: "Hice el de modelo teórico y etiquetas y me encantaron". Y yo estoy diciendo que mi sueño es decirle a alguien: "Tu prejuicio está enmarcado en este modelo teórico", y que la otra persona entienda mi insulto.
+[125:25] Consuelo Correa Barros:  Que entienda lo que le estoy diciendo y y ojalá que haya otro grupo de personas que se rían, o sea.
+[125:32] Consuelo Correa Barros:  Sí, en general la gente habla muy basado en en ciertos modelos, y en particular hay uno que yo no llegué a mencionar en ese curso, que es el modelo de la prescindencia. Y no lo mencioné porque no es parte del contenido de CPAC, es un modelo en desuso, pero que la gente todavía habla así.
+[125:50] Consuelo Correa Barros:  Entonces, cuando te dicen, eh, por ejemplo, "tienes una bendición" por tener un hijo con discapacidad, o que te digan: "Dios le da sus mejores batallas sus peores batallas a sus mejores guerreros", o el angelito, o al revés, "es un castigo divino", o qué sé yo, todo eso está bajo un modelo que viene arrastrado desde la Edad Media, o sea, como estuvo, no sé, miles de años imperante, y quedó grabado en el ADN. Pero ustedes comprenderán que ese tipo de información no lo puedo grabar en un curso
+[126:20] Consuelo Correa Barros:  porque es como que sería tirarle bronca a la vida. No es necesario, lo podemos hacer por acá. Eh, así que bueno, nada, si les gusta ese curso, en serio, el de diseño universal también está bueno.
+[126:36] Consuelo Correa Barros:  Mira, Sara dice que es del tónica, así que puede ayudar a testear colores, buenísimo.
+[126:41] Carlos Garrido Marín:  Ostras, pues pues Sara, a lo mejor bueno, yo creo que el ejemplo se entendía, ¿vale? Pero si luego tiene algo porque justamente habla hay ejemplos de temas de daltonismo y demás, creo que comentas tú, Consu, en este módulo, en el uno o en el siguiente, no me acuerdo.
+[126:55] Consuelo Correa Barros:  Yo creo que en el en el dos, el verde caca con el verde caca, sí. El el el rojo con el verde. Bueno, después oh, quedó grabado.
+[127:03] Consuelo Correa Barros:  Bueno, rojo y verde, siempre genera problemas y se ve como color color feito.
+[127:11] Consuelo Correa Barros:  No notaba la diferencia. Sí, claro.
+[127:12] Consuelo Correa Barros:  Bueno, fantástico. Ya, cualquier cosa, Discord, ¿vale?
+[127:17] Consuelo Correa Barros:  Nos tienen ahí, y nos tienen nuestros correos. Muchas muchas gracias.
+[127:21] Sara Merino:  Muchas gracias.
+[127:22] Speaker 4:  Gracias.
+[127:22] Sara Merino:  Muchas gracias.
+[127:23] Speaker 4:  Chao.
+[127:24] Consuelo Correa Barros:  Adiós.
+[127:24] Sara Merino:  Chao.
+[127:25] Consuelo Correa Barros:  Chao.

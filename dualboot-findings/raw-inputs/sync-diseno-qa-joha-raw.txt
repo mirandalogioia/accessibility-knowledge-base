@@ -1,0 +1,367 @@
+# Accessibility Sync <> Process in Dualboot
+
+## Meeting Info
+- Attendees: Teresita Ambrosio, Johana Rios, Miranda Logioia
+
+## Summary
+### Flow Summary
+Sincronización entre diseño y QA sobre accesibilidad: QA compartió herramientas (Axe, Payly) y límites actuales, se acordó doble A como mínimo y mejorar el traspaso de información de diseño a QA.
+
+### Iniciativa de accesibilidad en diseño
+- Miranda Logioia arrancó un curso de accesibilidad y alimenta una knowledge base con su contenido
+- Diseño planea crear un agente que audite accesibilidad en diseños y prototipos, y busca input de QA
+- La validación humana de un especialista sigue siendo clave aunque haya skills o agentes
+
+### Cómo QA trabaja la accesibilidad hoy
+- Hay más legislación y multas; los clientes piden accesibilidad sobre todo por obligación legal
+- En Dingo cada PRD pasa por ticket review y un chequeo doble A vía MCP
+    - No llegan al flujo completo ni a la prueba manual por problemas funcionales previos
+- Lighthouse puede aprobar al 90% algo cuya navegación por teclado no funciona; ejemplo de Crónica leyendo "link href"
+- Se recomienda Axe (plugin para design systems y para código) y Payly, herramienta pública integrada al repo de automation
+
+### Mobile y referencias externas
+- No hay herramienta rápida tipo Axe para mobile; se prueba con la configuración nativa de accesibilidad del celular
+- Referencia: charla de Eva (María Evangelina Ferreira), líder de producto de Mable, en la conferencia Quality Sense
+
+### Estado en proyectos y calidad de diseños
+- La accesibilidad de los diseños hoy depende del diseñador; no hay herramienta estandarizada en el equipo
+- En CRDN no se pidió accesibilidad; se probó dark mode con Juli y un agente de Figma, quedó en backlog
+    - Solo restore net por ahora; Eric quería ver un ejemplo antes de expandir
+
+### Traspaso de información diseño a QA
+- Diseño debería avisar a QA los requisitos de accesibilidad del cliente al iniciar un proyecto
+- Documentar target audience: devices, sistema operativo mínimo, browsers, screen size y contexto de uso
+    - Ejemplo: proyecto de laboratorio usado con guantes
+- Hay poca conexión entre equipos; interés en una sesión futura para compartir procesos y patrones de diseño
+
+### Próximos pasos
+- (Speaker 1) Pasar el contacto de Eva (María Evangelina Ferreira)
+- (Speaker 1) Hacer una encuesta al equipo de QA sobre la accesibilidad de los diseños recibidos
+- (Miranda Logioia) Compartir la knowledge base de accesibilidad con QA
+- (Miranda Logioia) Charlar el lunes la idea pendiente con Speaker 3
+- (Speaker 3) Revisar el template de user personas de la knowledge base para incluir devices, OS y screen size
+
+### Decisiones tomadas
+- El estándar mínimo de accesibilidad para diseño y QA es doble A (WCAG), ajustable si el cliente pide triple A
+
+## Transcript
+[02:40] Speaker 1: ¡Campi! ¿Cómo andamos?
+[02:44] Miranda Logioia:  Ay, se está terminando el viernes, ¿eh?
+[02:46] Speaker 1:  Sí.
+[02:47] Miranda Logioia:  Escuchame una cosa, ¿cómo viene tu tarde? ¿Tranqui o a pleno?
+[02:53] Speaker 1:  Y mira, desde que hablamos solo paré para almorzar, 40 minutos, y—
+[02:59] Miranda Logioia:  ¡No! ¿Qué viaje? Bueno, pero ya con un pie en el cine.
+[03:04] Speaker 1:  Sí. Sí, sí, sí. Reunión es linda igual, así que el tuyo.
+[03:10] Miranda Logioia:  Bien, bien. Qué bueno. Como para encarar. 
+[03:16] Miranda Logioia: ¿Haces algo el finde o descansás?
+[03:20] Speaker 1:  Eh... mañana voy al cine a ver "Digger", la de Tom Cruise, ¿viste?
+[03:24] Miranda Logioia:  Ah, no sé cuál es. ¿De qué trata?
+[03:27] Speaker 1:  Ya la vi, en realidad.
+[03:29] Miranda Logioia:  ¡Ah! ¿Voy a ir dos veces?
+[03:31] Speaker 1:  Ya la vi.
+[03:33] Miranda Logioia:  ¡Manija!
+[03:35] Speaker 1:  ¡Manija! Sí, está buenísima. Es de una onda... no te quiero spoilear nada porque si la ves...
+[03:40] Speaker 1:  Es una onda de, ¿viste la de DiCaprio de "No mires arriba"? "Don't Look Up".
+[03:45] Miranda Logioia:  Ah, sí.
+[03:45] Speaker 1:  Es una onda así.
+[03:46] Miranda Logioia:  Esa. Mira.
+[03:48] Speaker 1:  Una media onda. Está buena. Te tira mucha datita que te deja pensar.
+[03:53] Miranda Logioia:  Sí. Ah, bueno. 
+[03:55] Miranda Logioia: ¿Sabes que justo estaba la tonta diciendo "ay, qué podría haber en el cine"? Porque, ¿viste, cuando hay un mes que no voy, digo: "ay, siento que me estoy perdiendo algo", como planazo, ¿viste?
+[04:03] Speaker 1:  Ay, sí, re.
+[04:05] Miranda Logioia:  Eh... pero sí, me encanta ese plan.
+[04:08] Speaker 1:  Ay, sí, sí. Te la súper recomendo.
+[04:10] Miranda Logioia:  Y con todavía Choto encima.
+[04:12] Speaker 1:  Ay, mal.
+[04:12] Miranda Logioia:  Por culpa de cerrarte en un cine.
+[04:15] Speaker 1:  Claro. Es que, ¿qué vas a hacer? Está tipo re feo.
+[04:18] Speaker 1:  Te tenés que encerrar en algún lado.
+[04:20] Miranda Logioia:  Ay, sí. Tal cual. Si no es en la casa sino en el cine, al menos es algo divertido.
+[04:25] Speaker 1:  Ay, sí, con un pochoclo ahí, sabes lo que es, su planazo.
+[04:28] Miranda Logioia:  Ay, sí. Qué lindo. Qué divertido.
+[04:31] Speaker 1:  Ay, sí, re. A ver cuándo llegue la yoda. 
+[04:37] Speaker 1: ¿Viste que a Flor le sacaron las muletas? Un golazo, me contó.
+[04:40] Miranda Logioia:  Pobre. Estaba que no sabía... no sé si te contó, pero estuvo a punto de que le dijeran que la... casi que la operan.
+[04:47] Speaker 1:  Ay, sí, horrible. Ay, pobre. Qué bajón.
+[04:51] Miranda Logioia:  No, es que ayer vimos escalar y decíamos: "burro...". Justo donde ella se cayó, se ve que se—
+[04:56] Speaker 1:  ¡Ay!
+[04:58] Miranda Logioia:  No sé, casualidad, obvio, pero nos reímos porque justo donde se cayó ella hay como una... está la colchoneta rota y pusieron otra arriba. Entonces ayer jodiamos con los chicos de, tipo, "no podemos escalar en esa parte porque está embrujada". Yo, de hecho, hace un par de semanas también me dio que caí y me mamé ahí y no pasó nada, pero digo: "boluda, está embrujada esta parte del gimnasio".
+[05:15] Miranda Logioia:  Tipo, "no, no, no subimos más por acá". Tipo, justo ayer nos acordamos.
+[05:19] Miranda Logioia:  No, no, no. Te juro.
+[05:21] Miranda Logioia:  Encima decíamos con Mati que estábamos viéndola, tipo: "no puedo creer cómo pasó todo este tiempo". Eh... y nada, y que casi le digan que... o sea, que por unos milímetros no la tuvieron que operar o que—
+[05:33] Speaker 1:  ¡Ay, mal!
+[05:33] Miranda Logioia:  Que caminando se vuelva a quebrar... o sea, es terrible.
+[05:36] Speaker 1:  No, no, no.
+[05:37] Miranda Logioia:  Es terrible, es terrible. Pero nada, ya por suerte, eh... mucho mejor y hay un mejor pronóstico. Pero en un momento fue como: "che, si me operan... o sea, si me tienen que operar, tengo que estar de vuelta 6 semanas sin caminar".
+[05:51] Miranda Logioia:  O sea, ella está sin caminar hace un montón, con todas las actividades, todas las cosas.
+[05:55] Speaker 1:  Ay, no, no, no. Qué bajón. Encima me contó que se vino a Uruguay con las muletas. 
+[06:00] Speaker 1: ¡Qué bajón, boludo!
+[06:02] Miranda Logioia:  Claro, estás trabajando, socializando, con las muletas.
+[06:05] Speaker 1:  Ay, no.
+[06:08] Miranda Logioia:  Claro, ¿viste?
+[06:09] Speaker 1:  Ay, pobrecita.
+[06:10] Miranda Logioia:  No, mira, mira, pobre.
+[06:12] Speaker 1:  Ay, mal.
+[06:13] Miranda Logioia:  No, fue tremendo. Y... no, y ayer pensábamos con Kiki que... como que empezás a tomar más conciencia, ¿viste? De la altura.
+[06:22] Speaker 1:  Obvio.
+[06:23] Miranda Logioia:  En Mar de Plata fui a un gimnasio que... porque yo de manija, ¿viste? Le dije a mis amigas: "vamos a probar". Claro, fui a uno que la... que la... ponele que el muro de acá mide 4 metros.
+[06:35] Miranda Logioia:  Este muro medía, no sé, 6, 7 metros sin soga.
+[06:39] Speaker 1:  ¡Eh!
+[06:40] Miranda Logioia:  Empezó a subir y digo: "che, esto no está bien". O sea, yo posta si de acá me caigo, no hay forma que la colchoneta me soporte, porque es muy, muy alto.
+[06:47] Speaker 1:  Claro.
+[06:48] Miranda Logioia:  Y era... y después le pregunté al chabón del gimnasio y me dijo: "sí, es como un gimnasio más técnico". Porque ellos, a mí ahora tienen las sierras, tienen cerrar las ventanas, cerrar los pares. Entonces Mati empezó a practicar para después ir a la montaña directo, ¿entendés?
+[07:00] Speaker 1:  Ah.
+[07:00] Miranda Logioia:  Es como más complicado. Yo, tipo, subía 2... medio metro y ya me cansaba, era como: "no, no entiendo". Y de repente, claro, uno que lo puede subir, voy hasta todo pa arriba de todo, y en un momento miro para abajo y mis amigas estaban así.
+[07:12] Speaker 1:  ¡Qué bajón!
+[07:13] Miranda Logioia:  Y claro, pero claro, lo hi... o sea, vos subís, pero después tenés que hacer lo mismo en negativo, entonces la gravedad te empieza a cansar. Yo en un momento me dejé caer y caí en un par de segundos, ¿viste? Cuando decís: "menos mal que me... que caí bien y me tiré para atrás".
+[07:29] Miranda Logioia:  Porque si caigo peor mal con el tobillo, chao.
+[07:32] Speaker 1:  Claro.
+[07:32] Miranda Logioia:  Tipo, literal. O sea, es así. Así que bueno.
+[07:36] Speaker 1:  Buena.
+[07:39] Miranda Logioia:  Hola.
+[07:40] Speaker 1:  ¿Qué tal? Perdón.
+[07:41] Miranda Logioia:  ¿Cómo estás?
+[07:42] Speaker 1:  Habla con las chicas. Las chicas de las horas office. Ah, ¿cómo están?
+[07:48] Speaker 1:  Viernes.
+[07:49] Miranda Logioia:  Ay, por fin, ¿verdad?
+[07:51] Speaker 1:  Sí.
+[07:52] Miranda Logioia:  Ha llegado. Se me está pasando volando igual las semanas, ¿o?
+[07:55] Speaker 1:  Ay, sí. Más ahora que viene fin de año, va a volar.
+[07:58] Miranda Logioia:  Sí, ¿no? Tal cual.
+[08:00] Speaker 1:  A ver, a ver.
+[08:01] Miranda Logioia:  Pleno.
+[08:02] Speaker 1:  Ay, sí. Bueno, Yoda, gracias por hacerte ratito para charlar con nosotras.
+[08:07] Miranda Logioia:  Por favor.
+[08:08] Speaker 1:  Eh...
+[08:08] Miranda Logioia:  Nada, ahí, eh... eso, pensar más o menos qué necesitás, porque capaz estoy como recién cayendo, saliendo de la cabeza de si el día. Salí el miércoles recién, entonces estoy como pidiendo maldita pila de cosas. De hecho, capaz que te cuento algo después al final de la reú- teré, porque surgió una idea que me parece que puede estar buena y ver si "¿qué opinás vos?"
+[08:26] Miranda Logioia:  y ya. Como intercambiar ideas.
+[08:28] Miranda Logioia:  Pero nada que ver.
+[08:29] Speaker 1:  Okay.
+[08:29] Miranda Logioia:  Sigan ustedes.
+[08:32] Speaker 1:  Bueno, me encanta. Eh... un poco de contexto: Milu arrancó una... sí, una capacitación, un curso de accesibilidad, es un tema que le re interesa, y ahora ya te doy la palabra a vos, Milu. Y la idea era, eh... en el curso, obviamente, le van a dar pila de material.
+[08:48] Speaker 1:  En diseño, la idea es hacer un agente después, eh, entre Milu y yo, para que chequee todo el tema de accesibilidad en los diseños, en los prototipos que hagamos. Pero también queríamos ver qué cosas hoy en día hacen en el proceso, en el proceso ya de desarrollo y... y de calidad, con el tema de accesibilidad, a ver si hay algunas herramientas que podemos incorporar, o qué cosas miran, este...
+[09:15] Speaker 1:  Y también alimentarnos, ¿no?, de todo esto que va a aprender Milu, así como nos podemos pasar piques entre áreas.
+[09:21] Miranda Logioia:  Obvio.
+[09:21] Speaker 1:  Esa es como la idea. Milu, ¿algo que me haya faltado?
+[09:25] Miranda Logioia:  No, o sea, eh... la idea es también, eh... nosotras con Teria en paralelo estamos armando, o sea, estoy alimentando una knowledge base con todo lo del contenido del curso. Eh... hay, tipo, otros cursos complementarios que me recomiendan hacer, como todo. El curso este está adaptado a product designers, pero también tiene otros elementos, tipo de área y demás cosas, como... como para complementar.
+[09:48] Miranda Logioia:  Entonces ahí es donde nos sirve tu input, como para, eh... de vuelta, complementar con todo eso. Y la idea es alimentar esta knowledge base, como decía Teria, y cómo trabajar con agentes y demás.
+[09:59] Miranda Logioia:  Y algo que estoy viendo mucho en el curso es que, nada, o sea, hay muchas, eh... normas, pautas. O sea, uno puede alimentar un skill o una knowledge base o lo que sea, pero la parte humana es como lo más importante para validar justamente esas cosas, porque vos podés... vos podés correrle un skill, tipo: "sí, auditame esto", y en realidad, eh... es donde uno tiene como... como especialista en accesibilidad meterse e ir como... o sea, dando a entender que esas pautas se... se cumplan.
+[10:26] Miranda Logioia:  Entonces ahí es donde sirve también, eh... un especialista como vos, que nos ayudes a complementar en esto. Y nada, eso, como decía Teria, como empezar a tener estas conversaciones también.
+[10:38] Miranda Logioia:  La idea es como sociabilizarlo con el equipo y empezar a traer más estos temas. Eh... así que eso, quizás después te puedo compartir la knowledge base o empezar a dialogar en este sentido, pero... pero como decía Teria, nos interesa ver cómo... cómo vos lo ves hoy en día en el equipo.
+[10:54] Miranda Logioia:  Y... y nada, eso.
+[10:57] Speaker 1:  Hermoso. Primero que nada, gracias por esa iniciativa. Como persona que necesita más accesibilidad en los productos, por mis ojos.
+[11:07] Speaker 1:  Eh... nada, la verdad que es un tema, eh... súper necesario y que cada vez hay más legislaciones al respecto. Eh... hay multas, entonces está bueno ir preparándonos proactivamente en eso.
+[11:19] Speaker 1:  Eh... justo el martes fui a la Quality Sense, que es una conferencia de calidad, eh... bastante referente acá en Uruguay, y participé en una charla de una product designer de Mable, que se llama Eva. Te voy a pasar el contacto porque me parece que puede estar bueno que chusmés.
+[11:34] Miranda Logioia:  Dale.
+[11:35] Speaker 1:  Se llama Eva... encontré el link, eh, principalmente.
+[11:48] Speaker 1:  Pero igual tenía su página web, pero...
+[11:51] Miranda Logioia:  Genial.
+[11:59] Speaker 1:  María Evangelina Ferreira. Y es, eh... líder del equipo de producto de Mable. Es de Argentina ella.
+[12:08] Speaker 1:  Una crack. Y... y con qué me quedé.
+[12:12] Speaker 1:  Porque aparte de la charla, en general la conferencia hablaba de todo el tema, ¿no? Del auge de la IA.
+[12:17] Speaker 1:  Obviamente no somos ajenos a eso. Pero en particular con lo que tiene de accesibilidad, y que me parece importante rescatar, hay cosas que sí se pueden hacer chequeos automáticos y que nos podemos apoyar en agentes, pero no puede faltar el ojo humano.
+[12:32] Speaker 1:  Y eso es lo que siempre, por lo menos, le pido al equipo de QA. Ah, en cosas de lo que tiene que ver con user experience y accesibilidad, yo siempre pido, obviamente en el nivel y balance que se pueda dentro del proyecto.
+[12:45] Speaker 1:  Porque nos pasa, obviamente, eh... y esto para ser sincera y realista con ustedes, que creo que Teria no es ajena, de que en los proyectos en particular, primero, eh... muchas veces los clientes no tienen idea de accesibilidad. Los que han pedido accesibilidad lo piden porque a ellos les caen con una... con una legislación al respecto, pero no tienen mucho... no le dan mucha prioridad.
+[13:09] Speaker 1:  Pero cuando lo piden, nosotros tratamos de priorizarlo. Ah, y ahora les cuento cómo hacemos para priorizarlo.
+[13:14] Speaker 1:  Pero nos está pasando la realidad de que no podemos atender accesibilidad cuando las funcionalidades se nos parten al medio ni bien llega.
+[13:21] Miranda Logioia:  Mmm.
+[13:22] Speaker 1:  Ah, entonces estamos teniendo como un problema mayor que, para ser realista, muchas veces nos pasa que queremos atender accesibilidad, pero primero tenemos que empezar en lo funcional.
+[13:31] Miranda Logioia:  Claro.
+[13:32] Speaker 1:  ¿Cómo tratamos de hacer un buen balance? Cuando nos llegan, eh... a nosotros ahora nos están empezando a llegar features, o PRDs, entonces, eh... eso es lo que agarramos para hacer un análisis funcional, eh... de qué trata esta funcionalidad, cómo... cuáles son... bueno, al principio tratamos de caer en cuáles son los usuarios finales de esto. Por ejemplo, nos pasa un Dingo que sabemos que tienen, eh... tienen que ser doble A en lo que tiene que ver con las normas de accesibilidad.
+[14:02] Speaker 1:  Entonces nosotros ya sabemos que doble A significa todo esto: chequeos, navegación por teclado, contraste, bla, bla, bla, bla. Eso, todo eso lo tenemos claro desde el equipo de QA.
+[14:12] Speaker 1:  Entonces, para Dingo, por ejemplo, cada vez que nos llega un PRD, una feature, le corremos un chequeo doble A. A la misma vez que cuando hacemos el ticket review, ticket review es una de las tools de nuestros agentes, nos hace un entendimiento de qué trata esa feature, desglosamos posterior el conjunto de pruebas funcionales principalmente, y después a su vez se hace un chequeo a nivel doble A en el caso de Dingo que necesita doble A.
+[14:37] Miranda Logioia:  Mmm.
+[14:37] Speaker 1:  Lo ideal, y lo que iba con lo que decía al comienzo, sería que nos dé el tiempo para en un momento hacer un chequeo, eh... manual.
+[14:46] Miranda Logioia:  Mmm.
+[14:46] Speaker 1:  ¿Por qué? Porque... y justo lo hablaba esta chica que dio la charla el martes. Hay muy buenas intenciones muchas veces de los desarrolladores de agregar accesibilidad, que quizás los chequeos automáticos te lo dan como aprobado.
+[15:01] Speaker 1:  Por ejemplo, puede ser que Lighthouse te dé por 90% aprobado algo de accesibilidad, y cuando vos lo vayas a probar manual y lo quieras probar con navegación por teclado, que es algo básico la navegación por teclado, que sí o sí tiene que estar.
+[15:13] Miranda Logioia:  Sí.
+[15:14] Speaker 1:  No funcione. Y capaz que Lighthouse le dio 90%.
+[15:17] Miranda Logioia:  Mmm.
+[15:17] Speaker 1:  ¿Por qué? Porque eso tiene que ver más con la parte de implementación visual. 
+[15:21] Speaker 1: ¿Vieron los labels del HTML y todo eso?
+[15:24] Miranda Logioia:  Mmm.
+[15:24] Speaker 1:  Muchas veces los developers, con buena intención, le quieren meter ciertos labels para que sea accesible, pero esos labels se terminan pisando con otras cosas, y cuando uno quiere ir a navegar, y el Lighthouse se fija: "ah, tiene el label, ta, es accesible". Pero capaz que después a nivel funcional no están dando como se espera.
+[15:41] Miranda Logioia:  Mmm.
+[15:41] Speaker 1:  Entonces hay como cositas que a tener en cuenta. Por eso, si bien podemos apoyarnos en un quick check de herramientas, que para mí Lighthouse no va, para mí de las mejores herramientas es Axe, que capaz que hasta la mencionaron Milu.
+[15:56] Miranda Logioia:  Mmm.
+[15:57] Speaker 1:  Axe, de hecho, tiene un chequeo de design systems.
+[16:00] Miranda Logioia:  Mmm.
+[16:00] Speaker 1:  Mencionó Eva eso. Hay un plugin ahí, no, yo no entré en detalle, pero sí lo mencionó esta chica, yo tomé nota de todo. Eh...
+[16:08] Speaker 1:  Axe, eh... tiene un plugin propiamente que se le pone a los design systems como para mantener cierto nivel de calidad, que vos le indicás cuál es el nivel de WCAG, WCAG.
+[16:19] Miranda Logioia:  Mmm.
+[16:20] Speaker 1:  Eh... para que sea o A, o doble A, o triple A, y ya te parece que te monitorea o te audita el nivel de accesibilidad del design system.
+[16:30] Miranda Logioia:  Mmm.
+[16:31] Speaker 1:  Axe, desde la parte de diseño, se podría meter ahí. También Axe tiene una parte que se le pone al código. Entonces no solamente tenés cubierto el diseño, sino que se le metés al código.
+[16:41] Speaker 1:  Y nosotros como QA, cuando queremos hacer chequeos automáticos, también usamos Axe. Ah, entonces estaríamos todos con la misma herramienta.
+[16:48] Speaker 1:  Yo recomiendo a su vez, eh... nosotros dentro del MCP que tenemos, tenemos una herramienta que se llama Payly, que les puedo pasar el repo para si quieren chusmearlo.
+[16:55] Miranda Logioia:  Mmm.
+[16:56] Speaker 1:  Es público. Esta herramienta Payly la tenemos integrada con nuestro repo de automation. Entonces, cada vez que nosotros hacemos una automatización de pruebas, también tenemos la posibilidad de que cuando quede la automatización de pruebas, lo que hace es un bot va y te corre los flujos como un usuario final.
+[17:13] Speaker 1:  Esa corrida de flujos, a su vez, con este repo de Payly, lo que hace es hacerte validación de que cada uno de los componentes y de pantallas que pasemos respete el nivel de accesibilidad que le pidas.
+[17:25] Miranda Logioia:  Mmm.
+[17:26] Speaker 1:  Entonces tenemos cubierto por ahí. Pero como les dije, siendo realistas, no estamos pudiendo llegar a eso. A ese tipo de validaciones no estamos pudiendo llegar porque estamos teniendo otros problemas.
+[17:40] Speaker 1:  Eh... pero tenemos, tenemos las herramientas, tenemos los repos, tenemos... en el MCP tenemos integrado. Por ejemplo, en Dingo lo que hemos podido llegar a hacer es eso: cada vez que nos llega un PRD, las chicas analizan, eh... de qué trata esa funcionalidad, arman la generación de pruebas, y cuando van a ejecutar, incluyen las de accesibilidad, pero corriéndolas con el MCP.
+[18:07] Miranda Logioia:  Mmm.
+[18:08] Speaker 1:  No estamos pudiendo hacer la... todo el flujo este que les comento, y la prueba manual tampoco estamos llegando.
+[18:16] Miranda Logioia:  Claro. Mmm.
+[18:19] Speaker 1:  Eh... decía algo más.
+[18:22] Speaker 3:  Yo, eh... pregunta ahí. En los proyectos que le llegan diseños, ¿cómo ves la calidad de los diseños en torno a la accesibilidad?
+[18:34] Speaker 1:  Bueno, es algo que podríamos preguntarle al equipo de QA.
+[18:37] Miranda Logioia:  Sí.
+[18:37] Speaker 1:  Porque sí, yo no estoy teniendo la capacidad de meterme a ver, tipo, en los proyectos los diseños y cosas. No, no estoy como viendo, viste, todos los QA con sus proyectos.
+[18:48] Miranda Logioia:  Claro. Mmm.
+[18:49] Speaker 1:  Y como la problemática que sí estamos viendo es a nivel funcional, estoy haciendo como mucho café ahí, pero de cómo les están llegando los diseños y la accesibilidad de los diseños, no sé, podríamos preguntarle. Eso es, Teria, si quieres me quedo con para hacer una entrevista.
+[19:04] Miranda Logioia:  Claro.
+[19:05] Speaker 1:  Me acuerdo haberlo hablado y que... y que... que esa, por ejemplo, cosas de contraste y demás sí lo estaban teniendo represente, pero ta, no sé ahí si depende del diseñador o del proyecto. Eh...
+[19:20] Miranda Logioia:  Mmm, exacto.
+[19:21] Speaker 1:  Te puedo hacer una encuestita y te doy datos.
+[19:24] Speaker 3:  Dale, sí. Porque ahora me parece que depende mucho del diseñador.
+[19:27] Speaker 1:  Ta.
+[19:28] Speaker 3:  Porque no tenemos ninguna herramienta estandarizada en el equipo, que es lo que queremos hacer con Milu de che... tenés algo que siempre te lo tenga presente este set de cosas. Según el nivel de A que me parece que tendríamos que tener como estándar es el doble A.
+[19:44] Miranda Logioia:  Mmm.
+[19:45] Speaker 3:  Pero también no estamos alineados tampoco en che cuál es el estándar. Entonces también una llamada contigo de: "ustedes qué están chequeando doble A, ta". Entonces ya marcamos eso como mínimo.
+[19:54] Speaker 1:  Para mí el mínimo tiene que ser doble A también. Estoy de acuerdo en eso. Eh... y es lo que en general tenemos por defecto configurado en estas herramientas, para que cuando sea un chequeo sea doble A.
+[20:04] Speaker 3:  Bien.
+[20:05] Speaker 1:  Ta, depende del cliente. Si viene un cliente y te dice triple A, hay que tener eso, ¿no? Tener de acuerdo qué es triple A y cómo ajustamos las herramientas.
+[20:12] Speaker 1:  Fíjense esta herramienta Axe, que para mí esto de vuelta, Eva lo mencionó como algo para agregar a los design systems, y capaz que con eso resuelven bastante. O sea, está bueno.
+[20:21] Miranda Logioia:  Claro.
+[20:22] Speaker 1:  Todo esto que les dije, chicas, web. Porque tenemos los productos mobile. Lo que tiene que ver con mobile, eh... también se le puede poner al design system Axe, lo cual eso ya nos cubre de ese lado.
+[20:37] Speaker 1:  Tenemos Axe para meterlo en la parte del código también, del código mobile, para lo que es pruebas. Nosotros tenemos que probar en un device, o en defecto en un emulador.
+[20:48] Speaker 1:  No he encontrado herramientas, por ejemplo, Axe para el celular, o Axe. Entonces.
+[20:54] Miranda Logioia:  Mmm.
+[20:54] Speaker 1:  Cuando nos toca mobile, eh... que no nos ha tocado, por suerte, digo por suerte, porque la verdad que no, no... capaz que tenemos que tener una oportunidad nomás de que nos llegue para poder dedicarle tiempo. No he visto herramienta que podamos usar en el celular para hacer rápidos chequeos de QA.
+[21:13] Miranda Logioia:  Claro.
+[21:13] Speaker 1:  Hoy en día, ¿cómo lo hacemos? Es una locura, porque tenés que activarle el accessibility al celu y tenés que saber cómo sacarlo, porque te configura todo el celular. Pero ta, es la forma de probarlo.
+[21:26] Miranda Logioia:  Ah, ok.
+[21:26] Speaker 1:  Sí.
+[21:27] Miranda Logioia:  Lo testeas directo con la configuración.
+[21:29] Speaker 1:  Directo en el celular. Sí.
+[21:30] Miranda Logioia:  Ah.
+[21:30] Speaker 1:  Es lo que... sí. El screen reader, eh... sí. O sea, todo es directamente con el celular.
+[21:36] Speaker 1:  De hecho, le pregunté eso a Eva el otro día en la charla, le digo: "Che, todo esto que contás entiendo que es web, para mobile, ¿qué tendencias? 
+[21:43] Speaker 1: ¿Qué herramientas recomendás?". Me dijo: "No, el celular directamente, eh... lo que tengan cuidado, que sepan bien cómo desactivarlo". O sea, lo mismo que te estoy diciendo ahorita que yo, porque yo ya había probado y me había puesto todo el celular, pero ta, cuando necesitás probar, no queda otra.
+[21:56] Miranda Logioia:  O sea, porque no están desarrolladas, decís que no existen, digamos.
+[22:00] Speaker 1:  Están, pero son, eh... nativas de los celulares. De la de iOS y Android, como si yo soy un usuario con determinada, eh... disability, tengo en el celular, eh... preferencias o cosas que puedo... y hay que ver cómo se comporta cada producto con esa configuración en el celu.
+[22:18] Miranda Logioia:  Claro, claro.
+[22:18] Speaker 1:  Pero no hay un Axe que lo que hace es rápidamente te chequea sin necesidad de que vos pongas, eh... la configuración en el celu, ¿verdad?
+[22:26] Miranda Logioia:  Claro, claro, perfecto.
+[22:28] Speaker 1:  Lo hace, pero a un nivel de chequeo de código.
+[22:31] Miranda Logioia:  Mmm.
+[22:32] Speaker 1:  No del producto como tal. Y esa... y ahí es donde puede haber un problema, porque esto que yo le decía, capaz que la configuración y el chequeo en el código sale bien, pero a la hora de vos ser un usuario y usarla, capaz que no están dando como esperamos. Por eso para mí lo manual en esto de accesibilidad tiene que estar.
+[22:50] Miranda Logioia:  Sí.
+[22:51] Speaker 1:  Por lo menos un quick check, o sea, rápido de que pruebo. O sea, yo trato siempre de para web navegar con el teclado básico. Contraste, ta, ese tipo de cosas.
+[23:01] Miranda Logioia:  Mmm, tal cual.
+[23:05] Speaker 1:  Sí. De hecho, Eva contó... creo que fue Crónica, eh... sí, creo que fue Crónica, que sacó tipo hace unas semanas, quisieron tener una buena intención de hacer el sitio accesible, eh... y navegabas con el teclado en el sitio, y... y navegar con el teclado no es solamente tipo para poder visualmente que se vayan seleccionando los elementos, sino que hay una config propiamente que te lee.
+[23:35] Speaker 1:  O sea, si yo toco el tab, me va a decir, eh... link que te lleva a usuarios, link cerrar sesión. Te tiene que decir esas cosas.
+[23:44] Miranda Logioia:  Mmm.
+[23:45] Speaker 1:  Lo loco que hicieron fue hacerlo accesible, pero los labels que le pu... y Lighthouse salía que era superaccesible porque tenía los labels, pero cuando vos apretabas el tab, te decía link href.
+[23:57] Miranda Logioia:  Ah.
+[23:59] Speaker 1:  Y no decía... y todos decían lo mismo: link href, link href. Y no te decía: "¿qué? 
+[24:04] Speaker 1: ¿dónde estoy?".
+[24:06] Miranda Logioia:  Claro.
+[24:07] Speaker 1:  Es una locura. Claro, y esas cosas son...
+[24:09] Miranda Logioia:  Claro.
+[24:10] Speaker 1:  Que me cuesta hacer el salto de: se hizo la implementación técnica, pero a nivel de usuario no está tanto.
+[24:15] Miranda Logioia:  Claro.
+[24:16] Speaker 1:  Eso es un viaje.
+[24:20] Speaker 3:  Ay, sí, man.
+[24:21] Speaker 1:  Che, paren, antes que me olvide, les voy a pasar entonces lo de Payly, por si quieren chusmearlo y decirle.
+[24:26] Miranda Logioia:  Sí.
+[24:26] Speaker 1:  Y para mí, chusmense lo de Axe, porque fue lo que...
+[24:30] Miranda Logioia:  Dale.
+[24:30] Speaker 1:  Iba a contar.
+[24:31] Miranda Logioia:  No, chusmeen eso que está buenísimo, la tool.
+[24:34] Speaker 1:  Sí.
+[24:40] Speaker 1:  Algo que ustedes hayan visto que puede estar copado para QA?
+[24:49] Speaker 1:  O que no sé, algún designer les haya comentado: "che, necesitamos que QA ponga un poquito más de foco en esto". O sea, superabierto ahí.
+[25:01] Miranda Logioia:  Mmm.
+[25:03] Speaker 3:  Después capaz que cuando estemos más tranquilas, Joan, podemos hacer una sesión de compartirnos como los procesos.
+[25:09] Speaker 1:  Obvio.
+[25:10] Speaker 3:  Este... y también qué les llega a ustedes. Porque claro, al sumarse más en otro momento del proyecto y nosotros ya no estamos, en general, hay proyectos que sí, por ejemplo, el CRDN, CRDN está Milu y Juli, que ya hay designers asignados, pero qué pasa en los proyectos que no estamos? 
+[25:30] Speaker 3: ¿Cómo hacer esas transiciones? Por ejemplo, Choto, lo de la práctica, lo de alinear, chequeamos doble A, qué cosas, ¿no? Capaz que las buenas prácticas de los patrones de diseño, estamos haciendo un agente de eso también.
+[25:44] Speaker 3:  Alinearnos también de: cuando me llega una funcionalidad, sé que equipo de diseño y calidad siempre nos fijamos que el patrón de autenticación sea este cuando se definió así. O sea, como ciertas cosas siento que re podemos como alinearnos como equipos para hacernos ayuda de las dos, ¿no?
+[26:04] Miranda Logioia:  Mmm.
+[26:04] Speaker 3:  Ya diseñarlo con eso en cuenta que ustedes lo van a probar así tal cual, o capaz que un formato que nosotros le podemos dejar que a ustedes les facilite más la vida después cuando lo prueban, o qué tipo de documentación. Ta, justo ahora el scope es accesibilidad, ¿no? Pero creo que lo podemos aumentar mucho más, porque no tenemos casi conexión entre nuestros equipos.
+[26:26] Miranda Logioia:  No.
+[26:26] Speaker 1:  No. Eh... me encantaría trabajar más de cerca con ustedes.
+[26:31] Speaker 3:  Eh...
+[26:31] Speaker 1:  Bueno, sí. No, sí, no, no tenemos, porque tenemos este gran.
+[26:36] Speaker 3:  Claro, exacto.
+[26:37] Speaker 1:  Que es tipo literal, nosotras chicas vivimos el la expectativa, la realidad, y nosotros somos lo que vivimos el meme, ¿entienden?
+[26:47] Miranda Logioia:  Sí.
+[26:47] Speaker 1:  La puta madre.
+[26:50] Miranda Logioia:  Ah.
+[26:50] Speaker 1:  Eh...
+[26:50] Miranda Logioia:  Claro.
+[26:50] Speaker 1:  Entonces sí.
+[26:52] Speaker 3:  Che, ahí en el chat, no sé si les llegó el repo de GitHub público este que les decía de la tool, ¿sí?
+[26:57] Miranda Logioia:  Sí.
+[26:57] Speaker 3:  Ah, sí.
+[26:58] Speaker 1:  Ta, muy bien, bueno. Pero sí, re podemos charlar de esto. Me parece que es necesario. 
+[27:02] Speaker 1: ¿Estamos teniendo algún proyecto que ustedes, tipo en CRDN, se pidió algún nivel de accesibilidad?
+[27:09] Miranda Logioia:  No. O sea, no sé, Teria, abiertamente, yo al menos no, no es algo que se pidió del lado del cliente, pero creo que, eh... es un buen proyecto de excusa para empezar a testear varias cosas. Empezamos a ver con Juli el tema del dark mode, del light mode, como que nuevamente el cliente pidió pasar al dark mode para probar, y ahí empezamos a testear alguna tool, algún agente en figma de accesibilidad.
+[27:35] Miranda Logioia:  Pero bueno, ahí es donde empezaron a surgir interrogantes de: bueno, ¿cómo empezar a auditar esto y demás? Eh... así que puede que surja algo, pero no, no fue un pedido explícito.
+[27:44] Miranda Logioia:  Por ahora al menos a mí no me llegó el lado de diseño.
+[27:47] Speaker 3:  Y eso fue para solo restore net o también para los mobile?
+[27:52] Miranda Logioia:  Creo que solo restore net, por ahora. Eh... Eric quería ver un ejemplo de cómo se vería y ver si expandirlo.
+[27:59] Miranda Logioia:  Eh... pero bueno, quedó ahí, viste, medio en el backlog por ahora. Pero bueno, la idea era eso, como empezar a ver cómo traer eso sin, obviamente, de entrada tener en cuenta un montón de criterios y demás.
+[28:13] Miranda Logioia:  Eh... pero sí, por ahora no es algo muy activo, sino que es algo que surgió en una conversación y lo empezamos a socializar en ese momento, pero quedó ahí.
+[28:23] Speaker 1:  Perdón.
+[28:24] Speaker 3:  Sí, justo te preguntaba esto de si para mobile también. Entiendo que para los mobile se solamente se agarró el diseño legacy que ellos tenían, que es un cautelo. Chica, es horrible.
+[28:33] Speaker 3:  Yo estuve probando justo mobile en dark mode.
+[28:37] Miranda Logioia:  Mmm.
+[28:37] Speaker 3:  No, o sea, en todos modos es horrible, pero con el dark sufrí pila. Eh... así que ta, por eso te preguntaba. Eh... nada, ahí está bueno saber esto.
+[28:47] Speaker 3:  Si ustedes, lo que sí puede estar bueno es, si desde diseño, que ustedes son los primeros que reciben las directivas de cliente, de lo que se va a necesitar, ustedes ya ven que se les pidió cierto nivel de accesibilidad, está bueno que me lo cuenten. Así yo tengo en cuenta cuando sumo QA, ya poner eso en perspectiva.
+[29:05] Speaker 3:  Porque lo que termina pasando muchas veces es que ustedes arrancan el diseño, cuando terminan se suma un PM, un TL, pasa tiempo, se suma QA y desarrollo, y toda la información que ustedes tenían, superimportante, a veces la perdemos. Yo sé que ahora se está trabajando en la knowledge base y en guardar todo eso, pero bueno, no perdamos la comunicación humana.
+[29:23] Speaker 3:  Para mí está bueno si ustedes saben que se arranca un proyecto de diseño y se pidieron ciertas cosas y que eso, y el target audience que a ustedes también les re importa, a nosotros también, porque nosotros jugamos ser el usuario final. Entonces el tener mapeado el target audience, eh... digo target audience para saber tipo el tipo de personas, en qué contexto lo van a usar, qué tipo de devices, sistemas operativos, qué browsers.
+[29:48] Miranda Logioia:  Mmm.
+[29:49] Speaker 3:  Toda esa información que yo sé que ustedes capaz que la relevan, nada, de alguna forma, che, Joan, quiero decirte que tipo en este proyecto que vamos a arrancar nos pidieron esto, esto, esto, y yo ya lo tengo guardado para cuando haga el onboarding de un QA, ya lo tengamos en cuenta en la estrategia nuestra.
+[30:04] Miranda Logioia:  Perfecto. Sí, recontra.
+[30:10] Speaker 3:  Tremendo. Ya con eso último, ponele, voy a revisar el template de la knowledge base de las user personas, por ponele, no sé si estamos a detalle, por ejemplo, lo de los devices, que está bueno tenerlo ahí documentado. Y es una línea.
+[30:23] Miranda Logioia:  Sí.
+[30:24] Speaker 3:  Ese tipo de preguntas que ya queden.
+[30:26] Miranda Logioia:  Sí.
+[30:27] Speaker 3:  Devices.
+[30:27] Miranda Logioia:  Sí, más.
+[30:29] Speaker 3:  Eh... tipo, no sé, preguntas que después nosotros tenemos que llegar a hacer, y una acaba, porque lo tengo que tener en cuenta el developer. Eh... sistema operativo mínimo. Eso, eso.
+[30:38] Miranda Logioia:  Mmm.
+[30:39] Speaker 3:  Eh... que también a veces tenemos clientes que nos dicen: "mira, la mayoría de nuestros usuarios usan Android, pero tenés que tener en cuenta que usa desde tal versión de Android para adelante". Entonces tenemos que probar eso. Screen size.
+[30:51] Miranda Logioia:  Mmm.
+[30:52] Speaker 3:  Eh... hay pila de esos detallecitos, se me vienen a la cabeza ese tipo de cosas que para nosotros después se nos abre un montón de.
+[30:59] Miranda Logioia:  Sí.
+[31:00] Speaker 3:  De opciones para testear.
+[31:03] Miranda Logioia:  Tremendo, tremendo.
+[31:04] Speaker 3:  Tremendo. Después ta, el tema de accesibilidad, no es solamente el doble A, es como que está bastante manejable. Pero hay accesibilidades que tienen que ver con otras cosas, ¿no?
+[31:16] Speaker 3:  También si ustedes después, que son los que más profundizan en el usuario final y en cuáles son las condiciones del usuario final, bueno, hay pila de disabilities, eh... que pueden ser de movilidad, o mismo quizás no son disabilities, sino de contexto. Capaz que tenemos, eh... usuarios finales que lo van a usar en un laboratorio, entonces lo tienen que usar con guantes, con no sé qué.
+[31:39] Miranda Logioia:  Sí.
+[31:39] Speaker 3:  Ta, eso requiere como ciertas cosas, que no tiene que ver con disability, pero tiene que ser accesible.
+[31:45] Miranda Logioia:  Claro, y tiene más que ver con el contexto de uso y.
+[31:48] Speaker 3:  Exacto.
+[31:48] Miranda Logioia:  Sí.
+[31:50] Speaker 3:  Por eso ahondar en el contexto de uso, dónde, cómo va a estar usándose nuestro producto.
+[31:56] Miranda Logioia:  Correcto.
+[31:57] Speaker 3:  Sí. Nos ha pasado, aparte, no sé si te acordás, Joan, había un proyecto que era el de laboratorio, que tenían con guantes.
+[32:05] Miranda Logioia:  Ah, sí, mirá.
+[32:06] Speaker 3:  Tenía que meter la mano dentro de un coso y una tablet, coso.
+[32:09] Miranda Logioia:  Sí, sí.
+[32:09] Speaker 3:  Me acuerdo.
+[32:11] Miranda Logioia:  Qué loco. Reinteresante.
+[32:13] Speaker 3:  Re. Eh... bueno, nada, se me han ocurrido más cosas, pero yo creo que la cabeza es esa: pensar en quién va a estar usando nuestro producto, y a partir de quién va a estar usando, como sacar esa info de cómo, en qué contexto, con qué devices, qué tamá, todo ese tipo de cositas.
+[32:30] Miranda Logioia:  Mm-hmm.
+[32:31] Speaker 3:  Tremendo. Muchas gracias, Joan, por el ratito.
+[32:35] Miranda Logioia:  Al favor.
+[32:35] Speaker 3:  Nos resumes.
+[32:37] Miranda Logioia:  Buenas, seguimos, seguimos charlando. Eh... nada, si encuentran eso de Axe y quieren hacer alguna pruebita o algo, me avisan, pero en principio creo que está bueno para chusmearlo.
+[32:45] Speaker 3:  Sí.
+[32:47] Miranda Logioia:  Sí.
+[32:47] Speaker 3:  Está bárbaro.
+[32:48] Miranda Logioia:  Gracias a las dos.
+[32:49] Speaker 3:  Por la datita.
+[32:50] Miranda Logioia:  Por favor. Gracias a las dos. Eh... bueno, estamos en contacto.
+[32:53] Speaker 3:  Está bien.
+[32:54] Miranda Logioia:  Te paso que te dejo para el lunes, charlamos ahí de lo que te iba a decir.
+[32:56] Speaker 3:  Ah, dale, dale.
+[32:57] Miranda Logioia:  Está bien. Bueno, un abracito, buen fin.
+[33:00] Speaker 3:  Buen fin.
+[33:00] Miranda Logioia:  Chao.
+[33:00] Speaker 3:  Chao.

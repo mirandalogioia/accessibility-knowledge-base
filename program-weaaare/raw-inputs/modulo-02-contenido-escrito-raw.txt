@@ -1,0 +1,744 @@
+# Módulo 2 - WCAG para diseñadores
+## Contenido escrito de las lecciones (plataforma), sin ejercicios/tests
+
+Nota: se excluyen deliberadamente los bloques de ejercicio/test interactivo, conservando solo el contenido explicativo. Módulo completo: lecciones 2.1 a 2.11 + guía de proyecto post-módulo.
+
+---
+
+## 2.1 — Cómo está estructurado WCAG 2.2
+
+El equipo de Rutas Norte ha usado un validador automático de accesibilidad: una herramienta que revisa el código de una página para detectar ciertos errores. El informe sobre la Ruta del mirador indica «0 errores». ¿Es suficiente para afirmar que la página cumple WCAG?
+
+*(Ejercicio excluido: "Tres barreras sin detectar" — encontrar las barreras que la herramienta automática no detectó.)*
+
+WCAG (Web Content Accessibility Guidelines) establece requisitos de accesibilidad para el contenido web. La desarrolla el W3C, el consorcio que publica los estándares de la web, a través de la WAI (Web Accessibility Initiative). Su grupo de trabajo publica borradores y recibe comentarios durante la elaboración del estándar.
+
+Para usar un producto web, una persona necesita que funcionen tanto el contenido como el navegador y sus tecnologías de apoyo. El panorama de estándares de accesibilidad del W3C distingue estos ámbitos:
+
+- **WCAG** cubre el contenido: textos, imágenes, formularios, componentes y flujos. Es la referencia para revisar la interfaz que diseñas.
+- **ATAG** (Authoring Tool Accessibility Guidelines) cubre las herramientas con las que otras personas crean contenido: un gestor de contenidos, un editor, una red social. Si diseñas el panel donde el equipo de Tutorías publica sus talleres, ATAG te pide dos cosas distintas: que el panel sea accesible para quien publica y que le ayude a publicar contenido accesible, por ejemplo pidiéndole el texto alternativo cuando sube una foto.
+- **UAAG** (User Agent Accessibility Guidelines) cubre navegadores, extensiones y reproductores. Explica por qué hay cosas que no dependen de ti, como el zoom del navegador o el tamaño de los subtítulos del reproductor, y por qué tu diseño no debe impedir que funcionen.
+- **WAI-ARIA** define cómo un componente comunica su función, su estado y sus propiedades a la tecnología de apoyo cuando el HTML no basta. Para diseñar no necesitas su sintaxis, pero sí saber que existe para eso.
+
+Para apps, software y documentos, la guía WCAG2ICT del W3C explica cómo trasladar los criterios de WCAG fuera de la web.
+
+### Qué versión escribir en un proyecto
+
+Las versiones de WCAG 2 conservan los criterios anteriores y añaden otros. El contenido que cumple WCAG 2.2 cumple también 2.1 y 2.0, y el W3C recomienda usar la versión más reciente aunque un contrato o una norma citen una anterior. La excepción es **4.1.1 Procesamiento**, que se retiró en 2.2: pedía un código sin errores de sintaxis que los navegadores ya resuelven de forma estándar. La tecnología de apoyo trabaja con lo que interpreta el navegador. El criterio sigue figurando en 2.0 y 2.1, pero una nota lo da por cumplido siempre en contenido HTML o XML.
+
+Las referencias actuales son:
+
+- **WCAG 2.2 es la Recomendación vigente.** Se publicó el 5 de octubre de 2023 y se republicó el 12 de diciembre de 2024 con erratas: retoques de definiciones y redacción, sin añadir ni quitar criterios.
+- **También es norma ISO.** ISO/IEC 40500:2025 es idéntica a la versión de octubre de 2023. Si un pliego cita la norma ISO, está citando WCAG 2.2.
+- **WCAG 3 es un borrador.** Tiene otra estructura y otro modelo de conformidad, y está pensado para llegar a estándar más adelante. Hoy no sirve como referencia de cumplimiento.
+
+Cada criterio tiene un nivel: A, AA o AAA. Para declarar AA hay que cumplir A y AA.
+
+En el documento del proyecto, escribe la versión, el nivel y el alcance: por ejemplo, «WCAG 2.2, nivel AA, en todo el proceso de reserva».
+
+### WCAG y sus documentos de apoyo
+
+Un **criterio** es un requisito concreto que se puede comprobar en el contenido: por ejemplo, que un texto tenga suficiente contraste con su fondo. El estándar indica qué exige ese criterio y en qué casos hay excepciones. Para entender por qué existe y cómo cumplirlo, puedes consultar sus documentos de apoyo:
+
+| Qué necesitas saber | Qué consultar |
+|---|---|
+| Qué exige un criterio y cuáles son sus excepciones | WCAG 2.2, el estándar con los requisitos |
+| Por qué existe ese criterio y a qué personas ayuda | Understanding WCAG 2.2, las explicaciones de cada criterio |
+| Cómo cumplirlo y qué errores se conocen | Techniques for WCAG 2.2, con ejemplos de soluciones y fallos |
+
+WCAG incluye un glosario: las definiciones de los términos que usa el estándar. Si necesitas saber el significado exacto de una palabra en un requisito, búscala allí. Para encontrar criterios por tema, puedes usar la referencia rápida de WCAG 2.2.
+
+Understanding y las técnicas ayudan a aplicar los requisitos, pero no añaden otros nuevos. Tampoco tienes que copiar una técnica del W3C: puedes resolverlo de otra forma si cumples lo que exige el criterio.
+
+### Qué referencia exige el proyecto
+
+Una ley o un contrato pueden exigir una versión y un nivel de WCAG. Antes de empezar, comprueba qué referencia debe seguir el proyecto y qué páginas o procesos entran. Por ejemplo: «WCAG 2.2, nivel AA, en el proceso de reserva».
+
+Para consultar el marco legal español cuando lo necesites, tienes referencias en los materiales de esta lección.
+
+### Qué puede comprobar un validador automático
+
+Una herramienta de evaluación lee el código y puede hacer cálculos, como comprobar si un campo tiene una etiqueta o medir el contraste sobre un fondo plano. No puede determinar por sí sola si la página es accesible. Alguien debe revisar también el contenido y probar si la tarea se puede completar.
+
+| La herramienta puede comprobar | La persona tiene que decidir |
+|---|---|
+| Que la foto de la Cesta de temporada tiene texto alternativo | Si «foto» o «cesta.jpg» cuentan lo que la foto aporta a quien va a comprar |
+| Que un texto tiene una relación de contraste de 2,85:1 con su fondo plano | Qué pasa cuando ese texto va sobre una foto o sobre un degradado |
+| Que el campo tiene una etiqueta asociada | Si la etiqueta dice qué se pide: «Dato» existe y no ayuda |
+| Que los enlaces tienen texto | Si «Ver más», repetido tres veces, basta con su contexto |
+| Que la página tiene título | Si el título distingue ese paso de los demás pasos del proceso |
+| Que el contenido existe en el código | Si el orden en que se lee conserva el significado |
+
+Las herramientas también se equivocan en el otro sentido. Un validador puede marcar como fallo de contraste el texto de un botón deshabilitado, aunque 1.4.3 Contraste (mínimo), nivel AA, exime a los componentes inactivos. Sin criterio humano, ese falso positivo acaba convertido en una tarea inútil o en un cambio de diseño que nadie necesitaba.
+
+Usa los validadores y las herramientas de contraste para detectar problemas durante el diseño. Revisa también si las alternativas textuales describen las imágenes, si las etiquetas y errores se entienden, si el orden permite seguir el contenido y si se puede terminar la tarea. «0 errores» solo indica que la herramienta no ha encontrado los problemas que sabe buscar.
+
+### Cómo comprobar una declaración de conformidad
+
+Cuando alguien diga «cumple WCAG», pregunta qué versión y qué nivel, qué páginas y procesos se han revisado y quién lo ha comprobado y cómo. Si las respuestas son «2.2», «AA», «el proceso de compra completo» y «una herramienta más una revisión manual con teclado y lector de pantalla», tienes una afirmación que se puede verificar.
+
+### Para saber más
+
+- **WCAG 2 Overview (W3C WAI)** — Presenta las versiones de WCAG 2, sus fechas y su equivalencia con ISO/IEC 40500.
+- **W3C Accessibility Standards Overview (W3C WAI)** — Qué cubre cada estándar de la WAI (WCAG, ATAG, UAAG, WAI-ARIA) y en qué estado está cada uno. Útil cuando diseñas una herramienta donde otras personas publican contenido.
+- **Selecting Web Accessibility Evaluation Tools (W3C WAI)** — Explica qué pueden comprobar las herramientas de evaluación y qué necesita una revisión manual.
+- **Real Decreto 1112/2018, sobre accesibilidad de sitios web y apps del sector público (BOE)** — Texto consolidado. Los artículos 2 y 3 dicen quién está obligado y qué contenidos entran, incluidos los procesos de identificación, firma y pago; el artículo 6, cómo funciona la presunción de conformidad.
+- **Ley 11/2023, de accesibilidad de productos y servicios (BOE)** — Texto consolidado de la trasposición del Acta Europea de Accesibilidad. El artículo 2 enumera los servicios obligados y las exclusiones; las definiciones aclaran qué es una microempresa.
+- **Entender las leyes de accesibilidad digital · weAAAre** — Consulta opcional (Premium): cómo se relacionan WCAG y las obligaciones legales.
+
+---
+
+## 2.2 — Los 4 principios
+
+Para reservar una plaza en Rutas Norte hay que leer la información, completar los datos y confirmar la reserva. Los cuatro principios de WCAG permiten revisar esa tarea: si la información se percibe, si los controles se pueden usar, si se entiende lo que ocurre y si la tecnología de apoyo interpreta el contenido.
+
+### Cuatro preguntas sobre una misma tarea
+
+Toma una tarea concreta: reservar dos plazas en la Ruta del mirador de Rutas Norte, el sábado a las 9:00. La pantalla tiene un selector de plazas, un campo de teléfono, una casilla para aceptar las condiciones de la ruta y el botón «Reservar plaza». Cada principio mira esa misma pantalla desde un ángulo distinto.
+
+**Perceptible: ¿le llega la información a la persona?** La información y los controles tienen que presentarse de forma que se puedan percibir, con la vista, el oído o el tacto, según cómo use cada persona el producto. En la reserva, eso incluye lo que cambia: que quedan 12 plazas, que el teléfono tiene un error y que la reserva se ha hecho. Un aviso de éxito que aparece dos segundos como un icono verde y se desvanece solo le llega a quien estaba mirando ese punto en ese momento.
+
+**Operable: ¿puede hacer todo lo que la tarea pide?** Los controles y la navegación tienen que poder usarse con distintas formas de interacción: ratón, teclado, voz, pantalla táctil o pulsador. Operable no significa «se puede hacer clic». Significa que alguien que no usa el ratón llega al selector, cambia el número, marca la casilla y reserva; que tiene tiempo para hacerlo, y que ningún paso exige un gesto de precisión.
+
+**Comprensible: ¿entiende qué se le pide y qué va a pasar?** La información y el funcionamiento tienen que entenderse. En la reserva, eso es una etiqueta que dice qué va en cada campo y en qué formato, un botón que nombra la acción («Reservar plaza» y no «Continuar») y un error que explica cómo arreglarlo. También es coherencia: que el mismo control funcione igual en todas las pantallas del producto.
+
+**Robusto: ¿puede interpretarlo la tecnología que usa?** El contenido tiene que estar construido de forma que lo interpreten los navegadores y las tecnologías de apoyo, las de hoy y las que vengan. Robusto no significa «funciona en todos los navegadores». Significa que un lector de pantalla, un programa de control por voz o un sistema de barrido reciben qué es cada control, cómo se llama y en qué estado está, sin tener que adivinarlo por su aspecto.
+
+Cada principio agrupa pautas, y cada pauta reúne criterios que se pueden comprobar.
+
+### Verbos, barreras y principios
+
+Hay dos formas útiles de mirar una tarea antes de abrir el estándar: los verbos de la interacción (percibir, comprender y actuar) y los cuatro tipos de barrera (percepción, comprensión, interacción y estructura). Se parecen a los principios, pero no son lo mismo. Conviene ver dónde encajan y dónde no.
+
+| Forma de mirar la tarea | Dónde cae en WCAG | El matiz |
+|---|---|---|
+| Percibir · barrera de percepción | Perceptible | Encaje directo: contraste, color, alternativas a imágenes y sonidos |
+| Comprender · barrera de comprensión | Comprensible | Encaje directo: lenguaje, instrucciones, errores, coherencia |
+| Actuar · barrera de interacción | Operable | Operable suma dos cosas que el verbo «actuar» no sugiere: el tiempo y la navegación |
+| Barrera de estructura | Repartida | Las relaciones y el orden de lectura están en Perceptible (pauta 1.3 Adaptable); el orden del foco y los encabezados, en Operable (pauta 2.4 Navegable); que esas relaciones lleguen a la tecnología de apoyo, en Robusto |
+| — | Robusto | No tiene equivalente: los verbos y las barreras hablan de capacidades de las personas y Robusto habla de la tecnología que media entre la persona y la interfaz |
+
+Los tipos de barrera te ayudan a describir qué le pasa a quien usa la pantalla. Los principios permiten buscar en WCAG los criterios relacionados con esa descripción.
+
+### Qué oye quien usa un lector de pantalla
+
+Una casilla marcada puede verse bien y no funcionar bien con un lector de pantalla. Además del texto, el lector necesita saber que es una casilla y si está marcada. Así la persona sabe qué puede hacer y qué ha elegido.
+
+| En pantalla | Si el lector recibe solo el texto | Si recibe también la función y el estado |
+|---|---|---|
+| ☑ Acepto las condiciones de la ruta | «Acepto las condiciones de la ruta» | «Acepto las condiciones de la ruta, casilla, marcada» |
+
+El segundo anuncio permite reconocer el control y su estado. Ese es el sentido de **Robusto** en este ejemplo: que la tecnología de apoyo pueda interpretar lo que hay en la interfaz.
+
+*(Se referencia una comparación interactiva con el recorrido por Tab y los anuncios de lector de pantalla — no incluida aquí por ser material interactivo.)*
+
+### Un problema, varios principios
+
+Los principios no son categorías excluyentes. Un campo de teléfono que marca el error solo con un borde rojo falla en lo perceptible (quien no distingue ese rojo no sabe que hay un error) y en lo comprensible (aunque lo vea, nada le dice qué ha fallado). Un botón que solo se dibuja y no se construye como botón falla en lo operable (Tab no llega) y en lo robusto (el lector no dice que es un botón).
+
+Una misma barrera puede llevarte a más de un principio y a varios criterios. Describe primero qué falla para decidir dónde buscar.
+
+Revisa la tarea completa. Si el teclado permite rellenar la reserva, pero no llegar al botón de confirmación, la persona sigue sin poder reservar.
+
+---
+
+## 2.3 — Las pautas de WCAG
+
+Las 13 pautas de WCAG 2.2 agrupan los criterios por objetivos. Si encuentras una barrera en un diseño, consulta la pauta relacionada para buscar el criterio que la recoge.
+
+### Las 13 pautas de WCAG
+
+Una pauta es un objetivo. No se comprueba («¿es Distinguible esta pantalla?» no tiene respuesta de sí o no), pero agrupa los criterios que sí se comprueban. Su número indica a qué principio pertenece: la 1.4 es la cuarta pauta del principio 1, Perceptible. Perceptible tiene cuatro pautas, Operable cinco, Comprensible tres y Robusto una.
+
+Busca la decisión que necesitas tomar en la tabla y consulta la pauta correspondiente en WCAG 2.2.
+
+| Pauta | Qué decisiones agrupa |
+|---|---|
+| 1.1 Alternativas textuales | Qué texto sustituye a imágenes, iconos y gráficos |
+| 1.2 Medios tempodependientes | Subtítulos, audiodescripción y transcripciones de audio y vídeo |
+| 1.3 Adaptable | Estructura, relaciones y orden que no dependen de cómo se presenta |
+| 1.4 Distinguible | Contraste, color, tamaño del texto, espaciado, zoom y reajuste del contenido al ampliar la página |
+| 2.1 Accesible por teclado | Que todo funcione sin ratón y sin trampas para el foco |
+| 2.2 Tiempo suficiente | Límites de tiempo y contenido que se mueve o se actualiza solo |
+| 2.3 Convulsiones y reacciones físicas | Destellos y animaciones que pueden hacer daño |
+| 2.4 Navegable | Orientarse y encontrar: títulos, encabezados, enlaces, foco |
+| 2.5 Modalidades de entrada | Puntero, gestos, arrastre, voz y tamaño de los objetivos |
+| 3.1 Legible | Idioma y comprensión del texto |
+| 3.2 Predecible | Comportamiento sin sorpresas y coherencia entre páginas |
+| 3.3 Asistencia para la entrada de datos | Etiquetas, errores, prevención y autenticación |
+| 4.1 Compatible | Lo que cada componente comunica a la tecnología de apoyo |
+
+Busca según el problema que tiene la persona. Un vídeo de fondo sin pausa corresponde a 2.2 Tiempo suficiente: la barrera es no poder detener el movimiento. La pauta 1.2 se ocupa de los subtítulos y las descripciones del audio o el vídeo. Una animación que marea al abrir un menú corresponde a 2.3 Convulsiones y reacciones físicas. Algunas barreras afectan a criterios de varias pautas.
+
+### Reconocer el problema antes de buscar el criterio
+
+Si una persona pierde lo que estaba haciendo porque se cierra su sesión, empieza por **2.2 Tiempo suficiente**. Si no puede completar un paso con el teclado, consulta **2.1 Accesible por teclado**. La pauta te sitúa en el tema; después tendrás que leer sus criterios para encontrar el requisito concreto.
+
+En esta lección interesa reconocer ese tema. No necesitas memorizar números, límites ni excepciones para usar el mapa de las pautas.
+
+---
+
+## 2.4 — De una pauta a un criterio
+
+Para encontrar el criterio que corresponde a una barrera, primero necesitas describir qué ocurre. «El campo "Teléfono" no se alcanza con Tab» permite comprobar un problema; «el formulario no es accesible» no dice qué falla. Después puedes buscar el principio, la pauta y el criterio relacionados.
+
+### Describir antes de buscar
+
+Una buena descripción de barrera cabe en una frase con cuatro piezas:
+
+**[Elemento] [qué pasa] para [quién o qué forma de uso] cuando [condición].**
+
+Cada pieza tiene un trabajo. El **elemento** dice dónde está el problema con un nombre que cualquiera del equipo reconoce en la pantalla. **Qué pasa** describe algo observable, no un veredicto: «apenas se distingue del fondo», no «no cumple». **Para quién** nombra una forma de uso o una necesidad funcional, no un diagnóstico, y te indica qué tendrás que comprobar. La **condición** convierte la frase en una prueba que otra persona puede repetir.
+
+Dos ejemplos, del comentario habitual a la descripción útil:
+
+- **«El texto gris no cumple.»** Mejor: «El aviso "Te enviaremos la confirmación en 24 horas" apenas se distingue del fondo para quien tiene baja visión o mira el móvil al sol, cuando se muestra en gris claro (#999999) sobre blanco.» El problema no era que fuera gris: otro gris más oscuro se lee sin dificultad.
+- **«Problema de teclado.»** Mejor: «El campo "Teléfono" no se puede alcanzar para quien usa el teclado o una tecnología que lo emula, cuando recorre el formulario con Tab: el foco pasa del correo al botón Enviar.»
+
+La descripción ya adelanta la búsqueda. El verbo de «qué pasa» apunta al principio: si la información no llega, estás en Perceptible; si no se puede alcanzar o no da tiempo, en Operable; si llega pero no se entiende, en Comprensible; si la tecnología de apoyo no recibe qué es o en qué estado está, en Robusto.
+
+### Buscar un criterio en WCAG
+
+Con la barrera descrita, busca el principio y la pauta relacionados. Después lee los criterios de esa pauta para comprobar cuál se aplica:
+
+1. **Principio.** Lo da el verbo de la descripción. «Apenas se distingue» es percepción.
+2. **Pauta.** Dentro del principio, busca el objetivo que encaja. Un problema de ver texto sobre un fondo está en 1.4 Distinguible, no en 1.1 Alternativas textuales ni en 1.3 Adaptable.
+3. **Criterio.** Dentro de la pauta, lee las condiciones de los candidatos, no solo sus nombres. En 1.4 hay trece criterios; el texto sobre un fondo lleva a 1.4.3 Contraste (mínimo), nivel AA, que fija la relación de contraste que el texto tiene que alcanzar con su fondo.
+
+Puedes consultar los criterios con estas herramientas:
+
+- **How to Meet WCAG 2.2, la referencia rápida.** Deja filtrar por nivel, por etiquetas temáticas (formularios, etiquetas, errores, contraste, foco, teclado, movimiento, límites de tiempo...) y por perfil. El filtro «Visual Design» deja a la vista los criterios relacionados con el diseño visual; «Interaction Design», los relacionados con la interacción.
+- **El índice de Understanding WCAG 2.2.** Está ordenado por principio y pauta, así que reproduce el recorrido: abres el principio, la pauta, y cada criterio tiene su página con la intención y los ejemplos.
+- **Buscar en WCAG 2.2.** El estándar es un único documento; buscar en él (Ctrl+F o Cmd+F) una palabra del problema encuentra criterios y definiciones. Busca en inglés: «label», «error», «contrast», «focus», «target». No hay traducción autorizada de WCAG 2.2 al español, así que los términos de búsqueda fiables son los originales.
+
+El nombre de un criterio es un resumen, y a veces confunde. «Encabezados y etiquetas» (2.4.6) no pide que haya etiquetas, sino que las que hay describan su propósito; que existan lo pide 3.3.2. Antes de citar un criterio, lee su condición entera.
+
+### Un componente, varios criterios
+
+El formulario de contacto del vídeo tiene cuatro barreras. Cada una requiere una corrección distinta: mejorar una no resuelve las demás.
+
+*(Ejemplo visual: formulario "Escríbenos" de Biblioteca Norte, con 4 barreras marcadas)*
+
+| N.º | Barrera | Criterio relacionado | Decisión de diseño |
+|---|---|---|---|
+| 1 | «Dato» no dice qué se pide y desaparece al escribir | 3.3.2 Etiquetas o instrucciones (A); 2.4.6 Encabezados y etiquetas (AA) | Mantener fuera del campo la etiqueta «Nombre y apellidos» |
+| 2 | El marcador del correo apenas se lee | 1.4.3 Contraste (mínimo) (AA) | Usar un color que se distinga del fondo; las instrucciones necesarias deben quedar visibles fuera del campo |
+| 3 | «Algo ha fallado» no identifica el error | 3.3.1 Identificación de errores (A); 3.3.3 Sugerencias ante errores (AA) | Indicar junto al campo qué falla y cómo corregirlo |
+| 4 | Tab no alcanza «Teléfono» | 2.1.1 Teclado (A) | Incluir el campo en el recorrido y comprobar que se puede rellenar con teclado |
+
+Registra cada barrera por separado: cada una puede necesitar una decisión y una prueba distintas.
+
+Todas estas decisiones acaban en dos sitios: en el sistema de diseño, para que el campo nazca bien en cada pantalla, y en el entregable que recibe desarrollo.
+
+### Comprobar la barrera y registrar la decisión
+
+Para revisar una barrera, describe qué ocurre, localiza el criterio y lee sus condiciones y excepciones. Registra por separado la decisión de diseño y cómo comprobarás que funciona. No necesitas memorizar los números: puedes consultarlos al revisar cada caso.
+
+---
+
+## 2.5 — Cómo leer un criterio
+
+El nombre de un criterio resume el tema, pero no dice cuándo se aplica ni qué excepciones tiene. Para decidir si un diseño cumple, lee su texto completo. La lectura completa permite comprobar a qué contenido afecta, qué exige y qué excepciones admite.
+
+### Qué partes tiene un criterio
+
+Al leer un criterio de WCAG 2.2 puedes encontrar estas piezas:
+
+- **Número y nombre.** El número sitúa el criterio dentro del principio y la pauta; el nombre indica el tema. Para saber qué se exige hay que leer el texto que los acompaña.
+- **Nivel.** A, AA o AAA, entre paréntesis junto al nombre.
+- **La frase principal.** Es el requisito: qué tiene que ser cierto en el contenido.
+- **Listas.** Muchos criterios abren una lista, y la frase que la introduce decide cómo se lee. «Al menos una de las siguientes» (2.2.1 Tiempo ajustable) te deja elegir; «todas las siguientes» (2.2.2 Poner en pausa, detener, ocultar) no.
+- **Excepciones.** Casos concretos en los que el requisito no se aplica, como los logotipos en 1.4.3 Contraste (mínimo).
+- **Notas.** Aclaran, pero son informativas: no añaden ni quitan requisitos.
+- **Términos enlazados al glosario.** Palabras con un significado técnico definido en el propio estándar. Esas definiciones sí son normativas: forman parte del requisito aunque estén en otro lugar del documento.
+
+La sección de conformidad de WCAG 2.2 aclara cómo evaluar un criterio cuando no hay contenido al que aplicarlo. En ese caso se considera satisfecho, igual que cuando la página cumple el requisito. Por ejemplo, un criterio sobre vídeo se da por cumplido en una página sin vídeo. «No aplica» y «cumple» dan el mismo resultado de conformidad, pero no la misma información: en una revisión conviene decir cuál de las dos es.
+
+### Cinco preguntas para leer cualquier criterio
+
+Leer bien un criterio es responder cinco preguntas, en este orden:
+
+1. **¿A qué contenido afecta?** Texto, controles, imágenes, mecanismos de ayuda, límites de tiempo... Si tu caso no es de ese tipo, el criterio no es el tuyo.
+2. **¿Cuándo aplica?** Muchos criterios tienen un disparador: «si hay un límite de tiempo», «si el error se detecta automáticamente», «si se repite en varias páginas». Si el disparador no ocurre, el criterio se cumple sin hacer nada.
+3. **¿Qué condición exige?** La frase que hay que poder comprobar. Aquí suele esconderse la diferencia con el titular.
+4. **¿Qué excepciones tiene?** Y si tu caso cae en alguna.
+5. **¿Qué nivel tiene?** Para saber si entra en el alcance de tu proyecto.
+
+Si una respuesta depende de una palabra enlazada al glosario, abre su definición antes de decidir. Por ejemplo, «conjunto de páginas web» tiene un significado concreto que usarás en el siguiente caso.
+
+### Las cinco preguntas, aplicadas a 3.2.6 Ayuda coherente
+
+En Biblioteca Norte, el enlace de ayuda se repite en varias páginas. Para decidir si su ubicación cumple, hay que leer 3.2.6 Ayuda coherente, nivel A. Esta traducción propia del criterio permite aplicar las cinco preguntas:
+
+*Si una página web contiene alguno de los siguientes mecanismos de ayuda, y esos mecanismos se repiten en varias páginas web dentro de un conjunto de páginas web, aparecen en el mismo orden respecto al resto del contenido de la página, salvo que el cambio lo inicie la persona usuaria: datos de contacto de una persona; un mecanismo de contacto con una persona; una opción de autoayuda; un mecanismo de contacto totalmente automatizado.*
+
+**¿A qué contenido afecta?** A cuatro tipos de ayuda, y solo a esos. La explicación de 3.2.6 en Understanding da ejemplos de cada tipo: datos de contacto (un teléfono, un correo, un horario de atención); un mecanismo de contacto con una persona (un chat atendido, un formulario de contacto, una red social); una opción de autoayuda (preguntas frecuentes actualizadas, una página «Cómo hago...», una página de soporte), y un mecanismo totalmente automatizado (un asistente conversacional). La ayuda contextual de un campo, como la instrucción de un formulario, no entra.
+
+**¿Cuándo aplica?** Solo si la ayuda está en la página y además se repite en varias páginas de un **conjunto de páginas web**, un término del glosario: páginas con un propósito común y el mismo autor. El criterio no obliga a ofrecer ayuda, ni a ponerla en todas las páginas: una página sin ayuda no incumple. Tampoco alcanza a los PDF descargables.
+
+**¿Qué condición exige?** Que la ayuda aparezca en el **mismo orden respecto al resto del contenido**. La segunda nota del criterio aclara que ese orden es el de la página leída en secuencia, no una posición en píxeles. Si otros elementos que se repiten en todas las páginas van antes de la ayuda en una página, tienen que ir antes también en las demás.
+
+**¿Qué excepciones tiene?** Una: que el cambio lo inicie la persona usuaria, por ejemplo al cambiar el zoom, la orientación o el tamaño de la ventana, o al reordenar la cabecera en sus preferencias. Understanding precisa que pasar de una página a otra no cuenta como cambio iniciado por la persona, ni tampoco, normalmente, iniciar o cerrar sesión.
+
+**¿Qué nivel tiene?** A. Entra en cualquier alcance de conformidad.
+
+Mantener el orden de lectura cumple 3.2.6, pero la ubicación visual también afecta a quien busca la ayuda. Un enlace que conserva ese orden en el código y cambia de la cabecera a una columna lateral puede resultar difícil de encontrar. Understanding recomienda mantener también una ubicación visual coherente.
+
+---
+
+## 2.6 — Cómo cumplir un criterio
+
+### Cómo consultar Understanding
+
+Cuando el texto de un criterio te deje una duda, abre su página en Understanding WCAG 2.2. Allí encontrarás el propósito, ejemplos y explicaciones de los casos dudosos.
+
+**Apartados de la página de Understanding (ejemplo: 3.2.6 Consistent Help):**
+
+1. **In Brief: sitúa el tema.** Goal, What to do y Why it's important resumen el objetivo, qué hacer y por qué importa. Aquí el objetivo es facilitar que las personas encuentren ayuda. Usa este resumen para orientarte antes de leer el requisito.
+2. **Success Criterion: lee el requisito.** Este apartado reproduce el texto del criterio. Las palabras enlazadas, como «set of web pages» (conjunto de páginas web), llevan a su definición. Consúltalas cuando tu decisión dependa de su significado.
+3. **Page Contents: ve al apartado que necesitas.** El índice enlaza cada sección. Intent explica el propósito y los límites; Examples muestra casos; Key Terms reúne las definiciones. Elige el apartado según la duda que tengas.
+
+**Encontrar un ejemplo para tu caso — Examples: busca una tarea parecida.** Los ejemplos concretan para qué sirve el criterio. La página de 3.2.6 incluye una solicitud de empleo, una reserva de cita médica y la búsqueda de un procedimiento. Busca un caso parecido al de tu producto y contrástalo con el requisito. (Ejemplo "Medical appointment scheduling form": describe a alguien que no encuentra el servicio que necesita al reservar — una opción de mensajería situada de forma coherente le permite contactar con personal sin tener que usar otra interfaz.)
+
+**Tabla de referencia — apartados de cualquier página de Understanding:**
+
+| Apartado | Qué encuentras | Para qué te sirve |
+|---|---|---|
+| In Brief | El objetivo, qué hacer y por qué importa, en tres frases | Explicar el criterio en una reunión |
+| Intent | Qué pretende el criterio, sus límites y los casos dudosos | Decidir si tu caso entra o no |
+| Benefits | Qué personas se benefician y cómo | Argumentar una decisión con personas, no con números |
+| Examples | Situaciones en las que el criterio ayuda | Relacionar el requisito con una tarea de tu producto |
+| Related Resources | Lecturas externas | Profundizar |
+| Techniques | Técnicas suficientes, técnicas recomendadas y fallos documentados | Consultar formas documentadas de satisfacer el criterio y reconocer fallos frecuentes |
+| Key Terms | Las definiciones del glosario que usa el criterio | Resolver las palabras técnicas sin salir de la página |
+
+Las técnicas son informativas: las suficientes ofrecen formas de cumplir el criterio, pero puede haber otras soluciones. Las recomendadas pueden ir más allá del mínimo.
+
+El criterio y su glosario dicen qué se exige; Understanding explica por qué y ayuda a interpretarlo. Ante una duda, contrasta el ejemplo con el texto del criterio y sus definiciones.
+
+### Qué exige 1.4.1 sobre el color
+
+**1.4.1 Uso del color (A)** exige una alternativa visual al color. Que el lector de pantalla anuncie «Disponible» resuelve otro problema: que esa información llegue a la tecnología de apoyo. En la reserva hacen falta las dos cosas: distinguir las horas a la vista y conocer su estado al escucharlas.
+
+### Cómo justificar un incumplimiento
+
+Para justificar un incumplimiento, señala qué condición del criterio falla en el caso que estás revisando. Comprueba antes que el contenido entra en su alcance y que no se aplica una excepción. Así el equipo puede revisar la misma evidencia contigo.
+
+### Distintas soluciones para el uso del color
+
+En Salud Norte, las horas libres aparecen en verde y las ocupadas en rojo. Añadir una palabra, usar otra marca visible o mostrar solo las libres son formas de resolver el problema del color. Para elegir entre ellas, hay que comprobar el criterio y pensar cómo encontrará la persona una hora que pueda reservar.
+
+Para reservar con la Dra. Marta Gil el martes 15 de septiembre, la persona necesita distinguir las horas libres de las ocupadas. **1.4.1 Uso del color, nivel A,** exige que pueda hacerlo sin depender solo del color. Estas soluciones cumplen esa condición, pero cambian el trabajo que hace la persona:
+
+| Solución | ¿Cumple 1.4.1? | Qué le pasa a la tarea |
+|---|---|---|
+| Añadir la palabra «Libre» u «Ocupada» a cada hora | Sí | Se entiende, pero la persona sigue leyendo, recorriendo con el teclado y descartando horas que no puede reservar |
+| Añadir un icono o una textura a las ocupadas | Sí, si la diferencia se ve sin color | Hay que aprender qué significa cada marca, y el icono necesita su propio texto para quien no lo ve |
+| Mostrar solo las horas libres | Sí: ya no hay nada que distinguir | La persona recorre menos opciones y ya no puede elegir una hora ocupada |
+| Mostrar solo las libres, agrupadas en «Mañana» y «Tarde» | Sí | La organización también informa: se encuentra antes la franja que conviene |
+
+Mostrar solo las horas libres evita recorrer y descartar las ocupadas. Agruparlas puede ayudar a encontrar una franja conveniente. También hay que decidir qué ofrecer cuando no queda ninguna: «No quedan horas el martes 15. La primera libre es el miércoles 16 a las 10:00» permite seguir buscando sin empezar de nuevo.
+
+### Cómo consultar las técnicas y los fallos del W3C
+
+Para comprobar si una solución cumple, puedes consultar Techniques for WCAG 2.2. El W3C reúne allí soluciones documentadas y errores que incumplen criterios. También puedes acceder a las técnicas relacionadas desde la página de Understanding de cada criterio. No es obligatorio usar una de esas soluciones: lo obligatorio es cumplir el requisito.
+
+El W3C explica cómo se utilizan las técnicas y distingue tres tipos:
+
+- **Técnicas suficientes.** Formas fiables de cumplir. Permiten satisfacer el criterio cuando se aplican en la situación indicada y funcionan con las tecnologías que utilizan las personas usuarias. Se organizan por situaciones («si el campo exige un formato concreto...») y a veces van combinadas: cuando dos técnicas están unidas por «AND», hay que aplicar las dos.
+- **Técnicas recomendadas.** Mejoras que conviene aplicar pero que no bastan por sí solas para cumplir, o que no siempre se pueden comprobar o no siempre funcionan con todas las tecnologías de apoyo.
+- **Fallos documentados.** Errores que se sabe que incumplen. Si tu diseño coincide con uno, no cumple, salvo que ofrezcas una versión alternativa que no lo tenga.
+
+La lista de técnicas no es cerrada: puedes cumplir un criterio de otra forma si satisface su requisito y las condiciones de conformidad. Tampoco basta con reconocer una técnica: comprueba para qué criterio se propone y si hay que combinarla con otra. Fallar la prueba de una técnica no demuestra por sí solo que incumplas; coincidir con un fallo documentado sí indica un problema.
+
+La lista de fallos ayuda a revisar decisiones de diseño. Dos ejemplos: identificar un error solo con color o usar el nombre del archivo como alternativa de una foto. En ambos casos, el requisito permite explicar por qué la solución falla.
+
+### Patrones que la gente ya conoce
+
+Una cuadrícula de horas o un buscador reconocible ayudan a entender la interfaz sin aprender un funcionamiento nuevo. Jakob Nielsen llama a este principio **reconocer antes que recordar**, en la sexta de sus diez heurísticas de usabilidad. Si construyes ese patrón con controles nativos del navegador, aprovechas su comportamiento de teclado y su información para las tecnologías de apoyo. En un componente a medida hay que comprobar ambas cosas.
+
+La pauta 3.2 Predecible también pide coherencia en la navegación y en la identificación de los componentes que se repiten. Cambiar el nombre o el funcionamiento entre pantallas obliga a aprender de nuevo algo que la persona ya conocía.
+
+Al diseñar un formulario, otras dos heurísticas de Nielsen ayudan a decidir qué hacer: prevenir errores (número 5) y ayudar a reconocerlos y corregirlos (número 9). Por ejemplo, indicar el formato de una fecha antes de escribir puede evitar un error; si aun así ocurre, el mensaje debe explicar cómo corregirlo.
+
+### Qué debe explicar un mensaje de error
+
+Un formulario que falla puede decir «Algo ha fallado» y devolver la página vacía, o puede llevar a la persona hasta el problema y ayudarla a resolverlo. La diferencia está en seis decisiones:
+
+| Pieza | Qué decides | Por qué |
+|---|---|---|
+| Dónde | El mensaje, junto al campo que falla. Si hay varios errores tras enviar, además, un resumen al principio que los enumere | Quien usa un ampliador de pantalla solo ve una parte de la página; el error tiene que estar donde está el problema |
+| Cómo se marca | Texto, icono y un borde más grueso, además del color. El borde, con un contraste de al menos 3:1 con el fondo | 1.4.1 Uso del color (A) y 1.4.11 Contraste no textual (AA) |
+| Qué ha fallado | Nombrar el campo y describir el problema en texto | 3.3.1 Identificación de errores (A) |
+| Cómo se arregla | Decir la corrección cuando se conoce, con un ejemplo del formato válido | 3.3.3 Sugerencias ante errores (AA) |
+| Qué se conserva | Todo lo escrito, también lo que tiene el error, para corregirlo en lugar de reescribirlo | Heurística 9; y menos esfuerzo para quien escribe con dificultad |
+| Con qué tono | Sin códigos, sin jerga y sin culpa: el mensaje describe el dato, no a la persona | La persona necesita entender qué debe cambiar |
+
+Un mismo texto puede cumplir los dos criterios a la vez. «El correo no es válido» identifica el error (3.3.1). «Al correo le falta la @. Escríbelo así: ana@ejemplo.com» identifica y además dice cómo corregirlo (3.3.1 y 3.3.3). Otros ejemplos del mismo patrón:
+
+- **Fecha de nacimiento:** «Esa fecha no existe: septiembre tiene 30 días. Escríbela como DD/MM/AAAA, por ejemplo 30/09/1990.»
+- **Código postal:** «El código postal tiene 5 números y aquí hay 4. Ejemplo: 28013.»
+- **Campo obligatorio vacío:** «Escribe tu teléfono para que podamos avisarte si cambia la cita.» Decir para qué se pide un dato también ayuda a darlo.
+
+3.3.3 no exige sugerir una corrección si compromete la seguridad o el propósito del contenido, como en ciertos datos de acceso o en un examen. Si el sistema corrige un valor automáticamente, también tiene que comunicarlo. Los avisos del navegador pueden identificar errores, pero no siempre explican cómo corregirlos: revisa qué información recibe la persona en cada caso.
+
+Documenta también cuándo aparece el error, cómo lo anuncia el lector de pantalla y adónde va el foco después de enviar el formulario. La guía WAI sobre notificaciones de formularios muestra cómo ofrecer mensajes junto a los campos y resúmenes de errores.
+
+---
+
+## 2.7 — Niveles de conformidad
+
+Declarar «nivel AA» exige precisar qué versión de WCAG se ha comprobado y qué páginas y procesos cubre la declaración. El nivel se aplica al alcance completo, no a una media de resultados.
+
+### Qué exige cada nivel de conformidad
+
+Los tres niveles son acumulativos. Conformar el nivel A exige cumplir todos los criterios A; el AA, todos los A y todos los AA; el AAA, los tres. En WCAG 2.2, un alcance AA incluye los 55 criterios de los niveles A y AA.
+
+Al evaluar una pantalla, comprueba todos los criterios aplicables del nivel acordado:
+
+- **No hay conformidad parcial por nivel.** Si falla un solo criterio AA, la página no conforma AA. No existe «AA salvo 2.5.7» ni «casi AA».
+- **Un criterio superior no compensa uno inferior.** Una pantalla puede tener un botón de 180 × 48 px, que supera el tamaño que pide el nivel AAA, y aun así no conformar AA porque el texto de la fecha no llega al contraste mínimo. Cumplir un requisito AAA no elimina un fallo de nivel A o AA.
+
+Si un proceso cumple todos los criterios A y falla uno AA, puede declarar el nivel A. Si alcanza AA y cumple además algunos criterios AAA, puedes informar cuáles son y en qué páginas se cumplen. Esa información adicional es recomendable, pero no cambia el nivel declarado.
+
+### Qué páginas y procesos entran
+
+La conformidad se comprueba en páginas y procesos completos. En una compra, no puedes declarar AA dejando fuera el pago si es necesario para terminarla. Si falla un criterio del nivel acordado en ese paso, el proceso no alcanza ese nivel.
+
+Un proveedor externo también forma parte del proceso: una pasarela que no se puede usar con teclado sigue siendo una barrera para quien compra, aunque la haya desarrollado otra empresa. Hay que resolverla antes de declarar conforme la compra.
+
+Comprueba qué nivel alcanza el proceso de Mercado Verde en cada caso.
+
+### Por qué un criterio es AAA
+
+Los niveles no ordenan las necesidades de las personas por importancia. Algunos requisitos AAA son difíciles de aplicar a todos los contenidos; por eso W3C desaconseja exigir AAA para un sitio entero. Un alcance AA puede añadir criterios AAA concretos si el equipo los acuerda y comprueba.
+
+### Cómo añadir requisitos AAA al alcance
+
+Para añadir un criterio AAA al alcance, decide qué necesidad resuelve, en qué parte del producto se aplicará y cómo se comprobará. Por ejemplo, el equipo puede acordar objetivos de 44 × 44 píxeles CSS para los botones principales de la app (2.5.5), aunque el alcance general sea AA. Escribe el compromiso: «intentaremos cumplir algunos AAA» no permite comprobarlo.
+
+### Cómo documentar el alcance
+
+Antes de diseñar o evaluar, acuerda con el equipo qué versión, nivel y partes del producto entran en la revisión. Esta plantilla recoge el alcance de «Solicitar un certificado de empadronamiento» en la Sede de Norte:
+
+| Campo | Qué se escribe | Ejemplo |
+|---|---|---|
+| Estándar y versión | Siempre la versión concreta | WCAG 2.2 |
+| Nivel | El que se compromete de forma completa | AA |
+| Qué entra | Páginas, **procesos completos**, estados y variaciones de tamaño | Proceso «Solicitar un certificado de empadronamiento», del acceso a la descarga del justificante, en móvil y escritorio, con estados de error, sesión caducada y confirmación |
+| Compromisos por encima del nivel | Criterio, lugar y motivo | 2.4.13 en todo el sistema de diseño; 2.5.5 en los botones de avance del proceso en móvil |
+| Contenido de terceros | Qué es, quién responde y qué se exige | Pasarela de firma electrónica: el contrato exige WCAG 2.2 AA; si falla, se corrige o sustituye y el proceso no se declara conforme hasta resolverlo |
+| Exclusiones | Solo las justificadas, nombradas una a una y con su motivo | Ninguna: el proceso entra completo |
+| Cómo se comprueba | Método y momento | Revisión del diseño por flujos, pruebas con teclado y lector de pantalla antes de publicar, pruebas con personas usuarias en cada versión mayor |
+| Fecha y responsable | Quién lo firma y cuándo se revisa | Equipo de la sede, revisión anual |
+
+Si una página queda fuera del alcance, nómbrala y no la declares conforme. Dentro de un proceso completo no puedes excluir un paso necesario para terminarlo.
+
+---
+
+## 2.8 — WCAG y el diseño
+
+En el formulario de Biblioteca Norte, señalar un error solo con rojo deja a algunas personas sin saber qué corregir. 1.4.1 Uso del color exige que el color no sea el único medio visual de señalar el error. Una decisión concreta sería que cada campo con error muestre un mensaje, un icono y un borde de 2 px.
+
+### Organizar el trabajo desde la tarea de la persona
+
+Puedes ordenar el trabajo en seis pasos: **necesidad, barrera, requisito, decisión, implementación y evaluación**. Empieza por la tarea de la persona y comprueba al final si puede hacerla con la solución que has construido. En Mercado Verde, Teresa quiere añadir una cesta de temporada a su compra:
+
+| Paso | Pregunta | Entregable | Ejemplo en Mercado Verde |
+|---|---|---|---|
+| Necesidad | ¿Qué intenta hacer la persona? | Una frase de tarea, sin soluciones | Teresa, que usa un pulsador con barrido en su tableta, quiere añadir la cesta de temporada a su compra |
+| Barrera | ¿Qué del diseño lo impide o dificulta? | Una frase que describe el diseño, no a la persona | El botón «Añadir» solo aparece al pasar el ratón por la tarjeta del producto; el barrido nunca llega a él |
+| Requisito | ¿Qué criterio lo cubre y qué condición exige? | Criterio, nivel y condición | 2.1.1 Teclado (A): toda la funcionalidad se puede manejar con una interfaz de teclado, que es la que usan muchos pulsadores |
+| Decisión | ¿Qué hacemos exactamente? | Un comportamiento observable | Cada tarjeta muestra siempre el botón «Añadir», que se alcanza con teclado y lleva el nombre del producto en su nombre accesible |
+| Implementar | ¿Cómo se construye sin perder la decisión? | Componente y criterios de aceptación acordados con desarrollo | Botón nativo en la tarjeta del sistema de diseño, sin depender de que la persona pase el puntero |
+| Evaluar | ¿Funciona para la tarea del principio? | Una prueba con resultado | Recorrer el catálogo con teclado y con barrido: ¿se añade la cesta sin ratón? |
+
+En este caso, la revisión termina comprobando si el botón se alcanza con teclado y si Teresa puede añadir la cesta con su pulsador.
+
+### Del criterio a una decisión que se puede comprobar
+
+Al documentar el error de un campo, 1.4.1 Uso del color (A) te permite elegir cómo añadir información visible al color. Para que el equipo aplique la misma solución en otras pantallas, describe qué mostrará el componente cuando tenga un error.
+
+La descripción debe permitir comprobar el resultado sin tener que interpretar lo que quiso decir quien la escribió:
+
+- «Los errores no dependerán solo del color.» Recoge el requisito, pero deja abierta la solución.
+- «Todo campo con error muestra un icono de alerta, un mensaje en texto debajo del campo y el borde en rojo #B3261E de 2 px.» Indica qué debe mostrar el componente.
+
+La segunda descripción permite comprobar si aparecen el icono, el mensaje y el borde acordados. Puedes acompañarla del criterio que justifica la decisión.
+
+### El error y el foco tienen que verse a la vez
+
+Los componentes tienen estados que se combinan: un campo puede tener error y, a la vez, tener el foco. Si solo diseñas cada estado por separado, la combinación puede perder información. El caso típico: el indicador de foco se dibuja **sustituyendo** al borde, así que en el momento exacto en que la persona vuelve al campo para corregirlo, el borde rojo desaparece y se pierde una de las señales de error.
+
+Comprueba el componente tanto cuando muestra el error como cuando la persona vuelve a él para corregirlo. Las indicaciones para corregir el dato deben seguir disponibles durante esa vuelta al campo.
+
+### Qué relaciones del formulario hay que documentar
+
+La etiqueta «Correo electrónico», la instrucción de formato y el mensaje de error pueden estar junto al campo en la pantalla. Para que el lector de pantalla los anuncie al llegar a él, el código debe asociarlos. Documenta estas tres relaciones:
+
+1. **Etiqueta ↔ campo.** Al llegar al campo, el lector anuncia su nombre («Correo electrónico, editar texto»). Sin la relación, anuncia solo «editar texto» y la persona tiene que adivinar.
+2. **Instrucción ↔ campo.** El formato esperado («DD/MM/AAAA») o una condición («mínimo 8 caracteres») se anuncia al llegar al campo, sin tener que recorrer antes todo el contenido de la página.
+3. **Error ↔ campo.** El mensaje queda asociado a su campo: quien vuelve a él para corregirlo oye qué falla, sin buscarlo por la página.
+
+Anota en el diseño que la etiqueta, la instrucción y el error deben estar asociados al campo. Puedes consultar ejemplos en los tutoriales WAI sobre etiquetas de formularios y notificaciones de errores. Estas asociaciones permiten que la información que transmite la presentación también llegue a las tecnologías de apoyo, como pide 1.3.1 Información y relaciones (A).
+
+### Cuándo aparece el error
+
+WCAG no fija un único momento para validar los datos. El equipo lo decide según el campo y la tarea. Estas opciones ayudan a comparar las consecuencias:
+
+| Momento | Cuándo conviene | Riesgo |
+|---|---|---|
+| Al salir del campo | Datos con formato comprobable: correo, código postal, fecha, IBAN | Mostrar «obligatorio» en un campo vacío que la persona solo ha atravesado con el tabulador. Molesta y confunde |
+| Al enviar | Campos obligatorios vacíos, casillas de aceptación, comprobaciones que dependen de varios campos | Descubrir todos los errores juntos al final; exige un resumen claro y llevar a la persona al primero |
+| Mientras se escribe | Solo ayudas que informan del progreso: fortaleza de la contraseña, caracteres restantes, disponibilidad de un nombre de usuario | Mostrar un error antes de que la persona haya terminado de escribir: «correo no válido» a la tercera letra |
+
+Una combinación posible es validar el formato al salir del campo y, **una vez mostrado un error, volver a comprobarlo mientras se escribe**, para que desaparezca en cuanto está corregido. La persona no tiene que salir del campo para saber si ya está bien.
+
+### WCAG como argumento en una revisión
+
+Un comentario de revisión ayuda al equipo cuando localiza el problema, explica su efecto y da una condición que se puede comprobar. «Este texto tiene un contraste de 2,1:1 y necesita 4,5:1» ofrece más información que «Esto no es accesible».
+
+Un comentario de revisión útil tiene cinco piezas:
+
+1. **Qué ves**, localizado: pantalla, componente y estado.
+2. **A quién afecta y cómo**, en términos de tarea.
+3. **Criterio y condición**, con número, nombre y nivel.
+4. **La medida**, si la hay: la relación de contraste, los píxeles, el número de pasos.
+5. **Una propuesta**, que no tiene por qué ser la definitiva, pero demuestra que hay salida.
+
+Así se ve con un caso concreto, en la casilla «Acepto las condiciones» del formulario «Inscripción al taller»:
+
+«La casilla no se distingue.» → «Inscripción al taller, casilla "Acepto las condiciones" en estado por defecto: su borde es #D0D0D0 sobre blanco, 1,54:1. Quien tiene baja visión o usa el móvil al sol puede no ver que hay una casilla que marcar y no entender por qué el envío falla. 1.4.11 Contraste no textual (AA) pide 3:1 para lo necesario para identificar un componente. Propuesta: borde #767676 (4,54:1), el mismo gris que ya usan los campos de texto.»
+
+### Reutilizar la solución en otras pantallas
+
+Si el mismo campo aparece en la inscripción, el perfil y el pago, reutiliza la solución y comprueba que sigue funcionando en cada pantalla. El criterio 3.2.4 pide identificar de forma coherente los componentes con la misma función. Compartir también cómo presentan y anuncian los errores es una decisión del sistema de diseño.
+
+---
+
+## 2.9 — Requisito y buena práctica
+
+En una revisión de Salud Norte, el equipo quiere ampliar los botones del calendario. Para decidir si el cambio es obligatorio, hay que comprobar qué exige el nivel de WCAG acordado. Si el diseño ya cumple ese requisito, la ampliación puede seguir siendo una mejora útil para las personas que piden cita. Esa diferencia permite explicar por qué se propone cada cambio.
+
+### Tres preguntas para clasificar cualquier decisión
+
+1. **¿Lo pide un criterio que está en mi alcance?** Si el alcance es WCAG 2.2 AA y el criterio es A o AA, es requisito. Si es AAA o no hay criterio, no lo es, por mucho que ayude.
+2. **¿Quién queda fuera si no lo hago?** Identifica qué tarea no puede completar la persona y qué mejora se propone para que pueda hacerlo.
+3. **¿Cuánto cuesta y cuándo?** Compara el trabajo de incluir la mejora durante el diseño con el de cambiar el componente después de publicarlo.
+
+La primera pregunta identifica los requisitos. Las otras dos ayudan a priorizar las mejoras. Una **preferencia estética**, como redondear las esquinas por identidad de marca, pertenece a otra categoría: en ese caso no se propone para resolver una barrera.
+
+### El tamaño que exige el alcance
+
+2.5.8 Tamaño del objetivo (mínimo), nivel AA, pide una zona pulsable de al menos **24 × 24 píxeles CSS**, salvo excepciones. 2.5.5 Tamaño del objetivo (mejorado), nivel AAA, sube ese mínimo a **44 × 44 píxeles CSS** y también tiene excepciones.
+
+Si el alcance es AA y el botón ya cumple, ampliarlo a 44 × 44 puede facilitar su uso. Es una mejora que el equipo puede acordar, no una condición adicional del nivel AA. Si la incorpora al alcance, debe cumplir ese compromiso.
+
+### El contexto de un enlace
+
+2.4.4 Propósito de los enlaces (en contexto), nivel A, pide que el propósito de cada enlace se entienda por su texto o por su texto junto con su **contexto determinable por programa**. Ese contexto no es «lo que hay cerca en la pantalla»; es lo que la tecnología de apoyo puede relacionar con el enlace: la misma frase, el mismo párrafo, el mismo elemento de una lista, la misma celda de una tabla o su celda de encabezado.
+
+De ahí salen tres casos que conviene distinguir:
+
+- «Más información» al final del párrafo que describe el taller de color **cumple 2.4.4**: quien usa un lector puede leer el párrafo y saber adónde lleva.
+- Tres «Más información» colocados fuera del texto que describen, sin ninguna relación con él, **no cumplen**: fuera de contexto, los tres dicen lo mismo y llevan a sitios distintos.
+- Si cada «Más información» está relacionado con su párrafo, los tres pueden cumplir 2.4.4. Aun así, quien recorre la lista de enlaces de la página oirá tres textos iguales y tendrá que consultar el contexto para distinguirlos. 2.4.9 Propósito de los enlaces (solo enlaces), nivel AAA, pide que el propósito se entienda por el propio texto del enlace.
+
+2.4.4 habla solo de enlaces. El texto de los botones lo cubre 2.4.6 Encabezados y etiquetas (AA), que pide que las etiquetas describan el propósito cuando existen. Un «Continuar» dentro de un diálogo titulado «Confirma tu cita», con la fecha y la hora a la vista, se entiende por su contexto. Cambiarlo por «Confirmar reserva» es una buena práctica porque dice exactamente qué pasará al pulsar; no es un requisito que el diseño anterior incumpliera. Si el equipo la adopta, conviene convertirla en una regla de nombres del sistema de diseño.
+
+### Plazos que no obligan a calcular
+
+La cita es el martes 15 de septiembre a las 10:00. «Puedes cambiarla hasta 24 horas antes» obliga a calcular el límite. «Puedes cambiarla hasta el lunes 14 de septiembre a las 10:00» da directamente el dato. En este caso es una buena práctica: facilita la tarea sin presentarla como una obligación de WCAG. El documento del W3C *Making Content Usable for People with Cognitive and Learning Disabilities* recoge patrones para evitar cálculos innecesarios, incluidos los de fechas y horas.
+
+---
+
+## 2.10 — Diseñar con WCAG
+
+La Sede de Norte publica una ayuda al alquiler. Nerea tiene dislexia y usa la lectura en voz alta del sistema para saber qué documentos necesita, pero la lista solo aparece en una infografía: una imagen con iconos y texto dibujado. Necesita reunir el contrato, los recibos, el certificado de empadronamiento y la declaración de la renta antes de empezar la solicitud.
+
+### Aplicar el método a una lista de documentos
+
+El equipo recorre seis pasos para resolver el problema: necesidad, barrera, requisito, decisión, implementar y evaluar. En cada paso deja escrito lo que debe orientar el siguiente.
+
+1. **Necesidad.** Se escribe como tarea de la persona, sin soluciones: «Nerea quiere saber qué documentos tiene que reunir antes de empezar la solicitud.» Pedir «texto alternativo» ya sería elegir una solución; primero hace falta describir la tarea.
+2. **Barrera.** Se describe el diseño, no a la persona: «La lista de documentos solo existe como texto dentro de una imagen: la lectura en voz alta no la lee, no se puede ampliar sin que se pixele ni copiar a una nota.» La misma presentación afecta a otras personas: Andrés, con su lector de pantalla, tampoco recibe la lista; Inés, con su ampliador, la ve borrosa.
+3. **Requisito.** La barrera se relaciona con dos criterios: 1.1.1 Contenido no textual (A), porque la imagen transmite información sin equivalente en texto, y 1.4.5 Imágenes de texto (AA), porque se usa una imagen para presentar texto que podría ser texto real.
+4. **Decisión.** El equipo concreta cómo se presentará la información: «La lista de documentos es una lista de texto en la página, con un elemento por documento y su descripción. La infografía, si se mantiene, repite la lista y no añade información que no esté en el texto.» La lista visible también permite que el texto y copiarlo. Si los cuatro documentos y sus condiciones solo estuvieran en el texto alternativo, esa información seguiría sin estar disponible para quien ve la página.
+5. **Implementar.** Se acuerda con desarrollo y con quien redacta: la lista usa el componente de lista del sistema de diseño; el contenido lo mantiene el equipo de la convocatoria como texto, no como imagen exportada. Así queda claro quién mantiene la lista y cómo se publica.
+6. **Evaluar.** Además de comprobar el requisito, se prueba si la tarea del paso 1 se completa: ¿Puede Nerea, con la lectura en voz alta, saber qué documentos necesita sin ayuda? Si se puede, conviene probarlo con alguien que use esas herramientas a diario. Si no, se vuelve al paso 2: algo del diseño sigue siendo barrera.
+
+La tarea de Nerea orienta tanto la decisión como la prueba: después del cambio, debe poder obtener la lista con la lectura en voz alta y reunir los documentos.
+
+### Comprobar si la persona completa cada paso
+
+La auditoría comprueba los criterios incluidos en su alcance. Para comprobar también si la persona consigue lo que vino a hacer, recorre el flujo pantalla a pantalla con tres preguntas.
+
+1. **¿Encuentra lo que necesita?** La información o el control para avanzar está a la vista, con un nombre que la persona reconoce.
+2. **¿Sabe cómo hacerlo?** Queda claro qué hacer con ese control y qué pasará al usarlo.
+3. **¿Reconoce el resultado?** Después de actuar, la pantalla deja claro que ha funcionado, o qué ha fallado y cómo seguir.
+
+Aplicadas a la solicitud de ayudas al alquiler, con Nerea como persona de referencia, quedan así:
+
+| Pantalla | Pregunta | Una respuesta que indica problema |
+|---|---|---|
+| Convocatoria | ¿Encuentra qué documentos necesita? | Tiene que pedir a alguien que le lea la lista |
+| Subir documentos | ¿Sabe qué archivo va en cada campo? | Los campos se llaman «Documento 1», «Documento 2»... |
+| Justificante | ¿Reconoce que la solicitud está presentada? | La pantalla dice «Operación realizada» sin número de registro ni fecha |
+
+Las preguntas se hacen desde la tarea de una persona concreta y con sus herramientas: no es lo mismo «¿encuentra la hora libre?» mirando la pantalla entera que con un ampliador que solo muestra una parte. Si la respuesta es «más o menos», la dificultad concreta y revisa qué la provoca. Por ejemplo, Inés puede encontrar las horas pero no el botón para continuar.
+
+El equipo puede usar estas preguntas para preparar una prueba con personas. Quien usa un ampliador a diario puede encontrar dificultades que el equipo no haya detectado en la auditoría. La guía Easy Checks del W3C ofrece comprobaciones iniciales y advierte de que no equivalen a una evaluación completa.
+
+*(Se excluye de este raw un ejercicio interactivo de conversación simulada — "Dónde se reúne el grupo de Rutas Norte" — por ser contenido de práctica, no explicativo.)*
+
+---
+
+## 2.11 — Documentar decisiones de accesibilidad
+
+Al revisar un formulario, alguien propone que la etiqueta del campo desaparezca al escribir. Si el equipo no ha documentado por qué la mantiene visible, puede perder esa decisión al cambiar el componente. El registro debe explicar qué hace la interfaz, a quién ayuda y cómo comprobarlo.
+
+### Una decisión que se puede comprobar
+
+Para que otra persona del equipo pueda aplicar y revisar la decisión, documenta cuatro cosas:
+
+1. **Qué:** el comportamiento observable. Lo que alguien vería o haría en la interfaz para saber si se cumple.
+2. **Por qué:** la necesidad que atiende y, si lo hay, el criterio que la fundamenta, con número y nivel.
+3. **Dónde:** a qué componente, patrón o pantalla se aplica.
+4. **Cómo se comprueba:** la prueba concreta, en el prototipo o en el producto.
+
+Compara una decisión típica con su versión documentada:
+
+«Los errores del formulario serán accesibles.»
+- **Qué:** al enviar con errores, cada campo afectado muestra un mensaje que dice qué corregir, un icono y el borde en el color de error. El formulario conserva los datos y lleva el foco al primer error.
+- **Por qué:** la persona debe poder corregirlo sin depender del color ni empezar de nuevo. Referencias: 1.4.1 Uso del color (A), 3.3.1 Identificación de errores (A) y 3.3.3 Sugerencias ante errores (AA).
+- **Dónde:** patrón de validación de los formularios del producto.
+- **Cómo se comprueba:** enviar con un correo sin @; comprobar el mensaje, los datos conservados y el recorrido con teclado.
+
+«Los errores serán accesibles» no concreta qué tiene que hacer el formulario. El registro sí permite implementarlo y comprobarlo sin haber estado en la reunión.
+
+### Dónde documentar cada decisión
+
+El lugar del registro depende de si la decisión se aplica a todo el producto, a una pantalla o sigue pendiente:
+
+| Tipo de decisión | Dónde se documenta | Ejemplo |
+|---|---|---|
+| Regla general, se aplica en todo el producto | Sistema de diseño, en la ficha del componente o del patrón | «Toda etiqueta de campo está siempre visible, también mientras se escribe» |
+| Excepción o caso particular de una pantalla | Especificación de esa pantalla | «En el inicio de sesión, el error de usuario o contraseña es un único mensaje, sin indicar el campo» |
+| Pregunta abierta o decisión con alternativas | Registro de decisiones del equipo, con fecha y responsable | «¿Deshabilitamos "Pagar" hasta completar el formulario? Decisión: no. Motivo y alternativa registrados» |
+
+La especificación de pantalla es también donde se anota lo que el diseño no muestra y desarrollo necesita saber: el nombre de un botón de solo icono, el orden en que se recorre la pantalla o qué se anuncia al aparecer un error.
+
+Al preparar tus notas, deja visible el diseño, relaciona cada nota con su elemento y muestra por separado los estados que cambian el comportamiento. Puedes consultar las recomendaciones de GitHub para organizar las anotaciones. En esta lección basta con concretar una decisión y su prueba. El vídeo reserva el handoff completo para el módulo 6.
+
+### La etiqueta, siempre a la vista
+
+Si el único nombre del campo está en el marcador de posición, desaparece al escribir. Al repasar el formulario, la persona ve los datos pero puede no recordar qué pide cada campo. En este diseño dejamos la etiqueta visible y asociada al campo durante toda la interacción. Así atendemos la necesidad de etiquetado de 3.3.2 Etiquetas o instrucciones (A) y facilitamos la revisión de los datos.
+
+En una etiqueta flotante, el nombre empieza dentro del campo y sube al escribir. Para que siga siendo útil durante la revisión del formulario, documenta estas condiciones:
+
+- **La etiqueta nunca desaparece.** Sube y se reduce, pero sigue ahí.
+- **Reducida, sigue legible.** Tamaño y contraste suficientes también en su estado pequeño: 4,5:1 si es texto normal.
+- **El campo vacío no parece lleno.** Si la etiqueta dentro de la caja se confunde con un valor escrito, la persona puede saltarse el campo.
+- **Las instrucciones no van dentro de la caja.** El formato («DD/MM/AAAA») va fuera y visible antes de escribir, no en el marcador ni solo en el mensaje de error.
+- **El nombre accesible contiene el texto visible.** Quien usa control por voz dice lo que ve; si el nombre es distinto, no funciona. Es 2.5.3 Etiqueta en el nombre (A).
+
+### El mensaje de error del inicio de sesión
+
+La regla general es ser lo más preciso posible: decir qué campo falla y cómo arreglarlo. 3.3.3 Sugerencias ante errores (AA) prevé una excepción: no hay que sugerir la corrección si hacerlo compromete la seguridad o el propósito del contenido.
+
+El caso típico es el inicio de sesión. Si el sistema dice «La contraseña no es correcta», confirma a quien prueba cuentas ajenas que ese usuario existe. Por eso se responde con un único mensaje: «El usuario o la contraseña no son correctos». El registro debe precisar en qué caso se usa este mensaje y qué ayuda ofrece:
+
+- **Se justifica por el riesgo del caso.** En este inicio de sesión, no distinguimos entre usuario y contraseña para no revelar si la cuenta existe. Ese riesgo no justifica esconder un error de formato en el código postal o la fecha.
+- **El error sigue identificándose en texto.** Se dice que algo falla y qué hacer, aunque no se diga en qué campo.
+- **Hay un camino para recuperar el acceso.** Documenta también ese recorrido para comprobar que la persona puede completarlo.
+
+### Probar lo que has documentado
+
+En el prototipo puedes comprobar el recorrido previsto. En el producto, comprueba también que el teclado y las tecnologías de apoyo reciben la información acordada. Este guion te ayuda a revisar un formulario:
+
+1. **Envía mal a propósito.** Vacío, con un correo sin @, con una fecha con otro formato. ¿Aparece un mensaje que dice qué falla y cómo corregirlo, junto al campo?
+2. **Mira sin color.** Con la pantalla en escala de grises o impresa en blanco y negro, ¿se sigue sabiendo qué campo tiene error?
+3. **Comprueba lo escrito.** Tras el error, ¿se conservan todos los datos o hay que empezar de nuevo?
+4. **Recorre con el teclado.** Solo con Tab, Mayús+Tab, Intro y Espacio: ¿llegas a todos los campos y al botón?, ¿ves siempre dónde está el foco?, ¿el foco va al primer error al enviar?
+5. **Busca el formato antes del error.** ¿Estaba visible el formato esperado antes de escribir, o se descubre al fallar?
+6. **Pregunta lo que no puedes ver.** ¿Qué oye quien usa un lector de pantalla cuando aparece el error y cuando vuelve al campo? Si no lo puedes probar, déjalo escrito como pregunta para desarrollo, con el resultado esperado.
+
+Anota cada problema encontrado y compáralo con el registro: ¿faltaba definir el comportamiento o la implementación no lo cumple?
+
+---
+
+## Guía de proyecto — después del Módulo 2
+
+La tutoría te ayuda a pasar de la ficha de producto que puedas diseñar a documentar durante el intensivo. Los ejemplos de pago de una factura, reserva de un viaje y solicitud de una cita médica sirven para revisar el alcance y decidir qué pantallas y componentes trabajar.
+
+El siguiente paso es completar la matriz de requisitos y empezar los bocetos. La documentación detallada se centrará en **dos componentes simples y uno complejo, para un solo dispositivo**; la interfaz puede incluir todos los componentes que necesite el flujo.
+
+**Para la próxima tutoría, el objetivo es tener avanzada la matriz del módulo 2 y haber elegido las pantallas del flujo.** Si puedes avanzar más, empieza con bocetos del módulo 2. El diseño y la documentación se irán desarrollando con los siguientes módulos — no hace falta tener ahora todas las respuestas: puedes completar los criterios y ajustar tus decisiones conforme avances.
+
+### 1. Prepara tu archivo de trabajo
+
+Trabaja sobre tu propia copia de la plantilla del proyecto en Figma, sin modificar el archivo compartido. Si ya creaste la copia durante el módulo 1, incorpora la matriz del módulo 2 a ese mismo archivo.
+
+Conserva la ficha de producto y el pequeño briefing que hayas preparado: qué necesidad resuelves, para quién y en qué contexto. Las capturas, notas y referencias que ayudan a entender el caso pueden seguir en páginas separadas dentro del proyecto.
+
+### 2. Delimita el flujo que vas a trabajar
+
+Elige una tarea concreta y deja claros su inicio y su final. En la tutoría se revisaron ejemplos como pagar una factura, encontrar un viaje o pedir una cita médica. Cada uno permite trabajar un recorrido sin rediseñar todo el servicio.
+
+Selecciona las pantallas necesarias para esa tarea. Como orientación, procura que el flujo no necesite más de cuatro pantallas. Si crece demasiado, separa las tareas: encontrar un viaje y reservarlo, por ejemplo, pueden ser dos flujos distintos. Podrás ampliarlo después si tienes tiempo.
+
+Al revisar el sitio original, pregúntate también qué pasos sobran. Puedes proponer una secuencia más simple; el rediseño no tiene por qué conservar las dificultades que has encontrado.
+
+### 3. Completa la matriz de requisitos
+
+Utiliza la matriz para relacionar lo que detectas con lo que vas a cambiar. Para cada barrera, recoge:
+
+- Qué problema has encontrado.
+- A qué personas puede afectar y en qué situación.
+- Qué criterio de las pautas WCAG se relaciona con él, cuando puedas identificarlo.
+- Qué requisito debe cumplir la solución.
+- Qué decisión de diseño propones para resolverlo.
+
+Por ejemplo, si un campo no explica cómo corregir un dato inválido, anota la dificultad y plantea un mensaje que indique el problema y cómo recuperarse. Ese requisito te ayudará después a diseñar el estado de error del campo.
+
+**Si todavía no sabes asociar una barrera con un criterio concreto, deja ese punto pendiente y vuelve a él con lo que aprendas.** La matriz se puede ir completando; no hace falta rellenarla de memoria ni inventar referencias.
+
+### 4. Explora el recorrido antes de desarrollar las pantallas
+
+Puedes empezar con unos bocetos a mano para decidir qué información necesita cada pantalla, qué acciones permite y cómo se llega a la siguiente. Esto te ayudará a revisar el recorrido antes de dedicar tiempo al acabado visual.
+
+Con los siguientes módulos, llevarás esas pantallas a Figma y desarrollarás la interfaz, incluida la elección de colores y tipografía. Las decisiones de accesibilidad de la matriz deben reflejarse en ese diseño.
+
+### 5. Elige los componentes que documentarás en detalle
+
+Selecciona **dos componentes simples y uno complejo** que formen parte del flujo. En la sesión se propusieron ejemplos como un botón o un campo de formulario para los simples, y un calendario o unas pestañas para el complejo.
+
+La interfaz puede tener todos los componentes que necesite. La selección de tres limita la documentación detallada de sus estados y comportamientos, no el número de elementos que puedes utilizar en las pantallas.
+
+Para este trabajo, céntrate en **un solo dispositivo**. No necesitas documentar cada variante de escritorio, tableta y móvil. Si después quieres ampliar el proyecto y tienes tiempo, puedes hacerlo.
+
+### 6. Documenta el flujo y los componentes conforme avances
+
+Hay dos partes que trabajarás durante el intensivo:
+
+- **La interfaz y su recorrido:** cómo se navega con teclado, el orden del foco, la estructura de encabezados y la información que necesita quien utiliza un lector de pantalla.
+- **Los tres componentes elegidos:** sus estados, cómo se interactúa con ellos y qué cambia cuando la persona realiza una acción.
+
+Así, las pantallas y las anotaciones permitirán entender cómo debe funcionar la propuesta, además de cómo se ve. Por ahora, prioriza delimitar el flujo y avanzar la matriz; la documentación más detallada se construirá con lo que aprendas en los siguientes módulos.
+
+### Cómo compartir tu proyecto
+
+Para entregarnos tu proyecto, envíanos **el enlace de tu archivo de Figma** por el medio que te resulte más cómodo: a soporte@weaaare.com, por Discord, por el grupo del intensivo o por mensaje privado a Carlos.
+
+Cualquiera de esas vías nos sirve; no necesitas enviarlo por varias. **Antes de compartirlo, comprueba que tenemos permiso para visualizar el archivo o bien danos permiso cuando te lo solicitemos.**
+
+### Recursos comentados
+
+- **Plantilla del proyecto y matriz en Figma:** trabaja sobre una copia propia para conservar las plantillas compartidas.
+- **Sitio del W3C:** utilizado para probar la navegación con teclado y el enlace para saltar al contenido.
+- **WAVE, de WebAIM (en inglés):** herramienta utilizada para revisar la estructura de encabezados y regiones de una página.
+- **ATAG, pautas de accesibilidad para herramientas de autoría (en inglés):** referencia para herramientas con las que se crea contenido, como los gestores de contenidos.
+- **UAAG, pautas de accesibilidad para agentes de usuario (en inglés):** referencia sobre navegadores, reproductores y otras aplicaciones que presentan contenido.
+- **COGA, grupo de accesibilidad cognitiva y del aprendizaje (en inglés):** recursos sobre necesidades que también debes considerar al diseñar.
+- **WCAG-EM, metodología para evaluar la conformidad (en inglés):** explica cómo definir el alcance de una evaluación y seleccionar una muestra de páginas.
+- **Plantillas VPAT de ITI (en inglés):** plantilla para documentar la conformidad de un producto. Al completarla con los resultados de la evaluación, obtienes un informe de conformidad de accesibilidad, o ACR.
