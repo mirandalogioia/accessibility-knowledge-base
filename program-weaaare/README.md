@@ -22,6 +22,10 @@ Notas y materiales del programa **"Diseño Accesible"** de weAAAre: clases, ejer
 - `intermediate/clase-01-summary.md` — resumen sintetizado de la Clase 1.
 - `raw-inputs/clase-02-raw.txt` — transcript crudo de la Clase 2 (tutoría en vivo del 7 de octubre: dudas del Módulo 1, testeo con personas con discapacidad, widgets/overlays, brief del proyecto y revisión de los flujos de cada alumno).
 - `intermediate/clase-02-summary.md` — resumen sintetizado de la Clase 2.
+- `raw-inputs/clase-03-raw.txt` — transcript crudo de la Clase 3 (tutoría: entregables de los módulos 1 y 2, revisión de flujos, teclado, encabezados, Kahoot WCAG).
+- `intermediate/clase-03-summary.md` — resumen sintetizado de la Clase 3.
+- `raw-inputs/clase-04-raw.txt` — transcript crudo de la Clase 4 (tutoría: repaso de WCAG criterio por criterio, principios Perceptible y Operable, ejemplos para diseño).
+- `intermediate/clase-04-summary.md` — resumen sintetizado de la Clase 4.
 - `raw-inputs/modulo-01-raw.rtf` — transcript crudo del audio de las lecciones grabadas del Módulo 1 ("Diseñar para la diversidad").
 - `raw-inputs/modulo-01-contenido-escrito-raw.txt` — contenido escrito de la plataforma para las mismas lecciones (sin ejercicios/tests).
 - `intermediate/modulo-01-summary.md` — resumen consolidado del Módulo 1 (fusiona audio + texto escrito), lección por lección (1.2 a 1.11).

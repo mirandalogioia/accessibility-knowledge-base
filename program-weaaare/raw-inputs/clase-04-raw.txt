@@ -1,0 +1,854 @@
+# Clase 4 Accesibilidad
+
+## Summary
+### Flow Summary
+Tutoría sobre WCAG: Consuelo Correa Barros repasó los principios y criterios de perceptible y parte de operable, con ejemplos para diseño. Los alumnos deben avanzar en diseño visual y al menos un componente.
+
+### Estructura de la WCAG y texto alternativo
+- Se priorizó repasar la WCAG criterio por criterio; los proyectos se ven por Discord o correo
+    - Consuelo Correa Barros compartió un recurso tipo wizard para generar texto alternativo (solo genera, no evalúa)
+- WCAG se organiza en principios POUR, pautas y criterios con nivel, verificables como cumple o no cumple
+- Imágenes funcionales, informativas y decorativas: decorativas con alt vacío; funcionales usan el verbo de la acción
+    - Alt de unos 120 caracteres, sin empezar con "imagen"; si el icono ya tiene texto al lado, es decorativo
+- Excepciones del 1.1.1: formularios, videos, pruebas, experiencias sensoriales y captcha, que necesita alternativa no visual
+    - Caso TGR: nombrar logos de bancos ayudó a recaudar cerca de un 80% más
+
+### Multimedia y contenido adaptable
+- Pauta 1.2: audiodescripción, subtítulos (closed y open caption) y transcripción, incluyendo sonidos relevantes
+- Landmarks: header, nav, main, aside y footer; varios nav del mismo propósito requieren aria-label
+    - Extensión recomendada: Landmark Navigation via Keyboard
+- Encabezados H1 a H6 sin saltos, un H1 por página; Consuelo Correa Barros los marca en la interfaz, no en el sistema de diseño
+- Secuencia significativa y orden de foco deben marcarse en diseño; en modales el foco queda atrapado
+
+### Contenido distinguible
+- La información no puede depender solo del color: sumar texto, forma o textura en gráficos y errores
+- Contraste 4.5:1 para texto normal y 3:1 para texto grande, iconos, bordes y foco
+    - Texto grande: 24 px, o 19 px en bold; inputs requieren borde o fondo con contraste
+- Zoom al 200% sin perder contenido y reflow sin doble scroll; herramientas como Wave y Stark
+
+### Operable
+- Todo lo usable con mouse debe funcionar con teclado; probar con teclado y lector de pantalla cubre el resto
+- Tiempo ajustable, pausa en contenido que se mueve solo y alternativas a gestos complejos
+- Enlace cambia de contexto, botón ejecuta acción; lo clave es el código, no la apariencia
+- La sesión terminó en etiqueta en el nombre; el resto está en el documento compartido
+
+### Próximos pasos
+- (Consuelo Correa Barros) Subir el documento y materiales de la sesión para descarga
+- (Consuelo Correa Barros) Pedir a Carlos que avise por Discord y correo cuándo activar la cuenta de IA
+- (Consuelo Correa Barros) Responder la duda que Speaker 2 dejó en Discord
+- (Alumnos) Avanzar en diseño visual y llegar con al menos un componente para el próximo miércoles
+- (Alumnos) No activar la cuenta de IA (Claude u otra) antes de la sesión con Carlos
+
+## Transcript
+[00:00] Consuelo Correa Barros: Estoy utilizándolo. Está súper cool, es súper divertido, así que lo pueden usar para botones, un montón de otras cosas. Todavía no está publicado en los recursos, pero va a estar pronto, entonces el plan es que lo usemos nosotros primero.
+[00:19] Consuelo Correa Barros:  Vamos a hacer el grupo de control.
+[00:25] Consuelo Correa Barros:  Entonces, ¿se acuerdan que nosotros les habíamos hablado de un Wizard de Olga Carrera y un... bueno, dentro del curso? Pero más o menos esto resume lo mismo, pero lo vuelven divertido. 
+[00:39] Consuelo Correa Barros: ¿Vale? Y lo que hace es que utiliza guía. Entonces, también como uno le puede dar el contexto, si es que es un e-commerce, si es que fuese un e-commerce.
+[00:47] Consuelo Correa Barros:  Después te va a decir como: "bueno, nos vamos a entrar en la polera", "nos vamos a entrar en el short", "nos vamos a entrar en el conjunto". Entonces, como que va guiando.
+[00:56] Consuelo Correa Barros:  Está buenísimo. Pero sirve solamente para generar, no para evaluar.
+[01:02] Consuelo Correa Barros:  Evaluar, eso es otra cosa. Así es que déjenme ver.
+[01:08] Consuelo Correa Barros:  Vamos a permitir, porque llegó Marta. Buenísimo.
+[01:12] Consuelo Correa Barros:  Ahí, para que guarden el recurso, por favor. Se los compartí por el chat. 
+[01:21] Consuelo Correa Barros: ¿Bien o no? ¿Está bueno?
+[01:27] Consuelo Correa Barros:  Me acuerdo que está divertido.
+[01:31] Consuelo Correa Barros:  Sí, sí, está buenísimo. Bien.
+[01:33] Consuelo Correa Barros:  Entonces, vamos a hacer hoy día en el... vamos a hacer una repasada por criterio, por criterio, lo máximo que alcancemos, ¿vale? De la Wicat.
+[01:48] Consuelo Correa Barros:  Y después vamos a ir al tema del trabajo, pero... o sea, me refiero al proyecto. Pero creo que es más importante como que entendamos la Wicat y cómo lo vamos a interpretar para diseño.
+[02:00] Consuelo Correa Barros:  Entonces, ¿les pinca o prefieren hacerlo al revés? Acá igual es democracia, ¿no?
+[02:05] Consuelo Correa Barros:  Podemos hacerlo al revés, ver primero los proyectos y después ir criterio por criterio. Solo que pienso que tenemos mil otras instancias, como por ejemplo el mismo Discord o el correo electrónico para ver temas de proyecto, y yo preferiría ir criterio por criterio.
+[02:22] Consuelo Correa Barros:  Ahí, Bárbara. Bárbara me da su like.
+[02:24] Consuelo Correa Barros:  Muy bien. Entonces, ahí tírenme dedito para arriba, dedito para abajo.
+[02:29] Consuelo Correa Barros:  Sí, justo. Por mi mejor criterio.
+[02:31] Consuelo Correa Barros:  Eso. Ya.
+[02:31] Consuelo Correa Barros:  Vamos con los... vamos con los criterios entonces. Vamos a presentar.
+[02:37] Consuelo Correa Barros:  Acá. A ver, venga.
+[02:41] Consuelo Correa Barros:  Denme un segundito.
+[02:45] Consuelo Correa Barros:  Ay, qué chistoso. Es que tengo que volver hacia atrás en... estuve revisando el archivo.
+[02:53] Consuelo Correa Barros:  Ya. Acá.
+[02:55] Consuelo Correa Barros:  Compartir. Estupendo.
+[02:56] Consuelo Correa Barros:  Bien. Entonces, ya estamos, ya estamos grabando.
+[03:00] Consuelo Correa Barros:  Sabemos que la gente se va a ir sumando poco a poco. Igualmente lo van a poder ver después desde sus hogares.
+[03:08] Consuelo Correa Barros:  Entonces, ustedes saben que la Wicat se organiza a través de cuatro grandes principios. Por cierto que ayer rendí mi certificación de CIPAC, y en CIPAC preguntan este tipo de cosas.
+[03:23] Consuelo Correa Barros:  CIPAC es la certificación de las competencias básicas de accesibilidad, que la da la IAP, que es el organismo internacional de... la Asociación Internacional de Profesionales de Accesibilidad. Venga.
+[03:37] Consuelo Correa Barros:  Entonces, tenemos la Wicat, que lo mismo lo escribió el W3C, que son los creadores de la web. Fantástico.
+[03:44] Consuelo Correa Barros:  Ellos tienen un grupo al interior que se encarga de distintos estándares. Uno de esos estándares es la WCAG, Wicat, que es por Web Content Accessibility Guidelines.
+[03:55] Consuelo Correa Barros:  O sea, las pautas de accesibilidad para el contenido web. Y ellos lo organizan en base a cuatro grandes temas, ¿ya?
+[04:04] Consuelo Correa Barros:  Que son los principios: perceptible, operable, comprensible y robusto. La recomendación siempre del W3C es acordarse de la palabra POUR, como "pobre".
+[04:16] Consuelo Correa Barros:  P-O-U-R. Entonces, la P de perceptible, la O de operable, que en inglés funciona igual, la U es de understandable, comprensible lo vamos a traducir, o entendible.
+[04:28] Consuelo Correa Barros:  Y luego la R de robusto, entonces nos queda como más o menos bien, y por ahí está más fácil aprendérselo. Entonces, cada uno de estos principios tiene un sentido.
+[04:40] Consuelo Correa Barros:  Vamos a decir que lo que hace es que agrupan temas. Entonces, perceptible es que todo el contenido se pueda percibir independiente del sentido.
+[04:48] Consuelo Correa Barros:  Entonces, ¿qué es lo que tenemos que pensar como diseñadores? Como: "ah, miren, esto funciona para la vista".
+[04:53] Consuelo Correa Barros:  Vale. La persona que no está viendo, porque todo se diseña para usuarios visuales; la persona que no está viendo y que utiliza tecnología asistiva también puede percibir este contenido?
+[05:04] Consuelo Correa Barros:  O la persona que es daltónica todavía puede percibir este contenido? O la persona que tiene baja visión aún puede percibir ese contenido?
+[05:12] Consuelo Correa Barros:  Esas son las cosas que uno se tiene que preguntar. Operable es que las personas puedan usar el contenido con distintas tecnologías.
+[05:21] Consuelo Correa Barros:  Y acá principalmente estamos hablando de teclado. Si funciona para el teclado y si funciona para el lector de pantalla, funciona para todo.
+[05:28] Consuelo Correa Barros:  Comprensible es más vinculado a todo lo que tenga que ver como con carga cognitiva. Entonces, como está vinculado a "esto se entiende", "esto es fácil de usar", y ahí van a aparecer, por ejemplo, que esté definido el idioma, que las partes tengan nombres, etcétera.
+[05:45] Consuelo Correa Barros:  Y robusto habla de que "mi desarrollo sea compatible con las tecnologías actuales y del futuro". O sea, que funcione independiente del navegador, que funcione independiente si es celular o el escritorio, y que sé.
+[06:00] Consuelo Correa Barros:  Entonces, acá robusto es muy fácil porque solo hay un criterio. Entonces, tenemos los principios.
+[06:08] Consuelo Correa Barros:  Los principios a su vez se estructuran en pautas. Las pautas son como el objetivo que guía, que genera como el grupo, que te dice como más o menos qué es lo que hay que lograr.
+[06:19] Consuelo Correa Barros:  Y luego cada uno de los criterios tiene un nivel y es lo que se puede comprobar. Como: "sí o no".
+[06:25] Consuelo Correa Barros:  Ya las comprobaciones son muy binarias, es como "cumple o no cumple". Vamos.
+[06:30] Consuelo Correa Barros:  Si hay dudas, ustedes me van avisando, ¿vale? Entonces, tenemos la primera pauta, que es de alternativas textuales, y lo que dice es que "todo elemento que sea gráfico debe ser presentado también en texto".
+[06:42] Consuelo Correa Barros:  O sea, todo el contenido que no sea de texto tiene que tener una representación en texto. 
+[06:49] Consuelo Correa Barros: ¿Por qué texto? ¿A alguien se le ocurre por qué texto? 
+[06:55] Consuelo Correa Barros: ¿No? Pero fácil. Miren, el texto es lo más accesible.
+[06:59] Consuelo Correa Barros:  Cualquier tecnología de apoyo va a reconocer el texto. Es lo más accesible, justo.
+[07:04] Consuelo Correa Barros:  Pero que sea lo más accesible no significa que no podamos usar videos o que no podamos usar imágenes, que es lo que entienden los stakeholders cuando hablamos de accesibilidad. Como que en su mente bastaría con eliminar los videos y no colocar videos.
+[07:19] Consuelo Correa Barros:  No, no es eso. Porque no queremos tampoco que se transforme en un sitio que sea aburrido.
+[07:27] Consuelo Correa Barros:  Se puede tener un muy buen diseño con contenido muy moderno y todavía que sea accesible. 
+[07:34] Consuelo Correa Barros: ¿Vale? Entonces, esto igual lo vamos a... bueno, ya aquí ya les contesté. Vamos a volver sobre este tema en el módulo 6, en particular respecto del texto alternativo. 
+[07:47] Consuelo Correa Barros: ¿Vale? Pero quédense con esta idea de que nada es más accesible que el texto plano. Entonces, y el primer criterio, porque yo les decía: viene el principio, viene la pauta, que agrupa, y luego viene el criterio.
+[08:01] Consuelo Correa Barros:  Y los criterios son a los que les vamos a asignar una letrita, que es el nivel, y son los que podemos generar comprobaciones. Entonces, lo que dice es que todo el contenido que no sea de texto tiene que tener una representación en texto.
+[08:15] Consuelo Correa Barros:  Entonces, en el ejemplo tenemos a una persona que es ciega, que está viendo una obra de arte que todos podemos reconocer como la Gioconda o la Mona Lisa, ¿cierto? Entonces, ahí el ilustrador de mi empresa nos lo hizo, y ahí le puso el texto alternativo que dice: "Pintura de Gioconda realizada por Leonardo da Vinci".
+[08:37] Consuelo Correa Barros:  Entonces, ¿cómo sé yo cuál es el texto alternativo apropiado para la imagen? La imagen va a depender del contexto, de qué es lo que esté comunicando, cuál es el tipo de texto alternativo.
+[08:46] Consuelo Correa Barros:  El genio del texto alternativo de Wicat se los puedo explicar, pero igual hay más recursos para ir aprendiendo sobre esto. Entonces, vamos a ir así como muy rápido.
+[08:58] Consuelo Correa Barros:  Vamos a decir que al menos existen tres tipos de imágenes. Las funcionales quiere decir que tienen una acción por detrás.
+[09:06] Consuelo Correa Barros:  O sea, son parte de un botón o son parte de un enlace. Esa imagen funcional va a depender de ciertos contextos, ¿verdad?
+[09:16] Consuelo Correa Barros:  El tipo de texto que tiene que tener. Ya lo vamos a ver.
+[09:18] Consuelo Correa Barros:  La informativa sería, por ejemplo, la imagen que me enseña a armar un mueble, que me enseña a anudar una corbata, que me enseña también a, por ejemplo, a hacer origami u otra cosa. En el fondo es como que el contenido en la imagen está ahí y no está en otra parte.
+[09:38] Consuelo Correa Barros:  Ya, eso sería informativo. Y luego está la decorativa, que es esta que es como literalmente es de adorno.
+[09:44] Consuelo Correa Barros:  Entonces, igualmente vamos a ver cada una de estas. Entonces, y están luego como todas las excepciones.
+[09:51] Consuelo Correa Barros:  Y todas las excepciones son porque como el texto, o sea, perdón, el criterio dice: "todo el contenido que no es de texto vale", pero un input de un formulario no es texto. Sería como controles y entradas, ¿cierto?
+[10:07] Consuelo Correa Barros:  Ya, pero y un video está medio pasado en el tiempo. Ya, pero si la imagen es una prueba.
+[10:13] Consuelo Correa Barros:  Entonces, ahí dice otro ejemplo: experiencia sensorial, captcha, todo esto son las excepciones. Entonces, vamos a partir por las excepciones, y de ahí vamos a ver qué es lo que dice el criterio.
+[10:24] Consuelo Correa Barros:  Porque las excepciones es donde está el gran volumen de información. Entonces, aquí tenemos la primera excepción.
+[10:34] Consuelo Correa Barros:  Fíjense que nosotros decimos como: "oye, este campo de formulario yo lo pincho y ahí va a aparecer un texto". 
+[10:41] Consuelo Correa Barros: ¿Cuál es el nombre alternativo de esto? Bueno, es que eso no nos vamos a preocupar acá, porque existe el criterio 4.1.2 que habla de los componentes de formulario. 
+[10:50] Consuelo Correa Barros: ¿Ya? Entonces, aquí lo único relevante que podríamos decir es esa imagen del buscar, que normalmente, por ejemplo, ¿qué hacemos si ese icono lo que lee es search? Tenemos que cambiar eso y darle un nombre accesible.
+[11:09] Consuelo Correa Barros:  Entonces, independiente de cómo se lo señalicemos a desarrollo, lo que tenemos que decir es que el nombre accesible, esa imagen del buscar, se transforma en una imagen funcional. Entonces, uno de los casos para el otro lado, pero yo les estoy hablando del contorno del formulario. 
+[11:27] Consuelo Correa Barros: ¿Vale? Como el formulario tiene que tener una etiqueta, y la etiqueta está en el 4.1.2, esto es una excepción, y acá no nos hacemos cargo de un nombre accesible, un texto alternativo, porque no tienen texto alternativo. Lo que tienen los campos de formulario son etiquetas. 
+[11:44] Consuelo Correa Barros: ¿Qué pasa con los videos? Los videos tampoco tienen texto alternativo, pero necesitan una descripción. 
+[11:51] Consuelo Correa Barros: ¿Por qué? Porque la persona tiene que saber qué es lo que va a encontrar antes de darle play. Pero ahí, de nuevo, para eso tenemos una pauta completa que es la 1.2.
+[12:04] Consuelo Correa Barros:  Entonces, los videos tampoco nos vamos a hacer cargo en el criterio 1.1.1. Pero sí lo que vamos a aprender en el fondo es que deberían tener una mini descripción, como que la persona sepa y diga: "ah, este es un video sobre cómo navegar a través del teclado", por ejemplo.
+[12:23] Consuelo Correa Barros:  Bien. Esta es otra excepción.
+[12:26] Consuelo Correa Barros:  Porque si tuviésemos una prueba, y la imagen es la prueba en sí misma, obviamente yo no le puedo decir en el texto alternativo que tiene un triángulo, que se divide en dos, que tiene rayitas horizontales, que la siguiente es un cuadrado, que marca el cuarto inferior derecho con negrita, porque estaríamos seguramente dando la respuesta. Entonces, ¿cuál sería el texto alternativo para una prueba?
+[12:51] Consuelo Correa Barros:  Justo eso. Decirle como: "prueba de test, prueba visual, test visual, prueba de, no sé, motricidad fina, prueba de whatever".
+[13:00] Consuelo Correa Barros:  Porque si lo que se quiere evaluar es la lógica, qué sé yo, ojo, mano, o lo que sea, ¿verdad? Como el ojo es parte del requerimiento.
+[13:10] Consuelo Correa Barros:  Entonces, ahí tenemos otra excepción. La otra excepción son las experiencias sensoriales.
+[13:17] Consuelo Correa Barros:  Entonces, cuando se quiere crear unas experiencias sensoriales específicas, la alternativa al menos tiene que hacer una identificación descriptiva. Entonces, y como dice la W3C, que se hace una identificación descriptiva, se dice cuál es la obra y se dice quién es el artista.
+[13:34] Consuelo Correa Barros:  Pero, ¿qué podría ser una experiencia sensorial? Por ejemplo, los recorridos 3D, que yo voy moviéndome a través de un plano, por ejemplo, recorriendo el aeropuerto, que he hecho varias recomendaciones, o sea, varios recorridos así.
+[13:49] Consuelo Correa Barros:  O cuando uno quiere probar, no sé, una tecnología. Tengo un primo que trabaja en eso, que hace como experiencias inmersivas.
+[13:57] Consuelo Correa Barros:  Obviamente, el texto alternativo no da para eso, ¿verdad? No es eso.
+[14:05] Consuelo Correa Barros:  Captcha. Esta es otra excepción, porque obviamente el texto alternativo no puede decir "morning overview" o lo que sea, y no estoy viendo lo que dice ahí, pero no me puede dar la respuesta, porque entonces el captcha que fue generado para poner como un cortafuego, una barrera de seguridad, no la podemos vulnerar a través del texto alternativo.
+[14:27] Consuelo Correa Barros:  Entonces, ¿qué es lo que tenemos que hacer? Es preocuparnos de que los captchas tengan una alternativa, que no solamente pueda ingresar el captcha a través de la vista.
+[14:39] Consuelo Correa Barros:  La alternativa en sí misma es el audio, tiene un botoncito de audio. Y lo que vamos a hacer para el texto alternativo es decir simplemente: "introduce el texto en el campo captcha, si no puedes ver la imagen, pulsa el botón de audio disponible".
+[14:51] Consuelo Correa Barros:  Y ahí tiene la persona la instrucción, que visualmente lo entendemos, porque lo conocemos, es un patrón de diseño. Pero para las personas que tienen una experiencia a través del audio, bueno, hay que entregarle la información. 
+[15:05] Consuelo Correa Barros: ¿Vale? Ahora, ¿esta solución es buena? Todavía no es suficiente, porque, ¿qué pasa con la persona que es sordociega?
+[15:14] Consuelo Correa Barros:  Igual ahí el captcha no lo dejó. 
+[15:18] Consuelo Correa Barros: ¿Vale? Se supone que esto debería ser suficiente. No sé por qué no se considera a las personas sordociegas como dentro de la solución, porque, claro, quizás no los vemos muy seguido, pero existen, son personas reales y que en el fondo tienen una solución acá.
+[15:38] Consuelo Correa Barros:  Juli, Juli.
+[15:40] Speaker 2:  Una duda, digamos, para los captcha, que son completamente imágenes, de escoger de pronto puentes y eso, ¿cómo se podría ajustar?
+[15:48] Consuelo Correa Barros:  No, esa no te sirve.
+[15:52] Consuelo Correa Barros:  Ese captcha no es accesible si no tiene una alternativa distinta, porque yo sé cuáles son los que me dices, que son como que, que de hecho hay muchos chistes de eso, porque dicen como que demostrar que uno es humano versus la IA es ser capaz de reconocer, qué sé yo, dónde están las bicicletas, ¿cierto? Pero, por Dios, o sea, es como que yo ni siquiera veo una bicicleta, de repente es un rayo de la bicicleta o de la rueda.
+[16:19] Consuelo Correa Barros:  No, cuando nosotros escojamos un captcha, al menos tenemos que preocuparnos de que tenga una alternativa. Entonces, si no tienen una alternativa, bueno, tenemos que buscar otra solución.
+[16:30] Consuelo Correa Barros:  Como para mí sería mucho más inteligente poner fórmulas matemáticas más sencillas, no sé, o simplemente: "haz clic si eres un humano". Como algo más sencillo que puedan resolver todos.
+[16:45] Consuelo Correa Barros:  Ahora, no hay mejor captcha que el que no se usa. Como si es que en realidad necesitamos generar este tipo de seguridad, quizás en realidad se debería hacer desde el backend.
+[16:56] Consuelo Correa Barros:  No sé. Yo nunca he puesto un captcha en ninguno de mis sitios y todavía no entiendo para qué son.
+[17:06] Consuelo Correa Barros:  Pero no se ha logrado sacar del W3C simplemente porque Google paga por ser parte del grupo de gente que trabaja sobre esto. O sea, acuérdense que la gente que hace las pautas, hay dos formas de estar ahí: uno que seas invitado, y otro que a través de tu empresa pagues tu asiento y tengas representación.
+[17:28] Consuelo Correa Barros:  Entonces, invitados van a encontrar a gente de gobierno, gente como Susana Pallero, pero hay otros que están pagando. O sea, Amazon paga, Google paga, y van a impulsar sus soluciones.
+[17:39] Consuelo Correa Barros:  Entonces, lo que quiero decir con esto, y qué pena que quede grabado, es que la W3C no está ajena a esas prácticas. 
+[17:48] Consuelo Correa Barros: ¿Vale? Para que lo tengan en consideración. Tampoco es que sea perfecto el estándar.
+[17:55] Consuelo Correa Barros:  Va. Entonces, imagen decorativa, yo creo que esto lo entendemos.
+[17:58] Consuelo Correa Barros:  Aquí lo que hay que preguntarse es: si la imagen no está, ¿todavía se entiende toda la información que está ahí relevante? Pues, y uno dice: "sí".
+[18:07] Consuelo Correa Barros:  Entonces, lo vamos a marcar como decorativa. 
+[18:09] Consuelo Correa Barros: ¿Cómo se implementa en el desarrollo? Así. Como "alt igual comillas comillas".
+[18:13] Consuelo Correa Barros:  O podrías decir simplemente "alt" y nada más. 
+[18:16] Consuelo Correa Barros: ¿Vale? Y con ese "alt" vacío, lo que hace la tecnología asistiva es decir: "ah, esta imagen es decorativa, pues me la salto". 
+[18:26] Consuelo Correa Barros: ¿Ya? Y no la anuncio. Pero si no dijera ese "alt", si estuviera solamente el beneficio.jpg, lo que hace la tecnología asistiva es compensar la ausencia de la información.
+[18:36] Consuelo Correa Barros:  Y me va a intentar de decir cualquier cosa que descubra cerca. Y a veces lo que descubre es la ruta.
+[18:43] Consuelo Correa Barros:  Imagínense que esa foto se llame WhatsApp 3.blablablablablablablablablablabla.png. Eso es lo que me va a leer la tecnología asistiva. 
+[18:54] Consuelo Correa Barros: ¿Vale? Entonces, para que no pase eso, nosotros las imágenes que son decorativas se las declaramos como a nivel de diseño, desarrollo la implementa de esta forma, y luego la tecnología asistiva sabe que se la tiene que saltar. Ya.
+[19:10] Consuelo Correa Barros:  Y ya vimos la excepción. Entonces, si no es una excepción, entonces requiere texto alternativo.
+[19:14] Consuelo Correa Barros:  Y aquí aparecen, por ejemplo, los gráficos. 
+[19:16] Consuelo Correa Barros: ¿Qué vamos a decir del gráfico? En un texto alternativo es imposible entregar toda la información. Pero podemos decir de qué se trata.
+[19:23] Consuelo Correa Barros:  Por ejemplo, no sé, voy a decir como no tengo idea porque se me olvidó ponerle contexto a esto, pero digamos que son las ventas del trimestre de leche, de leche descremada. Y va a decir solo eso.
+[19:36] Consuelo Correa Barros:  Y luego, si yo necesito entregar más información, una descripción larga, entonces lo que se puede hacer es añadir un vínculo. Vamos a ver un ejemplo.
+[19:46] Consuelo Correa Barros:  Y en ese vínculo, podría ser un vínculo, podría ser un botón, porque podría ser, por ejemplo, si fuese un botón, texto que esté oculto y yo le hago clic y me aparece. Y si lo podría ocultar o hacer aparecer, o podría ser una ventana modual, o podría llevarme a una nueva página con la información y ahí me la declara completa. 
+[20:05] Consuelo Correa Barros: ¿Vale?
+[20:08] Consuelo Correa Barros:  Entonces, tenemos las imágenes decorativas, que ya entendimos que son estas que tienen el "alt". Tenemos las imágenes que informan, y tenemos imágenes funcionales, y va a aparecer un nuevo tipo de imágenes, que son las imágenes de texto que tienen su propio criterio de accesibilidad.
+[20:22] Consuelo Correa Barros:  Déjenme ir a admitir a la persona. Ay, Sara.
+[20:29] Consuelo Correa Barros:  Ahí estamos. Bienvenida, Sara.
+[20:32] Consuelo Correa Barros:  Entonces, veamos. La imagen decorativa ya la entendimos, ¿cierto?
+[20:35] Consuelo Correa Barros:  Si el contexto, si yo saco la imagen y el contexto todavía se entiende, si la imagen no me está entregando información, es decorativa, la vamos a marcar así. En cambio, si nosotros decimos: "no, esto es importante", tenemos que decir: "ya, okay, es una imagen informativa".
+[20:52] Consuelo Correa Barros:  Y ahí como que existen distintas recomendaciones, porque los lectores de pantalla cada vez son más capaces de reconocer un mayor número de texto. Pero, ¿cómo escribo yo un buen texto?
+[21:06] Consuelo Correa Barros:  Porque tampoco puedo secuestrar el tiempo de la persona usuaria. Por mucho que los que usan lector de pantalla son capaces de escuchar muchas palabras por segundo, tampoco los vamos a tener eternamente ahí escuchando.
+[21:18] Consuelo Correa Barros:  Entonces, la recomendación es que ojalá que borde los 120 caracteres. Piénsenlo como un tuit, como Twitter, ¿vale?
+[21:25] Consuelo Correa Barros:  O sea, bueno, ex ahora. No se debe sobredescribir, porque, ¿para qué?
+[21:32] Consuelo Correa Barros:  Pueden usar herramientas de IA, pero por favor después validan que el texto funcione. Y nunca deberíamos decir "imagen" al principio, porque la tecnología asistiva reconoce el componente y el texto alternativo.
+[21:47] Consuelo Correa Barros:  Entonces, te va a decir ya que es una imagen. No le digamos dos veces "imagen, imagen", porque es redundante.
+[21:52] Consuelo Correa Barros:  Y la gente que utiliza tecnología asistiva se ríe de nosotros todo el tiempo por eso. 
+[21:56] Consuelo Correa Barros: ¿Vale? No queremos que se sigan riendo de nosotros.
+[22:01] Consuelo Correa Barros:  Y en realidad no nos riamos de las personas, pero claro, tienen razón. O sea, a mí me causa gracia cuando se ríen.
+[22:08] Consuelo Correa Barros:  Entonces, la información más importante deberíamos colocarla al inicio de la descripción. Deberíamos ser claros y concisos, y deberíamos considerar que todas las imágenes requieren, o que todas las imágenes podrían en realidad tener un atributo "alt".
+[22:23] Consuelo Correa Barros:  Acá hay una impulsa. Hay personas con discapacidad que dicen que todas las imágenes deberían tener "alt".
+[22:32] Consuelo Correa Barros:  Incluso, o sea, como que no deberíamos usar las decorativas. Quieren que se les describa todo, y que luego ellos de alguna manera decidan si quieren la información o no de esa imagen.
+[22:41] Consuelo Correa Barros:  Pero, por otro lado, en realidad está esto otro como del estándar. Entonces, como a quién le hacemos caso?
+[22:50] Consuelo Correa Barros:  Bueno, quizás hay que preguntarle a su usuario. 
+[22:52] Consuelo Correa Barros: ¿Vale? Acá, fíjense que esta es una imagen de la NASA, y lo que dice: "me encanta la NASA". Y me encanta esta foto en particular, porque es de la Artemis II.
+[23:02] Consuelo Correa Barros:  Y el texto alternativo es que describe a cada una de las personas que están ahí, pero con nombre y apellido. Los dice.
+[23:09] Consuelo Correa Barros:  Y dice que uno está sentado y qué sé yo. Entonces, bueno, por algo la NASA decidió colocar ese texto alternativo.
+[23:16] Consuelo Correa Barros:  Y si ustedes buscan los textos alternativos del espacio, son una poesía. Poesía, se los digo.
+[23:25] Consuelo Correa Barros:  Entonces, ¿qué pasa con las imágenes que ejecutan acciones? Por ejemplo, esta de Facebook, LinkedIn, bueno, LinkedIn, Instagram, X, o el buscador, o el carrito.
+[23:35] Consuelo Correa Barros:  Ahí el texto alternativo debería ser ese verbo que ejecuta. 
+[23:39] Consuelo Correa Barros: ¿Vale? O sea, por ejemplo, en el caso del buscar, no vamos a poner "zoom", no vamos a poner "lupita". Si eso lo que hace es abrir el buscador o generar una búsqueda, entonces pongamos "buscar".
+[23:49] Consuelo Correa Barros:  Pero en el caso de las redes sociales, ahí podemos hacer como dos cosas. Una es decir, por ejemplo, Instagram de WeAr, pero que uno dice como: "no tiene mucho sentido, si estamos en WeAr, ¿qué otro Instagram va a ser?".
+[24:02] Consuelo Correa Barros:  Obvio que es el de WeAr, por ejemplo. Entonces, ahí hay que tomar definiciones.
+[24:07] Consuelo Correa Barros:  Pero lo importante es que el usuario sepa, porque va a escuchar que hay un link, pero no vamos a saber a dónde. Entonces, tenemos que con el texto alternativo, así la persona va a escuchar: "enlace Facebook, enlace LinkedIn", y así. 
+[24:22] Consuelo Correa Barros: ¿Vale? Ustedes me dicen si voy muy rápido, si voy muy lento, si se está entendiendo. 
+[24:29] Consuelo Correa Barros: ¿Se está entendiendo? Todo súper. Genial.
+[24:34] Consuelo Correa Barros:  Ya. Pero tenemos otro caso que es el 1.4.5, y que me lo voy a, así me voy a saltar diez pueblos para llegar a este caso, que son las imágenes de texto.
+[24:44] Consuelo Correa Barros:  Entonces, pensemos en estos sitios que tienen banners promocionales y el texto está incrustado en la imagen. Entonces, lo que dice el criterio es, el 1.4.5 dice: "nunca, nunca utilicen texto en la imagen".
+[25:02] Consuelo Correa Barros:  Y hay algunas excepciones. 
+[25:03] Consuelo Correa Barros: ¿Qué excepciones? Los logotipos, por ejemplo. Y dice como: "excepto que la imagen pierda su significado", o qué sé yo.
+[25:10] Consuelo Correa Barros:  Y en cualquier caso, si es que el texto en la imagen es relevante y no es decorativo, entonces ese texto yo debería poder cambiarle el contraste, cambiarle el tamaño, y hacer un montón de cosas que sabemos que nadie hace. Entonces, si es que en realidad tenemos un banner con un texto encima, lo mejor sería, para que el texto pueda crecer, es que el texto sea parte del HTML y la imagen parte del estilo, y queda la imagen por detrás.
+[25:40] Consuelo Correa Barros:  Pero como cumplir con el 1.4.5 es tan imposible, porque sabemos que los banners siempre son parte, entonces lo que tenemos que hacer, al menos, es decir que en el texto alternativo, el texto alternativo, la información sea la misma que visualmente aparece en la imagen. Acá.
+[25:57] Consuelo Correa Barros:  Acá les muestro. Esta imagen es real, es de un banco, y lo que decía era Deutsche Bank, App Deutsche Bank España, todo lo que necesita de su banco.
+[26:08] Consuelo Correa Barros:  Este, ¿dónde está? No tengo idea cómo se pronuncia esto.
+[26:10] Consuelo Correa Barros:  Vale. Si esta es la información que se le transmite a los usuarios que ven, entonces es la misma información que debería transmitirse a los usuarios que no ven. 
+[26:19] Consuelo Correa Barros: ¿Cuál es lo que? ¿Qué es lo que deberíamos hacer entonces para cumplir con el 1.1.1 en este tipo de imágenes? Es copiar exacto el texto que está en la imagen.
+[26:29] Consuelo Correa Barros:  Porque por algo está ahí. 
+[26:31] Consuelo Correa Barros: ¿Vale? Entonces, pero mi recomendación es esto que les puse acá: siempre que sea posible, separemos el texto de la imagen, para que la imagen sea decorativa y el texto esté en texto, que es efectivamente lo más accesible. Entonces, acá tenemos otro ejemplo.
+[26:52] Consuelo Correa Barros:  Son esto es un pago. Es de un cliente de mi oficina.
+[26:57] Consuelo Correa Barros:  Y fíjense que es de la Tesorería General de la República. O sea, por acá se recaudan impuestos.
+[27:05] Consuelo Correa Barros:  Y acá la persona cuando llega al sitio sabe que tengo bancos, tengo crédito, tengo casas comerciales y tengo un montón de marcas. Pues todas estas marcas no tenían el texto alternativo.
+[27:16] Consuelo Correa Barros:  Entonces, aquí, bueno, la foto no me llegó a poner la etiqueta encima de la imagen, pero todas estas imágenes estaban marcadas como decorativas. Entonces, ¿cómo la persona ciega sabe que quiere pagar el impuesto a través del banco BCI, Itaú, o cual sea?
+[27:31] Consuelo Correa Barros:  Imposible. No se da por enterado. 
+[27:33] Consuelo Correa Barros: ¿Qué hubo que hacer? Obviamente, poner en vez de texto de imagen decorativa, poner el nombre del banco: Banco de Chile, Banco de Estados, Scotiabank, BCI, TBank, Banco Bise, etcétera, etcétera. 
+[27:44] Consuelo Correa Barros: ¿Vale? Súper simple. Fíjense que hacer ese cambio significó para la Tesorería recaudar algo así como un 80% más desde que se preocuparon de la accesibilidad, incluyendo la navegación por teclado.
+[27:59] Consuelo Correa Barros:  Ese está como caso en el sitio web de Globalize. Ya.
+[28:05] Consuelo Correa Barros:  Y aquí tenemos otros ejemplos. Entonces, como que hay un montón de imágenes, pero acá, si se fijan, como "ingresa tu ubicación".
+[28:12] Consuelo Correa Barros:  Esa imagen que está ahí, no hay nada que contar. Ya el texto lo dice, entonces las marcamos todas como decorativas.
+[28:19] Consuelo Correa Barros:  Pero en el texto, en el caso del QR, deberíamos decir que ahí hay un "y es descargar la app". Es parte de la imagen, deberíamos decir que ahí hay un QR para descargar la aplicación.
+[28:30] Consuelo Correa Barros:  Bien. Entonces, aquí viene, bueno, un montón de información, como si la imagen es decorativa.
+[28:36] Consuelo Correa Barros:  A nivel de desarrollo, puede quedar marcado así como "alt" igual comillas, comillas, o el "alt" sin nada más. Y eso estaría correcto para la tecnología de apoyo.
+[28:46] Consuelo Correa Barros:  Y este caso es cuando queda incorrecto, porque no se está marcando realmente que la imagen es decorativa. Entonces, la tecnología asistiva compensa y lee lo que encuentra.
+[28:57] Consuelo Correa Barros:  Y aquí hay más casos. Por ejemplo, esta es una imagen de texto que dice "ups", parte de la imagen para decir que hay un error 404, ¿cierto?
+[29:04] Consuelo Correa Barros:  Entonces, obviamente el texto no podemos marcar esa imagen como decorativa, porque ese "ups" que lo dice todo es parte de la imagen. Entonces, obviamente tendríamos que decirle algo, como que hay un error, no sé, error 400, lo que sea. 
+[29:19] Consuelo Correa Barros: ¿Vale?
+[29:22] Consuelo Correa Barros:  Y aquí tenemos este caso de que es una imagen funcional. Acuérdense que antiguamente nosotros usábamos los disquetes, y así quedó para la vida.
+[29:30] Consuelo Correa Barros:  Por eso las personas nacidas después de los 2000 saben qué es un disquete. Entonces, en este caso, nosotros, como no hay un texto que acompañe, entonces la imagen tenemos que decir: "esta imagen no es decorativa, esta imagen es funcional, y lo que hace es guardar".
+[29:45] Consuelo Correa Barros:  Y le ponemos ese texto alternativo: "guardar".
+[29:49] Consuelo Correa Barros:  Y quedaría así, ¿verdad?
+[29:53] Consuelo Correa Barros:  Pero aquí no está el ejemplo completo, porque, ¿qué pasa?
+[30:01] Consuelo Correa Barros:  No me había dado cuenta. 
+[30:02] Consuelo Correa Barros: ¿Qué pasa si la imagen está en el código, pero no está en la imagen? Si la imagen al costado dice "guardar", o sea, aparece el icono, y además visualmente está escrito "guardar", entonces la imagen pasa a ser decorativa, porque colocarle un texto alternativo sería redundante. 
+[30:20] Consuelo Correa Barros: ¿Ven? Se fijan que aquí dice "guardar"? Y aquí está la imagen.
+[30:24] Consuelo Correa Barros:  Es como que aquí tengo mi imagen. Esto se lee así: tengo un enlace que me va a llevar a alguna parte.
+[30:29] Consuelo Correa Barros:  Entre medio de las comillas diría dónde lleva. Aquí abre, y acá cierra.
+[30:35] Consuelo Correa Barros:  Y el enlace se compone de una imagen y de un texto. Entonces, si la imagen "guardar" ya tiene un texto que acompaña al lado "guardar", la imagen es decorativa.
+[30:47] Consuelo Correa Barros:  Bien. Para aprender a escribir texto alternativo, nosotros recomendamos este formulario en línea de Olga, y está este mapa de decisión.
+[30:58] Consuelo Correa Barros:  Después se los podemos compartir los enlaces. De todas maneras, ya sabemos que tenemos un recurso en WeAr.
+[31:08] Consuelo Correa Barros:  Súper con las imágenes, ¿o no? 
+[31:09] Consuelo Correa Barros: ¿Se entendió? La gente cree que entiende del texto alternativo, pero es que lo que pasa es que cuando se encuentran con que tienen gráficos, ahí empiezan los problemas. Cuando aparecen los casos que no tenemos contemplados.
+[31:26] Consuelo Correa Barros:  Vamos. Entonces, la pauta 1.2 habla del contenido, que es básicamente multimedia. 
+[31:35] Consuelo Correa Barros: ¿Vale? Tiempo dependiente. Entonces, habla de videos, habla de audio, y lo que incluye es: solo audio, solo video, audio-video, audio y/o video, y las distintas combinaciones.
+[31:49] Consuelo Correa Barros:  Y fíjense que esta pauta, la 1.2, tiene varios criterios. Entonces, dice como: solo audio y video, audio descripción, audio descripción pregrabado, ampliado, qué sé yo.
+[32:00] Consuelo Correa Barros:  Entonces, fíjense que cuando es triple A, es porque está o pide algo que es demasiado difícil de resolver, como la audio descripción, o es porque habla de temas en vivo, en directo.
+[32:16] Consuelo Correa Barros:  Entonces, pero todo esto es como: ¿qué es lo que pide? Habla de audio descripción, habla de subtítulos, y habla en general como de alternativa.
+[32:28] Consuelo Correa Barros:  Entonces, lo vamos a ver como en términos generales a qué se refiere esto. 
+[32:31] Consuelo Correa Barros: ¿Vale? No sé si han visto alguna vez una audio descripción. O sea, escuchado en realidad. 
+[32:37] Consuelo Correa Barros: ¿Qué es una audio descripción? Una audio descripción es un contenido de audio que está ahí para las personas que no pueden ver el video. 
+[32:49] Consuelo Correa Barros: ¿Ya? Entonces, por ejemplo, yo siempre tiro el mismo ejemplo porque es lo más gráfico. Están viendo un documental de Jackie Cho, y nadie está hablando.
+[32:59] Consuelo Correa Barros:  Pero están pasando mil cosas. El tipo está en el mar, me está mostrando un arrecife, me está mostrando unos peces maravillosos, y yo no me doy por enterado.
+[33:09] Consuelo Correa Barros:  Entonces, ¿qué es lo que hace la audio descripción? Es que describe en palabras aquello que solamente se está viendo.
+[33:16] Consuelo Correa Barros:  Y por supuesto que existen casos donde hay gente que va a conversar, pero igual están pasando cosas. Se abrió una puerta, ¿qué más podría pasar?
+[33:29] Consuelo Correa Barros:  No sé, salió el sol, se oscureció, la persona está sola en la habitación. Entonces, lo que hace la audio descripción es que utiliza los silencios de los diálogos, porque siempre se priorizan los diálogos de las personas, sobre todo cuando hablamos de películas.
+[33:42] Consuelo Correa Barros:  Pero durante los silencios se generan estas audio descripciones. Entonces, acá yo traje un ejemplo.
+[33:53] Consuelo Correa Barros:  Miren. Ustedes me dicen si.
+[33:56] Speaker 2:  It's the circle of life.
+[34:00] Speaker 3:  The herds of animals gather at the bottom of Pride Rock, a tall, flat ledge that towers over the rest of the savanna. Zazu, a small blue bird with a large beak, flaps to the ledge. He bows to Mufasa, a powerful, dignified lion with a thick red mane.
+[34:18] Consuelo Correa Barros:  Déjame ver si lo puedo cambiar a español. 
+[34:27] Consuelo Correa Barros: ¿Dónde diablos está el? Aquí. Ya, ahora sí.
+[34:29] Consuelo Correa Barros:  Sigamos.
+[34:31] Speaker 2:  Love till we find our place.
+[34:36] Speaker 3:  Rafiki, an elderly baboon with white hair, slowly climbs up to the ledge and hugs Mufasa warmly. They walk back to a cave, where Mufasa's wife, Sarabi, cuddles a tiny lion cub in her paws.
+[34:54] Speaker 3:  Smiling, Rafiki bends over Simba, the baby lion, and shakes his walking stick, which has.
+[35:01] Consuelo Correa Barros:  Ahora, tenemos dos ejemplos de eso mismo. Obviamente, después se los vamos a compartir también. Lo importante es que las personas ciegas, obviamente, estamos hablando de un tema de derechos.
+[35:12] Consuelo Correa Barros:  Es como: ¿por qué no podrían consumir contenido audiovisual? 
+[35:17] Consuelo Correa Barros: ¿Verdad? Contenido que en este caso es visual. Sí, sí pueden.
+[35:21] Consuelo Correa Barros:  Entonces, y de hecho, yo acostumbro ir a un evento en Los Ángeles, que es como una gran feria, un gran congreso de tecnología asistiva. Y me encanta que este año, en marzo, descubrí cómo pintaban las personas ciegas.
+[35:36] Consuelo Correa Barros:  Porque también les pasan como con textura. Entonces, bueno, pueden hacer exactamente lo mismo, siempre que tengan la alternativa.
+[35:42] Consuelo Correa Barros:  Entonces, así es como ven las películas, las escuchan, con una experiencia inmersiva del audio. Y ahí, bueno, hay un ejemplo del comercial, entonces van los diálogos entre medio del audio descripción.
+[35:56] Consuelo Correa Barros:  Genial. Entonces, la audio descripción es, obviamente, un audio, o sea, alguien hablando que describe lo que se ve.
+[36:04] Consuelo Correa Barros:  Los subtítulos es lo que activamos, los que pueden ser close caption, que son estos que se prenden y se apagan. Por ejemplo, los que están en YouTube, como la imagen de acá de la derecha.
+[36:15] Consuelo Correa Barros:  Y los open caption, que son cuando están incrustados en el video. O sea, yo no lo puedo sacar.
+[36:22] Consuelo Correa Barros:  Están siempre ahí a la vista. Lo importante de esos subtítulos es que están sincronizados y no se pueden saltar ninguna palabra.
+[36:32] Consuelo Correa Barros:  O sea, todo lo que se está diciendo tiene que estar ahí. Y eso incluye sonidos importantes.
+[36:38] Consuelo Correa Barros:  Por ejemplo, una balacera. Por ejemplo, que se abra una puerta. 
+[36:43] Consuelo Correa Barros: ¿Sí? La puerta así cruje. Por ejemplo, en psicosis, cuando hacen "¡Ah!".
+[36:48] Consuelo Correa Barros:  O podríamos poner, no sé, ruido ensordecedor, escalofriante. Mientras que la transcripción es como la experiencia que tenemos también en WeAr, que es cuando tú puedes encontrar el texto, muchas veces aparece como al lado.
+[37:04] Consuelo Correa Barros:  E incluso yo, si selecciono una parte del texto, me lleva a la parte del video donde está eso. Puede que esté ahí sincronizado y a la vista, o puede que sea un archivo que se descargue. 
+[37:14] Consuelo Correa Barros: ¿Ya? Pero eso es una transcripción. Es como en texto, todo lo que se dijo en el video, incluidos los aplausos, incluido ese tipo de cosas.
+[37:23] Consuelo Correa Barros:  Ahí les dejo una tabla resumen. Después esto se los vamos a compartir para que lo tengan.
+[37:28] Consuelo Correa Barros:  Porque en serio, como que hizo un resumen de 157 páginas, chiquillos. Así que súper bien.
+[37:34] Consuelo Correa Barros:  Ya. Y la pauta 1.3 habla del contenido adaptable.
+[37:37] Consuelo Correa Barros:  Lo que dice es que el contenido se tiene que adaptar sin perder información. Y ahí aparecen las dudas de siempre, ¿cierto?
+[37:42] Consuelo Correa Barros:  Es como: ¿qué pasa con el reflow? 
+[37:44] Consuelo Correa Barros: ¿Qué pasa con un montón de cosas? Entonces, veamos. Dice: en el fondo es como toda la información tiene que poder interpretarse de las distintas maneras.
+[37:56] Consuelo Correa Barros:  Eso ya lo sabemos. Ya que habla de información y relaciones, de las características sensoriales, identificar el propósito, la secuencia significativa, orientación.
+[38:05] Consuelo Correa Barros:  Y de nuevo, identificar el propósito, pero con un nivel más alto. Entonces, vamos a ir con información y relaciones.
+[38:12] Consuelo Correa Barros:  Yo insisto en que voy a hacer todo lo posible por pasar muy rápido por todo y comentarles. Pero si es que no alcanzamos, bueno, siempre podemos generar nuevas instancias. 
+[38:22] Consuelo Correa Barros: ¿Vale? Entonces, información y relaciones, esto se refiere a la estructura. 
+[38:29] Consuelo Correa Barros: ¿Vale? O sea, esto que visualmente yo lo entiendo, que en el código también se transmita para que las personas que no están viendo puedan entender cómo se relacionan las cosas. Y esto es simple teoría de conjuntos.
+[38:42] Consuelo Correa Barros:  Como que la gente agrupe la información que tiene que ser leída en conjunto, agrupada, y que separe de la información que tiene que ser leída como por aparte. Entonces, aquí aparecen un montón de cosas, y aparecen los landmarks.
+[38:55] Consuelo Correa Barros:  Los landmarks marcan puntos de referencia, ¿ya? Y que lo utiliza la tecnología de apoyo para navegar.
+[39:03] Consuelo Correa Barros:  Entonces, por ejemplo, la persona puede ir al header, puede ir al footer, puede buscar el main, o puede navegar a través de los títulos, porque existen atajos de teclado para todo eso. Entonces, el punto ahora es explicar como qué hace qué.
+[39:17] Consuelo Correa Barros:  Y fíjense que vamos a tener, al menos en la vida, tres landmarks. Existe, justo aquí les estoy mostrando como que esta página, que también era de mi cliente TGR, solamente tenía landmark navigation, que es esto, lo que está marcado en rosado.
+[39:33] Consuelo Correa Barros:  Solo el menú de navegación. Pero no estaba marcando dónde estaba header, no estaba marcando dónde estaba footer, no estaba marcando el contenido central, no estaba marcando nada.
+[39:41] Consuelo Correa Barros:  No porque no supiera que existía, sino que simplemente no se habían dado cuenta que no estaba mal. Existe una extensión de Chrome, que es esta, landmark navigation via Keyboard, que les muestra, se prende como esto que les estoy mostrando en la pantalla, para que se la instalen.
+[39:57] Consuelo Correa Barros:  Es súper buena. Entonces, la primera gran landmark que tenemos es header.
+[40:03] Consuelo Correa Barros:  Header nunca va a estar contenido dentro de otra landmark. 
+[40:07] Consuelo Correa Barros: ¿Y qué es lo que tiene header? Header normalmente tiene el logo, tiene el buscador y tiene el menú. 
+[40:12] Consuelo Correa Barros: ¿Ya? Y fíjense que header es el contenido que se mantiene estable arriba en un sitio. Entonces, es súper fácil, porque uno dice como: ¿qué es lo que conserva mi sitio siempre independiente de en qué nivel de la información esté navegando?
+[40:28] Consuelo Correa Barros:  Bueno, si está arriba, es header. Si está abajo, es footer.
+[40:33] Consuelo Correa Barros:  Y todo lo que está al medio es main. Súper sencillo.
+[40:36] Consuelo Correa Barros:  Entonces, tenemos header. Upa.
+[40:42] Consuelo Correa Barros:  Normalmente, dentro de header vamos a encontrar nav. Aquí no se cacha mucho, pero es un ejemplo de como tenemos una página web completa. 
+[40:50] Consuelo Correa Barros: ¿Se está viendo mi mouse o no? ¿Se ve en pantalla el mouse sobre la imagen? Parece que no.
+[41:00] Speaker 4:  No, no se ve.
+[41:01] Consuelo Correa Barros:  Ya, pero se los voy a relatar. Tenemos una imagen de un sitio web que está a la derecha. Fíjense que hay un encabezado que es como blanquito, que tiene un loguito, que tiene un menú, qué sé yo.
+[41:14] Consuelo Correa Barros:  Y después hacia abajo dice el texto del título y hay una imagen. Entonces, esto que está arriba, yo les dije que era header, porque se mantiene estático.
+[41:23] Consuelo Correa Barros:  Pero normalmente en header vamos a encontrar el menú de navegación. Eso tenemos que marcarlo.
+[41:28] Consuelo Correa Barros:  Se llama nav. Es esa etiqueta.
+[41:31] Consuelo Correa Barros:  Nav, navigation. 
+[41:32] Consuelo Correa Barros: ¿Vale? ¿Qué pasa con navigation? Obviamente es el menú de navegación.
+[41:37] Consuelo Correa Barros:  Normalmente, en un sitio web vamos a tener cientos de, no, no cientos, pero al menos dos menús de navegación. Entonces, lo que dice la WCAG es que cuando existe más de uno que cumple el mismo propósito, entonces tenemos que ponerle un nombre que sea significativo.
+[41:55] Consuelo Correa Barros:  Y eso se hace a través de area label. Entonces, déjenme mostrarles un sitio web.
+[42:02] Consuelo Correa Barros:  Voy a mostrarles el mismo sitio de WeAr para, miren, aquí.
+[42:09] Consuelo Correa Barros:  Ya. Entonces, aquí, ay, y no, definitivamente no se ve mi mouse, pero tenemos el logo de WeAr.
+[42:16] Consuelo Correa Barros:  Ahí está. Y tenemos este inicio, curso, funciones, ¿cierto?
+[42:20] Consuelo Correa Barros:  Déjenme ver que parece que llegó alguien. Sí, tenemos un segundito.
+[42:25] Consuelo Correa Barros:  Ahí está. Muy bien.
+[42:27] Consuelo Correa Barros:  Entonces, todo esto que está aquí es header hasta mi carita, ¿cierto? Porque estoy logueada.
+[42:33] Consuelo Correa Barros:  Pero el menú de navegación, yo podría decir que va desde el logo de inicio. Por ejemplo, si es que no estuviese, porque tiene un link.
+[42:45] Consuelo Correa Barros:  Es parte del menú de navegación, aun cuando yo tenga dos inicios. Pero yo podría decir que nav es todo esto. 
+[42:51] Consuelo Correa Barros: ¿Vale? Y fíjense que en el footer, ah, bueno, justo nosotros aquí en el sitio no tenemos footer. Pero si tuviésemos un breadcrumb, que es este que te dice inicio, cursos a tu ritmo, a ver si tenemos un breadcrumb aquí.
+[43:06] Consuelo Correa Barros:  No, no tenemos breadcrumb. Ya, pero ahí tendríamos otro menú de navegación, si es que hubiese breadcrumb.
+[43:12] Consuelo Correa Barros:  Entonces, es importante que, o si tuviésemos, a ver, voy a ir al de, ya sé cuál. Doble letra C, tiene dos.
+[43:24] Consuelo Correa Barros:  Ahora sí. El W3C tiene este menú de navegación y tiene este otro.
+[43:30] Consuelo Correa Barros:  Porque este cambia el lenguaje, ¿cierto? Y este es mi menú principal.
+[43:33] Consuelo Correa Barros:  Entonces, a través del area label, marcan como el propósito. Entonces, la gente sabe que el de arriba es, o sea, perdón, el de arriba es de idioma y el de abajo es el principal.
+[43:46] Consuelo Correa Barros:  Entonces, si ustedes quieren ver cómo lo hacen, se activan ese que les había dicho, que se llama landmark navigation via Keyboard, y me dice: "Mira, banner". Banner es, existe, como que existe en HTML y existe en area.
+[44:02] Consuelo Correa Barros:  En area se escribe banner. Aun cuando el sitio está en HTML, este te lo muestra como en area. 
+[44:08] Consuelo Correa Barros: ¿Vale? Pero sabemos que banner es header. 
+[44:13] Consuelo Correa Barros: ¿Vale? Y que dentro de banner, porque está hacia indentado, hacia la derecha, tenemos el menú de lenguaje de navegación y el menú principal. Entonces, ahí dice navigation, navigation. 
+[44:24] Consuelo Correa Barros: ¿Ven? Entonces, language option y main serían sus area label, el nombre accesible. Entonces, volvamos a compartir esta.
+[44:39] Consuelo Correa Barros:  Bien. Main es el contenido central, y es que, en definitiva, lo que va cambiando cada vez que ingresamos a una página nueva.
+[44:50] Consuelo Correa Barros:  Y aside, déjenme ver, porque parece que alguien llegó. Ah, es ti.
+[44:54] Consuelo Correa Barros:  Dime.
+[44:55] Speaker 4:  Hola. Perdón, llego tarde e igual lo has dicho ya.
+[44:58] Consuelo Correa Barros:  No pasa nada.
+[45:01] Speaker 4:  Vale. No, es que estaba mirando. En el caso que has enseñado, había dos menús horizontales.
+[45:06] Speaker 4:  Pero en el caso de que hay un menú horizontal y uno que está como en aside, en el lateral.
+[45:14] Consuelo Correa Barros:  Igual tienes que marcarlo como menú. O sea, vas a tener que marcar aside y vas a tener que marcar el menú, el navigation.
+[45:20] Speaker 4:  O sea, ambas etiquetas.
+[45:22] Consuelo Correa Barros:  Claro. Y una está contenida en la otra.
+[45:25] Speaker 4:  Bueno.
+[45:26] Consuelo Correa Barros:  Como aside, aside, porque acá existen reglas. Y esto creo no haberlo explicado lo suficientemente bien. Header, footer, main y aside no están contenidos dentro de otra etiqueta. 
+[45:39] Consuelo Correa Barros: ¿Ya? O dentro de otra landmark. Pero dentro de aside yo puedo tener navigation y puedo tener otro navigation en main, y puedo tener otro navigation en header, y puedo tener navigation en footer, si quiero.
+[45:52] Speaker 4:  Vale.
+[45:53] Consuelo Correa Barros:  ¿Ya? Entonces, pero en este caso, en el fondo, como lo que pasa es que, ¿qué significa aside? Aside significa contenido complementario.
+[46:02] Consuelo Correa Barros:  Y yo eventualmente podría tener noticias marcadas como contenido complementario. Que sea aside no significa que allí adentro exista un menú.
+[46:12] Consuelo Correa Barros:  Por eso tenemos que marcar que es aside, si es que existe, y luego el menú. 
+[46:17] Consuelo Correa Barros: ¿Ya?
+[46:17] Speaker 4:  Sí.
+[46:17] Consuelo Correa Barros:  El navigation. Sí. Entonces, genial.
+[46:21] Consuelo Correa Barros:  Voy, avancemos. Ya sabemos que, ah, dijimos que aside, contenido secundario.
+[46:25] Consuelo Correa Barros:  Entonces, vamos a tener, aquí en este caso, vamos a tener main y aside, este contenido secundario, que en este caso es como cuenta un poquito como del autor. 
+[46:35] Consuelo Correa Barros: ¿Es necesario marcarlo como aside? Bueno, quizás no. Tal vez no. 
+[46:39] Consuelo Correa Barros: ¿Vale? Son como decisiones que hay que ir tomando. Y footer es el contenido que se mantiene estable y que está abajo.
+[46:47] Consuelo Correa Barros:  En el footer, normalmente, ¿qué? Eran las personas encontrar la información de la empresa, de la compañía, de la institución.
+[46:54] Consuelo Correa Barros:  Entonces, como ya, esto es curioso, porque en header sí se pide que esté marcado el menú de navegación. Pero en footer, si no está marcado este menú de navegación como navigation, no pasa nada.
+[47:07] Consuelo Correa Barros:  Porque la gente ya sabe que ahí está. O sea, como el W3C en ese sentido es súper, como que las decisiones se van tomando en base al uso y a lo que las personas entienden.
+[47:18] Consuelo Correa Barros:  Entonces, como que las personas, a diferencia de aside, que si tuviésemos un menú de navegación, la persona no tiene por qué entender que ahí hay un menú. En el footer sí entienden que ahí está el menú principal de la, o sea, principalmente con la información de la empresa.
+[47:33] Consuelo Correa Barros:  Entonces, si marcan navigation o no, no es tan relevante. 
+[47:38] Consuelo Correa Barros: ¿Vale? Pero si es que deciden marcarlo, entonces hay que marcarlos todos. Y en este caso yo tengo, tendría un menú de navegación para servicios, otro para productos, otro de mapa y sitio, y otro de legal, y otro de las redes sociales, que está aquí abajo.
+[47:52] Consuelo Correa Barros:  Y aquí, fíjense que hay otro más, que está como las preguntas frecuentes, términos y condiciones, y qué sé yo. Entonces, si marco uno, los marco todos.
+[48:01] Consuelo Correa Barros:  Y ese es el tema, como que al final nos vamos a llenar de menús de navegación y quizás no es necesario marcarlos del footer.
+[48:10] Consuelo Correa Barros:  Ya. Genial.
+[48:11] Consuelo Correa Barros:  Ya entendimos los landmarks. Ahora vienen los encabezados, que también es parte del criterio 1.3.1.
+[48:17] Consuelo Correa Barros:  Lo que dice el criterio es que se marcan las relaciones. 
+[48:20] Consuelo Correa Barros: ¿Vale? Entonces, parte de las relaciones tiene que ver como con cómo se estructura el contenido a través de los títulos. El título puede ser visual y súper evidente, o a veces no es tan evidente, pero visualmente uno como que organiza la información, hay colores de fondo, y qué sé yo, y puedo generar los grupos.
+[48:40] Consuelo Correa Barros:  Entonces, lo primero es que los encabezados van del H1 al H6. No se pueden saltar niveles.
+[48:47] Consuelo Correa Barros:  O sea, no me puedo ir del H1 al H4 solo porque el H4 es más chiquitito y yo no quería usar el tamaño del H2, H3. Por eso el sistema de diseño tiene que ser flexible, y eso es algo que se va a retomar en el módulo 6. 
+[48:59] Consuelo Correa Barros: ¿Vale? Entonces, lo que deberíamos considerar es que el tema principal va a tener un H1 de la página, es por página. La idea es que ese H1 me diferencie del contenido de otros sitios web, pero también de otras páginas de mi propio sitio.
+[49:17] Consuelo Correa Barros:  Entonces, cada sección, cada vez que aparezca una sección que tenga un título que agrupe la información, entonces esa sección va a tener un nombre de H2 y subsección H3, y así. Entonces, si volvemos al caso del W3C, me encanta porque este tiene como buenos ejemplos para todo.
+[49:38] Consuelo Correa Barros:  Hay un, este complemento que se llama heading map, les va a sacar. Entonces, miren, fíjense que aquí dice, dice que ese es el H1, making the web work, ahí está. 
+[49:52] Consuelo Correa Barros: ¿Ven? Y si se fijan, no es más grande que este.
+[49:58] Speaker 4:  Ah.
+[49:58] Consuelo Correa Barros:  Pero es el título que agrupa todo el contenido de la página. Entonces, este es un H1. Después tengo esta sección que tiene ese H2, tengo esta otra sección que tiene un H2, se comporta distinto, qué sé yo, pero sigue siendo H2 porque son agrupan información de otro orden, ¿cierto?
+[50:14] Consuelo Correa Barros:  Y aquí tenemos este, últimas noticias. Y cada título dentro de las últimas noticias es un hijo de este.
+[50:22] Consuelo Correa Barros:  Esta es una relación de patriarcado o matriarcado, pero es una relación así como filial, donde existe un solo patriarca o matriarca. Y de ahí para abajo pueden haber mil hermanos y qué sé yo, pero no existe esto del nieto sin que haya pasado por un padre. 
+[50:41] Consuelo Correa Barros: ¿Vale? Entonces, y fíjense que este llega como hasta el 3. Es raro encontrar sitios que lleguen efectivamente hasta el 6.
+[50:48] Consuelo Correa Barros:  Quizás está como que sobre-diferenciado si tiene tantos niveles, pero se permite hasta el 6. 
+[50:53] Consuelo Correa Barros: ¿Vale? Entonces, vamos a asumir que acá lo tenemos. Este componente es parte, ¿por qué yo digo que este título de un card podría ser un H3?
+[51:06] Consuelo Correa Barros:  Y me la juego siempre porque los títulos de card son H3. Es porque las cards son parte de una sección que seguramente se llama cursos, y que si es que cursos no es el nombre, o sea, no es el nombre de la página, si es que cursos no es el H1, entonces este va a ser un H3.
+[51:23] Consuelo Correa Barros:  Pero normalmente es como H3 porque, por ejemplo, aquí en WeAr, ah, no me pesca.
+[51:34] Consuelo Correa Barros:  Ahí está. Tenemos este que sería el H1.
+[51:39] Consuelo Correa Barros:  Este va a ser un H2, recomendado para ti, paleta de colores H3. 
+[51:44] Consuelo Correa Barros: ¿Ven? Como que así debería ir el, el más o menos. Entonces, lo importante es que, este, y te doy la palabra al tiro, lo importante es que como podría ser a veces H3, otras veces podría ser H4, y otras veces podría ser H2, y no sabemos, esa marca la vamos a generar en el diseño de la interfaz, donde esté el diseño de la pantalla completa.
+[52:09] Consuelo Correa Barros:  En cambio, hay otras cosas que las podemos marcar a nivel de sistema de diseño, pero quizás esto no, excepto que las cards siempre tengan exactamente el mismo comportamiento. 
+[52:18] Consuelo Correa Barros: ¿Vale? Ahora sí, es ti, dime.
+[52:21] Speaker 4:  Me has respondido. No, nada, era eso, preguntarte cómo tomabas la decisión de qué H poner cuando estás haciendo este componente en el sistema de diseño. Simplemente no sé.
+[52:33] Consuelo Correa Barros:  No la tomo.
+[52:36] Speaker 4:  Vale. O sea, se deja sin marcar, o sea, en el.
+[52:40] Consuelo Correa Barros:  Sí. No lo marco a nivel de sistema de diseño, nunca marco los H, y lo que hago es que los marco a nivel de interfaz, como la pantalla visual.
+[52:48] Speaker 4:  O sea, solo usas el componente.
+[52:50] Consuelo Correa Barros:  Sí.
+[52:51] Speaker 4:  De acuerdo. Gracias.
+[52:52] Consuelo Correa Barros:  Así. De nada.
+[52:57] Consuelo Correa Barros:  Vamos. Entonces, yo les había dicho que los encabezados, ah, bueno, ahí está el heading map. 
+[53:01] Consuelo Correa Barros: ¿Ven que yo siempre me preocupo de dejarles como el material ahí? Entonces, los encabezados lo que hacen es que estructuran la información. Debe existir siempre al menos un encabezado por página como parte en el H1, y no hay saltos.
+[53:17] Consuelo Correa Barros:  Al menos el H1 debería estar asegurado. Y la jerarquía tiene que tener sentido, no tiene que tener niveles, o sea, tiene que tener niveles sin saltárselo.
+[53:27] Consuelo Correa Barros:  Y tiene que tener un nombre que sea lógico, que nos haga sentido a todos. 
+[53:30] Consuelo Correa Barros: ¿Ya? Entonces, debe ser claro, describir el contenido de la sección, etcétera, etcétera. Eso es como, así se redacta un encabezado, no puede ser más sencillo.
+[53:38] Consuelo Correa Barros:  Muchas, ¿qué? 
+[53:39] Consuelo Correa Barros: ¿Cuál es? Por definición, un encabezado es más bien un texto corto que agrupa información. Entonces, muchas veces lo que quieren hacer es colocar un texto grande para que se vea destacado, pero aunque sea gigante, sigue siendo un párrafo.
+[53:54] Consuelo Correa Barros:  Entonces, a nivel de sistema de diseño, que es lo que vamos a ver en el módulo 6, lo importante es que su sistema de diseño sea flexible, que el párrafo que tenga, no sé, mil tamaños distintos, si quiero, para escribir párrafos, mil tamaños distintos para escribir encabezados. 
+[54:08] Consuelo Correa Barros: ¿Vale? Ah, se está viendo la web, no, me equivoqué. Muchas gracias, Camil.
+[54:13] Consuelo Correa Barros:  Ahí sí. Perfecto.
+[54:15] Consuelo Correa Barros:  Entonces, lo que les iba a decir es que este documento se va a anexar a la tutoría para que lo puedan descargar y puedan tener el link a los distintos componentes. 
+[54:25] Consuelo Correa Barros: ¿Vale? Y así les sirve como de guía. Bien.
+[54:31] Consuelo Correa Barros:  Existen otros criterios, porque la estructura, normalmente cuando hablamos del criterio 1.3.1, que habla de estructura y relaciones, la gente cree que se refiere solamente como a la estructura semántica del HTML más los encabezados. Pero es que todo tiene estructura.
+[54:47] Consuelo Correa Barros:  Por ejemplo, en este caso, esto es un elemento de formulario, y yo puse como: "Selecciona tu nivel máximo de estudios", porque es típico, ¿verdad? Pero podría ser como: "Selecciona el tamaño de la masa de tu pizza", y este es un radiobútum, entonces selección única.
+[55:04] Consuelo Correa Barros:  Y fíjense que para que esto se identifique como un grupo que pertenece a la misma información, entonces desarrollo tiene que marcar todo esto como un field set, desde selección hasta doctorado, y se marca con legend este, como el encabezado de este tema de formulario. 
+[55:28] Consuelo Correa Barros: ¿Vale? Entonces, nosotros no pretendemos que lleguen tan lejos, pero como que hay organizaciones que son re aguja, donde piden que uno documente a este punto. Por ejemplo, un banco en Estados Unidos pedían saber este tipo de cosas. 
+[55:47] Consuelo Correa Barros: ¿Ya? Entonces, como, ¿por qué? Porque así, como esto es un grupo, entonces se sabe que es secundaria.
+[55:55] Consuelo Correa Barros:  Sí, los checkboxes funcionan igual. Claro.
+[55:59] Consuelo Correa Barros:  Todo esto que es como pregunta, por ejemplo, como: "Ustedes están siendo censados, pregunta número uno, ¿cuánta gente vive en tu cuánta gente mayor de edad vive en tu casa, no sé qué, bla, bla, bla?". Se hace como así.
+[56:10] Consuelo Correa Barros:  Entonces, si es que esto como es parte del mismo grupo, a través de esto, de alguna manera se puede cambiar a través de las flechitas, como para el siguiente, el siguiente, y no el tab, porque es parte del mismo grupo. Entonces, bueno, pero esto es como que en serio, como rara vez alguien se los va a pedir.
+[56:35] Consuelo Correa Barros:  Pero lo que sí les puede pasar, y que tampoco se lo deberían pedir, es que, por ejemplo, aquí yo puse como una lista numerada. Existen las listas que son las numeradas, por ejemplo, las que dicen: "Uno, paso uno, paso dos, tres, cuatro", y las listas no numeradas.
+[56:50] Consuelo Correa Barros:  Entonces, a nivel de desarrollo, desarrollo una lista que tiene números, se marca así, OL. Y fíjense que el número, el uno, dos, tres, cuatro, no está escrito visualmente, sino que aparece a través del código. 
+[57:04] Consuelo Correa Barros: ¿Vale? Entonces, muchas veces nosotros también vamos a tener que decirle a desarrollo: "Oye, esto es una lista numerada o lista no numerada para que se implemente de esta forma", y no que el número sea como parte del código, porque, ¿qué pasa si se ingresa algo distinto? Bueno, varias razones, pero las listas, el lector de pantalla te dice cuántos elementos de lista tiene.
+[57:30] Consuelo Correa Barros:  Entonces, si realmente está diseñado como un párrafo con un bullet, por ejemplo, o un párrafo con un número, la tecnología asistiva no va a saber que eso es una lista. Y las listas son listas por algo, porque comunican información.
+[57:43] Consuelo Correa Barros:  Entonces, incluso los menús de navegación, adentro del menú de navegación también hay una lista. Por ejemplo, no sé si me la voy a jugar también por el W3C, pero si esto estuviese bien construido, yo les decía que esto va a ser header.
+[58:03] Consuelo Correa Barros:  Aquí voy a intentar de allá, todo esto va a ser header. Esto va a ser el menú de navegación, pero dentro del menú de navegación yo debería tener una lista, para que la persona usuaria sepa que ese menú de navegación tiene una lista con uno, dos, tres, cuatro, cinco, seis componentes. 
+[58:20] Consuelo Correa Barros: ¿Vale? Entonces, espero estármela jugando bien.
+[58:27] Consuelo Correa Barros:  Fíjense que ahí tengo mi menú de navegación, tengo un div, tengo mi enlace de la imagen. Ah, ya.
+[58:38] Consuelo Correa Barros:  Y ahí tengo un botón, y ahí tengo, aquí está. Ajá, mi lista.
+[58:43] Consuelo Correa Barros:  Ah, pero ustedes no lo ven. Regia.
+[58:45] Consuelo Correa Barros:  Nadie me dice que no se está compartiendo de la manera correcta. Déjenme detener.
+[58:51] Consuelo Correa Barros:  Es que para compartir eso, para que vean el código, tengo que compartirles mi pantalla completa. Pero me la jugué bien.
+[58:57] Consuelo Correa Barros:  Miren, ahí dice que hay una lista, uli. Entonces, el usuario lector de pantalla va a saber que adentro del menú de navegación hay una lista que tiene uno, dos, tres, etcétera, componentes.
+[59:17] Consuelo Correa Barros:  Súper cool. Entonces, voy a volver a compartir pantalla de la otra manera para que no tengan que ver todas mis otras cositas.
+[59:29] Consuelo Correa Barros:  Ya. Genial.
+[59:32] Consuelo Correa Barros:  Esto de llegar a decirle a desarrollo: "Oye, te tengo que comunicar cuándo es una lista numerada, cuándo no es una lista numerada", es algo que se conversa. 
+[59:41] Consuelo Correa Barros: ¿Vale? Pero tienen que saber cómo funciona. Entonces, una lista numerada haría esto, me añade los numeritos, sin que diga: "Usa elementos semánticos para los encabezados", no dice, ¿ven?
+[59:55] Consuelo Correa Barros:  Como que simplemente me lo escribe solito. Entonces, si yo incluso añadiera algo y modificara el orden, no pasa nada, porque el número se asigna solo, es como automágico.
+[60:09] Consuelo Correa Barros:  Me encanta la palabra automágica, la inventó un amigo. Se la vamos a patentar.
+[60:15] Consuelo Correa Barros:  Ya. Lo que dice la secuencia significativa, y qué miedo que avance y avance la hora y todavía no llegamos ni al 2, es básicamente que el contenido tiene que presentarse de manera tal que no afecte el significado.
+[60:28] Consuelo Correa Barros:  Entonces, como que técnicamente lo que dice es que la lectura va de arriba a abajo, de izquierda a derecha. Eso es lo que dice. 
+[60:33] Consuelo Correa Barros: ¿Vale? Como que el orden tiene que tener sentido. Entonces, por ejemplo, en este caso, nosotros, ¿qué vamos a leer primero?
+[60:42] Consuelo Correa Barros:  El título, y vamos a leer después la imagen, si es que tuviera texto alternativo, y después de leer el texto alternativo vamos a leer el título de la card. Eso no tiene mucho sentido, eso habla como de la secuencia significativa.
+[60:54] Consuelo Correa Barros:  Entonces, nosotros como a nivel de diseño lo que tenemos que aprender a hacer es a marcar la secuencia significativa. 
+[61:01] Consuelo Correa Barros: ¿Cuándo marcamos la secuencia significativa? Cuando hay dudas. Por ejemplo, por ejemplo, tenemos esta imagen de cookies.
+[61:11] Consuelo Correa Barros:  Cuando nosotros entramos a un sitio por primera vez, y estamos navegando a través del teclado, ¿qué debería pasar primero? 
+[61:20] Consuelo Correa Barros: ¿Me va a ir como al saltar al contenido principal, que es este enlace que está oculto y que aparece cuando navegamos a través del teclado, o va a ir a las cookies primero? En realidad debería ir a las cookies primero, porque se supone que me está bloqueando todo y que yo no debería poder navegar en el sitio hasta aceptar o rechazar las cookies o hacer algo al respecto. Pero en este caso es como, ¿qué hago primero?
+[61:40] Consuelo Correa Barros:  Es como, me voy para acá, me voy para acá, me voy para acá, me voy o sea, como, ¿cuál es el orden de esto? Bueno, eso es lo que hay que marcar.
+[61:47] Consuelo Correa Barros:  No existe un orden correcto ni un orden incorrecto, pero hay que marcar el orden. 
+[61:52] Consuelo Correa Barros: ¿Ya? Como tiene que ser intencionado. Y acá es loco, pero cuando llegamos a los botones, debería agarrar, si es que esto tuviese un cerrar, debería agarrar el cerrar.
+[62:04] Consuelo Correa Barros:  Ah, por cierto, nunca voy a recomendar que hagan una modal, que adentro de la modal tenga tab. O sea, es como que olvídense de esa opción.
+[62:11] Consuelo Correa Barros:  Es un patrón muy inusual, no existe. Normalmente las modales lo que tienen es un botón de cerrar, tienen un título, tienen un texto y tienen botones, ¿cierto?
+[62:23] Consuelo Correa Barros:  Y ahí el orden es que se cierra primero, se acepta después, y después se rechaza o acá. O sea, como que aquí sería como de aquí a no me está mostrando el cursor.
+[62:34] Consuelo Correa Barros:  De aquí, ahora sí, para acá, para acá, para acá. Ese sería el orden.
+[62:39] Consuelo Correa Barros:  Y en el caso de las modales, el foco queda atrapado. Entonces, eso sí es algo que yo documento a nivel de sistema de diseño, comportamiento de la modal.
+[62:50] Consuelo Correa Barros:  Pero en cambio, acá, ¿cuál es el orden significativo de esto? Porque una cosa es esto que les estaba diciendo, el orden del teclado, pero otra cosa es el orden de lectura.
+[63:00] Consuelo Correa Barros:  Si yo estuviese leyendo de manera lineal, entonces aquí tenemos una card, aunque no parezca, pero tiene una imagen, tiene espérame, que no sé si ahí sí. Tiene una imagen, tiene un título, tiene un precio, tiene algo que supongo que es como medio de pago que sigue.
+[63:16] Consuelo Correa Barros:  El orden, como está, me sugiere que el lector de pantalla va a leer el texto alternativo de la imagen si es que existiera primero que el título. Eso no tiene sentido.
+[63:26] Consuelo Correa Barros:  Entonces, yo voy a tener que modificar el orden para que sea significativo para las personas usuarias, y yo debería marcar primero el título de eso, y después la imagen si es que es atingente o el precio, no sé, ahí hay que tomar decisiones. Pero no tiene sentido que vaya primero al texto alternativo de la imagen y después al título, el título primero.
+[63:48] Consuelo Correa Barros:  Entonces, y ahí vienen como otro tipo de decisiones, como, bueno, si yo debería saber el título primero, entonces no debería quizás pasarme la imagen para abajo nomás? Y generar ese mismo orden que coincida entre lo visual y la experiencia auditiva, porque esto tiene que ver con la secuencia significativa. 
+[64:09] Consuelo Correa Barros: ¿Vale? Que sea fácil de entender, que la comprensión todavía se mantenga. Porque nosotros visualmente vamos a ir al título primero, pero cuando la experiencia no es visual, ¿qué pasa?
+[64:24] Consuelo Correa Barros:  Bien. Después, hay otro criterio que habla de las características sensoriales, y lo que dice es súper simple.
+[64:29] Consuelo Correa Barros:  Dice como: "Oye, las instrucciones no pueden estar solamente dadas por el color". Entonces, aquí tenemos el clásico ejemplo, y para eso me encanta, este es un e-commerce de Chile que es Replay.
+[64:40] Consuelo Correa Barros:  Y por qué me encanta este ejemplo? Porque es bien nosotros existe un término como no técnico, digamos, que es bien corneta.
+[64:49] Consuelo Correa Barros:  Porque normalmente los colores, cuando yo hago clic en el color verde, la imagen no cambia a verde. O sea, como que ni si no funciona para nadie.
+[64:58] Consuelo Correa Barros:  No es que este como que ya no es un problema de accesibilidad propiamente tal, porque un problema es malo para todo el mundo. 
+[65:04] Consuelo Correa Barros: ¿Vale? Pero suponiendo que existiera, que este verde efectivamente me cambia la chaqueta verde, y que ese blanco me cambia, wait, me cambia el color de la chaqueta beige. Ah, fíjense que además dice impermeable, peludo.
+[65:19] Consuelo Correa Barros:  Bueno, nunca. Ah, ahí está.
+[65:23] Consuelo Correa Barros:  Cuando yo paso por encima, me dice que es índigo. 
+[65:26] Consuelo Correa Barros: ¿Qué significa índigo? No sé. Bueno, está muy oculto.
+[65:30] Consuelo Correa Barros:  Pero entonces, como lo importante es, lo que dice el criterio es que no se informa únicamente a través del color. Por ejemplo, si esto fuese un link, muchas veces dice como: "Ver política de evoluciones", y está en otro color, muy pelita, no sé, un grisecito, pero se te coló porque visualmente parecía un texto cualquiera. 
+[65:52] Consuelo Correa Barros: ¿Verdad? Entonces, como no se informa únicamente a través del color, en este caso lo que hace este creo que es Mac, fíjense que pone el color y pone el nombre del color, que en este caso es Velvet Teddy. A mí Velvet Teddy no me dice nada, pero seguramente si me maquillo, si me maquillara, yo diría: "Uh, quiero el color de la temporada, Velvet Teddy".
+[66:11] Consuelo Correa Barros:  Seguramente, no lo sé. Entonces, aquí, por ejemplo, es una locura la cantidad de colores que está.
+[66:19] Consuelo Correa Barros:  Yo me imagino que una persona que se maquilla entiende, pero lo importante es que aparece el colorcito y aparece el texto del color. Entonces, nadie se va a equivocar. 
+[66:30] Consuelo Correa Barros: ¿Por qué inventaron esto? Porque, o sea, como criterio, porque antiguamente había como un verde para continuar, rojo para rechazar o retroceder. Y si yo soy daltónico, el rojo y el verde se confunden. 
+[66:44] Consuelo Correa Barros: ¿Vale? Pero en realidad aplica a muchas cosas. Como es muy normal como explicar cosas solamente a través del color, entonces como que este es el ejemplo.
+[66:54] Consuelo Correa Barros:  Después habla de la orientación, y lo que dice, ¿se acuerdan del reflow y el responsive y qué sé yo? Entonces, dice que el contenido no restringe su visualización a una única orientación de pantalla.
+[67:06] Consuelo Correa Barros:  Entonces, básicamente es como, si es que yo diseñé así, también tengo que diseñar así, y el contenido se tiene que adaptar. 
+[67:14] Consuelo Correa Barros: ¿Ya? Eso es como la adaptación. El reflow es otro criterio.
+[67:19] Consuelo Correa Barros:  Identificar el propósito de la entrada se refiere simplemente de que cada vez que la persona va a completar un campo de formulario, tiene que saber cuál es la información que tiene que llenar. O sea, si tengo que poner mi nombre, que ahí diga el nombre.
+[67:34] Consuelo Correa Barros:  Eso no tiene ningún ejemplo. Entonces, ya ahí está como de qué se trata, para qué sirve.
+[67:40] Consuelo Correa Barros:  Y muestra cómo se ve en el código. Okay.
+[67:45] Consuelo Correa Barros:  Y después tenemos la pauta 1.4. A veces me voy muy rápido. 
+[67:48] Consuelo Correa Barros: ¿Vamos bien?
+[67:52] Consuelo Correa Barros:  A veces no sé si se pierden. 
+[67:55] Consuelo Correa Barros: ¿Sí? ¿Bien? Okay.
+[67:58] Consuelo Correa Barros:  Gracias, gracias. Ya.
+[68:00] Consuelo Correa Barros:  Entonces, el contenido distinguible es que el contenido se distinga, no puede tener un nombre más fácil. Entonces, ¿a qué se refiere con eso?
+[68:09] Consuelo Correa Barros:  Se refiere al uso del color. 
+[68:12] Consuelo Correa Barros: ¿Vale? Se refiere al contraste. El contraste, yo me imagino que ustedes saben que existe un contraste para texto normal, un contraste para texto grande, un contraste también para elementos de interfaz.
+[68:24] Consuelo Correa Barros:  Pero en el módulo 6 vamos a ver que existe un contraste para el borde del foco. Y ese borde del foco es contra ese mismo espacio antes de que estuviera el foco. 
+[68:37] Consuelo Correa Barros: ¡Quack! Afortunadamente, ese es nivel triple A.
+[68:43] Consuelo Correa Barros:  Ah, sí. No, si ahí se pone peluda la cosa.
+[68:47] Consuelo Correa Barros:  Bueno.
+[68:47] Speaker 2:  ¿Puedes repetirlo?
+[68:50] Consuelo Correa Barros:  Sí. Pero está en el módulo 6, lo expliqué. Hice el video para explicarlo, pero ya, acá.
+[68:56] Consuelo Correa Barros:  Imagínense que este 1.4.1 es un elemento interactivo, y yo navego a través del foco, y el borde, que antes era negro, ahora el borde se me va a poner súper grueso. 
+[69:10] Consuelo Correa Barros: ¿Vale? Se va a poner en dos píxeles, porque eso es lo que dice el criterio del estado, la apariencia del foco. Pero además de que tiene que agarrar un borde, y que ese borde tiene que tener un contraste hacia afuera y hacia adentro, que es de 3:1, ese borde más encima hay que compararlo con el estado por defecto, cuando no estaba en foco, el estado anterior.
+[69:41] Consuelo Correa Barros:  Para ver el espacio que ocupa ese borde, si es que también está con contraste de 3:1 respecto de ese mismo espacio que antes no tenía nada y ahora sí. Pero ese es nivel triple A.
+[69:54] Consuelo Correa Barros:  Bien. Entonces, lo que les decía antes del distinguible, tenemos las imágenes de texto, que ya las hablamos, el contraste no textual, o sea, está el contraste.
+[70:01] Consuelo Correa Barros:  Este, el 1.4.3 se refiere al texto. El no textual se refiere al contenido que no es de texto, o sea, bordes de formulario, o sea, iconos. 
+[70:10] Consuelo Correa Barros: ¿Vale? Entonces, lo bueno es que siempre es lo mismo. El contraste siempre te piden dos números: 4.5 es a 1 o 3 es a 1.
+[70:20] Consuelo Correa Barros:  Entonces, lo que dice es que si el texto es de tamaño normal, 4.5 es a 1. Si el texto es grande, entonces 3 es a 1.
+[70:28] Consuelo Correa Barros:  Si es icono, entonces 3 es a 1. Si es el borde del foco, entonces 3 es a 1.
+[70:32] Consuelo Correa Barros:  Entonces, la cosa es muy simple. Si no es texto normal, entonces siempre es 3 es a 1.
+[70:39] Consuelo Correa Barros:  El contraste que se pide es menor. 
+[70:41] Consuelo Correa Barros: ¿Vale? Vamos a ver algunos ejemplos. Entonces, esto es como que de qué se trata la pauta, y vamos a ir viendo uno por uno.
+[70:49] Consuelo Correa Barros:  Entonces, lo que yo les decía es que el color no se transmite como única forma de transmitir la información. Entonces, ¿qué pasa con un gráfico?
+[70:58] Consuelo Correa Barros:  Si es que yo, por ejemplo, quiero entender esta torta. Este gráfico de torta tiene la gracia de que me está separando el contenido.
+[71:10] Consuelo Correa Barros:  Entonces, fíjense que las personas daltónicas, el rojo y el verde lo ven igual. Yo siempre digo que la forma en que lo ven, no quiero ser como burlarme, pero mi sensación es cada vez que he usado estos emuladores de daltonismo, es que el color del café y el color del verde es como el color de la caca.
+[71:38] Consuelo Correa Barros:  Con más enfermo o menos enfermo, pero sigue siendo color caca.
+[71:45] Consuelo Correa Barros:  Sarah dice que lo ve súper saturado. Entonces, cuando ves dos colores que prácticamente son iguales, ¿cómo sé yo qué representa qué?
+[71:55] Consuelo Correa Barros:  O sea, fantástico. Acá tengo el color y tengo un texto, y además tengo la separación.
+[72:02] Consuelo Correa Barros:  Entonces, yo con ese texto, yo, por ejemplo, podría saber que esto es, no sé, el primer trimestre, enero. Da lo mismo, ¿verdad?
+[72:09] Consuelo Correa Barros:  Como tengo el texto y tengo color. En otros casos voy a necesitar además una textura.
+[72:16] Consuelo Correa Barros:  Podría ser una muy buena forma de resolver gráficos. Añadir, además del color, añadir una textura.
+[72:24] Consuelo Correa Barros:  Por ejemplo, puntitos, hachurados horizontales, verticales, diagonales, etcétera, etcétera. Y ahí nos aseguramos de que, claro, tengo un color, tengo una forma y tengo un texto que explica. 
+[72:35] Consuelo Correa Barros: ¿Vale? Entonces, ahí la pregunta siempre es como: ¿puedo comprender la información si no está el color? El tooltip, al pasar o clicar sobre, ¿qué sería un quesito?
+[72:49] Consuelo Correa Barros:  Ah, esto.
+[72:51] Speaker 2:  El trozo, perdón.
+[72:54] Consuelo Correa Barros:  La porción del gráfico. Sí, sí, es una forma, pero en general los tooltips no quedan muy accesibles. Entonces, igual es un problema, porque ¿cómo llego al tooltip con el teclado?
+[73:06] Consuelo Correa Barros:  Entonces, como que resuelves uno, pero te generas otro problema en el 2.1.1, que es teclado. Porque, ¿cómo llego al tooltip con teclado?
+[73:14] Speaker 2:  Entras en el gráfico y luego con las fechas navegarías por los y te pondría morado 23%.
+[73:25] Consuelo Correa Barros:  Tiene sentido en la medida que el desarrollador lo puede hacer. Pero suena a algo que podría funcionar. Pero el desarrollador puede hacerlo?
+[73:36] Consuelo Correa Barros:  Porque normalmente los gráficos no son interactivos, pues. Es una foto nomás.
+[73:43] Consuelo Correa Barros:  Entonces, ahí aparece lo que les comentaba antes, el texto alternativo del gráfico, que explique de qué va, y luego una descripción larga que me diga exactamente qué es lo que aparece en la información. Porque no me va a decir morado, porque morado no es lo que está representando.
+[73:57] Consuelo Correa Barros:  Morado representa.
+[73:59] Speaker 2:  Morado ha sido como ejemplo. O sea, será, no sé, es que no veo lo que pone.
+[74:03] Consuelo Correa Barros:  Sí, no importa. No importa. Digamos que es la gente que va al cloud y los países que representan. 32% desde España. 
+[74:11] Consuelo Correa Barros: ¿Vale? Entonces, ahí lo que importa no es el color, lo que importa sería España, que equivale a un 32% del público, por ejemplo. 
+[74:19] Consuelo Correa Barros: ¿Vale? Entonces, bueno, nada, aquí siempre les estamos poniendo el criterio. Y aquí hay otro ejemplo.
+[74:29] Consuelo Correa Barros:  Entonces, aquí dice como: ¿cuál es? Esto suponiendo que fuese una prueba, una prueba matemática que me pregunte sobre ángulos.
+[74:38] Consuelo Correa Barros:  Entonces, claro, yo podría decir: "Oye, es el verde", pero o sea, el verde uno. Entonces, tengo la forma y tengo un número. 
+[74:44] Consuelo Correa Barros: ¿Vale?
+[74:48] Consuelo Correa Barros:  Entonces, normalmente, otra cosa que aplica al uso del color, los estados de formulario, el campo de error, muchas veces solamente lo marcan con un borde rojo. Y si yo no veo el borde rojo, no sé dónde está el error.
+[75:06] Consuelo Correa Barros:  Y si el borde rojo no está más grueso, tampoco me está diferenciando, porque quizás, por ejemplo, o sea, como ya, digamos que tengo el borde del campo y que pasó a rojo, pero conservó el grosor.
+[75:22] Consuelo Correa Barros:  Entonces, se está comunicando algo solamente a través del color. Pero si en cambio el grosor cambió, ahí ya es otra cosa, porque ya tengo el color y tengo el grosor.
+[75:31] Consuelo Correa Barros:  Pero todavía no sé cómo recuperarme del error, que ese es otro criterio. Entonces, lo que yo les decía antes, como muchas veces un criterio nos va a resolver un problema que es de diseño, y otro criterio nos viene a complementar para que no se nos pasen cositas.
+[75:46] Consuelo Correa Barros:  Entonces, el error va a venir como desde otro criterio. Entonces, ¿cómo sería en un campo de formulario, además de marcar el rojo con la línea más gruesa?
+[75:55] Consuelo Correa Barros:  Bueno, un icono que diga: "Aquí hay un error", y el texto que me explique cómo recuperarme del error. 
+[76:02] Consuelo Correa Barros: ¿Vale? Entonces, esos son como errores comunes de temas de color. Después, lo que dice el control de audio es que si un audio, que esto es lo mismo que pasa con el autoplay, pero si un audio se reproduce automáticamente después de tres, o sea, más de tres segundos, entonces tiene que poder pausarse o detenerse. 
+[76:22] Consuelo Correa Barros: ¿Vale? Ese es el 1.4.2. Después, el contraste mínimo, que era lo que yo les decía, que va a existir el contraste para 4.5 es a 1 para texto grande y 3 es a 1 para texto incidental o, o sea, perdón, texto grande 3 es a 1, texto normal 4 a 5.
+[76:42] Consuelo Correa Barros:  Entonces, normalmente la gente reclama por los logotipos. Muchas veces he visto ese: "Ay, que dices que tu página es accesible, pero el logotipo no es accesible", y no sé qué bla, bla, bla, bla, bla.
+[76:53] Consuelo Correa Barros:  Y como: "Sí, Marta, pero es que el texto del logotipo es una excepción". Porque es como, ¿cómo cambias la imagen de marca de algo que quizás ya está mega instaurado?
+[77:05] Consuelo Correa Barros:  Y quizás sí habría que cambiarlo, pero bueno, es una excepción. Y la WCAG está llena de excepciones.
+[77:11] Consuelo Correa Barros:  Entonces, cuando entendemos las excepciones, entendemos lo que sí. Por eso es como que yo, al menos mi acercamiento a la WCAG fue al revés, desde la excepción para el otro lado.
+[77:21] Consuelo Correa Barros:  Entonces, aquí, por ejemplo, tenemos un problema de contraste. 
+[77:24] Consuelo Correa Barros: ¿Vale? Que dice como: "Déjanos tu número y llámanos". Pero yo no sé dónde, o sea, de partida, apenas y puedo ver que los campos con asterisco son obligatorios.
+[77:34] Consuelo Correa Barros:  Tampoco veo el borde y no veo el texto. Entonces, ni siquiera sé dónde tengo que hacer clic para adjuntarle. 
+[77:40] Consuelo Correa Barros: ¿Vale? Ese borde del texto es el que tiene que tener, o sea, el borde del campo del input, en este caso, es el que tiene que tener contraste 3 es a 1. Este texto, que es el placeholder, no es un texto incidental, no es un texto como decorativo, es importante.
+[77:59] Consuelo Correa Barros:  Entonces, debería tener un contraste de 4.5 es a 1. Pero ahí empiezan como que mil cosas, porque el placeholder a veces ni siquiera lo usamos.
+[78:10] Consuelo Correa Barros:  Y no castigamos a nadie por no usarlo, pero sí los castigamos cuando lo usan. Entonces, bueno, eso es como el parte como de la falta de criterio que es.
+[78:21] Consuelo Correa Barros:  Y aquí explica cómo funcionan los contrastes. 
+[78:24] Consuelo Correa Barros: ¿Vale? Como, y también dice que es un texto grande, que es un texto normal, y cuál es el tamaño. Porque en la WCAG habla de puntos, pero un punto no es un píxel. 18 puntos equivale a 24 píxeles. 
+[78:37] Consuelo Correa Barros: ¿Ya? Entonces, si tiene más de 24 píxeles el texto, es grande. Vamos a considerar que es un texto grande y que necesita un contraste de 3 es a 1.
+[78:46] Consuelo Correa Barros:  Pero también podría ser que de 19 píxeles en bold hacia arriba. Si está en bold, también lo consideramos grande, porque obviamente mejora la visibilidad del texto. 
+[78:56] Consuelo Correa Barros: ¿Ya? Entonces, bueno, ahí está la y hay herramientas también para explicar cómo se mide el contraste. Entonces, aquí, voy a compartir esta.
+[79:07] Consuelo Correa Barros:  Fíjense que aquí ustedes podrían como que colocar el color directo. Voy a inventar cualquier número.
+[79:14] Consuelo Correa Barros:  Ah, me dice que no existe.
+[79:19] Consuelo Correa Barros:  Digamos que es ese. Justo ese es mi color.
+[79:24] Consuelo Correa Barros:  Entonces, este, el de este, el foreground sería el color del texto, y el background, el color del fondo. Me muestra cómo queda aplicado con el colorcito y me dice: "Mira, aprueba para AA, falla para AAA".
+[79:39] Consuelo Correa Barros:  Porque en el caso de AAA, el número que pide es muchísimo más alto. Pide 4.5 es a 1 para el texto grande, y 7 es a 1 para el texto normal.
+[79:50] Consuelo Correa Barros:  Entonces, aquí me dice como: "Mira, falla para AAA, pero AA aprueba para texto normal, para texto grande, para elementos de interfaz". Y me muestra cuáles son los elementos de la interfaz: el bordecito del input y la estrellita. 
+[80:04] Consuelo Correa Barros: ¿Vale? Entonces, esta es una súper buena herramienta cuando estamos recién escogiendo colores, pero también lo tenemos dentro de Start, que es un complemento de figma. Y hay más.
+[80:17] Consuelo Correa Barros:  Acá les hemos ido dejando algunos. Hay más. 
+[80:22] Consuelo Correa Barros: ¿Vale? 
+[80:25] Consuelo Correa Barros: ¿Es obligatorio que los inputs tengan borde? Sí. Sí, Marta, es obligatorio.
+[80:30] Consuelo Correa Barros:  Los inputs tienen que tener borde. No necesariamente el borde completo, podría ser simplemente la línea de abajo, pero la persona tiene que saber dónde está el elemento que tiene que hacerle clic.
+[80:44] Consuelo Correa Barros:  Yo te diría que sí, que siempre, porque si no, ¿cómo sé dónde? Sobre todo, pensemos en una persona con baja una persona con baja visión y con un tema cognitivo además, porque las discapacidades pueden ser múltiples y se sobreponen.
+[80:56] Consuelo Correa Barros:  Entonces, sí. Y además te mejora en la experiencia y los sitios performance mucho mejor.
+[81:06] Consuelo Correa Barros:  Los botones son un poco distintos, porque en los botones tenemos el primario, el secundario y el ghost, ¿cierto? Como el ghost siempre está presente junto a un secundario o un primario.
+[81:18] Consuelo Correa Barros:  Y además, cuando el botón es ghost, la palabra está subrayada. Entonces, el botón, como que el que tenga el borde o no, es como que lo único que me ayuda es el tamaño, pero el tamaño ya es de 24 por 24.
+[81:30] Consuelo Correa Barros:  Entonces, bueno, ahí es como otro criterio. Ah, el foco del teclado, sí.
+[81:34] Consuelo Correa Barros:  El foco del teclado siempre debe existir para todo. Todos los elementos que sean interactivos tienen que tener un foco del teclado, y ese foco debería tener dos píxeles de ancho.
+[81:46] Consuelo Correa Barros:  Para que cumpla AAA. Bien.
+[81:51] Consuelo Correa Barros:  Entonces, cambio del tamaño del texto, lo que dice es que las personas tienen que poder aumentar la navegación en un 200%. Vamos a compartir acá.
+[82:04] Consuelo Correa Barros:  Y que no se pierda el contenido. 
+[82:06] Consuelo Correa Barros: ¿Qué es 200%? Ahí, comando más. Fíjense que no sé si no se ve, pero arriba me dice el valor.
+[82:15] Consuelo Correa Barros:  Y ahí voy en 125%, 150, 175, 200. Y el contenido lo que hizo fue adaptarse. 
+[82:24] Consuelo Correa Barros: ¿Ya? Entonces, lo importante es que además, cuando ustedes hagan la prueba, el menú también debería revisarse y que no se pierda el contenido, que nada quede solapado detrás de otra cosa, como que no se nos oculte. 
+[82:38] Consuelo Correa Barros: ¿Vale? A ver, voy a ver qué preguntas hay, porque me escriben en el chat, pero yo estoy a mil pantallas. Entonces, déjeme checar. 
+[82:47] Consuelo Correa Barros: ¿Qué dice? ¿Los checkboxes también tienen foco?
+[82:52] Consuelo Correa Barros:  Si tienen fondo los inputs, ¿podrían no tener borde? Sí.
+[82:56] Consuelo Correa Barros:  Si el fondo tuviese, si el input tuviese fondo, sí. Siempre que ese fondo tenga una diferencia de contraste contra el otro fondo de 3 es a 1, y con el texto interior del botón, qué sé yo, de 4.5 es a 1.
+[83:16] Consuelo Correa Barros:  Se puede. Se puede, pero tienes que generar más relaciones de contraste para esas mediciones.
+[83:24] Consuelo Correa Barros:  De que se puede, se puede.
+[83:27] Consuelo Correa Barros:  Bien. Vamos a dónde vamos.
+[83:29] Consuelo Correa Barros:  Ya, entonces, aquí les dejamos las técnicas para hacer zoom. Con control command más la tecla más, aumentan.
+[83:37] Consuelo Correa Barros:  Con control command más la tecla menos, lo reducen. Y control command más la tecla cero, vuelve a su tamaño original. 
+[83:44] Consuelo Correa Barros: ¿Vale? Entonces, ahí está como las prácticas de qué es lo que se verifica con el zoom, que el contenido no se pierda, que no se pierda la funcionalidad, que no se pierda el significado, básicamente que no exista doble explore, explore horizontal y vertical. Y por ahí alguien preguntaba: "Pero, ¿qué pasa con estos componentes que son así, verdad?
+[84:05] Consuelo Correa Barros:  Los carruseles.
+[84:09] Consuelo Correa Barros:  Ahí si es que como que existe como la excepción, si es que el patrón acepta el gesto y acepta que existan como botones y qué sé yo. Bueno, criterio.
+[84:21] Consuelo Correa Barros:  Todo tiene criterio. O sea, es como si ya lo han visto implementado en Uber, y Uber que está en todo el mundo y qué sé yo, y funciona.
+[84:28] Consuelo Correa Barros:  Entonces, bueno. Pero Uber lo utiliza con esto que les digo yo.
+[84:34] Consuelo Correa Barros:  O sea, como que acepta, y ese es otro criterio distinto del zoom. Acepta el gesto, pero existe una alternativa para el gesto.
+[84:41] Consuelo Correa Barros:  Pasa lo mismo, piensen en un mapa de Google. El mapa de Google, yo desde mi celular puedo hacerle así y me va a hacer un zoom, o así me lo va a quitar, ¿cierto?
+[84:52] Consuelo Correa Barros:  Pero igual tengo el botón que aumenta y reduce el zoom. Eso es súper importante.
+[84:58] Consuelo Correa Barros:  Porque en el fondo no puede depender algo solamente del gesto. Entonces, una cosa es que no se pierda la información, pero otra es que no dependa exclusivamente de un gesto.
+[85:06] Consuelo Correa Barros:  Porque, ¿qué pasa si yo no tengo la motricidad fina? Ya, las imágenes de texto ya lo hablamos.
+[85:14] Consuelo Correa Barros:  Y el reflow, el reflow, acá lo que dice es que tenemos que evitar esto del desplazamiento en dos sentidos, vertical y horizontal. Pero se entiende que en una tabla aparezca el vertical, y se entiende también que un carrusel quede contenido hacia el otro lado, ¿verdad?
+[85:35] Consuelo Correa Barros:  Y que yo se navega de esta forma. 
+[85:38] Consuelo Correa Barros: ¿Vale? Es todo lo demás. O sea, es como que se me quedó un movimiento, como que un pequeño baile en la programación.
+[85:46] Consuelo Correa Barros:  Entonces, ahí hay un problema con el reflow. Esto también yo se lo había explicado, pero en el fondo es como el contenido que nos dé texto tiene que tener contraste de 3 es a 1, y ese es otro criterio, que es el 1.4.11.
+[86:02] Consuelo Correa Barros:  La medición de contraste, bueno, ya lo hablamos, ¿cierto? Pero encuentren su sitio favorito y lo pueden medir.
+[86:11] Consuelo Correa Barros:  Miren, voy a compartir esta pestaña. Voy a volver a hacer comando cero.
+[86:18] Consuelo Correa Barros:  Hay varias formas de medir el contraste, pero si ustedes quisieran auditar algo, existe este complemento que se llama Wave. Y aquí en Wave, lo que uno hace es como que ocultar cositas.
+[86:29] Consuelo Correa Barros:  Bueno, fíjense que aquí me salía que había cero error de contraste. Entonces, no había nada que en realidad que les pudiera mostrar.
+[86:35] Consuelo Correa Barros:  Pero busquemos un sitio cualquiera. A ver, ¿qué podría ser?
+[86:40] Consuelo Correa Barros:  Banco. Uno que falle siempre, el Banco Itaú.
+[86:47] Consuelo Correa Barros:  Disculpando a mis amigos presentes del Banco Itaú, que aquí no creo que existan. Pero miren.
+[86:54] Consuelo Correa Barros:  El Itaú siempre tiene ejemplos maravillosos. Aquí, miren.
+[86:58] Consuelo Correa Barros:  El borde podría pasar, pero eso es mostrar. Nunca pasa, ¿verdad?
+[87:02] Consuelo Correa Barros:  Y caramba. Entonces, aquí tenemos cuatro errores de contraste.
+[87:11] Consuelo Correa Barros:  Vamos a ocultar estos otros errores para que sea más fácil verlo.
+[87:19] Consuelo Correa Barros:  Okay. Y justamente lo que me está mostrando es este que dice "mostrar". 
+[87:23] Consuelo Correa Barros: ¿Ya? Y aquí hay un criterio para el contraste. Dice: "Tiene que existir contraste para todos los elementos de 4.5, 3 es a 1, bla, bla, bla, excepto que el elemento esté inhabilitado".
+[87:41] Consuelo Correa Barros:  Entonces, ¿por qué no me está mostrando como un error de contraste ese botón "ingresar"? Porque para que se active, yo primero le tengo que meter datos.
+[87:54] Consuelo Correa Barros:  Bueno, si yo fuese cliente del banco y hubiese metido mi correo, o sea, mi DNI correctamente, más mi contraseña correcta, este botón se me hubiese activado. Entonces, ya deja de ser una excepción. 
+[88:06] Consuelo Correa Barros: ¿Vale? Pero el "mostrar" es para mostrar mi contraseña, cualquier cosa. Ocultar.
+[88:12] Consuelo Correa Barros:  Entonces, ese contraste es más que insuficiente. 
+[88:15] Consuelo Correa Barros: ¿Vale? Y si se fijan, el contraste que yo les decía es este. A ver.
+[88:25] Consuelo Correa Barros:  Ah. Quiero sacar el iconito.
+[88:31] Consuelo Correa Barros:  Bueno, pero aquí. Ahí me muestra que ese es de 3.05 es a 1.
+[88:39] Consuelo Correa Barros:  Si el texto estuviera en bold y fuese de 14 puntos, entonces ya es considerado texto grande. Pero como no es bold y el tamaño es considerado texto normal, entonces necesita contraste de 4.5 es a 1.
+[88:58] Consuelo Correa Barros:  Okay. 
+[88:59] Consuelo Correa Barros: ¿Se entendió? Bien.
+[89:06] Consuelo Correa Barros:  Entonces, ah. Que sea operable.
+[89:11] Consuelo Correa Barros:  Este es fantástico, porque básicamente lo que hace es hablar del teclado. Entonces, aquí ya nos podemos ir más rapidito.
+[89:15] Consuelo Correa Barros:  Déjeme checar la hora.
+[89:19] Consuelo Correa Barros:  Ah, y aquí les esto es muy lateral, ¿verdad? Pero era para explicar cómo funciona el árbol de accesibilidad.
+[89:27] Consuelo Correa Barros:  En el fondo es como existe el HTML, que es todo lo que se construye, y el árbol de accesibilidad es esto que me entrega la semántica específicamente. Es como me va a decir: "Esto es un botón, esto es un enlace, esto es un encabezado", qué sé yo.
+[89:41] Consuelo Correa Barros:  Y a través de eso, el teclado en el fondo va a reconocer, obviamente, ciertos atajos. 
+[89:48] Consuelo Correa Barros: ¿Vale?
+[89:51] Consuelo Correa Barros:  Entonces, yo lo que les había comentado antes es que las tecnologías de apoyo confían en el lector de pantalla y confían en el teclado. De ahí que el teclado sea tan relevante.
+[90:04] Consuelo Correa Barros:  Porque todo lo demás, por ejemplo, sorber, soplar, navegar con la vista, navegar con el pensamiento, con la lengua, con los pulsadores gigantes, qué sé yo, todo eso confía en el teclado. Entonces, no es que nosotros como no es que los testers tengan que probar todo esto. 
+[90:24] Consuelo Correa Barros: ¿De a dónde? Prueba en teclado, prueba en lector de pantalla, porque todas las otras tecnologías que están entre medio quedan como abarcadas, como que quedaran acunadas. 
+[90:33] Consuelo Correa Barros: ¿Vale? Entonces, que sea operable. Recién nos pasamos al principio 2.4.
+[90:41] Consuelo Correa Barros:  Y aquí es súper fácil, porque lo que dice es que las pautas como: "Oye, toda la funcionalidad tiene que estar disponible para el uso del teclado, tiene que existir un tiempo suficiente, no tenemos que provocar epilepsia". Bueno, no dice epilepsia, pero habla de ataques, espasmos, convulsiones.
+[90:56] Consuelo Correa Barros:  Eso básicamente es como la epilepsia. Tenemos que ayudar a navegar y encontrar el contenido.
+[91:00] Consuelo Correa Barros:  O sea, es como que: "Oye, dame una estructura y tienen que facilitar el uso de las entradas". Entonces, estas pautas de los principios, lo que yo les comentaba antes, como mi objetivo.
+[91:11] Consuelo Correa Barros:  Y después el criterio del que yo puedo verificar. Entonces, que el teclado sea accesible, tengo el criterio 2.1.1, que en el fondo lo que dice es: "Si puedo navegar con el mouse, entonces tengo que poder hacerlo por teclado".
+[91:25] Consuelo Correa Barros:  Eso es lo que dice. 
+[91:26] Consuelo Correa Barros: ¿Vale? Aquí se los muestro. Entonces, ahí está el nosotros todo se los dejamos con vinculito.
+[91:33] Consuelo Correa Barros:  Nos esmeramos un montón para que tengan la información. Pero es: "Si el elemento de la interfaz lo puedo usar con mouse, entonces lo tengo que usar por teclado".
+[91:44] Consuelo Correa Barros:  Fin. 
+[91:45] Consuelo Correa Barros: ¿Vale? Ahora, el problema es que muchas veces nosotros pensamos que el teclado solamente funciona con la tecla tab, y hay cosas que decimos: "Ah, no funciona". Bueno, ahí vamos a tener que aprender a navegar por teclado. 
+[91:56] Consuelo Correa Barros: ¿Vale?
+[91:59] Consuelo Correa Barros:  Entonces, bueno, aquí están todas las explicaciones, pero dice como: "Una página accesible, si la puede operar alguien que solo usa el teclado, los usuarios de lector de pantalla usan teclado, los usuarios de trackpad, etcétera, etcétera, todo funciona a través del teclado". Y aquí vienen las teclas básicas, porque les decía como a veces nosotros decimos como: "Ah, mira, esto que es de arrastre no funciona con el teclado, pero es porque no sabemos cómo funciona". 
+[92:24] Consuelo Correa Barros: ¿Vale? Entonces, estas son las teclas que vamos a usar. Tab, mayúscula para retroceder, o shift tab.
+[92:32] Consuelo Correa Barros:  O sea, perdón. Tab mueve un poco hacia adelante, y ahí dice mayúscula, pero en el caso de Mac es shift tab para atrás.
+[92:39] Consuelo Correa Barros:  Las flechitas se mueven entre elementos de lista que son interactivos, menús, pestañas, qué sé yo. La tecla espacio y la tecla Enter activa, y la tecla Escape cierra, por ejemplo, modales. 
+[92:52] Consuelo Correa Barros: ¿Ya? Entonces, claro, anota todo lo que necesites, pero después tú sabes que esto va a quedar adjunto a la sesión. 
+[92:59] Consuelo Correa Barros: ¿Vale? Yo también lo escribo todo porque así me quedo tranquila, y después no lo leo nunca más, pero así me queda guardado, almacenado en alguna parte de mi cabeza. Bien.
+[93:11] Consuelo Correa Barros:  Entonces, aquí el plan era que ustedes en algún momento traten de navegar por teclado. Mi recomendación es que naveguen la misma página de WIAR del curso, en la parte donde hay actividades.
+[93:23] Consuelo Correa Barros:  A ver si les resulta. Nosotros como que le hemos puesto harto para que funcione el teclado, así es que debería es como un buen lugar para aprender cómo se hace. 
+[93:31] Consuelo Correa Barros: ¿Vale? Y la trampa del teclado lo que dice es eso. Muchas gracias por el feedback, Esthi.
+[93:40] Consuelo Correa Barros:  Entonces, si el foco se puede mover a un componente con el teclado, entonces también lo tengo que poder sacar de ahí con el teclado. Entonces, por ejemplo, si yo a través del teclado abrí una modal, entonces con el teclado tengo que poder cerrar la modal.
+[93:54] Consuelo Correa Barros:  Pero además, el caso de la modal era lo que yo les comentaba de que tiene que quedar atrapado el foco. Entonces, cada vez que se abra una modal, el teclado se atrapa en mi modal y no debería poder estar navegando por detrás de la modal. 
+[94:12] Consuelo Correa Barros: ¿Vale? Entonces, y se acuerdan que yo les había dicho como que: "Oye, la modal tiene un orden". Bueno, y el orden sería: el botón de cerrar, ahí dice 1. 
+[94:24] Consuelo Correa Barros: ¿Ven? Que también funciona con la tecla Escape. 1 para cerrar. El 2, que es el que confirma.
+[94:31] Consuelo Correa Barros:  El 3, que cancela. Y después se queda ahí dando la vuelta.
+[94:34] Consuelo Correa Barros:  1, 2, 3. 1, 2, 3.
+[94:35] Consuelo Correa Barros:  1, 2, 3. 1, 2, 3.
+[94:36] Consuelo Correa Barros:  Eternamente. 
+[94:37] Consuelo Correa Barros: ¿Cómo va a ser? 1, 2, 3. 1, 2, 3.
+[94:39] Consuelo Correa Barros:  Y las modales, aproveché de dejar al tiro como el componente documentado. El título de la modal es un H1. 
+[94:46] Consuelo Correa Barros: ¿Y qué hacemos con la imagen? Porque aquí, fíjense que es un muestrario de cosas. La imagen de cerrar debería tener un texto alternativo.
+[94:55] Consuelo Correa Barros:  Entonces, ¿cómo se hace eso? Con un área label que diga "cerrar modal".
+[95:00] Consuelo Correa Barros:  Y así más o menos documentaríamos una modal. Pues les puede quedar mucho más bonita, por supuesto.
+[95:04] Consuelo Correa Barros:  No me cabe la menor duda. Yo como que documento bien, pero no diseño tan bonito.
+[95:13] Consuelo Correa Barros:  Lo que dice el 2.1.4 es como yo lo interpreto de esta forma. Es como: "No cambies nada, no personalices nada, deja que las cosas sigan funcionando como funcionan normalmente y listo". 
+[95:25] Consuelo Correa Barros: ¿Ya? Porque lo que dice es que si creaste un atajo de carácter nuevo, te tienes que preocupar que ese atajo no me bloquee otro atajo que ya existía de antes por defecto. Eso dice.
+[95:36] Consuelo Correa Barros:  Entonces, básicamente es como: "Desarrollo, no reasigne nada, no invente la escena". No inventar la rueda.
+[95:42] Consuelo Correa Barros:  Al final, la Wicac todo el rato se trata de no inventar la rueda, no generar cosas customizadas o evitarlas al máximo. Este del tiempo suficiente, que es el que habla de tiempo ajustable.
+[95:55] Consuelo Correa Barros:  Imagínense que están en una aplicación del banco y llevan, no sé, les llamó su mamá por teléfono, y la mamá les empezó a contar de su abuela. Esto, cualquier semejanza con mi vida diaria, por favor, es a propósito.
+[96:10] Consuelo Correa Barros:  O sea, como que esto me pasa a mí todo el tiempo. Mi madre me llama para contarme que mi abuela hizo una tontería.
+[96:15] Consuelo Correa Barros:  Entonces, yo estaba haciendo un algo y cuando vuelvo, se me cerró la sesión. Y no tuve la oportunidad siquiera.
+[96:24] Consuelo Correa Barros:  Y encima había estaba llenando un formulario y el formulario no se guardó. Esto es lo que me pasa todo el rato.
+[96:30] Consuelo Correa Barros:  Entonces, lo que dice el tiempo ajustable es que tiene que existir un tiempo que sea realmente razonable y que la persona tiene que poder extender el tiempo. Entonces, no sé si se han fijado que Netflix, por ejemplo, cuando están viendo tele a las 5 de la mañana, les pregunta: "¿Siguen ahí?".
+[96:45] Consuelo Correa Barros:  Y si uno no le dice nada, entonces te lo apaga. Eso es diseño universal.
+[96:50] Consuelo Correa Barros:  Pero bueno. Acá lo que dice es, respecto al tiempo ajustable: "Para cada límite de tiempo se cumple al menos una.
+[96:58] Consuelo Correa Barros:  Se puede desactivar antes de encontrarlo". 
+[97:01] Consuelo Correa Barros: ¿Ya? O sea, como que yo dentro de mi configuración pueda ajustar y decir: "No quiero que te cerréis solo". Pero en un banco, por ejemplo, que hay un tema legal de cuidado de la información y qué sé yo, no se puede hacer eso.
+[97:13] Consuelo Correa Barros:  Entonces, ¿cuál es la alternativa? Se puede ampliar al menos diez veces.
+[97:16] Consuelo Correa Barros:  O sea, que yo diga: "Sí, sigo aquí. Sí, sigo aquí.
+[97:19] Consuelo Correa Barros:  Sí, sigo aquí. Sí, sigo aquí". 
+[97:22] Consuelo Correa Barros: ¿Vale? Y que se pueda extender. Que yo de alguna manera en mi configuración pueda decir: "Sabes qué?
+[97:27] Consuelo Correa Barros:  No me preguntes cada 14 minutos, pregúntame cada 24 minutos". No tengo idea.
+[97:32] Consuelo Correa Barros:  Entonces, eso es lo que dice. Se refiere como al tiempo ajustable. 
+[97:35] Consuelo Correa Barros: ¿Vale? Como no te cerréis solo. Y las excepciones están aquí.
+[97:42] Consuelo Correa Barros:  Por ejemplo, lógico, ¿por qué extendería el tiempo de una subasta? No sé si ustedes compran cosas que se subasten, pero el arte.
+[97:52] Consuelo Correa Barros:  Yo vivo en subastas de arte. Y obviamente que si se cierra el mejor postor en 24 horas, el tiempo no se puede ajustar.
+[98:00] Consuelo Correa Barros:  O sea, son 24 horas y son 24 horas. Es un tiempo real. 
+[98:03] Consuelo Correa Barros: ¿Ya? Entonces, el plazo es esencial, no se puede invalidar y qué sé yo. Y la otra excepción es como: "Sabes qué?
+[98:10] Consuelo Correa Barros:  El límite son 20 horas". Entonces, ¿por qué los chats de los bancos, cuando uno habla con una inteligencia artificial y luego te pasa un ejecutivo y qué sé yo, por qué después de 20 horas de inactividad se cierra mi ticket?
+[98:25] Consuelo Correa Barros:  Por esto. Porque 20 horas es un tiempo más que suficiente. 
+[98:30] Consuelo Correa Barros: ¿Vale? Pero después el ticket se cerró solo. Acuérdense que las Wicac aplican a un montón de cosas y no solamente a la web y la app. 
+[98:39] Consuelo Correa Barros: ¿Vale? Y ahí está el ejemplo de la sesión que se cierra solo. Y después hay otro criterio que lo que dice, y yo creo que vamos a avanzar muchísimo más, pero vamos a tratar de pasar todo esto.
+[98:52] Consuelo Correa Barros:  Dice: "Cada vez que hay un elemento que parte solo, que se mueve solo, y que principalmente estamos hablando de carruseles, entonces si se mueve solo y no para, entonces yo debería poder detener, ocultar, actualizar y qué sé yo". Y ese es el 2.2.2. 
+[99:10] Consuelo Correa Barros: ¿Cuál es el problema? Que lo que dice es que cuando algo se mueve solo genera distracción. Pero yo siento que el daño ya se hizo.
+[99:17] Consuelo Correa Barros:  Entonces, como que mi criterio siempre es: si es que hay algo que se mueve solo, es mejor que la persona lo mueva a pedido o incluso evitar el uso de carrusel. Si voy a tener tres cosas, entonces diseñemos algo que se vean las tres cosas al mismo tiempo.
+[99:36] Consuelo Correa Barros:  Pero aquí hay algo que se mueve solo. Aquí hay una hora, porque seguramente era como un Black Friday o algo así, entonces tenía un contador que se iba actualizando y se movía y se movía y se movía.
+[99:49] Consuelo Correa Barros:  Pasa lo mismo a veces como con las divisas, qué sé yo, el cambio del dólar. En Chile está lleno como de monedas, entonces de repente hay cosas que se mueven permanentemente y te están como que quitando tu foco de atención.
+[100:02] Consuelo Correa Barros:  Entonces, ahí lo que hay que hacer es que yo lo pueda apagar. Que yo pueda, quizás a través de la configuración, decir: "Ay, qué hermano, no quiero ver esta configuración".
+[100:13] Consuelo Correa Barros:  Y siempre existe la excepción que sea esencial y qué sé yo. Y este, el 2.4.11, habla del foco que no se oculte.
+[100:20] Consuelo Correa Barros:  Entonces, dice que cuando un componente de la interfaz recibe el foco de teclado, no se oculta completamente por contenido creado por el autor. O sea, como que no me oculto otras cosas.
+[100:30] Consuelo Correa Barros:  Entonces, por ejemplo, aquí había un ejemplo chistoso. Esto es Amazon.
+[100:38] Consuelo Correa Barros:  Cuando yo entro a Amazon, al buscador, me oscurece todo para que yo me concentre en el buscador. Entonces, si yo y esto es como que para que se hagan la idea.
+[100:53] Consuelo Correa Barros:  Si yo saliera del buscador y siguiera todo oscurecido, entonces ese sería un error que busca este criterio. Rara vez pasa que yo active algo por teclado y después salga de ahí y eso siga activo y no me deje seguir viendo. 
+[101:11] Consuelo Correa Barros: ¿Dónde podría pasar? En un menú.
+[101:15] Consuelo Correa Barros:  Pero acuérdense que hay un criterio que dice como que en el fondo que si yo pude abrir algo con el teclado, tengo que poder cerrarlo. Entonces, si cumplimos con ese, esto no debería pasar nunca. 
+[101:24] Consuelo Correa Barros: ¿Vale? Es algo muy extraño. Como que hay algunos criterios que existen que uno dice: "Pero por qué existe esto?".
+[101:35] Consuelo Correa Barros:  Bien. Después viene esta pauta de la modalidad de entrada que dice como facilitar el manejo de funciones a través de diversas entradas más allá del teclado, y habla de gestos, de cancelación de puntero, etiqueta el nombre, qué sé yo.
+[101:45] Consuelo Correa Barros:  Esto en general es muy fome, no hay mucho que considerar desde el diseño. Pero dice: "Toda funcionalidad que use gestos multipuntos o basados en trayectoria se puede operar con un solo puntero sin gesto de trayectoria, salvo que sea esencial".
+[102:06] Consuelo Correa Barros:  Y como: "Okay. Esto". 
+[102:10] Consuelo Correa Barros: ¿Ya? Esto es un gesto. Entonces, ¿existe el gesto o existe la alternativa del gesto?
+[102:20] Consuelo Correa Barros:  Listo. Resolvimos.
+[102:22] Consuelo Correa Barros:  Estamos. 
+[102:23] Consuelo Correa Barros: ¿Vale? Así se resuelve.
+[102:28] Consuelo Correa Barros:  Esthi, dígame.
+[102:30] Speaker 2:  El otro día estuve haciendo el curso vuestro de voiceover para el móvil.
+[102:38] Consuelo Correa Barros:  ¿Ya?
+[102:39] Speaker 2:  Y hay un gesto que es como la segunda imagen, que es como girar, ¿no? Como para cambiar entre si quieres pasar entre palabras, frases.
+[102:50] Consuelo Correa Barros:  Sí.
+[102:51] Speaker 2:  Antes. Si, por ejemplo, hubiese una persona ciega con movilidad reducida, ¿qué opción tiene para hacer eso?
+[102:59] Speaker 2:  Igual es muy concreto. Perdón.
+[103:03] Consuelo Correa Barros:  No, no, no, no, no. Está súper bien. Lo que pasa es que como ahí estamos hablando del software y no de la web o de una app, es otro estándar.
+[103:17] Speaker 2:  Vale. Igual no tienen eso.
+[103:19] Consuelo Correa Barros:  Claro, claro. O sea, existe un estándar que es para software y ahí yo no conozco ese estándar. Entonces, no sé la respuesta.
+[103:26] Consuelo Correa Barros:  Porque el problema no está en la web, está en la tecnología asistiva. 
+[103:30] Consuelo Correa Barros: ¿Me cachas? Entonces, para las tecnologías asistivas, me parece que era ¿se acuerda que la vez pasada se los dije que estaba ATAC, está UAC?
+[103:41] Speaker 2:  Sí.
+[103:41] Consuelo Correa Barros:  Bueno, algunos de esos. Entonces, es otro estándar. Y ahí ya no sé.
+[103:45] Consuelo Correa Barros:  No tengo la respuesta porque es otro estándar sobre el cual yo no trabajo.
+[103:50] Speaker 2:  Vale, vale.
+[103:51] Consuelo Correa Barros:  No te quiero mentir, porque como que para mí sería lo más fácil decir: "Ah, inventarte algo". Pero para qué haría algo así? No tengo idea.
+[104:00] Speaker 2:  Vale. No, no te preocupes. Lo buscaré.
+[104:02] Speaker 2:  Es que me acaba de surgir la duda. Gracias.
+[104:04] Consuelo Correa Barros:  Es una súper buena duda. Entonces, miren, si existen gestos complejos, entonces tiene que existir una alternativa que sea accesible a ese gesto. En este caso, los mapas es un buen ejemplo.
+[104:15] Consuelo Correa Barros:  Esto es como de arrastrar. Por ejemplo, si yo tengo que generar un lazo para parear conceptos, normalmente la alternativa es que yo hago clic en un concepto, hago clic en el otro concepto y genero el match.
+[104:31] Consuelo Correa Barros:  Listo. 
+[104:31] Consuelo Correa Barros: ¿Ven? Existe la alternativa. Entonces, ya no tengo que hacer arrastre.
+[104:37] Consuelo Correa Barros:  Aquí está. Esto es lo que yo les decía como a nivel de diseño.
+[104:41] Consuelo Correa Barros:  Los carruseles de imágenes. Tengo este gesto.
+[104:46] Consuelo Correa Barros:  Vale, pero no tengo la alternativa al gesto. O sea, podría navegar por teclado.
+[104:53] Consuelo Correa Barros:  Ya, pero y si no estoy navegando por teclado, ¿cuál es la alternativa al gesto que no sea teclado? 
+[104:57] Consuelo Correa Barros: ¿Cómo lo hago? Entonces, acá lo que debería pasar ah, vale, está aquí mismo. Es esta flecha que me lleva a la siguiente, me lleva a la siguiente. 
+[105:10] Consuelo Correa Barros: ¿Verdad? Como el controlador. O estos botoncitos que si es que fuesen clickeables.
+[105:15] Consuelo Correa Barros:  Entonces, tengo una alternativa al gesto. Porque el problema con el gesto es que tal vez yo mi motricidad es no tengo motricidad fina.
+[105:26] Consuelo Correa Barros:  O tal vez la persona tiene Parkinson o lo que sea, ¿verdad? O tal vez ni siquiera entiendo que eso es un control que se desliza, que es algo que se desliza.
+[105:35] Consuelo Correa Barros:  Entonces, es un tema como de comprensión. Bueno, pero el botón es otro patrón.
+[105:41] Consuelo Correa Barros:  Entonces, la accesibilidad al final se trata un poquito como de ser redundante, siento yo. Es como: si no existe por acá, le da por allá. 
+[105:50] Consuelo Correa Barros: ¿Vale? Entonces, vamos a ver hasta dónde logramos llegar hoy día. Ya.
+[105:55] Consuelo Correa Barros:  Por ejemplo, aquí hay un gesto complejo: editar fotos. Ustedes no tienen por qué saber, pero la niña de la foto es amiga de mi hijo.
+[106:06] Consuelo Correa Barros:  Esta es mi galería de fotos. Entonces, rotar la foto, cortar la foto, y qué sé yo.
+[106:14] Consuelo Correa Barros:  Como yo puedo hacer gestos y generar todo eso, pero tengo los botoncitos que me permiten hacerlo también. 
+[106:21] Consuelo Correa Barros: ¿Vale? Entonces, a eso se refiere. La cancelación del puntero es una tontera y esto es 100% desarrollo.
+[106:31] Consuelo Correa Barros:  Diseño no tiene nada que hacer ahí. Pero lo que dice es que para la funcionalidad que supera con un solo puntero, sí, se cumple al menos una.
+[106:40] Consuelo Correa Barros:  Solo se activa al soltar, no al presionar. O sea, ya, y aquí es una otra, pero vamos a ver ejemplo.
+[106:50] Consuelo Correa Barros:  Se puede cancelar antes de terminar el gesto o hay un mecanismo para deshacer y cambio inmediato irreversible y qué sé yo. Entonces, déjeme ver si tengo el ejemplo acá.
+[107:06] Consuelo Correa Barros:  Este. 2.5.2.
+[107:08] Consuelo Correa Barros:  Sí. Okay.
+[107:11] Consuelo Correa Barros:  Yo estoy, por ejemplo, me equivoqué. Quiero hacer una transferencia y seleccioné uno.
+[107:17] Consuelo Correa Barros:  Me equivoqué. Entonces, en la práctica, puedo cancelar eso.
+[107:22] Consuelo Correa Barros:  Y es como que retrocedí. 
+[107:24] Consuelo Correa Barros: ¿Ven? Acá. En este, como la transferencia.
+[107:29] Consuelo Correa Barros:  Es como: tengo la alternativa de volver atrás, de retractarme, o la cuestión se mandó solo. 
+[107:36] Consuelo Correa Barros: ¿Cachai? O sea, como que hice clic por error y de repente me encontré con que el formulario se envió y no había adjuntado el documento, o se fue sin asunto, o un montón de cosas. 
+[107:46] Consuelo Correa Barros: ¿Vale? Entonces, como que va por ahí. Como esta posibilidad de dejar que realmente sea pedido.
+[107:55] Consuelo Correa Barros:  Eso es. La etiqueta en el nombre.
+[108:00] Consuelo Correa Barros:  Esto básicamente dice como: "Oye, los componentes tienen que tener una etiqueta y debe ser fácil". Entonces, acá.
+[108:08] Consuelo Correa Barros:  Este dato es importante. Si la etiqueta está visible.
+[108:11] Consuelo Correa Barros:  A ver, déjenme mostrarles. Ah, no, viene el ejemplo.
+[108:14] Consuelo Correa Barros:  Vale. Imagínense un campo de texto de un formulario y dice "nombre". 
+[108:21] Consuelo Correa Barros: ¿Vale? Entonces, ese campo tiene que estar relacionado programáticamente con el input, el label con el input, y eso es como criterio 1.3.1. 
+[108:31] Consuelo Correa Barros: ¿Vale? Pero la etiqueta en el nombre se refiere en el fondo que realmente lo que está ahí en la etiqueta es lo que está programado. Porque si yo navego a través de mi voz, yo voy a poder llegar a un campo de formulario o a un botón a través de la voz.
+[108:48] Consuelo Correa Barros:  Por ejemplo, si el botón dice "continuar", pero programáticamente la información está más larga, entonces quizás no lo voy a poder accionar nunca. Porque a veces pasa, o antiguamente pasaba, que existían elementos de formulario que usaban en realidad imágenes y el texto de la imagen era distinto del texto programático.
+[109:09] Consuelo Correa Barros:  Pero esas cosas hoy en día ya no pasan. Entonces, esto para mí es algo que podríamos eliminar porque ya no está pasando.
+[109:17] Consuelo Correa Barros:  Y de hecho, hay criterios que se han o sea, un criterio que se eliminó porque ya no está pasando. Y lo que decía ese criterio que se eliminó era que las etiquetas tenían que estar cerradas.
+[109:26] Consuelo Correa Barros:  Ahora las mismas tecnologías asistidas reconocen que debería cerrarse y las cierran solas. 
+[109:30] Consuelo Correa Barros: ¿Vale? Vamos a dejarlo hasta acá por un tema de hora, que prácticamente porque nos quedan cinco minutos, no vamos a alcanzar a revisarlo todo. Pero lo importante es que en el documento viene toda la información y que ustedes pueden después hacernos las consultas. 
+[109:48] Consuelo Correa Barros: ¿Vale? Entonces, porque una cosa es saber leer el voy a dejar de compartir para hacerles el cierre y decirles que tienen que seguir. Una cosa es entender cómo funciona el estándar, una cosa es saber dónde está la información y qué sé yo, pero luego es como: "Bueno, ¿y qué entendemos de esto?".
+[110:12] Consuelo Correa Barros:  Entonces, nosotros lo que hicimos para no grabar criterio por criterio, que estaríamos eternamente grabando y que no tiene sentido porque ya existen cursos al respecto, es mejor generamos este documento con ejemplos donde ustedes van a poder encontrar y decir como: "Ah, vale. Lo entiendo o no lo entiendo".
+[110:28] Consuelo Correa Barros:  Si encuentran un error o si encuentran algo que no se entienda o que necesite mayor explicación, nos lo hacen saber y nosotros corregimos el documento porque ustedes saben, esa es la gracia de estar en un piloto, se puede corregir todo. 
+[110:44] Consuelo Correa Barros: ¿Qué deberían ir avanzando? ¿Han ido avanzando con el proyecto? Más o menos?
+[110:49] Consuelo Correa Barros:  O sea, ya saben qué flujo van a hacer y qué sé yo. Bien.
+[110:55] Consuelo Correa Barros:  De aquí, idealmente, al otro miércoles, la sugerencia es que vayan trabajando como al nivel de diseño visual ya. 
+[111:03] Consuelo Correa Barros: ¿Qué es lo que va a nacer? Y si logran llegar con al menos un componente. Porque con Carlos, en los siguientes tres módulos, lo que van a empezar a hacer es a meterle IA a esos componentes para generar un sistema de diseño que está vivo a través de un storybook.
+[111:24] Consuelo Correa Barros:  Entonces, desde la próxima sesión, pero ahí esperen a que Carlos les dé el ahora, muchachos, van a tener que tener una cuenta con inteligencia artificial. 
+[111:38] Consuelo Correa Barros: ¿Se acuerdan que habíamos comentado? Cloud o alguna de esas para poder generar este storybook. El plan es que no tengan que pagar más de un mes por eso.
+[111:47] Consuelo Correa Barros:  No sé, creo que van a ser como 20 dólares o 30, quizás.
+[111:53] Consuelo Correa Barros:  Pero ahí yo creo que le voy a decir a Carlos que les dé el aviso por Discord y quizás confirmarles como por correo para que no lo tengan desde antes de que lo usen. Entonces, como recién van a tener la sesión con él la próxima semana, igualmente yo voy a tratar de estar.
+[112:10] Consuelo Correa Barros:  No lo activen antes del próximo miércoles. 
+[112:13] Consuelo Correa Barros: ¿Vale? Espérense a que Carlos les vaya explicando. Pero el plan es que ahora, como que si se logran diseñar una interfaz o un componente o qué sé yo, para poder empezar a trabajar con él.
+[112:27] Consuelo Correa Barros:  Porque durante las siguientes tres semanas, el plan es que se van a documentar esos componentes con IA. Y después recién en el módulo seis vuelven conmigo porque yo les voy a enseñar cómo documentación que seguramente ya lo van a traer incorporado, pero en el fondo es como qué se debería documentar a nivel de sistema de diseño.
+[112:48] Consuelo Correa Barros:  Porque ya vimos que en la interfaz se documentan los encabezados, se documentan los landmarks, se documenta, perdón, el orden de foco y también el texto alternativo.
+[113:01] Consuelo Correa Barros:  O sea, como de eso hoy día quedó como la información, más o menos, pero hay que ver cómo se documenta eso. Pero ya saben que en el módulo seis se ve la documentación más a nivel de sistema de diseño.
+[113:14] Consuelo Correa Barros:  Ya después vemos el cómo. El plan es que lo ejercitemos y qué sé yo, pero ya con Carlos van a meter IA, así que van a poder acelerar. 
+[113:24] Consuelo Correa Barros: ¿Vale? Eso. El caso del contador es curioso, ese criterio es hasta cinco segundos. 
+[113:30] Consuelo Correa Barros: ¿Cómo lo arreglas? Este, dígame.
+[113:35] Speaker 2:  No, no, contesta la pregunta que estabas. Esto luego ya no estabas contestando una pregunta.
+[113:44] Consuelo Correa Barros:  Ah, sí, sí. Pero me contest.
+[113:46] Speaker 2:  No está y luego ya.
+[113:48] Consuelo Correa Barros:  Ah, vale, vale, vale, vale. Es que me distraje porque me empecé a ver que habían un montón de comentarios. Entonces, déjenme checar.
+[113:57] Consuelo Correa Barros:  Ya. Esto estábamos hablando de focos, qué sé yo.
+[114:01] Consuelo Correa Barros:  Es obligatorio que los inputs tengan borde? Bueno, podría ser que tengan un sólido, algo que distinga, sí.
+[114:07] Consuelo Correa Barros:  Lo vimos. Después, casuísticas.
+[114:13] Consuelo Correa Barros:  Ya, marcar algo como enlace. Sí.
+[114:15] Consuelo Correa Barros:  O los enlaces que estén marcados, no necesariamente lo que dice la WCAG es que puede estar con la línea como del subrayado de antes o cuando yo me posicione encima. Como que dice que con eso es suficiente. 
+[114:34] Consuelo Correa Barros: ¿Vale? Pero yo encuentro que como por las pruebas que he hecho con usuarios con discapacidad cognitiva, es mejor que venga de antes, subrayado. Porque justamente por eso es que existen los overlays y no hemos llegado a erradicarlos. 
+[114:51] Consuelo Correa Barros: ¿Se acuerdan que les había comentado que los overlays eran estas superposiciones de los sitios que me permitían subrayar los enlaces, cambiar el contraste de color y qué sé yo? Y yo les decía que las personas que trabajamos en accesibilidad, muchos han firmado una carta abierta donde dicen como que están completamente en contra de eso porque en realidad no se avanza en accesibilidad. Bueno, el overlay hace esas cositas que son absurdas, pero que alguien en el fondo de verdad las necesita. 
+[115:20] Consuelo Correa Barros: ¿Y por qué yo digo que son absurdas? Porque la gente cree que con eso lo instala y se desentienden de la accesibilidad. Entonces, no hagamos eso.
+[115:28] Consuelo Correa Barros:  Bárbara, como la pregunta es tuya, métale el.
+[115:32] Speaker 2:  Sí, sorry, estoy. Me voy a colar. La pregunta era porque justo era en el mostrar ocultar del banco y tabú.
+[115:40] Consuelo Correa Barros:  Mostrar ocultar.
+[115:42] Speaker 2:  Tenía la línea abajo, cachai.
+[115:44] Consuelo Correa Barros:  Era por el mostrar ocultar de la contraseña.
+[115:47] Speaker 2:  Exacto.
+[115:49] Consuelo Correa Barros:  Sí, está marcado como enlace. Ya, pero si está marcado, lo que pasa es que visualmente un enlace y un botón pueden ser ambiguos como David Bowie. Lo importante es que programáticamente amo David Bowie, by the way.
+[116:05] Consuelo Correa Barros:  Es como mi bueno, si me siguen en redes sociales van a ver que mis gustos son especiales. Entonces, bueno, nada.
+[116:16] Consuelo Correa Barros:  Da igual si se ve como botón o se ve como enlace, lo importante es que programáticamente esté con el código que corresponde.
+[116:26] Speaker 2:  Okay.
+[116:26] Consuelo Correa Barros:  Entonces, ¿qué hace un enlace? Un enlace me lleva a un nuevo contenido. 
+[116:32] Consuelo Correa Barros: ¿Vale? Una nueva página, me puede desplazar a una sección de la página, pero me va a cambiar mi contexto. Podría también descargar un documento PDF, por ejemplo.
+[116:46] Consuelo Correa Barros:  Versus un botón que lo que hace es que genera una acción dentro de mi interfaz, de esa misma interfaz en ese contexto. Entonces, el botón mostrar ocultar contraseña, lo que ejecuta es me muestra o me oculta la contraseña.
+[116:59] Consuelo Correa Barros:  Si se ve como botón o se ve como enlace, da lo mismo y son patrones de diseño en realidad.
+[117:04] Speaker 2:  Okay.
+[117:05] Consuelo Correa Barros:  ¿Ya? Sí. Dale.
+[117:08] Consuelo Correa Barros:  No hay problema. Ya.
+[117:09] Consuelo Correa Barros:  Y después, Mar decía: "El caso del contador es curioso". Ese criterio es hasta cinco segundos. 
+[117:15] Consuelo Correa Barros: ¿Cómo lo arreglas? No me acuerdo de cuál era el caso del contador. Pero este contador que se apaga solo?
+[117:22] Consuelo Correa Barros:  O sea, que se mueve solo. 
+[117:23] Consuelo Correa Barros: ¿Era ese, Mar?
+[117:28] Consuelo Correa Barros:  Bueno, no está. No.
+[117:32] Consuelo Correa Barros:  Ah, sí, sí está. 
+[117:34] Consuelo Correa Barros: ¿Cuál? Háblanos. Este o mi presente?
+[117:39] Consuelo Correa Barros:  Uh. Este presente, Mar.
+[117:42] Consuelo Correa Barros:  Ah, el criterio de poner en pausa. Ah, pero es que el poner en pausa hablaba como de las cosas que parten solas, como un carrusel o como un video que llega y se aparta.
+[117:53] Consuelo Correa Barros:  Entonces, lo único que hace es que le pones una pausa al carrusel. Entonces, así como tienes el botón que adelanta y retrocede, entre medio le añades una pausa.
+[118:04] Consuelo Correa Barros:  Y con eso se detiene, con eso se pausa. Ah, el contador no, por el contador lo que hay que hacer es que a nivel de configuración yo pueda manejarlo.
+[118:17] Consuelo Correa Barros:  El contador funciona distinto. Sí, yo también tengo que abandonar porque tengo que buscar a mi hijo al colegio que sale hace cinco minutos atrás.
+[118:26] Speaker 2:  Me han dejado mi duda en Discord. Si cuando vienes tú, tengas un rato, me puedes contestar? Genial.
+[118:33] Consuelo Correa Barros:  Vale. Sin problema. Igual, a mí me o sea, escríbanme todo lo que quieran por Discord, pero tienen que entender que yo como que recién los leo en la noche. 
+[118:42] Consuelo Correa Barros: ¿Vale? Así que si me necesitan como para algo que sea mucho más urgente, les dejo mi celu.
+[118:51] Speaker 2:  10193.
+[118:52] Consuelo Correa Barros:  ¿Vale? Como que si en verdad onda no pueden esperar, me mandan un WhatsApp. 
+[119:01] Consuelo Correa Barros: ¿Vale? Mi teléfono público, no pasa nada. Y onda.
+[119:06] Consuelo Correa Barros:  Así que eso. No, voy aquí al lado.
+[119:08] Consuelo Correa Barros:  Sí, el colegio está aquí a dos minutos. Y el problema es que hoy día a la clase fueron solo cuatro niños porque como llovió y riesgo de aluvión y todo lo demás, entonces está solo el hijo del colegio.
+[119:23] Speaker 2:  Qué chistoso.
+[119:25] Consuelo Correa Barros:  Bueno, nada. Muchísimas gracias. Vamos a subir este contenido para que lo tengan y después, si es que aparecen dudas, nos van contando. 
+[119:32] Consuelo Correa Barros: ¿Vale? Un abracito, que estén muy bien. Avancen en las interfaces.
+[119:37] Consuelo Correa Barros:  Chao, chao.
+[119:38] Speaker 2:  Chao.
+[119:40] Consuelo Correa Barros:  Adiós.
