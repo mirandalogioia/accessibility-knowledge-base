@@ -60,11 +60,11 @@ Todo contenido que no sea texto necesita una representación en texto, porque el
 | **Captcha** | Texto que indique la alternativa ("si no puedes ver la imagen, pulsa el botón de audio"); debe existir alternativa no visual |
 
 - **Captcha:** el de elegir bicicletas/puentes no es accesible sin alternativa. Opciones más simples: operación matemática sencilla o "haz clic si eres humano". Incluso con audio queda fuera la persona sordociega. "No hay mejor captcha que el que no se usa" (seguridad desde backend).
-- **Caso TGR** (Tesorería General de la República, cliente de la profesora): los logos de bancos estaban marcados como decorativos, así que una persona ciega no sabía cómo pagar. Al nombrar cada banco ("Banco de Chile", "BCI", etc.), junto con el resto de mejoras de accesibilidad incluyendo teclado, la recaudación subió cerca de un **80%**.
+- **Caso TGR** (Tesorería General de la República, cliente de la profesora; el caso está publicado en el sitio de Globalize, su empresa): los logos de bancos estaban marcados como decorativos, así que una persona ciega no sabía cómo pagar. Al nombrar cada banco ("Banco de Chile", "BCI", etc.), junto con el resto de mejoras de accesibilidad incluyendo teclado, la recaudación subió cerca de un **80%**.
 
 ## Pauta 1.2 — Multimedia (contenido dependiente del tiempo)
 
-Cubre solo audio, solo video y audio-video. Los criterios AAA suelen pedir algo muy difícil o se refieren a contenido en vivo.
+Cubre solo audio, solo video y audio-video. Los niveles varían: subtítulos y audiodescripción de contenido **pregrabado** son A/AA (1.2.2, 1.2.5), subtítulos en directo es AA (1.2.4), y lo más exigente es AAA (audiodescripción extendida 1.2.7, lengua de señas 1.2.6, audio en directo 1.2.9).
 
 - **Audiodescripción:** audio que describe lo que solo se ve, aprovechando los silencios del diálogo (se mostró un ejemplo con *El Rey León*).
 - **Subtítulos:**
@@ -146,11 +146,11 @@ Lo que se entiende visualmente debe transmitirse en el código ("teoría de conj
 | Texto normal, nivel AAA (1.4.6) | 7:1 (texto grande: 4.5:1) |
 
 - Regla práctica: si no es texto normal, es 3:1.
-- **Texto grande:** más de **24 px** (18 pt) o **19 px en bold** (aprox. 14 pt bold). Ojo: la WCAG habla de puntos, no de píxeles.
+- **Texto grande:** **18 pt** o **14 pt en bold** (la WCAG habla de puntos, no de píxeles). Equivalencias que dio la profesora para diseño: ≈**24 px** y ≈**19 px en bold**.
 - **Excepciones:** logotipos y elementos inhabilitados. El texto del **placeholder** sí necesita 4.5:1 (no es decorativo), aunque es mejor evitar usarlo.
 - **Inputs:** deben tener borde (puede ser solo la línea inferior) o un **fondo** con contraste 3:1 contra el fondo de la página, y 4.5:1 con el texto interior.
 - **Botones:** primario, secundario y *ghost*; el ghost siempre aparece junto a otro y lleva la palabra subrayada; en ellos ayuda el tamaño (24×24).
-- **Foco del teclado:** todo elemento interactivo debe tener foco visible; para cumplir **AAA** (apariencia del foco) el indicador debe tener **2 px** de grosor y contraste 3:1 por fuera y por dentro, además de compararse con el estado previo sin foco.
+- **Foco del teclado:** todo elemento interactivo debe tener foco visible. Para cumplir **AAA** (2.4.13 Apariencia del foco) la profesora indicó indicador de **2 px** y contraste 3:1 por fuera y por dentro, además de compararse con el estado previo sin foco (el resumen de `resources/` solo dice que el criterio fija umbrales de tamaño y contraste, sin detallarlos).
 - **Enlaces:** la WCAG acepta subrayado solo al pasar el cursor, pero por pruebas con usuarios con discapacidad cognitiva la profesora recomienda **subrayado permanente**.
 - Enlace vs botón: da lo mismo cómo se vea; importa el código. **Enlace = cambia de contexto** (otra página, sección, descarga); **botón = ejecuta una acción** en la misma interfaz (ej. mostrar/ocultar contraseña).
 - Herramientas: calculadora de contraste web (foreground/background; muestra AA/AAA para texto, texto grande e interfaz), plugin **Stark** en Figma, extensión **WAVE** para auditar (ejemplo: botón "Mostrar" de un banco con 3.05:1 al necesitar 4.5:1).
@@ -159,7 +159,7 @@ Lo que se entiende visualmente debe transmitirse en el código ("teoría de conj
 
 - **Cambio de tamaño del texto:** poder ampliar hasta **200%** sin pérdida de contenido o funcionalidad; probar también el menú y que nada quede solapado.
   - Zoom en el navegador: Ctrl/Cmd + `+`, `-`, `0`.
-- **Imágenes de texto (1.4.5):** evitar; excepciones: logotipos o cuando la imagen pierde su significado. Mejor: texto real en HTML con la imagen de fondo.
+- **Imágenes de texto (1.4.5, AA):** usar texto real; excepciones: presentación visual esencial (logotipos, una tipografía específica) o que la persona pueda personalizar la imagen, siempre con alternativa textual. Mejor: texto real en HTML con la imagen de fondo.
 - **Reflow:** sin scroll en dos direcciones; excepciones razonables: tablas y carruseles contenidos.
 - **Gestos y carruseles:** aceptados si hay alternativa al gesto (flechas, botones, indicadores clicables).
 
@@ -204,13 +204,16 @@ Lo que se entiende visualmente debe transmitirse en el código ("teoría de conj
 ## Notas de transcripción
 
 - Siglas mal transcritas en el audio y corregidas por contexto: WCAG ("Wicat", "Wicac"), CPACC ("CIPAC"), IAAP ("IAP"), `aria-label` ("area label"), Stark ("Start"), Claude ("Cloud"), HeadingsMap ("heading map"), modal ("modual"/"modales").
-- Referencias dudosas: el wizard de alt text se atribuye en el audio a "Olga Carrera"; no se verificó el nombre exacto. El caso "Globalize" (sitio mencionado tras el caso TGR) también quedó sin confirmar.
+- Nombres confirmados: "Olga Carrera" es una persona real (autora del wizard/formulario de alt text) y Globalize es la empresa de la profesora.
 - Dejado fuera por no ser contenido de la clase: charlas laterales (colegio, familia, gustos musicales, teléfono de contacto).
 
-## Puntos a contrastar con la WCAG
+## Correcciones respecto a la WCAG
 
-- La profesora dice que Robusto "tiene un solo criterio"; en WCAG 2.2 son **4.1.2** (nombre, función, valor) y **4.1.3** (mensajes de estado); el 4.1.1 se eliminó.
-- Afirma que los criterios AAA son AAA "por ser demasiado difíciles, como la audiodescripción"; en la WCAG la audiodescripción **pregrabada** es AA (1.2.5) y la **ampliada** es AAA (1.2.7); lo que es AAA son los criterios de contenido en vivo y la apariencia del foco (2.4.13).
-- En el audio el foco de 2 px se menciona junto al "1.4.1" por confusión de numeración; corresponde al criterio **2.4.13 Apariencia del foco** (AAA en WCAG 2.2).
-- Texto grande: la WCAG define 18 pt (24 px) o 14 pt en bold (≈18,66 px); la profesora redondea a 19 px.
-- Verificar contra `resources/wcag22-understanding/`: 1.1.1, 1.3.1, 1.4.1, 1.4.3, 1.4.11, 2.1.1, 2.1.2, 2.1.4, 2.2.1, 2.2.2, 2.4.11, 2.5.1, 2.5.2, 2.5.3.
+Lo dicho en el audio que no coincide con `resources/wcag22-understanding/` (que se toma como referencia). El cuerpo del resumen ya usa los valores corregidos.
+
+- **Robusto:** el audio dice que tiene "un solo criterio". En WCAG 2.2 son **4.1.2** (nombre, rol, valor, A) y **4.1.3** (mensajes de estado, AA); el 4.1.1 (procesamiento) está retirado.
+- **Niveles AAA:** el audio dice que son AAA los criterios "demasiado difíciles, como la audiodescripción" o los de contenido en vivo. Según la referencia, la audiodescripción pregrabada es **AA (1.2.5)**, los subtítulos en directo son **AA (1.2.4)**; son AAA la audiodescripción extendida (1.2.7), la lengua de señas (1.2.6) y el audio en directo (1.2.9).
+- **Foco de 2 px:** en el audio se asocia al "1.4.1" por confusión de numeración; corresponde a **2.4.13 Apariencia del foco (AAA)**. La referencia no detalla el umbral de 2 px ni el 3:1.
+- **Texto grande:** la WCAG define 18 pt o 14 pt en bold; los 24 px y 19 px son equivalencias aproximadas de la profesora.
+- **1.4.5 Imágenes de texto:** la excepción es presentación visual esencial (logotipos, tipografía específica) o personalizable por la persona; no "cuando la imagen pierde su significado".
+- Criterios citados verificados en `resources/wcag22-understanding/`: 1.1.1, 1.2.x, 1.3.1–1.3.5, 1.4.1–1.4.6, 1.4.10, 1.4.11, 2.1.1, 2.1.2, 2.1.4, 2.2.1, 2.2.2, 2.4.11, 2.4.13, 2.5.1–2.5.3, 2.5.8.
