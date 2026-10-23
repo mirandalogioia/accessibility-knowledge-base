@@ -1,0 +1,46 @@
+# Clase 4 — Tutoría del módulo 3
+## Contenido escrito de la plataforma (Módulo 3 - Lección 11), transcrito de captura de pantalla
+
+Nota: transcripción de una captura de pantalla de la lección 3.11 de la plataforma weAAAre. La clase 4 en vivo (`clase-04-raw.txt`) es la grabación de esta tutoría. Los enlaces aparecen subrayados en la plataforma pero sus URL no son visibles en la captura; solo se transcriben los textos. Las descripciones entre [corchetes] no son texto de la plataforma.
+
+---
+
+Módulo 3 - Lección 11
+**Tutoría del módulo 3**
+Tiempo estimado: 2 h
+
+[Video de la tutoría: pantalla compartida con el sitio del W3C ("Making the web work") y la profesora en un recuadro; duración 2:02:52.]
+
+Consuelo repasa los criterios de las WCAG desde el diseño y comparte las herramientas que usa en la tutoría para revisar textos alternativos, estructura, contraste y navegación por teclado.
+
+## Siguientes pasos para tu proyecto
+
+Con el flujo ya elegido, **para la próxima tutoría, el objetivo es avanzar en el diseño visual de tu interfaz y llegar con al menos un componente diseñado.**
+
+- En las próximas semanas trabajarás con Carlos esos componentes con inteligencia artificial para crear un sistema de diseño vivo en Storybook. Por eso conviene que tengas alguno listo.
+- Necesitarás una cuenta de pago en una herramienta de IA, como Claude, durante aproximadamente un mes (unos 20 o 30 dólares). **No la contrates todavía:** espera al aviso de Carlos por Discord y por correo.
+- Ten presente lo que se documenta en la interfaz completa: encabezados, landmarks, orden del foco y textos alternativos. La documentación a nivel de sistema de diseño se trabaja con Consuelo en el módulo 6.
+- Para practicar, recorre solo con el teclado las actividades de un curso de weAAAre.
+
+## Cómo compartir tu proyecto
+
+Para entregarnos tu proyecto, envíanos **el enlace de tu archivo de Figma** por el medio que te resulte más cómodo: a soporte@weaaare.com, por Discord, por el grupo del intensivo o por mensaje privado a Carlos.
+
+Cualquiera de esas vías nos sirve; no necesitas enviarlo por varias. **Antes de compartirlo, comprueba que tenemos permiso para visualizar el archivo o bien danos permiso cuando te lo solicitemos.**
+
+## Materiales de la tutoría
+
+- Presentación de la tutoría: las WCAG 2.2 criterio a criterio (PDF, 156 páginas): la guía de consulta con ejemplos, la tabla resumen de medios y los enlaces a cada criterio.
+- Genio del texto alternativo: te hace preguntas sobre la imagen y su contexto para ayudarte a escribir su texto alternativo.
+- Asistente de textos alternativos, de Olga Carreras: formulario en línea para decidir el texto alternativo de cada imagen.
+- Mapa de decisión del texto alternativo, de Olga Carreras: el mismo razonamiento en forma de esquema.
+- Ejemplo de audiodescripción: escena completa (en inglés): la escena que se vio en la tutoría, con la descripción en los silencios del diálogo.
+- Ejemplo de audiodescripción: anuncio de Subaru (en inglés): un anuncio con audiodescripción entre los diálogos.
+- Landmark Navigation via Keyboard or Pop-up (extensión de Chrome): muestra las regiones de una página y permite recorrerlas con el teclado.
+- HeadingsMap (extensión de Chrome): muestra la jerarquía de encabezados de una página.
+- Contrast Checker de WebAIM (en inglés): comprueba el contraste entre el color del texto y el del fondo.
+- Extensión WAVE de WebAIM (en inglés): revisa una página desde el navegador; en la tutoría se usó para encontrar errores de contraste.
+- Comprobaciones sencillas de zoom, del W3C (en inglés): cómo comprobar que la página funciona al ampliarla al 200 %.
+- Accesibilidad con teclado, de MDN (en inglés): las teclas básicas y qué debe funcionar sin ratón.
+
+[Botón: Completar lección. Navegación lateral: 3.11 Tutoría del módulo 3 (2 h); siguiente, 3.12 Examen del módulo 3 · Diseño visual accesible. Puntuación del alumno: 38 / 182 puntos.]

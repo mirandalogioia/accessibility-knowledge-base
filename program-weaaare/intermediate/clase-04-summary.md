@@ -1,13 +1,15 @@
 ---
-title: "Clase 4 — Tutoría: repaso de WCAG criterio por criterio (perceptible, distinguible y operable)"
+title: "Clase 4 — Tutoría del módulo 3: repaso de WCAG criterio por criterio (perceptible, distinguible y operable)"
 status: in_progress
-source: ../raw-inputs/clase-04-raw.txt
+source:
+  - ../raw-inputs/clase-04-raw.txt
+  - ../raw-inputs/clase-04-contenido-escrito-raw.txt
 last_updated: 2026-10-21
 ---
 
 # Clase 4 — Tutoría de Diseño Accesible (weAAAre)
 
-Tutoría dedicada a repasar la WCAG "criterio por criterio" desde la mirada de diseño. Se cubrió el principio **Perceptible** completo (pautas 1.1 a 1.4) y parte de **Operable** (2.1, 2.2, 2.4.11, 2.5, etiqueta en el nombre). No se alcanzó a ver todo: el detalle con ejemplos y enlaces queda en un documento que se comparte después. Se decidió no ver proyectos en esta sesión (para eso están Discord y el correo).
+Es la lección 3.11 de la plataforma (Tutoría del módulo 3, 2 h). Tutoría dedicada a repasar la WCAG "criterio por criterio" desde la mirada de diseño. Se cubrió el principio **Perceptible** completo (pautas 1.1 a 1.4) y parte de **Operable** (2.1, 2.2, 2.4.11, 2.5, etiqueta en el nombre). No se alcanzó a ver todo: el detalle con ejemplos y enlaces queda en un documento que se comparte después. Se decidió no ver proyectos en esta sesión (para eso están Discord y el correo).
 
 ## Estructura de la WCAG
 
@@ -47,7 +49,7 @@ Todo contenido que no sea texto necesita una representación en texto, porque el
 - Se puede usar IA para generarlos, pero **validar** el resultado.
 - Hay tensión entre el estándar (decorativas con alt vacío) y parte de las personas con discapacidad que prefieren que todo tenga descripción; ejemplo citado: NASA describe con nombre y apellido a cada persona en la foto de Artemis II. Conviene **preguntar a la persona usuaria**.
 - **Gráficos:** el alt dice de qué se trata (ej. ventas del trimestre); si hace falta más, una **descripción larga** accesible vía enlace, botón (texto oculto/visible), modal o página nueva.
-- Recurso mencionado: asistente tipo *wizard* (mapa de decisión) para generar alt guiado por contexto; **solo genera, no evalúa**. Se compartió por el chat y se suma a los recursos de weAAAre.
+- Recurso mencionado: **Genio del texto alternativo**, asistente tipo *wizard* que pregunta por la imagen y su contexto para generar el alt; **solo genera, no evalúa**. Además, el asistente (formulario) y el mapa de decisión de Olga Carreras (ver materiales).
 
 ### Excepciones del 1.1.1
 
@@ -72,7 +74,7 @@ Cubre solo audio, solo video y audio-video. Los niveles varían: subtítulos y a
   - *Open caption*: incrustados en el video.
   - Deben estar sincronizados, **no omitir palabras** e incluir **sonidos relevantes** (disparos, puerta que cruje, ruido ensordecedor).
 - **Transcripción:** todo lo dicho en texto, incluidos aplausos y sonidos; puede estar visible y sincronizada (seleccionar texto lleva al momento del video) o ser un archivo descargable.
-- La profesora compartirá una tabla resumen (el documento de apoyo tiene 157 páginas).
+- La profesora compartirá una tabla resumen (el PDF de apoyo, "WCAG 2.2 criterio a criterio", tiene 156 páginas según la plataforma; la profesora dijo 157 en el audio).
 
 ## Pauta 1.3 — Contenido adaptable
 
@@ -194,17 +196,37 @@ Lo que se entiende visualmente debe transmitirse en el código ("teoría de conj
 - **En la interfaz (pantalla completa):** niveles de encabezado, landmarks, orden de foco, texto alternativo.
 - **En el sistema de diseño (componente):** comportamiento del foco (ej. modal) y cosas que siempre se comportan igual. Se profundiza en el **módulo 6**.
 
+## Materiales de la tutoría (plataforma)
+
+Listados en la lección 3.11; las URL no estaban visibles en la captura, por lo que no se agregaron a `resources/links.md`.
+
+| Material | Para qué |
+|---|---|
+| PDF "WCAG 2.2 criterio a criterio" (156 pp.) | Guía de consulta con ejemplos, tabla resumen de medios y enlaces a cada criterio |
+| Genio del texto alternativo | Preguntas sobre imagen y contexto para escribir el alt |
+| Asistente de textos alternativos (Olga Carreras) | Formulario en línea para decidir el alt |
+| Mapa de decisión del texto alternativo (Olga Carreras) | Mismo razonamiento en esquema |
+| Audiodescripción: escena completa (EN) y anuncio de Subaru (EN) | Ejemplos escuchados en la tutoría |
+| Landmark Navigation via Keyboard or Pop-up (Chrome) | Ver y recorrer landmarks |
+| HeadingsMap (Chrome) | Ver jerarquía de encabezados |
+| Contrast Checker de WebAIM (EN) | Medir contraste (ya listado en `resources/links.md`) |
+| Extensión WAVE de WebAIM (EN) | Auditar errores de contraste y más |
+| Comprobaciones sencillas de zoom, W3C (EN) | Probar el zoom al 200 % |
+| Accesibilidad con teclado, MDN (EN) | Teclas básicas y qué debe funcionar sin ratón |
+
 ## Próximos pasos
 
 - Profesora: subir el documento y materiales de la sesión; pedir a Carlos que avise por Discord y correo cuándo activar la cuenta de IA; responder la duda que una alumna dejó en Discord.
 - Alumnas: avanzar en el **diseño visual** y llegar con **al menos un componente** al próximo miércoles.
 - Alumnas: **no activar la cuenta de IA** (Claude u otra) antes de la sesión con Carlos; las próximas tres semanas se documentan los componentes con IA para generar un sistema de diseño vivo en **Storybook** (costo estimado 20–30 USD por un mes).
+- Entrega del proyecto: enviar el **enlace del archivo de Figma** a soporte@weaaare.com, por Discord, por el grupo del intensivo o por mensaje privado a Carlos (basta una vía); antes, verificar que el archivo tenga permiso de visualización.
+- La cuenta de IA es de pago, ~1 mes (20–30 USD); esperar el aviso de Carlos por Discord y correo.
 - Dudas: Discord (la profesora lee de noche); urgencias por WhatsApp.
 
 ## Notas de transcripción
 
 - Siglas mal transcritas en el audio y corregidas por contexto: WCAG ("Wicat", "Wicac"), CPACC ("CIPAC"), IAAP ("IAP"), `aria-label` ("area label"), Stark ("Start"), Claude ("Cloud"), HeadingsMap ("heading map"), modal ("modual"/"modales").
-- Nombres confirmados: "Olga Carrera" es una persona real (autora del wizard/formulario de alt text) y Globalize es la empresa de la profesora.
+- Nombres confirmados: "Olga Carreras" (en el audio, "Olga Carrera") es una persona real (autora del wizard/formulario de alt text) y Globalize es la empresa de la profesora.
 - Dejado fuera por no ser contenido de la clase: charlas laterales (colegio, familia, gustos musicales, teléfono de contacto).
 
 ## Correcciones respecto a la WCAG
