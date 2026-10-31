@@ -1,0 +1,476 @@
+# Clase 5 Accesibilidad
+
+## Summary
+### Flow Summary
+Clase de accesibilidad: dudas sobre foco visible, ejercicio en grupos auditando la web de la aerolínea Aliso por forma de interacción, avance del proyecto y encuesta sobre aplazar una semana.
+
+### Foco visible
+- Si no se toca el foco nativo, el agente de usuario (navegador, SO) garantiza que sea accesible.
+- Un foco personalizado es responsabilidad del diseñador: debe verse y tener contraste de 3 a 1 entre estados, incluso sobre fondos dinámicos.
+- Truco del doble foco (azul, blanco, azul) garantiza contraste en cualquier fondo, aunque da un foco grueso de 6 píxeles.
+    - Con azul y blanco (4 píxeles) normalmente basta; probar por ensayo y error
+
+### Ejercicio en grupos con la web Aliso
+- Tres salas: teclado (vuelo Madrid a Lanzarote), puntero, voz y zoom (asiento y equipaje), lector de pantalla (pasajero, seguro, error y pago).
+- Cada grupo con portavoz que comparte pantalla; anotar barrera, cómo se detectó y criterio WCAG que falla.
+- Mínimo unos 10 fallos por forma de interacción; el grupo de teclado tenía 7 tipologías de criterio, todas A y AA.
+
+### Hallazgos y aclaraciones de criterios
+- Teclado: el menú de destino que se abre al tabular no incumple 3.2.1; si no se cierra con Escape sería 4.1.2.
+- Grupos de opciones (radios, pestañas, calendario) se navegan con flechas; el combobox sin flechas incumple 4.1.2.
+    - También: foco atrapado en modal, foco no visible, falta de salto al contenido (evitar bloques)
+- Lector: campos sin etiqueta ni instrucciones, errores solo por color, mensajes de estado no anunciados (4.1.3), enlaces con mismo texto.
+    - Mover el foco al primer error es buena práctica, no obligatorio si hay mensaje de estado
+    - Captcha visual sin alternativa: 3.3.8 autenticación accesible (1.1.1 tiene excepción)
+- Puntero y voz: 2.2.1, 3.2.5 (AAA), 1.4.1, 2.5.7 y 2.5.1, 2.5.3, 4.1.2, 2.2.2, 1.4.4, 1.4.13, 2.5.8 (24 por 24).
+    - 2.4.9 no aplica a los botones de añadir del carrusel: solo aplica a enlaces
+
+### Avance del proyecto
+- Speaker 1 revisó proyectos hasta el enviado el 27 y dejó comentarios en Figma; dos proyectos no le dieron acceso.
+- Varios proyectos abarcan demasiados flujos; conviene acotar a uno (p. ej. login o añadir al carrito).
+- El objetivo es aprender a documentar, no diseñar bonito; dudas con boceto a mano enviado por Discord.
+
+### Calendario del curso
+- Módulo 5 (componentes) se desbloquea por partes, tandas de unas 10 lecciones cortas, jueves y viernes.
+- Mucha gente no ha terminado el módulo 4; se valorará aplazar todo una semana si más del 50% lo pide.
+
+### Próximos pasos
+- (Speaker 1) Volver a estar atenta en Discord para resolver dudas del proyecto
+- (Speaker 2) Dejar en la presentación de la grabación el resumen de todos los criterios encontrados
+- (Speaker 2) Mencionar en Discord los proyectos sin acceso a Figma
+- (Speaker 2) Lanzar encuesta en Discord sobre aplazar el curso una semana
+- (Alumnos) Definir y acotar el flujo, dibujar pantallas y pensar dos componentes simples y uno complejo a documentar
+
+## Transcript
+[00:02] Speaker 1: Sería fija.
+[00:03] Speaker 2:  Sí.
+[00:04] Speaker 1:  Aparte de que sea visible.
+[00:08] Speaker 2:  Vale, claro. A ver, voy a empezar por partes, ¿vale? Lo de— claro, lo del foco, lo de que no lo edites, es una cosa... eh, claro, hay que entender un poco el concepto de agente de usuario.
+[00:18] Speaker 2:  Que lo paso así un poco por encima en los vídeos, ¿vale? Pero bueno, es básicamente cuando tú normalmente, dentro de— creo que se explicaba al principio en el módulo 2— que existen como varios estándares.
+[00:26] Speaker 2:  No está la WCAG, está... básicamente hay un estándar también para lo que son los agentes de usuario, que son, oye, las tecnologías donde corren, donde básicamente un navegador es un agente de usuario, o un sistema operativo y demás, ¿vale? Pues esos son un agente de usuario que siguen una serie de estándares, ¿no?
+[00:38] Speaker 2:  Entonces, esos agentes de usuario tienen básicamente que cumplir... por ejemplo, una de las cosas que tienen que cumplir es que, oye, marquen un foco sobre los elementos nativos, los elementos semánticos básicos, ¿vale? Y ese foco tiene que— el agente de usuario, si no se toca ese foco, ellos tienen que garantizar que ese foco es accesible.
+[00:51] Speaker 2:  Por eso tú te desentiendes un poquito, ¿no? Incluso la propia WCAG dice: "oye, si el foco visible..." lo ponen tal cual, "oye, si el foco es visible..." eh, es decir, perdón, "si tú el foco no lo editas y pones el foco que te da el propio agente de usuario, ese foco no se tiene que tocar". 
+[01:01] Speaker 2: ¿Vale? Entonces, bueno, lo dicho, eso por una parte, ¿vale? Ahora bien, que tú toques el foco, lo que tú dices, ¿no?
+[01:06] Speaker 2:  Que tú toques el foco y ese foco, oye, lo personalizas para poner una tipología de foco. Pues tú lo que tienes que garantizar al final es que ese foco se vea, ¿vale?
+[01:12] Speaker 2:  Y que cumpla, obviamente, básicamente el contraste de 3 a 1, entre los píxeles, básicamente, cuando cambia de un estado a otro, ¿no? Es decir, que se vea.
+[01:18] Speaker 2:  Es decir, si tú tienes un estado de fold de un botón, por ejemplo, y pasas al estado de foco, pues tiene que haber un contraste al menos de 3 a 1 para que se note un poco la diferencia. Y tú, pero tú eres el responsable, y pasa un poco la responsabilidad a ti, de que tú garantices que eso se vea. 
+[01:26] Speaker 2: ¿Qué pasa? Que lo que tú dices, que hay muchas... hay muchas casuísticas, ¿no? Oye, ¿qué pasa, por ejemplo, si yo tengo una foto de fondo, sabes?, y de repente pongo un elemento, un elemento de un botón, y pongo un foco, sabes?
+[01:34] Speaker 2:  Y esa foto es dinámica y va cambiando el foco exactamente cómo se mide, o yo todavía me tengo que responsabilizar. Pues la respuesta es que sí, te tienes que responsabilizar, que en todas esas situaciones abarque y que se... y que básicamente funcione correctamente. 
+[01:44] Speaker 2: ¿Cómo se suele hacer? O qué truco existe a nivel de diseño para evitar y siempre conseguir el contraste, ¿no? Pues hay un truco que yo le llamo el truco del laureo, ¿vale?
+[01:51] Speaker 2:  Que básicamente— os lo voy a enseñar. Además, me viene de perla porque en la web del cloud que la estamos haciendo, pues lo hemos hecho de esa manera.
+[01:57] Speaker 2:  Vale, esta es... cuando veáis la pantalla me decís, ¿vale?
+[02:00] Speaker 1:  No.
+[02:00] Speaker 2:  ¿Sí? ¿La veis?
+[02:01] Speaker 1:  Sí.
+[02:01] Speaker 2:  Vale, vale. ¿Veis? Por ejemplo, aquí.
+[02:03] Speaker 2:  Aquí se ve perfectamente. 
+[02:04] Speaker 2: ¿Veis cómo está puesto el foco? Que está puesto con un doble color. Porque si tú lo pones, primero, es decir, tú tienes dos colores, es decir, por ejemplo, en este caso un azul, luego un blanco, y luego otro azul, de esa manera siempre te garantizas que hay dos píxeles que se van a ver, ¿vale? 
+[02:15] Speaker 2: ¿Por qué? Porque si no se ve uno, se ve el contorno del otro y se ve el otro foco, ¿vale? Me voy a poner un caso, ¿vale?
+[02:19] Speaker 2:  Por ejemplo, si yo me voy al footer, que creo que aquí se ve mejor, ¿vale? Aquí lo veis.
+[02:22] Speaker 2:  Aquí veis el resaltado, ¿vale? Es decir, fijaros que ese azul, posiblemente el azul con ese fondo, no cumpla de primera, ¿vale?
+[02:26] Speaker 2:  Pero como tiene un primer contorno, luego tiene el blanco, ese blanco sí que se ve, sí que cumple básicamente el contraste de 3 a 1. Entonces, con ese doble foco, pues haces que cumpla básicamente los criterios directamente.
+[02:36] Speaker 1:  Hasta aquí.
+[02:36] Speaker 2:  Eso es lo dicho. Eso es como un pequeño truco para garantizar que, oye, que ante situaciones de cambio o de dinamismo, de... tú no sabes, toda la casuística donde pueda haber un foco, pues se cumpla. El único problema que puede conllevar eso, pues es básicamente que al final es un foco como muy grueso. 
+[02:48] Speaker 2: ¿Sabes por qué? Porque al final tienes que garantizar dos píxeles, dos cuatro, seis píxeles. Es decir, es un foco de seis píxeles.
+[02:52] Speaker 2:  Claro, es un foco que a lo mejor luego, en ciertas situaciones, pues es un poco molesto, sobre todo por el hecho de la distancia a lo mejor que queda entre elementos y demás, ¿vale?
+[02:58] Speaker 1:  Perfecto. Entonces, cada color igual tiene... cada color tiene que cumplir los dos píxeles. No es que entre colores cumple dos máximo, o sea.
+[03:04] Speaker 2:  Eh, claro, en este caso se hace de esa manera para poder abarcar como por decirlo de alguna manera todas las casuísticas, ¿vale? Y poder cumplir en todas las situaciones, ¿sabes?
+[03:11] Speaker 1:  Súper. Muchísimas gracias.
+[03:12] Speaker 2:  Sí, por eso, porque justamente, porque... es decir, a ver, realmente con cuatro píxeles te debería de bastar, ¿vale? Es decir, si tú pusieras, por ejemplo, solamente el azul y el blanco, es decir, no hace falta, posiblemente el de interno te lo puedes ahorrar. Es decir, con un doble así, normalmente te debería de poder servir, ¿vale?
+[03:23] Speaker 2:  Entonces, por eso te digo. Decía: "es también probar un poco, prueba y error", ¿vale?
+[03:26] Speaker 1:  Claro. Gracias.
+[03:27] Speaker 2:  Sí. Vale. Eh, ok, ¿más preguntitas?
+[03:34] Speaker 2:  Vale, genial. Pues venga, vamos a... voy a contaros lo que he preparado un poco para la sesión de hoy, ¿vale?
+[03:39] Speaker 2:  He puesto a grabar, porque no había puesto a grabar. Se me había olvidado completamente.
+[03:41] Speaker 2:  Entonces, eh, bueno, ya está grabando también. Vale, perfecto.
+[03:44] Speaker 2:  Voy a poner por aquí... tengo la diapositiva. Ta, ta, ta.
+[03:47] Speaker 2:  Venga. A ver, comparto pantalla.
+[03:51] Speaker 2:  Pantalla de pronto.
+[03:55] Speaker 2:  Vale, genial. Bueno, pues aquí ya me he adelantado un poquito, ¿vale?
+[04:00] Speaker 2:  El plan de hoy era básicamente, bueno, resolver las dudas un poquito estas que teníais, ¿vale? Del módulo 4.
+[04:06] Speaker 2:  También os comentaba que, bueno, la semana que viene también estaré yo con la tutoría. Entonces, bueno, si todavía habéis retrasado con el módulo 4, pues la semana que viene también resolveremos como ese espacio de dudas para que las planteéis o lo que tengáis.
+[04:13] Speaker 2:  Y también relacionada con todo lo que vais a ver en el módulo 5, y que van a ser todo principalmente componentes, el tipo de interacción, el tipo de, sobre todo, de qué se tiene que especificar, qué no se tiene que especificar, etcétera. Sobre todo para que ya en el siguiente módulo que vais a ver, el de 6, pues ya tengáis toda la herramienta básicamente para poder hacer documentación activa, ¿vale?
+[04:27] Speaker 2:  Luego, vamos a ver hoy, básicamente, un ejercicio que he preparado, que vamos a jugar un poco con grupos, ¿vale? Es decir, para hacerlo un poquito más entretenido.
+[04:33] Speaker 2:  He preparado básicamente una web que se llama Alisio, ¿vale? Y que, bueno, ahora os contaré un poquito más de la web.
+[04:37] Speaker 2:  Y cada grupo lo que va a hacer es un tipo de forma de interacción, ¿vale? Es decir, básicamente un grupo hará la navegación por teclado, otro grupo, pues, hará la parte del control por voz, otro grupo interactuará con lector de pantalla, ¿no?
+[04:46] Speaker 2:  Y lo que vamos a hacer, bueno, luego lo explicaré un poquito más en detalle, pero habrá... tendréis que descubrir una serie de incidencias que hay, asociarlas a todos los criterios que hemos visto, incluidos nuevos criterios que vais a tener un poco que deducir si no los conocéis, ¿vale? Incluso criterios que no son tan habituales dentro de la WCAG, pero que os sirven, que no cuadren mucho con lo que vais a ver.
+[04:58] Speaker 2:  Y luego lo que vamos a hacer va a ser entre todos, pues, presentarlo y demás en la sala común, ¿vale? Entonces, bueno, nos dividiremos como en sala, y luego, pues, lo dicho, luego en la sala común, pues, volveremos un poco todo y pondremos un poco sobre el mapa todo lo que habéis encontrado, ¿vale?
+[05:07] Speaker 2:  De esa manera, pues, bueno, reforzamos un poco todo lo que hemos visto durante el módulo 4. Y luego, si nos da tiempo, pues, vamos a empezar un poco a dar pinceladas de área, ¿vale?
+[05:11] Speaker 2:  De área, que es básicamente lo que nos permite, a nivel sobre todo de código, ¿vale? No os asustéis, veremos cosas muy, muy básicas, pero sobre todo para que entendáis la anatomía y cómo funciona la transmisión de, básicamente, de información a través de, oye, pues, en este caso el navegador, a las tecnologías activas, ¿vale?
+[05:22] Speaker 2:  Porque es una cosa que es una pieza fundamental para que, sobre todo, entendáis y podáis dar indicaciones el día de mañana a... tanto a la IA cuando veamos toda la parte del módulo de IA, como, bueno, en vuestros diseños para hacer la especificación final, ¿vale? Dicho esto, eh, vale, nada, esto es básicamente un recordatorio de lo que vimos en el módulo 4, ¿vale?
+[05:40] Speaker 2:  Ahora vamos a, primero, lo que comentaba, con el tema del ejercicio, ¿vale? 
+[05:44] Speaker 2: ¿Cómo vamos a funcionar? Voy a separar en Google Meet, ¿vale?, en tres salas diferentes, ¿vale? Cada sala, pues, habrá un grupo.
+[05:50] Speaker 2:  Son aleatorios, ¿vale? Van a tocar de manera aleatoria los grupos, ¿vale?
+[05:52] Speaker 2:  Cada grupo, lo que he comentado, tiene una forma de interacción, una forma de interacción de las cuales hemos visto durante el módulo 4, ¿vale? Es decir, vamos a ver todo el tema de teclado, es decir, un grupo tendrá la parte de teclado, otro la de puntero y voz, ¿vale?
+[06:01] Speaker 2:  Y otro con el tema del lector de pantalla. Entonces, bueno, la idea es que no utilicemos el ratón, ¿vale?
+[06:05] Speaker 2:  En la web, o evitemos utilizar el ratón, así que, bueno, podéis viciar y tal. En la web os conviene pasar, evidentemente, para poder un poco ver e indagar, pero bueno, la idea es que lo hagáis todos intentando hacer esa forma de interacción que os han tocado, ¿vale?
+[06:13] Speaker 2:  Luego, la idea es que vais a apuntar todas las barreras que vais a encontrar, ¿vale? Con esa forma de interacción.
+[06:17] Speaker 2:  Esto es importante que, bueno, que lo asociéis a la forma de interacción. Hay más barreras, ¿vale?
+[06:21] Speaker 2:  Es decir, por ejemplo, los que sois usuarios de teclado, pues, a lo mejor os encontráis otras barreras que no están asociadas directamente con teclado. La idea es que apuntéis solo las barreras que, bueno, que os afectan, ¿vale?
+[06:27] Speaker 2:  Aunque, bueno, está todo separado a nivel de flujo y demás para que no tampoco choquéis, ¿vale? Entonces, si encontráis una barrera, dudo mucho que el otro grupo encuentre la misma, ¿vale?
+[06:33] Speaker 2:  Aunque sean diferentes. También, apuntad no solamente la barrera, sino exactamente qué es lo que pasa, cómo la habéis básicamente detectado, y sobre todo, lo que me interesa es que lo asociéis al criterio que falla, ¿vale?
+[06:42] Speaker 2:  Es decir, los criterios, pues, eran todos los que hemos ido viendo a lo largo del módulo 4 y módulo anterior, ¿vale? En cada grupo va a haber un portavoz, ¿vale?
+[06:49] Speaker 2:  Un portavoz, que esto es importante. Esa es la persona que va a compartir un poco la pantalla, es decir, separaremos en grupo, os ponéis básicamente un portavoz, esa persona comparte pantalla, ¿vale?
+[06:56] Speaker 2:  Y va a ser un poco el que lleve la batuta, ¿no? Podríamos decir.
+[06:59] Speaker 2:  Cada uno, evidentemente, individualmente podéis probando, ¿vale? Pero la idea es que la persona un poco que esté compartiendo pantalla y demás, pues, sea el, pues, un poco también el que oriente al grupo y el que vaya, oye, pues, planteando las dudas, viendo, oye, pues, tal, guiando un poquito, ¿vale?
+[07:10] Speaker 2:  Llevando un poco la conversación, ¿vale? Y lo dicho, apuntáis todo, y a la vuelta, el portavoz, ¿vale?
+[07:14] Speaker 2:  Lo que va a hacer es compartir pantalla y enseñar en vivo todo lo que habéis encontrado, ¿vale? Es decir, el portavoz va a venir aquí a la sala común y va a decir: "oye, nosotros, como forma de interacción de teclado, hemos encontrado esta barrera, esta barrera, y se va a poner con la web y va a compartir para, bueno, enseñar básicamente todas las barreras que ha ido encontrando", ¿vale?
+[07:26] Speaker 2:  Y luego, bueno, diré básicamente todas las barreras que había, por si no había encontrado alguna, o incluso a lo mejor encontréis alguna que yo no tenía apuntada, ¿vale? 
+[07:34] Speaker 2: ¿Alguna duda de esto antes de la mecánica, antes de empezar? ¿Sí? 
+[07:38] Speaker 2: ¿Todo bien? Vale. Antes de comenzar, os pregunto: del módulo 4, ¿quién no ha podido hacer nada?
+[07:45] Speaker 2:  O por lo menos, sobre todo, me interesa, del módulo 4, la parte de puntero y voz, que posiblemente sea lo más novedoso, ¿quién no ha podido hacerlo? O, bueno, o quién lo ha hecho y demás.
+[07:53] Speaker 2:  Podéis lo poner también por el chat, si queréis, ¿vale? Por saber exactamente para la hora de hacer los grupos, tenerlo... que sí que es verdad que sean aleatorios, pero bueno, entre... que por lo menos esa parte la hayáis visto.
+[08:04] Speaker 3:  Vale, lo he visto completo, yo tampoco me lo he podido acabar.
+[08:09] Speaker 3:  Si terminé el teclado. Vale, perfecto.
+[08:12] Speaker 3:  Tu, tu, tu, tu.
+[08:16] Speaker 3:  Vale.
+[08:18] Speaker 2:  Carol, ¿llegaste a hacer los ejercicios de puntero y voz? ¿Tienes Mac?
+[08:22] Speaker 1:  Sí.
+[08:22] Speaker 2:  Vale, ok, pero esto va a tocar.
+[08:24] Speaker 1:  Sí, pero...
+[08:26] Speaker 2:  Bueno, me refiero que esto lo llevas un poco.
+[08:27] Speaker 1:  Lo de puntero...
+[08:29] Speaker 2:  Un poco... ya, ya, bueno, no te preocupes, ¿vale? Si no podéis, es decir, como os voy a dejar tiempo, también podéis volver a ver también incluso los vídeos y demás, y revisarlos. Es decir, que, bueno, que vais a tener tiempo para, bueno, también los que no lo hayan podido ver, también descubrir cositas, ¿vale?
+[08:38] Speaker 2:  Es decir, no os preocupéis exactamente, ¿vale? También no os preocupéis porque me iréis pasando por los grupos.
+[08:41] Speaker 2:  Es decir, voy a ir haciendo en bucle y voy a ir pasando por los grupos, ¿vale? Para ir moviéndolo y demás, ¿vale?
+[08:44] Speaker 2:  Venga, perfecto. Pues vale, antes de comenzar, ya tenemos que hablar de la mecánica.
+[08:47] Speaker 2:  Os voy a presentar Aliso, ¿vale? Aliso, básicamente, es una aerolínea que básicamente permite buscar, elegir vuelo, asiento, pasajero y pagar, ¿vale?
+[08:54] Speaker 2:  Entonces, una aerolínea es una web donde básicamente nos vamos a encontrar varios mecanismos de interacción. Con ratón, como siempre, funciona espléndidamente.
+[09:00] Speaker 2:  La web, una maravilla, ¿vale? Pero bueno, nos vamos a encontrar, pues, eso, básicamente diferentes barreras, ¿vale?
+[09:05] Speaker 2:  Entonces, cada grupo lo que va a empezar va a ser básicamente en una... voy a pasar por aquí la web general, ¿vale? Es decir, ya ahora os digo dónde empieza cada grupo y qué es lo que tiene que hacer, ¿vale?
+[09:12] Speaker 2:  Aunque luego me iré pasando grupo a grupo, y bueno, os lo pongo en cada uno de los grupos, ¿vale? La misión del grupo con teclado va a ser buscar un vuelo de Madrid a Lanzarote, ¿vale?
+[09:23] Speaker 2:  Básicamente, va a tener que esperar un poco a ver si pasa algo, si no pasa algo, a nivel de la pantalla, ¿vale? Hay algo que, bueno, que veáis raro, ¿vale?
+[09:29] Speaker 2:  Tiene que hacer y tiene que ordenar en los resultados de búsqueda, básicamente, y cambiar algún día. Y tiene que elegir la tarifa más barata que encuentre, ¿vale?
+[09:34] Speaker 2:  Es decir, eso es el plus por si, bueno, le da tiempo, que en este caso el de teclado es el más sencillo, ¿vale? Luego tenemos puntero, voz y zoom, ¿vale?
+[09:39] Speaker 2:  Que veremos también, pues, oye, tiene que elegir un asiento de la ventanilla y mirar su precio, añadir un equipaje de facturación, continuar solo con la voz, y bueno, también se... bueno, tiene que intentar completar el flujo, ¿vale? Y luego tenemos, por otro lado, el lector de pantalla, que básicamente va a partir del apartado de pasajero, ¿vale?
+[09:54] Speaker 2:  Y tenéis que orientarse, rellenar los datos del pasajero, ¿vale? Y añadir el seguro, enviar un error a propósito en el formulario, y llegar al pago, ¿vale?
+[10:00] Speaker 2:  Entonces, bueno, esos son un poco los objetivos de cada uno de los flujos. Ahora, cuando os voy a dividir en los diferentes grupos, yo os voy diciendo a quién le toca cada uno de los grupos.
+[10:06] Speaker 2:  Yo os pongo otra vez un poco el objetivo en cada grupo, ¿vale? Para que lo tengáis claro, ¿vale? 
+[10:09] Speaker 2: ¿Alguna duda antes de empezar? Ok, lo dicho, lo primero: dividimos en grupos, un portavoz, ¿vale? Que comparta pantalla, y ya está, y empezamos, ¿vale?
+[10:18] Speaker 2:  La mecánica. En total, bueno, os voy a decir que en total creo que hay como unos... para guiaros, ¿vale?
+[10:22] Speaker 2:  Hay en torno a mínimo 10 fallos de accesibilidad por cada forma de interacción en cada flujo, bueno, en cada ejercicio, ¿vale? Para que lo tengáis ahí orientado, ¿vale?
+[10:29] Speaker 2:  Entonces, pues bueno, vamos con ello. Vamos a dividir por aquí las salas y comenzamos.
+[10:32] Speaker 2:  Tu, tu, tu, tu. Voy a dejar eso, voy a dejar unos 25 minutos, ¿vale?
+[10:36] Speaker 2:  Para que también os ubiquéis y demás, y vayáis con calma. Y luego, si necesitáis más, si necesitáis más tiempo, luego lo vemos, ¿vale?
+[10:41] Speaker 2:  A ver, esperemos que me deje hacer los grupos, si no, vamos mal. Grupo de trabajo.
+[10:45] Speaker 2:  Crear grupo de trabajo. Tres salas.
+[10:46] Speaker 2:  Vale. Vale, es más, estoy mirando que además van a salir ya, creo que os sale en el mensaje, la forma de interacción.
+[10:53] Speaker 2:  Es decir, te va a poner grupo, teclado, grupo, tal, ¿vale?
+[11:02] Speaker 2:  Venga. Pues venga, vamos con ello.
+[11:05] Speaker 2:  Os tiene que salir ahora un mensajito para uniros, ¿vale? A los diferentes grupos, y os tiene que salir qué grupo es cada uno, ¿vale?
+[11:09] Speaker 2:  Venga, pues, muchísima suerte, y ahora voy pasando por las salas, no os preocupéis.
+[11:15] Speaker 2:  Hola. 
+[11:15] Speaker 2: ¿Habéis salido a la sala principal?
+[11:17] Speaker 1:  Sí, terminamos. Hemos ganado.
+[11:22] Speaker 2:  Pudimos ver 11. Vale. Vais a hacer una cosa, ¿vale?
+[11:25] Speaker 2:  Porque estoy seguro que os habéis dejado alguno. Porque hay alguna cosa bastante curiosita.
+[11:29] Speaker 2:  Dame un segundito. Voy a ver dónde tengo yo el listado.
+[11:37] Speaker 2:  Vale, dame un segundito. Lo que vais a hacer va a ser... vais a decirme los criterios que habéis encontrado, ¿vale?
+[11:43] Speaker 2:  Y si os falta uno, volvéis y a ver si lo encontráis. Yo os digo, bueno, os puedo dar una pista, ¿vale?
+[11:47] Speaker 2:  Del que os falla, ¿vale? Me decís criterio.
+[11:50] Speaker 1:  Por criterio.
+[11:51] Speaker 2:  Criterio, sí, porque por agrupar un poco, porque seguro que de alguno habéis encontrado 27,000, es decir, por agrupar un poco.
+[11:58] Speaker 1:  Solo lo que hicimos fue encontrar los errores, no los agrupamos por criterio.
+[12:01] Speaker 2:  Vale, pero los errores los habéis categorizado por criterio o no? Ajá, os falta eso entonces. Me tenéis que decir qué criterio falla, ¿vale?
+[12:10] Speaker 2:  De los errores que habéis detectado, ¿vale? Y hay, os voy a decir otra cosa, hay siete tipologías de criterio, ¿vale?
+[12:14] Speaker 2:  Es decir, porque a lo mejor habéis encontrado un fallo y decís: "oye, esto por ejemplo es el 211, ¿vale? Que es el de teclado básico".
+[12:21] Speaker 2:  Pues esa a lo mejor habéis encontrado 34, ¿vale? Pero lo dicho, hay siete tipologías de criterio diferentes, ¿vale?
+[12:26] Speaker 1:  Ok.
+[12:27] Speaker 2:  Venga. Si queréis volver al grupillo de teclado y le dais ahí una vuelta, lo agrupáis por eso, por criterio, y veis que hay siete tipologías de criterio, ¿vale? Que en vuestro ejercicio.
+[12:35] Speaker 2:  Si hay alguna que no habéis encontrado, es decir, si al final hacéis la lista y os quedan tres, pues sabéis que os quedan cuatro tipologías por encontrar, ¿vale? Hay alguna que, lo dicho, no es tan sencillita.
+[12:42] Speaker 2:  Pero bueno, son todo A y AA, ¿vale? Los que hay, ¿vale?
+[12:46] Speaker 1:  Vale.
+[12:46] Speaker 2:  Venga.
+[12:48] Speaker 1:  Vale, pues yo tengo aquí. La primera es la modal, ¿no? No cumple, o sea, no respeta.
+[12:53] Speaker 3:  Espera, espera, nos vamos al grupo, nos vamos al grupo de teclado, mejor.
+[12:55] Speaker 1:  A la derecha.
+[12:56] Speaker 2:  Buenas, ¿qué tal? 
+[13:00] Speaker 2: ¿Cómo estáis? Perdona, porque me han liado el otro grupo, y estaba yo también repasando con el otro grupo, a ver si le faltaba algún criterio y demás. 
+[13:06] Speaker 2: ¿Qué tal? ¿Cómo ha ido? 
+[13:06] Speaker 2: ¿Qué criterios tenéis por ahí apuntados? ¿Cuánto habéis encontrado?
+[13:10] Speaker 1:  ¿Quién dice?
+[13:11] Speaker 2:  Uy, estoy ahí con el lector, escucho.
+[13:14] Speaker 1:  Me ha ido más difícil.
+[13:16] Speaker 2:  Uy, va.
+[13:22] Speaker 1:  Jolín, qué lío me estoy haciendo con el lector.
+[13:24] Speaker 2:  Vale, genial. Pues contadme, ¿qué habéis podido encontrar por aquí?
+[13:30] Speaker 2:  Buenas, Mar.
+[13:31] Speaker 3:  Hola.
+[13:32] Speaker 2:  ¿Qué tal? Bueno, nada, que estaba comentando, que estaba comentando que qué tal os ha ido. 
+[13:35] Speaker 2: ¿Qué criterio habéis podido encontrar? ¿Habéis localizado más o menos algunos criterios?
+[13:39] Speaker 3:  Pues sí, más o menos como que la mitad de lo que tú decías.
+[13:42] Speaker 2:  Vale. A ver, me dices solamente el criterio. Bueno, no sé si lo habéis llegado a categorizar los criterios o...
+[13:48] Speaker 3:  Más o menos, más o menos. Mira, tenemos, a ver, tenemos el de... corregidme si me equivoco, chicas, ¿vale? Y Alex.
+[13:53] Speaker 3:  Primero, el de evitar bloques, el de información y relaciones, porque tiene muchos labes que no están asociados. Propósito de los enlaces, porque hay varios enlaces de ver más o modificar, que tiene el mismo texto.
+[14:04] Speaker 3:  Uso del color, porque se utiliza, aunque este no sería el lector de pantalla, ¿vale?
+[14:07] Speaker 2:  Vale.
+[14:08] Speaker 3:  Etiquetas, instrucciones, porque ningún campo tiene indicaciones de ejemplos, de cómo rellenarse.
+[14:19] Speaker 3:  Mensajes de estado, ningún mensaje de alerta o de actualización de precio se anuncia.
+[14:23] Speaker 2:  Vale.
+[14:25] Speaker 3:  Y alguno más por ahí, que se me está olvidando.
+[14:31] Speaker 4:  Había el de, el del envío, el barrador, y no había el foco.
+[14:38] Speaker 3:  Ah, bueno, eso. Claro, sí, esto era una duda. Cuando le damos a enviar, lo primero, si hay errores, no te anuncia los errores, ni tampoco te mueve el foco.
+[14:45] Speaker 3:  Entonces, teníamos la duda de si realmente el foco tiene que moverse al primer campo que contenga error, si eso está recogido en un criterio.
+[14:53] Speaker 2:  A ver, realmente lo que te dice es básicamente que notifica. Es decir, si nos ponemos a nivel de lector de pantalla, lo que se exige sobre todo sería el 413, ¿vale? Que es el mensaje de estado para que el usuario se entere.
+[15:02] Speaker 2:  Básicamente que haga error, porque lo tú le das al campo y no se notifica de ninguna manera, ¿vale? El hecho de que el foco se mueva al primer campo de error, pues, sería algo más de teclado, pero tampoco sería como tal, yo diría que no sería un criterio, más un tema de buena práctica.
+[15:17] Speaker 2:  Es decir, si básicamente el botón ya da una notificación, es decir, da el mensaje de estado, ¿vale? Y ya se notifica al propio usuario del lector de pantalla, no tiene por qué moverse el foco, no es obligado, ¿vale?
+[15:27] Speaker 2:  Ahora bien, si lo que está pasando es: yo le doy a enviar y el foco no se está moviendo, ¿vale? Y tampoco se está notificando, entonces ahí sí que tienes un problema.
+[15:34] Speaker 2:  Pero si tú, por ejemplo, solamente movieras el foco, al moverlo y contextualizarlo, pues también podría llegar a pasar, ¿vale?
+[15:39] Speaker 1:  Pero Carlos, por ejemplo, si arriba de todo te aparece la lista de errores, pero tú estás en el scroll a la altura del botón y no sabes que eso te... ¿no? O sea, no ves la lista de los errores y tampoco hay un error que esté en el campo.
+[15:50] Speaker 3:  ¿Qué pasa?
+[15:51] Speaker 1:  O sea, no sabes que esa lista de errores te salió arriba en top level message.
+[15:54] Speaker 2:  Claro, pero si tú en el mensaje de estado, es decir, si tú le das notificar al usuario, imagínate, tú le das al botón, ¿vale? Pero tú, aunque no le muevas el foco, ¿vale? Sí que le estás notificando al usuario: "oye, hay estos errores", y le das la misma información que aparece arriba, te serviría también, ¿vale?
+[16:07] Speaker 1:  Pero dices que, o sea, contextual en el campo, dices. O sea, yo lo que noté cuando estás con el...
+[16:12] Speaker 2:  Claro, hay una manera, ¿vale? Es decir, a nivel del lector de pantalla, tú le puedes como modificar lo que escucha, a grandes rasgos, ¿vale? Para que lo entendamos.
+[16:20] Speaker 2:  Entonces, tú le puedes hacer: "oye, que cuando haga una acción, mantener el foco donde está el usuario", que en este caso es: "oye, en el botón", pero decirle, hacerle como un ping, un sonido, y decirle un texto.
+[16:27] Speaker 1:  ¿Qué pasa?
+[16:28] Speaker 2:  Lo que tiene que pasar es, ¿vale? Tú le das a una acción y el usuario espera que haya una acción-reacción, ¿vale? Es decir, que haya una reacción, pase algo, ¿vale?
+[16:34] Speaker 2:  Entonces, en este caso, lo que nos exige básicamente la WCAG, en este caso que aparecen errores y demás, es darle al menos un mensaje de estado. Es decir, notificarle que el formulario, pues, tiene errores, ¿vale?
+[16:41] Speaker 2:  Que nos aparece arriba un resumen de los errores, pues, lo que debería de pasar principalmente es que, es decir, como ha aparecido algo visualmente, ¿vale? Sí que debería de ese mensaje de estado, por lo menos, notificar la misma información que se le está dando al usuario visual, ¿me explico?
+[16:52] Speaker 2:  Entonces, si aparece una lista de cuatro errores, pues, le debería de estar notificando: "oye, en el mensaje de estado, oye, pues, falla esto, esto y esto". No es necesario, lo dicho, que se mueva el foco.
+[16:59] Speaker 2:  Pero a nivel de experiencia, yo sé que sería una muy buena forma, y bueno, lo he recomendado, ¿vale? Que se mueva el foco también, porque claro, ya tienes el listado, incluso con el enlace y demás, para ir directamente a los campos.
+[17:06] Speaker 2:  Es decir, eso es lo mejor, ¿sabes? Notificarle y, aparte, moverle diciendo: "oye, tienes tanto error", ¿vale?
+[17:11] Speaker 1:  Vale, sí.
+[17:12] Speaker 2:  Vale, genial. Venga, pues vamos a sacar, voy a sacar el resto de grupitos, si queréis, y ya hacemos aquí, vamos, movemos aquí a todo el mundo, que ya veo que también se están uniendo aquí la gentecilla de teclado. Y comenzamos aquí un poco con las sesiones y los portavoces, a ver qué me encuentro.
+[17:27] Speaker 2:  Vale, vale, creo que le doy 30 segunditos y ya está todo el mundo. 
+[17:30] Speaker 2: ¿Qué tal al final, López Teclado? ¿Habéis encontrado los dos criterios que faltaban? Uy, estás silenciada, Marta, que yo te iba a hablar, pero...
+[17:39] Speaker 1:  Creemos que sí.
+[17:40] Speaker 2:  Vale, genial, genial, genial. ¿El 241 lo habéis encontrado?
+[17:43] Speaker 1:  241, sí, sí.
+[17:44] Speaker 2:  El del carácter y tal.
+[17:47] Speaker 1:  Creo que sí.
+[17:48] Speaker 2:  Vale, ok.
+[17:51] Speaker 2:  Ay. Vale, perfecto.
+[17:51] Speaker 2:  Pues bueno, ya estamos todos. Voy a sacar por ahí el grupo que faltaba ahí.
+[17:54] Speaker 2:  Ya estamos todos aquí en la sala común. Venga, genial.
+[17:56] Speaker 2:  Pues si os parece, ¿vale? Ahora lo que vamos a hacer va a ser un poco poner en común todo lo que habéis ido descubriendo, ¿vale?
+[18:01] Speaker 2:  Más o menos me he ido pasando por los grupos, me parece que súper bien, porque habéis encontrado un montón de cosas, y creo que además incluso habéis encontrado en algún caso más de lo que yo había detectado, ¿vale? Sí que es verdad que habéis detectado incluso cosas que está guay, porque habéis detectado cosas que no eran de vuestra forma de interacción.
+[18:13] Speaker 2:  Habéis encontrado cosas mayores, pero bueno, está bien también para los criterios y demás. Incluso había alguna que me lo habéis dicho y digo: "ostras, pues mira, no lo había detectado yo, pero se puede añadir", ¿vale?
+[18:19] Speaker 2:  Así que si queréis, por empezar, grupo de teclado, ¿vale? Portavoz, no sé quién estaba de portavoz en ese grupo.
+[18:27] Speaker 1:  María, María Pía. Es que se ha tenido que marchar.
+[18:29] Speaker 2:  Ah, vale, pero tenéis el Figma y lo tenéis compartido por Zoom?
+[18:32] Speaker 1:  Yo lo tengo, pero creo que lo he perdido. ¿Lo tenéis, chicas? Porque no lo encuentro.
+[18:36] Speaker 2:  Por ahí en el grupo, ¿quién más estaba? Estaba Bárbara, ¿no?
+[18:38] Speaker 3:  No, fue todo muy rápido, no alcancé a...
+[18:41] Speaker 1:  Que yo me he salido y creo que no lo tengo, pero le escribimos.
+[18:44] Speaker 3:  Sí, pero fue en el chat del grupo.
+[18:45] Speaker 1:  Sí, es que en el chat del grupo no se puede recuperar.
+[18:47] Speaker 3:  Yo lo tengo, yo lo tengo.
+[18:48] Speaker 1:  Vale.
+[18:48] Speaker 2:  Ah, vale, uf, menos mal.
+[18:50] Speaker 1:  Bueno, si no le escribíamos, nos ha dejado para que eso, pero pensaba que se quedaba como en un chat ahí como escondido.
+[18:54] Speaker 2:  Vale, pues si queréis alguna compartir y vais comentando a lo mejor entre las tres. A ver.
+[18:57] Speaker 3:  Lo he pasado por el chat.
+[18:59] Speaker 2:  Vale, pues si queréis alguna.
+[19:01] Speaker 1:  O comparto yo, lo que queráis.
+[19:02] Speaker 3:  Sí, tira tú, tira tú.
+[19:04] Speaker 2:  Vale, y así compartís un poco y comentáis los hallazgos un poco. Si queréis comenzar también poniendo el flujo, comentando si queréis brevemente el flujo que os ha tocado, ¿vale? Hacer para poner en contexto.
+[19:14] Speaker 2:  Y si queréis, bueno, ya enseñando el Figma y lo que tal, ¿vale? Bueno, es que lo han hecho súper pro aquí en el grupo este.
+[19:20] Speaker 3:  Está más abajo, está en otra página.
+[19:21] Speaker 1:  Vale, ok.
+[19:22] Speaker 3:  En clase cuatro.
+[19:23] Speaker 1:  Clase cuatro.
+[19:24] Speaker 3:  Vale.
+[19:26] Speaker 2:  Si quieres, puedes quitar eso. Si le das ahí a cerrar lo de Google Meet que te sale arriba a la derecha, te sale para quitarlo.
+[19:30] Speaker 1:  Ah, vale, sí.
+[19:31] Speaker 2:  No cierro la llamada.
+[19:31] Speaker 1:  Es que me da miedo perderlo, igual que con el Figma, ¿no? Nunca he cerrado nada, lo tengo todo amontonado. Vale, bueno, pues te cuento todo lo que hemos encontrado, o sea, así al sorretón, ¿no?
+[19:40] Speaker 1:  Y tú me dices.
+[19:41] Speaker 2:  Sí, bueno, si quieres enseñas también las capturas que habéis hecho y demás, genial, ¿vale? Así también para el resto de compis y demás, pues así les sirve, ¿no? Que creo que lo habéis encontrado bastante guay.
+[19:47] Speaker 1:  Vale, pues nuestro reto era, teníamos que buscar solo con teclado y buscar un vuelo de Madrid a Lanzarote, coger, bueno, una vez que lo tuviéramos, ordenar a partir del más barato, ¿no? Y creo que era, ya está, creo que no teníamos nada más.
+[20:02] Speaker 3:  Y luego elegir el vuelo más barato.
+[20:03] Speaker 1:  Elegir el vuelo más barato, eso es. Entonces, lo primero, llegamos a la página y cuando nos ponemos por, empezamos a navegar por teclado, cuando llegamos aquí al destino, que es la segunda tab, se abre solo. Se abre un poco ahí a lo loco y entonces, bueno, pues esto incumple el 3.1.
+[20:17] Speaker 1:  Luego.
+[20:18] Speaker 2:  Vale, antes de continuar, el reto, ¿qué opináis de ese criterio? Es decir, lo que comenta aquí, al pasar la tab por destino, ¿vale? El menú se abre solo, sin que lo pide, te obliga a recorrer los destinos para seguir. 
+[20:27] Speaker 2: ¿Estáis de acuerdo o no estáis de acuerdo? Por ahí, Mar.
+[20:31] Speaker 3:  A ver, yo lo que creo es que este requisito lo que indica es que te haga un cambio de contexto. Y que aparezca un menú no es un cambio de contexto. Ahora bien, debería de poder descartarse con escape.
+[20:40] Speaker 3:  Si no se descarta con escape, sí es un problema de teclado.
+[20:42] Speaker 2:  Ah, ya.
+[20:42] Speaker 3:  Pero el hecho de que aparezca no es un cambio de contexto. No estás obligado, si descartas con escape no estás obligado a recorrerlo, así que no fallaría.
+[20:49] Speaker 1:  Pero, disculpa, al recorrer el menú, la idea es que con el tab yo pueda recorrer cada sección y si quiero entrar a una, ahí recién se despliegue el detalle de esa sección, ¿o no?
+[21:00] Speaker 3:  Claro, yo entiendo.
+[21:00] Speaker 2:  Claro, pero es un poco lo que dice Mar, en este aspecto. Este criterio lo que dice es que, claro, es decir, porque en este caso te está movido el foco. Es decir, tú has puesto, has entrado en el tab, ¿no?
+[21:10] Speaker 2:  En destinos, y te mueve el foco.
+[21:12] Speaker 1:  He entrado en destinos, se te abre esto, sí, y creo que se te pone en Lanzarote. Pero no me acuerdo bien, creo que sí, espera.
+[21:18] Speaker 2:  Claro, es que no se te pone en Lanzarote.
+[21:20] Speaker 1:  No, no, se te pone así.
+[21:21] Speaker 3:  Ya.
+[21:21] Speaker 2:  Claro, entonces en este caso, claro, tú le has dado al tab, es decir, has cambiado el foco, pero no te ha cambiado el contexto. Cambiar el contexto es que te mueva el foco, ¿sabes lo que te quiero decir? Entonces, claro, en este caso no te cambiaría, es decir, claro, no cambiaría, es decir, no sería ese criterio.
+[21:32] Speaker 2:  Como mucho es lo que comenta Mar, del 412, ¿vale? Que sería básicamente cuando no funciona, por ejemplo, con escape, es decir, no cumple su función, que es básicamente la de un menú, que es básicamente cuando tú estás dentro del menú, ya dentro, el foco está dentro, que se pueda dar con escape.
+[21:43] Speaker 2:  En ese caso, que se pueda dar con escape es parte de su función. Es decir, ¿por qué?
+[21:45] Speaker 2:  Porque las ventanas modales, los cuadros de diálogo, una de las características que tienen que tener es que con el escape se cierren, ¿vale? Entonces, ¿qué pasa?
+[21:50] Speaker 2:  Que los menús pasan lo mismo, es un menú contextual. Estoy dentro del menú, le doy al escape y me lo debería cerrar.
+[21:55] Speaker 2:  Y si no se cierra con el escape, estamos ante un criterio 41.2, ¿vale? Que eso, bueno, igualmente ese ni lo había puesto por el hecho de que lo vamos a ver en lo del componente y se os explicará en detalle, así que no os preocupéis, ¿vale?
+[22:04] Speaker 2:  Pero.
+[22:05] Speaker 1:  Entonces esto es correcto, es decir, si tú estás haciendo, si tú estás yendo aquí y se te abre aquí, es correcto.
+[22:08] Speaker 2:  Sí. Es decir, eso no tiene, no habría problema, ¿vale? Al final estás emulando también un poco lo que haces con hover, es decir, si tú vas a hover y le das a destino, es decir, también hay que pensar un poco en el usuario, ¿no?
+[22:18] Speaker 2:  De teclado, es decir, tú cuando haces hover ves en destinos todo el desplegable, ¿no? Es decir, tú tienes la opción de simplemente visualizar qué hay, ¿no?
+[22:23] Speaker 2:  De "oye, pues destino" y veo el menú abierto, haciendo hover. Pues es un poco lo mismo con el teclado, "oye, paso", ¿no?
+[22:27] Speaker 2:  Y veo exactamente cuáles son las opciones que hay desplegadas, ¿vale?
+[22:30] Speaker 1:  Vale.
+[22:30] Speaker 2:  Ok? Pero igualmente lo veremos, este tipo de elementos y demás, que son "oye, pues eso abre un desplegable, incluso con un submenú y demás", lo vamos a ver en el módulo 5, así que no os preocupéis, que es un poco más avanzado. Pero sobre todo me interesaba lo del criterio 321 para no confundir, ¿vale?
+[22:40] Speaker 1:  Ok.
+[22:41] Speaker 2:  Venga, genial, continuamos.
+[22:43] Speaker 1:  Aquí, el tab pasa de ida y vuelta al origen sin dejarte elegir. Ah, sí, esto no lo ve, el de solo ida se lo salta y no hace nada. Hay que confirmar si funciona con flecha.
+[22:52] Speaker 1:  No, no funciona con flecha. Yo vi, o sea, donde hemos visto no funciona con flecha.
+[22:57] Speaker 1:  No, entonces este estaría bien, entiendo, ¿no?
+[22:59] Speaker 2:  No, funciona con flecha.
+[23:01] Speaker 1:  Vale, o sea, si estás aquí.
+[23:03] Speaker 2:  Si le das ahí, vuelve para atrás, dale a la flecha.
+[23:06] Speaker 1:  Vale, o sea, debería funcionar con flecha. O sea, si funciona con flecha y no funciona con tab, está bien.
+[23:09] Speaker 2:  ¿Por qué? Porque es un grupo de opciones. Cuando es un grupo de opciones, es decir, cuando tú entras dentro de un grupo de opciones, con tab se entra, ¿vale?
+[23:14] Speaker 2:  Con tab se sale, y dentro del grupo de opciones, con la flecha de navegación te mueve, ¿vale? Y eso pasa para cualquier tipo de selección de opción.
+[23:20] Speaker 2:  Creo que lo comentaba en alguna del módulo 4, había en algún casetillo, ¿vale? Pero bueno, también lo veremos en las componentes.
+[23:24] Speaker 2:  Pero bueno, es una manera de interacción también con el teclado. Es decir, grupo de selección de opciones, se prueban con flecha, ¿vale?
+[23:29] Speaker 2:  Por ejemplo, los elementos de tabs, de pestañas, también son un grupo de selección. Es decir, tú seleccionas la tab que tú quieres, por lo tanto funciona con flecha de navegación.
+[23:34] Speaker 2:  Por ejemplo, en un calendario, en un selector de calendario de fecha, pues ahí es un grupo de selección, por lo tanto también va con flecha de navegación. Es decir, la navegación por teclado va con tab, con shift tab, con espacio, con enter y con la flecha de navegación principalmente, ¿vale?
+[23:46] Speaker 2:  Además, bueno, lo habéis puesto bien realmente, porque habéis puesto una interrogación de "oye, si funciona con flecha, está bien". Así que bueno, está bien.
+[23:51] Speaker 2:  Si no funcionara, está bien correcto, como lo habéis puesto en la premisa. Si no funcionara, sí que sería el 211, ¿vale?
+[23:54] Speaker 2:  Bueno, realmente sería el 412, porque no cumpliría la función el elemento, ¿vale? Pero bueno, se podría también poner como incumplimiento, ¿vale?
+[24:01] Speaker 1:  Vale. Vale, esto, es que no sé, lo digo todo, es que vamos a aquí hasta las 10.
+[24:07] Speaker 2:  Bueno, si quieres hacemos un recorrido sobre esta primera fila, ¿vale? Que es lo que más me interesa quizás, y ya pasamos al siguiente grupo, ¿vale?
+[24:12] Speaker 1:  Vale, aquí no puedes, cuando escribes más, si vas hacia abajo con la flecha no te hace nada. No hay manera de elegir la opción con teclado. No sé si está bien o no.
+[24:21] Speaker 2:  Genial, sí, no, está perfecto. Vale, sobre todo el 412, que es lo que fallaría en este caso, ¿por qué? Porque el propio elemento no funciona como debería funcionar.
+[24:26] Speaker 2:  En este caso es un tipo autocomplete, es un tipo elemento combo box. En este caso tiene que funcionar a nivel de interacción por teclado con la flechita hacia abajo para seleccionar las opciones.
+[24:32] Speaker 2:  Porque si no, claro, el usuario no puede seleccionar ninguna opción, ¿vale?
+[24:34] Speaker 1:  Vale.
+[24:35] Speaker 2:  Vale, y antes.
+[24:35] Speaker 1:  Y luego este, como no pudimos elegir de la lista, ah, vale, como no puede elegir nada, pues aquí está vendido, porque no puede hacer nada. Entonces no puede avanzar, no puede hacer nada.
+[24:43] Speaker 2:  Vale, vale, ok. Vale, perfecto. Vale, pues bueno, luego habían encontrado por aquí también que, bueno, que se había quedado atrapado, simplemente por resumir, que se había quedado atrapado con el teclado, ¿vale?
+[24:51] Speaker 2:  Es decir, que aparece una modal, el hecho de que aparezca una modal interrumpa, ¿vale? Pues eso, el foco, ¿vale?
+[24:56] Speaker 2:  Que en este caso secuestra un poco el tema del foco, que luego aparece una modal en la cual queda atrapado el foco, ¿vale? También que había un elemento que, bueno, que el foco no era visible.
+[25:03] Speaker 2:  Y bueno, han encontrado básicamente todos los criterios en sí. Además, lo han puesto súper bonito en el Figma, así que, bueno, súper, súper, me gusta bien.
+[25:08] Speaker 2:  Igualmente también en la presentación, que os la dejaré en la grabación, os dejaré, por si alguien quiere probar el resto de formas de interacción, os dejaré un poco también el resumen de todos los criterios que yo había encontrado, ¿vale? Sí, Caro?
+[25:16] Speaker 3:  En este caso aplicaría el criterio que no me es el número de salto de contenido, de poner uno en el menú.
+[25:24] Speaker 2:  ¿Te refieres al de recibir el foco? ¿O cuál te refieres?
+[25:27] Speaker 1:  Ah, no, el de pasar al contenido, ¿no? La que te salga la modalita esa.
+[25:30] Speaker 3:  Que te salga el botón de saltar.
+[25:31] Speaker 1:  Sí. A nosotros aquí no lo hemos puesto, lo hemos puesto en el otro, en el siguiente, porque como se repite lo que dijiste tú, Bárbara, pero vámonos.
+[25:36] Speaker 3:  Sí.
+[25:37] Speaker 2:  Sí, sí, lo habíais puesto, ¿no? Por ahí lo habíais visto.
+[25:39] Speaker 3:  Y en el segundo paso.
+[25:40] Speaker 1:  En la segunda, eso es, lo que dice Bárbara.
+[25:41] Speaker 3:  El segundo paso, porque como ya habíamos visto el menú, en el segundo paso ya queríamos ir directamente al contenido y no podíamos, teníamos que pasar por el menú de nuevo.
+[25:47] Speaker 2:  Vale. Sí, sí, al final, pero sí es lo que tú dices, claro, que creo que vosotros lo habéis detectado también, ¿no? El hecho de, bueno, no sé, yo había otro grupo, creo que lo había detectado también, el hecho del saltar, ¿no?
+[25:54] Speaker 2:  Porque al final es evitar el bloque, ¿no? Saltar al contenido principal y demás.
+[25:57] Speaker 1:  Pero eso, la primera vez que te sale, tiene que salir? O solamente cuando ya vas más veces? Tiene que salir siempre.
+[26:01] Speaker 2:  No, tiene que salir la primera vez, sí puede salir.
+[26:02] Speaker 1:  Vale, vale.
+[26:03] Speaker 2:  Porque tú me dices al final un usuario que a lo mejor es recurrente en la página, por eso le va a salir eso.
+[26:06] Speaker 1:  Vale, vale.
+[26:07] Speaker 2:  Venga, perfecto. Pues nada, genial el ejercicio, la verdad. Siguiente grupo, por ahí, lector de pantalla, comentáis un poquito qué habéis encontrado.
+[26:15] Speaker 2:  Por ahí, ¿quién estaba de este grupo? Mar, si te animas, lo puedes comentar si quieres, sin compartir pantalla, o bueno, comentar así un poco qué habéis encontrado.
+[26:22] Speaker 3:  Hola. Sí, habíamos encontrado el de evitar bloques, como han dicho las chicas ahora mismo. Y luego, principalmente, la ausencia de etiquetas asociadas a los campos de formulario.
+[26:32] Speaker 3:  Tampoco había instrucciones en los campos de formulario, ni ejemplos. No se detectaban los errores, los mensajes de error no, se utilizaba únicamente el color, se marcaban con un borde rojo.
+[26:41] Speaker 3:  Y bueno, sí que salía arriba una capa con la descripción de los errores, pero esa capa no estaba programada para los lectores de pantalla. Y luego también había varios enlaces en las mismas páginas con los mismos textos.
+[26:51] Speaker 3:  O sea, esto aplicaría a propósito de los enlaces. Y seguro que había más, yo ahora mismo no caigo, pero creo que mis compañeros se acuerdan de alguno más.
+[26:59] Speaker 2:  Vale.
+[27:00] Speaker 1:  Te acompaño.
+[27:02] Speaker 3:  Que nos quedó ahí la duda, el captcha si era contenido no textual, el 1.1.1. Exacto. El captcha era puramente visual, no tiene alternativa.
+[27:11] Speaker 2:  Vale. Y ese criterio, ¿alguien sabe cuál es? Eso es un criterio, efectivamente.
+[27:14] Speaker 2:  Pero, ¿cuál es el criterio?
+[27:15] Speaker 3:  ¿Puede ser 1.1.1?
+[27:18] Speaker 2:  Sí, vale. Y hay otro criterio que afecta a los captchas. 
+[27:20] Speaker 2: ¿Alguien sabría decirme cuál es? Es decir, es que la imagen, bueno, es que claro, no es el 1.1.1, ¿vale? Porque, claro, ¿qué pasa?
+[27:27] Speaker 2:  Que si tú le das básicamente la información de cuál es la resolución del captcha, claro, tienes un problema, que es que le estás dando básicamente, le estás dando la solución, ¿no? Al usuario de teclado, es decir, oye, pues esta es la solución, y lo pone entonces el captcha pierde el sentido, pierde el propósito, ¿no?
+[27:37] Speaker 2:  Pero hay un criterio específico para eso, que es el tema asociado a los captchas. 
+[27:41] Speaker 2: ¿Alguien sabe cuál es? ¿Nadie? Bueno, voy a compartir pantalla por si alguien no sabe el captcha que digo, porque estaba al final del pago.
+[27:49] Speaker 2:  Lo vemos así rápidamente. Esperaros, porque tengo aquí un lío de pantallas bastante curioso.
+[27:55] Speaker 1:  ¿Tiene que ver con que haya otros métodos aparte del captcha?
+[27:57] Speaker 2:  Efectivamente. A ver.
+[28:00] Speaker 3:  Vale, aquí lo pongo. Pongo la, uy, ¿estáis viendo la pantalla? La veo un poco.
+[28:05] Speaker 1:  Sí.
+[28:05] Speaker 2:  Vale, perfecto. Es este captcha, ¿vale? Vale, ¿cuál es el tema del captcha?
+[28:08] Speaker 2:  Que primero, el 1, el criterio 1.1, tiene una excepción para los captchas, ¿vale? Al igual que hay un tema de ciertas excepciones, pues para los captchas tiene una excepción, ¿vale?
+[28:14] Speaker 2:  Porque claro, que es lo que comento, que si dice el captcha, es decir, si esta imagen dijera básicamente la solución, le está dando la solución al usuario de lector de pantalla, pierde el propósito del captcha, ¿vale? Entonces, para esto tenemos básicamente el criterio, pues el 338, ¿vale?
+[28:25] Speaker 2:  Que es el tema de autenticación accesible. Que básicamente lo que nos dice es que tiene que exigir, o tiene que haber una alternativa, ¿vale?
+[28:31] Speaker 2:  Que no solamente por este caso, es decir, que nos permita a todos los usuarios poder básicamente resolver el reto de seguridad que se le imponga, ¿vale? Entonces, pues en este caso no existe una alternativa. 
+[28:40] Speaker 2: ¿Cuáles podrían ser las alternativas? A día de hoy, para empezar los captchas, estos típicos que ya son por letra y demás, esto está anticadísimo, está muy, muy anticuado, porque ahora mismo modelos como un ChatGPT o un Claude o lo que sea, son capaces de, a través de una captcha de pantalla, saber perfectamente que aquí pone JJEG9U, ¿vale? Es decir, esto está anticuadísimo y a nivel de seguridad no sirve para nada, ¿vale?
+[28:55] Speaker 2:  Entonces, a día de hoy existen mecanismos y captchas que son invisibles, que analizan básicamente a través de heurística, básicamente si es un usuario, es un bot o lo que sea, y son capaces sin poner ningún reto de seguridad, saber la autenticación, ¿vale? Entonces, eso es lo que a día de hoy se utiliza sobre todo.
+[29:07] Speaker 2:  Por eso cada vez, posiblemente, hace años se veían muchos captchas, seguro, y ahora a día de hoy, sobre todo en ciertos productos, ya no se ven los captchas, ya son captchas que son invisibles, ¿vale? Y sigue teniendo la autenticación, es decir, siguen teniendo esa protección contra bots, pero no son visuales, ¿vale?
+[29:17] Speaker 2:  Entonces, esa es la manera moderna de, pues eso, de incluir un captcha. Que tenemos este tipo de captchas y es impepinable tenerlo, ¿vale?
+[29:24] Speaker 2:  Pues tenemos que dar una alternativa. Por ejemplo, seguro que habéis visto los típicos captchas que como estos, que luego tienen como alternativa por voz, y sale una voz así diciendo: "Oye, pues ta-ta-ta, es este código", y tú tienes que apuntar el código.
+[29:32] Speaker 2:  Pues al final es dar alternativa al usuario para que no solamente sea visual, o no solamente sea auditivo, etcétera, ¿vale? Y ya está, poco más.
+[29:39] Speaker 2:  Ese es el criterio del 338, así ya lo tenéis ubicado. Vale, pues si queréis vamos con el último grupillo, ¿vale?
+[29:44] Speaker 2:  Que nos quedan aquí unos minutillos. Era el grupo que tenía el objetivo de.
+[29:48] Speaker 1:  Carlos, Carlos, Carlos.
+[29:49] Speaker 2:  Sí.
+[29:49] Speaker 1:  Ya, perdona, es que por un tema como de hora, que quería decir que yo había revisado los proyectos y fui dejando comentarios en el Figma. Entonces, había un par que no pude acceder al Figma, pero les mandé la solicitud y todo lo demás. Entonces, no sé si prefieren como que con eso es suficiente o hacer como que mini touch bank, no sé, mini reuniones para comentar, ¿vale?
+[30:09] Speaker 1:  Pero en general, lo único que diría es que hay algunos que escogieron demasiado flujo. Entonces, como que si el comentario es como acotado, es porque, no sé, por ejemplo, el login es un flujo, añadir al carrito de compra es otro flujo.
+[30:20] Speaker 1:  O sea, como que fíjense que en general los equipos no hay nadie que lleve realmente los proyectos como de punta a punta, porque se van dividiendo por flujo. Entonces, no es que esté mal el proyecto, sino que es muy grande y no les va a dar el tiempo, ¿ya?
+[30:30] Speaker 1:  Entonces, como, pero eso solamente a aquellos que no llegamos a acotarlo o que no lo habíamos visto antes. Entonces, para que tengan en consideración.
+[30:36] Speaker 1:  Si me necesitan, ya tienen el número y todo lo demás, ¿vale? Me pueden preguntar por Discord.
+[30:40] Speaker 1:  Yo hoy día ya, que justo hoy día he estado así como que en puerta loca, pero ya hoy día vuelvo a Discord y estaré más atenta. Así que cualquier cosilla, nosotros igualmente, Carlos, quedó todo registrado en el Excel que estamos compartiendo.
+[30:50] Speaker 2:  Vale, perfecto.
+[30:50] Speaker 1:  ¿Ya?
+[30:51] Speaker 2:  Sí, el Excel es interno, por cierto, del proyecto, por eso te digo.
+[30:55] Speaker 1:  Ah, sí, espérame, el proyecto para comentar.
+[30:58] Speaker 2:  Bueno, luego si quieres lo comentamos. También iba a comentar con su el tema de el siguiente paso, ¿no? De esta semana, para ir haciendo, para ir avanzando en el proyecto.
+[31:04] Speaker 1:  Sí, ya deberíamos estar empezando a dibujar en el fondo como las pantallas con los, o sea, el flujo definido y dibujar las pantallas con los elementos que sean necesarios. Lo más importante también es que vayan pensando como qué componentes son los que van a documentar. Había unos componentes exquisitos a todo esto de los proyectos que revisé, por ejemplo, este como de seleccionar la butaca, o había uno que un stepper, sí, que añadía tiempo, como este justo que era el de vinculado a la energía.
+[31:30] Speaker 1:  Tenía como, yo fui anotando así como: "Oye, este componente puede ser interesante para la documentación", ¿ya? Pero lo importante es que en el fondo que ya estén dibujando.
+[31:37] Speaker 1:  El diseño no tiene por qué ser tan perfecto. Recuerda decir que el objetivo del curso no es diseñar bonito, sino que aprender a documentar.
+[31:45] Speaker 1:  Estamos seguros de que ya saben hacerlo bien, o lo mejor posible, ¿vale? Pero entonces, como agárrense el flujo definido, traten de acotarlo.
+[31:52] Speaker 1:  Si es que tienen dudas, dibújenlo a mano, le toman una captura de pantalla, no más chavo, y lo mandan por Discord y ahí acotamos, ¿vale? Pero no diseñen todavía como los comportamientos de los componentes, porque hay que escoger los dos componentes simples y el componente complejo que es con el que van a hacer el proyecto.
+[32:06] Speaker 2:  Sí, aparte de lo que les comenté también al principio, es que ahora se desbloquea el módulo 5, que es de componentes, todavía queda el módulo 6, que es la parte donde tú vas enseñando la parte de Figma, documentación, de sistema de diseño y demás, que bueno, que vayan con calma, ¿vale? Es decir, que bueno, que no preocupen.
+[32:18] Speaker 1:  Sí, justo, iba a decir que la gente que no tiene comentarios, bueno, porque yo los que revisé era el de Carol.
+[32:23] Speaker 2:  Puede ser martes que lo haya enviado esta tarde, puede ser.
+[32:25] Speaker 1:  Claro, por eso digo. Igual es muy pronto, pero igual, vale, vale, no, no, tengo prisa.
+[32:29] Speaker 2:  Vale, vale, es que justo entré a la revisa, creo que le empezó ayer con su a hacerlo. Igualmente, los que habéis pasado hoy, que creo que habéis pasado dos o tres nuevos, lo añado, se lo paso a consultor.
+[32:37] Speaker 1:  Revisé hasta el que mandaron el 27, que creo que fue ayer.
+[32:40] Speaker 2:  Sí.
+[32:41] Speaker 1:  Sí, sí, yo lo mandé hace un rato, sí, sí. Sí, entonces los que hayan enviado hoy día no los he alcanzado a revisar, pero para que sepan, de los dos que comento que no tenían el acceso a Figma, uno es de Carmen y el otro es de Miranda.
+[32:53] Speaker 2:  Creo que ninguno estaba ahí.
+[32:55] Speaker 1:  Ya, bueno.
+[32:55] Speaker 2:  Luego lo comentamos, si quieres lo menciono también en Discord, ¿vale?
+[32:58] Speaker 1:  Eso.
+[32:59] Speaker 2:  Vale.
+[32:59] Speaker 1:  Eso lo has terminado, muy bien.
+[33:00] Speaker 2:  Perfecto, pues nada.
+[33:01] Speaker 1:  No, no, para que sigan.
+[33:02] Speaker 2:  Muchas gracias.
+[33:02] Speaker 1:  Chao, chao.
+[33:03] Speaker 2:  Chao. Vale, genial. Pues si queréis vamos a ver rápidamente ya la parte de lo que quedaba, de voz puntero y control por voz, que creo que ha sido súper interesante, porque han descubierto muchísimas cosillas, y ya con eso terminamos la clase.
+[33:12] Speaker 2:  Así que si quieres, si queréis grupo, Carol y demás, Julie, y bueno, Gisela creo que se había ido, ¿no? Sí.
+[33:19] Speaker 2:  Ah, no, que habré que abrir el estudio también con un hombre.
+[33:21] Speaker 3:  A ver, comparto pantalla. El primero era el del tiempo ajustable, porque nosotros teníamos que decir un asiento en la ventanilla y añadir 20 kilos de equipaje. Entonces tenemos el tiempo aquí que cuenta para atrás, no lo se puede detener ni ampliar, y cuando termina te devuelve al paso uno.
+[33:40] Speaker 3:  Entonces aquí había dos criterios, el del tiempo ajustable, y luego nos ha contado Carlos que está el 325, que es triple A, con el cambio este de contexto sin que el usuario haga nada. Después teníamos.
+[33:52] Speaker 2:  Eso por acotar es básicamente porque cuando se termina el tiempo da igual el paso en el que estuviera, que te vuelve otra vez a la pantalla inicial, ¿vale? Entonces no entra dentro del 321 y no entra dentro del 322, porque básicamente aplican uno, cuando estás haciendo básicamente cambias el foco y entra básicamente en un campo, y el otro básicamente cuando estás rellenando un formulario. Pero hay uno que es ese, el que comentamos, que es básicamente hoy, pues que el usuario solamente cambia de contexto cuando lo pide, 
+[34:10] Speaker 2: ¿vale? Entonces en este caso, ¿qué pasa? Que ese criterio lo que se refiere es, vale, cuando hay una acción es cuando cambia de contexto.
+[34:14] Speaker 2:  Entonces en ese caso, como no lo ha pedido el usuario, no hay aviso ni nada, le cambia directamente de contexto, le resetea otra vez todo, pues entonces estaríamos ante ese criterio que en ese caso está marcado como triple A, ¿vale? Nada, sigue.
+[34:23] Speaker 3:  Vale. Después está el 141 de uso de color en las tarifas, el que has seleccionado, la de 9 y de 8 no se podrían, solo se diferencian por el color. Después el 257 y el 251 en el slider, solo lo puedes hacer arrastrando y no hay alternativa.
+[34:42] Speaker 3:  El 253 no me acuerdo dónde era, el de etiqueta en el nombre.
+[34:45] Speaker 2:  Creo que era el botón de continuar, puede ser, de tu reserva y el botón de continuar.
+[34:47] Speaker 3:  Sí, en el botón. Vale. Después teníamos 412, nombre, función y relaciones, que había un elemento que le faltaba el nombre accesible.
+[34:59] Speaker 2:  Perdón, el de abajo, el slider, creo que era, ¿no? Puede ser.
+[35:03] Speaker 3:  Sí.
+[35:03] Speaker 2:  Cuando se controlaba por voz, pues como que no salía el nombre accesible, no salía nada, es decir, faltaba ahí el nombre accesible del elemento, ¿vale?
+[35:08] Speaker 3:  Eso es, el slider. Después el 222, causar detener, ocultar este carrusel.
+[35:13] Speaker 2:  Vale.
+[35:14] Speaker 3:  El 253, que era este, que la etiqueta que tenía era, no era continuar, vamos, decía otra cosa. Es verdad que con los números podrías continuar el flujo, si dices mostrar números en lugar de mostrar nombres, pero eso estaría mal. Luego hemos encontrado otro triple A, que era el de animación por interacción, que podías reducir el movimiento, y esto sigue sin pausarse.
+[35:36] Speaker 3:  El 144, en cambio de tamaño, en el zoom al 400, se pierde el paso cuatro y se corta parte de este carrusel con el botón. Después otro triple A, que es el de los botones de añadir del carrusel, es triple A porque sí que está en el contexto dentro de esta card, pero podría ser añadir embarque prioritario, añadir seguro de viaje o añadir coche de alquiler.
+[36:00] Speaker 3:  Y después los dos que nos faltaban, que nos has dicho Carlos para que mirásemos dónde estaban, era el 1413, que era el tooltip de los asientos. Bueno, esto es lo que pasa, que se acaba el tiempo y te lleva al paso uno.
+[36:12] Speaker 3:  Eso, el tooltip de los asientos, que no se descartan con escape y lo pierdes. Y el 258, que es el tamaño mínimo de estos elementos.
+[36:22] Speaker 3:  Bueno, eso es lo que hemos encontrado, no sé si era justo eso, Carlos.
+[36:24] Speaker 2:  Creo que sí, creo que no tenían el tamaño mínimo, que era de 24 por 24, y estaban muy por ahí, y además entonces con el área de básicamente de clics, no tiene el mínimo, ¿vale? Creo que sí que eran esos, ¿vale? Entonces, bueno, guay.
+[36:34] Speaker 2:  Igualmente pondré, porque creo que habéis puesto el 249, si mal no estoy, en el de botón de añadir del carrusel, si mal no estoy, puede ser?
+[36:43] Speaker 3:  Sí.
+[36:43] Speaker 2:  Ese estaría mal, porque aplica enlace solamente, eso no son enlaces, hasta donde yo sé, son botones.
+[36:48] Speaker 3:  Vale.
+[36:48] Speaker 2:  Entonces aplicaría eso en triple A solo si es enlace, no botón, ¿vale?
+[36:52] Speaker 3:  Vale.
+[36:52] Speaker 2:  Que creo que antes lo había escuchado y tal, digo que eso nada más, y tal, y digo ahora cuando lo explique lo comento. Creo que el resto sí que me ha cuadrado más o menos todo, ¿vale? Pues nada, muchas gracias.
+[36:59] Speaker 2:  Vale, pues nada, lo dejamos por aquí, que además ya llevamos ya unos minutillos de retraso. Espero que os haya gustado también este formato, que es un poco diferente.
+[37:03] Speaker 2:  Yo lo suelo hacer así las clases con más tema de ejercicio y demás, y más en grupo, para que también interactúe y apliquéis. Así que nada, lo dicho, nos vemos la semana que viene.
+[37:11] Speaker 2:  Os aviso, el módulo 5 se desbloqueará también por partes, ¿vale? Porque son bastantes lecciones.
+[37:15] Speaker 2:  Sí que serán lecciones más cortitas, ¿vale? Para ver cada tipo de componente, ver las casuísticas, ver exactamente cómo interactúa con el lector de pantalla, teclado y demás.
+[37:21] Speaker 2:  Son muchas, ¿vale? Entonces se desbloqueará en una tira posiblemente de 10 y luego otras 10, ¿vale?
+[37:24] Speaker 2:  Lo mismo, entre hoy y mañana y viernes, ¿vale? Bueno, sí, mañana que es jueves y viernes posiblemente, ¿vale?
+[37:29] Speaker 2:  Entonces, bueno, para que lo tengáis ahí ubicado. También comentar una cosa.
+[37:33] Speaker 2:  Veo que también va bastante gentecilla retrasado. Entonces, si necesitáis también que dejemos como una semana de como hoy de relax, es decir, aplacemos como todo una semana para que también podáis poneros al día, porque vais a mil, vais también con tema de proyecto, hemos visto como mucha gente, incluso en la analítica vemos que también mucha gente no ha terminado el módulo 4, ¿vale?
+[37:48] Speaker 2:  Nos podéis comentar. Luego si queréis paso una encuesta por Discord, por si nos decís: "Oye, necesitamos también a lo mejor Carlos, que nos dejéis una semana, porque vemos que el ritmo es demasiado acelerado para ponernos al día", ¿vale?
+[37:56] Speaker 2:  Pues bueno, ahora dejamos luego una encuesta, y si vemos que mucha gente, más del 50%, ¿vale? De toda la gente que haya apuntado, lo necesita, pues valoramos, ¿vale?
+[38:02] Speaker 2:  En dejar una semanita de margen, donde, bueno, aplazamos todo como una semana, ¿vale? Para que sobre todo os podáis poner al día.
+[38:06] Speaker 2:  Lo que nos preocupa sobre todo es que, bueno, que lleguéis y demás, y os vayáis enterando y vayáis al ritmo también adecuado, ¿vale? Así que, bueno, luego lo dejaremos la encuesta por Discord, y también para que nos digáis vuestra opinión y demás, ¿vale?
+[38:14] Speaker 2:  Así que, bueno, lo dicho, espero que lo hayáis pasado bien, y ya está, nos vemos la semana que viene, ¿vale? Cualquier duda y demás por el Discord, ¿vale?
+[38:20] Speaker 2:  Venga.
+[38:20] Speaker 1:  Muchas gracias.

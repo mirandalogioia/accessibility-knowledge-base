@@ -7,7 +7,7 @@ last_updated: 2026-10-31
 
 # Módulo 4 — Formas de interacción y fundamentos de accesibilidad
 
-Resumen consolidado del Módulo 4, que fusiona el video (Carlos recorre una tienda de ejemplo con cada forma de interacción) con el texto escrito de cada lección (tablas de criterios, "lo que no pide", prácticas y cuestionarios). Cubre las lecciones 4.1 a 4.6. **La tutoría del módulo 4 (clase en vivo) todavía no está registrada**; se agregará aparte.
+Resumen consolidado del Módulo 4, que fusiona el video (Carlos recorre una tienda de ejemplo con cada forma de interacción) con el texto escrito de cada lección (tablas de criterios, "lo que no pide", prácticas y cuestionarios). Cubre las lecciones 4.1 a 4.6. La **tutoría en vivo del módulo 4** está en [`clase-05-summary.md`](clase-05-summary.md).
 
 ## Cómo leer este resumen
 
@@ -105,7 +105,7 @@ Para cada criterio, la columna "Lo que no pide" del texto de la plataforma es la
 ### Foco nativo del navegador (audio)
 
 - El navegador (*user agent*; en una app móvil, el sistema operativo) añade un **foco nativo** a botones, enlaces e inputs, que **no hace falta diseñar**; se adapta al fondo (ej. doble capa blanca y azul sobre una foto).
-- Según el audio, si no se toca el estilo del foco nativo "siempre se cumple", aunque en una auditoría estricta el contraste del indicador parezca flojo; hay incumplimiento si el foco se **corta o se pierde por mala implementación propia**. El texto de la plataforma coincide en que el contorno del navegador sirve si no se quita. (Matiz con la referencia en "Contraste con la WCAG".)
+- Según el audio, si no se toca el estilo del foco nativo "siempre se cumple", aunque en una auditoría estricta el contraste del indicador parezca flojo; hay incumplimiento si el foco se **corta o se pierde por mala implementación propia**. El texto de la plataforma coincide en que el contorno del navegador sirve si no se quita. (La responsabilidad según quién define el foco se aclaró en la tutoría; ver "Contraste con la WCAG".)
 
 ### Truco de depuración (ambas fuentes)
 
@@ -298,7 +298,7 @@ Método del audio: **primero** header, **luego** footer, **lo que queda** es mai
 
 Puntos del módulo comparados con [`resources/wcag22-understanding/`](../../resources/wcag22-understanding/README.md) (que se toma como verdad). El cuerpo del resumen ya refleja lo que coincide.
 
-- **2.4.7 y el foco nativo:** el audio dice que, si no se toca el estilo del foco nativo, "siempre se cumple" aunque el contraste parezca flojo. La referencia indica que **el indicador de foco está sujeto a 1.4.11 (contraste 3:1)** y que usar el indicador por defecto de la plataforma es una técnica válida. Es decir: el foco nativo es una buena base, pero no está exento del contraste.
+- **2.4.7 y el foco nativo (resuelto en la tutoría):** el audio dice que, si no se toca el estilo del foco nativo, "siempre se cumple" aunque el contraste parezca flojo. La referencia (1.4.11) exige 3:1 al indicador de foco, pero **no aplica a presentaciones que determina el agente de usuario fuera del control del autor**. Es decir, el foco nativo **sin modificar** no es responsabilidad del diseño; si se **personaliza**, sí hay que cumplir 3:1 (ver [`clase-05-summary.md`](clase-05-summary.md)).
 - **2.5.3 "debe empezar":** el texto de la plataforma y el audio dicen "lo recomendable/mejor si empieza" por el texto visible; la referencia indica que el nombre accesible "puede ampliar la etiqueta, pero **debe empezar por ella**". Criterio práctico seguro: que **empiece** por el texto visible.
 - **2.2.2 y sus excepciones:** el audio dice que se puede omitir la pausa si "no está en loop, no empieza automáticamente **y** dura menos de 5 segundos". La referencia da como excepciones **dura menos de 5 segundos** o **es parte de una actividad esencial**, y el texto de la plataforma agrega que el criterio aplica al movimiento que dura más de 5 s **junto a otro contenido**; los indicadores de carga que son el único contenido visible no necesitan controles.
 - **Nombre del criterio 3.2.2:** el módulo lo llama "Al introducir datos"; en `resources/` se llama "Al recibir entradas". Mismo criterio. Igual 4.1.2: "Nombre, función y valor" (módulo) / "Nombre, rol, valor" (`resources/`).
@@ -314,6 +314,6 @@ Puntos del módulo comparados con [`resources/wcag22-understanding/`](../../reso
 
 ## Pendiente
 
-- **Tutoría del módulo 4** (clase en vivo): transcripción por recibir; irá como `clase-0N-raw.txt` + `clase-0N-summary.md`.
+- La **tutoría del módulo 4** quedó registrada como [`clase-05-summary.md`](clase-05-summary.md) (raw: `raw-inputs/clase-05-raw.txt`).
 - Completar la guía de herramientas con Linux (Orca) y otros sistemas si los módulos siguientes lo cubren.
 - Los recursos citados que no tienen resumen propio en `resources/` (Funkify, NV Access): el texto de la plataforma los enlaza pero las URL no estaban visibles en las capturas.
