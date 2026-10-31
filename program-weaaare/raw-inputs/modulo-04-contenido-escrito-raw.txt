@@ -1,0 +1,367 @@
+# Módulo 4 — Formas de interacción y fundamentos de accesibilidad
+## Contenido escrito de las lecciones (plataforma), transcrito de capturas de pantalla
+
+Nota: transcripción de capturas de pantalla de la plataforma, entregadas en bloque. Cubre las lecciones 4.1 a 4.6. Las capturas muestran el cuerpo de cada lección (texto, tablas de criterios, guía de prácticas) y el feedback de los cuestionarios, pero no los títulos de lección ni el enunciado de preguntas que quedaron fuera de captura. La numeración y los temas de lección se asignaron con el audio (`modulo-04-raw.txt`); la lección 4.5 (voz y pulsador) no es anunciada por número en el audio y se infiere por orden. Las descripciones entre [corchetes] no son texto de la plataforma. Los enlaces aparecen subrayados en la plataforma, pero sus URL no son visibles en las capturas: solo se transcriben los textos. Los cuestionarios muestran, por cada pregunta, la opción correcta elegida y su explicación.
+
+---
+
+## 4.1 — Introducción (la tienda Mercado Verde y cómo son las prácticas)
+
+En este módulo practicas siempre en la misma tienda: Mercado Verde, una tienda online de fruta y verdura hecha para el curso. Con el ratón funciona bien. Las barreras aparecen cuando la usas como lo haría otra persona: solo con el teclado, con un temblor en la mano, con el móvil fijo en horizontal o con un lector de pantalla. También tiene cosas bien hechas, a propósito, para que aprendas a distinguir lo que falla de lo que cumple.
+
+### Cómo es cada práctica
+
+Al final de cada lección tienes una misión en la tienda: una persona, lo que quiere conseguir y los enlaces para empezar. Haz la misión entera con la forma de interacción de esa persona y apunta cada sitio donde se atasca, se pierde o gasta más esfuerzo del que debería. El enunciado no te dice dónde están las barreras ni qué criterio incumplen: eso lo descubres tú. Después, las preguntas de la lección comprueban lo que has encontrado y te explican cada caso.
+
+Cuando encuentres algo, intenta responder a las mismas preguntas que en los vídeos:
+- Qué le pasa a la persona y en qué momento.
+- Qué criterio de WCAG pide que no pase y qué no pide.
+- Cómo lo comprobarías en otro producto.
+- Qué tendría que haber decidido el diseño para evitarlo.
+
+### Antes de empezar
+
+- Usa Chrome en un ordenador, el navegador de los vídeos. Otros navegadores recorren la página de otra forma: Safari, con su ajuste de fábrica, se salta los enlaces al pulsar Tab. Para lo táctil te servirá también tu móvil.
+- La tienda no guarda nada fuera de tu navegador. La cuenta es de prueba y no pide contraseña: no escribas datos reales.
+- Cada vez que la tienda empieza de cero, acepta el aviso de cookies con el ratón y, después, empieza la misión.
+
+### La dirección de la tienda
+
+Algunas prácticas abren la tienda con un añadido al final de la dirección, como `?reiniciar` o `?salto=visible`. Cada práctica te da los enlaces que necesitas; no hace falta que los escribas tú.
+
+- `?reiniciar` deja la tienda como recién abierta: vuelve a poner la cesta con sus tres productos, vacía favoritos y pedidos, y hace que reaparezca el aviso de cookies. Úsalo si quieres repetir una misión desde el principio.
+- Los demás añadidos son variantes de la tienda: cambian algo concreto para una lección, por ejemplo cómo queda después de que el equipo arregle lo que encontraste en la anterior. Cada práctica explica qué cambia.
+- Una variante se queda activa en esa pestaña mientras la tengas abierta, aunque cambies de página. Si abres otra pestaña, empieza sin ella. Para quitarlas todas, vuelve a abrir la tienda con `?reiniciar`.
+
+---
+
+## 4.2 — Navegación con teclado: llegar a las cosas
+
+Quien navega solo con el teclado suele ver la página tal como está diseñada. Lo que necesita es llegar a cada elemento interactivo (enlaces, botones y controles de formulario), saber en todo momento dónde está y poder activarlo. Cada parada de Tab es una pulsación, y para alguien con temblor o poca fuerza en las manos, o que usa un pulsador, cada una cuesta.
+
+### Los seis criterios de la lección
+
+| Criterio | Qué pide | Lo que no pide |
+|---|---|---|
+| 2.4.3 Orden del foco (A) | Que el foco recorra la página en un orden que conserve el sentido de lo que ves. | Un único orden correcto: varios órdenes pueden tener sentido. |
+| 2.4.7 Foco visible (AA) | Que, al llegar con el teclado a un elemento, se vea dónde está el foco. | Diseñar un foco propio: el contorno que dibuja el navegador sirve si no lo quitas. |
+| 2.4.1 Saltar bloques (A) | Una forma de saltarse lo que se repite en todas las páginas, como la cabecera. | Un enlace de salto delante de cada bloque largo de la página. |
+| 2.1.1 Teclado (A) | Que cada tarea que se hace con el ratón se pueda hacer también con el teclado. | Lo que depende del trazo de la mano, como firmar o dibujar a mano alzada. |
+| 2.1.2 Sin trampas de teclado (A) | Que, si entras en algo con el teclado, puedas salir con el teclado. | Que el foco nunca se quede dentro de algo: una ventana abierta puede retenerlo si se cierra con Escape. |
+| 2.1.4 Atajos con una sola tecla (A) | Que un atajo de una letra, número o signo se pueda desactivar, cambiar o limitar a cuando el foco está en ese componente. | Nada sobre los atajos que llevan Ctrl, Alt o Cmd: esos no entran. |
+
+Lo que decide el diseño en cada pantalla es en qué orden se recorre, cómo se ve el foco, dónde está el enlace para saltar al contenido, cómo se llega con el teclado a cada cosa que se puede tocar y cómo se sale de cada ventana o panel.
+
+### Para ver dónde está el foco
+
+Si una página no enseña el foco, Chrome te lo dice igual. Abre las herramientas para desarrolladores (Cmd + Opción + I en Mac, Ctrl + Mayús + I en Windows), ve a la pestaña Consola, pulsa el icono del ojo («Crear expresión en directo») y escribe `document.activeElement`. Mientras pulsas Tab, esa línea muestra el elemento que tiene el foco, y al pasar el ratón por encima lo resalta en la página.
+
+### Práctica: Luis compara antes de comprar
+
+Luis tiene una lesión en el brazo derecho y no puede usar el ratón durante unas semanas. Ve bien la pantalla y navega con el teclado. Esta vez no se queda en las ofertas de la portada: quiere ver solo la fruta Km 0, ordenada de más barata a más cara, elegir unas fresas en bolsa de 1 kg y, antes de decidirse, leer cómo se conservan.
+
+La misión pasa por dos páginas de la tienda que todavía no has recorrido con el teclado: el listado de productos y la ficha de un producto. Funciona igual en Windows, Mac o Linux.
+
+1. Abre el listado de productos de Mercado Verde, recién reiniciado, en Chrome, Edge o Firefox, acepta las cookies con el ratón y apártalo. A partir de aquí, solo teclado.
+2. Con Tab, intenta marcar la categoría Fruta y la casilla «Solo Km 0» de los filtros.
+3. Ordena la lista por precio, de menor a mayor, con «Ordenar».
+4. Entra en la ficha de las fresas desde su nombre. Elige el formato de 1 kg, añádelas a la cesta y busca cómo se conservan.
+5. Sin salir de la ficha, sigue pulsando Tab hasta pasar el último enlace del pie, «Mapa del sitio». Fíjate en dónde se ve el foco en cada parada.
+
+Apunta cada sitio donde Luis se atasca, no sabe dónde está o gasta pulsaciones de más, y qué esperabas que pasara. Con tus notas, responde a las preguntas.
+
+### Cuestionario 4.2 (feedback)
+
+1. Agenda cultural: las tarjetas de cada evento llevan `outline: none` y ningún otro estilo de foco; al recorrerlas con Tab no se ve cuál tiene el foco. → **2.4.7 Foco visible.** Quitar el contorno del navegador sin poner otro deja a la persona sin saber dónde está.
+2. Periódico digital: 35 enlaces de secciones antes de cada noticia, en todas las páginas, y nada que permita pasarlos de una vez. → **2.4.1 Saltar bloques.** Es un bloque que se repite en todas las páginas y obliga a pasar por él cada vez. Un enlace «Saltar al contenido» al principio lo resuelve.
+3. Encuesta de una app de reparto: la valoración de 1 a 5 estrellas solo responde al clic; sin valorar, la encuesta no se puede enviar. → **2.1.1 Teclado.** Valorar es una tarea de la página y no tiene ningún camino con el teclado.
+4. Vídeo incrustado de otra plataforma: ni Tab ni Mayús + Tab ni Escape sacan el foco del reproductor. → **2.1.2 Sin trampas de teclado.** Aunque el reproductor sea de otra plataforma, está dentro de la página, y la persona tiene que poder salir de él con el teclado.
+5. Mapa de tiendas de una cadena de ópticas: el foco se queda dentro del mapa; al entrar, un texto avisa: «Pulsa Ctrl + M para salir del mapa». → **Cumple.** Cumple 2.1.2. Si la salida no es una tecla habitual, el criterio pide que la página diga cuál es, y aquí lo dice al entrar.
+6. Ventana de «Suscríbete» que mantiene el foco entre sus controles mientras está abierta y se cierra con Escape. → **Cumple.** Cumple 2.1.2. Retener el foco dentro de una ventana abierta es lo correcto, porque hay una salida con el teclado.
+7. Web de recetas: pulsar la tecla S fuera de un campo guarda la receta en favoritos; no hay ningún ajuste para desactivarlo. → **2.1.4 Atajos con una sola tecla.** Quien dicta con la voz o roza una tecla por un temblor guarda recetas sin querer. El atajo tendría que poder desactivarse, cambiarse por uno con una tecla modificadora o funcionar solo con el foco en la receta.
+8. Tienda de música: la tecla J pasa a la siguiente canción, pero solo cuando el foco está en la lista de reproducción. → **Cumple.** Cumple 2.1.4. Un atajo de una sola tecla está permitido si solo funciona cuando el foco está en ese componente.
+9. App de una mensajería: firmar la entrega se hace dibujando con el dedo en un recuadro, y no hay otra forma con el teclado. → **Cumple.** Cumple 2.1.1: es la excepción de lo que depende del trazo de la mano. Una firma dibujada no se puede reproducir pulsando teclas.
+
+---
+
+## 4.3 — Navegación con teclado: qué pasa cuando interactúas
+
+Con el teclado, el foco es el sitio donde está la persona. Si quien usa el ratón ve que algo cambia en la pantalla, mueve el puntero y sigue. Quien usa el teclado depende de que el foco siga en un sitio con sentido después de cada acción, y de que nada cambie sin que lo haya pedido.
+
+### Los tres criterios de la lección
+
+| Criterio | Qué pide | Lo que no pide |
+|---|---|---|
+| 2.4.3 Orden del foco (A), cuando la página cambia | Que, al borrar, abrir, cerrar o cambiar de paso, el foco vaya a un sitio con sentido y no se pierda. | Que el foco no se mueva nunca: llevarlo al primer campo con error o al título del paso nuevo es moverlo bien. |
+| 3.2.1 Al recibir el foco (A) | Que llegar a un elemento no cambie el contexto: no abrir ventanas, no navegar, no mover el foco, no enviar nada. | Que no cambie nada: resaltar el campo o mostrar una ayuda junto a él está permitido. |
+| 3.2.2 Al introducir datos (A) | Que cambiar un valor (elegir una opción, marcar una casilla, escribir) no cambie el contexto, salvo que se avise antes. | Que la página se quede quieta: filtrar una lista en la misma página, sin sacarte de donde estás, está permitido. |
+
+El orden de los campos de un formulario también es 2.4.3. Cuando el orden natural de lectura (de izquierda a derecha y de arriba abajo) no coincide con el que tiene sentido para la tarea, manda el de la tarea: en un formulario de dos columnas, primero todos los datos de una y luego los de la otra.
+
+### Dónde se queda el foco: decisiones de diseño
+
+Cada acción que hace aparecer o desaparecer algo necesita una decisión escrita en el diseño. Si no se toma, el navegador decide, y casi siempre manda el foco al principio de la página.
+
+| Cuando la persona... | El foco va a... |
+|---|---|
+| Elimina una línea de una lista | La línea siguiente, o el título de la lista si era la última |
+| Envía un formulario con errores | El primer campo con error, con el error escrito junto a él |
+| Pasa al siguiente paso de un proceso | El título del paso nuevo |
+| Cierra una ventana o un panel | El botón que lo abrió |
+
+### Práctica: Luis vuelve a por más
+
+El equipo de Mercado Verde ya ha arreglado lo más grave del recorrido con el teclado: ahora se ve el foco, el primer Tab es «Saltar al contenido principal» y la cabecera funciona con el teclado. Luis sigue sin poder usar el ratón. Hoy quiere añadir unos tomates desde el listado y dos bolsas de naranjas de las ofertas de la portada, y después terminar el pedido eligiendo el día de entrega.
+
+Estos enlaces abren la versión arreglada. Ábrelos en la misma pestaña, uno detrás de otro, para que la tienda no vuelva a su estado anterior. Funcionan igual en Windows, Mac o Linux, en Chrome, Edge o Firefox.
+
+1. Abre el listado con la tienda arreglada y acepta las cookies con el ratón. Desde aquí, solo teclado.
+2. Llega con Tab al «+» de los tomates de huerta y púlsalo. Justo después, sin tocar nada, busca dónde está el foco. Pulsa Tab una vez y anota adónde llegas.
+3. Abre la portada. En «Ofertas de la semana», pulsa «Añadir» en las naranjas de zumo y prueba a pedir una segunda bolsa.
+4. Abre la compra. Pulsa «Usar los datos de mi cuenta» y sigue con Tab. Cuando se abra la ventana de recogida en tienda, elige «No, enviar a casa» (con Mayús + Tab llegas a ese botón) y pulsa Tab una vez. Anota adónde llegas.
+5. Vuelve hasta «Continuar» y púlsalo. En el paso 2, «Entrega», pulsa Tab una vez e intenta elegir un día.
+
+Apunta cada vez que el foco desaparece, salta adonde no esperabas o te obliga a empezar de nuevo.
+
+### Cuestionario 4.3 (feedback)
+
+1. Servicio de correo: al borrar un mensaje de la bandeja de entrada, el siguiente Tab lleva al principio de la página. → **2.4.3 Orden del foco.** El elemento que tenía el foco ha desaparecido y nadie ha decidido adónde va. Lo esperable es el mensaje siguiente.
+2. App de reparto: al cerrar la ventana «Añadir dirección», el foco vuelve al botón que la abrió. → **Cumple.** Cumple 2.4.3. Devolver el foco al botón que abrió la ventana deja a la persona donde estaba antes de abrirla.
+3. Web de reservas: al llegar con Tab al campo «Fecha», se despliega un calendario junto al campo y el foco se queda en el campo. → **Cumple.** Cumple 3.2.1. Mostrar algo junto al campo sin mover el foco ni abrir otra página no es un cambio de contexto.
+4. Banco online: al llegar con Tab al enlace «Mis tarjetas», se abre una ventana con una encuesta y el foco salta a ella. → **3.2.1 Al recibir el foco.** Solo llegar al enlace abre una ventana y mueve el foco: un cambio de contexto que la persona no ha pedido.
+5. Tienda de ropa: al elegir otro país en el desplegable del pie, la página se recarga en otro idioma sin ningún aviso. → **3.2.2 Al introducir datos.** Cambiar un valor abre otra versión de la página sin avisar. Con el teclado, cada flecha en el desplegable puede recargarla.
+6. Otra tienda: junto al selector de país, un texto dice «Al elegir un país, la página se cargará en su idioma». Y así ocurre. → **Cumple.** Cumple 3.2.2. El criterio permite el cambio de contexto si se avisa antes de que la persona cambie el valor.
+7. Formulario de pago: al marcar «Usar la misma dirección», los campos de facturación se rellenan solos en la misma página. → **Cumple.** Cumple 3.2.2. Cambia el contenido de la página, pero no el contexto: la persona sigue en el mismo sitio y con el foco en la casilla.
+8. Web de alquiler de pisos: al marcar «Con ascensor», la lista se vuelve a pintar y el foco desaparece de la casilla. → **2.4.3 Orden del foco.** Filtrar en la misma página está permitido, pero el foco tiene que seguir en la casilla que la persona acaba de marcar.
+9. Formulario de tres pasos: al pulsar «Continuar» en el segundo, el foco va al título del tercero, «Pago». → **Cumple.** Cumple 2.4.3. Es el destino esperable al cambiar de paso: la persona empieza a leer el paso nuevo desde el principio.
+
+---
+
+## 4.4 — Puntero y táctil
+
+Un puntero es cualquier cosa con la que se señala en la pantalla: el ratón, el trackpad, un dedo, un lápiz o un ratón que se mueve con la cabeza o con la mirada. Quien tiene temblor, poca fuerza o poca precisión en las manos puede no poder mantener pulsado, arrastrar sin soltar ni hacer gestos con dos dedos. La pregunta de esta lección es si todo lo que pide la página se puede hacer con un solo punto, con clics o toques sueltos y sin precisión.
+
+### Los seis criterios de la lección
+
+| Criterio | Qué pide | Lo que no pide |
+|---|---|---|
+| 2.5.2 Cancelación del puntero (A) | Que una acción no se haga al pulsar sino al soltar, de forma que, si te sales del control antes de soltar, no pase nada; o que se pueda deshacer. | Que cambien los controles nativos: los botones y enlaces del navegador ya actúan al soltar. Tampoco lo que es esencial hacer al pulsar, como las teclas de un piano. |
+| 2.5.7 Movimientos de arrastre (AA) | Que todo lo que se hace arrastrando se pueda hacer también con un solo puntero sin arrastrar: un clic, un toque. | Que se quite el arrastre. Y no vale como alternativa el teclado: tiene que ser con el puntero. |
+| 2.5.1 Gestos con el puntero (A) | Que lo que se hace con varios dedos (pellizcar) o siguiendo un trazo (deslizar) se pueda hacer con un solo puntero y sin trazo. | Que se quite el gesto. Tampoco cubre el zoom del navegador o del sistema, ni lo que es esencial, como firmar. |
+| 1.3.4 Orientación (AA) | Que el contenido se vea y se use en vertical y en horizontal, sin obligar a girar el dispositivo. | Un diseño distinto para cada orientación. Hay excepción cuando una es esencial, como un piano o un cheque. |
+| 1.4.13 Contenido al pasar el puntero o al recibir el foco (AA) | Que lo que aparece al pasar el puntero o al recibir el foco se pueda cerrar sin moverlos (con Escape), se pueda recorrer con el puntero sin que desaparezca y se quede hasta que lo cierres. | Nada sobre el globo nativo del navegador (el atributo `title`): eso lo controla el navegador. |
+| 2.5.4 Activación por movimiento (A) | Que lo que se activa moviendo el dispositivo (agitarlo, inclinarlo) se pueda hacer también con un control y que el movimiento se pueda desactivar. | Nada sobre lo que mide el movimiento por naturaleza, como un cuentapasos. |
+
+En el diseño, eso se traduce en decisiones concretas. Las acciones van al soltar, y lo que borra algo tiene «Deshacer» o pide confirmación. Lo que se arrastra o se pellizca tiene un botón o un campo que hace lo mismo. Las pantallas funcionan en las dos orientaciones, también cuando la altura es muy pequeña, y la especificación de cada globo o menú dice cómo se cierra y cuánto dura.
+
+### Cómo probarlo sin ser esa persona
+
+- **Temblor.** La extensión de Chrome Funkify, con el perfil «Trembling Trevor», hace temblar el puntero. Es una simulación y queda lejos de lo que vive una persona con temblor, pero ayuda a ver lo que cuesta la precisión. Sin extensión, la prueba de 2.5.2 se hace igual: pulsa, sal del control sin soltar y suelta fuera.
+- **Táctil.** En tu móvil, o en la vista móvil de Chrome. Abre las herramientas para desarrolladores (Cmd + Opción + I en Mac, Ctrl + Mayús + I en Windows) y pulsa Cmd + Mayús + M (Ctrl + Mayús + M). Elige un teléfono en el menú de dispositivos. El ratón hace de dedo, Mayús + arrastrar simula el pellizco y el botón de girar de la barra de la vista móvil cambia la orientación.
+- **Ampliador.** El Zoom de macOS (Ajustes del Sistema > Accesibilidad > Zoom, y Opción + Cmd + 8 para encenderlo) o la Lupa de Windows (tecla Windows + signo más).
+
+### Práctica: Ana compra desde el soporte
+
+Ana tiene temblor en la mano derecha. Usa el ratón en el ordenador y el móvil con un dedo; cuando está en la silla de ruedas, el móvil va fijo en un soporte, en horizontal. Hoy quiere ver el anuncio de la portada, hacer el pedido desde el móvil y, ya en el ordenador, mirar qué categorías tiene la tienda.
+
+Para la parte del móvil vale cualquier teléfono, Android o iPhone, o la vista móvil de Chrome o Edge en el ordenador.
+
+1. En el móvil, con la pantalla en vertical, abre la portada de Mercado Verde, recién reiniciada, y acepta las cookies. Ana quiere ver todas las diapositivas del anuncio grande sin deslizar el dedo: pásalas solo con toques sueltos.
+2. Gira el móvil a horizontal, como lo tiene Ana en el soporte, y abre la compra.
+3. En el ordenador, abre otra vez la portada y lleva el ratón a «Productos», en la cabecera. Recorre el menú que aparece con el puntero e intenta cerrarlo sin moverlo. Repítelo con el ampliador encendido (el Zoom de macOS o la Lupa de Windows), intentando leer el titular del anuncio que queda debajo del menú.
+
+Apunta cada sitio donde Ana no puede hacer algo con un solo punto, donde la página le pide algo que no puede hacer o donde algo le tapa lo que quiere leer.
+
+### Cuestionario 4.4 (feedback)
+
+1. Herramienta de tareas: las tarjetas solo cambian de columna arrastrándolas. → **2.5.7 Movimientos de arrastre.** Mover una tarjeta exige arrastrar sin soltar, y no hay otra forma con un solo puntero.
+2. Otra herramienta de tareas: las tarjetas se arrastran, y cada una tiene además un menú «Mover a…» con las columnas. → **Cumple.** Cumple 2.5.7. El arrastre se queda, y el menú hace lo mismo con clics sueltos.
+3. Mapa de una web de alquiler: solo se acerca pellizcando con dos dedos; no tiene botones de acercar y alejar. → **2.5.1 Gestos con el puntero.** Pellizcar es un gesto de dos dedos y no tiene alternativa de un solo punto. Unos botones + y − lo resolverían.
+4. Carrusel de noticias: se pasa deslizando, y también con los botones «Anterior» y «Siguiente». → **Cumple.** Cumple 2.5.1. Deslizar es un gesto de trazo, y los botones hacen lo mismo con un toque.
+5. App de entradas: «Comprar ahora» confirma la compra en cuanto el dedo toca la pantalla, y no se puede anular. → **2.5.2 Cancelación del puntero.** La acción se hace al pulsar y no hay forma de arrepentirse ni de deshacer. Debería hacerse al levantar el dedo, o poder anularse.
+6. App para aprender música: las teclas de un piano suenan en cuanto se tocan. → **Cumple.** Cumple 2.5.2. Es la excepción de lo esencial: un piano que sonara al soltar no funcionaría como un piano.
+7. App de notas: deshace el último cambio al agitar el móvil, y no tiene botón «Deshacer» ni forma de desactivarlo. → **2.5.4 Activación por movimiento.** Quien tiene temblor lo activa sin querer, y quien tiene el móvil fijo no puede activarlo nunca. Hace falta un botón y un ajuste para apagar el gesto.
+8. App de salud: cuenta los pasos con el sensor de movimiento del móvil. → **Cumple.** Cumple 2.5.4. Medir el movimiento es la función misma de la app: no es un control que se active moviendo el móvil.
+9. La ayuda de un campo aparece al pasar el puntero y se cierra a los dos segundos, aunque el puntero siga encima. → **1.4.13 Contenido al pasar el puntero.** Lo que aparece al pasar el puntero tiene que quedarse hasta que la persona lo cierre o lo aparte. Con un ampliador, dos segundos no dan para leerlo.
+10. Un icono de información lleva un atributo `title`, y el navegador muestra su texto al pasar el puntero. → **Cumple.** No entra en 1.4.13: ese globo lo muestra y lo controla el navegador. Otra cosa es si es buena idea, porque con el teclado o en el móvil no aparece.
+
+---
+
+## 4.5 — Control por voz y pulsador (lección inferida por orden; el audio no la numera)
+
+Hay personas que usan el ordenador sin ratón y sin teclado. Quien no puede mover las manos, por una lesión medular, por ELA, por una amputación o por dolor, puede manejarlo hablando: con el control por voz dice lo que quiere pulsar y el sistema lo pulsa. Quien tampoco puede hablar con claridad usa un pulsador, un único botón que se activa con la cabeza, con el pie o soplando, mientras el ordenador va recorriendo la pantalla hasta llegar a lo que busca. A las dos les pasa lo mismo: todo les lleva más tiempo. Por eso esta lección se hace dos preguntas. La primera, si lo que se ve en pantalla se llama igual por dentro, porque quien habla dice lo que ve. La segunda, si la página deja ir a cada persona a su ritmo o le pone un reloj y se mueve sola mientras llega.
+
+### Los criterios de la lección
+
+| Criterio | Qué pide | Lo que no pide |
+|---|---|---|
+| 2.5.3 Etiqueta en el nombre (A) | Que, si un control tiene texto visible, su nombre accesible contenga ese texto. Lo recomendable es que empiece por él. | Que el nombre sea idéntico al texto: se puede añadir contexto detrás, como «Añadir naranjas de zumo a la cesta». Tampoco se aplica a los iconos sin texto; su problema es no tener nombre, y eso es otro criterio, el 4.1.2. |
+| 2.2.1 Tiempo ajustable (A) | Que, ante cualquier límite de tiempo, la persona pueda desactivarlo antes de que empiece, ajustarlo al menos a diez veces más o recibir un aviso con 20 segundos como mínimo para ampliarlo con una acción sencilla, al menos diez veces. Basta con una de las tres. | Que no haya límites. Quedan fuera los que son de tiempo real, como una subasta; los esenciales, como un examen cronometrado, y los de más de 20 horas. |
+| 2.2.2 Pausar, detener, ocultar (A) | Que lo que se mueve, parpadea o se desplaza solo durante más de cinco segundos, junto a otro contenido, se pueda pausar, detener u ocultar. Lo que se actualiza solo, como una cuenta atrás, también, o que se pueda elegir cada cuánto cambia. | Que se quite el movimiento, ni que se pare lo que es esencial. Una animación de carga mientras no se puede hacer nada no entra. |
+| 2.3.3 Animación por interacción (AAA) | Que la animación de movimiento que provoca una interacción, como el deslizamiento al pulsar una flecha, se pueda desactivar, salvo que sea esencial. | Es de nivel AAA, así que no entra en una auditoría AA. Tampoco cubre los cambios de color o de opacidad, que no son movimiento. |
+| 2.3.1 Tres destellos o por debajo del umbral (A) | Que nada destelle más de tres veces en un segundo, o que los destellos queden por debajo de los umbrales de tamaño y contraste. | Nada sobre el movimiento en general: habla de destellos, que pueden provocar crisis en personas con epilepsia fotosensible. |
+
+Para el diseño, eso se traduce en decisiones concretas. El nombre de cada botón empieza por la palabra que se ve, y si hace falta más contexto se añade detrás, sin cambiar esa palabra. Si un proceso tiene un reloj, el diseño dice cómo se avisa antes de que acabe, cómo se pide más tiempo con una sola acción y qué pasa con lo que la persona ya había escrito. Si un carrusel avanza solo, lleva un botón de pausa visible y fácil de alcanzar, y conviene preguntarse si una cuenta atrás aporta algo que no diga ya «hasta el domingo». Y en el traspaso queda escrito qué hace cada animación cuando el sistema pide menos movimiento.
+
+### Cómo probarlo sin ser esa persona
+
+No hace falta un Mac. Windows, Android y el iPhone traen su propio control por voz o por botón, y la misión de esta lección se hace con cualquiera de ellos.
+
+#### Con la voz
+
+- **En el Mac**, Control por voz: Ajustes del Sistema > Accesibilidad > Control por voz.
+- **En Windows 11**, Acceso por voz: Configuración > Accesibilidad > Voz > Acceso por voz. Está desde la versión 22H2, entiende español y funciona sin conexión.
+- **En Android**, Voice Access: se descarga gratis de Google Play y se enciende en Ajustes > Accesibilidad > Voice Access.
+
+Las órdenes cambian un poco de un sistema a otro, pero las tres ideas son las mismas: pulsar algo diciendo lo que pone, pedir números cuando no sabes qué decir y ver cómo se llama cada control por dentro.
+
+| Para... | Mac (Control por voz) | Windows 11 (Acceso por voz) | Android (Voice Access) |
+|---|---|---|---|
+| Pulsar algo por lo que pone | «Hacer clic en Añadir» | «Hacer clic en Añadir» o «Pulsar Añadir» | «Tocar Añadir», o solo «Añadir» |
+| Poner un número en cada control | «Mostrar números» | «Mostrar números» | «Mostrar números» |
+| Ver cómo se llama cada control | «Mostrar nombres» | No tiene esta orden | «Mostrar etiquetas» |
+| Apuntar a una zona de la pantalla | «Mostrar cuadrícula» | «Mostrar cuadrícula» | «Mostrar la cuadrícula» |
+| Saber qué puedes decir | «Mostrar comandos» | «¿Qué puedo decir?» | «Mostrar todos los comandos» |
+
+Si tu sistema no enseña los nombres, o no puedes hablarle al ordenador, compara lo que se ve con el nombre en Chrome o en Edge: clic derecho en el control > Inspeccionar > pestaña Accessibility > Name.
+
+#### Con un pulsador
+
+Un control por botón recorre la pantalla resaltando un elemento o una zona cada vez, y la persona pulsa cuando llega a lo que quiere. Para probarlo no necesitas un pulsador de verdad: casi todos los sistemas dejan usar una tecla como botón.
+
+- **En el Mac**, Control por botón: Ajustes del Sistema > Accesibilidad > Control por botón. Puedes usar una tecla como botón (en la lección, la barra espaciadora) y elegir en el panel «Puntero» la opción «Mover y hacer clic», que barre la pantalla con una línea vertical y luego con otra horizontal.
+- **En el iPhone y el iPad**, Control por botón: Ajustes > Accesibilidad > Control por botón. El botón puede ser un pulsador externo, la pantalla entera, un sonido o un movimiento de la cabeza ante la cámara.
+- **En Android**, Accesibilidad con interruptores: Ajustes > Accesibilidad > Accesibilidad con interruptores. Sirven como botón las teclas de un teclado USB o Bluetooth, un pulsador conectado al móvil o gestos de la cara ante la cámara.
+- **En Windows** no hay un control por botón para todo el sistema. Lo más parecido es el teclado en pantalla (Configuración > Accesibilidad > Teclado > Teclado en pantalla) con la opción «Examinar las teclas»: va resaltando las teclas y eliges con una tecla, un mando o un clic. Con él pulsas Tab, Intro o Espacio y recorres la web como con el teclado. Sirve para notar lo lentas que son las tareas y lo que aprieta un reloj, pero no llega a lo que el teclado no alcanza, como los elementos hechos con div. Para un control por botón completo hacen falta programas de terceros.
+
+| Para... | Mac | iPhone y iPad | Android | Windows |
+|---|---|---|---|---|
+| Encenderlo | Accesibilidad > Control por botón | Accesibilidad > Control por botón | Accesibilidad > Accesibilidad con interruptores | Teclado en pantalla > Opciones > Examinar las teclas |
+| Qué sirve de botón | Una tecla o un pulsador | Un pulsador, la pantalla, un sonido o la cabeza | Una tecla, un pulsador o la cara | Una tecla, un mando o un clic |
+| Qué recorre | Elementos de la pantalla, o la pantalla con dos líneas | Elementos de la pantalla | Elementos de la pantalla | Solo las teclas del teclado en pantalla |
+
+#### Menos movimiento
+
+En el Mac, Ajustes del Sistema > Accesibilidad > Movimiento > Reducir movimiento. En Windows 11, Configuración > Accesibilidad > Efectos visuales > Efectos de animación, desactivado. Una página que escucha esta preferencia deja de deslizar, de hacer zoom o de moverse sola.
+
+Con la voz o con un botón, cuenta el tiempo que tardas en cada tarea. Es la mejor forma de entender por qué un reloj de un minuto, o incluso de tres, no deja terminar a nadie que vaya a este ritmo.
+
+### Práctica: Óscar y Lucía, por el resto de la tienda
+
+Óscar no puede usar las manos y maneja el ordenador con la voz. Lucía tampoco puede hablar con claridad y usa un pulsador en el reposacabezas de la silla. Esta semana no compran desde la portada: Óscar busca en el listado y en sus favoritos, y Lucía revisa las ofertas antes de que se acaben.
+
+Puedes hacer la misión con el control por voz y el control por botón de tu sistema, con las órdenes de las tablas de «Cómo probarlo sin ser esa persona». Si usas Windows y no tienes un control por botón, haz la parte de Lucía con el teclado en pantalla en modo de exploración.
+
+1. Antes de empezar, con el ratón, abre la portada de la tienda, recién reiniciada, acepta las cookies y guarda las fresas en favoritos con el corazón de su tarjeta.
+2. Haz de Óscar. En el listado de productos, mete unos tomates de huerta en la cesta **diciendo solo lo que ves**. Si no lo consigues, pide los nombres o los números y busca otra forma de llegar.
+3. En tus favoritos, mete las fresas en la cesta diciendo lo que pone su botón.
+4. Haz de Lucía. Vuelve a la portada y recorre con el pulsador las tarjetas de «Ofertas de la semana». Fíjate en el texto «Acaban en…» que hay encima y busca la forma de que deje de cambiar o de ocultarlo.
+5. Activa «Reducir movimiento» en tu sistema y abre la ficha de las fresas. Añádelas a la cesta con la voz, o con el ratón, y mira cómo aparece el panel «Añadido a tu cesta».
+
+Apunta cada sitio donde decir lo que ves no basta, donde algo cambia sin que puedas pararlo o donde se mueve sin que lo hayas pedido. Después contesta las preguntas.
+
+### Cuestionario 4.5 (feedback)
+
+1. El botón de un formulario dice «Enviar», pero su nombre accesible es «Mandar solicitud». → **2.5.3 Etiqueta en el nombre.** Quien dice «Hacer clic en Enviar» no obtiene respuesta, porque la palabra visible no está dentro del nombre.
+2. Cada botón «Leer más» de un blog se llama «Leer más sobre» y el título del artículo. → **Cumple.** Cumple 2.5.3. El nombre empieza por lo que se ve y añade el contexto detrás, que ayuda a quien usa un lector de pantalla.
+3. La lupa del buscador es un icono sin texto y su nombre accesible es «Buscar». → **Cumple.** 2.5.3 solo se aplica a controles con texto visible. Un icono necesita un nombre que diga lo que hace, y este lo tiene.
+4. La sesión de un banco caduca a los cinco minutos sin avisar y sin opción de alargarla. → **2.2.1 Tiempo ajustable.** Bastaría con avisar al menos 20 segundos antes con un botón para seguir conectado.
+5. Un formulario de inscripción avisa un minuto antes de que caduque, con el botón «Necesito más tiempo» ya enfocado, y se puede ampliar sin límite. → **Cumple.** Cumple 2.2.1: avisa con más de 20 segundos, se amplía con una sola acción y más de diez veces.
+6. Una subasta en línea cierra las pujas a una hora fija, igual para todo el mundo. → **Cumple.** Es la excepción de tiempo real: alargar el plazo a una persona cambiaría la subasta para las demás.
+7. Una franja de logotipos de clientes se desplaza sin parar junto al texto de la página, sin forma de detenerla. → **2.2.2 Pausar, detener, ocultar.** Se mueve sola, dura más de cinco segundos y está junto a otro contenido: necesita un botón para pararla u ocultarla.
+8. Mientras se procesa un pago, un círculo de carga gira y la página no deja hacer nada más. → **Cumple.** Una animación de carga mientras no se puede hacer nada no entra en 2.2.2: no compite con otro contenido.
+9. Al hacer scroll, las imágenes de una web se mueven a distinta velocidad que el texto, también con «Reducir movimiento» activado. → **2.3.3 Animación por interacción.** El movimiento lo provoca el scroll de la persona y se puede desactivar sin perder nada: la página debería respetar la preferencia.
+
+---
+
+## 4.6 — Lector de pantalla
+
+Un lector de pantalla convierte la página en voz, o en braille con una línea braille. Lo usan sobre todo personas ciegas, pero también personas con baja visión que se cansan de leer con mucho aumento, personas con dificultades de lectura que prefieren escuchar y personas sordociegas. Cada sistema trae el suyo o tiene alguno muy extendido: VoiceOver en el Mac y en el iPhone, TalkBack en Android, Orca en Linux y, en Windows, NVDA, que es gratuito, y JAWS, de pago. En España la mayoría de las personas ciegas usa JAWS porque lo financia la ONCE, así que conviene probar con el lector que use tu público.
+
+La gran diferencia con el teclado es que quien usa el lector no ve la página: la escucha. Y no la escucha entera de arriba abajo. Con el rotor salta por listas que el lector construye solo: los enlaces, los encabezados, los controles de formulario y las regiones. Esas listas no las escribe el lector, salen del código. En cada parada, el lector dice siempre lo mismo: cómo se llama la cosa, qué es y, a veces, cómo está. «Productos, contraído, botón». Si falta el nombre, o el nombre no dice nada, la persona se queda sin saber qué tiene delante.
+
+### Los criterios de la lección
+
+| Criterio | Qué pide | Lo que no pide |
+|---|---|---|
+| 2.4.4 Propósito de los enlaces (en contexto) (A) | Que se entienda adónde lleva cada enlace por su texto, o por su texto junto con su contexto: la misma frase, el mismo párrafo, el mismo elemento de lista o la misma celda. | No prohíbe textos cortos ni repetidos, como «Ver grabación» en cada tarjeta, si el contexto los explica. Se aplica solo a enlaces. |
+| 2.4.9 Propósito de los enlaces (solo enlaces) (AAA) | Que el texto del enlace diga por sí solo adónde lleva, sin contar con lo que tiene alrededor: «Ver grabación de la masterclass…» en vez de «Ver grabación». | Es de nivel AAA, así que no entra en una auditoría AA. Es un plus para quien repasa la lista de enlaces. |
+| 4.1.2 Nombre, función y valor (A) | Que cada control exponga a las tecnologías de apoyo su nombre, su función (botón, enlace, casilla) y su estado o valor, y que avise cuando cambian. | No juzga si el nombre es bueno: un enlace que dice «3» tiene nombre y cumple este criterio, aunque falle el 2.4.4. |
+| 1.3.1 Información y relaciones (A) | Que lo que se entiende mirando esté también en el código, o dicho en texto: los títulos y su nivel, las listas, las regiones de la página, el precio tachado. | No pide ARIA: con HTML normal, como `h1`, `ul`, `header`, `nav`, `main` o `footer`, basta. Tampoco juzga si un título está bien escrito. |
+| 1.1.1 Contenido no textual (A) | Que cada imagen tenga una alternativa en texto que cumpla su función, o que se marque como decorativa para que el lector la salte. El nombre del archivo, «naranjas-zumo.jpg», no es una alternativa. | Que todas las imágenes se describan: si una foto no añade nada al nombre del producto, lo correcto es marcarla como decorativa. |
+| 1.3.2 Secuencia con sentido (A) | Que, si el orden en que se lee cambia el significado, el código tenga el orden correcto. | Que todo se lea igual que se ve. Leer un descuento antes que el nombre del producto confunde, pero si el sentido no cambia, es una buena práctica, no un fallo. |
+
+Lo que se ve en una tarjeta también cuenta: si un botón muestra «Añadir» y el lector dice «Comprar», falla el 2.5.3 Etiqueta en el nombre, el criterio que asegura que quien usa la voz pueda pulsar un control diciendo lo que ve. Y si se añade contexto, va detrás de lo que se ve: «Añadir naranjas de zumo» cumple.
+
+Para el diseño, eso se traduce en decisiones concretas que se dejan escritas en el traspaso. Cada icono que es un botón o un enlace lleva su nombre: el de un botón es su acción, «Buscar», y el de un enlace, adónde lleva, «Cesta, 3 productos» o «Mi cuenta». En cada pantalla se marcan los títulos y su nivel, también los que no parecen títulos y los que solo oye el lector, como un título principal que no se ve. Se anotan las regiones: la cabecera, la navegación (con un nombre si hay varias), la búsqueda, el contenido principal y el pie. Y en las tarjetas se decide el orden de lectura, con el nombre primero, y que el precio anterior se diga en texto y no solo tachado.
+
+### Cómo probarlo sin ser esa persona
+
+No hace falta un Mac. VoiceOver y NVDA construyen las mismas listas a partir del mismo código, así que lo que oyes con uno lo oyes, con otras palabras, con el otro. La misión se hace igual con cualquiera de los dos.
+
+#### VoiceOver, en el Mac
+
+- **Encender y callar.** Comando + F5 enciende y apaga VoiceOver. La tecla Control lo calla en el momento, y te va a hacer falta.
+- **La tecla VO.** Casi todas las órdenes empiezan por Control + Opción, que VoiceOver llama VO.
+- **El rotor.** VO + U abre el rotor. Con las flechas derecha e izquierda cambias de lista (enlaces, encabezados, controles de formulario, puntos de referencia) y con arriba y abajo la recorres. Intro va al elemento y Escape cierra.
+
+#### NVDA, en Windows
+
+NVDA es gratuito y de código abierto, y habla en español.
+
+1. Entra en la página de descarga de NV Access. Te propone donar: es opcional, y puedes saltártelo con la opción de no donar esta vez.
+2. Descarga el instalador y ábrelo. NVDA empieza a hablar en cuanto arranca.
+3. Acepta la licencia y elige instalarlo en el equipo. También puedes ejecutar una copia temporal, sin instalar nada, para probarlo un rato.
+4. Al instalarlo se crea un atajo: Control + Alt + N lo arranca desde cualquier sitio.
+
+Casi todas las órdenes de NVDA empiezan por la tecla NVDA, que por defecto es Insert; si tu portátil no la tiene, puedes elegir Bloq Mayús en las opciones de teclado. En una página web, NVDA está en modo exploración: las flechas leen la página y una sola letra salta al siguiente elemento de un tipo. Al llegar a un campo pasa a modo foco para que puedas escribir; NVDA + Espacio cambia de un modo a otro.
+
+#### La misma tarea con uno y con otro
+
+| Para... | VoiceOver (Mac) | NVDA (Windows) |
+|---|---|---|
+| Encender el lector | Comando + F5 | Control + Alt + N |
+| Callarlo un momento | Control | Control |
+| Ir al elemento siguiente | VO + flecha derecha | Flecha abajo |
+| Pulsar lo que tienes delante | VO + Espacio | Intro |
+| Ver las listas de la página | VO + U, el rotor | NVDA + F7, la lista de elementos |
+| Saltar al encabezado siguiente | VO + Comando + H | H |
+| Saltar al enlace siguiente | VO + Comando + L | K |
+| Saltar al control siguiente de un formulario | VO + Comando + J | F |
+| Saltar a la región siguiente | Rotor, lista de puntos de referencia | D |
+
+La lista de elementos de NVDA hace lo mismo que el rotor: eliges con unos botones si quieres ver los enlaces, los encabezados, los campos de formulario, los botones o los puntos de referencia, y vas al que buscas. Con Mayús delante de cualquiera de las letras, NVDA vuelve al anterior de ese tipo.
+
+#### Otros lectores
+
+- **Narrador**, en Windows, viene con el sistema: Windows + Control + Intro lo enciende. Su tecla es Bloq Mayús o Insert, y Narrador + Espacio activa el modo de examen, el que sirve para leer páginas web.
+- **TalkBack**, en Android: Ajustes > Accesibilidad > TalkBack, o manteniendo pulsados unos segundos los dos botones de volumen. Para saltar de encabezado en encabezado o de enlace en enlace, elige ese control de lectura y desliza un dedo hacia abajo o hacia arriba.
+- **VoiceOver, en el iPhone**: Ajustes > Accesibilidad > VoiceOver. Su rotor se mueve girando dos dedos sobre la pantalla, como un dial, y después se desliza un dedo hacia arriba o hacia abajo.
+
+#### Mira el código sin el lector
+
+En Chrome o en Edge, clic derecho > Inspeccionar > pestaña Accessibility, para ver el nombre y la función de cada elemento.
+
+Prueba primero con la pantalla a la vista, para entender qué dice el lector en cada sitio. Después baja el brillo del todo y vuelve a intentarlo. Es la mejor forma de notar cuándo una página te deja orientarte y cuándo te obliga a escucharla entera.
+
+### Práctica: Lucía revisa su pedido
+
+Lucía es ciega y usa un lector de pantalla. Ya conoce la portada de Mercado Verde; hoy quiere revisar su cesta, cambiar el formato de las fresas, ver cuánto le cuesta cada cosa antes de pagar y saber de qué huertas viene lo que compra. Haz la misión con VoiceOver o con NVDA, con las teclas de la tabla «La misma tarea con uno y con otro». Si puedes, no mires la pantalla.
+
+1. Abre la cesta de la tienda, recién reiniciada, acepta las cookies y enciende el lector. Recorre las líneas de la cesta y abre «¿Tienes un cupón?». Pasa también por los campos con Tab o con la lista de controles de formulario.
+2. Ve a la ficha de las fresas. Intenta saber qué formatos hay, cuál está elegido y cuántas bolsas vas a añadir.
+3. Abre la compra. Recorre los campos del paso 1 con Tab y escucha después el resumen «Tu pedido». Intenta saber cuánto cuesta el pan.
+4. Ve a «Quiénes somos» y repasa su lista de enlaces. ¿Sabrías cuál te lleva a los productos de cada huerta?
+
+Apunta cada sitio donde te has perdido o has dudado, qué has oído en ese momento y qué criterio crees que falla. Después contesta las preguntas.
+
+### Cuestionario 4.6 (feedback)
+
+1. El aspa que cierra un aviso es un icono sin texto, y el lector dice solo «botón». → **4.1.2 Nombre, función y valor.** El control dice qué es, pero no cómo se llama. Su nombre debería ser su acción: «Cerrar aviso».
+2. En la lista de enlaces de un blog aparecen diez «Haz clic aquí», cada uno al final de un párrafo que no dice adónde lleva. → **2.4.4 Propósito de los enlaces.** Ni el texto ni su contexto explican el destino. Con el destino dentro del enlace, «Descargar el informe anual», se entendería.
+3. Cada tarjeta de un catálogo tiene un enlace «Leer más» dentro del mismo elemento de lista que el título del producto. → **Cumple.** Cumple 2.4.4: el contexto del mismo elemento de lista explica el destino. Para el nivel AAA, el 2.4.9, el enlace tendría que decirlo solo.
+4. Las secciones de una página se ven con títulos grandes, pero son párrafos en negrita: el rotor no encuentra ningún encabezado. → **1.3.1 Información y relaciones.** Lo que se ve como título no lo es en el código, y quien escucha se queda sin índice.
+5. Una web tiene cabecera, menú, contenido y pie bien marcados en el código, y dos navegaciones con nombres distintos: «Principal» y «Pie». → **Cumple.** Cumple 1.3.1 y además ayuda a orientarse: con un nombre, cada navegación se distingue de la otra en la lista de puntos de referencia.
+6. Un gráfico con las ventas del año se lee como «grafico-ventas-final2.png, imagen». → **1.1.1 Contenido no textual.** La imagen informa y su alternativa es el nombre del archivo. Necesita un texto que dé la información del gráfico.
+7. La foto de cada producto está marcada como decorativa y el lector la salta, porque el nombre del producto aparece justo al lado. → **Cumple.** Cumple 1.1.1: si la foto no añade nada al nombre, marcarla como decorativa es la alternativa correcta.
+8. Una casilla de «Acepto las condiciones» se lee «Acepto las condiciones, casilla», pero nunca dice si está marcada o no. → **4.1.2 Nombre, función y valor.** Tiene nombre y función, pero no expone su estado, y quien escucha no sabe si la ha marcado.
