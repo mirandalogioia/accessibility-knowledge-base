@@ -281,40 +281,21 @@
 [46:15] Speaker 2 (Carlos Garrido Marín):  Por ejemplo, quizás una carta podría estar ahí como que en el intermedio, ¿no? Pero un componente complejo podría ser un acordeón, por ejemplo.
 [46:22] Speaker 2 (Consuelo Correa Barros):  Ya que es como que tiene mayores funcionalidades. Un carrusel podría ser un componente complejo.
 [46:29] Speaker 2 (Consuelo Correa Barros):  Eh, y existen, bueno, componentes intermedios. Sí, nosotros con Carlos que venimos haciendo el
-[47:18] Speaker 5: ¿Todo bien?
 [46:36] Speaker 2 (Consuelo Correa Barros): , el diplomado, donde el ejercicio final es exactamente lo mismo que nosotros les
-[47:24] Speaker 5:  No, tienes mi cámara. ¿Corregiste todo? Genial.
 [46:46] Speaker 2 (Consuelo Correa Barros):  estamos pidiendo desde el inicio, eh, había gente que se encolosinó y hizo un montonazo de componentes. Esto en el fondo es
-[47:32] Speaker 5:  Para.
 [46:54] Speaker 2 (Consuelo Correa Barros):  lo mínimo que nosotros les pedimos, pero si ustedes quieren y tienen el tiempo de hacer más cosas, por supuesto. Vamos a, hay un intermedio.
 [46:55] Speaker 2 (Consuelo Correa Barros):  Por ejemplo, como
-[47:40] Speaker 5:  Están explicando algunas cosas que vamos a ver en el c
 [46:58] Speaker 2 (Consuelo Correa Barros):  un breadcrumb, que es
-[47:42] Speaker 5: urso. Ya algunos se presentaron.
-[47:44] Speaker 5:  ¿Qué pasó?
 [47:00] Speaker 2 (Consuelo Correa Barros):  parte de un menú de navegación,
-[47:48] Speaker 5:  Papa, qué chito.
 [47:07] Speaker 2 (Consuelo Correa Barros):  no es simple ni es complejo. Está como que pero está más cercano a lo
-[47:52] Speaker 5:  Buen
 [47:09] Speaker 2 (Consuelo Correa Barros):  simple que hacia lo complejo, ¿vale? Enton
-[47:54] Speaker 5: o, muy chito. ¿Cuál local fuiste al final?
 [47:11] Speaker 2 (Consuelo Correa Barros): ces, como en general hay que pens
-[47:55] Speaker 6:  Bueno, otra vez.
-[47:59] Speaker 5:  ¿El de atender al chico? Buenísimo.
 [47:15] Speaker 2 (Consuelo Correa Barros): ar como estas cosas que son más complicadas, los
-[48:01] Speaker 5:  Jordi. ¿Las vas a cambiar ahora?
 [47:23] Speaker 2 (Consuelo Correa Barros):  tabs, ¿por qué y por qué lo consideramos complejo? Porque, bueno, porque aparecen como configuraciones que son específicas o document
-[48:07] Speaker 6:  Ya fue un po
 [47:25] Speaker 2 (Consuelo Correa Barros): ación específica del lector de pantalla. Enton
-[48:08] Speaker 6: quito de todo.
-[48:09] Speaker 5:  Igual me pongo cancelación. Ya no vo
 [47:27] Speaker 2 (Consuelo Correa Barros): ces, cuando ustedes seleccionen qué comp
-[48:11] Speaker 5: y a hablar el resto de la clase ni a usar cámar
 [47:29] Speaker 2 (Consuelo Correa Barros): onentes van a hacer, bueno, lo podemos conversar
-[48:17] Speaker 5: a, así que si me pongo cancelación, estoy con cancelación. Dale.
 [47:48] Speaker 2 (Consuelo Correa Barros):  en las tutorías, lo podemos conversar por Discord para llegar a definir como, oye, esto está fácil o en realidad no. Pero no es porque lo la facilidad esté en el diseñar que sea simple o que el diseño sea complejo, sino que es los distintos casos de uso que se presentan para llegar
-[48:34] Speaker 5:  Después necesito que me acompañes a la farmacia, ¿okay?
-[48:34] Speaker 6:  Okay.
 [48:00] Speaker 2 (Consuelo Correa Barros):  a definir lo complejo. Entonces, por ejemplo, que es muy lo típico es como si el componente utiliza varios componentes simples, bueno, entonces ya claramente paso a hacer algo más, más complejo.
 [48:27] Speaker 2 (Consuelo Correa Barros):  Eh, dentro del proyecto también vamos a definir todas las especificaciones. O sea, acá no se van a salvar de lo que mostramos ayer de definir los espaciados, definir los tokens, todo eso es como es especificación, pero esa es dentro de esa especificación incluye todo lo que tenga que ver con accesibilidad, cómo se comporta, eh, a través del teclado, qué pasa con el lector de pantalla, qué sé yo.
 [48:40] Speaker 2 (Consuelo Correa Barros):  También vamos a hacer el handoff, que es la parte vinculada como hacia la interfaz misma, donde vamos a aprender a documentar ciertas cosas. Algunas de esas cosas se documentan también en el sistema de diseño.
@@ -348,7 +329,6 @@
 [54:59] Speaker 2 (Consuelo Correa Barros):  Exactamente.
 [55:05] Speaker 1 (Carlos Garrido Marín):  Que haremos más, haremos mucho, mucho más, ¿vale? Así que es que con su, qué visión de negocio tienes, es decir.
 [55:09] Speaker 2 (Consuelo Correa Barros):  No se lo gasten en otra cosa, me lo, me lo ahorran.
-[55:55] Speaker 5:  Chilena, pelato. Qué pelato.
 [55:16] Speaker 1 (Carlos Garrido Marín):  Vale, genial. Eh, entonces, ah, bueno, entonces, pues separamos esas dos cosas, ¿vale?
 [55:37] Speaker 1 (Carlos Garrido Marín):  Porque sí que es verdad que a veces había lido, lío, ¿vale? De la gente preguntando, oye, el certificado y demás, lo dicho, una cosa es que, bueno, el proyecto tenéis acceso de por vida, que eso no lo hemos comentado, es decir, todo el material y todo lo que vais a ver tenéis acceso para siempre, no necesitáis hacer la suscripción de guía ni nada de eso, y por lo tanto el certificado vais avanzando cuando vosotros podáis y demás y vais a desbloquearlo en cuanto a vuestro podáis, ¿vale?
 [55:43] Speaker 1 (Carlos Garrido Marín):  Y otra cosa es el proyecto, que sí que transcurre durante la vida de la parte de los cursos en vivo, ¿vale? Entonces, esas dos cosas por separado.
@@ -547,7 +527,6 @@
 [85:51] Speaker 1 (Carlos Garrido Marín):  Venga, vamos con ella. Quid.
 [85:58] Speaker 1 (Carlos Garrido Marín):  ¿Qué Alt aporta lo que falta? ¿Vale? Entonces, os damos 30 segunditos.
 [86:02] Speaker 1 (Carlos Garrido Marín):  Hay una foto, ¿vale? En una card y aparece perros, guías
-[86:49] Speaker 5:  A la vez.
 [86:04] Speaker 1 (Carlos Garrido Marín):  fuera de servicio. A menudo llevan un cascabel.
 [86:13] Speaker 1 (Carlos Garrido Marín):  Su sonido permite a la persona ciega localizar dónde está el perro. ¿Qué añade la fotografía? ¿Vale? Entonces, ¿qué se informa a la con un texto alternativo?
 [86:13] Speaker 2 (Consuelo Correa Barros):  Vale.
@@ -706,18 +685,13 @@
 [103:41] Speaker 2 (Consuelo Correa Barros):  Entonces, eso. La, la autenticación, con alternativas.
 [103:46] Speaker 1 (Consuelo Correa Barros):  Genial. Lo veremos porque es una de las cositas que le he puesto, porque suele ser de los más desconocidos, ¿vale?
 [103:47] Speaker 1 (Consuelo Correa Barros):  Que hay
-[104:32] Speaker 5:  Estamos haciendo un
 [103:49] Speaker 1 (Consuelo Correa Barros):  que siempre, al final, tenemos que dar alternativas y difer
-[104:37] Speaker 5:  quiz de sostenibilidad y me está haciendo como el orto. Estoy malísimo.
 [103:51] Speaker 1 (Consuelo Correa Barros): entes formas de interacción, ¿no? V
-[104:38] Speaker 5:  Boludo, no sé nada.
 [103:58] Speaker 1 (Consuelo Correa Barros): amos a ir un poquito rápido, que si no, se nos van a hacer las tantas y no vamos a terminar la clase. Vale, en este caso vamos a ver aquí un pequeño ejemplo con una modal, ¿vale?
 [104:03] Speaker 1 (Consuelo Correa Barros):  Nosotros básicamente eh, estamos primero aquí, ¿vale? En el apartado de, oye, estoy en el apartado de editar mi perfil.
 [104:14] Speaker 1 (Consuelo Correa Barros):  Entonces yo le doy al botón de editar perfil y abre básicamente esta modal, ¿vale? El tema es, vale, si yo le pulso el botón de cerrar o, bueno, el botón de abajo de cerrar, ¿qué es lo que pasa?
 [104:17] Speaker 1 (Consuelo Correa Barros):  ¿Vale? Es decir, si yo tengo el foco dentro de la, de la modal, cuando lo cier
-[105:04] Speaker 5:  Es difícil, Dios. Yo qué sé.
 [104:28] Speaker 1 (Consuelo Correa Barros): ro, ¿qué es lo que pasa? ¿Vale? ¿Dónde va ese foco? ¿Dónde vuelve el foco o dónde acaba? ¿Vale? Al botón de editar perfil, al principio de la página, a la barra del navegador o a cualquier lugar visible.
-[105:17] Speaker 5:  Ah.
 [104:34] Speaker 1 (Consuelo Correa Barros):  Y tenemos por aquí, bueno, tenemos ahí respuestas variadas, ¿no? Al botón de editar perfil.
 [104:41] Speaker 1 (Consuelo Correa Barros):  Efectivamente, ¿vale? Nosotros si tenemos de donde, de cuando nosotros abrimos básicamente una ventana nueva, ¿vale?
 [104:58] Speaker 1 (Consuelo Correa Barros):  Dentro de una interacción, en este caso las ventanas nuevas, vamos a considerar eh, ventana nueva que puede ser una modal, un dialog, un action sheet, es decir, diferentes tipologías de componentes que al final interrumpen y es como básicamente una, una, una, una ventana nueva, ¿vale? Eh, cuando nosotros cerramos dicha ventana, ¿vale?
@@ -759,7 +733,6 @@
 [110:12] Speaker 1 (Consuelo Correa Barros):  Venga, genial. Pues tenemos por aquí Mare sigue en racha, tenemos Yuri, no se ha movido el ranking.
 [110:17] Speaker 1 (Consuelo Correa Barros):  Vamos con la pregunta número 16. Este dip responde al clic, ¿vale?
 [110:19] Speaker 1 (Consuelo Correa Barros):  Esto ya hablamos otra vez de código. ¿Qué le falta para comp
-[111:07] Speaker 5:  Oh.
 [110:23] Speaker 1 (Consuelo Correa Barros): ortarse como un botón de verdad, no? Entonces, aquí tenemos, por ejemplo, un dip, ¿vale?
 [110:34] Speaker 1 (Consuelo Correa Barros):  Esto ya es semántica pura, HTML puro para ver lo fuerte que, que sois en esto. Y tenemos un rol button y un evento de on click, que básicamente cuando hago clic pues hace un access, ¿vale?
 [110:37] Speaker 1 (Consuelo Correa Barros):  Entonces, ¿qué es lo que pasa, no? Esto es correcto o no es correcto?
@@ -776,7 +749,6 @@
 [112:27] Speaker 1 (Carlos Garrido Marín):  ¿Cómo comunicarlo sin mover el foco, no? Entonces, aquí tenemos básicamente imaginaros una, una, una sección de preferencias, recibís novedades, la hemos seleccionado, aquí me falta un check, la hemos seleccionado y le damos a guardar.
 [112:33] Speaker 1 (Carlos Garrido Marín):  Y nos aparece el típico toast, no? Que nos dice: "Cambio guardado", o la típica, bueno, sí, el típico toast que aparece: "Cambio guardado", ¿no?
 [112:45] Speaker 1 (Consuelo Correa Barros):  Entonces, ¿cómo se notifica eso a un usuario, un lector de pantalla, no? Entonces, aquí decimos: "Un con un color más intenso, haciendo parpadear el mensaje ahí que se note bien, como mensaje de estado programático o m
-[113:33] Speaker 5:  Eh.
 [112:57] Speaker 1 (Consuelo Correa Barros): oviendo siempre el foco al mensaje", ¿vale? Tu, tu, tu, tu, tu, pues yo sabía que se iban, iban a dividirse en esas dos cuestiones y efectivamente en este caso lo que tenemos que hacer es como mensaje de estado programático.
 [113:19] Speaker 1 (Consuelo Correa Barros):  Es decir, nosotros podemos hacer, ¿vale? Que esto también lo veremos de cara al handoff, que nosotros cuando le damos y hacemos una acción sobre un elemento y aparece en la pantalla, pues eso, un tipo de un toast o pasa algo en la pantalla, que es un cambio en vivo, pues nosotros podemos notificar a los usuarios del lector de pantalla, por ejemplo, en este caso, y decirle: "Él sigue en el botón de guardar", ¿vale?
 [113:31] Speaker 1 (Consuelo Correa Barros):  A nivel de, de foco y a nivel del, del lector de pantalla, pero él escucha: "Cambio guardado" y además le hace tin, cambio guardado, ¿vale? Pues eso es lo que podemos hacer haciendo un mensaje de estado en una región viva, ¿vale?
@@ -787,10 +759,8 @@
 [114:25] Speaker 2 (Consuelo Correa Barros):  Entonces, eso va en contra de, de una buena experiencia de usuario. Resolvió dándose la vuelta, sí, resolvió.
 [114:29] Speaker 2 (Consuelo Correa Barros):  Es incorrecto, sigue siendo incorrecto, ¿verdad? Hay que notificarlo.
 [114:43] Speaker 2 (Consuelo Correa Barros):  Entonces, por eso es que les decíamos que dentro de las cosas que vamos a documentar, además de los componentes y todo lo demás, son estas cosas que tienen que ver con area y area lo que hace es donde el HT
-[115:32] Speaker 5:  Eh.
 [114:49] Speaker 2 (Consuelo Correa Barros): ML queda corto, aparece area. Llega un estándar en sí mismo, así que vamos, vamos a aprender muchísimo.
 [114:53] Speaker 1 (Consuelo Correa Barros):  Vale, por aquí seguimos
-[115:43] Speaker 5:  Mhm.
 [114:56] Speaker 1 (Consuelo Correa Barros):  seguimos en ranking. Mare no hay quien la pare.
 [115:04] Speaker 1 (Consuelo Correa Barros):  Luego Steve se ha subido bastante y Yuli ha bajado a tercera posición. Vamos para allá que nos quedan tres preguntitas rápidas.
 [115:11] Speaker 1 (Consuelo Correa Barros):  ¿Vas a pedir este diálogo a una IA? ¿Qué instrucción permite comprobar mejor el resultado? Vale, esto es un poco subjetivo, pero mejor.
@@ -817,17 +787,12 @@
 [118:26] Speaker 1 (Carlos Garrido Marín):  Y decisiva totalmente. Tenemos un elemento de, es un enlace, ¿vale?
 [118:34] Speaker 1 (Carlos Garrido Marín):  Es un a, es un anchor, tiene básicamente al mayores aparte de ser un elemento de, de, de enlace, tiene un, un rol presentación, ¿vale? Entonces, ¿qué pasa?
 [118:43] Speaker 1 (Carlos Garrido Marín):  ¿Vale? Se ignora ese rol y se mantiene la semántica, lo quita del recorrido del tab, oculta excepto a los lectores de pantalla, lo convierte en un botón y la respuesta es
-[119:28] Speaker 5:  Sí.
-[119:29] Speaker 6:  Okay.
 [118:49] Speaker 1 (Carlos Garrido Marín):  tu, tu, tu, tu, tu, ignora ese rol y mantiene efectivamente la semántica de ese elemento
-[119:35] Speaker 6:  Qué difícil, hermano. Más fácil, René.
-[119:38] Speaker 6:  Examen—
 [119:01] Speaker 1 (Carlos Garrido Marín):  y de ese enlace, es decir, no se pisa, porque es una característica especial que tiene el rol de la, de, de, de la presentación. Por lo tanto, se mantiene la semántica del, del enlace y realmente no pasa nada, ¿vale?
 [119:07] Speaker 1 (Carlos Garrido Marín):  Pero, bueno, es una mala praxis, es decir, esto no hay que hacerlo, esto es una cuestión trampa. Perfecto.
 [119:15] Speaker 1 (Carlos Garrido Marín):  Entonces, por ir terminando ya, que ya son las 9:00 aquí en España, vamos a ver quién ha ganado. En tercera posición nos queda Steve, ¿vale?
 [119:30] Speaker 1 (Carlos Garrido Marín):  En segunda posición nos queda Yuli, que al final retomado porque iba desde la tercera, y la primera persona que ha ganado tenemos a Mare, así que nada, enhorabuena Mare. Aira también, según quinta Clara, ¿vale?
 [119:53] Speaker 1 (Carlos Garrido Marín):  Así que nada, enhorabuena a todos por, por este pequeño Kahoot, pero bueno, esto ya también nos pone en situación un poco del nivel que tenéis y demás, que bueno, que en general yo creo que es un nivel que tenéis nociones, es decir, no es que vayáis de una base completamente bueno, de básica ni nada de eso, entonces, bueno, está guay, sobre todo para orientar más las sesiones en vivo y demás, que podamos hacer ejercici
-[120:39] Speaker 6:  No.
 [120:00] Speaker 1 (Carlos Garrido Marín): os a lo mejor un poco más complejos, ¿vale? Y explicar ese tipo de cosas un poco más con casuística y cosas más, y situación un poco más compleja, ¿vale?
 [120:10] Speaker 1 (Carlos Garrido Marín):  Así que nada, dejamos por aquí la clase, la clase en vivo. Lo dicho, importante uniros al Discord, que ahí vamos a hacer todas las notificaciones.
 [120:22] Speaker 1 (Carlos Garrido Marín):  Soy pesado y además no soy pesado solo, sino que he automatizado correos para que si no estáis inscritos en el Discord os lleguen y os digan: "Oye, uniros al Discord". Así que bueno, por ahí hablaremos todo, comunicaremos cuando también esté el módulo ya desbloqueado, ¿vale?
