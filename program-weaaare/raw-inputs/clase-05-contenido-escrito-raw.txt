@@ -1,0 +1,22 @@
+# Clase 5 — Tutoría del módulo 4
+## Contenido escrito de la plataforma (publicado después de subir la grabación), transcrito de captura de pantalla
+
+Nota: transcripción de una captura de pantalla de la plataforma weAAAre con la tarea para la siguiente tutoría, que se publicó junto con la grabación de la tutoría del módulo 4 (`clase-05-raw.txt`). El enlace a soporte aparece subrayado en la plataforma. Las descripciones entre [corchetes] no son texto de la plataforma.
+
+---
+
+## Siguientes pasos para tu proyecto
+
+Para la próxima tutoría, el objetivo es **tener el flujo acotado y las pantallas dibujadas** con los elementos que necesitan.
+
+- **Acota el flujo.** Si tu proyecto abarca demasiado, divídelo: iniciar sesión es un flujo y añadir un producto a la cesta es otro. En los equipos de producto nadie lleva un servicio entero de punta a punta, se trabaja por flujos.
+- **Dibuja las pantallas del flujo,** aunque sea a mano. No tienen que ser bonitas: el objetivo del intensivo es aprender a documentar, no diseñar bonito. Si dudas del alcance, haz una foto o captura del boceto y compártela en Discord para revisarlo.
+- **Piensa qué componentes vas a documentar:** dos simples y uno complejo. En los proyectos revisados hay buenos candidatos, como un selector de butacas o un control para sumar y restar cantidades. Todavía no diseñes su comportamiento: lo trabajarás con el módulo 5.
+- **Mantén el orden del proyecto:** primero el briefing con las capturas y el análisis del flujo, después la matriz de requisitos, que ahora puedes completar con lo aprendido en el módulo 4, y por último el diseño.
+- **Lo que viene:** el módulo 5, de componentes, se desbloquea por partes. En el módulo 6, Consuelo explica cómo especificar y documentar en Figma para traspasarlo al equipo.
+
+## Cómo compartir tu proyecto
+
+Para entregarnos tu proyecto, envíanos **el enlace de tu archivo de Figma** por el medio que te resulte más cómodo: a soporte@weaaare.com, por Discord, por el grupo del intensivo o por mensaje privado a Carlos.
+
+Cualquiera de esas vías nos sirve; no necesitas enviarlo por varias. **Antes de compartirlo, comprueba que tenemos permiso para ver el archivo,** o bien danos permiso cuando te lo solicitemos: en esta revisión, dos proyectos no se pudieron abrir por falta de acceso.

@@ -1,7 +1,9 @@
 ---
 title: "Clase 5 — Tutoría del módulo 4: foco visible y ejercicio en grupos auditando la web Aliso"
 status: draft
-source: ../raw-inputs/clase-05-raw.txt
+source:
+  - ../raw-inputs/clase-05-raw.txt
+  - ../raw-inputs/clase-05-contenido-escrito-raw.txt
 last_updated: 2026-10-31
 ---
 
@@ -104,6 +106,18 @@ Una instructora (Consuelo, por contexto; figura como Speaker 1) revisó los proy
 - **Esta semana:** definir el flujo, **dibujar las pantallas** con los elementos necesarios y **pensar qué componentes se van a documentar**: **dos simples y uno complejo**. Componentes mencionados como interesantes: selector de butaca, *stepper* que añade tiempo (proyecto vinculado a energía).
 - **El objetivo del curso no es diseñar bonito, sino aprender a documentar.** El diseño no tiene que ser perfecto.
 - Si hay dudas sobre el alcance: **dibujarlo a mano**, tomar captura y enviarlo por Discord. **No diseñar todavía el comportamiento de los componentes**: primero elegir los dos simples y el complejo.
+
+### Tarea oficial para la próxima tutoría (texto de la plataforma)
+
+Publicada junto con la grabación (ver [`clase-05-contenido-escrito-raw.txt`](../raw-inputs/clase-05-contenido-escrito-raw.txt)). **Objetivo: tener el flujo acotado y las pantallas dibujadas** con los elementos que necesitan.
+
+1. **Acotar el flujo:** si abarca demasiado, dividirlo (iniciar sesión es un flujo; añadir un producto a la cesta es otro). En los equipos de producto nadie lleva un servicio entero de punta a punta, se trabaja por flujos.
+2. **Dibujar las pantallas del flujo**, aunque sea a mano; no tienen que ser bonitas. Si hay dudas de alcance, foto o captura del boceto por Discord.
+3. **Pensar qué componentes documentar:** **dos simples y uno complejo**. Buenos candidatos vistos: selector de butacas, control para sumar y restar cantidades. **No diseñar todavía su comportamiento**: se trabaja con el módulo 5.
+4. **Orden del proyecto:** (1) *briefing* con capturas y análisis del flujo → (2) **matriz de requisitos**, que ahora se puede completar con lo aprendido en el módulo 4 → (3) **diseño**.
+5. **Lo que viene:** módulo 5 (componentes), por partes; módulo 6, donde Consuelo explica cómo especificar y documentar en Figma para el traspaso.
+
+**Entrega:** enlace del archivo de **Figma** a soporte@weaaare.com, Discord, grupo del intensivo o mensaje privado a Carlos (basta una vía), **con permiso de visualización** verificado antes (en esta revisión, dos proyectos no se pudieron abrir por falta de acceso).
 
 ## Calendario y logística
 

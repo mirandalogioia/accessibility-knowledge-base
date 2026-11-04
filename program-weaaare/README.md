@@ -31,6 +31,7 @@ Notas y materiales del programa **"Diseño Accesible"** de weAAAre: clases, ejer
 - `raw-inputs/modulo-04-contenido-escrito-raw.txt` — contenido escrito de la plataforma para las mismas lecciones (4.1 a 4.6), transcrito de capturas de pantalla (tablas de criterios, prácticas y feedback de cuestionarios).
 - `intermediate/modulo-04-summary.md` — resumen consolidado del Módulo 4 (fusiona audio + texto escrito): criterios WCAG y barreras por forma de interacción (teclado, puntero, voz y pulsador, lector de pantalla). La tutoría del módulo 4 está pendiente de registrar.
 - `raw-inputs/clase-05-raw.txt` — transcript crudo de la Clase 5 (tutoría en vivo del módulo 4: foco visible y ejercicio en grupos auditando la web de aerolínea Aliso por forma de interacción).
+- `raw-inputs/clase-05-contenido-escrito-raw.txt` — texto de la plataforma con la tarea para la siguiente tutoría (flujo acotado, pantallas dibujadas, componentes a documentar), transcrito de captura.
 - `intermediate/clase-05-summary.md` — resumen de la Clase 5: criterios aclarados, barreras por forma de interacción y avance del proyecto.
 - Guía de herramientas de prueba derivada del módulo: [`../resources/herramientas-prueba-interaccion.md`](../resources/herramientas-prueba-interaccion.md).
 - `raw-inputs/modulo-01-raw.rtf` — transcript crudo del audio de las lecciones grabadas del Módulo 1 ("Diseñar para la diversidad").
