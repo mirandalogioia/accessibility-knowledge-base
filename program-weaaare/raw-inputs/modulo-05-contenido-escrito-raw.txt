@@ -1,0 +1,529 @@
+# Módulo 5 — Laboratorio de componentes accesibles
+## Contenido escrito de las lecciones (plataforma), transcrito de capturas de pantalla
+
+Nota: transcripción de 23 capturas de pantalla de la plataforma, entregadas en dos bloques. Cubre las lecciones 5.1 a 5.11 (introducción, diez componentes y regiones vivas). Falta aún el examen del módulo 5 y la tutoría en vivo. La parte hablada está en `modulo-05-raw.txt`.
+
+Limitaciones de la transcripción:
+- Las capturas no muestran los títulos de lección. La numeración se asignó primero por las referencias cruzadas del texto y después se confirmó con el audio (`modulo-05-raw.txt`), donde el instructor anuncia cada lección por número: 5.1 introducción, 5.2 botón y enlace, 5.3 campo de texto, 5.4 casilla, 5.5 botones de radio, 5.6 interruptor, 5.7 select, 5.8 combobox, 5.9 acordeón y pestañas, 5.10 tooltips, menús y diálogos, 5.11 notificaciones y regiones vivas.
+- El audio es la fuente para lo que las capturas dejan cortado (por ejemplo, las decisiones de diseño de los radios o el cierre de la introducción). Audio y texto escrito son complementarios: ver `modulo-05-raw.txt`.
+- Varias capturas empiezan o terminan a mitad de lección (el cuerpo de la lección está cortado por arriba o por abajo). Lo que falta entre capturas no está transcrito. En concreto: la captura de la introducción termina en "Antes de empezar" con solo dos viñetas, y la del botón y enlace empieza directamente en el cuerpo, sin la entrada de la lección.
+- Las descripciones entre [corchetes] no son texto de la plataforma. Los enlaces aparecen subrayados en la plataforma, pero sus URL no son visibles: solo se transcriben los textos. Los `fragmentos en código` aparecen así en la plataforma.
+- Las tablas de criterios se transcriben como tablas Markdown con las tres columnas de la plataforma: Criterio, Qué pide, Lo que no pide.
+
+---
+
+## 5.1 — Introducción (componentes, cinco preguntas y cómo es el laboratorio)
+
+En Mercado Verde, el corazón de favoritos aparece en la portada, en el listado de productos y en la página de favoritos. Es la misma pieza repetida. Si el equipo arregla la portada a mano, el lector de pantalla sigue sin anunciarlo como botón en las otras pantallas, y en la próxima que se diseñe el error vuelve a salir. Si se arregla el componente, el arreglo llega a todas a la vez. Por eso este módulo deja la tienda y trabaja pieza a pieza.
+
+### Cinco preguntas para cualquier componente
+
+Un componente bien hecho cuenta lo mismo a quien lo mira que a quien lo escucha o lo maneja con el teclado. Antes de dar una pieza por buena, hazle estas cinco preguntas. Son las mismas que recoge la ficha de handoff de cada lección:
+
+- **Rol.** ¿Qué es? Botón, enlace, casilla, pestaña. El lector lo anuncia y, con eso, la persona sabe qué puede hacer con él.
+- **Nombre.** ¿Cómo se llama? En un botón de solo icono el nombre no se ve, así que hay que dárselo. Un corazón sin nombre se anuncia como «botón» y nada más.
+- **Estado.** ¿Está marcado, desplegado, pulsado o deshabilitado? El corazón de favoritos también fallaba aquí: aunque se anunciara como botón, nadie sabría si el producto ya estaba guardado.
+- **Teclas.** ¿Con qué se maneja? Un botón responde a Intro y a Espacio; un enlace, solo a Intro; un grupo de radios se recorre con las flechas. Cada rol tiene las suyas, y quien usa el teclado las espera.
+- **Foco.** ¿Se ve dónde estás? ¿Y adónde va el foco cuando la pieza cambia, por ejemplo al cerrar un diálogo?
+
+Si una pieza falla en una sola de las cinco, falla en todas las pantallas que la usan.
+
+### Cómo es el laboratorio
+
+Cada lección tiene su página en el laboratorio de componentes. Las variantes van numeradas y por separado, sin la tienda alrededor, para que no se mezclen con otros fallos. Debajo de cada variante, la página anota cómo la has activado: con qué tecla o con el ratón. Así compruebas si un botón responde a Espacio o solo al clic.
+
+En algunas lecciones hay además una página de reto: la misma pieza en otra variante o en otro contexto, como la barra de acciones de una receta. La página no te dice qué falla. Recórrela primero con el teclado y después con tu lector de pantalla, y repasa las cinco preguntas.
+
+### Antes de empezar
+
+- Usa Chrome en un ordenador, como en los vídeos. Safari, con su ajuste de fábrica, se salta los enlaces al pulsar Tab.
+- Ten a mano un lector de pantalla. En Mac, VoiceOver se activa y se desactiva con Comando + F5; en Windows, NVDA es gratuito. Si es la primera vez, aprende antes a callarlo: en los dos basta con pulsar Control.
+
+[La captura termina aquí; puede haber más texto debajo.]
+
+---
+
+## 5.2 — Botón y enlace
+
+Un botón hace algo en la página: añade un producto a la cesta, envía un formulario, abre o cierra un menú. Un enlace te lleva a otro sitio: a otra página, a otra parte de la misma página o a un archivo. Por fuera pueden ser idénticos, con la misma forma y el mismo color, pero el lector de pantalla dice «botón» o «enlace», y quien lo escucha espera cosas distintas: con un enlace, cambiar de sitio; con un botón, que pase algo ahí mismo. Por eso «Ir a la cesta» es un enlace aunque tenga forma de botón, y «gastos de envío» sería un botón si, en lugar de llevar a otra página, abriera un cuadro de diálogo.
+
+### Lo que el teclado delata
+
+Con el ratón, un botón, un enlace y un `div` con un clic se comportan igual. Con el teclado se distinguen enseguida, y por eso es la primera prueba que conviene hacer a cualquier diseño ya montado:
+
+- Un **botón** recibe el foco con Tab y se activa con Intro y con Espacio.
+- Un **enlace** recibe el foco con Tab y se activa solo con Intro. Si pulsas Espacio, la página baja: es el navegador desplazándose, no el enlace.
+- Un **`div` o un icono suelto** con un clic programado ni siquiera recibe el foco: Tab lo salta y la acción solo existe para el ratón.
+
+Cuando un control que hace algo responde a Intro pero con Espacio mueve la página, casi siempre es un enlace haciendo de botón. Al revés no hay problema que se vea: un enlace con forma de botón, como «Ir a la cesta», funciona bien con el teclado y el lector lo anuncia como enlace.
+
+### Los criterios de la lección
+
+| Criterio | Qué pide | Lo que no pide |
+|---|---|---|
+| 4.1.2 Nombre, función y valor (A) | Que cada botón y cada enlace exponga su nombre, su rol y, si lo tiene, su estado, y que avise cuando cambia, como «seleccionado» en el conmutador. | No juzga si el nombre es bueno ni pide que el aspecto cambie según el rol: un enlace con forma de botón cumple si se anuncia como enlace. |
+| 2.5.8 Tamaño del objetivo (mínimo) (AA) | Que lo que se pulsa mida al menos 24 × 24 píxeles CSS, o que tenga espacio suficiente alrededor para que un círculo de 24 px centrado en él no toque otro control. | No pide los 44 × 44 de Apple ni los 48 × 48 de Google: esas cifras son recomendaciones de las guías de cada plataforma. Tampoco se aplica a los enlaces dentro de un párrafo. |
+| 1.4.1 Uso del color (A) | Que el color no sea la única forma de dar una información o de distinguir una acción: el botón rojo también dice «Eliminar». | No prohíbe el rojo ni pide quitarlo: el color puede reforzar, siempre que no sea lo único. |
+
+### Lo que se entrega en el handoff
+
+Una vez por variante del componente, no pantalla a pantalla, para que viva en el sistema de diseño:
+
+- **Qué elemento es:** botón si hace algo, enlace si lleva a otro sitio. Si el sistema tiene un solo componente con las dos caras, cuál debe usarse en cada caso.
+- **De dónde sale el nombre:** del texto visible o de un nombre escrito aparte para los botones de solo icono.
+- **El estado,** si se queda pulsado, y cómo se anuncia.
+- **Las teclas:** un botón se activa con Intro y con Espacio; un enlace, solo con Intro.
+- **El área de toque,** aunque la forma sea menor.
+- **Cómo es el foco.**
+- **Si destruye algo,** qué pasa después: deshacer o confirmar.
+
+### Pruébalo tú
+
+La pieza del vídeo está en retos.weaaare.com [enlace externo]. Recórrela con el tabulador y comprueba que cada botón responde a Intro y a Espacio, y que «Ir a la cesta» solo responde a Intro. Después enciende el lector (Comando + F5 en el Mac, Control + Alt + N con NVDA en Windows) y escucha qué dice de cada variante: el rol, el nombre y, en «Guardar», el estado.
+
+### Práctica: Lucía y Andrés guardan una receta
+
+En el vídeo, la pieza solo sale bien hecha. Aquí tienes la misma pieza en otra forma [enlace]: la barra de acciones de una receta, con cuatro botones de solo icono, pequeños y en fila. Lucía usa VoiceOver; Andrés tiene temblor en las manos y usa el ratón. Los dos quieren guardar la receta y compartirla.
+
+1. Pasa el ratón por cada icono y lee su globo. Intenta pulsar cada uno sin tocar el de al lado.
+2. Recórrelos con Tab. Fíjate en cómo sabes dónde estás y prueba Intro y Espacio en cada uno.
+3. Enciende el lector (Comando + F5 en el Mac, Control + Alt + N con NVDA) y escucha cada icono. Pulsa «Guardar receta» y vuelve a escucharlo.
+
+Apunta lo que te haya costado y después contesta.
+
+---
+
+## 5.3 — Campo de texto
+
+Un campo de texto es el sitio donde la persona escribe algo suyo: su nombre, su correo, un comentario. Es el componente que más se repite en un formulario y también el que más se diseña de memoria, copiando el de la pantalla anterior. Por eso un fallo en el campo se multiplica por cada formulario del producto.
+
+Antes de dibujarlo hay una pregunta: ¿la respuesta sale de una lista cerrada? Si son provincias, tallas o países, no es un campo de texto, es un selector, y cada persona dejaría de escribir «Madrid» o «Coruña, A». Y hay datos que se pueden pedir en un campo o en varios, como una fecha. Las dos opciones pueden estar bien; lo que cambia es cómo se agrupan para que el lector diga de qué fecha son el día, el mes y el año.
+
+### La anatomía
+
+Lo que se ve: la **etiqueta**, de donde sale el nombre; la **marca de obligatorio**, si lo es; el **campo**, el recuadro donde se escribe; la **ayuda** de debajo, que dice para qué se usa el dato o qué formato espera; a veces un **contador** o un **mensaje de error**, y el **foco**, con el cursor dentro, que dice dónde se va a escribir.
+
+Lo que no se ve es lo que recibe el lector de pantalla. El **rol** (campo de texto), el **nombre** (la etiqueta) y el **estado** (obligatorio, con error) son los de cualquier componente. El campo suma dos: la **descripción**, que es la ayuda unida al campo para que se lea al llegar, y el **propósito**, que le dice al navegador qué dato de la persona va ahí para que pueda rellenarlo.
+
+### Las decisiones de diseño
+
+1. **La etiqueta, visible y fuera del campo.** El texto de ejemplo de dentro se borra en cuanto se escribe, y quien revisa el formulario antes de enviarlo ya no sabe qué era cada campo. Además suele ser un gris claro que no se lee. La etiqueta flotante puede valer, pero al subir se hace pequeña y clara: arriba tiene que seguir leyéndose.
+2. **El formato, en la ayuda.** Cinco cifras, una fecha con barras: se escribe debajo, fuera del campo, para que se vea mientras se escribe.
+3. **El obligatorio, explicado.** La palabra en la etiqueta, un asterisco que se explica al principio o, si casi todo es obligatorio, la palabra «opcional» en los que no lo son. Un asterisco sin explicar o un color no bastan. Y en el código, el campo dice que es obligatorio.
+4. **El ancho.** El tamaño del campo anuncia cuánto hay que escribir. No es un criterio de las WCAG, pero un código postal a todo el ancho de la pantalla confunde.
+5. **El tipo de dato.** Correo, teléfono o número: según el tipo, el móvil saca un teclado u otro. Y si el dato es de la propia persona, el navegador lo puede rellenar. Para quien tiene temblor o escribe con dificultad, es la diferencia entre terminar el formulario y dejarlo.
+6. **El borde.** Si es lo único que dice dónde está el campo, necesita un contraste de 3 : 1 con el fondo.
+
+### Quién decide cómo se dice
+
+En el handoff no se escribe cómo tiene que sonar el campo en el lector, ni en qué orden se dice cada parte. Se marca qué es cada cosa: cuál es el nombre, cuál es la descripción y qué estado tiene. Las palabras y el orden los pone el lector de pantalla, y por eso «obligatorio» suena igual en una tienda, en un banco y en una agencia de viajes. Si cada web lo escribiera a su manera dentro del nombre, quien usa un lector oiría «obligatorio» en una, «requerido» en otra y «a rellenar» en la tercera.
+
+### Los criterios de la lección
+
+| Criterio | Qué pide | Lo que no pide |
+|---|---|---|
+| 3.3.2 Etiquetas o instrucciones (A) | Que cada campo tenga una etiqueta o unas instrucciones a la vista, también sobre el formato cuando se espera uno concreto. | No pide un tipo concreto de etiqueta: una flotante también vale. Tampoco pide instrucciones largas. |
+| 1.3.1 Información y relaciones (A) | Que lo que se ve unido también lo esté en el código: la etiqueta con su campo, la ayuda con su campo, los campos de una fecha con su grupo. | No pide que se lea todo seguido ni en un orden concreto: eso lo decide el lector. |
+| 1.3.5 Identificar el propósito de los campos (AA) | Que los campos con datos de la propia persona (nombre, correo, teléfono, dirección) digan en el código qué dato son, para que el navegador los pueda rellenar. | No se aplica a datos de otras personas ni a lo que no es un dato personal, como un comentario o un código de descuento. |
+| 1.4.11 Contraste no textual (AA) | Que el borde, o lo que diga dónde está el campo, tenga al menos 3 : 1 con lo que lo rodea. | No pide borde si el campo se distingue de otra manera con ese contraste, por ejemplo con un fondo. |
+| 1.4.3 Contraste (mínimo) (AA) | Que el texto de la etiqueta, también la flotante cuando sube, y el de la ayuda tengan al menos 4,5 : 1. | No cuenta el texto de un campo desactivado. |
+
+### El handoff del campo
+
+Una vez por variante del componente, para que viva en el sistema de diseño:
+
+- **La etiqueta:** el texto, visible y fuera del campo, y que está unida a él.
+- **Obligatorio u opcional,** cómo se marca a la vista y que va en el código.
+- **La ayuda:** el texto y que está unida al campo, para que el lector la diga al llegar.
+- **El tipo de dato,** que decide el teclado del móvil.
+- **El autorrelleno:** qué dato de la persona es, si lo es.
+- **El ancho,** a la medida de lo que se escribe.
+- **El borde,** con 3 : 1 sobre el fondo.
+- **El foco:** el contorno por fuera. El cursor y la escritura ya los da el campo nativo.
+
+Las tres que casi nunca se anotan son la ayuda unida, el tipo de dato y el autorrelleno. Si no están en el handoff, nadie las añade después.
+
+---
+
+## 5.4 — Casilla
+
+Una casilla responde a una pregunta de sí o no que no depende de las demás: recibir el boletín, guardar la tarjeta para la próxima compra, qué temas te interesan. Por eso se pueden marcar varias, todas o ninguna, y marcado no hace nada hasta que se envía el formulario. Parece el componente más sencillo de un formulario, y por eso mismo es el que más se rehace a mano para que se vea mejor. Y al rehacerlo es cuando se suelen perder el teclado y el lector de pantalla.
+
+### Casilla, interruptor o botón de radio
+
+Los tres sirven para elegir, pero no responden a la misma pregunta ni hacen efecto en el mismo momento.
+
+| Si la persona... | Usa | Por qué |
+|---|---|---|
+| Puede elegir varias opciones, o ninguna, y lo confirma al enviar | Casilla | Cada casilla se marca y se desmarca sola, y nada cambia hasta que envías. |
+| Enciende o apaga algo que cambia en ese mismo momento | Interruptor | No hay nada que enviar: el modo oscuro se aplica al tocarlo. Lo verás en la lección 5.6. |
+| Tiene que elegir una sola entre varias | Botón de radio | Elegir una desmarca la anterior. Es la lección siguiente. |
+
+Una pista para dudar menos: si la frase de la etiqueta necesita un botón «Guardar» o «Enviar» para cumplirse, es una casilla. Si se cumple en cuanto la tocas, es un interruptor.
+
+### Tres estados, no dos
+
+Una casilla suelta solo puede estar marcada o sin marcar. La que encabeza una lista, como «Seleccionar todos», tiene un tercer estado: mixta, cuando solo algunas de la lista están marcadas. Se dibuja con una raya en lugar del visto, y el lector de pantalla tiene que oírlo también. VoiceOver dice «mezclado», y cada lector lo dice a su manera. Las palabras las pone el lector; lo que decide el producto es que el estado exista en el código.
+
+Ese estado no se puede escribir en el HTML. En una casilla nativa lo pone el código de la página (la propiedad `indeterminate`), y en una casilla construida a mano, `aria-checked="mixed"`. Si en el diseño hay un «Seleccionar todos», la ficha de handoff tiene que decir cuándo queda mixto y qué pasa al pulsarlo en ese estado. En la pieza del vídeo, pulsarlo marca todas.
+
+### Una casilla propia, sin romperla
+
+Que la casilla no sea la gris del navegador no es un problema. El problema es cómo se cambia. Hay dos formas habituales de hacerlo, y parecen iguales en pantalla:
+
+| Cómo se hace | Qué queda | Teclado y lector |
+|---|---|---|
+| La casilla de verdad se deja en su sitio con otro aspecto (`appearance: none` y estilos propios) | Una casilla nativa con otro dibujo | Recibe el foco, se marca con Espacio y el lector la anuncia como casilla, con su nombre y su estado. |
+| La casilla de verdad se esconde (`display: none`) y se dibuja otra encima | Un dibujo | Con el ratón parece funcionar, porque pulsar el texto la marca. El tabulador se la salta y el lector no la encuentra. |
+
+Por eso, si el diseño lleva una casilla propia, hay que dejarlo escrito en el handoff: así quien la programa sabe que tiene que funcionar igual que la nativa, y no solo verse igual.
+
+### Los criterios de la lección
+
+| Criterio | Qué pide | Lo que no pide |
+|---|---|---|
+| 4.1.2 Nombre, función y valor (A) | Que cada casilla tenga nombre (el de su etiqueta), el rol de casilla y su estado, también el mixto, y que el cambio se anuncie. | No pide que el lector diga unas palabras concretas: «seleccionado», «marcada» o «mezclado» dependen de cada lector. |
+| 1.3.1 Información y relaciones (A) | Que la relación que se ve esté en el código: la etiqueta unida a su casilla y, si las casillas responden a una pregunta, el grupo con esa pregunta como título (un `fieldset` con su `legend`). | No obliga a agrupar casillas que no comparten pregunta. Una casilla suelta, como la del boletín, no necesita grupo. |
+| 1.4.1 Uso del color (A) | Que marcada y sin marcar no se distingan solo por el color: el visto cambia la forma. | No prohíbe el color de acento en la casilla marcada; puede acompañar al visto. |
+| 1.4.11 Contraste no textual (AA) | Que el borde de la caja sin marcar, y el visto de la marcada, tengan al menos 3 : 1 con lo que hay alrededor. | No se aplica a la casilla nativa sin estilos propios: su aspecto lo decide el navegador. |
+| 2.5.8 Tamaño del objetivo (mínimo) (AA) | Que lo que se pulsa mida al menos 24 × 24 píxeles CSS, o tenga espacio alrededor. Con la etiqueta unida, el objetivo es toda la fila. | Tampoco se aplica a la casilla nativa sin tamaño cambiado. Que la etiqueta se pueda pulsar es una buena práctica, no un requisito de este criterio. |
+
+### Lo que se entrega en el handoff
+
+- **La etiqueta:** el texto exacto, en positivo, y que va unida a la casilla. Así el nombre sale de ahí y toda la fila se puede pulsar.
+- **El grupo:** qué casillas responden a la misma pregunta y cuál es esa pregunta, que será su título.
+- **El estado inicial:** cuáles vienen marcadas, si alguna, y por qué.
+- **Seleccionar todos,** si hay: cuándo queda mixto y qué hace al pulsarlo en cada estado.
+- **Si la casilla es propia:** que por debajo sigue siendo una casilla de verdad, con Tab para llegar y Espacio para marcar.
+- **Cómo se ve:** el visto, el borde sin marcar con contraste suficiente y el foco.
+
+---
+
+## 5.5 — Botones de radio
+
+Un grupo de botones de radio hace una pregunta con varias respuestas posibles y una sola válida: el horario de una clase, el tamaño del texto, el plan que contratas. Quien ve la pantalla entiende la pregunta de un vistazo, porque el título y las opciones están juntos. Quien usa el teclado o un lector de pantalla depende de que esa unión exista también en el código: si no, recibe opciones sueltas, sin pregunta, y el teclado no sabe que forman un grupo.
+
+### Radio, casilla o selector
+
+Los tres sirven para elegir, pero no responden a la misma pregunta. La casilla deja marcar varias cosas a la vez, o ninguna. El botón de radio y el selector piden una sola, y lo que los separa es el espacio y el número de opciones.
+
+| Si la persona... | Usa | Por qué |
+|---|---|---|
+| Puede elegir varias opciones, o ninguna | Casilla | Cada casilla se marca y se desmarca sola, sin afectar a las demás. |
+| Tiene que elegir una entre pocas, y conviene compararlas | Botón de radio | Todas las opciones se ven a la vez, sin abrir nada. |
+| Tiene que elegir una entre muchas, o no hay sitio | Selector | Las opciones se guardan en un desplegable; a partir de cinco o siete, la lista de radios cansa más de lo que ayuda. |
+
+### El teclado dentro de un grupo
+
+El botón de radio es la primera pieza del módulo en la que el tabulador no pasa por cada opción. Todo el grupo es una sola parada: se entra, se elige con las flechas y se sale. Lo mismo vas a encontrar en las pestañas, en los menús o en un calendario.
+
+| Tecla | Qué hace |
+|---|---|
+| Tab | Entra en el grupo por la opción elegida, o por la primera si no hay ninguna. Otro Tab sale del grupo. |
+| Mayús + Tab | Vuelve al grupo desde el control siguiente, otra vez por la elegida. |
+| Flechas | Mueven el foco a la opción siguiente o a la anterior y la eligen a la vez. Al llegar a la última, vuelven a la primera. |
+| Espacio | Elige la opción que tiene el foco, si todavía no hay ninguna elegida. |
+
+Que las flechas elijan mientras recorren es lo que convierte la cuarta decisión de diseño en una norma: elegir una opción solo elige. Si cada cambio enviara el formulario o llevara a otra página, quien usa el teclado nunca llegaría a la opción que buscaba.
+
+[La captura no incluye las decisiones de diseño numeradas a las que se refiere este párrafo. El audio de la lección sí las cubre: opción de partida, orden de las opciones, tarjetas seleccionables y que elegir solo elige.]
+
+### Los criterios de la lección
+
+| Criterio | Qué pide | Lo que no pide |
+|---|---|---|
+| 1.3.1 Información y relaciones (A) | Que la relación que se ve también esté en el código: las opciones dentro de un grupo, y el grupo con su título como nombre (un `fieldset` con su `legend`, o un `radiogroup` con nombre). | Que el título se vea de una forma concreta. Puede ser una pregunta, una etiqueta en negrita o el encabezado de la sección, siempre que sea el nombre del grupo. |
+| 4.1.2 Nombre, función y valor (A) | Que cada opción tenga nombre, el rol de botón de radio y su estado, elegida o no, y que el cambio se anuncie. | No pide que el lector diga «1 de 3»: la posición la añade él solo cuando las opciones forman un grupo de verdad. |
+| 3.2.2 Al introducir datos (A) | Que elegir una opción no cambie el contexto (no envíe, no cambie de página, no mueva el foco) sin haberlo avisado antes. | Que no pase nada en la página: enseñar u ocultar un campo según la opción elegida, en el mismo sitio, está permitido. |
+| 1.4.11 Contraste no textual (AA) | Que el círculo sin elegir, y lo que marca la elegida, tengan un contraste de al menos 3:1 con lo que hay alrededor. | Que el círculo sea oscuro: basta con que se distinga. Tampoco se aplica al radio nativo sin estilos del navegador. |
+| 1.4.1 Uso del color (A) | Que la opción elegida no se distinga solo por el color: en una tarjeta, el borde más grueso o el punto del radio. | No prohíbe el color de acento: puede acompañar, siempre que no sea lo único. |
+
+### Lo que se entrega en el handoff
+
+- **El grupo:** qué opciones forman parte de él y cuál es su título. Es lo que hace que solo se pueda elegir una y que las flechas funcionen.
+- **La opción de partida:** si empieza con una elegida, cuál; si empieza vacía, que no se puede volver a vaciar, y si «ninguna» es una respuesta válida, que sea una opción más.
+- **El orden,** con su lógica: de menor a mayor, por horas, de lo más común a lo menos común.
+- **El teclado:** una parada de Tab y flechas dentro. Con radios nativos viene de serie; si se construye a mano, hay que programarlo entero.
+- **Cómo se ve la elegida y el foco,** sin depender solo del color.
+- **En las tarjetas seleccionables,** que no lleven nada más que se pulse dentro. Los enlaces van fuera.
+
+No hace falta escribir cómo lo va a decir el lector de pantalla. Si el grupo está bien hecho, el lector anuncia el título, el rol, el estado y la posición a su manera, la misma que el usuario oye en cualquier otra web.
+
+---
+
+## 5.6 — Interruptor
+
+Un interruptor cambia algo en el momento en que lo tocas, como la luz de casa: no hay un «Guardar» detrás. Esa promesa es lo que lo separa de una casilla, que por dentro se le parece mucho. Si la persona tiene que pulsar un botón después para que el cambio cuente, lo que necesita es una casilla; si le das un interruptor, lo tocará, creerá que ya está y se irá sin guardar.
+
+### Dos maneras de construirlo, y las dos valen
+
+En la pieza hay dos interruptores que suenan igual con el lector, pero no están hechos igual:
+
+- **Con un botón** (`<button role="switch" aria-checked="...">`): la etiqueta va dentro del botón, así que el foco rodea toda la fila, texto y pastilla. Se activa con Espacio y con Intro, como cualquier botón.
+- **Con una casilla** (`<input type="checkbox" role="switch">` dentro de su `<label>`): el foco marca solo la pastilla, porque el control es la casilla, y se activa con Espacio. Intro no hace nada, como en cualquier casilla.
+
+En los dos, un clic en la etiqueta también lo cambia, y el lector anuncia el nombre, el estado y el rol. Al diseñar no hace falta elegir la técnica, pero sí dibujar el foco que va a tener y decir qué teclas lo activan, porque eso cambia según cuál se use.
+
+### El texto «Activado»: opcional, y siempre aparte
+
+Cuando el estado se escribe al lado («Activado», «Desactivado»), ayuda a quien no tiene claro qué lado del mando significa encendido. Pero es un añadido: el estado ya lo dicen el mando y el código. Lo que no puede pasar es que ese texto ocupe el lugar de la etiqueta. Si la etiqueta cambia de «Activado» a «Desactivado», nadie sabe qué se está encendiendo, y el lector lo repite dos veces sin decir de qué se trata.
+
+### Los criterios de la lección
+
+| Criterio | Qué pide | Lo que no pide |
+|---|---|---|
+| 4.1.2 Nombre, función y valor (A) | Que el interruptor se anuncie como tal, con su nombre (el texto de la etiqueta) y su estado, y que avise cuando el estado cambia. | No dice qué palabra usa cada lector para el rol: VoiceOver lo llama «conmutador» y no se puede cambiar. |
+| 1.4.1 Uso del color (A) | Que encendido y apagado se distingan por algo más que el color: aquí, el mando que pasa de un lado al otro. | No prohíbe que el carril cambie de color; solo que sea lo único que cambia. |
+| 1.4.11 Contraste no textual (AA) | Que lo que hace falta ver para saber el estado tenga al menos 3 : 1 con lo que lo rodea: el borde del carril contra el fondo y el mando contra el carril, también apagado. | No pide 3 : 1 entre el color de encendido y el de apagado, ni se aplica a un interruptor desactivado que no se puede usar. |
+
+### Lo que se entrega en el handoff
+
+Una vez por variante del componente, en el sistema de diseño:
+
+- **El rol:** interruptor, no casilla. Si el cambio necesita un «Guardar», no es un interruptor.
+- **El nombre:** el texto de la etiqueta, que no cambia al encender o apagar.
+- **El estado:** activado o desactivado, y que se anuncia al cambiar. Cómo lo dice cada lector no se especifica.
+- **Encendido sin color:** la posición del mando en cada estado.
+- **El contraste** del borde del carril y del mando en los dos estados.
+- **El foco** dibujado y **las teclas:** Espacio siempre; Intro, si se construye como botón.
+- **Qué pasa si el cambio no llega a guardarse.**
+
+---
+
+## 5.7 — Select
+
+El select sirve para una sola cosa: elegir una opción de una lista. Es el componente del módulo en el que menos hay que hacer, porque el navegador y el sistema operativo ya lo traen resuelto: abrir la lista con Espacio, recorrerla con las flechas, saltar con una letra, cerrar con Escape y anunciarlo al lector de pantalla con su nombre, su valor y su estado. El trabajo de diseño está en otra parte: en decidir si de verdad toca un select, en cómo se escriben las opciones y en qué pasa cuando alguien elige una.
+
+### Con qué se confunde
+
+- **Botones de radio.** Sirven para lo mismo, elegir una opción de un grupo, pero con todas a la vista. Con cinco opciones o menos, y si hay sitio, son mejor elección: se ve todo y se elige de un toque.
+- **Combobox.** Por fuera es la misma caja con flecha, pero se escribe en ella y la lista va proponiendo. Es para listas enormes que no caben en un desplegable, como las direcciones. Lo vemos en la lección 5.8.
+- **Menú de acciones.** También despliega una lista, pero cada opción hace algo: duplicar, eliminar. El select guarda una respuesta; el menú ejecuta una acción. Si elegir en la lista tiene que hacer algo al momento, lo que necesitas es un menú.
+
+### Lo que se ve y lo que se oye
+
+Lo que se ve: la **etiqueta**, de donde sale el nombre; la **ayuda**, si hace falta; la **caja** con el valor elegido; la **flecha**, que dice que se despliega, y la **lista**, que no la dibujas tú sino el sistema: en el Mac es un menú móvil y en Android, una lista pensada para el dedo. Lo que oye quien usa un lector es el valor elegido, el nombre, la ayuda y el rol, que VoiceOver llama «menú emergente», con su estado: contraído o ampliado. Con el select nativo todo eso sale solo si la etiqueta está bien asociada.
+
+### Las decisiones de diseño
+
+1. **Si tiene que ser un select.** Pocas opciones y sitio: radios. Bastantes y la persona sabe lo que busca: select. Muchísimas, o se buscan escribiendo: combobox. No es una norma de las WCAG, es criterio: esconder dos opciones en un desplegable obliga a todo el mundo a dar un paso más.
+2. **Cómo se escriben las opciones.** Cortas, en un orden que se entienda y que empiecen distinto. Con el teclado, una letra salta a la primera opción que empieza por ella; si todas empiezan por «Provincia de...», ese atajo deja de servir.
+3. **Los grupos.** Si son muchas, se agrupan con los grupos del propio select (`optgroup`): tienen título y no se pueden elegir. No con opciones de mentira que hacen de título.
+4. **Qué sale elegido al principio.** Si es la persona quien tiene que decidir, no se le elige nada: una opción vacía del tipo «Elige un país». Si el campo es obligatorio, el select nativo ya no deja continuar con esa opción vacía. Una opción por defecto solo tiene sentido cuando es la más probable y se ve que se puede cambiar.
+5. **El aspecto.** La caja se diseña como quieras: borde, tipografía, tu propia flecha. La lista sigue siendo la del sistema, y eso no es una pega: es lo que hace que funcione igual en todas partes. Eso sí, el borde y la flecha tienen que distinguirse del fondo, porque son lo que dice que ahí hay un desplegable.
+6. **Qué pasa al elegir.** Elegir solo elige. Al cambiar el select no se navega a otra página, no se abre una ventana ni se mueve el foco. Si elegir tiene que llevar a algún sitio, se pone un botón al lado. Reordenar una lista que hay debajo sí se puede, si el foco se queda donde está y se avisa de lo que ha pasado.
+
+### Los criterios de la lección
+
+| Criterio | Qué pide | Lo que no pide |
+|---|---|---|
+| 3.2.2 Al recibir entradas (A) | Que cambiar el valor de un control no provoque por sí solo un cambio de contexto (otra página, una ventana nueva, el foco en otro sitio), salvo que se avise antes de usarlo. | No prohíbe que la página reaccione: reordenar una lista o mostrar un aviso no es un cambio de contexto. |
+| 4.1.2 Nombre, función y valor (A) | Que el select exponga su nombre, su rol y su valor, y que el valor nuevo se anuncie al cambiar. El select nativo lo hace solo. | No dice cómo debe sonar en cada lector: «menú emergente» es la forma de VoiceOver; NVDA dice «cuadro combinado». |
+| 1.3.1 Información y relaciones (A) | Que lo que se ve como relación también lo sea en el código: la etiqueta unida a su select, los grupos de opciones como grupos y los campos que van juntos, agrupados. | No obliga a agrupar las opciones: solo a que, si se agrupan a la vista, se agrupen también en el código. |
+| 1.4.11 Contraste de elementos no textuales (AA) | Que el borde de la caja o su flecha, lo que dice que hay un control, tenga al menos 3 : 1 con el fondo. | No se aplica a la lista que pinta el sistema sin que la toques: esa es responsabilidad del navegador. |
+
+### Lo que se entrega en el handoff
+
+Mucho más corto que el del botón, porque el elemento nativo trae casi todo:
+
+- **La etiqueta y la ayuda,** y que la etiqueta visible sea el nombre.
+- **Qué sale elegido al principio:** la opción vacía o el valor por defecto, y si el campo es obligatorio.
+- **Los grupos,** si los hay, con su título.
+- **Qué pasa al cambiar:** nada más que elegir, o qué se reordena y qué aviso se da. Es lo que más se olvida.
+- **El aspecto de la caja:** el borde y la flecha a 3 : 1 como mínimo, y cómo es el foco.
+
+---
+
+## 5.8 — Combobox
+
+El combobox es un campo de texto que, mientras escribes, te propone opciones en una lista. Lo usas a diario: al buscar una ciudad de salida, una dirección o un producto. Por fuera parece sencillo, pero es de los componentes que más se rompen, porque casi todo lo que lo hace usable con teclado y con lector de pantalla lo tiene que construir quien lo programa. Por eso el diseño tiene que dejar escritas varias decisiones que en un select ni se plantean.
+
+### Con qué se confunde
+
+- **Select.** Los dos son una caja con una lista que se despliega. En el select no se escribe: se elige de una lista cerrada. En el combobox se escribe y la lista se filtra con lo escrito, así que tiene sentido cuando las opciones son tantas que no caben en un desplegable.
+- **Buscador.** También escribes en un campo y a veces salen sugerencias. Pero el buscador te lleva a una página de resultados; en el combobox no te vas a ningún sitio: eliges una opción ahí mismo y sigues rellenando el formulario.
+- **Sugerencias del navegador.** Es la lista que aparece al escribir tu correo o tu dirección, con datos que el navegador guardó de otras veces. No la diseña nadie del equipo: la activa el atributo `autocomplete` con el tipo de dato (`email`, `street-address`, `postal-code`...). Ese atributo es, además, lo que pide el criterio 1.3.5 Identificar el propósito de la entrada (AA) en los campos con datos personales.
+
+### Lo que se ve y lo que se oye
+
+Lo que se ve: la **etiqueta** y el **campo**, igual que en cualquier campo de texto; la **lista de sugerencias**; dentro de ella, la **opción activa**, que es la que elegiría Intro, y en cada opción **lo que has escrito, resaltado**, para entender por qué sale. Y el **recuento**: «4 resultados» o «Sin resultados».
+
+Lo que se oye depende de lo que no se ve: el **rol** (VoiceOver dice «cuadro de lista emergente»), el **nombre**, que sale de la etiqueta, la **ayuda** si la hay, el **estado** de la lista (contraída o ampliada), cuál es la **opción activa** y su posición («Albacete, 2 de 4») y el **recuento**. En el diseño no se escribe cómo tiene que sonar cada cosa: se deja claro qué es el nombre, qué estados tiene y qué hay que anunciar. Las palabras exactas las pone cada lector, para que suene igual en todas las webs.
+
+### Las decisiones de diseño
+
+1. **Si de verdad hace falta uno a medida.** Un campo con `datalist` ya trae la lista del navegador y su teclado. A cambio, no controlas su aspecto, no resalta lo escrito, no tiene recuento ni grupos, y su opción activa puede ser casi invisible. Si te vale, úsalo; si no, el combobox a medida se construye siguiendo el patrón al pie de la letra.
+2. **El foco se queda en el campo.** Las flechas resaltan opciones, pero el cursor sigue en el texto, así que puedes corregir una letra sin volver atrás. Izquierda y derecha mueven el cursor, no la opción, y Espacio escribe un espacio: para elegir está Intro.
+3. **La opción activa la diseñas tú.** Como el foco no se mueve a la opción, el navegador no le pinta ningún contorno. Hay que diseñarla con algo más que un cambio de color, por ejemplo fondo y borde, y que se distinga de lo que la rodea.
+4. **Pocas sugerencias.** Las que quepan sin hacer scroll, alrededor de ocho, con lo escrito en negrita y no solo en otro color. Una lista de treinta ya no ahorra trabajo: obliga a leer.
+5. **Ninguna marcada de entrada.** Si la primera opción se marcara sola, quien escribe «mar» y pulsa Intro creyendo que ha terminado se encontraría «Marbella» en el formulario. La opción la elige la persona.
+6. **El recuento también se oye.** Si se ve, tiene que llegar al lector de pantalla sin moverle el foco: es un mensaje de estado. Se anuncia con un poco de retraso, cuando la persona deja de escribir, para que no repita el número con cada letra.
+
+### Los criterios de la lección
+
+| Criterio | Qué pide | Lo que no pide |
+|---|---|---|
+| 4.1.2 Nombre, función y valor (A) | Que el campo exponga su rol, su nombre, si la lista está desplegada y cuál es la opción activa. | No dice cómo debe sonar: «cuadro de lista emergente» es la forma de VoiceOver; otros lectores dicen «cuadro combinado». |
+| 4.1.3 Mensajes de estado (AA) | Que el recuento y el «Sin resultados» lleguen al lector sin mover el foco. | No obliga a enseñar un recuento: si no hay mensaje en pantalla, no hay nada que anunciar. |
+| 2.1.1 Teclado (A) | Que todo se pueda hacer con el teclado: abrir, recorrer, elegir y cerrar la lista. | No fija qué teclas: el patrón de la APG es la convención que la gente espera. |
+| 1.4.1 Uso del color (A) | Que la opción activa y lo escrito no se distingan solo por el color. | No prohíbe el color: basta con que vaya acompañado de forma, borde o grosor. |
+| 1.3.5 Identificar el propósito de la entrada (AA) | Que los campos con datos de la persona digan qué dato piden, con `autocomplete`. | No se aplica a una ciudad de destino o un producto: solo a datos sobre la propia persona. |
+
+### Lo que se entrega en el handoff
+
+Aquí la ficha es más larga que la del select, porque casi nada viene de serie:
+
+- **Qué es y dónde está el foco:** un combobox, y el foco no sale del campo al recorrer la lista.
+- **Qué hace cada tecla:** las flechas, Intro (elige la opción activa) y Escape (primero cierra la lista y, con la lista cerrada, borra lo escrito). Si no se anota, desarrollo se lo tiene que inventar.
+- **Cómo es la opción activa,** con algo más que color, y cuántas sugerencias como máximo.
+- **El recuento:** su texto, el de «Sin resultados», y que se ve y se oye.
+
+---
+
+## 5.9 — Acordeón y pestañas
+
+Acordeones y pestañas resuelven el mismo problema: hay más contenido del que conviene enseñar de golpe, así que se esconde y cada persona abre lo que necesita. Por fuera se parecen mucho, pero por dentro se recorren de forma distinta, y casi todos los fallos vienen de mezclar las dos cosas: un acordeón que se maneja con flechas como si fuera un grupo, unas pestañas en las que cada título es una parada del tabulador o un panel cerrado que solo se ha aplastado a la vista.
+
+### Con qué se confunde
+
+- **El acordeón y las pestañas, entre sí.** Los dos esconden paneles y enseñan uno cuando lo pides. Y el acordeón también se puede diseñar para que solo quede uno abierto, así que la diferencia no está ahí. Está en dónde va cada panel y en cómo se recorre: en el acordeón, cada panel se abre justo debajo de su título y los títulos se recorren con el tabulador, uno detrás de otro; en las pestañas, los títulos van juntos en una fila, el contenido tiene un único sitio debajo y entre títulos te mueves con las flechas. Además, en las pestañas siempre hay una elegida y siempre ves un panel; en el acordeón pueden estar todos cerrados. Por eso en el móvil unas pestañas que no caben en una fila suelen convertirse en un acordeón.
+- **Las pestañas y una navegación con forma de pestañas.** Se ven idénticas: una fila de títulos con el actual marcado. Pero si al pulsar te lleva a otra página, no son pestañas, son enlaces, y se marcan como navegación. Las pestañas cambian el panel sin salir de la vista. La navegación del sitio, frente a los menús, sale en la lección 5.10.
+
+### Lo que se ve y lo que se oye
+
+En el acordeón se ve la **cabecera**, que es la fila entera con su pregunta; el **icono**, que dice si está abierto o cerrado, y el **panel**. Lo que oye quien usa un lector de pantalla es un botón con el nombre de la pregunta y su estado, contraído o ampliado. Ese botón va dentro de un encabezado: así la pregunta aparece en la lista de encabezados del lector y se puede encontrar sin abrir nada.
+
+En las pestañas se ve la **fila**, la **elegida**, marcada con una barra y en negrita, y el **panel**. Lo que se oye es cada pestaña con su nombre, su rol, su estado (seleccionada o no) y su posición, «2 de 3». El panel se llama como su pestaña, para que quien llega a él sepa qué está leyendo. VoiceOver en español llama «tabulador» al rol de pestaña, y NVDA, «pestaña»: ninguno de esos textos lo escribes tú.
+
+### Las decisiones de diseño
+
+1. **Qué se pulsa en el acordeón.** Toda la cabecera, no solo la flecha. El texto es lo que la persona intenta pulsar, una fila entera es un objetivo mucho más fácil de acertar con el dedo o con temblor, y si el botón es la fila, su nombre es la pregunta. Un icono suelto de 24 píxeles es justo el tamaño mínimo que pide 2.5.8, y además un botón sin texto necesita un nombre aparte que casi siempre se olvida.
+2. **Que el icono cambie de forma.** Si al abrir solo cambia el color de la flecha, quien no distingue bien los colores no sabe si está abierto o cerrado. Un más que pasa a menos, o una flecha que gira. Lo mismo con la pestaña elegida: la barra o la negrita, no solo el color del texto.
+3. **Lo imprescindible no se pliega.** Mucha gente no abre nada. Los alérgenos de un plato o el precio final, a la vista; el acordeón, para lo opcional. Y si algo tiene que ir dentro por coherencia, esa sección puede empezar abierta.
+4. **El teclado de las pestañas.** Toda la fila es una sola parada del tabulador y las flechas se mueven dentro, como en los radios. Con diez pestañas, diez paradas de Tab antes de llegar al contenido serían un castigo.
+5. **¿En el acto o con Intro?** Si los paneles ya están cargados y salen al momento, que cambien en cuanto la flecha llega a la pestaña. Si cada panel tiene que pedir datos, como tus pedidos, mejor que las flechas solo muevan el foco y que Intro o Espacio elijan: si no, cada flecha es una espera. Las dos formas son accesibles; es una decisión de diseño y va en el handoff.
+
+### El panel que recibe el foco
+
+En las pestañas del vídeo, al pulsar Tab desde «En coche» el foco no salta a lo siguiente de la página: se queda en el panel entero. Es porque ese panel no tiene nada que se pueda pulsar y lleva `tabindex="0"`. No es un criterio de las WCAG, sino la recomendación de la guía de patrones de ARIA del W3C (la APG): que quien usa el teclado llegue al contenido que acaba de elegir antes de salir del componente. Si el panel ya tiene algo que se pulsa, como el enlace «Consultar horarios» de «En tren», no hace falta, y la propia APG lo dice. Hay quien prefiere no hacerlo para no poner el foco en algo que no se activa; lo importante es que el comportamiento sea el mismo en todo tu producto.
+
+### Los criterios de la lección
+
+| Criterio | Qué pide | Lo que no pide |
+|---|---|---|
+| 4.1.2 Nombre, función y valor (A) | Que la cabecera sea un botón con nombre y con su estado, abierto o cerrado, y que cada pestaña diga su rol y si está seleccionada. | No dice qué palabras usa el lector: «contraído» o «plegado» los elige cada lector. |
+| 1.3.1 Información y relaciones (A) | Que lo que se ve como título de sección también lo sea en el código: las preguntas, como encabezados en su nivel; las pestañas, como una lista con su panel. | No fija el nivel exacto del encabezado: depende de lo que haya alrededor. |
+| 1.4.1 Uso del color (A) | Que abierto, cerrado o elegido no se distinga solo por el color. | No prohíbe usar color, siempre que vaya con forma, barra o negrita. |
+| 2.1.1 Teclado (A) | Que todo se abra, se cierre y se elija con el teclado. | No obliga a que el acordeón responda a las flechas: con Tab basta. |
+| 2.4.3 Orden del foco (A) | Que el foco no entre en lo que no se ve: lo cerrado tiene que estar oculto de verdad, no aplastado. | No obliga a mover el foco al panel cuando se abre. |
+| 2.5.8 Tamaño del objetivo (mínimo) (AA) | Que lo que se pulsa mida al menos 24 × 24 píxeles, o tenga espacio alrededor. | Una fila entera lo cumple de sobra; es la flecha suelta la que se queda justa. |
+
+### Lo que se entrega en el handoff
+
+- **En el acordeón,** que la cabecera es un botón con su estado, dentro de un encabezado y de qué nivel; que se pulsa la fila entera, y si pueden quedar varios abiertos o uno solo.
+- **En las pestañas,** las teclas (Tab entra por la elegida y las flechas se mueven dentro) y si el panel cambia en el acto o con Intro.
+- **En los dos,** que el estado se ve con forma y no solo con color, y qué empieza abierto o elegido.
+
+---
+
+## 5.10 — Lo que se abre encima: tooltip, menú y diálogo
+
+Un tooltip que explica un icono, el menú que sale de los tres puntos de una fila y el diálogo que te pide confirmar antes de borrar algo tienen algo en común: aparecen encima de la página, y alguien tiene que decidir qué pasa con el foco. Mientras miras la pantalla no lo notas, porque tus ojos van solos a lo nuevo. Quien navega con el teclado o con un lector de pantalla depende de que el foco esté donde toca: si se queda detrás, la capa nueva no existe para esa persona; si al cerrar se va al principio de la página, tiene que volver a recorrerla entera.
+
+### Tres capas, de menos a más
+
+Las tres responden a las mismas preguntas (cómo se abre, adónde va el foco, cómo se cierra y adónde vuelve), pero cada una se apodera de la pantalla un poco más que la anterior.
+
+- **Tooltip.** Una etiqueta corta que sale al pasar el ratón o al llegar con el foco a un botón. El foco no se mueve: sigue en el botón, y el tooltip solo le pone nombre o una descripción breve. No es un menú ni una ventana: no tiene nada dentro que se pueda pulsar.
+- **Menú de acciones.** El botón de tres puntos. Al abrirlo, el foco entra en la primera acción; dentro se va con las flechas, y al cerrar vuelve al botón. Se parece a la navegación del sitio porque los dos son listas que se despliegan, pero la diferencia es lo que hay dentro: en la navegación, enlaces que te llevan a otra página; en el menú, cosas que haces aquí mismo, como renombrar o eliminar. Por eso la navegación no lleva roles de menú, aunque visualmente se parezca.
+- **Diálogo modal.** Se lleva el foco y, mientras está abierto, todo lo de detrás deja de existir para el teclado y para el lector de pantalla: Tab da vueltas dentro y el lector no puede salir de él. Es lo que más interrumpe, así que se reserva para lo que de verdad necesita una respuesta antes de seguir.
+
+Hay un cuarto pariente que conviene distinguir del tooltip: el **toggletip**, la «i» que se pulsa y se queda abierta hasta que la cierras. Si la explicación necesita un enlace o es larga, ya no es un tooltip: es un toggletip.
+
+### Lo que se ve y lo que se oye
+
+En el tooltip no se oye nada nuevo: su texto pasa a ser el **nombre** del botón («Copiar enlace, botón») o su **descripción**, que el lector dice después del nombre. Por eso nunca puede llevar algo que solo esté ahí.
+
+En el menú de acciones, el botón dice su **nombre**, que no se ve y lo escribes tú, que **abre un menú** y si está **contraído o ampliado**. Dentro, cada acción se anuncia como **elemento de menú** con su posición («Duplicar, 2 de 5»), igual que las opciones de cualquier lista.
+
+En el diálogo, al abrirse, el lector dice que es un **diálogo** y su **título** («Condiciones de la reserva, cuadro de diálogo»), y desde ahí sigue por donde hayas puesto el foco.
+
+Un matiz sobre el botón que abre el diálogo. Al oírlo puede parecer que le falta algo como «contraído», y es tentador añadirle siempre `aria-haspopup`. No hace falta. El estado tiene sentido cuando lo que se abre convive con el botón, como el menú: la persona sigue en el botón y necesita saber si la lista está abierta. Un diálogo modal se lleva el foco, y el lector ya anuncia «diálogo» y su título en cuanto se abre. Puedes poner `aria-haspopup="dialog"`, pero no lo pide ningún criterio, VoiceOver no lo dice y lo que de verdad orienta es lo que se oye al abrir.
+
+### Las decisiones de diseño
+
+1. **En el tooltip, nada imprescindible.** En el móvil no se puede pasar el ratón por encima, y mucha gente no sabe que ahí hay algo que leer. Si la regla de la contraseña («al menos 12 caracteres») solo está en un tooltip, quien no lo ve escribe una de ocho y recibe un error que no entiende. Lo imprescindible va a la vista, junto al campo.
+2. **Dentro del tooltip, nada que se pueda pulsar.** El tooltip se va en cuanto el foco sale del botón, así que con el teclado nunca llegas a un enlace que esté dentro. Si hace falta, es un toggletip.
+3. **El nombre del botón de tres puntos dice de qué es.** En una lista de diez presupuestos, diez botones llamados «Más acciones» suenan iguales. «Acciones de Presupuesto 2027» dice a qué fila pertenece. Como no hay texto visible, el nombre lo escribes tú en el handoff.
+4. **Adónde va el foco al abrir un diálogo.** Si es un formulario, al primer campo, para escribir directamente. Si la acción destruye algo, a «Cancelar», para que dos Intro seguidos no borren nada. Si es para leer, al título, para que la lectura empiece por el principio del texto. Y si lo esperado es aceptar, a la acción principal. Si no lo decides, el navegador lo pone en lo primero que encuentra, que muchas veces es la X: lo primero que tiene a mano la persona es cerrar.
+5. **Cómo se cierra y adónde vuelve.** Escape cierra los tres, y al cerrar el foco vuelve al botón que los abrió, para seguir justo donde estabas. Si ese botón ya no existe, porque el diálogo era para borrar su fila, decides tú un sitio lógico: la fila siguiente o la anterior, y si no queda ninguna, algo justo antes de la lista. Nunca el principio de la página.
+
+### Los criterios de la lección
+
+| Criterio | Qué pide | Lo que no pide |
+|---|---|---|
+| 1.4.13 Contenido con hover o foco (AA) | Que el tooltip se pueda cerrar sin mover el ratón ni el foco (Escape), que no se vaya al pasar el ratón por encima de él y que se quede mientras no lo cierres o salgas. | No obliga a que salga con el foco: eso lo pide 2.1.1 si el tooltip es la única forma de saber qué hace el botón. |
+| 2.1.2 Sin trampas para el foco (A) | Que, si el foco entra en algo con el teclado, también pueda salir con el teclado. | Que Tab dé vueltas dentro de un diálogo modal no es una trampa si Escape o un botón lo cierran. |
+| 2.4.3 Orden del foco (A) | Que el foco siga un orden que conserve el sentido: entrar en el diálogo al abrirlo y volver al botón al cerrarlo. | No dice a qué elemento del diálogo ir: eso es la decisión 4. |
+| 4.1.2 Nombre, función y valor (A) | Que el botón de tres puntos tenga nombre, que el menú diga si está abierto y que el diálogo tenga rol y nombre. | No obliga a `aria-haspopup` en el botón que abre un diálogo. |
+| 3.3.4 Prevención de errores (AA) | Que borrar datos de la persona se pueda confirmar, revisar o deshacer. | No pide un diálogo: un «Deshacer» después también vale. |
+
+Una consecuencia de 1.4.13 que no sale en el vídeo: el atributo `title`, ese texto que el navegador enseña al dejar el ratón quieto, no sirve como tooltip. No sale con el teclado, no se puede cerrar con Escape y desaparece solo. Si quieres un tooltip, se construye.
+
+### Lo que se entrega en el handoff
+
+Tres cosas por cada capa que se abre encima:
+
+- **Qué tipo de capa es:** tooltip, menú o diálogo (y si el diálogo es de alerta). Se construyen de forma muy distinta y desarrollo necesita saberlo antes de empezar.
+- **Adónde va el foco al abrir:** el elemento exacto, con su motivo.
+- **Adónde vuelve al cerrar,** también cuando el botón que lo abrió ya no existe. Es lo que más se olvida.
+
+Se puede definir una vez para todo el sistema de diseño (por ejemplo, «los diálogos destructivos llevan el foco a Cancelar») y anotar solo las pantallas que se salen de la regla.
+
+---
+
+## 5.11 — Notificaciones y regiones vivas [la captura empieza en el cuerpo de la lección]
+
+Hay cambios que pasan lejos de donde estás. Añades algo a la cesta y el número de la cesta sube; guardas y aparece un «Cambios guardados»; filtras y la lista dice cuántos resultados quedan. Quien ve la pantalla lo nota de reojo. Quien usa lector de pantalla está escuchando el botón que acaba de pulsar, y si nadie le cuenta el cambio, para él no ha pasado. Las regiones vivas existen para eso: avisar sin mover el foco. Diseñarlas bien es decidir qué se avisa, con qué prisa, dónde se ve y cuánto dura.
+
+### Normal o urgente, en el código
+
+Una región viva es un contenedor que el lector vigila. Hay dos de uso diario:
+
+- **Normal:** `role="status"` (por debajo, `aria-live="polite"`). Espera a que el lector termine lo que está diciendo y luego lo dice. Es el de casi todo: «Añadido a la cesta», «Cambios guardados», «3 resultados».
+- **Urgente:** `role="alert"` (por debajo, `aria-live="assertive"`). Corta lo que esté diciendo el lector. Solo para lo que pide actuar ya, como una sesión a punto de cerrarse.
+
+Hay un detalle que no se ve y que rompe muchos avisos: **la región tiene que estar en la página antes de que llegue el texto**, vacía. Si el aviso se crea de golpe con el texto ya dentro, a menudo no se dice, sobre todo si es normal, porque el lector no ha tenido tiempo de empezar a vigilar ese sitio. En la pieza, el párrafo que dice «Leche añadida...» ya estaba ahí, sin nada escrito, desde que cargó la página.
+
+El «pip» que se oye antes del aviso urgente es cosa de VoiceOver en el Mac. Otros lectores, como NVDA, no lo hacen, así que el diseño no puede contar con él: lo que marca la urgencia es que corta y lo que dice el texto.
+
+### Las decisiones de diseño
+
+1. **Qué merece un aviso.** Lo que pasa como resultado de algo que ha hecho la persona y que no se ve donde tiene el foco. Lo que el propio control ya dice al cambiar (una casilla que se marca, un menú que se abre) no necesita otro aviso. Si se avisa de todo, el lector no para de hablar y la persona deja de escuchar.
+2. **Normal o urgente.** Casi siempre normal. Si todo es urgente, el lector interrumpe a cada rato y al final nada lo es.
+3. **Dónde aparece.** Junto a lo que lo ha provocado, no en una esquina. Quien usa una lupa de pantalla está mirando, ampliado, el botón que acaba de pulsar: un aviso en la otra punta de la pantalla no lo ve nunca. En el vídeo los toasts salen en una esquina porque es donde los ponen casi todas las apps; meterlos en una región viva hace que se oigan, pero no resuelve dónde se ven.
+4. **Cuánto dura.** Seguro que te ha pasado: sale un aviso con «Deshacer» y, cuando vas a pulsarlo, ya se ha ido. Si el aviso tiene una acción, no se va solo: se queda hasta que la persona lo cierra. Dos o tres segundos no dan para llegar con el teclado ni para leerlo con lupa, y una acción que desaparece es un tiempo límite, que es lo que regula el criterio 2.2.1 Tiempo ajustable (A). Por eso los avisos no son solo cosa del lector de pantalla: en cuanto llevan un botón, también importan a quien usa el teclado.
+
+### Los criterios de la lección
+
+| Criterio | Qué pide | Lo que no pide |
+|---|---|---|
+| 4.1.3 Mensajes de estado (AA) | Que los avisos de resultado, progreso o error lleguen al lector sin moverle el foco. | No pide mostrar un aviso: si en pantalla no aparece ningún mensaje, no hay nada que anunciar. |
+| 2.2.1 Tiempo ajustable (A) | Que, si algo tiene un tiempo límite, la persona pueda quitarlo, ampliarlo o ajustarlo. | No prohíbe que un aviso sin acción se vaya solo; sí que se lleve con él lo único que permitía deshacer. |
+| 2.4.3 Orden del foco (A) | Que, si el botón que tenía el foco desaparece, el foco vaya a un sitio con sentido. | No dice adónde: lo decide el diseño, normalmente al control que abrió el aviso. |
+
+### Lo que se entrega en el handoff
+
+Una lista de los avisos de cada pantalla, con tres cosas por aviso. Si no se anota, cada aviso se programa a su manera, y unos se oyen y otros no.
+
+- **Qué dice,** con el texto exacto.
+- **Si es normal o urgente.**
+- **Si tiene acción,** cuál es y que no se va solo. Y, si su botón desaparece al usarlo, adónde vuelve el foco.
+
+---
+
+## Pendiente de añadir a este módulo
+
+- Examen del módulo 5.
+- Tutoría en vivo del módulo 5 (`clase-06-raw.txt`).
+- Resumen del módulo (`modulo-05-summary.md`), a armar combinando este archivo y `modulo-05-raw.txt`.
