@@ -1,21 +1,21 @@
 ---
 title: "Módulo 4 — Formas de interacción y fundamentos de accesibilidad"
 status: draft
-source: "raw-inputs/modulo-04-raw.txt (audio de las lecciones, Carlos) + raw-inputs/modulo-04-contenido-escrito-raw.txt (texto escrito de la plataforma, transcrito de capturas)"
+source: "raw-inputs/modulo-04-grabaciones-plataforma-raw.txt (grabaciones de plataforma, Carlos) + raw-inputs/modulo-04-contenido-escrito-raw.txt (contenido escrito de la plataforma, transcrito de capturas)"
 last_updated: 2026-10-31
 ---
 
 # Módulo 4 — Formas de interacción y fundamentos de accesibilidad
 
-Resumen consolidado del Módulo 4, que fusiona el video (Carlos recorre una tienda de ejemplo con cada forma de interacción) con el texto escrito de cada lección (tablas de criterios, "lo que no pide", prácticas y cuestionarios). Cubre las lecciones 4.1 a 4.6. La **tutoría en vivo del módulo 4** está en [`clase-05-summary.md`](clase-05-summary.md).
+Resumen consolidado del Módulo 4, que fusiona las grabaciones de plataforma (Carlos recorre una tienda de ejemplo con cada forma de interacción) con el contenido escrito de cada lección (tablas de criterios, "lo que no pide", prácticas y cuestionarios). Cubre las lecciones 4.1 a 4.6. La **tutoría en vivo del módulo 4** está en [`tutoria-modulo-04-summary.md`](tutoria-modulo-04-summary.md).
 
 ## Cómo leer este resumen
 
 - **Este módulo es sobre todo de exploración de herramientas.** Lo central para el repo son (1) las definiciones de cada **criterio WCAG** y de las **barreras** que lo incumplen, y (2) **cómo usar cada herramienta** de prueba. Lo segundo vive en una guía propia: [`resources/herramientas-prueba-interaccion.md`](../../resources/herramientas-prueba-interaccion.md) (Mac, Windows, Linux, Android, iPhone/iPad).
 - **Las misiones de la tienda "Mercado Verde" son prácticas hechas por la alumna** en su propia computadora (Luis, Ana, Óscar, Lucía). Aquí solo se resumen como contexto; lo que se retiene es el criterio y la barrera que ilustran.
-- **Audio y texto se complementan, no se repiten.** El audio muestra cada barrera en la tienda y explica el porqué; el texto agrega, por criterio, la columna **"qué pide / lo que no pide"**, las tablas de herramientas por sistema operativo y los cuestionarios. Lo que dice una fuente y no la otra no es una contradicción. Solo se señalan conflictos reales con la WCAG (ver "Contraste con la WCAG").
+- **La grabación y el contenido escrito se complementan, no se repiten.** La grabación muestra cada barrera en la tienda y explica el porqué; el texto agrega, por criterio, la columna **"qué pide / lo que no pide"**, las tablas de herramientas por sistema operativo y los cuestionarios. Lo que dice una fuente y no la otra no es una contradicción. Solo se señalan conflictos reales con la WCAG (ver "Contraste con la WCAG").
 - **Referencia de verdad para los criterios:** [`resources/wcag22-understanding/`](../../resources/wcag22-understanding/README.md) (operable, comprensible, robusto, perceptible).
-- **Metodología del módulo (audio):** en cada lección se navega la tienda con una forma de interacción; cada vez que aparece una barrera se pausa y se analiza: **criterio WCAG, qué pide, a quién afecta, cómo se comprueba y lo que no pide** (donde "más errores se cometen, sobre todo al diseñar o auditar"). Todas las formas de interacción terminan haciendo al producto las mismas preguntas: *¿qué hay aquí? ¿qué es cada cosa? ¿en qué estado está? ¿qué puedo hacer con ella?*
+- **Metodología del módulo (grabación):** en cada lección se navega la tienda con una forma de interacción; cada vez que aparece una barrera se pausa y se analiza: **criterio WCAG, qué pide, a quién afecta, cómo se comprueba y lo que no pide** (donde "más errores se cometen, sobre todo al diseñar o auditar"). Todas las formas de interacción terminan haciendo al producto las mismas preguntas: *¿qué hay aquí? ¿qué es cada cosa? ¿en qué estado está? ¿qué puedo hacer con ella?*
 
 ## Mapa del módulo
 
@@ -25,7 +25,7 @@ Resumen consolidado del Módulo 4, que fusiona el video (Carlos recorre una tien
 | 4.2 | Teclado (1): llegar a las cosas | 2.4.3, 2.4.7, 2.4.1, 2.1.1, 2.1.2, 2.1.4 |
 | 4.3 | Teclado (2): qué pasa cuando interactúas | 2.4.3, 3.2.1, 3.2.2 |
 | 4.4 | Puntero y táctil | 2.5.2, 2.5.7, 2.5.1, 1.3.4, 1.4.13, 2.5.4 |
-| 4.5 | Control por voz y pulsador (número inferido; el audio no la anuncia) | 2.5.3, 2.2.1, 2.2.2, 2.3.3, 2.3.1 |
+| 4.5 | Control por voz y pulsador (número inferido; la grabación no la anuncia) | 2.5.3, 2.2.1, 2.2.2, 2.3.3, 2.3.1 |
 | 4.6 | Lector de pantalla | 2.4.4, 2.4.9, 4.1.2, 1.3.1, 1.1.1, 1.3.2 (y 2.5.3) |
 
 ### Índice de criterios del módulo
@@ -66,7 +66,7 @@ Para cada criterio, la columna "Lo que no pide" del texto de la plataforma es la
 
 - **Mercado Verde** es una tienda online de fruta y verdura hecha para el curso, con un e-commerce completo: buscador, landing, ofertas, parrilla de productos, fichas, cesta, selección de envío. **Con el ratón funciona bien**; las barreras aparecen al usarla como otra persona (solo teclado, temblor, móvil fijo en horizontal, lector de pantalla). También tiene cosas bien hechas a propósito, para distinguir lo que falla de lo que cumple.
 - **Orden del módulo:** teclado (navegar, luego interactuar) → puntero y táctil → voz y pulsador → lector de pantalla (con VoiceOver; hay equivalencias con NVDA).
-- **Cada práctica:** persona + objetivo + enlaces; hay que hacer la misión completa con la forma de interacción de esa persona y anotar dónde se atasca, se pierde o gasta más esfuerzo. El enunciado **no dice** dónde están las barreras ni qué criterio incumplen. Luego se responde con las mismas preguntas del video: qué le pasa y cuándo; qué criterio pide que no pase y qué **no** pide; cómo se comprobaría en otro producto; qué debería haber decidido el diseño.
+- **Cada práctica:** persona + objetivo + enlaces; hay que hacer la misión completa con la forma de interacción de esa persona y anotar dónde se atasca, se pierde o gasta más esfuerzo. El enunciado **no dice** dónde están las barreras ni qué criterio incumplen. Luego se responde con las mismas preguntas de las grabaciones: qué le pasa y cuándo; qué criterio pide que no pase y qué **no** pide; cómo se comprobaría en otro producto; qué debería haber decidido el diseño.
 - **Antes de empezar (texto):** usar Chrome en ordenador (Safari con ajuste de fábrica se salta los enlaces al pulsar Tab); la tienda no guarda nada fuera del navegador, la cuenta es de prueba y no pide contraseña (no escribir datos reales); al empezar de cero, aceptar cookies con el ratón.
 - **Dirección de la tienda:** algunas prácticas usan `?reiniciar` (vuelve a estado inicial: cesta con tres productos, favoritos y pedidos vacíos, aviso de cookies) o variantes como `?salto=visible` (la versión "arreglada" de una lección anterior). Una variante queda activa en esa pestaña; se limpian con `?reiniciar`.
 
@@ -89,7 +89,7 @@ Para cada criterio, la columna "Lo que no pide" del texto de la plataforma es la
 
 **Lo que decide el diseño en cada pantalla:** en qué orden se recorre, cómo se ve el foco, dónde está el enlace para saltar al contenido, cómo se llega con el teclado a cada cosa tocable y cómo se sale de cada ventana o panel.
 
-### Barreras encontradas en la tienda (audio) y qué enseñan
+### Barreras encontradas en la tienda (grabación) y qué enseñan
 
 | Barrera observada | Criterio | Qué enseña |
 |---|---|---|
@@ -102,10 +102,10 @@ Para cada criterio, la columna "Lo que no pide" del texto de la plataforma es la
 | Dentro del chat: Tab cicla y la X (arriba a la derecha) no es alcanzable; Escape no cierra | **2.1.2** | Trampa de teclado. **Un bucle de foco dentro de una ventana modal no es un incumplimiento** (se espera que quede atrapado; se ve en el módulo 5); lo que falla es no tener salida |
 | La tecla **"/"** salta al buscador sin aviso y sin forma de desactivarla | **2.1.4** | Quien dicta por voz o roza una tecla por temblor, o tiene sus propias teclas rápidas, dispara acciones que no pidió. Opciones: **desactivar**, **cambiar por un atajo con meta-tecla** (Control, Alt, Command) o **que solo funcione con el foco en el elemento** |
 
-### Foco nativo del navegador (audio)
+### Foco nativo del navegador (grabación)
 
 - El navegador (*user agent*; en una app móvil, el sistema operativo) añade un **foco nativo** a botones, enlaces e inputs, que **no hace falta diseñar**; se adapta al fondo (ej. doble capa blanca y azul sobre una foto).
-- Según el audio, si no se toca el estilo del foco nativo "siempre se cumple", aunque en una auditoría estricta el contraste del indicador parezca flojo; hay incumplimiento si el foco se **corta o se pierde por mala implementación propia**. El texto de la plataforma coincide en que el contorno del navegador sirve si no se quita. (La responsabilidad según quién define el foco se aclaró en la tutoría; ver "Contraste con la WCAG".)
+- Según la grabación, si no se toca el estilo del foco nativo "siempre se cumple", aunque en una auditoría estricta el contraste del indicador parezca flojo; hay incumplimiento si el foco se **corta o se pierde por mala implementación propia**. El texto de la plataforma coincide en que el contorno del navegador sirve si no se quita. (La responsabilidad según quién define el foco se aclaró en la tutoría; ver "Contraste con la WCAG".)
 
 ### Truco de depuración (ambas fuentes)
 
@@ -121,7 +121,7 @@ Para ver dónde está el foco aunque la página no lo muestre: Chrome > Inspecci
 
 ## 4.3 — Teclado (2): qué pasa cuando interactúas
 
-**Idea central:** con el teclado **el foco es donde está la persona**. Con el ratón, si algo cambia en pantalla se mueve el puntero y se sigue; con el teclado se depende de que el foco siga en un sitio con sentido tras cada acción y de que **nada cambie sin haberlo pedido**. (El audio de esta lección aparece **duplicado** en la transcripción, de 29:49 a 42:55 y de 42:55 a 56:03.)
+**Idea central:** con el teclado **el foco es donde está la persona**. Con el ratón, si algo cambia en pantalla se mueve el puntero y se sigue; con el teclado se depende de que el foco siga en un sitio con sentido tras cada acción y de que **nada cambie sin haberlo pedido**. (La grabación de esta lección aparece **duplicada** en la transcripción, de 29:49 a 42:55 y de 42:55 a 56:03.)
 
 ### Criterios de la lección
 
@@ -133,7 +133,7 @@ Para ver dónde está el foco aunque la página no lo muestre: Chrome > Inspecci
 
 El **orden de los campos de un formulario** también es 2.4.3: cuando el orden natural de lectura (izquierda→derecha, arriba→abajo) no coincide con el que tiene sentido para la tarea, manda el de la tarea (en un formulario de dos columnas, primero todos los datos de una y luego los de la otra). A nivel de código se puede lograr sin cambiar lo visual.
 
-### Barreras en la tienda (audio)
+### Barreras en la tienda (grabación)
 
 | Barrera observada | Criterio | Qué enseña |
 |---|---|---|
@@ -143,7 +143,7 @@ El **orden de los campos de un formulario** también es 2.4.3: cuando el orden n
 | Al llegar con Tab al **código postal** (sin escribir nada) se abre una ventana "¿recoger en tienda?" y el foco salta a ella | **3.2.1** | Cambio de contexto sorpresivo; desorienta a quien usa teclado, lector o ampliador. Debería ser una opción elegida (una casilla o un botón al lado) |
 | En los chips "Mostrar" (grupo tipo radio, se mueven con flechas), cambiar con la flecha recarga la lista y se pierde el foco | **3.2.2** ("caso especial") | Cambiar un valor cambia el contexto automáticamente y el foco se pierde. Debe avisarse antes o no cambiar el contexto |
 
-**Decisión de diseño (audio):** para **cada acción que hace aparecer o desaparecer algo, hay que decidir dónde queda el foco**. Es algo que "se suele olvidar" y pesa mucho en la experiencia.
+**Decisión de diseño (grabación):** para **cada acción que hace aparecer o desaparecer algo, hay que decidir dónde queda el foco**. Es algo que "se suele olvidar" y pesa mucho en la experiencia.
 
 ### Dónde va el foco: decisiones de diseño (texto)
 
@@ -179,7 +179,7 @@ El **orden de los campos de un formulario** también es 2.4.3: cuando el orden n
 
 **Decisiones de diseño (texto):** las acciones van **al soltar**; lo que borra algo tiene «Deshacer» o pide confirmación; lo que se arrastra o se pellizca tiene un botón o campo equivalente; las pantallas funcionan en ambas orientaciones, también con altura muy pequeña; la especificación de cada globo o menú dice **cómo se cierra y cuánto dura**.
 
-### Barreras en la tienda (audio)
+### Barreras en la tienda (grabación)
 
 | Barrera observada | Criterio | Qué enseña |
 |---|---|---|
@@ -212,7 +212,7 @@ El **orden de los campos de un formulario** también es 2.4.3: cuando el orden n
 
 **Decisiones de diseño (texto):** el nombre de cada botón **empieza por la palabra visible** y el contexto extra va detrás; si un proceso tiene reloj, el diseño dice cómo se avisa antes de que acabe, cómo se pide más tiempo con una sola acción y qué pasa con lo ya escrito; si un carrusel avanza solo, lleva botón de pausa visible y fácil de alcanzar (y conviene preguntarse si una cuenta atrás aporta algo); en el traspaso queda escrito qué hace cada animación cuando el sistema pide menos movimiento.
 
-### Barreras en la tienda (audio)
+### Barreras en la tienda (grabación)
 
 | Barrera observada | Criterio | Qué enseña |
 |---|---|---|
@@ -246,11 +246,11 @@ El **orden de los campos de un formulario** también es 2.4.3: cuando el orden n
 | **1.1.1 Contenido no textual (A)** | Que cada imagen tenga alternativa en texto que cumpla su función, o se marque decorativa para que el lector la salte. El nombre del archivo no es alternativa | Describir todas las imágenes: si una foto no añade nada al nombre del producto, lo correcto es **decorativa** |
 | **1.3.2 Secuencia con sentido (A)** | Que, si el orden de lectura cambia el significado, el código tenga el orden correcto | Que todo se lea igual que se ve: leer el descuento antes que el nombre confunde, pero si el sentido no cambia, es buena práctica, no fallo |
 
-**Diferencia 4.1.2 vs 2.4.4 (audio):** 4.1.2 es **técnico** ("¿el control tiene nombre y se lo pasa a la tecnología de apoyo? sí/no") y vale para **cualquier** control; 2.4.4 va un paso más y solo es para **enlaces**: ¿se entiende su propósito? Un enlace «3» cumple 4.1.2 y falla 2.4.4; un botón solo «botón», sin nombre, falla 4.1.2.
+**Diferencia 4.1.2 vs 2.4.4 (grabación):** 4.1.2 es **técnico** ("¿el control tiene nombre y se lo pasa a la tecnología de apoyo? sí/no") y vale para **cualquier** control; 2.4.4 va un paso más y solo es para **enlaces**: ¿se entiende su propósito? Un enlace «3» cumple 4.1.2 y falla 2.4.4; un botón solo «botón», sin nombre, falla 4.1.2.
 
 **Decisiones de diseño en el traspaso (texto):** cada icono-botón lleva su **acción** como nombre («Buscar»); cada icono-enlace, **adónde lleva** («Cesta, 3 productos», «Mi cuenta»); en cada pantalla se marcan los **títulos y su nivel** (también los que no lo parecen y los que solo oye el lector, como un título principal oculto); se anotan las **regiones** (cabecera, navegación —con nombre si hay varias—, búsqueda, contenido principal y pie); en las tarjetas se decide el **orden de lectura** (nombre primero) y que el **precio anterior** se diga en texto y no solo tachado.
 
-### Barreras en la tienda (audio)
+### Barreras en la tienda (grabación)
 
 | Lo que dice el lector | Criterio | Corrección |
 |---|---|---|
@@ -260,16 +260,16 @@ El **orden de los campos de un formulario** también es 2.4.3: cuando el orden n
 | Rotor de enlaces: varios «Ver grabación» (tarjetas de la web de weAAAre) | cumple 2.4.4 en contexto; 2.4.9 (AAA) pide más | Cada enlace puede tener nombre accesible más largo («Ver grabación de la masterclass…»); en el rotor se ve ese nombre completo |
 | Rotor de encabezados: solo 3 (H2 «Ofertas de la semana», H3 «de temporada», H3 «23 cuartas») aunque visualmente hay más secciones | **1.3.1** | Marcar como encabezados las secciones con "peso de capítulo" (destacados, ofertas, productos de cada oferta). Ver estructura propuesta abajo |
 | Rotor de puntos de referencia: vacío | **1.3.1** | Añadir regiones (ver abajo) |
-| Imagen leída como «naranjas-zumo.jpg, imagen» | **1.1.1** | Marcarla decorativa (o informativa si aporta, ej. «caja de naranjas»); el audio la considera **decorativa** |
+| Imagen leída como «naranjas-zumo.jpg, imagen» | **1.1.1** | Marcarla decorativa (o informativa si aporta, ej. «caja de naranjas»); la grabación la considera **decorativa** |
 | Card: lee «-18% eco kilómetro cero» sin contexto | **1.3.1** | Convertir en **lista de etiquetas**: «Descuento del 18%», «Ecológico», «Kilómetro cero» |
-| El título «Naranjas de zumo» no es enlace | **4.1.2 / 2.1.1 / 2.4.4** (el audio dice "otro incumplimiento", sin criterio) | El **título** es un encabezado H3 y a la vez un **enlace** a la ficha (doble semántica compatible) |
+| El título «Naranjas de zumo» no es enlace | **4.1.2 / 2.1.1 / 2.4.4** (la grabación dice "otro incumplimiento", sin criterio) | El **título** es un encabezado H3 y a la vez un **enlace** a la ficha (doble semántica compatible) |
 | Precios «11,40 € 9,40 €» sin indicar cuál es el anterior (visualmente uno está tachado) | **1.3.1** | «Precio anterior 11,40 €. Ahora 9,40 €» |
 | Botón «Añadir» con nombre «Comprar» | **2.5.3** | «Añadir naranjas de zumo» (contiene «Añadir») |
 | Orden: `-18%` antes del nombre | **1.3.2** (buena práctica) | Cambiar el **orden de lectura** (no el de foco) para que el nombre vaya primero |
 
-**Estructura de encabezados propuesta (audio):** H1 oculto con el título de la página («Mercado Verde, fruta, verdura y despensa de la huerta»; el carrusel no puede ser H1: es una sección de destacados); sección oculta **«Destacados» (H2)** con los elementos del carrusel como **H3** (mismo nivel de importancia que «Ofertas de la semana», H2); las cuatro cards de ofertas como **H3**; «Cesta de temporada» y «Huertas» como H2, etc. Un H1 que no se ve visualmente es válido cuando visualmente y conceptualmente el contexto se entiende pero un lector no tiene cómo ubicarse; es un caso extremo, **no la norma**. Si hay dudas entre H2 o H3, entra la subjetividad de experiencia de usuario más que un criterio.
+**Estructura de encabezados propuesta (grabación):** H1 oculto con el título de la página («Mercado Verde, fruta, verdura y despensa de la huerta»; el carrusel no puede ser H1: es una sección de destacados); sección oculta **«Destacados» (H2)** con los elementos del carrusel como **H3** (mismo nivel de importancia que «Ofertas de la semana», H2); las cuatro cards de ofertas como **H3**; «Cesta de temporada» y «Huertas» como H2, etc. Un H1 que no se ve visualmente es válido cuando visualmente y conceptualmente el contexto se entiende pero un lector no tiene cómo ubicarse; es un caso extremo, **no la norma**. Si hay dudas entre H2 o H3, entra la subjetividad de experiencia de usuario más que un criterio.
 
-**Regiones (puntos de referencia) — cómo identificarlas (audio):**
+**Regiones (puntos de referencia) — cómo identificarlas (grabación):**
 
 | Región | Qué es |
 |---|---|
@@ -281,11 +281,11 @@ El **orden de los campos de un formulario** también es 2.4.3: cuando el orden n
 | `aside` (complementario) | p. ej. filtros laterales |
 | sección / región | Con nombre accesible, si tiene mucha importancia |
 
-Método del audio: **primero** header, **luego** footer, **lo que queda** es main, **después** localizar navegaciones (nombrarlas si hay más de una) y por último complementarios y regiones relevantes. Header, main y footer: la opinión de Carlos es que deben ser **únicos por página** (admite que hay discusión en la comunidad); `nav` puede repetirse. Los puntos de referencia permiten saltar rápido, p. ej. directo al pie, sin recorrer todo el menú.
+Método de la grabación: **primero** header, **luego** footer, **lo que queda** es main, **después** localizar navegaciones (nombrarlas si hay más de una) y por último complementarios y regiones relevantes. Header, main y footer: la opinión de Carlos es que deben ser **únicos por página** (admite que hay discusión en la comunidad); `nav` puede repetirse. Los puntos de referencia permiten saltar rápido, p. ej. directo al pie, sin recorrer todo el menú.
 
-**Nombre, rol y estado** (concepto que se profundiza en el módulo de componentes): rol = función del elemento; nombre = nombre accesible; estado = ej. contraído/expandido. En el audio el lector anuncia primero el rol y luego el nombre.
+**Nombre, rol y estado** (concepto que se profundiza en el módulo de componentes): rol = función del elemento; nombre = nombre accesible; estado = ej. contraído/expandido. En la grabación el lector anuncia primero el rol y luego el nombre.
 
-**Alt informativo vs decorativo (audio, con la card de naranjas):** las tres tipologías (informativa, decorativa, funcional) ya vistas con la profesora; el criterio del alt informativo es ser **concreto** y mencionar solo la información adicional que aporta. Si la imagen no aporta más que el título, es decorativa. Y **no hace falta crear nombres accesibles para todo lo visual**: normalmente lo visual basta; el sobre-contexto es una buena práctica para pequeños detalles, no un criterio obligatorio.
+**Alt informativo vs decorativo (grabación, con la card de naranjas):** las tres tipologías (informativa, decorativa, funcional) ya vistas con la profesora; el criterio del alt informativo es ser **concreto** y mencionar solo la información adicional que aporta. Si la imagen no aporta más que el título, es decorativa. Y **no hace falta crear nombres accesibles para todo lo visual**: normalmente lo visual basta; el sobre-contexto es una buena práctica para pequeños detalles, no un criterio obligatorio.
 
 ### Cuestionario (lo que consolida)
 
@@ -298,22 +298,22 @@ Método del audio: **primero** header, **luego** footer, **lo que queda** es mai
 
 Puntos del módulo comparados con [`resources/wcag22-understanding/`](../../resources/wcag22-understanding/README.md) (que se toma como verdad). El cuerpo del resumen ya refleja lo que coincide.
 
-- **2.4.7 y el foco nativo (resuelto en la tutoría):** el audio dice que, si no se toca el estilo del foco nativo, "siempre se cumple" aunque el contraste parezca flojo. La referencia (1.4.11) exige 3:1 al indicador de foco, pero **no aplica a presentaciones que determina el agente de usuario fuera del control del autor**. Es decir, el foco nativo **sin modificar** no es responsabilidad del diseño; si se **personaliza**, sí hay que cumplir 3:1 (ver [`clase-05-summary.md`](clase-05-summary.md)).
-- **2.5.3 "debe empezar":** el texto de la plataforma y el audio dicen "lo recomendable/mejor si empieza" por el texto visible; la referencia indica que el nombre accesible "puede ampliar la etiqueta, pero **debe empezar por ella**". Criterio práctico seguro: que **empiece** por el texto visible.
-- **2.2.2 y sus excepciones:** el audio dice que se puede omitir la pausa si "no está en loop, no empieza automáticamente **y** dura menos de 5 segundos". La referencia da como excepciones **dura menos de 5 segundos** o **es parte de una actividad esencial**, y el texto de la plataforma agrega que el criterio aplica al movimiento que dura más de 5 s **junto a otro contenido**; los indicadores de carga que son el único contenido visible no necesitan controles.
+- **2.4.7 y el foco nativo (resuelto en la tutoría):** la grabación dice que, si no se toca el estilo del foco nativo, "siempre se cumple" aunque el contraste parezca flojo. La referencia (1.4.11) exige 3:1 al indicador de foco, pero **no aplica a presentaciones que determina el agente de usuario fuera del control del autor**. Es decir, el foco nativo **sin modificar** no es responsabilidad del diseño; si se **personaliza**, sí hay que cumplir 3:1 (ver [`tutoria-modulo-04-summary.md`](tutoria-modulo-04-summary.md)).
+- **2.5.3 "debe empezar":** el texto de la plataforma y la grabación dicen "lo recomendable/mejor si empieza" por el texto visible; la referencia indica que el nombre accesible "puede ampliar la etiqueta, pero **debe empezar por ella**". Criterio práctico seguro: que **empiece** por el texto visible.
+- **2.2.2 y sus excepciones:** la grabación dice que se puede omitir la pausa si "no está en loop, no empieza automáticamente **y** dura menos de 5 segundos". La referencia da como excepciones **dura menos de 5 segundos** o **es parte de una actividad esencial**, y el texto de la plataforma agrega que el criterio aplica al movimiento que dura más de 5 s **junto a otro contenido**; los indicadores de carga que son el único contenido visible no necesitan controles.
 - **Nombre del criterio 3.2.2:** el módulo lo llama "Al introducir datos"; en `resources/` se llama "Al recibir entradas". Mismo criterio. Igual 4.1.2: "Nombre, función y valor" (módulo) / "Nombre, rol, valor" (`resources/`).
 - **Orden del foco al borrar o cambiar contenido:** la referencia de 2.4.3 no menciona literalmente los casos de borrar una línea o cambiar de paso; la lección los incluye como parte de 2.4.3 (el foco debe ir a un sitio con sentido). Se mantiene tal cual está en la lección.
-- **Título del enlace «Naranjas de zumo» sin semántica de enlace:** el audio lo califica como "otro incumplimiento" sin nombrar criterio; el más cercano es 4.1.2 (rol) / 2.1.1 (no operable por teclado).
+- **Título del enlace «Naranjas de zumo» sin semántica de enlace:** la grabación lo califica como "otro incumplimiento" sin nombrar criterio; el más cercano es 4.1.2 (rol) / 2.1.1 (no operable por teclado).
 
-## Notas de transcripción (audio)
+## Notas de transcripción (grabación)
 
 - «Wispr», «Wiccard» = **WCAG**; «JOS» = **JAWS**; «Tolba» = **TalkBack**; «FunkyFi» = **Funkify**; «Max» = **Mac**; «Nintendo» (en "por si tenéis Nintendo") = **Windows**; «aside» aparece como «a side»; «toas» = **toast**; «hanof/hanos» = **handoff**; «encabezamientos» = **encabezados**; «cuenta HTML» y «tres» son los nombres accesibles malos del ejemplo; «la página de War» = la plataforma weAAAre.
-- Slips de numeración del audio: «2.1.2.2.1» = **2.2.1**; «1311» = **1.3.1**; «244» = **2.4.4**; «412» = **4.1.2**. Frases como «no itens en menú puntos de referencia» y «visitado, enlace» son salidas del propio VoiceOver captadas por el micrófono.
+- Slips de numeración de la grabación: «2.1.2.2.1» = **2.2.1**; «1311» = **1.3.1**; «244» = **2.4.4**; «412» = **4.1.2**. Frases como «no itens en menú puntos de referencia» y «visitado, enlace» son salidas del propio VoiceOver captadas por el micrófono.
 - La lección 4.3 aparece **duplicada** en la transcripción (29:49–42:55 y 42:55–56:03). La lección de voz y pulsador no se anuncia con número (se infiere 4.5).
-- El audio llama "botón" y "enlace" indistintamente al elemento "Saltar al contenido principal" (en 4.6 el lector lo dice como botón).
+- La grabación llama "botón" y "enlace" indistintamente al elemento "Saltar al contenido principal" (en 4.6 el lector lo dice como botón).
 
 ## Pendiente
 
-- La **tutoría del módulo 4** quedó registrada como [`clase-05-summary.md`](clase-05-summary.md) (raw: `raw-inputs/clase-05-raw.txt`).
+- La **tutoría del módulo 4** quedó registrada como [`tutoria-modulo-04-summary.md`](tutoria-modulo-04-summary.md) (raw: `raw-inputs/tutoria-modulo-04-raw.txt`).
 - Completar la guía de herramientas con Linux (Orca) y otros sistemas si los módulos siguientes lo cubren.
 - Los recursos citados que no tienen resumen propio en `resources/` (Funkify, NV Access): el texto de la plataforma los enlaza pero las URL no estaban visibles en las capturas.

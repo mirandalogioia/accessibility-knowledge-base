@@ -1,13 +1,13 @@
 ---
-title: "Clase 5 — Tutoría del módulo 4: foco visible y ejercicio en grupos auditando la web Aliso"
+title: "Tutoría del módulo 4: foco visible y ejercicio en grupos auditando la web Aliso"
 status: draft
 source:
-  - ../raw-inputs/clase-05-raw.txt
-  - ../raw-inputs/clase-05-contenido-escrito-raw.txt
+  - ../raw-inputs/tutoria-modulo-04-raw.txt
+  - ../raw-inputs/tutoria-modulo-04-contenido-escrito-raw.txt
 last_updated: 2026-10-31
 ---
 
-# Clase 5 — Tutoría del módulo 4 (weAAAre)
+# Tutoría del módulo 4 (weAAAre)
 
 Tutoría en vivo del módulo 4 (formas de interacción). Carlos resolvió una duda sobre foco visible y dirigió un ejercicio en grupos: en salas separadas, cada grupo auditó una web de aerolínea de ejemplo (**Aliso**) con **una forma de interacción** (teclado; puntero, voz y zoom; lector de pantalla), anotó barreras y el criterio WCAG que incumple, y después un/a portavoz las presentó en la sala común. Fecha por contexto: miércoles 28 de octubre de 2026 (se menciona "mañana que es jueves" y un proyecto "enviado el 27"). Resumen del módulo: [`modulo-04-summary.md`](modulo-04-summary.md).
 
@@ -17,14 +17,14 @@ Tutoría en vivo del módulo 4 (formas de interacción). Carlos resolvió una du
 
 Pregunta de una alumna sobre si hace falta diseñar el foco y cómo medir su contraste.
 
-- **Foco nativo (si no se toca):** el *agente de usuario* (navegador, sistema operativo) sigue sus propios estándares y **debe garantizar que el foco de los elementos nativos sea accesible**. Si no se edita ese foco, el diseño no tiene que preocuparse de medirlo (el audio dice que la propia WCAG lo plantea así).
+- **Foco nativo (si no se toca):** el *agente de usuario* (navegador, sistema operativo) sigue sus propios estándares y **debe garantizar que el foco de los elementos nativos sea accesible**. Si no se edita ese foco, el diseño no tiene que preocuparse de medirlo (la tutoría dice que la propia WCAG lo plantea así).
 - **Foco personalizado:** la responsabilidad pasa al diseño. El foco **debe verse** y cumplir **contraste 3:1** entre los píxeles al cambiar de un estado a otro (ej. de *hover* de un botón a foco).
 - **Fondos dinámicos** (ej. foto de fondo que cambia): el diseño sigue siendo responsable de que el foco funcione en **todos** los casos.
 - **Truco del foco doble (azul – blanco – azul):** un contorno con dos colores garantiza que, si uno no contrasta con el fondo, el otro sí. Ejemplo mostrado en la web que están construyendo (sobre el footer, el azul solo podía no cumplir, pero el borde blanco sí).
   - **Costo:** si cada color cumple el grosor requerido (2 px), el foco queda de ~**6 px**, grueso y a veces molesto por la distancia entre elementos.
   - **Alternativa:** con **azul + blanco (4 px)** normalmente basta; incluso se puede ahorrar el contorno interno. Se ajusta por **prueba y error**.
   - Se hace así para que **cada color cumpla los 2 px**, no que los dos sumen 2 px.
-- Criterios relacionados: **2.4.7**, **1.4.11** (3:1), **2.4.13** (AAA, grosor 2 px; ver [`clase-04-summary.md`](clase-04-summary.md)).
+- Criterios relacionados: **2.4.7**, **1.4.11** (3:1), **2.4.13** (AAA, grosor 2 px; ver [`tutoria-modulo-03-summary.md`](tutoria-modulo-03-summary.md)).
 
 ## Ejercicio: web de aerolínea "Aliso"
 
@@ -42,7 +42,7 @@ Reglas: sin ratón en la web; anotar **la barrera, qué pasa, cómo se detectó 
 
 ### Grupo teclado
 
-| Barrera | Criterio | Resolución en clase |
+| Barrera | Criterio | Resolución en la tutoría |
 |---|---|---|
 | Al pasar Tab por el menú "Destino" se abre el desplegable | Propuesto **3.2.1** → **no incumple** | **Abrir un menú no es un cambio de contexto.** Se asimila a lo que ve quien usa *hover*. Si dentro del menú **Escape no lo cierra**, el criterio es **4.1.2** (el menú no cumple su función). Se verá en el módulo de componentes |
 | Un grupo de opciones no se recorre con Tab (ida y vuelta al origen) | — (cumple si funciona con flechas) | **Grupo de opciones:** con **Tab se entra y se sale** del grupo; **dentro, las flechas mueven la selección**. Vale para radios, **pestañas (tabs)** y **calendario/selector de fecha**. Si **no funciona con flechas** → **4.1.2** (no cumple su función; también se podría citar 2.1.1) |
@@ -54,7 +54,7 @@ Reglas: sin ratón en la web; anotar **la barrera, qué pasa, cómo se detectó 
 
 ### Grupo lector de pantalla
 
-| Barrera | Criterio | Resolución en clase |
+| Barrera | Criterio | Resolución en la tutoría |
 |---|---|---|
 | Sin salto al contenido principal | **2.4.1** | |
 | Campos de formulario con `label` no asociados | **1.3.1** | |
@@ -67,7 +67,7 @@ Reglas: sin ratón en la web; anotar **la barrera, qué pasa, cómo se detectó 
 
 ### Grupo puntero, voz y zoom
 
-| Barrera | Criterio | Resolución en clase |
+| Barrera | Criterio | Resolución en la tutoría |
 |---|---|---|
 | Cuenta atrás de la reserva (asiento + equipaje) que **no se puede detener ni ampliar** y, al terminar, **devuelve al paso 1** | **2.2.1** y **3.2.5 (AAA)** | Al terminar el tiempo el sistema **cambia de contexto sin que la persona lo pida** y resetea todo: no es 3.2.1 (aplica al recibir foco) ni 3.2.2 (aplica al rellenar formularios), sino **3.2.5 Cambio a petición**, que es **AAA** |
 | Tarifas distinguidas **solo por color** | **1.4.1** | |
@@ -96,7 +96,7 @@ Reglas: sin ratón en la web; anotar **la barrera, qué pasa, cómo se detectó 
   - Los captchas de texto distorsionado están **obsoletos**: modelos como ChatGPT o Claude los resuelven y no protegen.
   - Hoy se usan captchas **invisibles** (análisis heurístico de si es usuario o bot, sin reto).
   - Si no hay más remedio, ofrecer alternativa (audio u otra); en el ejemplo (pie del pago) no había.
-- **Enlace «Saltar al contenido»:** debe aparecer en el **primer Tab de cada página**; el audio no deja claro un matiz que se comentó sobre usuarios recurrentes.
+- **Enlace «Saltar al contenido»:** debe aparecer en el **primer Tab de cada página**; la tutoría no deja claro un matiz que se comentó sobre usuarios recurrentes.
 
 ## Avance del proyecto (comentarios de la revisión)
 
@@ -109,7 +109,7 @@ Una instructora (Consuelo, por contexto; figura como Speaker 1) revisó los proy
 
 ### Tarea oficial para la próxima tutoría (texto de la plataforma)
 
-Publicada junto con la grabación (ver [`clase-05-contenido-escrito-raw.txt`](../raw-inputs/clase-05-contenido-escrito-raw.txt)). **Objetivo: tener el flujo acotado y las pantallas dibujadas** con los elementos que necesitan.
+Publicada junto con la grabación (ver [`tutoria-modulo-04-contenido-escrito-raw.txt`](../raw-inputs/tutoria-modulo-04-contenido-escrito-raw.txt)). **Objetivo: tener el flujo acotado y las pantallas dibujadas** con los elementos que necesitan.
 
 1. **Acotar el flujo:** si abarca demasiado, dividirlo (iniciar sesión es un flujo; añadir un producto a la cesta es otro). En los equipos de producto nadie lleva un servicio entero de punta a punta, se trabaja por flujos.
 2. **Dibujar las pantallas del flujo**, aunque sea a mano; no tienen que ser bonitas. Si hay dudas de alcance, foto o captura del boceto por Discord.
@@ -131,10 +131,10 @@ Publicada junto con la grabación (ver [`clase-05-contenido-escrito-raw.txt`](..
 
 Comparado con [`resources/wcag22-understanding/`](../../resources/wcag22-understanding/README.md):
 
-- **Foco nativo y contraste (resuelve el matiz de `modulo-04-summary.md`):** lo dicho en clase coincide con la referencia: 1.4.11 exige 3:1 al foco, pero **no se aplica a presentaciones que determina el agente de usuario fuera del control del autor**. Si el autor **no modifica** el foco nativo, no es responsable; si lo **personaliza**, sí.
+- **Foco nativo y contraste (resuelve el matiz de `modulo-04-summary.md`):** lo dicho en la tutoría coincide con la referencia: 1.4.11 exige 3:1 al foco, pero **no se aplica a presentaciones que determina el agente de usuario fuera del control del autor**. Si el autor **no modifica** el foco nativo, no es responsable; si lo **personaliza**, sí.
 - **Zoom al 400% citado como 1.4.4:** la referencia define 1.4.4 como ampliar el **texto hasta 200%**. Pérdida de contenido al 400% de zoom corresponde a **1.4.10 Reflow** (320 px CSS ≈ 400%). Carlos no corrigió el número en la sesión.
 - **Captcha y 3.3.8:** según la referencia, 3.3.8 aplica a **autenticación de usuarios existentes** y ofrece excepciones (reconocimiento de objetos o contenido propio); 3.3.9 (AAA) las elimina. Carlos usa 3.3.8 como el criterio de la alternativa al captcha; si el reto de Aliso (al final del pago) entra en el alcance de "autenticación" es **interpretación del instructor**.
-- **4.1.3 para errores:** la referencia cubre confirmaciones y errores de validación (`role="alert"`, `role="status"`, regiones vivas). La identificación textual del error es **3.3.1**; en clase no se nombró.
+- **4.1.3 para errores:** la referencia cubre confirmaciones y errores de validación (`role="alert"`, `role="status"`, regiones vivas). La identificación textual del error es **3.3.1**; en la tutoría no se nombró.
 - **3.2.1 en menús:** coincide con la referencia (cambio de contexto = envío, ventana nueva, mover el foco a otro control); abrir un menú sin mover el foco no lo es.
 - **2.5.8** (tamaño mínimo 24 × 24, AA) y **3.2.5 / 2.3.3 / 2.4.9** (AAA): coinciden con los niveles de la referencia.
 

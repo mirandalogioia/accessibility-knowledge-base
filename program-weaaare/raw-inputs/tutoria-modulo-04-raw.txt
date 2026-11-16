@@ -1,8 +1,8 @@
-# Clase 5 Accesibilidad
+# Tutoría del módulo 4 — Accesibilidad
 
 ## Summary
 ### Flow Summary
-Clase de accesibilidad: dudas sobre foco visible, ejercicio en grupos auditando la web de la aerolínea Aliso por forma de interacción, avance del proyecto y encuesta sobre aplazar una semana.
+Tutoría de accesibilidad: dudas sobre foco visible, ejercicio en grupos auditando la web de la aerolínea Aliso por forma de interacción, avance del proyecto y encuesta sobre aplazar una semana.
 
 ### Foco visible
 - Si no se toca el foco nativo, el agente de usuario (navegador, SO) garantiza que sea accesible.

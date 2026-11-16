@@ -1,11 +1,11 @@
 ---
-title: "Clase 3 — Tutoría: flujos de proyecto, teclado, encabezados y Kahoot WCAG"
+title: "Tutoría del módulo 2: flujos de proyecto, teclado, encabezados y Kahoot WCAG"
 status: in_progress
-source: ../raw-inputs/clase-03-raw.txt
+source: ../raw-inputs/tutoria-modulo-02-raw.txt
 last_updated: 2026-10-17
 ---
 
-# Clase 3 — Tutoría de Diseño Accesible (weAAAre)
+# Tutoría del módulo 2 — Diseño Accesible (weAAAre)
 
 Tutoría de revisión: se repasaron los entregables de los módulos 1 y 2, se ajustó el alcance de tres proyectos de alumnas (OC, agencia de viajes, salud de Galicia), se explicó navegación por teclado y encabezados, y se cerró con un Kahoot sobre WCAG.
 
@@ -124,4 +124,4 @@ Tutoría de revisión: se repasaron los entregables de los módulos 1 y 2, se aj
 
 ## Notas de transcripción
 
-- Siglas mal transcritas en el audio y corregidas con el Summary del raw y el contexto: WCAG ("Wicar"), ATAG ("ATAC"), UAAG ("UAC"), VPAT ("BIPAC").
+- Siglas mal transcritas en la tutoría y corregidas con el Summary del raw y el contexto: WCAG ("Wicar"), ATAG ("ATAC"), UAAG ("UAC"), VPAT ("BIPAC").

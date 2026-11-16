@@ -6,7 +6,7 @@ last_updated: 2026-10-31
 
 # Guía de herramientas para probar formas de interacción
 
-Cómo encender y usar cada herramienta con la que el **Módulo 4 de weAAAre** ("Formas de interacción y fundamentos de accesibilidad") simula cómo usan un producto digital distintas personas. Fuentes: el audio de las lecciones (Carlos, demos en Mac) y el texto escrito de la plataforma (que agrega Windows, Android, iPhone/iPad y Linux). Resumen del módulo en [`program-weaaare/intermediate/modulo-04-summary.md`](../program-weaaare/intermediate/modulo-04-summary.md).
+Cómo encender y usar cada herramienta con la que el **Módulo 4 de weAAAre** ("Formas de interacción y fundamentos de accesibilidad") simula cómo usan un producto digital distintas personas. Fuentes: las grabaciones de plataforma (Carlos, demos en Mac) y el contenido escrito de la plataforma (que agrega Windows, Android, iPhone/iPad y Linux). Resumen del módulo en [`program-weaaare/intermediate/modulo-04-summary.md`](../program-weaaare/intermediate/modulo-04-summary.md).
 
 **Importante:** son **simulaciones didácticas**. Sirven para detectar barreras y entender el esfuerzo que implican, pero quedan lejos de la experiencia real de quien usa esas tecnologías a diario. No reemplazan el testeo con personas con discapacidad.
 
@@ -21,7 +21,7 @@ Cómo encender y usar cada herramienta con la que el **Módulo 4 de weAAAre** ("
 | **Pulsador (control por botón)** | Quien tampoco puede hablar con claridad; un único botón (cabeza, pie, soplido) | Ve la página | El sistema recorre la pantalla y se pulsa al llegar; todo lleva mucho más tiempo |
 | **Ampliador de pantalla** | Baja visión | Ve una porción pequeña de la pantalla | Lo que aparece al pasar el puntero o al recibir el foco debe poder leerse |
 
-El módulo remarca el error frecuente de mezclar **solo teclado** con **lector de pantalla**: son personas y necesidades distintas. Las demás tecnologías de apoyo (voz, pulsador, soplido, mirada…) en última instancia dependen del teclado; por eso probar con teclado y lector de pantalla cubre mucho (idea de la Clase 4).
+El módulo remarca el error frecuente de mezclar **solo teclado** con **lector de pantalla**: son personas y necesidades distintas. Las demás tecnologías de apoyo (voz, pulsador, soplido, mirada…) en última instancia dependen del teclado; por eso probar con teclado y lector de pantalla cubre mucho (idea de la tutoría del módulo 3).
 
 ## 2. Cobertura por sistema operativo
 
@@ -46,10 +46,10 @@ El módulo remarca el error frecuente de mezclar **solo teclado** con **lector d
 | **Ver dónde está el foco** aunque la página no lo muestre | Pestaña **Consola** > icono del ojo (**Crear expresión en directo**) > escribir `document.activeElement`. Al pulsar Tab muestra el elemento con foco; al pasar el ratón por encima lo resalta en la página |
 | **Ver el nombre accesible y la función** de un elemento | Clic derecho en el control > Inspeccionar > pestaña **Accessibility** > *Name* (sirve para comparar lo que se ve con el nombre, si el sistema no muestra los nombres o no puedes hablarle al ordenador) |
 | Simular **móvil / táctil** | Con las herramientas abiertas, **Cmd + Mayús + M** (Mac) / **Ctrl + Mayús + M** (Windows) y elegir un teléfono. El ratón hace de dedo; **Mayús + arrastrar** simula el pellizco; el botón de girar de la barra cambia la orientación |
-| **Zoom del navegador** | Cmd/Ctrl + `+`, `-`, `0` (ver Clase 4) |
+| **Zoom del navegador** | Cmd/Ctrl + `+`, `-`, `0` (ver tutoría del módulo 3) |
 | **Simular temblor** | Extensión **Funkify** (perfil "Trembling Trevor"): hace temblar el puntero |
 
-Navegador: usar **Chrome** en ordenador (el de los videos). **Safari**, con su ajuste de fábrica, se salta los enlaces al pulsar Tab, así que recorre la página de otra forma. Las prácticas también valen en Edge o Firefox.
+Navegador: usar **Chrome** en ordenador (el de las grabaciones de plataforma). **Safari**, con su ajuste de fábrica, se salta los enlaces al pulsar Tab, así que recorre la página de otra forma. Las prácticas también valen en Edge o Firefox.
 
 ## 4. Teclado
 
@@ -84,7 +84,7 @@ Idea: la persona dice **lo que ve en pantalla** y el sistema pulsa. Tres ideas c
 | Apuntar a una zona de la pantalla | «Mostrar cuadrícula» | «Mostrar cuadrícula» | «Mostrar la cuadrícula» |
 | Saber qué puedes decir | «Mostrar comandos» | «¿Qué puedo decir?» | «Mostrar todos los comandos» |
 
-Notas de la demo en Mac (audio):
+Notas de la demo en Mac (grabaciones de plataforma):
 - "Mostrar números" y "Mostrar nombres" alternan el modo; quienes lo usan a diario suelen tener los nombres **ocultos** (la pantalla llena de rótulos es caótica). También se usa "desplazar abajo".
 - Si la acción no responde ("hacer clic en Añadir" no hace nada), **mostrar nombres** revela el nombre accesible real (ej. el botón decía «Añadir» y por dentro se llamaba «Comprar»).
 - Con varios controles con el mismo nombre, el sistema asigna **números** para elegir ("uno").
@@ -101,7 +101,7 @@ Un control por botón recorre la pantalla resaltando un elemento o una zona cada
 | Qué sirve de botón | Una tecla o un pulsador | Pulsador externo, pantalla entera, un sonido o movimiento de cabeza ante la cámara | Teclas de un teclado USB/Bluetooth, un pulsador, gestos de la cara ante la cámara | Una tecla, un mando o un clic |
 | Qué recorre | Elementos de la pantalla, o la pantalla con dos líneas | Elementos de la pantalla | Elementos de la pantalla | Solo las teclas del teclado en pantalla |
 
-- **Mac (demo del audio):** se usó la **barra espaciadora** como botón. En el panel **Puntero** se elige **«Mover y hacer clic»**: una línea vertical barre la pantalla (se pulsa para fijarla), luego una horizontal (se pulsa otra vez) y una última pulsación hace el clic. Es lento por diseño.
+- **Mac (demo de la grabación):** se usó la **barra espaciadora** como botón. En el panel **Puntero** se elige **«Mover y hacer clic»**: una línea vertical barre la pantalla (se pulsa para fijarla), luego una horizontal (se pulsa otra vez) y una última pulsación hace el clic. Es lento por diseño.
 - **Windows:** no hay control por botón de sistema. El teclado en pantalla con "Examinar las teclas" sirve para notar la lentitud y cómo aprieta un reloj; con él se pulsa Tab, Intro o Espacio y se recorre la web como con el teclado, pero **no llega** a lo que el teclado no alcanza (ej. elementos hechos con `div`). Para un control por botón completo hacen falta programas de terceros.
 - Medir **cuánto tardas** en cada tarea con voz o botón: es la mejor forma de entender por qué un temporizador de uno o tres minutos no deja terminar. Criterios: **2.2.1**, **2.2.2**.
 
@@ -112,7 +112,7 @@ Un control por botón recorre la pantalla resaltando un elemento o una zona cada
 | Mac | Ajustes del Sistema > Accesibilidad > Movimiento > **Reducir movimiento** |
 | Windows 11 | Configuración > Accesibilidad > Efectos visuales > **Efectos de animación**, desactivado |
 
-Una página que escucha esta preferencia deja de deslizar, de hacer zoom o de moverse sola (técnica: `prefers-reduced-motion`). Criterio: **2.3.3 (AAA)**; según el audio es "una línea de código", barato de implementar y conviene dejarlo escrito en el traspaso.
+Una página que escucha esta preferencia deja de deslizar, de hacer zoom o de moverse sola (técnica: `prefers-reduced-motion`). Criterio: **2.3.3 (AAA)**; según la grabación es "una línea de código", barato de implementar y conviene dejarlo escrito en el traspaso.
 
 ## 8. Ampliador de pantalla
 
@@ -143,7 +143,7 @@ Un lector convierte la página en voz (o braille con línea braille). Dice, en c
 | Encender / apagar | **Cmd + F5** |
 | Callarlo en el momento | **Control** |
 | Tecla VO | **Control + Opción** (casi todas las órdenes empiezan por ella) |
-| Moverse al siguiente / anterior | **VO + flecha derecha / izquierda** (el audio lo muestra con Control + Opción + flechas) |
+| Moverse al siguiente / anterior | **VO + flecha derecha / izquierda** (la grabación lo muestra con Control + Opción + flechas) |
 | Abrir el **rotor** | **VO + U**. Flechas derecha/izquierda cambian de lista (enlaces, encabezados, controles de formulario, puntos de referencia, ventanas); arriba/abajo la recorren; **Intro** va al elemento; **Escape** cierra |
 | Pulsar lo que tienes delante | **VO + Espacio** |
 

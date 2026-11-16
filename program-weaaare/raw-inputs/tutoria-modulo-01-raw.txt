@@ -1,8 +1,8 @@
-# Clase 2 Accesibilidad
+# Tutoría del módulo 1 — Accesibilidad
 
 ## Summary
 ### Flow Summary
-Clase del curso de accesibilidad: dudas del módulo 1 (testeo con personas con discapacidad, widgets, estándares), instrucciones del brief en Figma y revisión de los flujos de proyecto de cada alumno para acotarlos.
+Tutoría del curso de accesibilidad: dudas del módulo 1 (testeo con personas con discapacidad, widgets, estándares), instrucciones del brief en Figma y revisión de los flujos de proyecto de cada alumno para acotarlos.
 
 ### Testeo con personas con discapacidad
 - Usabilidad y accesibilidad son tests distintos: en accesibilidad importa lograr la tarea de forma autónoma, no el tiempo
@@ -29,7 +29,7 @@ Clase del curso de accesibilidad: dudas del módulo 1 (testeo con personas con d
 - Bárbara Araya Vidal muestra los pasos todos juntos porque en sus tests los mayores querían comparar pasos y sentirse seguros
 
 ### Carga del módulo 1
-- Estimado en 2 a 3 horas más 2 de clase; solo la mitad lo terminó y desde el módulo 4 aumenta la carga
+- Estimado en 2 a 3 horas más 2 de tutoría; solo la mitad lo terminó y desde el módulo 4 aumenta la carga
 - Se pide feedback sobre la plataforma; se están preparando materiales descargables en PDF
 
 ### Próximos pasos

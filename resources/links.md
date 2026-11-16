@@ -34,4 +34,4 @@ Links y recursos externos de referencia sobre accesibilidad digital, recopilados
 | Udemy — Aprende Accesibilidad Web Paso a Paso | https://www.udemy.com/course/aprende-accesibilidad-web-paso-a-paso/ | Learning | Curso de Udemy Empresarial sobre accesibilidad web. Recomendado por Tere (tambrosiodualboot) |
 | Udemy — Design and Develop a Killer Website with HTML5 and CSS3 | https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/?couponCode=26BBPAA2MX | Learning | Curso de Udemy Empresarial sobre básicos de HTML/CSS. Recomendado por Tere (tambrosiodualboot) |
 
-> Agregar acá cualquier link nuevo que surja de las clases, shadowing o investigación con IA, con una categoría y una nota corta de por qué es relevante.
+> Agregar acá cualquier link nuevo que surja de las tutorías, shadowing o investigación con IA, con una categoría y una nota corta de por qué es relevante.

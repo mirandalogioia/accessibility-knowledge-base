@@ -1,13 +1,13 @@
 ---
-title: "Clase 1 — Kickoff del Programa Intensivo de Diseño Accesible (weAAAre)"
+title: "Primer directo — Kickoff del Programa Intensivo de Diseño Accesible (weAAAre)"
 status: draft
-source: "raw-inputs/clase-01-raw.txt"
+source: "raw-inputs/primer-directo-raw.txt"
 last_updated: 2026-09-30
 ---
 
-# Clase 1 — Kickoff
+# Primer directo — Kickoff
 
-Primera clase en vivo del programa intensivo "Diseño Accesible" de weAAAre (primera edición). Sesión de presentación: metodología del curso, temario de los 10 módulos, mecánica del proyecto final, certificación, herramientas necesarias y dinámica de bienvenida (formulario + Kahoot).
+Primer directo del programa intensivo "Diseño Accesible" de weAAAre (primera edición). Sesión de presentación: metodología del curso, temario de los 10 módulos, mecánica del proyecto final, certificación, herramientas necesarias y dinámica de bienvenida (formulario + Kahoot).
 
 ## Quiénes dan el curso
 
@@ -17,10 +17,10 @@ Primera clase en vivo del programa intensivo "Diseño Accesible" de weAAAre (pri
 
 ## Metodología del programa
 
-- Dos tipos de lecciones: **grabadas** (a tu ritmo) y **tutorías en directo** (semanales, tipo clase en vivo).
+- Dos tipos de lecciones: **grabadas** (a tu ritmo) y **tutorías en directo** (semanales, tipo sesión en vivo).
 - Cada miércoles se desbloquea un módulo completo grabado; la tutoría en vivo de esa semana repasa el módulo anterior y resuelve dudas.
-- Dudas fuera de horario de clase: Discord y comentarios en las lecciones (respuesta asíncrona).
-- Asistencia a las clases en vivo **no es obligatoria** para el certificado; todas quedan grabadas (disponibles ~2h después).
+- Dudas fuera de horario de las tutorías: Discord y comentarios en las lecciones (respuesta asíncrona).
+- Asistencia a los directos y tutorías en vivo **no es obligatoria** para el certificado; todas quedan grabadas (disponibles ~2h después).
 - **Acceso de por vida** al contenido, incluyendo futuras actualizaciones del temario (ej. si WCAG pasa de 2.2 a una nueva versión, se notifica y se actualiza sin costo).
 - Primera edición → los tiempos de algunos módulos pueden no estar bien calibrados; el equipo pedirá feedback en vivo para decidir si se retrasa el ritmo.
 
@@ -56,7 +56,7 @@ Primera clase en vivo del programa intensivo "Diseño Accesible" de weAAAre (pri
 - Debe incluir documentación completa: tokens (tipografía, color desde el módulo 1), especificaciones de accesibilidad (comportamiento con teclado, lector de pantalla), y **handoff** a desarrollo cubriendo al menos: estado semántico, orden de teclado, orden de lectura, texto alternativo en imágenes, idioma, título de página, e interacciones ARIA necesarias.
 - El flujo final debe ser interactivo (prototipo funcional) y se lleva a código real: Storybook/playground desplegado con URL pública, usando el entorno de IA construido en los módulos 7-9.
 - Se avanza semana a semana; al final de cada módulo habrá una lección con el detalle de qué construir esa semana.
-- **Entrega: 9 de diciembre de 2026** (día antes de la última clase en vivo). Habrá feedback iterativo durante el proceso, no solo al final.
+- **Entrega: 9 de diciembre de 2026** (día antes de la última tutoría en vivo). Habrá feedback iterativo durante el proceso, no solo al final.
 - El mejor proyecto gana un **reembolso completo** del programa.
 
 ## Certificación (independiente del proyecto)
@@ -64,7 +64,7 @@ Primera clase en vivo del programa intensivo "Diseño Accesible" de weAAAre (pri
 - Exámenes asíncronos cortos al final de cada módulo (repetibles).
 - 70% del total de exámenes aprobado → certificado estándar.
 - Máxima puntuación en los exámenes → "certificado aventajado" (alumno destacado).
-- El certificado no depende de asistir a clases en vivo ni del proyecto — son dos pistas separadas.
+- El certificado no depende de asistir a las tutorías en vivo ni del proyecto — son dos pistas separadas.
 
 ## Comunicación: Discord
 
@@ -95,7 +95,7 @@ Cursos cortos (≈1h) recomendados para reforzar el módulo 1, parte del temario
 - Criterio **"Autenticación accesible"** (WCAG 3.3.8/3.3.9): debe existir alternativa a la autenticación biométrica (Face ID, huella), que puede fallar con personas ciegas o con cambios físicos.
 - Gestión de foco al cerrar modales/diálogos: el foco debe volver al elemento que originó la apertura (o al punto más cercano si ese elemento ya no existe, p. ej. tras eliminar algo).
 - Patrón de navegación por **pestañas (tabs)**: dentro del grupo, se navega con flechas, no con Tab (Tab entra y sale del grupo).
-- Cálculo del **nombre accesible**: el `aria-label` tiene prioridad sobre el texto visible/label asociado por `for`/`id`. "aria-label mata HTML" (mnemónico compartido en la clase, parafraseando "billetera mata galán").
+- Cálculo del **nombre accesible**: el `aria-label` tiene prioridad sobre el texto visible/label asociado por `for`/`id`. "aria-label mata HTML" (mnemónico compartido en el directo, parafraseando "billetera mata galán").
 - `role="presentation"` en un enlace no elimina su semántica real (mala práctica, pero el navegador ignora el rol y mantiene el comportamiento de enlace).
 - Cambios de estado sin cambio de contexto (ej. toast "cambio guardado", contador de carrito): deben anunciarse mediante regiones live / mensajes de estado programáticos, no solo visualmente.
 - Al pedirle un diseño/interacción a una IA, cuanto más específica la instrucción (ej. "foco entra al abrir, Escape cierra, foco vuelve al activador"), mejor y más determinista el resultado — no dejarle todo el criterio a la IA.

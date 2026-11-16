@@ -1,7 +1,7 @@
-# Clase 4 — Tutoría del módulo 3
+# Tutoría del módulo 3
 ## Contenido escrito de la plataforma (Módulo 3 - Lección 11), transcrito de captura de pantalla
 
-Nota: transcripción de una captura de pantalla de la lección 3.11 de la plataforma weAAAre. La clase 4 en vivo (`clase-04-raw.txt`) es la grabación de esta tutoría. Los enlaces aparecen subrayados en la plataforma pero sus URL no son visibles en la captura; solo se transcriben los textos. Las descripciones entre [corchetes] no son texto de la plataforma.
+Nota: transcripción de una captura de pantalla de la lección 3.11 de la plataforma weAAAre. La tutoría del módulo 3 en vivo (`tutoria-modulo-03-raw.txt`) es la grabación de esta tutoría. Los enlaces aparecen subrayados en la plataforma pero sus URL no son visibles en la captura; solo se transcriben los textos. Las descripciones entre [corchetes] no son texto de la plataforma.
 
 ---
 

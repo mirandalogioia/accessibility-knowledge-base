@@ -36,7 +36,7 @@ Módulo 5 de accesibilidad: las barreras nacen en los componentes y se corrigen 
 - Tooltip no lleva foco ni contenido imprescindible o pulsable; menú de acciones con nombre específico (ej. 'Acciones de presupuesto 2027')
 - Diálogo atrapa el foco: va al título, al primer campo o a Cancelar si es destructivo; Escape cierra y devuelve foco al disparador
 - Regiones en vivo avisan cambios fuera del foco (añadido a la cesta); urgentes solo para casos como cierre de sesión
-- Próxima clase en vivo tratará ARIA a nivel básico para diseñadores
+- Próxima tutoría en vivo tratará ARIA a nivel básico para diseñadores
 
 ## Transcript
 [00:09] Speaker 1: Bienvenidos al módulo 5 del intensivo, el laboratorio de componentes. En el módulo 4 vimos la "tienda" como la viven las diferentes tipos de personas, ya sea con teclado, con puntero y táctil, con voz, con pulsador, o con lector de pantalla. Por el camino encontramos además un montón de barreras y las supimos asociar a los diferentes criterios de la WICA.

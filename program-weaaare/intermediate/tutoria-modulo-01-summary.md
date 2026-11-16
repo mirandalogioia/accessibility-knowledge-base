@@ -1,11 +1,11 @@
 ---
-title: "Clase 2 — Tutoría en vivo (7 de octubre)"
+title: "Tutoría del módulo 1 — en vivo del 7 de octubre"
 status: draft
-source: "raw-inputs/clase-02-raw.txt"
+source: "raw-inputs/tutoria-modulo-01-raw.txt"
 last_updated: 2026-10-16
 ---
 
-# Clase 2 — Tutoría en vivo del 7 de octubre
+# Tutoría del módulo 1 — en vivo del 7 de octubre
 
 Primera tutoría en vivo del intensivo: ronda de dudas sobre el Módulo 1, y luego trabajo práctico en Figma definiendo y acotando el flujo del proyecto de cada alumno.
 
@@ -28,7 +28,7 @@ Primera tutoría en vivo del intensivo: ronda de dudas sobre el Módulo 1, y lue
 - **Por qué no funcionan**: asumen que la persona tiene una sola necesidad a la vez (no puedes "prender todo" simultáneamente); por lo general estos widgets **no son accesibles en sí mismos** (quedan al final del recorrido de teclado, no tienen nombre accesible); y la persona que realmente usa tecnología de apoyo **ya tiene su propia configuración** — no va a adoptar un lector de pantalla embebido en un sitio puntual que no le sirve para el resto de la web. Además, muchos widgets interfieren con los comandos de la tecnología de apoyo real de la persona (hay excepciones de widgets que sí leen en voz sin competir con el lector de pantalla nativo, útiles como alternativa de consumo tipo podcast, pero eso no es igual a "accesibilidad").
 - **A quién podría ayudarle un widget**: personas mayores o quienes recién empiezan a vivir con una discapacidad y todavía no configuraron su propia tecnología de apoyo — pero la solución correcta ahí es diseñar bien desde el principio, no parchar con un widget.
 - **La legislación europea no obliga a tener un widget** — el apartado 11.7 de la norma técnica europea habla de "preferencias del usuario", y mucha gente lo malinterpreta como una obligación de incluir un widget. Lo que exige es que el producto respete las preferencias que la persona ya configuró a nivel de sistema operativo/navegador (texto más grande, contraste, modo oscuro, menos movimiento), no que se reemplace eso con una herramienta propia del sitio.
-- **El estándar WCAG no fija un tamaño mínimo de tipografía** — exige que el texto pueda ampliarse al 200% y 400% sin pérdida de información. Aun así, es buena práctica diseñar con un **mínimo de 16px** para quienes no saben configurar el zoom del sistema. Distinción clave repetida en la clase: **una cosa es el estándar (WCAG) y otra es diseñar una buena experiencia** — WCAG es la base, no el techo.
+- **El estándar WCAG no fija un tamaño mínimo de tipografía** — exige que el texto pueda ampliarse al 200% y 400% sin pérdida de información. Aun así, es buena práctica diseñar con un **mínimo de 16px** para quienes no saben configurar el zoom del sistema. Distinción clave repetida en la tutoría: **una cosa es el estándar (WCAG) y otra es diseñar una buena experiencia** — WCAG es la base, no el techo.
 - **Cosas sí recomendables** (no son un "widget" en el sentido criticado): un botón simple para agrandar/achicar letra pensado para personas mayores que no conocen el atajo de teclado del sistema.
 - **Dato técnico**: escribir texto directamente en mayúsculas en el código (en vez de aplicar un estilo CSS de `text-transform`) puede hacer que el lector de pantalla lo interprete como un acrónimo — ejemplo dado: "US" en "ABOUT US" se leería como "United States". La solución (usar estilos para transformar a mayúsculas visualmente, manteniendo el texto real en minúsculas/formato normal) resuelve ese problema pero genera dificultad de lectura para personas con dislexia, que tienen más problemas con texto todo en mayúsculas — es un trade-off a tener en cuenta.
 
@@ -80,8 +80,8 @@ Patrón repetido en varias correcciones de Consuelo: achicar el alcance a lo mí
 
 ## Carga de trabajo del Módulo 1 (feedback a la plataforma)
 
-- Estimado original: ~2-3 horas de contenido + 2 horas de clase en vivo = ~5 horas semanales, más el tiempo que cada quien quiera dedicar al proyecto (poco al principio, pero crece con los módulos).
-- Según las estadísticas de la plataforma, **solo la mitad de los alumnos había terminado el Módulo 1** para esta clase. Algunos alumnos confirmaron que les tomó más (toda la semana, trabajando un poco cada día) — una alumna con dislexia reportó que le toma más tiempo por su condición.
+- Estimado original: ~2-3 horas de contenido + 2 horas de tutoría en vivo = ~5 horas semanales, más el tiempo que cada quien quiera dedicar al proyecto (poco al principio, pero crece con los módulos).
+- Según las estadísticas de la plataforma, **solo la mitad de los alumnos había terminado el Módulo 1** para esta tutoría. Algunos alumnos confirmaron que les tomó más (toda la semana, trabajando un poco cada día) — una alumna con dislexia reportó que le toma más tiempo por su condición.
 - Carlos advirtió que **los módulos 1, 2 y 3 son los más livianos**; la carga aumenta notablemente a partir del módulo 4. Se está considerando reducir la cantidad de ejercicios si hace falta.
 - Se están preparando materiales descargables en PDF/diapositivas para quienes prefieren imprimir y subrayar.
 - Se pidió feedback continuo sobre la plataforma — al ser desarrollada por el propio equipo (Carlos), los problemas reportados se pueden solucionar/mejorar rápido cuando es viable.
@@ -89,6 +89,6 @@ Patrón repetido en varias correcciones de Consuelo: achicar el alcance a lo mí
 ## Próximos pasos
 
 - Consuelo: buscar y compartir por Discord el video de Apple sobre accesibilidad en software.
-- Carlos: publicar la grabación de la clase con los enlaces compartidos durante la sesión y el dato del "modo lectura" del navegador.
+- Carlos: publicar la grabación de la tutoría con los enlaces compartidos durante la sesión y el dato del "modo lectura" del navegador.
 - Estibaliz: cerrar la encuesta de validación el fin de semana, elegir el flujo definitivo y compartirlo para revisar su viabilidad.
 - Todos los alumnos: copiar la ficha del brief a su propio Figma y avanzar en completarla antes de la próxima tutoría.

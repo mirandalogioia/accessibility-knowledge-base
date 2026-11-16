@@ -10,7 +10,7 @@ last_updated: 2026-09-17
 
 Este repositorio centraliza mi proceso de aprendizaje en **accesibilidad digital** mientras hago el programa **"Diseño Accesible"** de weAAAre.
 
-La idea es ir guardando todo lo que voy aprendiendo — clases, sesiones de shadowing, investigación propia con IA — en un solo lugar ordenado, para que al final del proceso pueda:
+La idea es ir guardando todo lo que voy aprendiendo — tutorías, sesiones de shadowing, investigación propia con IA — en un solo lugar ordenado, para que al final del proceso pueda:
 
 1. Consolidar los **findings** más relevantes (qué aprendí, qué patrones se repiten, qué errores son más comunes).
 2. Convertir eso en una **propuesta de proceso y checklist de accesibilidad** para llevar al equipo de Dualboot Partners, y que sirva como punto de partida para incorporar accesibilidad en nuestros proyectos.

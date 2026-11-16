@@ -1,11 +1,11 @@
 # Módulo 5 — Laboratorio de componentes accesibles
 ## Contenido escrito de las lecciones (plataforma), transcrito de capturas de pantalla
 
-Nota: transcripción de 23 capturas de pantalla de la plataforma, entregadas en dos bloques. Cubre las lecciones 5.1 a 5.11 (introducción, diez componentes y regiones vivas). Falta aún el examen del módulo 5 y la tutoría en vivo. La parte hablada está en `modulo-05-raw.txt`.
+Nota: transcripción de 23 capturas de pantalla de la plataforma, entregadas en dos bloques. Cubre las lecciones 5.1 a 5.11 (introducción, diez componentes y regiones vivas). Falta aún el examen del módulo 5 y la tutoría en vivo. Las grabaciones de plataforma están en `modulo-05-grabaciones-plataforma-raw.txt`.
 
 Limitaciones de la transcripción:
-- Las capturas no muestran los títulos de lección. La numeración se asignó primero por las referencias cruzadas del texto y después se confirmó con el audio (`modulo-05-raw.txt`), donde el instructor anuncia cada lección por número: 5.1 introducción, 5.2 botón y enlace, 5.3 campo de texto, 5.4 casilla, 5.5 botones de radio, 5.6 interruptor, 5.7 select, 5.8 combobox, 5.9 acordeón y pestañas, 5.10 tooltips, menús y diálogos, 5.11 notificaciones y regiones vivas.
-- El audio es la fuente para lo que las capturas dejan cortado (por ejemplo, las decisiones de diseño de los radios o el cierre de la introducción). Audio y texto escrito son complementarios: ver `modulo-05-raw.txt`.
+- Las capturas no muestran los títulos de lección. La numeración se asignó primero por las referencias cruzadas del texto y después se confirmó con la grabación de plataforma (`modulo-05-grabaciones-plataforma-raw.txt`), donde el instructor anuncia cada lección por número: 5.1 introducción, 5.2 botón y enlace, 5.3 campo de texto, 5.4 casilla, 5.5 botones de radio, 5.6 interruptor, 5.7 select, 5.8 combobox, 5.9 acordeón y pestañas, 5.10 tooltips, menús y diálogos, 5.11 notificaciones y regiones vivas.
+- La grabación de plataforma es la fuente para lo que las capturas dejan cortado (por ejemplo, las decisiones de diseño de los radios o el cierre de la introducción). Grabación de plataforma y contenido escrito son complementarios: ver `modulo-05-grabaciones-plataforma-raw.txt`.
 - Varias capturas empiezan o terminan a mitad de lección (el cuerpo de la lección está cortado por arriba o por abajo). Lo que falta entre capturas no está transcrito. En concreto: la captura de la introducción termina en "Antes de empezar" con solo dos viñetas, y la del botón y enlace empieza directamente en el cuerpo, sin la entrada de la lección.
 - Las descripciones entre [corchetes] no son texto de la plataforma. Los enlaces aparecen subrayados en la plataforma, pero sus URL no son visibles: solo se transcriben los textos. Los `fragmentos en código` aparecen así en la plataforma.
 - Las tablas de criterios se transcriben como tablas Markdown con las tres columnas de la plataforma: Criterio, Qué pide, Lo que no pide.
@@ -525,5 +525,5 @@ Una lista de los avisos de cada pantalla, con tres cosas por aviso. Si no se ano
 ## Pendiente de añadir a este módulo
 
 - Examen del módulo 5.
-- Tutoría en vivo del módulo 5 (`clase-06-raw.txt`).
-- Resumen del módulo (`modulo-05-summary.md`), a armar combinando este archivo y `modulo-05-raw.txt`.
+- Tutoría en vivo del módulo 5 (`tutoria-modulo-05-raw.txt`).
+- Resumen del módulo (`modulo-05-summary.md`), a armar combinando este archivo y `modulo-05-grabaciones-plataforma-raw.txt`.

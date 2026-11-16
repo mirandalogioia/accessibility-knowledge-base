@@ -6,7 +6,7 @@ last_updated: 2026-10-04
 
 # Curso: Discapacidad, etiquetas, barreras y estadísticas
 
-Curso asíncrono de weAAAre dictado por Consuelo Correa Barros, segundo de la serie complementaria recomendada en la Clase 1 del intensivo "Diseño Accesible" (después de [`curso-modelos-teoricos-discapacidad/`](../curso-modelos-teoricos-discapacidad/README.md)). Cubre categorías de discapacidad, lenguaje y etiqueta correcta, tipos de barreras, y estadísticas globales. Prepara para el examen de certificación CIPAC (IAP).
+Curso asíncrono de weAAAre dictado por Consuelo Correa Barros, segundo de la serie complementaria recomendada en el primer directo del intensivo "Diseño Accesible" (después de [`curso-modelos-teoricos-discapacidad/`](../curso-modelos-teoricos-discapacidad/README.md)). Cubre categorías de discapacidad, lenguaje y etiqueta correcta, tipos de barreras, y estadísticas globales. Prepara para el examen de certificación CIPAC (IAP).
 
 ## Subfolders
 

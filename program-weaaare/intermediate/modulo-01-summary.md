@@ -1,13 +1,13 @@
 ---
 title: "Módulo 1 — Diseñar para la diversidad"
 status: draft
-source: "raw-inputs/modulo-01-raw.rtf (audio de las lecciones) + raw-inputs/modulo-01-contenido-escrito-raw.txt (texto escrito de la plataforma)"
+source: "raw-inputs/modulo-01-grabaciones-plataforma-raw.rtf (grabaciones de plataforma) + raw-inputs/modulo-01-contenido-escrito-raw.txt (contenido escrito de la plataforma)"
 last_updated: 2026-10-02
 ---
 
 # Módulo 1 — Diseñar para la diversidad
 
-Resumen consolidado del Módulo 1, fusionando la explicación en video (Consuelo Correa Barros) con el contenido escrito de cada lección en la plataforma. Cubre las lecciones 1.2 a 1.11 (se omite 1.1 "Bienvenida al intensivo" por no tener contenido sustantivo, y 1.12 "Tutoría" / 1.13 "Examen" por ser instancias en vivo / evaluativas, no contenido de la knowledge base).
+Resumen consolidado del Módulo 1, fusionando las grabaciones de plataforma (Consuelo Correa Barros) con el contenido escrito de cada lección en la plataforma. Cubre las lecciones 1.2 a 1.11 (se omite 1.1 "Bienvenida al intensivo" por no tener contenido sustantivo, y 1.12 "Tutoría" / 1.13 "Examen" por ser instancias en vivo / evaluativas, no contenido de la knowledge base).
 
 ## 1.2 — Qué significa diseñar de manera accesible
 
@@ -174,9 +174,9 @@ Anticipar no exige saberlo todo — basta con 4 preguntas antes de construir cad
 
 ---
 
-## Nota de alineación con la Clase 1
+## Nota de alineación con el primer directo
 
-Varios conceptos de este módulo ya habían sido adelantados por Carlos Garrido Marín en la dinámica Kahoot de la Clase 1 (ver [`clase-01-summary.md`](./clase-01-summary.md)): tamaño mínimo de objetivo de puntero (WCAG 2.2 AA = 24×24px, no 44×44 ni 48×48), gestión del foco al cerrar modales, criterio de autenticación accesible, y cálculo del nombre accesible (`aria-label` prioriza sobre el texto visible). Este módulo profundiza la base teórica/conceptual; esos criterios WCAG específicos se retoman con más detalle en el Módulo 2 ("WCAG para diseñadores").
+Varios conceptos de este módulo ya habían sido adelantados por Carlos Garrido Marín en la dinámica Kahoot del primer directo (ver [`primer-directo-summary.md`](./primer-directo-summary.md)): tamaño mínimo de objetivo de puntero (WCAG 2.2 AA = 24×24px, no 44×44 ni 48×48), gestión del foco al cerrar modales, criterio de autenticación accesible, y cálculo del nombre accesible (`aria-label` prioriza sobre el texto visible). Este módulo profundiza la base teórica/conceptual; esos criterios WCAG específicos se retoman con más detalle en el Módulo 2 ("WCAG para diseñadores").
 
 ## Próximos pasos
 

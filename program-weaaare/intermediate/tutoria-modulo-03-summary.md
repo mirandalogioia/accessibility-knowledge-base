@@ -1,13 +1,13 @@
 ---
-title: "Clase 4 — Tutoría del módulo 3: repaso de WCAG criterio por criterio (perceptible, distinguible y operable)"
+title: "Tutoría del módulo 3: repaso de WCAG criterio por criterio (perceptible, distinguible y operable)"
 status: in_progress
 source:
-  - ../raw-inputs/clase-04-raw.txt
-  - ../raw-inputs/clase-04-contenido-escrito-raw.txt
+  - ../raw-inputs/tutoria-modulo-03-raw.txt
+  - ../raw-inputs/tutoria-modulo-03-contenido-escrito-raw.txt
 last_updated: 2026-10-21
 ---
 
-# Clase 4 — Tutoría de Diseño Accesible (weAAAre)
+# Tutoría del módulo 3 — Diseño Accesible (weAAAre)
 
 Es la lección 3.11 de la plataforma (Tutoría del módulo 3, 2 h). Tutoría dedicada a repasar la WCAG "criterio por criterio" desde la mirada de diseño. Se cubrió el principio **Perceptible** completo (pautas 1.1 a 1.4) y parte de **Operable** (2.1, 2.2, 2.4.11, 2.5, etiqueta en el nombre). No se alcanzó a ver todo: el detalle con ejemplos y enlaces queda en un documento que se comparte después. Se decidió no ver proyectos en esta sesión (para eso están Discord y el correo).
 
@@ -74,7 +74,7 @@ Cubre solo audio, solo video y audio-video. Los niveles varían: subtítulos y a
   - *Open caption*: incrustados en el video.
   - Deben estar sincronizados, **no omitir palabras** e incluir **sonidos relevantes** (disparos, puerta que cruje, ruido ensordecedor).
 - **Transcripción:** todo lo dicho en texto, incluidos aplausos y sonidos; puede estar visible y sincronizada (seleccionar texto lleva al momento del video) o ser un archivo descargable.
-- La profesora compartirá una tabla resumen (el PDF de apoyo, "WCAG 2.2 criterio a criterio", tiene 156 páginas según la plataforma; la profesora dijo 157 en el audio).
+- La profesora compartirá una tabla resumen (el PDF de apoyo, "WCAG 2.2 criterio a criterio", tiene 156 páginas según la plataforma; la profesora dijo 157 en la tutoría).
 
 ## Pauta 1.3 — Contenido adaptable
 
@@ -225,17 +225,17 @@ Listados en la lección 3.11; las URL no estaban visibles en la captura, por lo 
 
 ## Notas de transcripción
 
-- Siglas mal transcritas en el audio y corregidas por contexto: WCAG ("Wicat", "Wicac"), CPACC ("CIPAC"), IAAP ("IAP"), `aria-label` ("area label"), Stark ("Start"), Claude ("Cloud"), HeadingsMap ("heading map"), modal ("modual"/"modales").
-- Nombres confirmados: "Olga Carreras" (en el audio, "Olga Carrera") es una persona real (autora del wizard/formulario de alt text) y Globalize es la empresa de la profesora.
-- Dejado fuera por no ser contenido de la clase: charlas laterales (colegio, familia, gustos musicales, teléfono de contacto).
+- Siglas mal transcritas en la tutoría y corregidas por contexto: WCAG ("Wicat", "Wicac"), CPACC ("CIPAC"), IAAP ("IAP"), `aria-label` ("area label"), Stark ("Start"), Claude ("Cloud"), HeadingsMap ("heading map"), modal ("modual"/"modales").
+- Nombres confirmados: "Olga Carreras" (en la tutoría, "Olga Carrera") es una persona real (autora del wizard/formulario de alt text) y Globalize es la empresa de la profesora.
+- Dejado fuera por no ser contenido de la tutoría: charlas laterales (colegio, familia, gustos musicales, teléfono de contacto).
 
 ## Correcciones respecto a la WCAG
 
-Lo dicho en el audio que no coincide con `resources/wcag22-understanding/` (que se toma como referencia). El cuerpo del resumen ya usa los valores corregidos.
+Lo dicho en la tutoría que no coincide con `resources/wcag22-understanding/` (que se toma como referencia). El cuerpo del resumen ya usa los valores corregidos.
 
-- **Robusto:** el audio dice que tiene "un solo criterio". En WCAG 2.2 son **4.1.2** (nombre, rol, valor, A) y **4.1.3** (mensajes de estado, AA); el 4.1.1 (procesamiento) está retirado.
-- **Niveles AAA:** el audio dice que son AAA los criterios "demasiado difíciles, como la audiodescripción" o los de contenido en vivo. Según la referencia, la audiodescripción pregrabada es **AA (1.2.5)**, los subtítulos en directo son **AA (1.2.4)**; son AAA la audiodescripción extendida (1.2.7), la lengua de señas (1.2.6) y el audio en directo (1.2.9).
-- **Foco de 2 px:** en el audio se asocia al "1.4.1" por confusión de numeración; corresponde a **2.4.13 Apariencia del foco (AAA)**. La referencia no detalla el umbral de 2 px ni el 3:1.
+- **Robusto:** la tutoría dice que tiene "un solo criterio". En WCAG 2.2 son **4.1.2** (nombre, rol, valor, A) y **4.1.3** (mensajes de estado, AA); el 4.1.1 (procesamiento) está retirado.
+- **Niveles AAA:** la tutoría dice que son AAA los criterios "demasiado difíciles, como la audiodescripción" o los de contenido en vivo. Según la referencia, la audiodescripción pregrabada es **AA (1.2.5)**, los subtítulos en directo son **AA (1.2.4)**; son AAA la audiodescripción extendida (1.2.7), la lengua de señas (1.2.6) y el audio en directo (1.2.9).
+- **Foco de 2 px:** en la tutoría se asocia al "1.4.1" por confusión de numeración; corresponde a **2.4.13 Apariencia del foco (AAA)**. La referencia no detalla el umbral de 2 px ni el 3:1.
 - **Texto grande:** la WCAG define 18 pt o 14 pt en bold; los 24 px y 19 px son equivalencias aproximadas de la profesora.
 - **1.4.5 Imágenes de texto:** la excepción es presentación visual esencial (logotipos, tipografía específica) o personalizable por la persona; no "cuando la imagen pierde su significado".
 - Criterios citados verificados en `resources/wcag22-understanding/`: 1.1.1, 1.2.x, 1.3.1–1.3.5, 1.4.1–1.4.6, 1.4.10, 1.4.11, 2.1.1, 2.1.2, 2.1.4, 2.2.1, 2.2.2, 2.4.11, 2.4.13, 2.5.1–2.5.3, 2.5.8.
