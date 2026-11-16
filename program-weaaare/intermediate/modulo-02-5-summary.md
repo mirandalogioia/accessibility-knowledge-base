@@ -1,7 +1,7 @@
 ---
 title: "Módulo 2 — WCAG para diseñadores"
 status: draft
-source: "raw-inputs/modulo-02-grabaciones-plataforma-raw.txt (grabaciones de plataforma) + raw-inputs/modulo-02-contenido-escrito-raw.txt (contenido escrito de la plataforma)"
+source: "raw-inputs/modulo-02-3-grabaciones-plataforma-raw.txt (grabaciones de plataforma) + raw-inputs/modulo-02-4-contenido-escrito-raw.txt (contenido escrito de la plataforma)"
 last_updated: 2026-10-16
 ---
 

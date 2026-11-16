@@ -1,7 +1,7 @@
 ---
 title: "Tutoría del módulo 1 — en vivo del 7 de octubre"
 status: draft
-source: "raw-inputs/tutoria-modulo-01-raw.txt"
+source: "raw-inputs/modulo-01-1-tutoria-raw.txt"
 last_updated: 2026-10-16
 ---
 

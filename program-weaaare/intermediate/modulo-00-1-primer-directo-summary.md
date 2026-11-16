@@ -1,7 +1,7 @@
 ---
 title: "Primer directo — Kickoff del Programa Intensivo de Diseño Accesible (weAAAre)"
 status: draft
-source: "raw-inputs/primer-directo-raw.txt"
+source: "raw-inputs/modulo-00-1-primer-directo-raw.txt"
 last_updated: 2026-09-30
 ---
 

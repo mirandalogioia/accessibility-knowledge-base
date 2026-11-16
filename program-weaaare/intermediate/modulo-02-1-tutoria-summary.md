@@ -1,7 +1,7 @@
 ---
 title: "Tutoría del módulo 2: flujos de proyecto, teclado, encabezados y Kahoot WCAG"
 status: in_progress
-source: ../raw-inputs/tutoria-modulo-02-raw.txt
+source: ../raw-inputs/modulo-02-1-tutoria-raw.txt
 last_updated: 2026-10-17
 ---
 

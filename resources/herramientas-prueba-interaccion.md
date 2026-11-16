@@ -6,7 +6,7 @@ last_updated: 2026-10-31
 
 # Guía de herramientas para probar formas de interacción
 
-Cómo encender y usar cada herramienta con la que el **Módulo 4 de weAAAre** ("Formas de interacción y fundamentos de accesibilidad") simula cómo usan un producto digital distintas personas. Fuentes: las grabaciones de plataforma (Carlos, demos en Mac) y el contenido escrito de la plataforma (que agrega Windows, Android, iPhone/iPad y Linux). Resumen del módulo en [`program-weaaare/intermediate/modulo-04-summary.md`](../program-weaaare/intermediate/modulo-04-summary.md).
+Cómo encender y usar cada herramienta con la que el **Módulo 4 de weAAAre** ("Formas de interacción y fundamentos de accesibilidad") simula cómo usan un producto digital distintas personas. Fuentes: las grabaciones de plataforma (Carlos, demos en Mac) y el contenido escrito de la plataforma (que agrega Windows, Android, iPhone/iPad y Linux). Resumen del módulo en [`program-weaaare/intermediate/modulo-04-5-summary.md`](../program-weaaare/intermediate/modulo-04-5-summary.md).
 
 **Importante:** son **simulaciones didácticas**. Sirven para detectar barreras y entender el esfuerzo que implican, pero quedan lejos de la experiencia real de quien usa esas tecnologías a diario. No reemplazan el testeo con personas con discapacidad.
 

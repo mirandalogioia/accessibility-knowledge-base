@@ -1,7 +1,7 @@
 # Módulo 3 — Diseño visual accesible
 ## Contenido escrito de las lecciones (plataforma), transcrito de capturas de pantalla
 
-Nota: transcripción de capturas de pantalla de la plataforma, entregadas por tandas. Cubre las lecciones 3.1 a 3.10 (módulo completo). Los ejercicios interactivos aparecen solo cuando las capturas los muestran; las capturas cortadas corresponden a ejercicios sin contenido explicativo adicional. La numeración y los títulos de lección se confirmaron con el audio de las lecciones (`modulo-03-grabaciones-plataforma-raw.txt`), donde la profesora anuncia cada lección; los títulos son los temas anunciados en el audio, no necesariamente el título literal de la plataforma. Las descripciones entre [corchetes] son de imágenes, ejemplos visuales y elementos interactivos, no texto de la plataforma.
+Nota: transcripción de capturas de pantalla de la plataforma, entregadas por tandas. Cubre las lecciones 3.1 a 3.10 (módulo completo). Los ejercicios interactivos aparecen solo cuando las capturas los muestran; las capturas cortadas corresponden a ejercicios sin contenido explicativo adicional. La numeración y los títulos de lección se confirmaron con el audio de las lecciones (`modulo-03-3-grabaciones-plataforma-raw.txt`), donde la profesora anuncia cada lección; los títulos son los temas anunciados en el audio, no necesariamente el título literal de la plataforma. Las descripciones entre [corchetes] son de imágenes, ejemplos visuales y elementos interactivos, no texto de la plataforma.
 
 ---
 

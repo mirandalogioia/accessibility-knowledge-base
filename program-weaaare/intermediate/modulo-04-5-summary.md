@@ -1,13 +1,13 @@
 ---
 title: "Módulo 4 — Formas de interacción y fundamentos de accesibilidad"
 status: draft
-source: "raw-inputs/modulo-04-grabaciones-plataforma-raw.txt (grabaciones de plataforma, Carlos) + raw-inputs/modulo-04-contenido-escrito-raw.txt (contenido escrito de la plataforma, transcrito de capturas)"
+source: "raw-inputs/modulo-04-3-grabaciones-plataforma-raw.txt (grabaciones de plataforma, Carlos) + raw-inputs/modulo-04-4-contenido-escrito-raw.txt (contenido escrito de la plataforma, transcrito de capturas)"
 last_updated: 2026-10-31
 ---
 
 # Módulo 4 — Formas de interacción y fundamentos de accesibilidad
 
-Resumen consolidado del Módulo 4, que fusiona las grabaciones de plataforma (Carlos recorre una tienda de ejemplo con cada forma de interacción) con el contenido escrito de cada lección (tablas de criterios, "lo que no pide", prácticas y cuestionarios). Cubre las lecciones 4.1 a 4.6. La **tutoría en vivo del módulo 4** está en [`tutoria-modulo-04-summary.md`](tutoria-modulo-04-summary.md).
+Resumen consolidado del Módulo 4, que fusiona las grabaciones de plataforma (Carlos recorre una tienda de ejemplo con cada forma de interacción) con el contenido escrito de cada lección (tablas de criterios, "lo que no pide", prácticas y cuestionarios). Cubre las lecciones 4.1 a 4.6. La **tutoría en vivo del módulo 4** está en [`modulo-04-1-tutoria-summary.md`](modulo-04-1-tutoria-summary.md).
 
 ## Cómo leer este resumen
 
@@ -298,7 +298,7 @@ Método de la grabación: **primero** header, **luego** footer, **lo que queda**
 
 Puntos del módulo comparados con [`resources/wcag22-understanding/`](../../resources/wcag22-understanding/README.md) (que se toma como verdad). El cuerpo del resumen ya refleja lo que coincide.
 
-- **2.4.7 y el foco nativo (resuelto en la tutoría):** la grabación dice que, si no se toca el estilo del foco nativo, "siempre se cumple" aunque el contraste parezca flojo. La referencia (1.4.11) exige 3:1 al indicador de foco, pero **no aplica a presentaciones que determina el agente de usuario fuera del control del autor**. Es decir, el foco nativo **sin modificar** no es responsabilidad del diseño; si se **personaliza**, sí hay que cumplir 3:1 (ver [`tutoria-modulo-04-summary.md`](tutoria-modulo-04-summary.md)).
+- **2.4.7 y el foco nativo (resuelto en la tutoría):** la grabación dice que, si no se toca el estilo del foco nativo, "siempre se cumple" aunque el contraste parezca flojo. La referencia (1.4.11) exige 3:1 al indicador de foco, pero **no aplica a presentaciones que determina el agente de usuario fuera del control del autor**. Es decir, el foco nativo **sin modificar** no es responsabilidad del diseño; si se **personaliza**, sí hay que cumplir 3:1 (ver [`modulo-04-1-tutoria-summary.md`](modulo-04-1-tutoria-summary.md)).
 - **2.5.3 "debe empezar":** el texto de la plataforma y la grabación dicen "lo recomendable/mejor si empieza" por el texto visible; la referencia indica que el nombre accesible "puede ampliar la etiqueta, pero **debe empezar por ella**". Criterio práctico seguro: que **empiece** por el texto visible.
 - **2.2.2 y sus excepciones:** la grabación dice que se puede omitir la pausa si "no está en loop, no empieza automáticamente **y** dura menos de 5 segundos". La referencia da como excepciones **dura menos de 5 segundos** o **es parte de una actividad esencial**, y el texto de la plataforma agrega que el criterio aplica al movimiento que dura más de 5 s **junto a otro contenido**; los indicadores de carga que son el único contenido visible no necesitan controles.
 - **Nombre del criterio 3.2.2:** el módulo lo llama "Al introducir datos"; en `resources/` se llama "Al recibir entradas". Mismo criterio. Igual 4.1.2: "Nombre, función y valor" (módulo) / "Nombre, rol, valor" (`resources/`).
@@ -314,6 +314,6 @@ Puntos del módulo comparados con [`resources/wcag22-understanding/`](../../reso
 
 ## Pendiente
 
-- La **tutoría del módulo 4** quedó registrada como [`tutoria-modulo-04-summary.md`](tutoria-modulo-04-summary.md) (raw: `raw-inputs/tutoria-modulo-04-raw.txt`).
+- La **tutoría del módulo 4** quedó registrada como [`modulo-04-1-tutoria-summary.md`](modulo-04-1-tutoria-summary.md) (raw: `raw-inputs/modulo-04-1-tutoria-raw.txt`).
 - Completar la guía de herramientas con Linux (Orca) y otros sistemas si los módulos siguientes lo cubren.
 - Los recursos citados que no tienen resumen propio en `resources/` (Funkify, NV Access): el texto de la plataforma los enlaza pero las URL no estaban visibles en las capturas.

@@ -2,8 +2,8 @@
 title: "Tutoría del módulo 3: repaso de WCAG criterio por criterio (perceptible, distinguible y operable)"
 status: in_progress
 source:
-  - ../raw-inputs/tutoria-modulo-03-raw.txt
-  - ../raw-inputs/tutoria-modulo-03-contenido-escrito-raw.txt
+  - ../raw-inputs/modulo-03-1-tutoria-raw.txt
+  - ../raw-inputs/modulo-03-2-tutoria-contenido-escrito-raw.txt
 last_updated: 2026-10-21
 ---
 

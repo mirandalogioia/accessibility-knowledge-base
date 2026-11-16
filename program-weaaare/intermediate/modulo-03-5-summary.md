@@ -1,7 +1,7 @@
 ---
 title: "Módulo 3 — Diseño visual accesible"
 status: draft
-source: "raw-inputs/modulo-03-grabaciones-plataforma-raw.txt (grabaciones de plataforma, Consuelo) + raw-inputs/modulo-03-contenido-escrito-raw.txt (contenido escrito de la plataforma, transcrito de capturas)"
+source: "raw-inputs/modulo-03-3-grabaciones-plataforma-raw.txt (grabaciones de plataforma, Consuelo) + raw-inputs/modulo-03-4-contenido-escrito-raw.txt (contenido escrito de la plataforma, transcrito de capturas)"
 last_updated: 2026-10-18
 ---
 
@@ -13,7 +13,7 @@ Resumen consolidado del Módulo 3, fusionando las grabaciones de plataforma (la 
 
 - **La grabación y el contenido escrito se complementan, no se repiten.** En las grabaciones, la profesora presenta y explica los términos apoyándose en pantallas de ejemplo (en este módulo, sobre todo una reserva de tren Madrid–Valencia con tarjeta, pestañas y menú); el texto de la plataforma profundiza con tablas, criterios, enlaces a referencias y ejercicios. Esas pantallas son material visual que no se transcribió (la grabación solo las narra), y no hacen falta para entender los conceptos. Cada lección indica qué aporta cada fuente; lo que dice una y no la otra no es una contradicción.
 - **La transcripción de las grabaciones es automática** con errores. Los que se detectaron: «web AIM» = WebAIM; «WIAR» = WAI; «responsabilidad» = responsividad / diseño responsivo; «preset» = estado pulsado (pressed); «ticket» = tic (✓); «área chica» probablemente modismo (fútbol), sin contenido técnico.
-- **Decisión del repo sobre contraste de controles:** el contraste de **componentes de interfaz y sus estados** (botones, bordes de campos, indicadores de foco) es de **3:1** y lo regula **1.4.11 Contraste no textual (AA)**; **1.4.3 Contraste (mínimo)** regula solo el **texto** (4,5:1 normal, 3:1 grande). El resumen automático que viene en el encabezado de `modulo-03-grabaciones-plataforma-raw.txt` atribuye los 3:1 de los controles al 1.4.3: es un error de ese resumen y no se usa. Coincide con el contenido escrito del módulo y con [`resources/wcag22-understanding/`](../../resources/wcag22-understanding/01-perceivable.md).
+- **Decisión del repo sobre contraste de controles:** el contraste de **componentes de interfaz y sus estados** (botones, bordes de campos, indicadores de foco) es de **3:1** y lo regula **1.4.11 Contraste no textual (AA)**; **1.4.3 Contraste (mínimo)** regula solo el **texto** (4,5:1 normal, 3:1 grande). El resumen automático que viene en el encabezado de `modulo-03-3-grabaciones-plataforma-raw.txt` atribuye los 3:1 de los controles al 1.4.3: es un error de ese resumen y no se usa. Coincide con el contenido escrito del módulo y con [`resources/wcag22-understanding/`](../../resources/wcag22-understanding/01-perceivable.md).
 - Los criterios WCAG se resumen en [`resources/wcag22-understanding/`](../../resources/wcag22-understanding/README.md) y las técnicas en [`resources/wcag22-techniques/`](../../resources/wcag22-techniques/README.md).
 
 ## Mapa del módulo

@@ -2,14 +2,14 @@
 title: "Tutoría del módulo 4: foco visible y ejercicio en grupos auditando la web Aliso"
 status: draft
 source:
-  - ../raw-inputs/tutoria-modulo-04-raw.txt
-  - ../raw-inputs/tutoria-modulo-04-contenido-escrito-raw.txt
+  - ../raw-inputs/modulo-04-1-tutoria-raw.txt
+  - ../raw-inputs/modulo-04-2-tutoria-contenido-escrito-raw.txt
 last_updated: 2026-10-31
 ---
 
 # Tutoría del módulo 4 (weAAAre)
 
-Tutoría en vivo del módulo 4 (formas de interacción). Carlos resolvió una duda sobre foco visible y dirigió un ejercicio en grupos: en salas separadas, cada grupo auditó una web de aerolínea de ejemplo (**Aliso**) con **una forma de interacción** (teclado; puntero, voz y zoom; lector de pantalla), anotó barreras y el criterio WCAG que incumple, y después un/a portavoz las presentó en la sala común. Fecha por contexto: miércoles 28 de octubre de 2026 (se menciona "mañana que es jueves" y un proyecto "enviado el 27"). Resumen del módulo: [`modulo-04-summary.md`](modulo-04-summary.md).
+Tutoría en vivo del módulo 4 (formas de interacción). Carlos resolvió una duda sobre foco visible y dirigió un ejercicio en grupos: en salas separadas, cada grupo auditó una web de aerolínea de ejemplo (**Aliso**) con **una forma de interacción** (teclado; puntero, voz y zoom; lector de pantalla), anotó barreras y el criterio WCAG que incumple, y después un/a portavoz las presentó en la sala común. Fecha por contexto: miércoles 28 de octubre de 2026 (se menciona "mañana que es jueves" y un proyecto "enviado el 27"). Resumen del módulo: [`modulo-04-5-summary.md`](modulo-04-5-summary.md).
 
 > **Qué no está en este resumen.** Gran parte de lo que los grupos mostraron es **visual** (pantallas de Aliso, Figma de cada grupo) y no se explica verbalmente. Aquí solo se recoge lo que la conversación permite entender: **criterios aclarados, debates resueltos y barreras identificadas**. El listado completo de fallos de Aliso (≈10 por forma de interacción) y la tabla de criterios están en la presentación que Carlos dejará junto a la grabación; **no está en el repo**.
 
@@ -24,7 +24,7 @@ Pregunta de una alumna sobre si hace falta diseñar el foco y cómo medir su con
   - **Costo:** si cada color cumple el grosor requerido (2 px), el foco queda de ~**6 px**, grueso y a veces molesto por la distancia entre elementos.
   - **Alternativa:** con **azul + blanco (4 px)** normalmente basta; incluso se puede ahorrar el contorno interno. Se ajusta por **prueba y error**.
   - Se hace así para que **cada color cumpla los 2 px**, no que los dos sumen 2 px.
-- Criterios relacionados: **2.4.7**, **1.4.11** (3:1), **2.4.13** (AAA, grosor 2 px; ver [`tutoria-modulo-03-summary.md`](tutoria-modulo-03-summary.md)).
+- Criterios relacionados: **2.4.7**, **1.4.11** (3:1), **2.4.13** (AAA, grosor 2 px; ver [`modulo-03-1-tutoria-summary.md`](modulo-03-1-tutoria-summary.md)).
 
 ## Ejercicio: web de aerolínea "Aliso"
 
@@ -109,7 +109,7 @@ Una instructora (Consuelo, por contexto; figura como Speaker 1) revisó los proy
 
 ### Tarea oficial para la próxima tutoría (texto de la plataforma)
 
-Publicada junto con la grabación (ver [`tutoria-modulo-04-contenido-escrito-raw.txt`](../raw-inputs/tutoria-modulo-04-contenido-escrito-raw.txt)). **Objetivo: tener el flujo acotado y las pantallas dibujadas** con los elementos que necesitan.
+Publicada junto con la grabación (ver [`modulo-04-2-tutoria-contenido-escrito-raw.txt`](../raw-inputs/modulo-04-2-tutoria-contenido-escrito-raw.txt)). **Objetivo: tener el flujo acotado y las pantallas dibujadas** con los elementos que necesitan.
 
 1. **Acotar el flujo:** si abarca demasiado, dividirlo (iniciar sesión es un flujo; añadir un producto a la cesta es otro). En los equipos de producto nadie lleva un servicio entero de punta a punta, se trabaja por flujos.
 2. **Dibujar las pantallas del flujo**, aunque sea a mano; no tienen que ser bonitas. Si hay dudas de alcance, foto o captura del boceto por Discord.
@@ -131,7 +131,7 @@ Publicada junto con la grabación (ver [`tutoria-modulo-04-contenido-escrito-raw
 
 Comparado con [`resources/wcag22-understanding/`](../../resources/wcag22-understanding/README.md):
 
-- **Foco nativo y contraste (resuelve el matiz de `modulo-04-summary.md`):** lo dicho en la tutoría coincide con la referencia: 1.4.11 exige 3:1 al foco, pero **no se aplica a presentaciones que determina el agente de usuario fuera del control del autor**. Si el autor **no modifica** el foco nativo, no es responsable; si lo **personaliza**, sí.
+- **Foco nativo y contraste (resuelve el matiz de `modulo-04-5-summary.md`):** lo dicho en la tutoría coincide con la referencia: 1.4.11 exige 3:1 al foco, pero **no se aplica a presentaciones que determina el agente de usuario fuera del control del autor**. Si el autor **no modifica** el foco nativo, no es responsable; si lo **personaliza**, sí.
 - **Zoom al 400% citado como 1.4.4:** la referencia define 1.4.4 como ampliar el **texto hasta 200%**. Pérdida de contenido al 400% de zoom corresponde a **1.4.10 Reflow** (320 px CSS ≈ 400%). Carlos no corrigió el número en la sesión.
 - **Captcha y 3.3.8:** según la referencia, 3.3.8 aplica a **autenticación de usuarios existentes** y ofrece excepciones (reconocimiento de objetos o contenido propio); 3.3.9 (AAA) las elimina. Carlos usa 3.3.8 como el criterio de la alternativa al captcha; si el reto de Aliso (al final del pago) entra en el alcance de "autenticación" es **interpretación del instructor**.
 - **4.1.3 para errores:** la referencia cubre confirmaciones y errores de validación (`role="alert"`, `role="status"`, regiones vivas). La identificación textual del error es **3.3.1**; en la tutoría no se nombró.
